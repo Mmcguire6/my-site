@@ -46,6 +46,7 @@ nav.scrolled {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-shrink: 0;
 }
 
 .nav-brand {
@@ -53,6 +54,11 @@ nav.scrolled {
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
+}
+
+.brand-svg {
+    height: 40px;
+    width: 214px;
 }
 
 .nav-links {
@@ -686,11 +692,12 @@ footer {
 @media (max-width: 768px) {
     /* Nav */
     nav {
-        padding: 0 1.25rem;
+        padding: 0 1rem 0 1.25rem;
     }
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
     .nav-avatar { display: none; }
+    .brand-svg { height: 28px; width: 150px; }
 
     /* Hero */
     .hero {
