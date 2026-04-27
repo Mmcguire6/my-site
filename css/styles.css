@@ -422,6 +422,26 @@ nav.scrolled {
 .bg--figma    { background: url('https://images.unsplash.com/photo-1759661990336-51bd4b951fea?w=600&q=80&fit=crop&auto=format') center/cover no-repeat; }
 .bg--react    { background: url('https://images.unsplash.com/photo-1754548930550-be9fa88874f4?w=600&q=80&fit=crop&auto=format') center/cover no-repeat; }
 
+/* ── Contact Row ── */
+
+.row--contact {
+    padding-top: 1.5rem;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 1rem;
+}
+
+.row-title--contact {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.row-subtitle {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-top: -0.4rem;
+    margin-bottom: 1.1rem;
+}
+
 /* ── About Panel ── */
 
 .about-panel {

@@ -1,0 +1,57 @@
+.skill-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.skill-row:first-of-type {
+    border-top: 1px solid #e6e6e6;
+}
+
+.skill-row--last {
+    border-bottom: none;
+}
+
+.skill-icon-wrap {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    color: #555;
+}
+
+.skill-icon-wrap svg {
+    width: 18px;
+    height: 18px;
+}
+
+.skill-body {
+    flex: 1;
+    padding-top: 0.1rem;
+}
+
+.skill-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #141414;
+    margin-bottom: 0.2rem;
+}
+
+.skill-desc {
+    font-size: 0.8125rem;
+    color: #737373;
+    line-height: 1.55;
+}
+
+.skill-icon-wrap--indigo { background: #e0e7ff; color: #4338ca; }
+.skill-icon-wrap--orange { background: #ffedd5; color: #c2410c; }
+.skill-icon-wrap--blue   { background: #dbeafe; color: #1d4ed8; }
+.skill-icon-wrap--sky    { background: #e0f2fe; color: #0369a1; }
+.skill-icon-wrap--teal   { background: #ccfbf1; color: #0f766e; }
+.skill-icon-wrap--purple { background: #f3e8ff; color: #6d28d9; }
