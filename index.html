@@ -4,17 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew McGuire</title>
-
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/intro.css">
+    <script src="js/intro.js" defer></script>
 </head>
-<body>  
-    <div class="content">
-        <h1>Coming Soon</h1>
-        <p>Something is in the works. Check back soon!</p>
-        <div class="contact">
-            <a href="https://github.com/mmcguire6" target="_blank">github.com/mmcguire6</a>
+<body>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <div id="intro-name">
+            <span class="intro-first">MATTHEW</span>
+            <span class="intro-last">McGUIRE</span>
         </div>
     </div>
+
+    <!-- Profile Selection Screen -->
+    <div id="profile-screen">
+        <div class="profile-brand">MM</div>
+        <h1 class="profile-heading">Who's Watching?</h1>
+        <div class="profiles">
+
+            <button class="profile" onclick="goToPortfolio()">
+                <div class="profile-avatar">
+                    <!-- Future Client: neat hair, suit, confident smile -->
+                    <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+                        <rect width="160" height="160" fill="#1d4ed8"/>
+                        <rect x="0" y="118" width="160" height="42" fill="#1e3a8a"/>
+                        <path d="M44,112 L80,140 L116,112" fill="#1e3a8a"/>
+                        <path d="M68,110 L80,124 L92,110" fill="#dbeafe"/>
+                        <polygon points="80,113 75,134 80,138 85,134" fill="#dc2626"/>
+                        <rect x="72" y="90" width="16" height="22" rx="3" fill="#fde68a"/>
+                        <ellipse cx="80" cy="70" rx="30" ry="33" fill="#fde68a"/>
+                        <path d="M50,68 Q50,38 80,35 Q110,38 110,62" fill="#1c1917"/>
+                        <ellipse cx="80" cy="47" rx="30" ry="14" fill="#1c1917"/>
+                        <path d="M58,56 Q67,53 74,56" stroke="#1c1917" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <path d="M86,56 Q93,53 102,56" stroke="#1c1917" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <circle cx="67" cy="67" r="6.5" fill="white"/>
+                        <circle cx="67" cy="67" r="4.5" fill="#1e293b"/>
+                        <circle cx="69" cy="65" r="1.8" fill="white"/>
+                        <circle cx="93" cy="67" r="6.5" fill="white"/>
+                        <circle cx="93" cy="67" r="4.5" fill="#1e293b"/>
+                        <circle cx="95" cy="65" r="1.8" fill="white"/>
+                        <path d="M67,82 Q80,93 93,82" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p class="profile-name">Future Client</p>
+            </button>
+
+            <button class="profile" onclick="goToPortfolio()">
+                <div class="profile-avatar">
+                    <!-- The Competition: round glasses, red wavy hair, smirk -->
+                    <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+                        <rect width="160" height="160" fill="#7c3aed"/>
+                        <rect x="0" y="118" width="160" height="42" fill="#4c1d95"/>
+                        <path d="M50,112 Q80,128 110,112 L114,160 L46,160Z" fill="#4c1d95"/>
+                        <path d="M65,108 Q80,118 95,108 L95,96 Q80,90 65,96Z" fill="#5b21b6"/>
+                        <ellipse cx="80" cy="70" rx="30" ry="33" fill="#fed7aa"/>
+                        <path d="M50,66 Q50,34 80,31 Q110,34 112,58" fill="#b91c1c"/>
+                        <ellipse cx="80" cy="46" rx="30" ry="16" fill="#b91c1c"/>
+                        <path d="M109,64 Q120,56 116,42 Q113,34 106,32" stroke="#b91c1c" stroke-width="10" fill="none" stroke-linecap="round"/>
+                        <circle cx="67" cy="67" r="11" fill="none" stroke="#1c1917" stroke-width="2.5"/>
+                        <circle cx="93" cy="67" r="11" fill="none" stroke="#1c1917" stroke-width="2.5"/>
+                        <path d="M78,67 L82,67" stroke="#1c1917" stroke-width="2.5"/>
+                        <path d="M44,63 L56,65" stroke="#1c1917" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M104,65 L116,63" stroke="#1c1917" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="67" cy="67" r="5" fill="#1e293b"/>
+                        <circle cx="69" cy="65" r="2" fill="white"/>
+                        <circle cx="93" cy="67" r="5" fill="#1e293b"/>
+                        <circle cx="95" cy="65" r="2" fill="white"/>
+                        <path d="M59,54 Q67,50 75,54" stroke="#7f1d1d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M85,54 Q93,50 101,54" stroke="#7f1d1d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M68,82 Q76,88 90,83" stroke="#92400e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p class="profile-name">The Competition</p>
+            </button>
+
+            <button class="profile" onclick="goToPortfolio()">
+                <div class="profile-avatar">
+                    <!-- Wrong Tab: messy hair, huge eyes, O mouth, shocked -->
+                    <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+                        <rect width="160" height="160" fill="#d97706"/>
+                        <rect x="0" y="120" width="160" height="40" fill="#92400e"/>
+                        <path d="M48,112 Q80,124 112,112 L114,160 L46,160Z" fill="#92400e"/>
+                        <rect x="72" y="90" width="16" height="32" rx="3" fill="#fde68a"/>
+                        <ellipse cx="80" cy="70" rx="30" ry="34" fill="#fde68a"/>
+                        <path d="M50,67 Q50,36 80,33 Q110,36 110,61" fill="#7c2d12"/>
+                        <ellipse cx="80" cy="46" rx="30" ry="15" fill="#7c2d12"/>
+                        <ellipse cx="62" cy="35" rx="10" ry="14" fill="#7c2d12" transform="rotate(-18,62,35)"/>
+                        <ellipse cx="99" cy="32" rx="10" ry="14" fill="#7c2d12" transform="rotate(18,99,32)"/>
+                        <ellipse cx="80" cy="30" rx="11" ry="12" fill="#7c2d12"/>
+                        <circle cx="67" cy="67" r="9.5" fill="white"/>
+                        <circle cx="67" cy="68" r="6.5" fill="#1e293b"/>
+                        <circle cx="69.5" cy="65.5" r="2.5" fill="white"/>
+                        <circle cx="93" cy="67" r="9.5" fill="white"/>
+                        <circle cx="93" cy="68" r="6.5" fill="#1e293b"/>
+                        <circle cx="95.5" cy="65.5" r="2.5" fill="white"/>
+                        <path d="M57,53 Q67,47 75,52" stroke="#7c2d12" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <path d="M85,52 Q93,47 103,53" stroke="#7c2d12" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <ellipse cx="80" cy="87" rx="8" ry="7" fill="#7c2d12"/>
+                        <ellipse cx="80" cy="87" rx="5.5" ry="5" fill="#dc2626" opacity="0.85"/>
+                    </svg>
+                </div>
+                <p class="profile-name">Wrong Tab</p>
+            </button>
+
+            <button class="profile" onclick="goToPortfolio()">
+                <div class="profile-avatar">
+                    <!-- Hi Mom: bun with heart, rosy cheeks, big smile -->
+                    <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+                        <rect width="160" height="160" fill="#db2777"/>
+                        <rect x="0" y="118" width="160" height="42" fill="#9d174d"/>
+                        <path d="M48,110 Q80,130 112,110 L114,160 L46,160Z" fill="#9d174d"/>
+                        <rect x="72" y="88" width="16" height="24" rx="3" fill="#fcd34d"/>
+                        <ellipse cx="80" cy="68" rx="30" ry="33" fill="#fcd34d"/>
+                        <path d="M50,66 Q50,34 80,31 Q110,34 110,60" fill="#78350f"/>
+                        <ellipse cx="80" cy="46" rx="30" ry="16" fill="#78350f"/>
+                        <ellipse cx="80" cy="31" rx="18" ry="14" fill="#92400e"/>
+                        <ellipse cx="80" cy="32" rx="10" ry="8" fill="#78350f"/>
+                        <path d="M79,28 C79,25 75,23 75,27 C75,30 79,33 79,33 C79,33 83,30 83,27 C83,23 79,25 79,28Z" fill="#f43f5e"/>
+                        <ellipse cx="54" cy="78" rx="11" ry="7" fill="#fda4af" opacity="0.65"/>
+                        <ellipse cx="106" cy="78" rx="11" ry="7" fill="#fda4af" opacity="0.65"/>
+                        <circle cx="67" cy="67" r="7" fill="white"/>
+                        <circle cx="67" cy="68" r="5" fill="#1e293b"/>
+                        <circle cx="69" cy="66" r="2" fill="white"/>
+                        <circle cx="93" cy="67" r="7" fill="white"/>
+                        <circle cx="93" cy="68" r="5" fill="#1e293b"/>
+                        <circle cx="95" cy="66" r="2" fill="white"/>
+                        <path d="M59,56 Q67,52 74,56" stroke="#78350f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M86,56 Q93,52 101,56" stroke="#78350f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M63,81 Q80,97 97,81 L97,87 Q80,101 63,87Z" fill="white"/>
+                        <path d="M63,81 Q80,97 97,81" stroke="#92400e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <line x1="72" y1="82" x2="72" y2="87" stroke="#e2e8f0" stroke-width="1"/>
+                        <line x1="80" y1="84" x2="80" y2="90" stroke="#e2e8f0" stroke-width="1"/>
+                        <line x1="88" y1="82" x2="88" y2="87" stroke="#e2e8f0" stroke-width="1"/>
+                    </svg>
+                </div>
+                <p class="profile-name">Hi Mom</p>
+            </button>
+
+        </div>
+        <button class="manage-profiles-btn">Manage Profiles</button>
+    </div>
+
+    <div id="fade-overlay"></div>
+
 </body>
 </html>
