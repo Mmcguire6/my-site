@@ -109,7 +109,7 @@ nav.scrolled {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
         url('https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=1920&q=80&fit=crop&auto=format') center/cover no-repeat;
 }
 
@@ -230,12 +230,13 @@ nav.scrolled {
 .content {
     position: relative;
     z-index: 1;
+    margin-top: -5rem;
     padding-bottom: 3rem;
 }
 
 .row {
     padding: 0 4%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .row-title {
@@ -281,6 +282,44 @@ nav.scrolled {
     position: absolute;
     inset: 0;
 }
+
+.card-wordmark-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s ease;
+}
+
+.card:hover .card-wordmark-group {
+    opacity: 0;
+}
+
+.card-wordmark-text--cc {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #e5e5e5;
+}
+
+.card-wordmark-text--df {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+.card-wordmark-accent {
+    color: #3b82f6;
+}
+
+.card-wordmark {
+    max-width: 130px;
+    max-height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
 
 .card-badge {
     position: absolute;
@@ -410,7 +449,7 @@ nav.scrolled {
 .card-cta:hover { opacity: 0.85; }
 
 /* Card backgrounds */
-.bg--closecombat { background: linear-gradient(145deg, #0f0720, #1a103a, #2e1065); }
+.bg--closecombat { background: url('../img/close-combat-tile.png') center/90% no-repeat, #0f0720; }
 .bg--datafuse    { background: linear-gradient(145deg, #071510, #0c2218, #052e16); }
 .bg--email       { background: linear-gradient(145deg, #0f172a, #1e3a8a, #1e40af); }
 .bg--github      { background: linear-gradient(145deg, #0d1117, #161b22, #30363d); }
