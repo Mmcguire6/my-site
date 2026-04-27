@@ -6,7 +6,7 @@
     <title>Matthew McGuire — Web Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -14,7 +14,16 @@
 
     <nav id="nav">
         <div class="nav-left">
-            <a class="nav-brand" href="index.html">MM</a>
+            <a class="nav-brand" href="index.html" aria-label="Matthew McGuire">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 58" height="40">
+                    <defs>
+                        <path id="brand-arc" d="M 5,52 Q 200,28 395,52"/>
+                    </defs>
+                    <text font-family="'Bebas Neue', sans-serif" font-size="34" fill="#e50914" letter-spacing="2">
+                        <textPath href="#brand-arc" startOffset="50%" text-anchor="middle">MATTHEW MCGUIRE</textPath>
+                    </text>
+                </svg>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#work">Work</a></li>
@@ -44,8 +53,7 @@
         <div class="hero-vignette-left"></div>
         <div class="hero-vignette-bottom"></div>
         <div class="hero-content">
-            <span class="hero-badge">&#9670;&nbsp; MM DESIGN</span>
-            <p class="hero-label">WEB DESIGNER &amp; DEVELOPER</p>
+<p class="hero-label">WEB DESIGNER &amp; DEVELOPER</p>
             <h1 class="hero-title">Matthew<br>McGuire</h1>
             <p class="hero-desc">I design and build digital products that are fast, focused, and built to convert — from first wireframe to shipped product.</p>
             <div class="hero-btns">
@@ -76,10 +84,12 @@
                         </div>
                     </div>
                     <div class="card-hover">
+                        <div class="card-hover-actions">
+                            <a href="https://closecombat.app/" target="_blank" class="card-hover-play">&#9654;</a>
+                        </div>
                         <p class="card-hover-title">CloseCombat</p>
                         <p class="card-hover-meta">2026 &nbsp;·&nbsp; AI &nbsp;·&nbsp; SaaS</p>
-                        <p>AI-powered sales training platform. Practice pitches, handle objections, and close deals against a relentless AI opponent.</p>
-                        <a href="https://closecombat.app/" target="_blank" class="card-cta">&#9654;&nbsp; View Project</a>
+                        <p class="card-hover-desc">AI-powered sales training. Practice pitches and close deals against a relentless AI opponent.</p>
                     </div>
                 </div>
 
@@ -95,10 +105,12 @@
                         </div>
                     </div>
                     <div class="card-hover">
+                        <div class="card-hover-actions">
+                            <a href="https://www.datafuse.app/" target="_blank" class="card-hover-play">&#9654;</a>
+                        </div>
                         <p class="card-hover-title">DataFuse</p>
                         <p class="card-hover-meta">2026 &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Analytics</p>
-                        <p>Shopify analytics app that consolidates store data into clear, actionable revenue insights — no spreadsheet required.</p>
-                        <a href="https://www.datafuse.app/" target="_blank" class="card-cta">&#9654;&nbsp; View Project</a>
+                        <p class="card-hover-desc">Shopify analytics app consolidating store data into clear, actionable revenue insights.</p>
                     </div>
                 </div>
 
@@ -185,26 +197,38 @@
                 <div class="card card--md" onclick="window.location.href='contact.html'">
                     <div class="card-bg bg--email"></div>
                     <div class="card-overlay"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
                     <div class="card-body">
                         <p class="card-tag">Get in Touch</p>
                         <p class="card-title">Email Me</p>
                     </div>
                     <div class="card-hover">
-                        <p>mattmcguire@shaw.ca</p>
-                        <span class="card-cta">&#9654;&nbsp; Get in Touch</span>
+                        <div class="card-hover-actions">
+                            <span class="card-hover-play" onclick="window.location.href='contact.html'">&#9654;</span>
+                        </div>
+                        <p class="card-hover-title">Email Me</p>
+                        <p class="card-hover-desc">mattmcguire@shaw.ca</p>
                     </div>
                 </div>
 
                 <div class="card card--md">
                     <div class="card-bg bg--github"></div>
                     <div class="card-overlay"></div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </div>
                     <div class="card-body">
                         <p class="card-tag">Open Source</p>
                         <p class="card-title">GitHub</p>
                     </div>
                     <div class="card-hover">
-                        <p>github.com/mmcguire6</p>
-                        <a href="https://github.com/mmcguire6" target="_blank" class="card-cta">View Profile &rarr;</a>
+                        <div class="card-hover-actions">
+                            <a href="https://github.com/mmcguire6" target="_blank" class="card-hover-play">&#9654;</a>
+                        </div>
+                        <p class="card-hover-title">GitHub</p>
+                        <p class="card-hover-desc">github.com/mmcguire6</p>
                     </div>
                 </div>
 
