@@ -18,7 +18,7 @@ html { scroll-behavior: smooth; }
 body {
     background: var(--dark);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
@@ -227,9 +227,10 @@ nav.scrolled {
 }
 
 .hero-title {
-    font-size: clamp(2.8rem, 6vw, 5.5rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
     line-height: 1.0;
     margin-bottom: 1.1rem;
     text-shadow: 1px 2px 12px rgba(0,0,0,0.6);
@@ -267,7 +268,7 @@ nav.scrolled {
     gap: 0.4rem;
     padding: 0.6rem 1.75rem;
     border-radius: 4px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -315,11 +316,12 @@ nav.scrolled {
 }
 
 .row-title {
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
     color: #e5e5e5;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.06em;
 }
 
 .row-cards {
@@ -541,7 +543,7 @@ nav.scrolled {
 
 /* Card backgrounds */
 .bg--closecombat { background: linear-gradient(145deg, #0f0720, #1a103a, #2e1065); }
-.bg--datafuse    { background: linear-gradient(145deg, #071510, #0c2218, #052e16); }
+.bg--datafuse    { background-image: url('../img/datafuse/datafuse-tile.png'); background-size: cover; background-position: center; }
 .bg--email       { background: linear-gradient(145deg, #0f172a, #1e3a8a, #1e40af); }
 .bg--github      { background: linear-gradient(145deg, #0d1117, #161b22, #30363d); }
 
@@ -806,11 +808,73 @@ nav.scrolled {
 /* ── Footer ── */
 
 footer {
-    padding: 1.75rem 4%;
     border-top: 1px solid var(--border);
+    margin-top: 3rem;
+}
+
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.footer-tagline {
+    font-size: 0.78rem;
     color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.footer-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.3);
+    border-radius: 20px;
+    padding: 0.2rem 0.65rem;
+    letter-spacing: 0.05em;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.footer-col-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+}
+
+.footer-col a {
+    font-size: 0.82rem;
+    color: rgba(229,229,229,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 5%;
     font-size: 0.75rem;
-    letter-spacing: 0.04em;
+    color: var(--muted);
+    letter-spacing: 0.03em;
 }
 
 .card-icon {
@@ -874,6 +938,68 @@ footer {
 
 @media (max-width: 768px) {
     .row-arrow { display: none; }
+}
+
+/* ── Scroll animations ── */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Testimonials ── */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.testimonial-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.testimonial-quote-mark {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--red);
+    font-family: Georgia, serif;
+}
+
+.testimonial-quote {
+    font-size: 0.875rem;
+    color: #d4d4d4;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.testimonial-author {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.testimonial-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.testimonial-role {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
 }
 
 /* ── Responsive ── */
@@ -940,5 +1066,8 @@ footer {
     .about-inner { flex-direction: column; gap: 1.5rem; }
 
     /* Footer */
-    footer { padding: 1.5rem 1.25rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; padding: 2.5rem 5%; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; gap: 0.4rem; text-align: center; }
 }

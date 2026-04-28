@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Matthew McGuire</title>
+    <link rel="icon" href="mm-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/transitions.js" defer></script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --red: #e50914; --dark: #141414; --border: #2a2a2a; --muted: #808080; }
+        body {
+            background: var(--dark);
+            color: #e5e5e5;
+            font-family: 'DM Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .nf-label {
+            font-size: 0.7rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1.5rem;
+        }
+        .nf-code {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(6rem, 18vw, 14rem);
+            line-height: 1;
+            color: var(--red);
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+        .nf-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: #e5e5e5;
+            margin-bottom: 0.75rem;
+        }
+        .nf-desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            max-width: 380px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+        .nf-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.4rem;
+            background: #fff;
+            color: #141414;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .nf-btn:hover { opacity: 0.82; }
+        .nf-back {
+            margin-top: 1.25rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .nf-back:hover { color: #e5e5e5; }
+        .nf-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--red);
+            margin: 0 auto 2rem;
+        }
+    </style>
+</head>
+<body>
+    <p class="nf-label">Matthew McGuire</p>
+    <p class="nf-code">404</p>
+    <div class="nf-divider"></div>
+    <h1 class="nf-title">This page got cancelled.</h1>
+    <p class="nf-desc">Looks like this content doesn't exist — or maybe it never shipped. Let's get you back somewhere real.</p>
+    <a href="portfolio.html" class="nf-btn">&#9654;&nbsp; Back to Portfolio</a>
+    <br>
+    <a href="contact.html" class="nf-back">or get in touch →</a>
+</body>
+</html>

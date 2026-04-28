@@ -8,9 +8,16 @@
     <meta name="description" content="Portfolio of Matthew McGuire — freelance web designer and developer. UI/UX design, front-end development, Shopify, and React/Next.js projects.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Matthew McGuire — Web Designer & Developer">
+    <meta property="og:description" content="Portfolio of Matthew McGuire — freelance web designer and developer. UI/UX design, front-end development, Shopify, and React/Next.js projects.">
+    <meta property="og:image" content="https://matthewmcguire.ca/img/og-image.png">
+    <meta property="og:url" content="https://matthewmcguire.ca/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
+    <script src="js/transitions.js" defer></script>
 </head>
 <body>
 
@@ -64,7 +71,7 @@
 
         <!-- Selected Work -->
         <section class="row" id="work">
-            <h3 class="row-title">Selected Work</h3>
+            <h3 class="row-title fade-up">Selected Work</h3>
             <div class="row-cards">
 
                 <div class="card card--lg" onclick="window.location.href='closecombat.html'">
@@ -74,7 +81,7 @@
                     <div class="card-body">
                         <p class="card-tag">AI &middot; Sales Training</p>
                         <div class="card-wordmark-group">
-                            <img src="img/closecombat-favicon.png" class="card-wordmark" alt="CloseCombat">
+                            <img src="img/closecombat/closecombat-favicon.png" class="card-wordmark" alt="CloseCombat">
                             <span class="card-wordmark-text card-wordmark-text--cc">Close<span class="card-wordmark-accent">Combat</span></span>
                         </div>
                     </div>
@@ -95,7 +102,7 @@
                     <div class="card-body">
                         <p class="card-tag">Shopify &middot; Analytics</p>
                         <div class="card-wordmark-group">
-                            <img src="img/datafuse-logo.svg" class="card-wordmark" alt="DataFuse">
+                            <img src="img/datafuse/datafuse-logo.svg" class="card-wordmark" alt="DataFuse">
                             <span class="card-wordmark-text card-wordmark-text--df">DATA<span class="card-wordmark-accent">FUSE</span></span>
                         </div>
                     </div>
@@ -114,7 +121,7 @@
 
         <!-- Skills -->
         <section class="row" id="skills">
-            <h3 class="row-title">What I Build</h3>
+            <h3 class="row-title fade-up">What I Build</h3>
             <div class="row-cards">
 
                 <div class="card card--sm">
@@ -169,7 +176,7 @@
         </section>
 
         <!-- About -->
-        <section class="about-panel" id="about">
+        <section class="about-panel fade-up" id="about">
             <div class="about-inner">
                 <div class="about-main">
                     <p class="about-text">I'm a web designer and developer focused on building clean, high-performance digital products. I work with startups and small teams to take ideas from concept to launch — handling everything from visual design to front-end development.</p>
@@ -233,7 +240,33 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Matthew McGuire</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="img/mm-logo.svg" class="footer-logo" alt="MM">
+                <p class="footer-tagline">Web Designer &amp; Developer</p>
+                <span class="footer-status">Open to Work</span>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <a href="#home">Home</a>
+                <a href="#work">Work</a>
+                <a href="#skills">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-label">Projects</p>
+                <a href="closecombat.html">CloseCombat</a>
+                <a href="datafuse.html">DataFuse</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-label">Contact</p>
+                <a href="mailto:mattmcguire4321@gmail.com">mattmcguire4321@gmail.com</a>
+                <a href="https://github.com/mmcguire6" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matthew McGuire</p>
+        </div>
     </footer>
 
 

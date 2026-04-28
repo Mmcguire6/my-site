@@ -8,85 +8,109 @@
     <meta name="description" content="DataFuse — Shopify profit intelligence platform. Real-time P&L, Profit ROAS, first-party attribution, and AI-powered daily briefings for Shopify merchants.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="DataFuse — Matthew McGuire">
+    <meta property="og:description" content="DataFuse — Shopify profit intelligence platform. Real-time P&L, Profit ROAS, first-party attribution, and AI-powered daily briefings.">
+    <meta property="og:image" content="https://matthewmcguire.ca/img/og-image.png">
+    <meta property="og:url" content="https://matthewmcguire.ca/datafuse.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/project.css">
+    <script src="js/transitions.js" defer></script>
 </head>
 <body>
 
     <header class="proj-header">
         <a class="proj-brand" href="portfolio.html"><img src="img/mm-logo.svg" class="proj-brand-logo" alt="MM"></a>
-        <a class="proj-back" href="portfolio.html">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            Portfolio
-        </a>
+        <nav class="proj-nav">
+            <a href="portfolio.html#work">Work</a>
+            <a href="portfolio.html#skills">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <div class="proj-content">
+    <!-- Hero: image slider only -->
+    <div class="proj-hero proj-hero--df">
+        <div class="proj-hero-slides">
+            <img src="img/datafuse/datafuse-cover1.png" class="proj-hero-slide active" alt="DataFuse">
+            <img src="img/datafuse/datafuse-cover2.png" class="proj-hero-slide" alt="DataFuse">
+            <img src="img/datafuse/datafuse-cover3.png" class="proj-hero-slide" alt="DataFuse">
+            <img src="img/datafuse/datafuse-cover4.png" class="proj-hero-slide" alt="DataFuse">
+            <img src="img/datafuse/datafuse-cover5.png" class="proj-hero-slide" alt="DataFuse">
+        </div>
+        <div class="proj-hero-overlay proj-hero-overlay--subtle"></div>
+        <div class="proj-hero-dots">
+            <span class="proj-hero-dot active"></span>
+            <span class="proj-hero-dot"></span>
+            <span class="proj-hero-dot"></span>
+            <span class="proj-hero-dot"></span>
+            <span class="proj-hero-dot"></span>
+        </div>
+    </div>
 
-        <!-- Left: tile + meta + stack + role -->
-        <div class="proj-left">
+    <!-- Identity bar below hero -->
+    <div class="proj-intro">
+        <div class="proj-logo-row">
+            <img src="img/datafuse/datafuse-logo.svg" class="proj-icon" alt="">
+            <span class="proj-wordmark-df">DATA<span class="proj-wordmark-accent">FUSE</span></span>
+        </div>
+        <div class="proj-meta">
+            <a href="https://www.datafuse.app/" target="_blank" class="proj-live-btn">&#9654;&nbsp; Enter Site</a>
+            <span class="proj-pill">Shopify</span>
+            <span class="proj-pill">Analytics</span>
+            <span class="proj-pill">SaaS</span>
+        </div>
+    </div>
 
-            <!-- Tile -->
-            <div class="proj-tile">
-                <div class="proj-tile-bg proj-tile-bg--df"></div>
-                <div class="proj-tile-overlay"></div>
-                <div class="proj-tile-logo">
-                    <img src="img/datafuse-logo.svg" class="proj-tile-icon" style="filter:brightness(0)invert(1);" alt="">
-                    <span class="proj-tile-wordmark--df">DATA<span class="proj-tile-wordmark-accent">FUSE</span></span>
+    <!-- Body: sidebar + content -->
+    <div class="proj-body proj-body--split">
+
+        <!-- Left sidebar -->
+        <aside class="proj-sidebar">
+
+            <div class="proj-section fade-up">
+                <p class="proj-section-label">Stack</p>
+                <div class="proj-stack">
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Frontend</span>
+                        <span class="proj-stack-value">Next.js (App Router), TypeScript, Tailwind CSS</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Database</span>
+                        <span class="proj-stack-value">Neon PostgreSQL, Prisma ORM</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Cache</span>
+                        <span class="proj-stack-value">Upstash Redis</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">AI</span>
+                        <span class="proj-stack-value">Anthropic Claude API</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Ad APIs</span>
+                        <span class="proj-stack-value">Meta Marketing API, Google Ads API, TikTok Ads API</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Platform</span>
+                        <span class="proj-stack-value">Shopify App Bridge, Admin API, Billing API</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">CRM</span>
+                        <span class="proj-stack-value">Klaviyo API</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Email</span>
+                        <span class="proj-stack-value">Resend</span>
+                    </div>
+                    <div class="proj-stack-row">
+                        <span class="proj-stack-label">Infrastructure</span>
+                        <span class="proj-stack-value">Vercel</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- View live + pills -->
-            <div class="proj-meta">
-                <a href="https://www.datafuse.app/" target="_blank" class="proj-live-btn">&#9654;&nbsp; View Live</a>
-                <span class="proj-pill">Shopify</span>
-                <span class="proj-pill">Analytics</span>
-                <span class="proj-pill">SaaS</span>
-            </div>
-
-            <!-- Stack -->
-            <p class="proj-stack-label-head">Stack</p>
-            <div class="proj-stack">
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Frontend</span>
-                    <span class="proj-stack-value">Next.js (App Router), TypeScript, Tailwind CSS</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Database</span>
-                    <span class="proj-stack-value">Neon PostgreSQL, Prisma ORM</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Cache</span>
-                    <span class="proj-stack-value">Upstash Redis</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">AI</span>
-                    <span class="proj-stack-value">Anthropic Claude API</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Ad APIs</span>
-                    <span class="proj-stack-value">Meta Marketing API, Google Ads API, TikTok Ads API</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Platform</span>
-                    <span class="proj-stack-value">Shopify App Bridge, Admin API, Billing API</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">CRM</span>
-                    <span class="proj-stack-value">Klaviyo API</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Email</span>
-                    <span class="proj-stack-value">Resend</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Infrastructure</span>
-                    <span class="proj-stack-value">Vercel</span>
-                </div>
-            </div>
-
-            <!-- My Role -->
-            <div class="proj-section" style="margin-top:2rem;margin-bottom:0;">
+            <div class="proj-section fade-up">
                 <p class="proj-section-label">My Role</p>
                 <div class="proj-roles">
                     <div class="proj-role-item">
@@ -116,19 +140,19 @@
                 </div>
             </div>
 
-        </div>
+        </aside>
 
-        <!-- Right: full writeup -->
-        <div class="proj-right">
+        <!-- Right content -->
+        <div class="proj-content">
 
-            <div class="proj-section">
+            <div class="proj-section fade-up">
                 <p class="proj-section-label">About This Project</p>
                 <div class="proj-bio">
                     <p>A real-time profit intelligence platform for Shopify stores — because knowing your revenue means nothing if you don't know what you actually kept. DataFuse is a full-stack Shopify SaaS I built from scratch that reconciles ad spend, platform fees, COGS, and refunds against live order data to show merchants their true net profit. The headline metric is Profit ROAS — return on ad spend calculated on margin, not revenue — because a 4x ROAS on a 20% margin product is often a money-losing campaign in disguise.</p>
                 </div>
             </div>
 
-            <div class="proj-section">
+            <div class="proj-section fade-up">
                 <p class="proj-section-label">The Problem</p>
                 <div class="proj-bio">
                     <p>Most Shopify merchants are flying blind on profitability. They log into Shopify and see revenue. They log into Meta and see ROAS. They check their bank account and wonder where the money went. The gap between those three numbers is COGS, transaction fees across multiple payment processors, ad spend, refunds, and shipping — none of which Shopify's native analytics surfaces in one place.</p>
@@ -136,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="proj-section">
+            <div class="proj-section fade-up">
                 <p class="proj-section-label">How It Works</p>
                 <div class="proj-bio">
                     <p>A merchant installs the app, connects their ad accounts (Meta, Google, TikTok), and enters their COGS — either manually per product or via CSV import. From that point forward, DataFuse pulls live Shopify orders, reconciles them against a fee engine that handles Shopify Payments, Stripe, PayPal, Square, Klarna, and Afterpay, then layers in ad spend from the platform APIs to produce a real-time P&L. Every number drills down: revenue by channel, profit by product, ROAS by ad creative.</p>
@@ -145,7 +169,18 @@
                 </div>
             </div>
 
-            <div class="proj-section">
+            <div class="proj-section fade-up">
+                <p class="proj-section-label">Under the Hood</p>
+                <div class="proj-bio">
+                    <p>The core data challenge was reconciliation correctness at the order level. Orders arrive via Shopify webhooks, get written to Neon PostgreSQL through Prisma, and immediately trigger a fee calculation pass. The fee engine handles six payment processors — each with different rate structures (flat, percentage-plus-fixed, or volume-tiered). Fees are materialized per order at write time rather than computed at query time, so historical P&L stays stable even when rate structures change. COGS are stored with full version history tied to a date range, so margin calculations reflect what the merchant actually paid at the time of sale rather than today's current cost.</p>
+                    <p>Ad data syncs on a scheduled cron: Meta Marketing API at the ad level (campaign → ad set → ad, per day), Google Ads and TikTok Ads at the campaign level. The Meta sync was the hardest to get right — the Insights API returns data in the account's marketing timezone while Shopify orders are in UTC, and the join between them has to normalize both into a common timezone before aggregating, or you get phantom day-boundary mismatches that silently corrupt ROAS numbers.</p>
+                    <p>The first-party attribution pixel captures fbclid, gclid, ttclid, and full UTM parameters on page load and posts them to a lightweight pixel endpoint. Server-side, each hit creates a session record keyed to a browser fingerprint. When a Shopify orders/create webhook fires, the attribution engine queries open sessions for that fingerprint, ranks touchpoints by recency and source priority, and writes a resolved attribution record. A second pass then applies all five multi-touch models, distributing fractional credit across the full conversion path. This matters because Meta's own reported ROAS and pixel-attributed ROAS often diverge by 20–40% post-iOS 14.</p>
+                    <p>The AI layer is built on the Claude API with prompt caching enabled on the system prompt and static grounding context, which cuts per-briefing token costs significantly. Each briefing prompt is constructed dynamically from a fresh query window of the merchant's actual KPI data — not cached summaries — and returns structured JSON: KPI deltas with direction and magnitude, anomaly flags with likely causes, and prioritised action items. The concierge Q&A endpoint translates natural-language questions into parameterised database queries at runtime and grounds Claude's response in the live query result rather than letting it hallucinate figures.</p>
+                    <p>Upstash Redis sits in front of all public-facing endpoints enforcing sliding-window rate limits, and caches hot dashboard aggregations with short TTLs so the UI stays fast on stores with 50k+ orders without hammering Postgres on every page load. The entire stack runs on Vercel serverless with Neon's connection pooling — compute and database both scale to zero when idle, keeping infrastructure cost proportional to actual usage.</p>
+                </div>
+            </div>
+
+            <div class="proj-section fade-up">
                 <p class="proj-section-label">Platform Features</p>
                 <div class="proj-features">
                     <div class="proj-feature-group">
@@ -216,20 +251,44 @@
                 </div>
             </div>
 
-            <div class="proj-section">
-                <p class="proj-section-label">Under the Hood</p>
-                <div class="proj-bio">
-                    <p>The core data challenge was reconciliation correctness at the order level. Orders arrive via Shopify webhooks, get written to Neon PostgreSQL through Prisma, and immediately trigger a fee calculation pass. The fee engine handles six payment processors — each with different rate structures (flat, percentage-plus-fixed, or volume-tiered). Fees are materialized per order at write time rather than computed at query time, so historical P&L stays stable even when rate structures change. COGS are stored with full version history tied to a date range, so margin calculations reflect what the merchant actually paid at the time of sale rather than today's current cost.</p>
-                    <p>Ad data syncs on a scheduled cron: Meta Marketing API at the ad level (campaign → ad set → ad, per day), Google Ads and TikTok Ads at the campaign level. The Meta sync was the hardest to get right — the Insights API returns data in the account's marketing timezone while Shopify orders are in UTC, and the join between them has to normalize both into a common timezone before aggregating, or you get phantom day-boundary mismatches that silently corrupt ROAS numbers.</p>
-                    <p>The first-party attribution pixel captures fbclid, gclid, ttclid, and full UTM parameters on page load and posts them to a lightweight pixel endpoint. Server-side, each hit creates a session record keyed to a browser fingerprint. When a Shopify orders/create webhook fires, the attribution engine queries open sessions for that fingerprint, ranks touchpoints by recency and source priority, and writes a resolved attribution record. A second pass then applies all five multi-touch models, distributing fractional credit across the full conversion path. This matters because Meta's own reported ROAS and pixel-attributed ROAS often diverge by 20–40% post-iOS 14.</p>
-                    <p>The AI layer is built on the Claude API with prompt caching enabled on the system prompt and static grounding context, which cuts per-briefing token costs significantly. Each briefing prompt is constructed dynamically from a fresh query window of the merchant's actual KPI data — not cached summaries — and returns structured JSON: KPI deltas with direction and magnitude, anomaly flags with likely causes, and prioritised action items. The concierge Q&A endpoint translates natural-language questions into parameterised database queries at runtime and grounds Claude's response in the live query result rather than letting it hallucinate figures.</p>
-                    <p>Upstash Redis sits in front of all public-facing endpoints enforcing sliding-window rate limits, and caches hot dashboard aggregations with short TTLs so the UI stays fast on stores with 50k+ orders without hammering Postgres on every page load. The entire stack runs on Vercel serverless with Neon's connection pooling — compute and database both scale to zero when idle, keeping infrastructure cost proportional to actual usage.</p>
-                </div>
-            </div>
-
         </div>
 
     </div>
 
+    <footer class="proj-footer">
+        <p>&copy; 2026 Matthew McGuire</p>
+    </footer>
+
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.proj-hero-slide');
+            var dots = document.querySelectorAll('.proj-hero-dot');
+            if (slides.length < 2) return;
+            var i = 0;
+            var timer;
+
+            function goTo(n) {
+                slides[i].classList.remove('active');
+                dots[i].classList.remove('active');
+                i = n;
+                slides[i].classList.add('active');
+                dots[i].classList.add('active');
+            }
+
+            function startTimer() {
+                timer = setInterval(function () { goTo((i + 1) % slides.length); }, 6000);
+            }
+
+            dots.forEach(function (dot, idx) {
+                dot.addEventListener('click', function () {
+                    clearInterval(timer);
+                    goTo(idx);
+                    startTimer();
+                });
+            });
+
+            startTimer();
+        })();
+    </script>
 </body>
 </html>
