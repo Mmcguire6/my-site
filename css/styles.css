@@ -34,12 +34,13 @@ nav {
     justify-content: space-between;
     padding: 0 4%;
     height: 68px;
-    background: linear-gradient(to bottom, rgba(20,20,20,0.95) 0%, transparent 100%);
+    background: #0a0a0a;
+    border-bottom: 1px solid #1e1e1e;
     transition: background 0.4s ease;
 }
 
 nav.scrolled {
-    background: var(--dark);
+    background: #0a0a0a;
 }
 
 .nav-left {
@@ -56,15 +57,17 @@ nav.scrolled {
     align-items: center;
 }
 
-.brand-svg {
-    height: 40px;
-    width: 214px;
+.brand-logo {
+    height: 48px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    margin-left: 8rem;
 }
 
 .nav-links a {
@@ -614,6 +617,192 @@ nav.scrolled {
     color: #4ade80;
 }
 
+/* ── Project Modal ── */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background: #141414;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 780px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal {
+    transform: scale(1);
+}
+
+.modal::-webkit-scrollbar { display: none; }
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(20,20,20,0.8);
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-close:hover { background: #333; }
+
+.modal-hero {
+    position: relative;
+    height: 280px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.modal-hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, #141414 100%);
+    z-index: 1;
+}
+
+.modal-hero-logo {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.75rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.01em;
+}
+
+.modal-hero-logo img {
+    height: 36px;
+    width: auto;
+}
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 1.75rem 0.75rem;
+    flex-wrap: wrap;
+}
+
+.modal-play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: white;
+    color: #141414;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.55rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.modal-play-btn:hover { opacity: 0.85; }
+
+.modal-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.modal-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #b3b3b3;
+    border: 1px solid #444;
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+}
+
+.modal-body {
+    padding: 0.5rem 1.75rem 2rem;
+}
+
+.modal-section {
+    margin-bottom: 1.75rem;
+}
+
+.modal-section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #808080;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+}
+
+.modal-description {
+    font-size: 0.9375rem;
+    color: #d4d4d4;
+    line-height: 1.75;
+}
+
+.modal-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.modal-stack-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 0.875rem;
+}
+
+.modal-stack-row:first-child {
+    border-top: 1px solid #2a2a2a;
+}
+
+.modal-stack-label {
+    width: 110px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #e5e5e5;
+}
+
+.modal-stack-value {
+    color: #808080;
+}
+
 /* ── Footer ── */
 
 footer {
@@ -697,7 +886,7 @@ footer {
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
     .nav-avatar { display: none; }
-    .brand-svg { height: 28px; width: 150px; }
+    .brand-logo { height: 36px; }
 
     /* Hero */
     .hero {

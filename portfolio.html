@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew McGuire — Web Designer</title>
+    <link rel="icon" href="mm-favicon.png">
+    <meta name="description" content="Portfolio of Matthew McGuire — freelance web designer and developer. UI/UX design, front-end development, Shopify, and React/Next.js projects.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -15,14 +17,7 @@
     <nav id="nav">
         <div class="nav-left">
             <a class="nav-brand" href="index.html" aria-label="Matthew McGuire">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 0 310 58" class="brand-svg">
-                    <defs>
-                        <path id="brand-arc" d="M 0,52 Q 185,28 370,52"/>
-                    </defs>
-                    <text font-family="'Bebas Neue', sans-serif" font-size="34" fill="#e50914" letter-spacing="2">
-                        <textPath href="#brand-arc" startOffset="50%" text-anchor="middle">MATTHEW MCGUIRE</textPath>
-                    </text>
-                </svg>
+                <img src="img/mm-logo.svg" class="brand-logo" alt="MM">
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -58,7 +53,7 @@
             <p class="hero-desc">I design and build digital products that are fast, focused, and built to convert — from first wireframe to shipped product.</p>
             <div class="hero-btns">
                 <a href="#work" class="hero-btn hero-btn--primary">&#9654;&nbsp; View Work</a>
-                <a href="#about" class="hero-btn hero-btn--secondary">&#9432;&nbsp; About Me</a>
+                <a href="about.html" class="hero-btn hero-btn--secondary">&#9432;&nbsp; About Me</a>
             </div>
             <p class="hero-meta">2026 &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Development &nbsp;·&nbsp; <span class="hero-status">Open to Work</span></p>
         </div>
@@ -72,7 +67,7 @@
             <h3 class="row-title">Selected Work</h3>
             <div class="row-cards">
 
-                <div class="card card--lg">
+                <div class="card card--lg" onclick="window.location.href='closecombat.html'">
                     <div class="card-bg bg--closecombat"></div>
                     <div class="card-overlay"></div>
                     <span class="card-badge">NEW</span>
@@ -85,7 +80,7 @@
                     </div>
                     <div class="card-hover">
                         <div class="card-hover-actions">
-                            <a href="https://closecombat.app/" target="_blank" class="card-hover-play">&#9654;</a>
+                            <span class="card-hover-play" onclick="event.stopPropagation();window.location.href='closecombat.html'">&#9654;</span>
                         </div>
                         <p class="card-hover-title">CloseCombat</p>
                         <p class="card-hover-meta">2026 &nbsp;·&nbsp; AI &nbsp;·&nbsp; SaaS</p>
@@ -93,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="card card--lg">
+                <div class="card card--lg" onclick="window.location.href='datafuse.html'">
                     <div class="card-bg bg--datafuse"></div>
                     <div class="card-overlay"></div>
                     <span class="card-badge">NEW</span>
@@ -106,7 +101,7 @@
                     </div>
                     <div class="card-hover">
                         <div class="card-hover-actions">
-                            <a href="https://www.datafuse.app/" target="_blank" class="card-hover-play">&#9654;</a>
+                            <span class="card-hover-play" onclick="event.stopPropagation();window.location.href='datafuse.html'">&#9654;</span>
                         </div>
                         <p class="card-hover-title">DataFuse</p>
                         <p class="card-hover-meta">2026 &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Analytics</p>
@@ -240,6 +235,7 @@
     <footer>
         <p>&copy; 2026 Matthew McGuire</p>
     </footer>
+
 
 </body>
 </html>

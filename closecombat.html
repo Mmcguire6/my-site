@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloseCombat — Matthew McGuire</title>
+    <link rel="icon" href="mm-favicon.png">
+    <meta name="description" content="CloseCombat — AI-powered sales training platform. Practice cold calls and objection handling against a real-time AI prospect, with research-backed coaching after every call.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+
+    <header class="proj-header">
+        <a class="proj-brand" href="portfolio.html"><img src="img/mm-logo.svg" class="proj-brand-logo" alt="MM"></a>
+        <a class="proj-back" href="portfolio.html">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Portfolio
+        </a>
+    </header>
+
+    <div class="proj-content">
+
+        <!-- Left: tile + meta + stack + role -->
+        <div class="proj-left">
+
+            <!-- Tile -->
+            <div class="proj-tile">
+                <div class="proj-tile-bg proj-tile-bg--cc"></div>
+                <div class="proj-tile-overlay"></div>
+                <div class="proj-tile-logo">
+                    <img src="img/closecombat-favicon.png" class="proj-tile-icon" alt="">
+                    <span class="proj-tile-wordmark">Close<span class="proj-tile-wordmark-accent">Combat</span></span>
+                </div>
+            </div>
+
+            <!-- View live + pills -->
+            <div class="proj-meta">
+                <a href="https://closecombat.app/" target="_blank" class="proj-live-btn">&#9654;&nbsp; View Live</a>
+                <span class="proj-pill">AI</span>
+                <span class="proj-pill">SaaS</span>
+                <span class="proj-pill">Sales Training</span>
+            </div>
+
+            <!-- Stack -->
+            <p class="proj-stack-label-head">Stack</p>
+            <div class="proj-stack">
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Frontend</span>
+                    <span class="proj-stack-value">Next.js, TypeScript</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Voice</span>
+                    <span class="proj-stack-value">Pipecat, Daily.co, Deepgram, Cartesia</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">AI</span>
+                    <span class="proj-stack-value">Groq + Llama 4, Claude (Anthropic)</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Backend</span>
+                    <span class="proj-stack-value">Supabase, PostgreSQL</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Infrastructure</span>
+                    <span class="proj-stack-value">Fly.io, Vercel</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Payments</span>
+                    <span class="proj-stack-value">Stripe — subscriptions, per-seat, credits</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Email</span>
+                    <span class="proj-stack-value">Resend</span>
+                </div>
+            </div>
+
+            <!-- My Role -->
+            <div class="proj-section" style="margin-top:2rem;margin-bottom:0;">
+                <p class="proj-section-label">My Role</p>
+                <div class="proj-roles">
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">Product Design</p>
+                        <p class="proj-role-desc">Designed the full UI in Figma — user flows, component library, and visual identity.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">Frontend Development</p>
+                        <p class="proj-role-desc">Built the entire front-end in Next.js with TypeScript and Tailwind, from auth screens to the live call interface.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">Voice Pipeline</p>
+                        <p class="proj-role-desc">Built the real-time voice stack using Pipecat and Daily.co on ephemeral Fly.io machines — one per active call.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">AI Coaching Layer</p>
+                        <p class="proj-role-desc">Engineered the debrief system on Claude Haiku, grounded in published sales research, scoring each call dimension against behavioural benchmarks.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: full writeup -->
+        <div class="proj-right">
+
+            <div class="proj-section">
+                <p class="proj-section-label">About This Project</p>
+                <div class="proj-bio">
+                    <p>AI-powered sales training that puts reps on a live call with an AI prospect — and coaches them after. CloseCombat is a full-stack B2B SaaS platform I built from scratch. Sales reps practice cold calls, discovery conversations, and objection handling against AI-powered buyer personas that talk back in real time. When the call ends, an AI coach analyzes the transcript and delivers honest, research-backed feedback — scoring rapport, discovery, objection handling, closing, and pacing, then surfacing exactly what went wrong and why.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">The Problem</p>
+                <div class="proj-bio">
+                    <p>Sales reps only get good at selling by making calls. But most teams have no structured way to practice before they're on the phone with a real prospect. Role-playing with a manager is awkward and rare. Watching recordings is passive. CloseCombat gives reps an infinitely patient AI prospect to practice against — available anytime, available to every rep on the floor.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">How It Works</p>
+                <div class="proj-bio">
+                    <p>A rep picks a scenario — cold call, discovery, proposal review, re-engagement — selects a difficulty level and buyer persona, and clicks "Call." Within seconds they're in a live voice conversation with an AI customer that has a defined personality, pain points, objections, and budget. The AI can be warm and curious on easy mode, or flat and hostile on nightmare mode.</p>
+                    <p>When the call ends, a full debrief is waiting: a score breakdown, key moments pulled from the transcript, objection-by-objection analysis, and three specific drills to fix the biggest gaps.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">Under the Hood</p>
+                <div class="proj-bio">
+                    <p>The hardest part of this project was making the voice experience feel real. I built a custom voice pipeline using Pipecat and Daily.co that runs on ephemeral Fly.io machines — one machine per active call, auto-destroyed when the call ends. Each machine runs a full audio processing stack: Deepgram handles speech-to-text with short endpointing windows so chunks arrive fast; a custom TurnAggregator processor buffers those chunks within Silero VAD turn boundaries, then waits for a browser-sent floor signal before flushing — preventing the AI from interrupting the rep mid-sentence; Groq + Llama 4 generates the customer's response in character, fast enough to feel conversational; Cartesia renders the response to audio with emotional tone hints baked in so the voice itself conveys the persona's mood.</p>
+                    <p>To eliminate cold-start latency, a background process keeps three machines pre-warmed at all times. When a rep clicks "Call," the session activates an already-running machine instead of spinning one up — dropping connection time from ~25 seconds to ~2.</p>
+                    <p>The coaching layer is built on Claude Haiku. The debrief prompt is grounded in published sales research — Gong.io's 1M+ call dataset, Rackham's SPIN Selling, the JOLT Effect, Voss's Never Split the Difference — and scores each dimension against specific behavioural benchmarks rather than vibes. The output is structured JSON: scores, quoted transcript moments, objection-by-objection grades, and prioritised action items tied to what actually happened on that specific call.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">Platform Features</p>
+                <div class="proj-features">
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">For Reps</p>
+                        <ul class="proj-feature-list">
+                            <li>Live voice calls against difficulty-tiered AI personas across 11 pipeline stages</li>
+                            <li>Full debrief with scores, transcript, speech analysis (WPM, talk ratio, filler words), and drills</li>
+                            <li>Daily challenge for streak-based practice</li>
+                            <li>Objection drill library with branching scenarios</li>
+                            <li>Structured bootcamp onboarding</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">For Teams</p>
+                        <ul class="proj-feature-list">
+                            <li>Custom buyer personas and challenges built around the team's specific market</li>
+                            <li>MEDDIC, SPIN, Challenger, BANT, or general scoring frameworks selectable per team</li>
+                            <li>Per-rep session visibility with private manager notes</li>
+                            <li>Leaderboard with opt-out option</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Prospect Outreach</p>
+                        <ul class="proj-feature-list">
+                            <li>Send a free session invite to a cold lead — their rep completes a call, and the manager automatically receives a debrief email with scores, strengths, gaps, and a pricing CTA</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Live Assist</p>
+                        <ul class="proj-feature-list">
+                            <li>Real-time call coaching that detects the conversation stage and surfaces suggested lines mid-call using stage detection and Claude Haiku</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

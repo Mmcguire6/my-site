@@ -102,6 +102,33 @@ body {
     }
 }
 
+/* ── Click hint ── */
+
+#click-hint {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+#intro-name.ready ~ #click-hint {
+    opacity: 1;
+    transition: opacity 0.8s ease 1.8s;
+}
+
+#intro-name.animate ~ #click-hint {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
 /* ── Profile Screen ── */
 
 #profile-screen {

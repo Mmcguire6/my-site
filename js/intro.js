@@ -12,10 +12,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // Fade in to idle state
     setTimeout(() => introName.classList.add('ready'), 300);
 
-    introName.style.cursor = 'pointer';
+    introScreen.style.cursor = 'pointer';
 
-    introName.addEventListener('click', () => {
-        introName.style.cursor = 'default';
+    introScreen.addEventListener('click', () => {
+        introScreen.style.cursor = 'default';
         introName.classList.remove('ready');
         playIntroSound();
         requestAnimationFrame(() => requestAnimationFrame(() => introName.classList.add('animate')));
@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }, 2850);
     }, { once: true });
+
 });
 
 function goToPortfolio() {

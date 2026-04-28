@@ -319,6 +319,83 @@ body {
     flex-shrink: 0;
 }
 
+/* ── About Page ── */
+
+.about-bio p {
+    font-size: 0.9375rem;
+    color: #555;
+    line-height: 1.8;
+    border-top: 1px solid #e6e6e6;
+    padding: 0.9rem 0;
+}
+
+.about-stack {
+    border-top: 1px solid #e6e6e6;
+}
+
+.stack-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 0.875rem;
+}
+
+.stack-label {
+    width: 110px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #141414;
+}
+
+.stack-value {
+    color: #555;
+}
+
+.about-services {
+    border-top: 1px solid #e6e6e6;
+}
+
+.service-item {
+    padding: 0.875rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.service-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #141414;
+    margin-bottom: 0.2rem;
+}
+
+.service-desc {
+    font-size: 0.8125rem;
+    color: #737373;
+}
+
+.about-status {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    flex-shrink: 0;
+}
+
+.status-text {
+    font-size: 0.875rem;
+    color: #141414;
+    font-weight: 500;
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 700px) {
