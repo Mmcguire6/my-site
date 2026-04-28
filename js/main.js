@@ -14,6 +14,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// ── Active nav links ──
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const setActiveLink = (id) => {
+    navLinks.forEach(a => a.classList.toggle('nav-link--active', a.getAttribute('href') === `#${id}`));
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) setActiveLink(entry.target.id);
+    });
+}, { rootMargin: '-50% 0px -50% 0px' });
+
+sections.forEach(s => sectionObserver.observe(s));
+
 // ── Mobile nav ──
 const hamburger = document.getElementById('nav-hamburger');
 const mobileMenu = document.getElementById('nav-mobile-menu');

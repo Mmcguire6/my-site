@@ -1,3 +1,4 @@
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -84,15 +85,19 @@ body {
 .proj-hero-slide {
     position: absolute;
     top: 80px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
     width: 78%;
-    height: auto;
+    object-fit: contain;
+    object-position: top center;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.07);
     box-shadow: 0 28px 80px rgba(0,0,0,0.7);
     opacity: 0;
     transition: opacity 1.2s ease;
+    image-rendering: crisp-edges;
+    filter: contrast(1.05) saturate(1.1);
 }
 
 .proj-hero-slide.active {
