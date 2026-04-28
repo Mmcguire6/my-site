@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataFuse — Matthew McGuire</title>
     <link rel="icon" href="mm-favicon.png">
-    <meta name="description" content="DataFuse — Shopify analytics app that consolidates store data into clear, actionable revenue insights in a single dashboard.">
+    <meta name="description" content="DataFuse — Shopify profit intelligence platform. Real-time P&L, Profit ROAS, first-party attribution, and AI-powered daily briefings for Shopify merchants.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -49,23 +49,39 @@
             <div class="proj-stack">
                 <div class="proj-stack-row">
                     <span class="proj-stack-label">Frontend</span>
-                    <span class="proj-stack-value">Next.js, TypeScript, Tailwind CSS</span>
+                    <span class="proj-stack-value">Next.js (App Router), TypeScript, Tailwind CSS</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Database</span>
+                    <span class="proj-stack-value">Neon PostgreSQL, Prisma ORM</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Cache</span>
+                    <span class="proj-stack-value">Upstash Redis</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">AI</span>
+                    <span class="proj-stack-value">Anthropic Claude API</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Ad APIs</span>
+                    <span class="proj-stack-value">Meta Marketing API, Google Ads API, TikTok Ads API</span>
                 </div>
                 <div class="proj-stack-row">
                     <span class="proj-stack-label">Platform</span>
-                    <span class="proj-stack-value">Shopify API — store data, webhooks</span>
+                    <span class="proj-stack-value">Shopify App Bridge, Admin API, Billing API</span>
                 </div>
                 <div class="proj-stack-row">
-                    <span class="proj-stack-label">Backend</span>
-                    <span class="proj-stack-value">Supabase — multi-store auth and data</span>
+                    <span class="proj-stack-label">CRM</span>
+                    <span class="proj-stack-value">Klaviyo API</span>
                 </div>
                 <div class="proj-stack-row">
-                    <span class="proj-stack-label">Deployment</span>
+                    <span class="proj-stack-label">Email</span>
+                    <span class="proj-stack-value">Resend</span>
+                </div>
+                <div class="proj-stack-row">
+                    <span class="proj-stack-label">Infrastructure</span>
                     <span class="proj-stack-value">Vercel</span>
-                </div>
-                <div class="proj-stack-row">
-                    <span class="proj-stack-label">Design</span>
-                    <span class="proj-stack-value">Figma — dashboard UI, data visualisation</span>
                 </div>
             </div>
 
@@ -75,29 +91,139 @@
                 <div class="proj-roles">
                     <div class="proj-role-item">
                         <p class="proj-role-name">Product Design</p>
-                        <p class="proj-role-desc">Designed the full dashboard UI in Figma — data layouts, chart components, and visual identity.</p>
+                        <p class="proj-role-desc">Designed the full UI — dashboard layouts, data visualisation components, and the drill-down interaction model across seven analytics panels.</p>
                     </div>
                     <div class="proj-role-item">
-                        <p class="proj-role-name">Frontend Development</p>
-                        <p class="proj-role-desc">Built the entire front-end in Next.js with TypeScript and Tailwind, including all chart and data visualisation components.</p>
+                        <p class="proj-role-name">Full-Stack Development</p>
+                        <p class="proj-role-desc">Built the entire application in Next.js with TypeScript — 126 API routes, 44 lib files, from the Shopify OAuth install flow to the real-time P&L dashboard.</p>
                     </div>
                     <div class="proj-role-item">
-                        <p class="proj-role-name">Shopify Integration</p>
-                        <p class="proj-role-desc">Integrated the Shopify API and webhook system to pull live store data and keep the dashboard in sync in real time.</p>
+                        <p class="proj-role-name">Data Pipeline & Fee Engine</p>
+                        <p class="proj-role-desc">Engineered the order reconciliation system, including a multi-processor fee engine covering six payment providers and versioned COGS history for accurate historical margin calculations.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">Attribution System</p>
+                        <p class="proj-role-desc">Built the first-party pixel, server-side session stitching, and the multi-touch attribution engine that applies five models across the full conversion path on first-party data.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">Ad Platform Integrations</p>
+                        <p class="proj-role-desc">Integrated Meta, Google, and TikTok ad APIs — including timezone normalization for accurate day-level ROAS joins between ad platform data and Shopify order data.</p>
+                    </div>
+                    <div class="proj-role-item">
+                        <p class="proj-role-name">AI Layer</p>
+                        <p class="proj-role-desc">Engineered the daily briefing, CFO scenario modeler, and natural-language concierge on Claude, with prompt caching to keep per-merchant inference costs low at scale.</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Right: description -->
+        <!-- Right: full writeup -->
         <div class="proj-right">
 
             <div class="proj-section">
                 <p class="proj-section-label">About This Project</p>
                 <div class="proj-bio">
-                    <p>DataFuse is a Shopify analytics app that consolidates store data into clear, actionable revenue insights — no spreadsheet required. It pulls together sales, traffic, and product data into a single clean dashboard, giving store owners a real-time view of what's working and what isn't without having to dig through Shopify's fragmented reports.</p>
-                    <p>The problem it solves is simple: Shopify's native analytics are scattered across multiple screens and require manual cross-referencing to get any meaningful picture. DataFuse centralises all of that into one view, with the metrics that actually matter to a store owner front and centre.</p>
+                    <p>A real-time profit intelligence platform for Shopify stores — because knowing your revenue means nothing if you don't know what you actually kept. DataFuse is a full-stack Shopify SaaS I built from scratch that reconciles ad spend, platform fees, COGS, and refunds against live order data to show merchants their true net profit. The headline metric is Profit ROAS — return on ad spend calculated on margin, not revenue — because a 4x ROAS on a 20% margin product is often a money-losing campaign in disguise.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">The Problem</p>
+                <div class="proj-bio">
+                    <p>Most Shopify merchants are flying blind on profitability. They log into Shopify and see revenue. They log into Meta and see ROAS. They check their bank account and wonder where the money went. The gap between those three numbers is COGS, transaction fees across multiple payment processors, ad spend, refunds, and shipping — none of which Shopify's native analytics surfaces in one place.</p>
+                    <p>Existing tools that solve this either cost $200–$500/month (Triple Whale, Northbeam) or don't go deep enough on the ad data. DataFuse sits in between: a full profit stack for stores spending $1k–$15k/month on ads, at $29–$149/month.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">How It Works</p>
+                <div class="proj-bio">
+                    <p>A merchant installs the app, connects their ad accounts (Meta, Google, TikTok), and enters their COGS — either manually per product or via CSV import. From that point forward, DataFuse pulls live Shopify orders, reconciles them against a fee engine that handles Shopify Payments, Stripe, PayPal, Square, Klarna, and Afterpay, then layers in ad spend from the platform APIs to produce a real-time P&L. Every number drills down: revenue by channel, profit by product, ROAS by ad creative.</p>
+                    <p>The attribution layer is first-party. A lightweight pixel on the storefront captures fbclid, gclid, ttclid, and UTM parameters at the session level, stitches them server-side to Shopify orders, and feeds five attribution models — first-touch, last-touch, linear, time-decay, and position-based — so merchants aren't solely relying on Meta and Google's self-reported numbers post-iOS 14.</p>
+                    <p>On top of the data layer sits an AI layer: a daily briefing that summarizes what moved and why, a CFO-style scenario modeler, and a natural-language concierge that answers questions like "which ad creative drove the most profit last week?" against the store's own data.</p>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">Platform Features</p>
+                <div class="proj-features">
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">P&L &amp; Profitability</p>
+                        <ul class="proj-feature-list">
+                            <li>Real-time net profit after COGS, ad spend, platform fees, refunds, and shipping</li>
+                            <li>Fee engine covering Shopify Payments, Stripe, PayPal, Square, Klarna, and Afterpay</li>
+                            <li>COGS management via manual entry or CSV import, with full version history</li>
+                            <li>P&L breakdown by product, channel, and order</li>
+                            <li>Revenue heatmap and operations dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Attribution &amp; Ad Analytics</p>
+                        <ul class="proj-feature-list">
+                            <li>First-party pixel capturing fbclid, gclid, ttclid, and UTM parameters</li>
+                            <li>Five multi-touch attribution models: first-touch, last-touch, linear, time-decay, position-based</li>
+                            <li>Facebook ad sync at the ad level (campaign → ad set → ad, per day)</li>
+                            <li>Google and TikTok sync at the campaign level</li>
+                            <li>Creative-level ROAS matched via utm_content</li>
+                            <li>Creative fatigue detection</li>
+                            <li>Survey-based post-purchase attribution</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Customer Intelligence</p>
+                        <ul class="proj-feature-list">
+                            <li>RFM segmentation: VIP, Loyal, At-Risk, Lost, and New customer buckets</li>
+                            <li>LTV by acquisition channel</li>
+                            <li>Funnel analytics and cart abandonment tracking</li>
+                            <li>Klaviyo integration for segmented email flows</li>
+                            <li>Automated win-back and lifecycle email campaigns</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Inventory</p>
+                        <ul class="proj-feature-list">
+                            <li>Sell-through velocity calculation per variant</li>
+                            <li>Projected stockout date alerts</li>
+                            <li>Dead stock identification</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">AI Layer</p>
+                        <ul class="proj-feature-list">
+                            <li>Daily AI briefing — KPI movements, anomaly flags, and prioritised actions</li>
+                            <li>CFO Dashboard with scenario modeling (e.g. "what happens to margin if COGS rise 10%?")</li>
+                            <li>AI Concierge — natural-language Q&A grounded in live store data</li>
+                            <li>Per-panel AI insights surfaced inline across the dashboard</li>
+                            <li>Weekly briefing email delivered to the merchant's inbox</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Alerts &amp; Automation</p>
+                        <ul class="proj-feature-list">
+                            <li>20+ configurable alert types: margin drops, ROAS degradation, stockouts, LTV shifts, and more</li>
+                            <li>Action feed with seven event types surfacing the highest-priority signals</li>
+                            <li>Influencer tracking</li>
+                        </ul>
+                    </div>
+                    <div class="proj-feature-group">
+                        <p class="proj-feature-group-name">Multi-Store</p>
+                        <ul class="proj-feature-list">
+                            <li>Isolated data pipelines per store under a single merchant account</li>
+                            <li>Up to 25 connected stores on the Agency tier</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-section">
+                <p class="proj-section-label">Under the Hood</p>
+                <div class="proj-bio">
+                    <p>The core data challenge was reconciliation correctness at the order level. Orders arrive via Shopify webhooks, get written to Neon PostgreSQL through Prisma, and immediately trigger a fee calculation pass. The fee engine handles six payment processors — each with different rate structures (flat, percentage-plus-fixed, or volume-tiered). Fees are materialized per order at write time rather than computed at query time, so historical P&L stays stable even when rate structures change. COGS are stored with full version history tied to a date range, so margin calculations reflect what the merchant actually paid at the time of sale rather than today's current cost.</p>
+                    <p>Ad data syncs on a scheduled cron: Meta Marketing API at the ad level (campaign → ad set → ad, per day), Google Ads and TikTok Ads at the campaign level. The Meta sync was the hardest to get right — the Insights API returns data in the account's marketing timezone while Shopify orders are in UTC, and the join between them has to normalize both into a common timezone before aggregating, or you get phantom day-boundary mismatches that silently corrupt ROAS numbers.</p>
+                    <p>The first-party attribution pixel captures fbclid, gclid, ttclid, and full UTM parameters on page load and posts them to a lightweight pixel endpoint. Server-side, each hit creates a session record keyed to a browser fingerprint. When a Shopify orders/create webhook fires, the attribution engine queries open sessions for that fingerprint, ranks touchpoints by recency and source priority, and writes a resolved attribution record. A second pass then applies all five multi-touch models, distributing fractional credit across the full conversion path. This matters because Meta's own reported ROAS and pixel-attributed ROAS often diverge by 20–40% post-iOS 14.</p>
+                    <p>The AI layer is built on the Claude API with prompt caching enabled on the system prompt and static grounding context, which cuts per-briefing token costs significantly. Each briefing prompt is constructed dynamically from a fresh query window of the merchant's actual KPI data — not cached summaries — and returns structured JSON: KPI deltas with direction and magnitude, anomaly flags with likely causes, and prioritised action items. The concierge Q&A endpoint translates natural-language questions into parameterised database queries at runtime and grounds Claude's response in the live query result rather than letting it hallucinate figures.</p>
+                    <p>Upstash Redis sits in front of all public-facing endpoints enforcing sliding-window rate limits, and caches hot dashboard aggregations with short TTLs so the UI stays fast on stores with 50k+ orders without hammering Postgres on every page load. The entire stack runs on Vercel serverless with Neon's connection pooling — compute and database both scale to zero when idle, keeping infrastructure cost proportional to actual usage.</p>
                 </div>
             </div>
 
