@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooper Regel — Personal Effective Legal Solutions</title>
+<meta name="description" content="Personal Effective Legal Solutions. Cooper Regel serves Yellowknife and Sherwood Park in Aboriginal Law, Residential Schools Claims, Corporate Law, Real Estate, and more.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── Variables ─────────────────────────────────────── */
+:root {
+    --navy:      #0B1724;
+    --navy-deep: #070E17;
+    --surface:   #112030;
+    --surface-2: #18293C;
+    --border:    #1C3045;
+    --teal:      #2EC4B6;
+    --text:      #D8E6F0;
+    --muted:     #5C7A96;
+    --gold:      #C9A84C;
+    --white:     #FFFFFF;
+}
+
+/* ─── Reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--navy);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ─── Scroll animations ─────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal.delay-1 { transition-delay: 0.08s; }
+.reveal.delay-2 { transition-delay: 0.16s; }
+.reveal.delay-3 { transition-delay: 0.24s; }
+.reveal.delay-4 { transition-delay: 0.32s; }
+.reveal.delay-5 { transition-delay: 0.40s; }
+.reveal.delay-6 { transition-delay: 0.48s; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* ─── Demo Banner ───────────────────────────────────── */
+.demo-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: rgba(7,14,23,0.95);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid var(--border);
+    padding: 0.65rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.demo-banner p { font-size: 0.78rem; color: var(--muted); }
+.demo-banner a { color: var(--teal); text-decoration: underline; font-size: 0.78rem; }
+.demo-banner-close { background: none; border: none; color: var(--muted); font-size: 1.1rem; cursor: pointer; padding: 0.2rem 0.4rem; line-height: 1; flex-shrink: 0; }
+.demo-banner-close:hover { color: var(--text); }
+
+/* ─── Nav ───────────────────────────────────────────── */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 500;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 4%;
+    transition: background 0.3s ease;
+}
+nav.scrolled {
+    background: rgba(7,14,23,0.97);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+}
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+}
+.nav-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+}
+.nav-wordmark span { color: var(--teal); }
+.nav-sub {
+    font-size: 0.64rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+}
+.nav-links > li { position: relative; }
+.nav-links > li > a {
+    font-size: 0.85rem;
+    color: rgba(216,230,240,0.7);
+    transition: color 0.2s;
+    padding: 0.5rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+}
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li > a .nav-chevron {
+    width: 10px;
+    height: 10px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+.nav-links > li:hover > a .nav-chevron { transform: rotate(180deg); }
+
+/* Dropdowns */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    min-width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+    z-index: 600;
+}
+.nav-dropdown-inner {
+    background: rgba(7,14,23,0.97);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.4rem 0;
+    backdrop-filter: blur(12px);
+}
+.nav-links > li:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+.nav-dropdown-inner a {
+    display: block;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem;
+    color: rgba(216,230,240,0.65);
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+}
+.nav-dropdown-inner a:hover {
+    color: var(--white);
+    background: rgba(46,196,182,0.07);
+}
+.nav-phone {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.01em;
+}
+.nav-cta {
+    padding: 0.5rem 1.2rem;
+    background: var(--teal);
+    color: var(--navy-deep) !important;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: opacity 0.2s !important;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* ─── Hamburger ─────────────────────────────────────── */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--navy-deep); z-index: 400; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+.mobile-menu.open { opacity: 1; pointer-events: auto; }
+.mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--text); transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--teal); }
+.mobile-close { position: absolute; top: 1.2rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--muted); padding: 0.4rem; }
+
+/* ─── Hero ──────────────────────────────────────────── */
+#hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('img/aurora-3.jpg') center 40% / cover no-repeat;
+    opacity: 0.85;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        rgba(7,14,23,0.82) 0%,
+        rgba(7,14,23,0.45) 55%,
+        rgba(7,14,23,0.15) 100%
+    );
+}
+.hero-inner {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 4% 60px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: center;
+}
+.hero-content {
+    max-width: 560px;
+}
+.hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+}
+.hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+.hero-headline em { font-style: italic; color: var(--teal); }
+.hero-sub {
+    font-size: 1rem;
+    color: rgba(216,230,240,0.65);
+    line-height: 1.9;
+    margin-bottom: 2.25rem;
+    max-width: 520px;
+}
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85rem 1.9rem;
+    background: var(--teal);
+    color: var(--navy-deep);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }
+.hero-phone {
+    font-size: 0.9rem;
+    color: rgba(216,230,240,0.6);
+}
+.hero-phone strong { color: var(--white); font-weight: 600; }
+/* ─── Hero form ─────────────────────────────────────── */
+.hero-form-wrap {
+    background: rgba(11,23,36,0.82);
+    border: 1px solid rgba(46,196,182,0.18);
+    border-radius: 10px;
+    padding: 2rem 2rem 2.25rem;
+    backdrop-filter: blur(12px);
+}
+.hero-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+.hero-form-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 1.4rem;
+}
+.hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.hf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+.hf-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.hf-group label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+.hf-group input,
+.hf-group select,
+.hf-group textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(46,196,182,0.2);
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.84rem;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    width: 100%;
+}
+.hf-group input:focus,
+.hf-group select:focus,
+.hf-group textarea:focus {
+    border-color: var(--teal);
+    background: rgba(46,196,182,0.06);
+}
+.hf-group input::placeholder,
+.hf-group textarea::placeholder { color: var(--muted); opacity: 0.5; }
+.hf-group select { appearance: none; cursor: pointer; color: var(--muted); }
+.hf-group select option { background: var(--navy-deep); color: var(--text); }
+.hf-group textarea { resize: none; min-height: 80px; }
+.hf-submit {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--teal);
+    color: var(--navy-deep);
+    font-weight: 700;
+    font-size: 0.88rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+    margin-top: 0.25rem;
+}
+.hf-submit:hover { opacity: 0.85; }
+
+.hero-offices {
+    position: absolute;
+    right: 5%;
+    bottom: 2.5rem;
+    z-index: 10;
+    display: flex;
+    gap: 2rem;
+}
+.hero-office {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(216,230,240,0.45);
+    letter-spacing: 0.04em;
+}
+.hero-office-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); opacity: 0.5; flex-shrink: 0; }
+
+/* ─── Intro strip ───────────────────────────────────── */
+#intro {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 4%;
+}
+.intro-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro-inner p {
+    font-size: 1.05rem;
+    color: rgba(216,230,240,0.65);
+    line-height: 1.9;
+}
+.intro-inner strong { color: var(--white); font-weight: 600; }
+
+/* ─── Services ──────────────────────────────────────── */
+#services {
+    padding: 5.5rem 4%;
+}
+.services-inner { max-width: 1100px; margin: 0 auto; }
+.section-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+}
+.services-hd {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+.services-hd h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+.services-hd a {
+    font-size: 0.85rem;
+    color: var(--teal);
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(46,196,182,0.3);
+    padding-bottom: 0.1rem;
+    transition: border-color 0.2s;
+    flex-shrink: 0;
+}
+.services-hd a:hover { border-color: var(--teal); }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.service-card {
+    background: var(--surface);
+    padding: 2rem 1.75rem;
+    transition: background 0.2s;
+    cursor: default;
+}
+.service-card:hover { background: var(--surface-2); }
+.service-card.featured { background: rgba(46,196,182,0.04); border-left: 2px solid var(--teal); }
+.service-card.featured:hover { background: rgba(46,196,182,0.08); }
+.service-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--teal);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+.service-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.service-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    border: 1px solid rgba(46,196,182,0.3);
+    padding: 0.18rem 0.5rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+.service-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+
+/* ─── Featured cases ─────────────────────────────────── */
+#cases {
+    padding: 5.5rem 4%;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.cases-inner { max-width: 1100px; margin: 0 auto; }
+.cases-hd { margin-bottom: 2.5rem; }
+.cases-hd h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+.cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+.case-card {
+    background: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    transition: border-color 0.2s;
+}
+.case-card:hover { border-color: rgba(46,196,182,0.35); }
+.case-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+.case-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+}
+.case-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.75; }
+
+/* ─── Why choose ─────────────────────────────────────── */
+#why {
+    padding: 5.5rem 4%;
+}
+.why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+.why-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+.why-left p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.85;
+    margin-bottom: 1.75rem;
+}
+.why-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+.why-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+.why-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(46,196,182,0.12);
+    border: 1px solid rgba(46,196,182,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+.why-check svg { width: 10px; height: 10px; stroke: var(--teal); stroke-width: 2.5; fill: none; }
+.why-right {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2.5rem;
+}
+.why-right h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.35rem;
+}
+.why-right .sub { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.75rem; }
+.offices-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.office-item { border-left: 2px solid var(--border); padding-left: 1rem; transition: border-color 0.2s; }
+.office-item:hover { border-color: var(--teal); }
+.office-name { font-weight: 600; font-size: 0.9rem; color: var(--white); margin-bottom: 0.35rem; }
+.office-detail { font-size: 0.8rem; color: var(--muted); line-height: 1.7; }
+.office-phone { display: block; font-size: 0.88rem; font-weight: 600; color: var(--teal); margin-top: 0.4rem; letter-spacing: 0.01em; }
+
+/* ─── Footer ─────────────────────────────────────────── */
+footer {
+    background: var(--navy-deep);
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 4%;
+}
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.15rem;
+}
+.footer-brand-name span { color: var(--teal); }
+.footer-tagline { font-size: 0.78rem; font-style: italic; color: var(--muted); }
+.footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.8rem; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--teal); }
+.footer-copy { font-size: 0.75rem; color: rgba(216,230,240,0.2); }
+.footer-credit { font-size: 0.75rem; color: var(--teal); opacity: 0.5; transition: opacity 0.2s; }
+.footer-credit:hover { opacity: 1; }
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-offices { display: none; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 100px 5% 60px; }
+    .hero-content { max-width: 100%; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .cases-grid { grid-template-columns: 1fr; }
+    .why-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .services-hd { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}
+@media (max-width: 580px) {
+    .hero-inner { padding: 90px 5% 50px; }
+    .hf-row { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-links { gap: 1rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ─── Demo Banner ──────────────────────────────────── -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> — not affiliated with Cooper Regel.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<!-- ─── Nav ──────────────────────────────────────────── -->
+<nav id="main-nav">
+    <div class="nav-brand">
+        <div class="nav-wordmark">Cooper <span>Regel</span></div>
+        <div class="nav-sub">Barristers · Solicitors · Notaries</div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About
+                <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown">
+                <div class="nav-dropdown-inner">
+                    <a href="#">About the Firm</a>
+                    <a href="#">Our Lawyers</a>
+                    <a href="#">Our Team</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#">Legal Services
+                <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown">
+                <div class="nav-dropdown-inner">
+                    <a href="#">Aboriginal Law</a>
+                    <a href="#">Class Actions</a>
+                    <a href="#">Real Estate Law</a>
+                    <a href="#">Civil Litigation</a>
+                    <a href="#">Corporate &amp; Commercial</a>
+                    <a href="#">Wills &amp; Estates</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#">Contact
+                <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown">
+                <div class="nav-dropdown-inner">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Yellowknife Office</a>
+                    <a href="#">Sherwood Park Office</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="#" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close">&#x2715;</button>
+    <a href="#services" onclick="closeMobile()">Legal Services</a>
+    <a href="#cases"    onclick="closeMobile()">Class Actions</a>
+    <a href="#why"      onclick="closeMobile()">About Us</a>
+    <a href="#why"      onclick="closeMobile()">Contact Us</a>
+</div>
+
+<!-- ─── Hero ──────────────────────────────────────────── -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+
+        <!-- Left: copy -->
+        <div class="hero-content">
+            <p class="hero-eyebrow reveal">Yellowknife &nbsp;·&nbsp; Sherwood Park</p>
+            <h1 class="hero-headline reveal delay-1">Personal Effective<br><em>Legal Solutions.</em></h1>
+            <p class="hero-sub reveal delay-2">Aboriginal law, residential schools claims, corporate litigation, and full-service legal representation across the Northwest Territories and Alberta.</p>
+            <div class="hero-actions reveal delay-3">
+                <span class="hero-phone">Toll-free <strong>1-800-994-7477</strong></span>
+            </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="hero-form-wrap reveal delay-2">
+            <p class="hero-form-title">Get in Touch</p>
+            <p class="hero-form-sub">We'll respond within one business day.</p>
+            <form class="hero-form" onsubmit="return false;">
+                <div class="hf-row">
+                    <div class="hf-group">
+                        <label for="hf-first">First Name</label>
+                        <input type="text" id="hf-first" placeholder="Jane">
+                    </div>
+                    <div class="hf-group">
+                        <label for="hf-last">Last Name</label>
+                        <input type="text" id="hf-last" placeholder="Smith">
+                    </div>
+                </div>
+                <div class="hf-group">
+                    <label for="hf-email">Email</label>
+                    <input type="email" id="hf-email" placeholder="jane@example.com">
+                </div>
+                <div class="hf-group">
+                    <label for="hf-phone">Phone</label>
+                    <input type="tel" id="hf-phone" placeholder="(780) 555-0000">
+                </div>
+                <div class="hf-group">
+                    <label for="hf-area">Area of Law</label>
+                    <select id="hf-area">
+                        <option value="">Select a practice area…</option>
+                        <option>Aboriginal Law</option>
+                        <option>Class Actions / Residential Schools</option>
+                        <option>Real Estate Law</option>
+                        <option>Civil Litigation</option>
+                        <option>Corporate &amp; Commercial Law</option>
+                        <option>Wills &amp; Estates</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="hf-group">
+                    <label for="hf-msg">Brief Description</label>
+                    <textarea id="hf-msg" placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="hf-submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- ─── Intro ─────────────────────────────────────────── -->
+<div id="intro">
+    <div class="intro-inner reveal">
+        <p>Our lawyers take the time to <strong>listen to your needs</strong>, explain your legal options in plain English, and recommend solutions tailored to your specific objectives — from individuals and families to corporate clients and Indigenous communities.</p>
+    </div>
+</div>
+
+<!-- ─── Services ──────────────────────────────────────── -->
+<section id="services">
+    <div class="services-inner">
+        <div class="services-hd">
+            <div>
+                <p class="section-label">Legal Services</p>
+                <h2>What We Do</h2>
+            </div>
+            <a href="#why">View all practice areas &rarr;</a>
+        </div>
+        <div class="services-grid">
+
+            <div class="service-card featured reveal delay-1">
+                <div class="service-badge">Northern Specialty</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Aboriginal Law</h3>
+                <p>Representing Indigenous individuals and communities across treaty rights, land claims, and governance in the NWT and Alberta.</p>
+            </div>
+
+            <div class="service-card featured reveal delay-2">
+                <div class="service-badge">Northern Specialty</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Class Actions</h3>
+                <p>Large-scale litigation on behalf of groups — including RCMP and Indian Hospitals class action proceedings.</p>
+            </div>
+
+            <div class="service-card reveal delay-3">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Real Estate Law</h3>
+                <p>Residential and commercial transactions, title transfers, and conveyancing throughout Alberta and the NWT.</p>
+            </div>
+
+            <div class="service-card reveal delay-1">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.61 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.09 6.09l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h3>Civil Litigation</h3>
+                <p>Dispute resolution from negotiation through trial — across provincial, territorial, and federal courts.</p>
+            </div>
+
+            <div class="service-card reveal delay-2">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                </div>
+                <h3>Corporate &amp; Commercial Law</h3>
+                <p>Incorporations, commercial contracts, and ongoing business counsel for clients operating across northern Canada.</p>
+            </div>
+
+            <div class="service-card reveal delay-3">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <h3>Wills &amp; Estates</h3>
+                <p>Wills, powers of attorney, personal directives, and estate administration to protect what matters most.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── Featured Cases ─────────────────────────────────── -->
+<section id="cases">
+    <div class="cases-inner">
+        <div class="cases-hd reveal">
+            <p class="section-label">Active Class Actions</p>
+            <h2>Current Cases</h2>
+        </div>
+        <div class="cases-grid">
+
+            <div class="case-card reveal delay-1">
+                <span class="case-tag">Class Action</span>
+                <h3>RCMP Class Action</h3>
+                <p>Cooper Regel is involved in class action proceedings related to the RCMP. Contact our office for information about this matter.</p>
+            </div>
+
+            <div class="case-card reveal delay-2">
+                <span class="case-tag">Class Action</span>
+                <h3>Indian Hospitals Class Action</h3>
+                <p>Cooper Regel represents individuals in class action proceedings related to Indian Hospitals. Contact our office for information about this matter.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── Why Choose ─────────────────────────────────────── -->
+<section id="why">
+    <div class="why-inner">
+        <div class="why-left reveal">
+            <p class="section-label">Why Choose Us</p>
+            <h2>A Different Kind<br>of Law Firm.</h2>
+            <p>We are a full-service firm with deep roots in northern Canada — combining the experience of large-firm practice with the personal attention of a boutique.</p>
+            <ul class="why-list">
+                <li><span class="why-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></span> Experienced lawyers across multiple areas of law</li>
+                <li><span class="why-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></span> Multi-jurisdictional practice spanning NWT, Alberta, and Federal Court</li>
+                <li><span class="why-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></span> Deep expertise in Aboriginal law and residential schools claims</li>
+                <li><span class="why-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></span> Two offices serving northern and central Canada</li>
+                <li><span class="why-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></span> Plain-language communication — no legal jargon</li>
+            </ul>
+        </div>
+        <div class="why-right reveal">
+            <h3>Get in Touch</h3>
+            <p class="sub">Reach either office directly or call our toll-free line.</p>
+            <div class="offices-list">
+                <div class="office-item">
+                    <div class="office-name">Yellowknife Office</div>
+                    <div class="office-detail">Box 383, Yellowknife, NT X1A 2N3</div>
+                    <span class="office-phone">1-867-920-4000</span>
+                </div>
+                <div class="office-item">
+                    <div class="office-name">Sherwood Park Office</div>
+                    <div class="office-detail">77 Chippewa Road, Sherwood Park, AB T8A 6J7</div>
+                    <span class="office-phone">1-780-570-8448</span>
+                </div>
+                <div class="office-item">
+                    <div class="office-name">Toll-Free</div>
+                    <span class="office-phone">1-800-994-7477</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── Footer ────────────────────────────────────────── -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand-name">Cooper <span>Regel</span></div>
+            <div class="footer-tagline">Personal Effective Legal Solutions</div>
+        </div>
+        <div class="footer-links">
+            <a href="#services">Legal Services</a>
+            <a href="#cases">Class Actions</a>
+            <a href="#why">About Us</a>
+            <a href="#why">Contact Us</a>
+        </div>
+        <div>
+            <div class="footer-copy">&copy; 2026 Cooper Regel. All rights reserved.</div>
+            <a href="https://matthewmcguire.ca" target="_blank" class="footer-credit">Concept by Matthew McGuire</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ─── JS ────────────────────────────────────────────── -->
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+document.getElementById('mobile-close').addEventListener('click', closeMobile);
+hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+function closeMobile() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
