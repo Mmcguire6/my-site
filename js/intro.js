@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const profiles     = document.querySelectorAll('.profile');
 
     function playIntroSound() {
-        const audio = new Audio('audio/Netflix intro - QuickSounds.com.mp3');
+        const audio = new Audio('audio/intro-sound.mp3');
         audio.play().catch(() => {});
     }
 
