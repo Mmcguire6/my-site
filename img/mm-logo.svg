@@ -1,9 +1,8 @@
-<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="440" height="180" viewBox="0 0 440 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Matthew McGuire Logo</title>
   <desc id="desc">A lowercase mm developer logo styled as &lt;mm/&gt;.</desc>
-  <rect width="720" height="180" fill="transparent"/>
-  <text x="360" y="113"
-        text-anchor="middle"
+  <text x="8" y="113"
+        text-anchor="start"
         font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
         font-size="92"
         font-weight="500"
