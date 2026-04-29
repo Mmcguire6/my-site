@@ -624,6 +624,36 @@ nav.scrolled {
 .office-detail { font-size: 0.8rem; color: var(--muted); line-height: 1.7; }
 .office-phone { display: block; font-size: 0.88rem; font-weight: 600; color: var(--teal); margin-top: 0.4rem; letter-spacing: 0.01em; }
 
+/* ─── Footer map ─────────────────────────────────────── */
+.footer-maps {
+    padding: 2rem 4% 0;
+    background: var(--navy-deep);
+    border-top: 1px solid var(--border);
+}
+.footer-maps h4 {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 14px;
+}
+.footer-maps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 2rem;
+}
+.footer-map-item p {
+    font-size: 0.78rem; color: var(--muted);
+    margin-bottom: 8px; font-weight: 600;
+}
+.footer-map-item iframe {
+    width: 100%; height: 200px;
+    border: none; border-radius: 10px;
+    opacity: 0.85; filter: grayscale(20%);
+}
+@media (max-width: 580px) {
+    .footer-maps-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── Footer ─────────────────────────────────────────── */
 footer {
     background: var(--navy-deep);
@@ -946,6 +976,29 @@ footer {
 </section>
 
 <!-- ─── Footer ────────────────────────────────────────── -->
+<div class="footer-maps">
+    <h4>Our Offices</h4>
+    <div class="footer-maps-grid">
+        <div class="footer-map-item">
+            <p>Yellowknife, NT</p>
+            <iframe
+                src="https://maps.google.com/maps?q=Yellowknife+NT+X1A+2N3&output=embed"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Cooper Regel Yellowknife office">
+            </iframe>
+        </div>
+        <div class="footer-map-item">
+            <p>Sherwood Park, AB</p>
+            <iframe
+                src="https://maps.google.com/maps?q=77+Chippewa+Road+Sherwood+Park+AB+T8A+6J7&output=embed"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Cooper Regel Sherwood Park office">
+            </iframe>
+        </div>
+    </div>
+</div>
 <footer>
     <div class="footer-inner">
         <div>
