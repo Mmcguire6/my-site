@@ -430,64 +430,28 @@ nav.scrolled {
     border-radius: 16px;
 }
 
-/* Any card with a flip inner gets 3D context */
-.card:has(.card-inner) {
-    overflow: visible;
-    perspective: 1000px;
-}
-
 .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.34, 1.4, 0.64, 1);
-    will-change: transform;
 }
 
-@media (hover: hover) {
-    .card:has(.card-inner):hover {
-        transform: none;
-        box-shadow: none;
-    }
-
-    .card:has(.card-inner):hover .card-inner {
-        transform: rotateY(180deg) scale(1.08);
-    }
+/* Press-to-navigate spring animation */
+.card.pressed {
+    transform: scale(0.93) !important;
+    transition: transform 0.12s ease-out !important;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.5) !important;
 }
 
-/* Touch devices — cards are simple tap buttons */
-@media (hover: none) {
-    .card:has(.card-inner) { overflow: hidden; perspective: none; }
-    .card-inner { transform-style: flat; }
-    .card-back  { display: none; }
-    .card:active {
-        transform: scale(0.95);
-        transition: transform 0.1s ease-out;
-    }
-}
-
-.card-front,
-.card-back {
+.card-front {
     position: absolute;
     inset: 0;
     border-radius: 16px;
     overflow: hidden;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 
 .card-back {
-    transform: rotateY(180deg) scale(0.926);
-    background: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-    padding: 0.65rem;
-    text-align: center;
-    overflow: hidden;
+    display: none;
 }
 .card--md { width: 260px; height: 146px; }
 .card--sm { width: calc((92vw - 84px) / 6.5); aspect-ratio: 16/9; height: auto; }

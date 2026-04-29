@@ -14,6 +14,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// ── Press-to-navigate on project cards ──
+document.querySelectorAll('.card:has(.card-inner)').forEach(card => {
+    const onclickAttr = card.getAttribute('onclick') || '';
+    const match = onclickAttr.match(/href='([^']+)'/);
+    if (!match) return;
+    const href = match[1];
+
+    card.addEventListener('click', e => {
+        e.stopImmediatePropagation();
+        if (card.classList.contains('pressed')) return;
+        card.classList.add('pressed');
+        setTimeout(() => card.classList.remove('pressed'), 130);
+        setTimeout(() => { window.location.href = href; }, 300);
+    }, true);
+});
+
 // ── Active nav links ──
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
