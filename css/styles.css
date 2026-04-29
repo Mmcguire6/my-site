@@ -322,14 +322,46 @@ nav.scrolled {
     margin-bottom: 1.75rem;
 }
 
+.row-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
 .row-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: #e5e5e5;
-    margin-bottom: 0.75rem;
     letter-spacing: 0.06em;
 }
+
+.row-explore {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, color 0.2s;
+    white-space: nowrap;
+}
+
+.row:hover .row-explore {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.row-explore:hover { color: #e5e5e5; }
+
+.row-explore-chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.row-explore:hover .row-explore-chevron { transform: translateX(3px); }
 
 .row-cards {
     display: flex;

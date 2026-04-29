@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 // ── Active nav links ──
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');

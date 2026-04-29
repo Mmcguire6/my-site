@@ -7,7 +7,7 @@
 body {
     background: #000;
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     height: 100vh;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
@@ -226,7 +226,7 @@ body {
     background: transparent;
     border: 1px solid #808080;
     color: #808080;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.9375rem;
     font-weight: 400;
     letter-spacing: 0.08em;
