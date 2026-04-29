@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Oak Law Firm — Edmonton, AB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #1C2F7A;
+            --navy-dark: #141F5C;
+            --navy-mid: #253888;
+            --gold: #C4882A;
+            --gold-light: #D9A24A;
+            --cream: #F7F4EF;
+            --sand: #EDE8DF;
+            --text: #1A1A1A;
+            --text-mid: #3D3D3D;
+            --text-light: #6B6B6B;
+            --white: #FFFFFF;
+            --nav-h: 72px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ─────────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(20, 31, 92, 0.97);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 900;
+            border-bottom: 1px solid rgba(196,136,42,0.25);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+        }
+
+        .logo-box {
+            width: 36px;
+            height: 36px;
+            border: 1.5px solid rgba(255,255,255,0.75);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-box svg {
+            width: 17px;
+            height: 17px;
+            stroke: rgba(255,255,255,0.80);
+            fill: none;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .logo-line1,
+        .logo-line2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.10em;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 4px;
+            flex-wrap: nowrap;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: color 0.18s, background 0.18s;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+
+        .nav-links > li > a:hover {
+            color: var(--gold-light);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .nav-chevron {
+            width: 14px; height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.18s;
+        }
+
+        .nav-links > li:hover .nav-chevron {
+            transform: rotate(180deg);
+        }
+
+        /* dropdown */
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-top: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.18s ease;
+            z-index: 600;
+        }
+
+        .nav-links > li:hover .nav-dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-dropdown-inner {
+            background: var(--navy-dark);
+            border: 1px solid rgba(196,136,42,0.25);
+            border-radius: 10px;
+            padding: 8px 0;
+            min-width: 230px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+        }
+
+        .nav-dropdown-inner a {
+            display: block;
+            padding: 9px 20px;
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.15s, background 0.15s;
+        }
+
+        .nav-dropdown-inner a:hover {
+            color: var(--gold-light);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--white) !important;
+            border-radius: 6px;
+            padding: 9px 20px !important;
+            font-weight: 600 !important;
+            transition: background 0.18s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--white) !important;
+        }
+
+        /* hamburger */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0; right: 0;
+            background: var(--navy-dark);
+            padding: 20px 24px 32px;
+            z-index: 850;
+            border-bottom: 1px solid rgba(196,136,42,0.2);
+        }
+
+        .mobile-nav.open { display: block; }
+
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .mobile-nav a:last-child { border-bottom: none; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            align-items: center;
+            padding: 0 48px 0 60px;
+            gap: 60px;
+            padding-top: var(--nav-h);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('img/hero-bg.jpg') center 40% / cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(20,31,92,0.92) 0%, rgba(20,31,92,0.68) 55%, rgba(20,31,92,0.38) 100%);
+            z-index: 1;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-light);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .hero-h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.6rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        .hero-h1 em {
+            font-style: normal;
+            color: var(--gold-light);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.80);
+            line-height: 1.7;
+            max-width: 520px;
+            margin-bottom: 38px;
+            font-weight: 300;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 100px;
+            padding: 7px 16px;
+            color: rgba(255,255,255,0.88);
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        .hero-badge svg {
+            width: 14px; height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Hero form */
+        .hero-form-wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-form {
+            background: rgba(255,255,255,0.10);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 16px;
+            padding: 36px 32px 32px;
+        }
+
+        .hf-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .hf-sub {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 24px;
+        }
+
+        .hf-field {
+            margin-bottom: 14px;
+        }
+
+        .hf-field label {
+            display: block;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.70);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .hf-field input,
+        .hf-field select,
+        .hf-field textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 8px;
+            padding: 11px 14px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border-color 0.18s, background 0.18s;
+        }
+
+        .hf-field input::placeholder,
+        .hf-field textarea::placeholder {
+            color: rgba(255,255,255,0.40);
+        }
+
+        .hf-field select option {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .hf-field input:focus,
+        .hf-field select:focus,
+        .hf-field textarea:focus {
+            border-color: var(--gold-light);
+            background: rgba(255,255,255,0.16);
+        }
+
+        .hf-field textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        .hf-btn {
+            width: 100%;
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            padding: 13px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 6px;
+            transition: background 0.18s;
+        }
+
+        .hf-btn:hover { background: var(--gold-light); }
+
+        /* ── TRUST BAR ───────────────────────────────────── */
+        .trust-bar {
+            background: var(--navy);
+            padding: 22px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.80);
+            font-size: 0.86rem;
+            font-weight: 500;
+        }
+
+        .trust-item svg {
+            width: 18px; height: 18px;
+            color: var(--gold-light);
+            flex-shrink: 0;
+        }
+
+        /* ── PRACTICE AREAS ──────────────────────────────── */
+        .section {
+            padding: 96px 60px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            color: var(--navy-dark);
+            line-height: 1.18;
+            margin-bottom: 14px;
+        }
+
+        .section-lead {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.75;
+            max-width: 600px;
+            margin-bottom: 52px;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 24px;
+        }
+
+        .practice-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 32px 28px;
+            border: 1px solid rgba(0,0,0,0.07);
+            transition: box-shadow 0.22s, transform 0.22s;
+            cursor: default;
+        }
+
+        .practice-card:hover {
+            box-shadow: 0 12px 40px rgba(28,47,122,0.12);
+            transform: translateY(-3px);
+        }
+
+        .pc-icon {
+            width: 48px; height: 48px;
+            background: rgba(28,47,122,0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .pc-icon svg {
+            width: 22px; height: 22px;
+            color: var(--navy);
+        }
+
+        .pc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .pc-desc {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ── ABOUT / TEAM ────────────────────────────────── */
+        .about-section {
+            padding: 96px 60px;
+            background: var(--navy-dark);
+        }
+
+        .about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-img-wrap {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .about-img-wrap img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .about-img-accent {
+            position: absolute;
+            bottom: -16px;
+            right: -16px;
+            width: 120px;
+            height: 120px;
+            background: var(--gold);
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .about-copy .section-label { margin-bottom: 14px; }
+
+        .about-copy .section-h2 {
+            color: var(--white);
+            margin-bottom: 22px;
+        }
+
+        .about-body {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.72);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-values {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .av-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .av-dot {
+            width: 8px; height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 7px;
+        }
+
+        .av-text {
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.6;
+        }
+
+        /* ── TEAM PHOTO ──────────────────────────────────── */
+        .team-section {
+            padding: 96px 60px;
+            background: var(--sand);
+        }
+
+        .team-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-photo-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            margin-top: 48px;
+        }
+
+        .team-photo-wrap img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+        }
+
+        /* ── CONTACT ─────────────────────────────────────── */
+        .contact-section {
+            padding: 96px 60px;
+            background: var(--cream);
+        }
+
+        .contact-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .contact-info-items {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 36px;
+        }
+
+        .ci-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .ci-icon {
+            width: 44px; height: 44px;
+            background: rgba(28,47,122,0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .ci-icon svg {
+            width: 20px; height: 20px;
+            color: var(--navy);
+        }
+
+        .ci-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .ci-val {
+            font-size: 0.94rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* Contact form */
+        .contact-form {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 36px;
+            border: 1px solid rgba(0,0,0,0.07);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .cf-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 6px;
+        }
+
+        .cf-sub {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
+        }
+
+        .cf-field {
+            margin-bottom: 16px;
+        }
+
+        .cf-field label {
+            display: block;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: var(--text-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .cf-field input,
+        .cf-field select,
+        .cf-field textarea {
+            width: 100%;
+            background: var(--cream);
+            border: 1.5px solid rgba(0,0,0,0.12);
+            border-radius: 8px;
+            padding: 11px 14px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border-color 0.18s;
+        }
+
+        .cf-field input:focus,
+        .cf-field select:focus,
+        .cf-field textarea:focus {
+            border-color: var(--navy);
+        }
+
+        .cf-field textarea {
+            height: 110px;
+            resize: none;
+        }
+
+        .cf-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 6px;
+            transition: background 0.18s;
+        }
+
+        .cf-btn:hover { background: var(--navy-mid); }
+
+        /* ── FOOTER ──────────────────────────────────────── */
+        footer {
+            background: var(--navy-dark);
+            padding: 52px 60px 28px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 48px;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            margin-bottom: 28px;
+        }
+
+        .footer-brand .logo-box {
+            border-color: rgba(255,255,255,0.55);
+            margin-bottom: 14px;
+        }
+
+        .footer-brand .logo-box svg {
+            stroke: rgba(255,255,255,0.55);
+        }
+
+        .footer-brand .logo-line1,
+        .footer-brand .logo-line2 {
+            color: rgba(255,255,255,0.70);
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            max-width: 260px;
+        }
+
+        .footer-links-col h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 16px;
+        }
+
+        .footer-links-col div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links-col a {
+            color: rgba(255,255,255,0.62);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.15s;
+        }
+
+        .footer-links-col a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.40);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 36px; height: 36px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.60);
+            text-decoration: none;
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .footer-social a:hover {
+            background: rgba(196,136,42,0.20);
+            color: var(--gold-light);
+        }
+
+        .footer-social svg {
+            width: 16px; height: 16px;
+        }
+
+        /* ── DEMO BANNER ─────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(20,31,92,0.97);
+            backdrop-filter: blur(8px);
+            border-top: 2px solid var(--gold);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 9999;
+            font-size: 0.83rem;
+            color: rgba(255,255,255,0.80);
+        }
+
+        .demo-banner a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .demo-banner a:hover { text-decoration: underline; }
+
+        .demo-banner-close {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.70);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: color 0.15s, border-color 0.15s;
+            line-height: 1.4;
+            margin-left: 8px;
+        }
+
+        .demo-banner-close:hover {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.50);
+        }
+
+        /* ── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 120px 32px 64px;
+            }
+
+            .hero-form-wrap { display: none; }
+
+            .about-inner,
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .about-img-wrap img { height: 320px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav { padding: 0 24px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+
+            .section,
+            .about-section,
+            .team-section,
+            .contact-section { padding: 64px 24px; }
+
+            footer { padding: 40px 24px 20px; }
+
+            .trust-bar { padding: 20px 24px; gap: 20px; }
+
+            .team-photo-wrap img { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">
+            <span class="logo-box">
+                <svg viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 8h14"/><path d="M5 8L2 14h6L5 8z"/><path d="M19 8l-3 6h6l-3-6z"/><line x1="9" y1="20" x2="15" y2="20"/></svg>
+            </span>
+            <span class="logo-text-wrap">
+                <span class="logo-line1">THE OAK</span>
+                <span class="logo-line2">LAW FIRM</span>
+            </span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About
+                    <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner">
+                        <a href="#">Our Story</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Our Values</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Practice Areas
+                    <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner">
+                        <a href="#">Employment &amp; Labour Law</a>
+                        <a href="#">Discrimination / Human Rights</a>
+                        <a href="#">Civil Litigation</a>
+                        <a href="#">Not-for-Profit / Charities</a>
+                        <a href="#">Education Law</a>
+                        <a href="#">Landlord &amp; Tenant Disputes</a>
+                        <a href="#">Administrative Law</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Employment &amp; Labour Law</a>
+        <a href="#">Discrimination / Human Rights</a>
+        <a href="#">Civil Litigation</a>
+        <a href="#">Not-for-Profit / Charities</a>
+        <a href="#">Education Law</a>
+        <a href="#">Landlord &amp; Tenant Disputes</a>
+        <a href="#">Administrative Law</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-copy">
+            <p class="hero-eyebrow">Edmonton, Alberta</p>
+            <h1 class="hero-h1">Legal Services With <em>A Human Touch</em></h1>
+            <p class="hero-sub">We are your every day lawyers — providing legal services with a human touch for employees, employers, and individuals across Edmonton and Alberta.</p>
+            <div class="hero-badges">
+                <span class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Employment Law
+                </span>
+                <span class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Human Rights
+                </span>
+                <span class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                    Civil Litigation
+                </span>
+            </div>
+        </div>
+
+        <!-- Hero contact form -->
+        <div class="hero-form-wrap">
+            <div class="hero-form">
+                <p class="hf-title">Request a Consultation</p>
+                <p class="hf-sub">Tell us about your situation — we'll get back to you promptly.</p>
+                <form onsubmit="return false;">
+                    <div class="hf-field">
+                        <label for="hf-name">Full Name</label>
+                        <input type="text" id="hf-name" placeholder="Your name">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-email">Email</label>
+                        <input type="email" id="hf-email" placeholder="your@email.com">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-area">Practice Area</label>
+                        <select id="hf-area">
+                            <option value="">Select an area...</option>
+                            <option>Employment &amp; Labour Law</option>
+                            <option>Discrimination / Human Rights</option>
+                            <option>Civil Litigation</option>
+                            <option>Not-for-Profit / Charities Law</option>
+                            <option>Education Law</option>
+                            <option>Landlord &amp; Tenant Disputes</option>
+                            <option>Administrative Law</option>
+                        </select>
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-msg">Brief Description</label>
+                        <textarea id="hf-msg" placeholder="Briefly describe your legal matter..."></textarea>
+                    </div>
+                    <button class="hf-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Legal Services With a Human Touch
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            Serving Employees &amp; Employers
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            We Will Fight For You
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Edmonton, Alberta
+        </div>
+    </div>
+
+    <!-- PRACTICE AREAS -->
+    <section class="section" id="practice-areas">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-h2">Practice Areas</h2>
+        <p class="section-lead">From workplace disputes to civil litigation, we provide clear, practical legal advice across a range of areas — always with a human touch.</p>
+
+        <div class="practice-grid">
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                </div>
+                <p class="pc-title">Employment &amp; Labour Law</p>
+                <p class="pc-desc">Representing both employees and employers across a range of workplace and labour-related legal matters.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <p class="pc-title">Discrimination / Human Rights</p>
+                <p class="pc-desc">Advocating for individuals who have experienced discrimination or human rights violations in the workplace or public services.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </div>
+                <p class="pc-title">Civil Litigation</p>
+                <p class="pc-desc">Practical representation in civil disputes, focused on working toward outcomes that matter to you.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </div>
+                <p class="pc-title">Not-for-Profit / Charities Law</p>
+                <p class="pc-desc">Legal assistance for charities, non-profits, and not-for-profit organizations in Alberta.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                </div>
+                <p class="pc-title">Education Law</p>
+                <p class="pc-desc">Assisting individuals with education-related legal matters in Alberta.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <p class="pc-title">Landlord &amp; Tenant Disputes</p>
+                <p class="pc-desc">Practical advice and representation for landlords and tenants facing rental and lease-related disputes in Alberta.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <p class="pc-title">Administrative Law / Disciplinary Hearings</p>
+                <p class="pc-desc">Representing professionals and individuals before regulatory bodies and administrative boards across Alberta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-inner">
+            <div class="about-img-wrap">
+                <img src="img/diversity.jpg" alt="The Oak Law Firm team">
+                <div class="about-img-accent"></div>
+            </div>
+            <div class="about-copy">
+                <p class="section-label" style="color:var(--gold-light);">
+                    <span style="display:inline-flex;align-items:center;gap:8px;">
+                        <span style="display:block;width:24px;height:2px;background:var(--gold);"></span>
+                        About the Firm
+                    </span>
+                </p>
+                <h2 class="section-h2">We Will Fight For You</h2>
+                <p class="about-body">At The Oak Law Firm, we believe in providing legal services that are accessible, clear, and effective. We are your every day lawyers — committed to understanding your situation and working with you to achieve the results you deserve.</p>
+                <p class="about-body">Whether you are an employee facing workplace issues, an employer navigating complex labour law, or an individual dealing with a civil or human rights matter, our team is ready to stand with you.</p>
+                <div class="about-values">
+                    <div class="av-item">
+                        <div class="av-dot"></div>
+                        <p class="av-text">Serving both employees and employers across a broad range of workplace and civil matters</p>
+                    </div>
+                    <div class="av-item">
+                        <div class="av-dot"></div>
+                        <p class="av-text">Experience representing professionals before regulatory boards and disciplinary hearings</p>
+                    </div>
+                    <div class="av-item">
+                        <div class="av-dot"></div>
+                        <p class="av-text">A human touch — clear communication, practical advice, and genuine care for our clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM PHOTO -->
+    <section class="team-section">
+        <div class="team-inner">
+            <p class="section-label">Our Team</p>
+            <h2 class="section-h2">People You Can Count On</h2>
+            <p class="section-lead">Real lawyers, real experience — committed to providing practical, people-centred legal services across Edmonton and Alberta.</p>
+            <div class="team-photo-wrap">
+                <img src="img/team.jpg" alt="The Oak Law Firm legal team">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div>
+                <p class="section-label">Get In Touch</p>
+                <h2 class="section-h2">Let's Talk About Your Case</h2>
+                <p class="section-lead" style="margin-bottom:0;">We're here to help. Reach out to discuss your matter — no pressure, just a conversation.</p>
+
+                <div class="contact-info-items">
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.18 7.55a16 16 0 006.27 6.27l1.41-1.42a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Phone</p>
+                            <p class="ci-val"><span>(780) 428-8848</span></p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Email</p>
+                            <p class="ci-val"><span>info@oaklawfirm.com</span></p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Address</p>
+                            <p class="ci-val">100 Street Place, Suite #720<br>10150 – 100 Street<br>Edmonton, AB T5J 0P6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <p class="cf-title">Send a Message</p>
+                <p class="cf-sub">Fill out the form and we'll be in touch shortly.</p>
+                <form onsubmit="return false;">
+                    <div class="cf-field">
+                        <label for="cf-name">Full Name</label>
+                        <input type="text" id="cf-name" placeholder="Your full name">
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="your@email.com">
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-phone">Phone</label>
+                        <input type="tel" id="cf-phone" placeholder="(780) 000-0000">
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-area">Practice Area</label>
+                        <select id="cf-area">
+                            <option value="">Select an area...</option>
+                            <option>Employment &amp; Labour Law</option>
+                            <option>Discrimination / Human Rights</option>
+                            <option>Civil Litigation</option>
+                            <option>Not-for-Profit / Charities Law</option>
+                            <option>Education Law</option>
+                            <option>Landlord &amp; Tenant Disputes</option>
+                            <option>Administrative Law</option>
+                        </select>
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-msg">Message</label>
+                        <textarea id="cf-msg" placeholder="Briefly describe your legal matter..."></textarea>
+                    </div>
+                    <button class="cf-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <span class="logo-box">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 8h14"/><path d="M5 8L2 14h6L5 8z"/><path d="M19 8l-3 6h6l-3-6z"/><line x1="9" y1="20" x2="15" y2="20"/></svg>
+                    </span>
+                    <span class="logo-text-wrap">
+                        <span class="logo-line1">THE OAK</span>
+                        <span class="logo-line2">LAW FIRM</span>
+                    </span>
+                </div>
+                <p class="footer-tagline" style="margin-top:14px;">Legal services with a human touch — serving Edmonton and Alberta.</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Practice Areas</h4>
+                <div>
+                    <a href="#">Employment &amp; Labour Law</a>
+                    <a href="#">Discrimination / Human Rights</a>
+                    <a href="#">Civil Litigation</a>
+                    <a href="#">Not-for-Profit / Charities</a>
+                    <a href="#">Education Law</a>
+                    <a href="#">Landlord &amp; Tenant</a>
+                    <a href="#">Administrative Law</a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Firm</h4>
+                <div>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 The Oak Law Firm. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEMO BANNER -->
+    <div class="demo-banner" id="demo-banner">
+        <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> — not affiliated with The Oak Law Firm.</p>
+        <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
