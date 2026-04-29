@@ -33,7 +33,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4%;
+    padding: 0 4% 0 0;
     height: 68px;
     background: #0a0a0a;
     border-bottom: 1px solid #1e1e1e;
@@ -56,10 +56,11 @@ nav.scrolled {
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
+    margin-left: 1.5rem;
 }
 
 .brand-logo {
-    height: 48px;
+    height: 44px;
     width: auto;
     display: block;
 }
@@ -1188,8 +1189,9 @@ footer {
 @media (max-width: 768px) {
     /* Nav */
     nav {
-        padding: 0 1rem 0 1.25rem;
+        padding: 0 1rem 0 0;
     }
+    .nav-brand { margin-left: 0.75rem; }
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
     .nav-avatar { display: none; }
