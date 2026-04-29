@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4% 0 0;
+    padding: 0 4%;
     background: #fff;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -38,6 +38,7 @@ body {
     height: 44px;
     width: auto;
     display: block;
+    margin-left: 0;
 }
 
 .ac-avatar {
@@ -487,10 +488,105 @@ body {
     transform: translateY(0);
 }
 
+/* ── Hamburger ── */
+
+.ac-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.ac-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #141414;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.ac-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.ac-hamburger.open span:nth-child(2) { opacity: 0; }
+.ac-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile nav overlay ── */
+
+.ac-mobile-nav {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.ac-mobile-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ac-mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.ac-mobile-nav a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #141414;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+
+.ac-mobile-nav a:hover,
+.ac-mobile-nav a.active { color: #e50914; }
+
+.ac-mobile-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #141414;
+    line-height: 1;
+    padding: 0.4rem;
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 700px) {
+    body { overflow-x: hidden; }
     .ac-sidebar { display: none; }
     .ac-main { padding: 2rem 0; }
     .ac-layout { padding: 0 1.5rem; }
+    .ac-header { padding: 0 1rem; }
+    .ac-avatar { display: none; }
+    .ac-hamburger { display: flex; }
+    .ac-brand-logo { height: 36px; }
+
+    /* Stack headshot below bio on mobile */
+    .about-split {
+        grid-template-columns: 1fr;
+    }
+    .about-headshot { min-height: 220px; }
+
+    /* Footer wrap */
+    .ac-footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .ac-footer-links { flex-wrap: wrap; gap: 0.75rem 1rem; }
 }

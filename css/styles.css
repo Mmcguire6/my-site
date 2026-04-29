@@ -1246,6 +1246,15 @@ footer {
     /* Hide centered icons on small cards — tag + title is enough */
     .card-icon { display: none; }
 
+    /* Scale all small cards to fit mobile */
+    .card--sm .card-body { padding: 0.45rem; }
+    .card--sm .card-wordmark-group { gap: 0.2rem; }
+    .card--sm .card-wordmark { max-height: 14px; max-width: 50px; }
+    .card--sm .card-wordmark-text--cc,
+    .card--sm .card-wordmark-text--df { font-size: 0.6rem; letter-spacing: 0; }
+    .card--sm .card-title { font-size: 0.6rem; }
+    .card-skill-icon { width: 16px; height: 16px; }
+
     /* Show explore link since hover doesn't exist on touch */
     .row-explore { opacity: 1; transform: none; }
 

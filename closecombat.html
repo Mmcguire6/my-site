@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/project.css">
     <style>html{opacity:0}</style>
     <script src="js/transitions.js" defer></script>
+    <script src="js/pages.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +29,19 @@
             <a href="portfolio.html#skills">Skills</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <button class="ac-hamburger" id="ac-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </header>
+    <div class="ac-mobile-nav" id="ac-mobile-nav">
+        <button class="ac-mobile-close" id="ac-mobile-close">&#x2715;</button>
+        <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero -->
     <div class="proj-hero proj-hero--cc">
@@ -39,7 +52,7 @@
             <img src="img/closecombat/closecombat-cover4.png" class="proj-hero-slide" alt="CloseCombat">
             <img src="img/closecombat/closecombat-cover5.png" class="proj-hero-slide" alt="CloseCombat">
         </div>
-        <div class="proj-hero-overlay proj-hero-overlay--subtle"></div>
+        <div class="proj-hero-overlay"></div>
         <div class="proj-hero-dots">
             <span class="proj-hero-dot active"></span>
             <span class="proj-hero-dot"></span>
@@ -47,19 +60,19 @@
             <span class="proj-hero-dot"></span>
             <span class="proj-hero-dot"></span>
         </div>
-    </div>
-
-    <!-- Identity bar below hero -->
-    <div class="proj-intro">
-        <div class="proj-logo-row">
-            <img src="img/closecombat/closecombat-favicon.png" class="proj-icon" alt="CloseCombat">
-            <span class="proj-wordmark">Close<span class="proj-wordmark-accent">Combat</span></span>
-        </div>
-        <div class="proj-meta">
-            <a href="https://closecombat.app/" target="_blank" class="proj-live-btn">&#9654;&nbsp; View Live</a>
-            <span class="proj-pill">AI</span>
-            <span class="proj-pill">SaaS</span>
-            <span class="proj-pill">Sales Training</span>
+        <div class="proj-hero-identity">
+            <div class="proj-logo-row">
+                <img src="img/closecombat/closecombat-favicon.png" class="proj-icon" alt="CloseCombat">
+                <span class="proj-wordmark">Close<span class="proj-wordmark-accent">Combat</span></span>
+            </div>
+            <div class="proj-meta">
+                <a href="https://closecombat.app/" target="_blank" class="proj-live-btn">&#9654;&nbsp; View Live</a>
+                <div class="proj-pills">
+                    <span class="proj-pill">AI</span>
+                    <span class="proj-pill">SaaS</span>
+                    <span class="proj-pill">Sales Training</span>
+                </div>
+            </div>
         </div>
     </div>
 

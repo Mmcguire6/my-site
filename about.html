@@ -18,13 +18,26 @@
     <link rel="stylesheet" href="css/contact.css">
     <style>html{opacity:0}</style>
     <script src="js/transitions.js" defer></script>
+    <script src="js/pages.js" defer></script>
 </head>
 <body>
 
     <header class="ac-header">
         <a class="ac-brand" href="portfolio.html"><img src="img/matthew_mcguire_hero.svg" class="ac-brand-logo" alt="MM"></a>
         <a class="ac-avatar" href="index.html" title="Switch Profile">MM</a>
+        <button class="ac-hamburger" id="ac-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </header>
+    <div class="ac-mobile-nav" id="ac-mobile-nav">
+        <button class="ac-mobile-close" id="ac-mobile-close">&#x2715;</button>
+        <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
     <div class="ac-layout">
 
