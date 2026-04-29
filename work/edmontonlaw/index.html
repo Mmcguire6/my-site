@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>HTM Law LLP — Edmonton Lawyers | We're In Your Corner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* HTM Law brand */
+            --red:        #C9202E;
+            --red-dark:   #A91824;
+            --blue:       #1B2D7B;
+            --blue-dark:  #131F5A;
+            --blue-light: #E8EBF5;
+            --green:      #1FA94B;
+            --green-dark: #178A3D;
+            --black:      #111111;
+            --ink:        #1F2937;
+            --gray:       #4B5563;
+            --gray-light: #6B7280;
+            --gray-line:  #E5E7EB;
+            --bg:         #F8F9FB;
+            --white:      #FFFFFF;
+            --topbar-h:   38px;
+            --nav-h:      72px;
+            --total-nav:  110px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--blue-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 901;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.78);
+        }
+
+        .top-bar-info { display: flex; align-items: center; gap: 24px; }
+        .top-bar-info span { display: inline-flex; align-items: center; gap: 7px; }
+        .top-bar-info svg { width: 13px; height: 13px; opacity: 0.7; }
+
+        .top-bar-cta {
+            display: inline-flex; align-items: center; gap: 7px;
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: opacity 0.15s;
+        }
+        .top-bar-cta svg { width: 13px; height: 13px; flex-shrink: 0; }
+        .top-bar-cta:hover { opacity: 0.85; }
+
+        /* ── NAV ─────────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h); left: 0; right: 0;
+            height: var(--nav-h);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 900;
+            border-bottom: 1px solid var(--gray-line);
+        }
+
+        .nav-logo {
+            display: flex; align-items: baseline;
+            gap: 8px;
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        .lm-htm {
+            font-weight: 800;
+            font-size: 1.55rem;
+            letter-spacing: -0.02em;
+            display: inline-flex;
+        }
+
+        .lm-h { color: var(--red); }
+        .lm-t { color: var(--blue); }
+        .lm-m { color: var(--green); }
+
+        .lm-divider {
+            display: inline-block;
+            width: 1px; height: 18px;
+            background: var(--gray-line);
+            margin: 0 2px;
+            align-self: center;
+        }
+
+        .lm-law {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--black);
+            letter-spacing: 0.02em;
+        }
+
+        .lm-llp {
+            font-weight: 500;
+            font-size: 0.7rem;
+            color: var(--gray-light);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-left: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2px;
+        }
+
+        .nav-links > li { position: relative; }
+
+        .nav-links > li > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: color 0.15s, background 0.15s;
+            white-space: nowrap;
+        }
+
+        .nav-links > li > a:hover {
+            color: var(--blue);
+            background: var(--blue-light);
+        }
+
+        .nav-chevron {
+            width: 12px; height: 12px;
+            stroke: currentColor; fill: none;
+            stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+            opacity: 0.55;
+            transition: transform 0.18s;
+        }
+
+        .nav-links > li:hover .nav-chevron { transform: rotate(180deg); }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%; left: 50%;
+            transform: translateX(-50%);
+            padding-top: 10px;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.15s;
+            z-index: 600;
+        }
+
+        .nav-links > li:hover .nav-dropdown { opacity: 1; pointer-events: auto; }
+
+        .nav-dropdown-inner {
+            background: var(--white);
+            border: 1px solid var(--gray-line);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            box-shadow: 0 10px 32px rgba(17,17,17,0.10);
+        }
+
+        .nav-dropdown-inner a {
+            display: block;
+            padding: 9px 18px;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.86rem;
+            transition: color 0.15s, background 0.15s;
+        }
+
+        .nav-dropdown-inner a:hover {
+            color: var(--blue);
+            background: var(--blue-light);
+        }
+
+        .nav-cta {
+            background: var(--red) !important;
+            color: var(--white) !important;
+            font-weight: 600 !important;
+            border-radius: 6px;
+            padding: 10px 20px !important;
+            margin-left: 4px;
+        }
+
+        .nav-cta:hover {
+            background: var(--red-dark) !important;
+            color: var(--white) !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none; border: none;
+            cursor: pointer; padding: 6px;
+        }
+
+        .nav-hamburger span {
+            display: block; width: 22px; height: 2px;
+            background: var(--ink); border-radius: 2px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--total-nav); left: 0; right: 0;
+            background: var(--white);
+            padding: 16px 24px 28px;
+            z-index: 850;
+            border-bottom: 1px solid var(--gray-line);
+            box-shadow: 0 8px 24px rgba(17,17,17,0.06);
+        }
+
+        .mobile-nav.open { display: block; }
+
+        .mobile-nav a {
+            display: block; padding: 12px 0;
+            color: var(--ink);
+            text-decoration: none; font-size: 0.95rem;
+            border-bottom: 1px solid var(--gray-line);
+            font-weight: 500;
+        }
+
+        .mobile-nav a:last-child { border-bottom: none; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            align-items: center;
+            padding: var(--total-nav) 56px 72px;
+            gap: 56px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('img/hero-bg.jpg') center 55% / cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(95deg,
+                rgba(19,31,90,0.92) 0%,
+                rgba(19,31,90,0.78) 45%,
+                rgba(19,31,90,0.40) 100%);
+            z-index: 1;
+        }
+
+        .hero-copy { position: relative; z-index: 2; max-width: 620px; }
+
+        .hero-eyebrow {
+            display: inline-block;
+            color: var(--white);
+            background: var(--red);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+
+        .hero-h1 {
+            font-size: clamp(2.6rem, 5vw, 4.4rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            margin-bottom: 22px;
+        }
+
+        .hero-sub {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.65;
+            max-width: 520px;
+            margin-bottom: 34px;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex; gap: 12px; flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center; gap: 8px;
+            padding: 13px 26px;
+            border-radius: 6px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: background 0.18s, border-color 0.18s, color 0.18s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255,255,255,0.35);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.10);
+            border-color: var(--white);
+        }
+
+        .btn svg { width: 16px; height: 16px; }
+
+        .hero-trust {
+            display: flex; gap: 28px; flex-wrap: wrap;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .trust-item {
+            display: flex; flex-direction: column;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .trust-num {
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        .trust-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.65);
+            font-weight: 500;
+        }
+
+        /* Hero form */
+        .hero-form-wrap { position: relative; z-index: 2; }
+
+        .hero-form {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 32px 28px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.30);
+            border-top: 4px solid var(--red);
+        }
+
+        .hf-title {
+            font-size: 1.3rem; font-weight: 700;
+            color: var(--ink); margin-bottom: 4px;
+            line-height: 1.25;
+        }
+
+        .hf-sub {
+            font-size: 0.85rem;
+            color: var(--gray-light);
+            margin-bottom: 22px;
+        }
+
+        .hf-field { margin-bottom: 12px; }
+
+        .hf-field label {
+            display: block;
+            font-size: 0.78rem; font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 5px;
+        }
+
+        .hf-field input,
+        .hf-field select,
+        .hf-field textarea {
+            width: 100%;
+            background: var(--white);
+            border: 1.5px solid var(--gray-line);
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem; outline: none;
+            transition: border-color 0.15s;
+        }
+
+        .hf-field select {
+            appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231F2937' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 14px;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        .hf-field input:focus,
+        .hf-field select:focus,
+        .hf-field textarea:focus {
+            border-color: var(--blue);
+        }
+
+        .hf-field textarea { height: 80px; resize: none; font-family: 'Inter', sans-serif; }
+
+        .hf-btn {
+            width: 100%;
+            background: var(--blue);
+            color: var(--white);
+            border: none; border-radius: 6px; padding: 13px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem; font-weight: 600;
+            cursor: pointer; margin-top: 4px;
+            transition: background 0.18s;
+        }
+
+        .hf-btn:hover { background: var(--blue-dark); }
+
+        /* ── PRACTICE AREAS ──────────────────────────────── */
+        .section { padding: 96px 56px; }
+        .section-inner { max-width: 1180px; margin: 0 auto; }
+
+        .section-head {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 56px;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            color: var(--red);
+            font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-h2 {
+            font-size: clamp(2rem, 3.6vw, 2.8rem);
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+        }
+
+        .section-lead {
+            font-size: 1.02rem;
+            color: var(--gray);
+            line-height: 1.65;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .practice-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 32px 28px;
+            border: 1px solid var(--gray-line);
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .practice-card:hover {
+            box-shadow: 0 8px 24px rgba(17,17,17,0.08);
+            border-color: var(--blue);
+        }
+
+        .pc-head {
+            display: flex; align-items: center;
+            gap: 16px; margin-bottom: 14px;
+        }
+
+        .pc-icon {
+            width: 48px; height: 48px;
+            background: var(--blue-light);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pc-icon svg {
+            width: 22px; height: 22px;
+            color: var(--blue);
+        }
+
+        .pc-title {
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--ink); line-height: 1.25;
+        }
+
+        .pc-desc {
+            font-size: 0.94rem;
+            color: var(--gray);
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .pc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 18px;
+            margin-bottom: 22px;
+        }
+
+        .pc-list li {
+            font-size: 0.86rem;
+            color: var(--ink);
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .pc-list li svg {
+            width: 14px; height: 14px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .pc-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--blue);
+            font-size: 0.88rem; font-weight: 600;
+            text-decoration: none;
+        }
+
+        .pc-link svg {
+            width: 14px; height: 14px;
+            transition: transform 0.18s;
+        }
+
+        .pc-link:hover { color: var(--red); }
+        .pc-link:hover svg { transform: translateX(3px); }
+
+        /* ── ABOUT / WHY US ──────────────────────────────── */
+        .about-section {
+            background: var(--bg);
+            padding: 96px 56px;
+        }
+
+        .about-inner {
+            max-width: 1180px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .about-copy .section-eyebrow { display: inline-block; }
+        .about-copy .section-h2 { margin-bottom: 18px; }
+
+        .about-quote {
+            border-left: 3px solid var(--red);
+            padding: 4px 0 4px 22px;
+            margin: 28px 0 0;
+        }
+
+        .about-quote p {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.65;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature {
+            background: var(--white);
+            border: 1px solid var(--gray-line);
+            border-radius: 10px;
+            padding: 24px 22px;
+        }
+
+        .feature-icon {
+            width: 40px; height: 40px;
+            background: var(--blue-light);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .feature-icon svg {
+            width: 20px; height: 20px;
+            color: var(--blue);
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .feature-desc {
+            font-size: 0.88rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ── TEAM ────────────────────────────────────────── */
+        .team-section { padding: 96px 56px; background: var(--white); }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--gray-line);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .team-card:hover {
+            box-shadow: 0 12px 32px rgba(17,17,17,0.10);
+            transform: translateY(-3px);
+        }
+
+        .team-photo-wrap {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--bg);
+        }
+
+        .team-photo-wrap img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info { padding: 22px 24px 26px; }
+
+        .team-role {
+            font-size: 0.74rem;
+            color: var(--red);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .team-bio {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .team-credential {
+            font-size: 0.8rem;
+            color: var(--gray-light);
+            display: flex; align-items: center; gap: 6px;
+            padding-top: 12px;
+            border-top: 1px solid var(--gray-line);
+        }
+
+        .team-credential svg {
+            width: 14px; height: 14px;
+            color: var(--blue);
+            flex-shrink: 0;
+        }
+
+        /* ── TESTIMONIALS ────────────────────────────────── */
+        .testimonials-section {
+            padding: 96px 56px;
+            background: var(--bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px 26px;
+            border: 1px solid var(--gray-line);
+        }
+
+        .testimonial-stars {
+            display: flex; gap: 2px;
+            margin-bottom: 14px;
+            color: #F5B301;
+        }
+
+        .testimonial-stars svg {
+            width: 16px; height: 16px;
+            fill: currentColor;
+        }
+
+        .testimonial-text {
+            font-size: 0.96rem;
+            color: var(--ink);
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--gray-light);
+            margin-top: 2px;
+        }
+
+        /* ── CTA STRIP ───────────────────────────────────── */
+        .cta-strip {
+            background: var(--blue-dark);
+            padding: 56px;
+        }
+
+        .cta-inner {
+            max-width: 1180px; margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px; flex-wrap: wrap;
+        }
+
+        .cta-text { flex: 1; min-width: 280px; }
+
+        .cta-text h3 {
+            font-size: clamp(1.6rem, 2.6vw, 2rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .cta-text p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.98rem;
+        }
+
+        .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        /* ── CONTACT ─────────────────────────────────────── */
+        .contact-section {
+            padding: 96px 56px;
+            background: var(--white);
+        }
+
+        .contact-inner {
+            max-width: 1180px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1.15fr;
+            gap: 64px; align-items: start;
+        }
+
+        .contact-info-items {
+            display: flex; flex-direction: column;
+            gap: 18px; margin-top: 28px;
+        }
+
+        .ci-item {
+            display: flex; gap: 14px; align-items: flex-start;
+            padding: 18px 20px;
+            background: var(--bg);
+            border-radius: 10px;
+            border: 1px solid var(--gray-line);
+        }
+
+        .ci-icon {
+            width: 40px; height: 40px;
+            background: var(--blue-light);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            color: var(--blue);
+        }
+
+        .ci-icon svg { width: 18px; height: 18px; }
+
+        .ci-label {
+            font-size: 0.74rem; font-weight: 600;
+            color: var(--gray-light); text-transform: uppercase;
+            letter-spacing: 0.08em; margin-bottom: 3px;
+        }
+
+        .ci-val {
+            font-size: 0.94rem;
+            color: var(--ink);
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .ci-val a {
+            color: var(--ink);
+            text-decoration: none;
+        }
+        .ci-val a:hover { color: var(--blue); }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 36px 32px;
+            border: 1px solid var(--gray-line);
+            box-shadow: 0 6px 20px rgba(17,17,17,0.04);
+        }
+
+        .cf-title {
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--ink); margin-bottom: 6px;
+            line-height: 1.25;
+        }
+
+        .cf-sub { font-size: 0.9rem; color: var(--gray-light); margin-bottom: 24px; }
+
+        .cf-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .cf-field { margin-bottom: 14px; }
+
+        .cf-field label {
+            display: block; font-size: 0.78rem; font-weight: 600;
+            color: var(--ink); margin-bottom: 5px;
+        }
+
+        .cf-field input,
+        .cf-field select,
+        .cf-field textarea {
+            width: 100%; background: var(--white);
+            border: 1.5px solid var(--gray-line);
+            border-radius: 6px; padding: 11px 13px;
+            color: var(--ink); font-family: 'Inter', sans-serif;
+            font-size: 0.92rem; outline: none;
+            transition: border-color 0.15s;
+        }
+
+        .cf-field select {
+            appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231F2937' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 14px;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        .cf-field input:focus,
+        .cf-field select:focus,
+        .cf-field textarea:focus { border-color: var(--blue); }
+
+        .cf-field textarea { height: 110px; resize: none; font-family: 'Inter', sans-serif; }
+
+        .cf-btn {
+            width: 100%; background: var(--red);
+            color: var(--white); border: none; border-radius: 6px;
+            padding: 14px; font-family: 'Inter', sans-serif;
+            font-size: 0.94rem; font-weight: 600;
+            cursor: pointer; margin-top: 4px;
+            transition: background 0.18s;
+        }
+
+        .cf-btn:hover { background: var(--red-dark); }
+
+        /* ── FOOTER ──────────────────────────────────────── */
+        footer {
+            background: var(--black);
+            padding: 0;
+        }
+
+        .footer-map {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .footer-map iframe {
+            width: 100%; height: 100%;
+            border: none;
+            filter: grayscale(20%) brightness(0.9);
+        }
+
+        .footer-content { padding: 56px 56px 28px; }
+
+        .footer-top {
+            max-width: 1180px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+            margin-bottom: 24px;
+        }
+
+        .footer-logo {
+            display: flex; align-items: baseline;
+            gap: 8px;
+            text-decoration: none;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .footer-logo .lm-htm { font-size: 1.7rem; }
+        .footer-logo .lm-divider { background: rgba(255,255,255,0.20); height: 20px; }
+        .footer-logo .lm-law { color: var(--white); font-size: 1.05rem; }
+        .footer-logo .lm-llp { color: rgba(255,255,255,0.55); }
+
+        .footer-tagline {
+            font-size: 0.88rem; color: rgba(255,255,255,0.55);
+            line-height: 1.65; margin-bottom: 20px;
+        }
+
+        .footer-social { display: flex; gap: 8px; }
+
+        .footer-social a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 34px; height: 34px;
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 6px;
+            color: rgba(255,255,255,0.55);
+            transition: color 0.18s, border-color 0.18s, background 0.18s;
+        }
+
+        .footer-social a:hover {
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .footer-social svg { width: 16px; height: 16px; }
+
+        .footer-links-col h4 {
+            font-size: 0.82rem; font-weight: 700;
+            color: var(--white); margin-bottom: 16px;
+        }
+
+        .footer-links-col div { display: flex; flex-direction: column; gap: 10px; }
+
+        .footer-links-col a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none; font-size: 0.88rem;
+            transition: color 0.15s;
+        }
+
+        .footer-links-col a:hover { color: var(--white); }
+
+        .footer-bottom {
+            max-width: 1180px; margin: 0 auto;
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 12px;
+        }
+
+        .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.40); }
+        .footer-legal { display: flex; gap: 20px; }
+        .footer-legal a {
+            font-size: 0.8rem; color: rgba(255,255,255,0.40);
+            text-decoration: none;
+        }
+        .footer-legal a:hover { color: rgba(255,255,255,0.75); }
+
+        /* ── DEMO BANNER ─────────────────────────────────── */
+        .demo-banner {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(17,17,17,0.97);
+            backdrop-filter: blur(8px);
+            border-top: 2px solid var(--red);
+            padding: 12px 24px;
+            display: flex; align-items: center; justify-content: center;
+            gap: 16px; z-index: 9999;
+            font-size: 0.83rem; color: rgba(255,255,255,0.78);
+        }
+
+        .demo-banner a { color: var(--white); text-decoration: underline; font-weight: 600; }
+        .demo-banner a:hover { color: rgba(255,255,255,0.85); }
+
+        .demo-banner-close {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.22);
+            color: rgba(255,255,255,0.62); font-size: 1rem;
+            cursor: pointer; padding: 2px 8px;
+            border-radius: 4px; line-height: 1.4; margin-left: 8px;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .demo-banner-close:hover { color: var(--white); border-color: rgba(255,255,255,0.48); }
+
+        /* ── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 1100px) {
+            .practice-grid { grid-template-columns: 1fr; }
+            .about-inner { grid-template-columns: 1fr; gap: 48px; }
+            .team-grid { grid-template-columns: 1fr 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 130px 32px 64px; gap: 0; }
+            .hero-form-wrap { display: none; }
+            .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+            .top-bar { padding: 0 24px; }
+            .top-bar-info { gap: 18px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav { padding: 0 24px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .top-bar { font-size: 0.72rem; padding: 0 18px; }
+            .top-bar-info span:nth-child(2) { display: none; }
+            .section,
+            .about-section,
+            .team-section,
+            .testimonials-section,
+            .contact-section { padding: 64px 24px; }
+            .cta-strip { padding: 40px 24px; }
+            .footer-content { padding: 40px 24px 20px; }
+            .team-grid { grid-template-columns: 1fr; }
+            .pc-list { grid-template-columns: 1fr; }
+            .cf-row { grid-template-columns: 1fr; gap: 0; }
+            .about-features { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                #102, 9333 – 47 St NW, Edmonton, AB
+            </span>
+            <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Mon – Fri: 9:00 am – 5:00 pm
+            </span>
+        </div>
+        <a href="tel:7804690494" class="top-bar-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.18 7.55a16 16 0 006.27 6.27l1.41-1.42a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            780-469-0494
+        </a>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <a href="#" class="nav-logo" aria-label="HTM Law LLP">
+            <span class="lm-htm"><span class="lm-h">H</span><span class="lm-t">T</span><span class="lm-m">M</span></span>
+            <span class="lm-divider"></span>
+            <span class="lm-law">Law</span>
+            <span class="lm-llp">LLP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#practice-areas">Business</a></li>
+            <li><a href="#practice-areas">Real Estate</a></li>
+            <li><a href="#practice-areas">Wills &amp; Estates</a></li>
+            <li><a href="#practice-areas">Litigation</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#practice-areas">Business</a>
+        <a href="#practice-areas">Real Estate</a>
+        <a href="#practice-areas">Wills &amp; Estates</a>
+        <a href="#practice-areas">Litigation</a>
+        <a href="#team">Our Team</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-copy">
+            <p class="hero-eyebrow">Edmonton Barristers &amp; Solicitors</p>
+            <h1 class="hero-h1">We're In Your Corner.</h1>
+            <p class="hero-sub">Personalized legal solutions in Real Estate, Wills &amp; Estate, Corporate Law, and Litigation — guidance you can trust from a team that puts your interests first.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    Book a Free Consultation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#practice-areas" class="btn btn-ghost">Our Services</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-num">5.0 ★</span>
+                    <span class="trust-label">Client Rated</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-num">4 Areas</span>
+                    <span class="trust-label">Of Practice</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-num">YEG</span>
+                    <span class="trust-label">South Edmonton</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero form -->
+        <div class="hero-form-wrap">
+            <div class="hero-form">
+                <p class="hf-title">Request a Consultation</p>
+                <p class="hf-sub">No obligation — we'll be in touch within one business day.</p>
+                <form onsubmit="return false;">
+                    <div class="hf-field">
+                        <label for="hf-name">Full Name</label>
+                        <input type="text" id="hf-name" placeholder="Your name">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-phone">Phone</label>
+                        <input type="tel" id="hf-phone" placeholder="(780) 000-0000">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-area">Matter Type</label>
+                        <select id="hf-area">
+                            <option value="">Select a practice area...</option>
+                            <option>Real Estate Law</option>
+                            <option>Wills &amp; Estate Law</option>
+                            <option>Corporate Law</option>
+                            <option>Litigation</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-msg">Brief Description</label>
+                        <textarea id="hf-msg" placeholder="Tell us a bit about your matter..."></textarea>
+                    </div>
+                    <button class="hf-btn" type="submit">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRACTICE AREAS -->
+    <section class="section" id="practice-areas">
+        <div class="section-inner">
+            <div class="section-head">
+                <p class="section-eyebrow">What We Do</p>
+                <h2 class="section-h2">Practice Areas</h2>
+                <p class="section-lead">Highly effective, personalized legal solutions across the matters that matter most — from your first home to your family's legacy.</p>
+            </div>
+
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="pc-head">
+                        <div class="pc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h3 class="pc-title">Real Estate Law</h3>
+                    </div>
+                    <p class="pc-desc">Smooth, on-time closings for buyers, sellers, and investors — backed by a team that gets the details right the first time.</p>
+                    <ul class="pc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Residential Purchase</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Residential Sale</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mortgage Refinance</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Title Transfers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Commercial Real Estate</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Builder &amp; New-Build</li>
+                    </ul>
+                    <a href="#contact" class="pc-link">
+                        Discuss Your Transaction
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <div class="practice-card">
+                    <div class="pc-head">
+                        <div class="pc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3 class="pc-title">Wills &amp; Estate Law</h3>
+                    </div>
+                    <p class="pc-desc">Protect what matters with a clear, properly drafted plan — and trusted guidance for executors and families when it's time to administer.</p>
+                    <ul class="pc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wills &amp; Codicils</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Personal Directives</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Powers of Attorney</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Probate Applications</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estate Administration</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estate Planning</li>
+                    </ul>
+                    <a href="#contact" class="pc-link">
+                        Plan Your Estate
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <div class="practice-card">
+                    <div class="pc-head">
+                        <div class="pc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        </div>
+                        <h3 class="pc-title">Corporate Law</h3>
+                    </div>
+                    <p class="pc-desc">From incorporation to growth — the agreements, structures, and counsel that let Edmonton entrepreneurs build with confidence.</p>
+                    <ul class="pc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Incorporations</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Shareholder Agreements</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Asset &amp; Share Sales</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Trademark Registration</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Commercial Contracts</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Corporate Restructuring</li>
+                    </ul>
+                    <a href="#contact" class="pc-link">
+                        Grow Your Business
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <div class="practice-card">
+                    <div class="pc-head">
+                        <div class="pc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 8h14"/><path d="M5 8L2 14h6L5 8z"/><path d="M19 8l-3 6h6l-3-6z"/><line x1="9" y1="20" x2="15" y2="20"/></svg>
+                        </div>
+                        <h3 class="pc-title">Litigation</h3>
+                    </div>
+                    <p class="pc-desc">Strategic, level-headed representation when disputes arise — whether you need to enforce your rights or defend against a claim.</p>
+                    <ul class="pc-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Civil Litigation</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Contract Disputes</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Real Estate Disputes</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estate Litigation</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Debt Recovery</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Negotiated Settlements</li>
+                    </ul>
+                    <a href="#contact" class="pc-link">
+                        Discuss Your Case
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / WHY US -->
+    <section class="about-section" id="about">
+        <div class="about-inner">
+            <div class="about-copy">
+                <p class="section-eyebrow">Why HTM Law</p>
+                <h2 class="section-h2">Guidance you can trust.</h2>
+                <p class="section-lead">A team of lawyers, associates, and legal assistants — passionate about delivering personalized service and the best possible outcome for every client we represent.</p>
+                <blockquote class="about-quote">
+                    <p>"Passionate about providing highly effective and personalized legal solutions, our team works for you, our client, to achieve the best possible outcomes."</p>
+                </blockquote>
+            </div>
+            <div class="about-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h4 class="feature-title">Personal Attention</h4>
+                    <p class="feature-desc">A dedicated lawyer and legal assistant for every file.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4 class="feature-title">On-Time Closings</h4>
+                    <p class="feature-desc">Tight deadlines met without missing a beat.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h4 class="feature-title">Trusted Locally</h4>
+                    <p class="feature-desc">Realtors and families across Edmonton refer us.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h4 class="feature-title">Clear Communication</h4>
+                    <p class="feature-desc">Plain-language guidance and prompt updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section" id="team">
+        <div class="section-inner">
+            <div class="section-head">
+                <p class="section-eyebrow">The Partners</p>
+                <h2 class="section-h2">Meet the HTM Law Team</h2>
+                <p class="section-lead">Three partners, one shared standard — bringing depth across real estate, wills &amp; estate, corporate, and litigation matters.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="img/derrick.jpg" alt="Derrick Hwang, Partner">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Partner</p>
+                        <h3 class="team-name">Derrick Hwang</h3>
+                        <p class="team-bio">Derrick brings practical, results-focused counsel to real estate and corporate matters — clients regularly thank him for closings that don't miss a beat.</p>
+                        <p class="team-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            LL.B., University of Alberta (2011)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="img/sal.jpg" alt="Sal Tinajero, Partner">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Partner</p>
+                        <h3 class="team-name">Sal Tinajero</h3>
+                        <p class="team-bio">Sal advises on the full lifecycle of a business — from incorporation through growth, restructuring, and dispute resolution — with a clear, client-first style.</p>
+                        <p class="team-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            J.D., University of Alberta (2015)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="img/greg.jpg" alt="Greg Miskie, Partner">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Partner</p>
+                        <h3 class="team-name">Greg Miskie</h3>
+                        <p class="team-bio">Greg supports clients at the moments that matter most — buying or selling a home, protecting a family with an estate plan — with nearly two decades of experience.</p>
+                        <p class="team-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            Real Estate &amp; Estate Planning
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="section-inner">
+            <div class="section-head">
+                <p class="section-eyebrow">In Their Words</p>
+                <h2 class="section-h2">What Our Clients Say</h2>
+                <p class="section-lead">Real reviews from Edmonton families, realtors, and business owners who put their trust in us.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Thank you lawyer Derrick Hwang and legal assistant Krissy Frandsen for helping the sale of our home. It's a quick closing date within 10 business days but they did not miss a beat."</p>
+                    <p class="testimonial-author">Theo Mac</p>
+                    <p class="testimonial-role">Real Estate Client</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Everything went very smooth thanks to Greg and his legal assistant, Alyssa. After being in the industry for almost 20 years, he taught me things I did not know."</p>
+                    <p class="testimonial-author">Krystal Smith</p>
+                    <p class="testimonial-role">Realtor, Edmonton</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Terrific lawyers — very knowledgeable and personable. They consistently went the extra mile for me and were very pleasant about it."</p>
+                    <p class="testimonial-author">Dawne Brown White</p>
+                    <p class="testimonial-role">Long-Time Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip">
+        <div class="cta-inner">
+            <div class="cta-text">
+                <h3>Ready to talk through your matter?</h3>
+                <p>A short, no-obligation conversation is the fastest way to know your next step.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:7804690494" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.18 7.55a16 16 0 006.27 6.27l1.41-1.42a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    Call 780-469-0494
+                </a>
+                <a href="#contact" class="btn btn-ghost">Send a Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div>
+                <p class="section-eyebrow">Get In Touch</p>
+                <h2 class="section-h2">We're Here to Help</h2>
+                <p class="section-lead">Reach out to discuss your matter — we typically respond within one business day.</p>
+
+                <div class="contact-info-items">
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.18 7.55a16 16 0 006.27 6.27l1.41-1.42a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Phone &amp; Fax</p>
+                            <p class="ci-val"><a href="tel:7804690494">780-469-0494</a></p>
+                            <p class="ci-val" style="font-size:0.84rem;color:var(--gray-light);font-weight:400;margin-top:2px;">Fax: 780-469-4181</p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Email</p>
+                            <p class="ci-val"><a href="mailto:reception@edmontonlaw.ca">reception@edmontonlaw.ca</a></p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Office</p>
+                            <p class="ci-val">#102, 9333 – 47 Street NW<br>Edmonton, AB T6B 2R7</p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Office Hours</p>
+                            <p class="ci-val">Monday – Friday<br><span style="font-size:0.86rem;color:var(--gray-light);font-weight:400;">9:00 am – 5:00 pm</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <p class="cf-title">Tell us about your matter</p>
+                <p class="cf-sub">Fill out the form and we'll be in touch shortly. Free initial consultation.</p>
+                <form onsubmit="return false;">
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label for="cf-fname">First Name</label>
+                            <input type="text" id="cf-fname" placeholder="Jane">
+                        </div>
+                        <div class="cf-field">
+                            <label for="cf-lname">Last Name</label>
+                            <input type="text" id="cf-lname" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label for="cf-email">Email</label>
+                            <input type="email" id="cf-email" placeholder="jane@example.com">
+                        </div>
+                        <div class="cf-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(780) 000-0000">
+                        </div>
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-area">Practice Area</label>
+                        <select id="cf-area">
+                            <option value="">Select an area...</option>
+                            <option>Real Estate Law</option>
+                            <option>Wills &amp; Estate Law</option>
+                            <option>Corporate Law</option>
+                            <option>Litigation</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-msg">Message</label>
+                        <textarea id="cf-msg" placeholder="Briefly describe your matter..."></textarea>
+                    </div>
+                    <button class="cf-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-map">
+            <iframe
+                src="https://maps.google.com/maps?q=9333+47+Street+NW+Edmonton+AB+T6B+2R7&output=embed"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="HTM Law LLP location">
+            </iframe>
+        </div>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo" aria-label="HTM Law LLP">
+                        <span class="lm-htm"><span class="lm-h">H</span><span class="lm-t">T</span><span class="lm-m">M</span></span>
+                        <span class="lm-divider"></span>
+                        <span class="lm-law">Law</span>
+                        <span class="lm-llp">LLP</span>
+                    </span>
+                    <p class="footer-tagline">Edmonton Barristers &amp; Solicitors — personalized legal solutions in Real Estate, Wills &amp; Estate, Corporate Law, and Litigation.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" aria-label="Google">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Practice Areas</h4>
+                    <div>
+                        <a href="#practice-areas">Real Estate Law</a>
+                        <a href="#practice-areas">Wills &amp; Estate Law</a>
+                        <a href="#practice-areas">Corporate Law</a>
+                        <a href="#practice-areas">Litigation</a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Firm</h4>
+                    <div>
+                        <a href="#about">About Us</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contact</h4>
+                    <div>
+                        <a href="tel:7804690494">780-469-0494</a>
+                        <a href="mailto:reception@edmontonlaw.ca">reception@edmontonlaw.ca</a>
+                        <a href="#contact">Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 HTM Law LLP. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEMO BANNER -->
+    <div class="demo-banner" id="demo-banner">
+        <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> — not affiliated with HTM Law LLP.</p>
+        <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    </script>
+
+</body>
+</html>
