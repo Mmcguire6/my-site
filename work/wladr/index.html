@@ -286,6 +286,13 @@
 
         .hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
 
+        .hero-badge--featured {
+            background: rgba(196,120,42,0.22);
+            border-color: rgba(196,120,42,0.55);
+            color: var(--amber-light);
+            font-weight: 600;
+        }
+
         /* Hero form */
         .hero-form-wrap { position: relative; z-index: 2; }
 
@@ -619,6 +626,17 @@
             transition: border-color 0.18s;
         }
 
+        .cf-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+
         .cf-field input:focus,
         .cf-field select:focus,
         .cf-field textarea:focus { border-color: var(--amber); }
@@ -670,6 +688,23 @@
         }
 
         .footer-links-col a:hover { color: var(--amber-light); }
+
+        .footer-map {
+            margin-bottom: 32px;
+        }
+
+        .footer-map h4 {
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--amber-light); margin-bottom: 14px;
+        }
+
+        .footer-map iframe {
+            width: 100%; height: 220px;
+            border: none; border-radius: 10px;
+            opacity: 0.85;
+            filter: grayscale(20%);
+        }
 
         .footer-bottom {
             display: flex; justify-content: space-between;
@@ -792,9 +827,13 @@
 
         <div class="hero-copy">
             <p class="hero-eyebrow">Fort Saskatchewan, Alberta</p>
-            <h1 class="hero-h1">Your Local Law Firm for <em>All Your Legal Needs</em></h1>
-            <p class="hero-sub">The legal support you need during life's toughest challenges — serving Fort Saskatchewan and surrounding communities.</p>
+            <h1 class="hero-h1">Serving Fort Saskatchewan for <em>Over 50 Years</em></h1>
+            <p class="hero-sub">The legal support you need during life's toughest challenges — a trusted local firm, rooted in the community.</p>
             <div class="hero-badges">
+                <span class="hero-badge hero-badge--featured">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    50+ Years in Fort Saskatchewan
+                </span>
                 <span class="hero-badge">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Real Estate
@@ -1068,6 +1107,16 @@
 
     <!-- FOOTER -->
     <footer>
+        <div class="footer-map">
+            <h4>Our Location</h4>
+            <iframe
+                src="https://maps.google.com/maps?q=10509+100+Avenue,+Fort+Saskatchewan,+AB+T8L+1Z5&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Wilson Law & Dispute Resolution location">
+            </iframe>
+        </div>
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="logo-mark">
