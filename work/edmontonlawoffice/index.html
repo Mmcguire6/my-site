@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Edmonton Law Office — Where Clients Come First</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --dark:       #0D1B2A;
+            --dark-deep:  #070F18;
+            --dark-mid:   #152539;
+            --gold:       #B8912A;
+            --gold-light: #CDA840;
+            --cream:      #F5F2EB;
+            --sand:       #EAE6DC;
+            --text:       #1A1A1A;
+            --text-mid:   #3D3D3D;
+            --text-light: #6B7280;
+            --white:      #FFFFFF;
+            --topbar-h:   42px;
+            --nav-h:      68px;
+            --total-nav:  110px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: rgba(7,15,24,1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 48px;
+            z-index: 901;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .top-bar-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 0;
+        }
+
+        .top-bar-links > li { position: relative; }
+
+        .top-bar-links > li > a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 4px;
+            transition: color 0.15s, background 0.15s;
+            white-space: nowrap;
+        }
+
+        .top-bar-links > li > a:hover { color: var(--gold-light); background: rgba(255,255,255,0.04); }
+
+        .top-bar-links > li:hover .nav-chevron { transform: rotate(180deg); }
+
+        .top-bar-links > li:hover .nav-dropdown { opacity: 1; pointer-events: auto; }
+
+        /* ── NAV ─────────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h); left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(10, 20, 32, 0.97);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 48px;
+            z-index: 900;
+            border-bottom: 1px solid rgba(184,145,42,0.22);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+        }
+
+        .logo-mark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .logo-top {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .logo-bot {
+            font-size: 0.62rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2px;
+        }
+
+        .nav-links > li { position: relative; }
+
+        .nav-links > li > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.18s, background 0.18s;
+            white-space: nowrap;
+        }
+
+        .nav-links > li > a:hover {
+            color: var(--gold-light);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .nav-chevron {
+            width: 13px; height: 13px;
+            stroke: currentColor; fill: none;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+            transition: transform 0.18s;
+        }
+
+        .nav-links > li:hover .nav-chevron { transform: rotate(180deg); }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%; left: 50%;
+            transform: translateX(-50%);
+            padding-top: 10px;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.18s;
+            z-index: 600;
+        }
+
+        .nav-links > li:hover .nav-dropdown { opacity: 1; pointer-events: auto; }
+
+        .nav-dropdown-inner {
+            background: var(--dark-deep);
+            border: 1px solid rgba(184,145,42,0.22);
+            border-radius: 10px;
+            padding: 8px 0;
+            min-width: 220px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .nav-dropdown-inner.wide {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-width: 420px;
+            padding: 10px 0;
+        }
+
+        .nav-dropdown-inner a {
+            display: block;
+            padding: 9px 20px;
+            color: rgba(255,255,255,0.78);
+            text-decoration: none;
+            font-size: 0.83rem;
+            transition: color 0.15s, background 0.15s;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-inner a:hover {
+            color: var(--gold-light);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .nav-dropdown-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.07);
+            margin: 4px 0;
+            grid-column: 1 / -1;
+        }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--white) !important;
+            font-weight: 600 !important;
+            border-radius: 6px;
+            padding: 9px 20px !important;
+        }
+
+        .nav-cta:hover { background: var(--gold-light) !important; color: var(--dark) !important; }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none; border: none;
+            cursor: pointer; padding: 6px;
+        }
+
+        .nav-hamburger span {
+            display: block; width: 22px; height: 2px;
+            background: var(--white); border-radius: 2px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--total-nav); left: 0; right: 0;
+            background: var(--dark-deep);
+            padding: 20px 24px 32px;
+            z-index: 850;
+            border-bottom: 1px solid rgba(184,145,42,0.18);
+        }
+
+        .mobile-nav.open { display: block; }
+
+        .mobile-nav a {
+            display: block; padding: 12px 0;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none; font-size: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .mobile-nav a:last-child { border-bottom: none; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            align-items: center;
+            padding: 0 48px 0 60px;
+            gap: 60px;
+            padding-top: var(--total-nav);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('img/hero-bg.jpg') center 30% / cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(110deg,
+                rgba(7,15,24,0.93) 0%,
+                rgba(7,15,24,0.72) 55%,
+                rgba(7,15,24,0.42) 100%);
+            z-index: 1;
+        }
+
+        .hero-copy { position: relative; z-index: 2; }
+
+        .hero-logo {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+
+        .hero-logo-emblem {
+            width: 72px; height: 72px;
+            flex-shrink: 0;
+        }
+
+        .hero-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-logo-top {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.01em;
+            line-height: 1.1;
+        }
+
+        .hero-logo-bot {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-light);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block; width: 28px; height: 2px;
+            background: var(--gold);
+        }
+
+        .hero-h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        .hero-h1 em { font-style: normal; color: var(--gold-light); }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.72);
+            line-height: 1.75;
+            max-width: 520px;
+            margin-bottom: 38px;
+            font-weight: 300;
+        }
+
+        .hero-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        .hero-badge {
+            display: flex; align-items: center; gap: 7px;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 100px;
+            padding: 7px 16px;
+            color: rgba(255,255,255,0.88);
+            font-size: 0.82rem; font-weight: 500;
+        }
+
+        .hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+        .hero-badge--gold {
+            background: rgba(184,145,42,0.18);
+            border-color: rgba(184,145,42,0.45);
+            color: var(--gold-light);
+            font-weight: 600;
+            gap: 12px;
+            padding: 8px 20px;
+        }
+
+        /* Hero form */
+        .hero-form-wrap { position: relative; z-index: 2; }
+
+        .hero-form {
+            background: rgba(7,15,24,0.78);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 16px;
+            padding: 36px 32px 32px;
+        }
+
+        .hf-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; font-weight: 600;
+            color: var(--white); margin-bottom: 6px;
+        }
+
+        .hf-sub {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.52);
+            margin-bottom: 24px;
+        }
+
+        .hf-field { margin-bottom: 14px; }
+
+        .hf-field label {
+            display: block;
+            font-size: 0.74rem; font-weight: 600;
+            color: rgba(255,255,255,0.58);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .hf-field input,
+        .hf-field select,
+        .hf-field textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 11px 14px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem; outline: none;
+            transition: border-color 0.18s, background 0.18s;
+        }
+
+        .hf-field select {
+            appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+
+        .hf-field input::placeholder,
+        .hf-field textarea::placeholder { color: rgba(255,255,255,0.30); }
+
+        .hf-field select option { background: var(--dark-deep); color: var(--white); }
+
+        .hf-field input:focus,
+        .hf-field select:focus,
+        .hf-field textarea:focus {
+            border-color: var(--gold-light);
+            background: rgba(255,255,255,0.13);
+        }
+
+        .hf-field textarea { height: 80px; resize: none; }
+
+        .hf-btn {
+            width: 100%;
+            background: var(--gold); color: var(--white);
+            border: none; border-radius: 8px; padding: 13px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem; font-weight: 600;
+            cursor: pointer; margin-top: 6px;
+            transition: background 0.18s;
+        }
+
+        .hf-btn:hover { background: var(--gold-light); }
+
+        /* ── STATS BAR ───────────────────────────────────── */
+        .stats-bar {
+            background: var(--gold);
+            padding: 20px 60px;
+            display: flex;
+            align-items: center; justify-content: center;
+            gap: 56px; flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex; align-items: center; gap: 10px;
+            color: rgba(255,255,255,0.95);
+        }
+
+        .stat-item svg {
+            width: 18px; height: 18px; flex-shrink: 0;
+        }
+
+        .stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem; font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.78rem; font-weight: 500;
+            opacity: 0.88; line-height: 1.3;
+        }
+
+        /* ── PRACTICE AREAS ──────────────────────────────── */
+        .section { padding: 96px 60px; }
+
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--gold);
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-label::before {
+            content: '';
+            display: block; width: 24px; height: 2px;
+            background: var(--gold);
+        }
+
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 700; color: var(--dark-deep);
+            line-height: 1.18; margin-bottom: 14px;
+        }
+
+        .section-lead {
+            font-size: 1.05rem; color: var(--text-light);
+            line-height: 1.75; max-width: 620px;
+            margin-bottom: 52px;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .practice-card {
+            background: var(--white);
+            border-radius: 14px; padding: 30px 26px;
+            border: 1px solid rgba(0,0,0,0.07);
+            transition: box-shadow 0.22s, transform 0.22s;
+            cursor: default;
+        }
+
+        .practice-card:hover {
+            box-shadow: 0 12px 40px rgba(13,27,42,0.12);
+            transform: translateY(-3px);
+        }
+
+        .pc-icon {
+            width: 48px; height: 48px;
+            background: rgba(184,145,42,0.10);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .pc-icon svg { width: 22px; height: 22px; color: var(--gold); }
+
+        .pc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem; font-weight: 600;
+            color: var(--dark-deep); margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        .pc-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.72; }
+
+        /* ── QUOTE SECTION ───────────────────────────────── */
+        .quote-section {
+            background: var(--dark-deep);
+            padding: 96px 60px;
+        }
+
+        .quote-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 80px; align-items: center;
+        }
+
+        .quote-copy .section-label { color: var(--gold-light); }
+        .quote-copy .section-label::before { background: var(--gold-light); }
+        .quote-copy .section-h2 { color: var(--white); margin-bottom: 28px; }
+
+        blockquote {
+            border-left: 3px solid var(--gold);
+            padding-left: 24px;
+            margin-bottom: 32px;
+        }
+
+        blockquote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.18rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.75;
+        }
+
+        .recognition-cards {
+            display: flex; flex-direction: column; gap: 14px;
+        }
+
+        .rec-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(184,145,42,0.22);
+            border-radius: 10px;
+            padding: 18px 22px;
+            display: flex; align-items: center; gap: 16px;
+        }
+
+        .rec-icon {
+            width: 40px; height: 40px;
+            background: rgba(184,145,42,0.15);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .rec-icon svg { width: 18px; height: 18px; color: var(--gold-light); }
+
+        .rec-title {
+            font-size: 0.9rem; font-weight: 600;
+            color: var(--white); margin-bottom: 2px;
+        }
+
+        .rec-sub {
+            font-size: 0.78rem; color: rgba(255,255,255,0.48);
+        }
+
+        /* ── CONTACT ─────────────────────────────────────── */
+        .contact-section { padding: 96px 60px; background: var(--cream); }
+
+        .contact-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 72px; align-items: start;
+        }
+
+        .contact-info-items {
+            display: flex; flex-direction: column;
+            gap: 26px; margin-top: 36px;
+        }
+
+        .ci-item { display: flex; gap: 16px; align-items: flex-start; }
+
+        .ci-icon {
+            width: 44px; height: 44px;
+            background: rgba(184,145,42,0.10);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .ci-icon svg { width: 20px; height: 20px; color: var(--gold); }
+
+        .ci-label {
+            font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--text-light); margin-bottom: 4px;
+        }
+
+        .ci-val { font-size: 0.94rem; color: var(--text-mid); line-height: 1.6; }
+
+        .contact-form {
+            background: var(--white); border-radius: 16px;
+            padding: 40px 36px;
+            border: 1px solid rgba(0,0,0,0.07);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .cf-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem; font-weight: 600;
+            color: var(--dark-deep); margin-bottom: 6px;
+        }
+
+        .cf-sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 28px; }
+
+        .cf-field { margin-bottom: 16px; }
+
+        .cf-field label {
+            display: block; font-size: 0.75rem; font-weight: 600;
+            color: var(--text-mid); text-transform: uppercase;
+            letter-spacing: 0.06em; margin-bottom: 6px;
+        }
+
+        .cf-field input,
+        .cf-field select,
+        .cf-field textarea {
+            width: 100%; background: var(--cream);
+            border: 1.5px solid rgba(0,0,0,0.12);
+            border-radius: 8px; padding: 11px 14px;
+            color: var(--text); font-family: 'Inter', sans-serif;
+            font-size: 0.88rem; outline: none;
+            transition: border-color 0.18s;
+        }
+
+        .cf-field select {
+            appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+
+        .cf-field input:focus,
+        .cf-field select:focus,
+        .cf-field textarea:focus { border-color: var(--gold); }
+
+        .cf-field textarea { height: 110px; resize: none; }
+
+        .cf-btn {
+            width: 100%; background: var(--dark);
+            color: var(--white); border: none; border-radius: 8px;
+            padding: 14px; font-family: 'Inter', sans-serif;
+            font-size: 0.92rem; font-weight: 600;
+            cursor: pointer; margin-top: 6px;
+            transition: background 0.18s;
+        }
+
+        .cf-btn:hover { background: var(--dark-mid); }
+
+        /* ── FOOTER ──────────────────────────────────────── */
+        footer { background: var(--dark-deep); padding: 52px 60px 28px; }
+
+        .footer-map { margin-bottom: 40px; }
+
+        .footer-map h4 {
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--gold-light); margin-bottom: 14px;
+        }
+
+        .footer-map iframe {
+            width: 100%; height: 220px;
+            border: none; border-radius: 10px;
+            opacity: 0.85; filter: grayscale(20%);
+        }
+
+        .footer-top {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; gap: 48px; flex-wrap: wrap;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.09);
+            margin-bottom: 28px;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem; color: rgba(255,255,255,0.45);
+            line-height: 1.7; max-width: 260px; margin-top: 12px;
+        }
+
+        .footer-links-col h4 {
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--gold-light); margin-bottom: 16px;
+        }
+
+        .footer-links-col div { display: flex; flex-direction: column; gap: 10px; }
+
+        .footer-links-col a {
+            color: rgba(255,255,255,0.52);
+            text-decoration: none; font-size: 0.875rem;
+            transition: color 0.15s;
+        }
+
+        .footer-links-col a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 12px;
+        }
+
+        .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.28); }
+
+        .footer-social a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 34px; height: 34px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 8px;
+            color: rgba(255,255,255,0.42);
+            transition: color 0.18s, border-color 0.18s;
+        }
+
+        .footer-social a:hover { color: var(--gold-light); border-color: var(--gold-light); }
+        .footer-social svg { width: 16px; height: 16px; }
+
+        /* ── DEMO BANNER ─────────────────────────────────── */
+        .demo-banner {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(7,15,24,0.97);
+            backdrop-filter: blur(8px);
+            border-top: 2px solid var(--gold);
+            padding: 14px 24px;
+            display: flex; align-items: center; justify-content: center;
+            gap: 16px; z-index: 9999;
+            font-size: 0.83rem; color: rgba(255,255,255,0.78);
+        }
+
+        .demo-banner a { color: var(--gold-light); text-decoration: none; font-weight: 600; }
+        .demo-banner a:hover { text-decoration: underline; }
+
+        .demo-banner-close {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.22);
+            color: rgba(255,255,255,0.62); font-size: 1rem;
+            cursor: pointer; padding: 2px 8px;
+            border-radius: 4px; line-height: 1.4; margin-left: 8px;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .demo-banner-close:hover { color: var(--white); border-color: rgba(255,255,255,0.48); }
+
+        /* ── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 120px 32px 64px; }
+            .hero-form-wrap { display: none; }
+            .practice-grid { grid-template-columns: 1fr 1fr; }
+            .quote-inner { grid-template-columns: 1fr; gap: 48px; }
+            .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav { padding: 0 24px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .section,
+            .quote-section,
+            .contact-section { padding: 64px 24px; }
+            footer { padding: 40px 24px 20px; }
+            .stats-bar { padding: 20px 24px; gap: 24px; }
+            .practice-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <ul class="top-bar-links">
+            <li>
+                <a href="#">Family Law &amp; Divorce <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner wide">
+                        <a href="#">Child Custody</a>
+                        <a href="#">Child Support</a>
+                        <a href="#">Divorce &amp; Separation</a>
+                        <a href="#">Collaborative Family Law</a>
+                        <a href="#">Domestic Violence</a>
+                        <a href="#">Property Division</a>
+                        <a href="#">Spousal Support</a>
+                        <a href="#">Uncontested Divorce</a>
+                        <a href="#">Family Law FAQs</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Real Estate Law <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner">
+                        <a href="#">Legal Fees &amp; Disbursements</a>
+                        <a href="#">Residential Sale or Purchase</a>
+                        <a href="#">Commercial Real Estate</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Immigration <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner wide">
+                        <a href="#">Appeals</a>
+                        <a href="#">Canadian Citizenship</a>
+                        <a href="#">Inadmissibility</a>
+                        <a href="#">Permanent Residency</a>
+                        <a href="#">Refugees &amp; Asylum</a>
+                        <a href="#">Sponsorships</a>
+                        <a href="#">Study in Canada</a>
+                        <a href="#">Visitors</a>
+                        <a href="#">Work in Canada</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Wills &amp; Estates <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown-inner">
+                        <a href="#">Last Will &amp; Testament</a>
+                        <a href="#">Personal Directive</a>
+                        <a href="#">Enduring Power of Attorney</a>
+                        <a href="#">Guardianship &amp; Trusteeship</a>
+                        <a href="#">Probate &amp; Estate Administration</a>
+                        <a href="#">Estate Litigation</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Civil Litigation</a></li>
+            <li><a href="#">Criminal Pardons</a></li>
+        </ul>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="#">Family Law &amp; Divorce</a>
+        <a href="#">Real Estate Law</a>
+        <a href="#">Immigration</a>
+        <a href="#">Wills &amp; Estates</a>
+        <a href="#">Civil Litigation</a>
+        <a href="#">Criminal Pardons</a>
+        <a href="#">Our Team</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-copy">
+            <div class="hero-logo">
+                <svg class="hero-logo-emblem" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer ring -->
+                    <circle cx="36" cy="36" r="34" stroke="rgba(205,168,64,0.7)" stroke-width="1.2"/>
+                    <!-- Inner ring -->
+                    <circle cx="36" cy="36" r="29" stroke="rgba(205,168,64,0.3)" stroke-width="0.7"/>
+                    <!-- Center pole -->
+                    <line x1="36" y1="16" x2="36" y2="54" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Crossbar -->
+                    <line x1="18" y1="27" x2="54" y2="27" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Left chain -->
+                    <line x1="22" y1="27" x2="19" y2="41" stroke="rgba(255,255,255,0.75)" stroke-width="1" stroke-linecap="round"/>
+                    <!-- Right chain -->
+                    <line x1="50" y1="27" x2="53" y2="41" stroke="rgba(255,255,255,0.75)" stroke-width="1" stroke-linecap="round"/>
+                    <!-- Left pan -->
+                    <path d="M13 41 Q19 46 25 41" stroke="white" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+                    <!-- Right pan -->
+                    <path d="M47 41 Q53 46 59 41" stroke="white" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+                    <!-- Base -->
+                    <line x1="28" y1="54" x2="44" y2="54" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="30" y1="54" x2="30" y2="58" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="42" y1="54" x2="42" y2="58" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="24" y1="58" x2="48" y2="58" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Gold accent dots at crossbar ends -->
+                    <circle cx="18" cy="27" r="2" fill="#CDA840"/>
+                    <circle cx="54" cy="27" r="2" fill="#CDA840"/>
+                </svg>
+                <div class="hero-logo-text">
+                    <span class="hero-logo-top">Edmonton Law Office</span>
+                    <span class="hero-logo-bot">Where Clients Come First</span>
+                </div>
+            </div>
+            <p class="hero-eyebrow">Downtown Edmonton, Alberta</p>
+            <h1 class="hero-h1">Where <em>Clients</em><br>Come First</h1>
+            <p class="hero-sub">20+ lawyers dedicated to fighting for you and your family — serving Edmonton and surrounding communities across a full range of legal needs.</p>
+            <div class="hero-badges">
+                <span class="hero-badge hero-badge--gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    4.7★ — 562 Google Reviews
+                </span>
+                <span class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    20+ Lawyers
+                </span>
+                <span class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Best in Edmonton
+                </span>
+            </div>
+        </div>
+
+        <!-- Hero form -->
+        <div class="hero-form-wrap">
+            <div class="hero-form">
+                <p class="hf-title">Request a Consultation</p>
+                <p class="hf-sub">Tell us about your matter — we'll be in touch shortly.</p>
+                <form onsubmit="return false;">
+                    <div class="hf-field">
+                        <label for="hf-name">Full Name</label>
+                        <input type="text" id="hf-name" placeholder="Your name">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-phone">Phone</label>
+                        <input type="tel" id="hf-phone" placeholder="(780) 000-0000">
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-area">Practice Area</label>
+                        <select id="hf-area">
+                            <option value="">Select an area...</option>
+                            <option>Family Law &amp; Divorce</option>
+                            <option>Real Estate Law</option>
+                            <option>Immigration</option>
+                            <option>Wills &amp; Estates</option>
+                            <option>Civil Litigation</option>
+                            <option>Criminal Pardons</option>
+                        </select>
+                    </div>
+                    <div class="hf-field">
+                        <label for="hf-msg">Brief Description</label>
+                        <textarea id="hf-msg" placeholder="Briefly describe your legal matter..."></textarea>
+                    </div>
+                    <button class="hf-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div>
+                <div class="stat-num">4.7★</div>
+                <div class="stat-label">562 Google Reviews</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            <div>
+                <div class="stat-num">20+</div>
+                <div class="stat-label">Lawyers on Team</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+                <div class="stat-num">6</div>
+                <div class="stat-label">Practice Areas</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+                <div class="stat-num">YEG</div>
+                <div class="stat-label">Downtown Edmonton</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRACTICE AREAS -->
+    <section class="section" id="practice-areas">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-h2">Practice Areas</h2>
+        <p class="section-lead">From family law and real estate to immigration and civil litigation — Edmonton Law Office provides trusted legal representation across a full range of legal matters.</p>
+
+        <div class="practice-grid">
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <p class="pc-title">Family Law &amp; Divorce</p>
+                <p class="pc-desc">Customized legal strategies tailored to the needs and expectations of each client — helping families navigate difficult transitions.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <p class="pc-title">Real Estate Law</p>
+                <p class="pc-desc">Legal guidance for residential and commercial real estate transactions across Edmonton and Alberta.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+                <p class="pc-title">Immigration</p>
+                <p class="pc-desc">A dedicated team helping individuals and families navigate the complex immigration process with clarity and care.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <p class="pc-title">Wills &amp; Estates</p>
+                <p class="pc-desc">Guidance on estate planning and avoiding the most common mistakes — protecting your wishes and your family's future.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 8h14"/><path d="M5 8L2 14h6L5 8z"/><path d="M19 8l-3 6h6l-3-6z"/><line x1="9" y1="20" x2="15" y2="20"/></svg>
+                </div>
+                <p class="pc-title">Civil Litigation</p>
+                <p class="pc-desc">Experienced legal representation for individuals and organizations involved in civil disputes across Alberta.</p>
+            </div>
+            <div class="practice-card">
+                <div class="pc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <p class="pc-title">Criminal Pardons</p>
+                <p class="pc-desc">Legal assistance for individuals seeking record suspensions and pardons to move forward with their lives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE / ABOUT -->
+    <section class="quote-section" id="about">
+        <div class="quote-inner">
+            <div class="quote-copy">
+                <p class="section-label">Our Commitment</p>
+                <h2 class="section-h2">Fighting For You Like Family</h2>
+                <blockquote>
+                    <p>"People's lives and the lives of their loved ones, including children, are in our hands. They want to know that we will fight for them as if their family was our family."</p>
+                </blockquote>
+                <p style="font-size:0.85rem;color:rgba(255,255,255,0.45);">— Edmonton Law Office</p>
+            </div>
+            <div class="recognition-cards">
+                <div class="rec-card">
+                    <div class="rec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div>
+                        <p class="rec-title">4.7 Stars — 562 Google Reviews</p>
+                        <p class="rec-sub">Consistently rated by clients across Edmonton</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    </div>
+                    <div>
+                        <p class="rec-title">Best in Edmonton</p>
+                        <p class="rec-sub">Featured in Best in Edmonton directory</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <p class="rec-title">Canada's Best</p>
+                        <p class="rec-sub">Featured in Canada's Best directory</p>
+                    </div>
+                </div>
+                <div class="rec-card">
+                    <div class="rec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <p class="rec-title">20+ Lawyers</p>
+                        <p class="rec-sub">A full team at your service — downtown Edmonton</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div>
+                <p class="section-label">Get In Touch</p>
+                <h2 class="section-h2">We're Here to Help</h2>
+                <p class="section-lead" style="margin-bottom:0;">Reach out to discuss your legal matter — serving Edmonton and surrounding communities.</p>
+
+                <div class="contact-info-items">
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.18 7.55a16 16 0 006.27 6.27l1.41-1.42a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Phone</p>
+                            <p class="ci-val"><span>(780) 784-6666</span></p>
+                            <p class="ci-label" style="margin-top:8px;">Fax</p>
+                            <p class="ci-val"><span>(780) 784-6505</span></p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Address</p>
+                            <p class="ci-val">10185 – 107 Street NW<br>Edmonton, AB T5J 1J5</p>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <p class="ci-label">Office Hours</p>
+                            <p class="ci-val">Monday – Friday<br>8:30 am – 5:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <p class="cf-title">Send a Message</p>
+                <p class="cf-sub">Fill out the form and we'll be in touch shortly.</p>
+                <form onsubmit="return false;">
+                    <div class="cf-field">
+                        <label for="cf-name">Full Name</label>
+                        <input type="text" id="cf-name" placeholder="Your full name">
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-phone">Phone</label>
+                        <input type="tel" id="cf-phone" placeholder="(780) 000-0000">
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-area">Practice Area</label>
+                        <select id="cf-area">
+                            <option value="">Select an area...</option>
+                            <option>Family Law &amp; Divorce</option>
+                            <option>Real Estate Law</option>
+                            <option>Immigration</option>
+                            <option>Wills &amp; Estates</option>
+                            <option>Civil Litigation</option>
+                            <option>Criminal Pardons</option>
+                        </select>
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-msg">Message</label>
+                        <textarea id="cf-msg" placeholder="Briefly describe your legal matter..."></textarea>
+                    </div>
+                    <button class="cf-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-map">
+            <h4>Our Location</h4>
+            <iframe
+                src="https://maps.google.com/maps?q=10185+107+Street+NW+Edmonton+AB+T5J+1J5&output=embed"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Edmonton Law Office location">
+            </iframe>
+        </div>
+        <div class="footer-top">
+            <div>
+                <div class="logo-mark">
+                    <span class="logo-top">Edmonton Law Office</span>
+                    <span class="logo-bot">Where Clients Come First</span>
+                </div>
+                <p class="footer-tagline">20+ lawyers dedicated to fighting for you and your family — downtown Edmonton, Alberta.</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Practice Areas</h4>
+                <div>
+                    <a href="#">Family Law &amp; Divorce</a>
+                    <a href="#">Real Estate Law</a>
+                    <a href="#">Immigration</a>
+                    <a href="#">Wills &amp; Estates</a>
+                    <a href="#">Civil Litigation</a>
+                    <a href="#">Criminal Pardons</a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Firm</h4>
+                <div>
+                    <a href="#">Home</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 Edmonton Law Office. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEMO BANNER -->
+    <div class="demo-banner" id="demo-banner">
+        <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> — not affiliated with Edmonton Law Office.</p>
+        <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('nav-hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    </script>
+
+</body>
+</html>
