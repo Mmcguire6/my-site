@@ -512,8 +512,8 @@
         .trust-label {
             text-align: center;
             font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-soft);
+            font-weight: 700;
+            color: var(--gold);
             letter-spacing: 0.2em;
             text-transform: uppercase;
             margin-bottom: 32px;
@@ -702,6 +702,89 @@
             display: block;
         }
 
+        /* ── PROVEN ACROSS ENTERPRISE ─────────── */
+        .proven {
+            background: var(--teal-tint);
+            padding: 110px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .proven::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 20%, rgba(31,140,140,0.10), transparent 55%),
+                radial-gradient(ellipse at 90% 80%, rgba(245,158,11,0.06), transparent 55%);
+            pointer-events: none;
+        }
+        .proven .container { position: relative; z-index: 1; }
+        .proven-head {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 56px;
+        }
+        .proven-head .section-title { margin-bottom: 16px; }
+        .proven-head p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .proven-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .proven-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 40px 36px 36px;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .proven-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-lg);
+        }
+        .proven-num {
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, Inter, sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--teal-deep);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .proven-num::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--teal);
+        }
+        .proven-card h3 {
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, Inter, sans-serif;
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            margin: 0 0 14px;
+        }
+        .proven-card p {
+            color: var(--text-mid);
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
         /* ── TESTIMONIALS ─────────────────────── */
         .testimonials {
             background: var(--paper);
@@ -857,6 +940,8 @@
             .why-ot-grid { grid-template-columns: 1fr; gap: 56px; }
             .testimonial-grid { grid-template-columns: 1fr; }
             .testimonial-card { padding: 36px 32px 30px; }
+            .proven-grid { grid-template-columns: 1fr; }
+            .proven-card { padding: 32px 28px; }
             .trust-logos { gap: 24px 32px; }
         }
         @media (max-width: 720px) {
@@ -942,7 +1027,7 @@
 <!-- ─── TRUST STRIP ─── -->
 <section class="trust">
     <div class="container">
-        <p class="trust-label">Trusted by leading organizations since 2000</p>
+        <p class="trust-label">25+ years supporting enterprise data and workforce systems</p>
         <div class="trust-logos">
             <span class="trust-logo">APS</span>
             <span class="trust-logo">DKS Data</span>
@@ -975,7 +1060,7 @@
                         <path d="M5 16v8c0 2.21 4.92 4 11 4s11-1.79 11-4v-8"/>
                     </svg>
                 </div>
-                <h3>Data Strategy &amp; Advisory</h3>
+                <h3>Data Strategy &amp; Roadmaps</h3>
                 <p>Build a roadmap for data success aligned with your business goals.</p>
                 <a href="#contact" class="svc-link">Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1002,7 +1087,7 @@
                         <line x1="27" y1="26" x2="27" y2="6"/>
                     </svg>
                 </div>
-                <h3>Analytics &amp; BI Solutions</h3>
+                <h3>Analytics &amp; BI Enablement</h3>
                 <p>Turn raw data into insight with advanced analytics and intuitive dashboards.</p>
                 <a href="#contact" class="svc-link">Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1061,8 +1146,8 @@
                             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                         </svg>
                         <div>
-                            <strong>Measurable Impact</strong>
-                            <span>We focus on outcomes that drive growth, efficiency, and innovation.</span>
+                            <strong>Outcome-Focused Delivery</strong>
+                            <span>We build practical data solutions designed to improve reporting, operations, and decision-making.</span>
                         </div>
                     </li>
                 </ul>
@@ -1076,11 +1161,40 @@
     </div>
 </section>
 
+<!-- ─── PROVEN ACROSS COMPLEX ENTERPRISE ENVIRONMENTS ─── -->
+<section id="proven" class="proven">
+    <div class="container">
+        <div class="proven-head">
+            <span class="section-eyebrow">Proven Track Record</span>
+            <h2 class="section-title">Proven across complex<br><em>enterprise environments.</em></h2>
+            <p>Senior consultants delivering measurable results on the systems large organizations rely on every day.</p>
+        </div>
+
+        <div class="proven-grid">
+            <article class="proven-card">
+                <div class="proven-num">01 &mdash; Enterprise Delivery</div>
+                <h3>Multimillion-Dollar Project Delivery</h3>
+                <p>Supported enterprise initiatives at APS with reduced timelines and budgets &mdash; consistently exceeding executive expectations.</p>
+            </article>
+            <article class="proven-card">
+                <div class="proven-num">02 &mdash; Systems Integration</div>
+                <h3>ERP &amp; CRM Integration Experience</h3>
+                <p>Delivered interface and support work across SAP, Microsoft, and other industry-specific business systems for global manufacturers.</p>
+            </article>
+            <article class="proven-card">
+                <div class="proven-num">03 &mdash; Long-Tenured Expertise</div>
+                <h3>25+ Years of Trusted Consulting</h3>
+                <p>Long-running data and systems expertise across industrial, manufacturing, and workforce environments since 2000.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
 <!-- ─── TESTIMONIALS ─── -->
 <section id="testimonials" class="testimonials">
     <div class="container">
         <div class="testimonials-head">
-            <span class="section-eyebrow">References</span>
+            <span class="section-eyebrow">Client Endorsements</span>
             <h2 class="section-title">In their<br><em>own words.</em></h2>
             <p>Senior leaders who&rsquo;ve worked alongside our consultants on multimillion-dollar enterprise initiatives.</p>
         </div>
@@ -1152,9 +1266,9 @@
             <div class="footer-col">
                 <h5>Services</h5>
                 <ul>
-                    <li><a href="#services">Data Strategy &amp; Advisory</a></li>
+                    <li><a href="#services">Data Strategy &amp; Roadmaps</a></li>
                     <li><a href="#services">Data Platform Modernization</a></li>
-                    <li><a href="#services">Analytics &amp; BI Solutions</a></li>
+                    <li><a href="#services">Analytics &amp; BI Enablement</a></li>
                     <li><a href="#services">Data Governance &amp; Quality</a></li>
                     <li><a href="#services">Managed Services</a></li>
                 </ul>
@@ -1231,7 +1345,7 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     reveals.forEach(el => io.observe(el));
 
-    document.querySelectorAll('.services-grid, .work-grid, .why-ot-bullets').forEach(group => {
+    document.querySelectorAll('.services-grid, .proven-grid, .testimonial-grid, .why-ot-bullets').forEach(group => {
         [...group.children].forEach((child, i) => {
             child.style.transitionDelay = (i * 80) + 'ms';
         });
