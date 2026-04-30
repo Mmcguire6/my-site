@@ -84,11 +84,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .eyebrow.no-rule::before { display: none; }
 
-/* Premium gold eyebrows for section headers (hero stays neutral) */
+/* Premium gold eyebrows across hero, sections, trust strip, and CTA */
+.hero .eyebrow,
+.logos .eyebrow,
 .section .eyebrow,
 .cta .eyebrow {
   color: var(--gold);
 }
+.hero .eyebrow::before,
+.logos .eyebrow::before,
 .section .eyebrow::before,
 .cta .eyebrow::before {
   background: var(--gold-rule);
@@ -139,7 +143,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 22px;
+  padding: 9px 22px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
