@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>GSS Law Firm — Integrity, Professionalism, Results</title>
+    <meta name="description" content="GSS Law Firm — Edmonton legal counsel led by Gurpiyar S. Sandhu, LL.M. Hons, M.Sc. Real estate, immigration, family, civil, criminal, and a specialty practice for medical, dental, and veterinary professionals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* GSS Law brand — verified from their CSS */
+            --navy:        #093254;
+            --navy-deep:   #061f3a;
+            --navy-darker: #04162b;
+            --navy-light:  #0d4272;
+            --navy-tint:   #E8EFF5;
+            --navy-pale:   #F2F6FA;
+
+            --rust:        #EA7423;
+            --rust-bright: #F58A3F;
+            --rust-deep:   #C45A13;
+            --rust-pale:   #FCEEDF;
+            --rust-tint:   #FEF7F0;
+            --rust-glow:   rgba(234,116,35,0.32);
+
+            --ink:         #121212;
+            --charcoal:    #2A2A2A;
+            --text:        #1E2933;
+            --text-mid:    #545454;
+            --text-soft:   #696969;
+            --text-faint:  #8C8C8C;
+            --gray:        #A8A8A8;
+
+            --paper:       #FFFFFF;
+            --bg:          #FAFAFA;
+            --bg-soft:     #F5F5F5;
+            --cream:       #FBF8F3;
+
+            --border:      #E5E5E5;
+            --border-soft: #F0F0F0;
+
+            --topbar-h:    40px;
+            --nav-h:       76px;
+            --total-nav:   116px;
+
+            --shadow-sm:   0 1px 3px rgba(9,50,84,0.06);
+            --shadow-md:   0 8px 24px -8px rgba(9,50,84,0.18), 0 2px 6px -2px rgba(9,50,84,0.06);
+            --shadow-lg:   0 24px 56px -20px rgba(9,50,84,0.28), 0 8px 16px -8px rgba(9,50,84,0.10);
+            --shadow-rust: 0 12px 28px -8px rgba(234,116,35,0.35);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.65;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--navy);
+            letter-spacing: -0.005em;
+            line-height: 1.15;
+            font-weight: 600;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(234,116,35,0.32);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 0 32px;
+        }
+        .top-bar a {
+            color: rgba(255,255,255,0.85);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--rust-bright); }
+        .top-bar svg { width: 12px; height: 12px; }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+        .top-bar .tagline {
+            color: rgba(255,255,255,0.72);
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.04em;
+        }
+        .top-bar .tagline em { color: var(--rust-bright); font-style: normal; font-weight: 600; }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand-mark {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--paper);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: var(--shadow-sm);
+        }
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
+        }
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.01em;
+        }
+        .brand-sub {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            color: var(--rust);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--rust); }
+        .nav-cta {
+            background: var(--rust);
+            color: var(--paper) !important;
+            padding: 12px 22px;
+            border-radius: 2px;
+            font-weight: 600 !important;
+            font-size: 0.84rem !important;
+            letter-spacing: 0.04em;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover {
+            background: var(--rust-deep);
+            color: var(--paper) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-rust);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px;
+            height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--navy);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a {
+            color: var(--navy);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: var(--total-nav);
+            padding-bottom: 80px;
+            position: relative;
+            background: var(--navy-darker);
+            color: var(--paper);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 12% 30%, rgba(234,116,35,0.18), transparent 55%),
+                radial-gradient(ellipse at 88% 70%, rgba(13,66,114,0.55), transparent 50%),
+                linear-gradient(135deg, var(--navy-darker) 0%, var(--navy-deep) 50%, var(--navy) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; left: 50%;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, rgba(234,116,35,0.18), transparent);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.74rem;
+            font-weight: 600;
+            color: var(--rust-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background: var(--rust);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5.8vw, 4.8rem);
+            font-weight: 600;
+            color: var(--paper);
+            line-height: 1.05;
+            letter-spacing: -0.018em;
+            margin-bottom: 32px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--rust-bright);
+            font-weight: 500;
+        }
+        .hero-sub {
+            font-size: 1.18rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            max-width: 680px;
+            margin-bottom: 44px;
+            font-weight: 300;
+        }
+        .hero-pillars {
+            display: flex;
+            gap: 56px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .hero-pillar {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hero-pillar-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--rust-bright);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .hero-pillar-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--paper);
+            font-weight: 600;
+            letter-spacing: -0.005em;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-rust {
+            background: var(--rust);
+            color: var(--paper);
+            box-shadow: var(--shadow-rust);
+        }
+        .btn-rust:hover {
+            background: var(--rust-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(234,116,35,0.5);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.32);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--rust-bright);
+            color: var(--rust-bright);
+        }
+        .btn-navy {
+            background: var(--navy);
+            color: var(--paper);
+        }
+        .btn-navy:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        /* ── AFFILIATIONS STRIP ──────────────────────────── */
+        .affiliations {
+            background: var(--bg-soft);
+            padding: 36px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .affiliations-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 64px;
+            flex-wrap: wrap;
+        }
+        .affiliation-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--text-mid);
+            font-size: 0.86rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .affiliation-item svg {
+            width: 26px;
+            height: 26px;
+            color: var(--rust);
+            flex-shrink: 0;
+        }
+        .affiliation-item strong {
+            color: var(--navy);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.96rem;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--rust);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--rust);
+        }
+        .section-h2 {
+            font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 18px;
+            letter-spacing: -0.018em;
+        }
+        .section-h2 em { font-style: italic; color: var(--rust); font-weight: 500; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* ── PRACTICE AREAS ───────────────────────────────── */
+        .practice {
+            background: var(--bg);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .practice-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 36px 32px 32px;
+            border-radius: 2px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--rust);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .practice-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--navy);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy-tint);
+            color: var(--navy);
+            border-radius: 50%;
+            margin-bottom: 22px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .practice-card:hover .practice-icon {
+            background: var(--navy);
+            color: var(--rust-bright);
+        }
+        .practice-icon svg { width: 22px; height: 22px; }
+        .practice-card h3 {
+            font-size: 1.36rem;
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        /* ── PRINCIPAL ────────────────────────────────────── */
+        .principal {
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .principal::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(234,116,35,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .principal-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .principal-portrait {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 32px 64px -24px rgba(9,50,84,0.45);
+        }
+        .principal-portrait::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 30%, rgba(234,116,35,0.14), transparent 55%),
+                radial-gradient(ellipse at 70% 70%, rgba(13,66,114,0.4), transparent 60%);
+        }
+        .principal-portrait-inner {
+            position: relative;
+            text-align: center;
+            color: var(--paper);
+            padding: 36px;
+        }
+        .principal-monogram {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            font-weight: 700;
+            color: var(--paper);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 16px;
+        }
+        .principal-monogram-rust {
+            color: var(--rust-bright);
+            font-style: italic;
+        }
+        .principal-monogram-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--rust);
+            margin: 24px auto;
+        }
+        .principal-monogram-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.16rem;
+            font-weight: 600;
+            color: var(--paper);
+            letter-spacing: 0.02em;
+            margin-bottom: 6px;
+        }
+        .principal-monogram-creds {
+            font-size: 0.72rem;
+            color: var(--rust-bright);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .principal-content .section-eyebrow { justify-content: flex-start; }
+        .principal-content h2 {
+            font-size: clamp(2.1rem, 4vw, 3.2rem);
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 22px;
+            letter-spacing: -0.018em;
+        }
+        .principal-content h2 em { font-style: italic; color: var(--rust); font-weight: 500; }
+        .principal-content > p {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
+        .credentials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 36px;
+            padding-top: 36px;
+            border-top: 1px solid var(--border);
+        }
+        .credential {
+            background: var(--navy-pale);
+            border-left: 3px solid var(--rust);
+            padding: 18px 22px;
+            border-radius: 0 2px 2px 0;
+        }
+        .credential strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        .credential span {
+            font-size: 0.84rem;
+            color: var(--text-mid);
+            line-height: 1.55;
+        }
+
+        /* ── SPECIALTY: MEDICAL-DENTAL-VETS ──────────────── */
+        .specialty {
+            background: var(--navy);
+            color: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .specialty::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 85% 30%, rgba(234,116,35,0.18), transparent 50%),
+                radial-gradient(ellipse at 15% 85%, rgba(13,66,114,0.4), transparent 55%);
+            pointer-events: none;
+        }
+        .specialty .container { position: relative; z-index: 1; }
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+        .specialty-content .section-eyebrow {
+            color: var(--rust-bright);
+            justify-content: flex-start;
+        }
+        .specialty-content .section-eyebrow::before,
+        .specialty-content .section-eyebrow::after { background: var(--rust); }
+        .specialty-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            color: var(--paper);
+            margin-bottom: 24px;
+            letter-spacing: -0.018em;
+        }
+        .specialty-content h2 em { font-style: italic; color: var(--rust-bright); font-weight: 500; }
+        .specialty-content > p {
+            font-size: 1.06rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+        .specialty-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 24px;
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.16);
+        }
+        .specialty-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.92);
+            font-size: 0.96rem;
+            font-weight: 400;
+        }
+        .specialty-list svg {
+            width: 16px;
+            height: 16px;
+            color: var(--rust-bright);
+            flex-shrink: 0;
+        }
+        .specialty-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .specialty-icons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 360px;
+        }
+        .specialty-icon-card {
+            aspect-ratio: 1 / 1;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(234,116,35,0.32);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--rust-bright);
+            transition: background 0.25s, transform 0.25s;
+            text-align: center;
+            padding: 16px;
+        }
+        .specialty-icon-card:hover {
+            background: rgba(234,116,35,0.10);
+            transform: translateY(-4px);
+        }
+        .specialty-icon-card svg {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 12px;
+        }
+        .specialty-icon-card strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--paper);
+            font-weight: 600;
+            letter-spacing: -0.005em;
+        }
+        .specialty-icon-card span {
+            display: block;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.55);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--rust);
+            color: var(--paper);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.10), transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.10), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--paper);
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+        }
+        .cta-inner h2 em { font-style: italic; font-weight: 500; }
+        .cta-inner p {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.06rem;
+            margin-bottom: 36px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .cta-band .btn-light {
+            background: var(--navy);
+            color: var(--paper);
+        }
+        .cta-band .btn-light:hover {
+            background: var(--navy-darker);
+            transform: translateY(-2px);
+        }
+        .cta-band .btn-ghost-light {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.5);
+        }
+        .cta-band .btn-ghost-light:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: var(--paper);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 28px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 32px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: var(--rust-bright);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.74rem;
+            color: var(--rust);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.15s;
+        }
+        .contact-list a:hover { color: var(--rust); }
+        .hours-block {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+        }
+        .hours-block h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+        .hours-block h4 svg { width: 18px; height: 18px; color: var(--rust); }
+        .hours-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.92rem;
+            padding: 4px 0;
+        }
+        .hours-list li:not(:last-child) { border-bottom: 1px dashed var(--border); }
+        .hours-list span:first-child { color: var(--text-mid); font-weight: 500; }
+        .hours-list span:last-child { color: var(--navy); font-weight: 600; }
+        .hours-list .closed { color: var(--text-soft); font-weight: 400; }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 4 / 3;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.72rem;
+            color: var(--navy);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 13px 16px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23EA7423' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 12px;
+            padding-right: 46px;
+            cursor: pointer;
+        }
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: var(--rust);
+            background-color: var(--paper);
+        }
+        .form-field select:focus {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23EA7423' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 7l5 -5 5 5'/></svg>");
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 110px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--paper);
+            padding: 16px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-btn:hover {
+            background: var(--rust);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-rust);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--navy-darker);
+            color: rgba(255,255,255,0.6);
+            padding: 72px 0 32px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+        }
+        .footer-brand .brand { margin-bottom: 20px; }
+        .footer-brand .brand-name { color: var(--paper); }
+        .footer-brand .brand-mark { background: var(--paper); color: var(--navy); }
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--rust-bright);
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 0.01em;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.6);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--rust-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--navy-darker);
+            color: var(--paper);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--rust);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--rust-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--rust-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .principal-grid { grid-template-columns: 1fr; gap: 56px; }
+            .principal-portrait { aspect-ratio: 16 / 9; max-width: 560px; margin: 0 auto; }
+            .principal-monogram { font-size: 4.5rem; }
+            .specialty-grid { grid-template-columns: 1fr; gap: 56px; }
+            .specialty-icons { max-width: 480px; margin: 0 auto; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .tagline { display: none; }
+            .top-bar-inner { gap: 14px; flex-wrap: wrap; justify-content: center; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 80px 0; }
+            .section-head { margin-bottom: 48px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .credentials { grid-template-columns: 1fr; }
+            .specialty-list { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 28px 22px; }
+            .hero-pillars { gap: 24px; }
+            .hero-pillar-text { font-size: 1.25rem; }
+            .affiliations-inner { gap: 24px; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+        }
+
+        ::selection { background: var(--rust-pale); color: var(--navy); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:7804859510">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            780 485 9510
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:info@gsslaw.ca">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@gsslaw.ca
+        </a>
+        <span class="divider"></span>
+        <span class="tagline">Integrity. Professionalism. <em>Results.</em></span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="brand">
+            <div class="brand-mark">GSS</div>
+            <div class="brand-text">
+                <span class="brand-name">GSS Law Firm</span>
+                <span class="brand-sub">Barristers &amp; Solicitors</span>
+            </div>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#principal">Principal</a></li>
+            <li><a href="#specialty">Medical &amp; Dental</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#principal">Principal</a></li>
+        <li><a href="#specialty">Medical &amp; Dental</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Edmonton · Barristers &amp; Solicitors</span>
+            <h1>Integrity. Professionalism.<br><em>Results.</em></h1>
+            <p class="hero-sub">
+                GSS Law Firm is committed to upholding the integrity of the Canadian legal system while working with professionalism towards achieving the best results for clients.
+            </p>
+            <div class="hero-pillars">
+                <div class="hero-pillar">
+                    <span class="hero-pillar-num"><em>i.</em></span>
+                    <span class="hero-pillar-text">Integrity</span>
+                </div>
+                <div class="hero-pillar">
+                    <span class="hero-pillar-num"><em>ii.</em></span>
+                    <span class="hero-pillar-text">Professionalism</span>
+                </div>
+                <div class="hero-pillar">
+                    <span class="hero-pillar-num"><em>iii.</em></span>
+                    <span class="hero-pillar-text">Results</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-rust">
+                    Schedule a Consultation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:7804859510" class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    780 485 9510
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AFFILIATIONS -->
+<div class="affiliations">
+    <div class="container">
+        <div class="affiliations-inner">
+            <div class="affiliation-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/><path d="M9 12 L11 14 L15 10"/></svg>
+                <span>Member of <strong>The Law Society of Alberta</strong></span>
+            </div>
+            <div class="affiliation-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2 a15.3 15.3 0 010 20 a15.3 15.3 0 010 -20"/></svg>
+                <span>Member of the <strong>Canadian Bar Association</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PRACTICE AREAS -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">What We Do</p>
+            <h2 class="section-h2">A full range of <em>legal services.</em></h2>
+            <p class="section-lead">From real estate transactions to courtroom representation — GSS Law Firm provides considered, professional counsel across the matters Albertans rely on.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 3 L21 12"/><path d="M5 10 L5 21 L19 21 L19 10"/><path d="M10 21 L10 14 L14 14 L14 21"/></svg>
+                </div>
+                <h3>Real Estate Law</h3>
+                <p>Residential sales and purchases, commercial leases, and commercial transactions — handled with care from offer to closing.</p>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2 a15.3 15.3 0 010 20 a15.3 15.3 0 010 -20"/></svg>
+                </div>
+                <h3>Immigration Law</h3>
+                <p>Permanent residency, work and study permits, family sponsorship, and citizenship — guidance through Canada's evolving immigration landscape.</p>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Family Law</h3>
+                <p>Divorce, separation, custody, child and spousal support, and matrimonial property matters &mdash; guided with sensitivity and discretion.</p>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 L21 6"/><path d="M3 12 L21 12"/><path d="M3 18 L13 18"/><circle cx="18" cy="18" r="3"/></svg>
+                </div>
+                <h3>Civil Law</h3>
+                <p>Disputes between individuals, businesses, and institutions &mdash; from breach of contract claims to commercial litigation in Alberta courts.</p>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1 L3 5 L3 11 C3 16.5 7 21.5 12 23 C17 21.5 21 16.5 21 11 L21 5 L12 1 Z"/></svg>
+                </div>
+                <h3>Criminal Law</h3>
+                <p>Defence representation across criminal matters &mdash; from impaired driving and assault charges through to serious indictable offences.</p>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12 L11 14 L15 10"/><circle cx="12" cy="12" r="9"/></svg>
+                </div>
+                <h3>Notary Services</h3>
+                <p>Notary public services and commissioning of oaths &mdash; documents authenticated for use in Alberta and abroad.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PRINCIPAL -->
+<section class="section principal" id="principal">
+    <div class="container">
+        <div class="principal-grid">
+            <div class="principal-portrait">
+                <div class="principal-portrait-inner">
+                    <div class="principal-monogram">
+                        G<span class="principal-monogram-rust">S</span>S
+                    </div>
+                    <div class="principal-monogram-divider"></div>
+                    <div class="principal-monogram-name">Gurpiyar S. Sandhu</div>
+                    <div class="principal-monogram-creds">LL.M. Hons &middot; M.Sc.</div>
+                </div>
+            </div>
+            <div class="principal-content">
+                <p class="section-eyebrow">The Principal</p>
+                <h2>Counsel led by <em>Gurpiyar S. Sandhu.</em></h2>
+                <p>GSS Law Firm operates as a focused practice led personally by Gurpiyar S. Sandhu &mdash; a barrister and solicitor admitted to the Law Society of Alberta and a member of the Canadian Bar Association.</p>
+                <p>Each matter receives the attention of the principal himself, supported by the academic foundation of advanced legal training and a master's-level science background. The result is considered counsel and direct accountability on every file.</p>
+                <div class="credentials">
+                    <div class="credential">
+                        <strong>LL.M. Hons</strong>
+                        <span>Master of Laws with Honours</span>
+                    </div>
+                    <div class="credential">
+                        <strong>M.Sc.</strong>
+                        <span>Master of Science</span>
+                    </div>
+                    <div class="credential">
+                        <strong>Law Society</strong>
+                        <span>Of Alberta &mdash; Active Member</span>
+                    </div>
+                    <div class="credential">
+                        <strong>CBA</strong>
+                        <span>Canadian Bar Association &mdash; Member</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIALTY: MEDICAL-DENTAL-VETS -->
+<section class="section specialty" id="specialty">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <p class="section-eyebrow">A Specialty Practice</p>
+                <h2>Counsel for <em>medical, dental,<br>and veterinary professionals.</em></h2>
+                <p>Healthcare professionals run businesses inside one of the most heavily regulated industries in Canada. GSS Law Firm offers a dedicated practice line tailored to the legal realities of doctors, dentists, and veterinarians &mdash; the contracts, partnerships, transitions, and structures that come with running a clinical practice.</p>
+                <ul class="specialty-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Professional corporation setup
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Practice purchase &amp; sale
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Associate &amp; partnership agreements
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Commercial leases for clinics
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Succession &amp; transition planning
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Regulatory &amp; compliance support
+                    </li>
+                </ul>
+            </div>
+            <div class="specialty-visual">
+                <div class="specialty-icons">
+                    <div class="specialty-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><line x1="12" y1="3.5" x2="12" y2="11"/><line x1="9" y1="7.5" x2="15" y2="7.5"/></svg>
+                        <strong>Medical</strong>
+                        <span>Doctors</span>
+                    </div>
+                    <div class="specialty-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C9 3 5 4 5 8c0 3 1 5 1.5 7s.5 4.5 2.5 4.5 2-2 3-2 1 2 3 2 2-2.5 2.5-4.5S19 11 19 8c0-4-4-5-7-2.5z"/><path d="M12 7v3"/></svg>
+                        <strong>Dental</strong>
+                        <span>Dentists</span>
+                    </div>
+                    <div class="specialty-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8a3 3 0 0 1 3-3c1 0 2 .5 2.5 1.5"/><path d="M19 8a3 3 0 0 0-3-3c-1 0-2 .5-2.5 1.5"/><path d="M9 15c0-3 1.5-5 3-5s3 2 3 5c0 2-1 4-3 4s-3-2-3-4z"/><circle cx="6" cy="13" r="1.5"/><circle cx="18" cy="13" r="1.5"/></svg>
+                        <strong>Veterinary</strong>
+                        <span>Vets</span>
+                    </div>
+                    <div class="specialty-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                        <strong>Practice</strong>
+                        <span>Counsel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Ready to discuss <em>your matter?</em></h2>
+            <p>One call connects you with the principal directly. Initial consultations are confidential.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="#contact" class="btn btn-light">
+                    Schedule a Consultation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:7804859510" class="btn btn-ghost-light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    780 485 9510
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">We're <em>here to help.</em></h2>
+            <p class="section-lead">Reach out to discuss your matter. All consultations are confidential.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Visit Our Edmonton Office</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>4915 &mdash; 55 Avenue<br>Edmonton, AB T6B 3S3</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:7804859510">780 485 9510</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@gsslaw.ca">info@gsslaw.ca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 18 21 18"/><line x1="3" y1="6" x2="3" y2="18"/></svg>
+                        </span>
+                        <div>
+                            <strong>Fax</strong>
+                            <span>780 485 9805</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hours-block">
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Hours of Operation
+                    </h4>
+                    <ul class="hours-list">
+                        <li><span>Mon &ndash; Fri</span><span>8:30am &ndash; 5:00pm</span></li>
+                        <li><span>Saturday</span><span>By appointment</span></li>
+                        <li><span>Sunday</span><span class="closed">Closed</span></li>
+                    </ul>
+                </div>
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps?q=4915+55+Avenue,+Edmonton,+AB+T6B+3S3&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="GSS Law Firm office location"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Request a Consultation</h3>
+                <p class="form-sub">Tell us briefly about your matter — we'll be in touch promptly.</p>
+                <form onsubmit="return false;">
+                    <div class="form-field">
+                        <label for="cf-name">Full Name</label>
+                        <input type="text" id="cf-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-phone">Phone</label>
+                        <input type="tel" id="cf-phone" placeholder="(780) 000-0000">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Practice Area</label>
+                        <select id="cf-area">
+                            <option value="">Select a practice area...</option>
+                            <option>Real Estate Law</option>
+                            <option>Immigration Law</option>
+                            <option>Family Law</option>
+                            <option>Civil Law</option>
+                            <option>Criminal Law</option>
+                            <option>Medical / Dental / Vets</option>
+                            <option>Notary Services</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="Briefly describe your legal matter..."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="brand">
+                    <div class="brand-mark">GSS</div>
+                    <div class="brand-text">
+                        <span class="brand-name">GSS Law Firm</span>
+                        <span class="brand-sub">Barristers &amp; Solicitors</span>
+                    </div>
+                </a>
+                <p>Edmonton legal counsel led personally by Gurpiyar S. Sandhu (LL.M. Hons, M.Sc.). Member of the Law Society of Alberta and the Canadian Bar Association.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Immigration</a></li>
+                    <li><a href="#practice">Family Law</a></li>
+                    <li><a href="#practice">Civil Law</a></li>
+                    <li><a href="#practice">Criminal Law</a></li>
+                    <li><a href="#specialty">Medical / Dental / Vets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Firm</h5>
+                <ul>
+                    <li><a href="#principal">Principal</a></li>
+                    <li><a href="#specialty">Specialty Practice</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:7804859510">780 485 9510</a></li>
+                    <li><a href="mailto:info@gsslaw.ca">info@gsslaw.ca</a></li>
+                    <li class="plain">4915 &mdash; 55 Avenue<br>Edmonton, AB T6B 3S3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> GSS Law Firm. All rights reserved.</span>
+            <span>Edmonton, Alberta &middot; Barristers &amp; Solicitors</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> — not affiliated with GSS Law Firm.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // Mobile nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .principal-content, .principal-portrait, .specialty-content, .specialty-visual, .contact-info, .contact-form, .cta-inner');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .credentials, .specialty-icons').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
