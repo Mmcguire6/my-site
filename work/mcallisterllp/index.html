@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>McAllister LLP &mdash; Whitecourt Law Office &middot; Wills, Business &amp; Real Estate</title>
+    <meta name="description" content="McAllister LLP &mdash; serving Whitecourt since 1985. Wills &amp; Estates, Business &amp; Corporate, Real Estate, Estate Administration, and Represented Adult / Guardianship matters. Headquartered in Edmonton.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* McAllister LLP — actual brand: deep navy + royal blue + warm gold (heritage) + cream */
+            --ink:          #0A1342;
+            --ink-deep:     #060B2A;
+
+            --navy:         #0F1E5C;          /* their primary navy */
+            --navy-bright:  #1A2D7A;
+            --navy-deep:    #0A1342;
+            --navy-darker:  #060B2A;
+
+            --royal:        #2A48C4;          /* their bright royal blue */
+            --royal-bright: #3D5DDE;
+            --royal-deep:   #1F35A0;
+            --royal-pale:   #B5C0E8;
+            --royal-soft:   #E6EAF6;
+
+            --gold:         #C5A14E;          /* heritage accent */
+            --gold-bright:  #DCB878;
+            --gold-deep:    #8E7235;
+            --gold-darker:  #5C4920;
+            --gold-pale:    #E9D4A0;
+            --gold-soft:    #F6EAC8;
+
+            --cream:        #F5F1E5;
+            --paper-warm:   #FBF8EF;
+            --bg:           #FAF8F1;
+            --bg-soft:      #FCFAF4;
+            --paper:        #FFFFFF;
+
+            --text:         #2A2F4A;
+            --text-mid:     #4A5068;
+            --text-soft:    #707788;
+            --text-faint:   #9AA0B0;
+
+            --border:       #DDD7C4;
+            --border-soft:  #E8E2D0;
+
+            --topbar-h:     42px;
+            --nav-h:        82px;
+            --total-nav:    124px;
+
+            --shadow-sm:    0 1px 3px rgba(10,19,66,0.08);
+            --shadow-md:    0 8px 24px -8px rgba(10,19,66,0.22), 0 2px 6px -2px rgba(10,19,66,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(10,19,66,0.32), 0 8px 16px -8px rgba(10,19,66,0.12);
+            --shadow-gold:  0 12px 28px -8px rgba(197,161,78,0.45);
+            --shadow-navy:  0 12px 28px -8px rgba(15,30,92,0.55);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.012em;
+            line-height: 1.16;
+            font-weight: 600;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .m-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            line-height: 1;
+        }
+        .m-monogram {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            background: var(--navy);
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--gold-bright);
+            font-style: italic;
+            letter-spacing: -0.04em;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(15,30,92,0.18);
+        }
+        .m-wordmark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        .m-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1.35rem;
+            color: var(--navy-deep);
+            letter-spacing: -0.012em;
+            line-height: 1;
+        }
+        .m-name .llp {
+            font-style: italic;
+            color: var(--gold-deep);
+            font-size: 0.78rem;
+            font-weight: 500;
+            margin-left: 4px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .m-sub {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+        .m-mark.inverse .m-name { color: var(--paper); }
+        .m-mark.inverse .m-name .llp { color: var(--gold-bright); }
+        .m-mark.inverse .m-sub { color: var(--gold-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--navy-darker);
+            color: rgba(255,255,255,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(197,161,78,0.30);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1240px;
+            width: 100%;
+        }
+        .top-bar a {
+            color: rgba(255,255,255,0.88);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar a:hover { color: var(--gold-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); flex-shrink: 0; }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+        .top-bar .heritage {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-bright);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+        .top-bar .heritage strong {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.66rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+            border-right: 1px solid rgba(255,255,255,0.20);
+            padding-right: 10px;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--gold-deep); }
+        .nav-cta {
+            background: var(--navy);
+            color: var(--paper) !important;
+            padding: 12px 22px;
+            border-radius: 2px;
+            font-weight: 700 !important;
+            font-size: 0.76rem !important;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--gold);
+        }
+        .nav-cta:hover {
+            background: var(--gold);
+            color: var(--navy-darker) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--ink); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        /* ── HERO (full-bleed pen-on-document photo) ── */
+        .hero {
+            min-height: 92vh;
+            padding-top: calc(var(--total-nav) + 32px);
+            padding-bottom: 80px;
+            position: relative;
+            color: var(--paper);
+            background:
+                linear-gradient(180deg, rgba(10,19,66,0.78) 0%, rgba(10,19,66,0.86) 60%, rgba(6,11,42,0.94) 100%),
+                url('img/hero-pen.jpg') center 40% / cover no-repeat,
+                var(--ink-deep);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 20%, rgba(197,161,78,0.18), transparent 55%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.55;
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 5.8vw, 5.2rem);
+            font-weight: 500;
+            color: var(--paper);
+            line-height: 1.04;
+            letter-spacing: -0.024em;
+            margin: 0 auto 24px;
+            font-style: italic;
+            max-width: 920px;
+        }
+        .hero h1 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--gold-bright);
+        }
+        .hero h1 em {
+            color: var(--gold-pale);
+            font-weight: 600;
+        }
+        .hero-sub {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.86);
+            line-height: 1.72;
+            margin: 0 auto 40px;
+            max-width: 680px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-navy {
+            background: var(--navy);
+            color: var(--paper);
+            border: 1px solid var(--navy);
+            box-shadow: var(--shadow-navy);
+        }
+        .btn-navy:hover {
+            background: var(--navy-deep);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(15,30,92,0.55);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy-darker);
+            border: 1px solid var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-deep);
+            color: var(--paper);
+            border-color: var(--gold-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(142,114,53,0.55);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.40);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.10);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 56px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 36px;
+            border-top: 1px solid rgba(197,161,78,0.30);
+            max-width: 920px;
+            margin: 0 auto;
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .hero-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--gold-bright);
+            font-weight: 600;
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.78);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .section-h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 22px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .section-h2 strong { font-style: normal; font-weight: 700; color: var(--navy); }
+        .section-h2 em { color: var(--gold-deep); font-weight: 600; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── PROMISE / ABOUT STRIP ────────────────────────── */
+        .promise {
+            background: var(--cream);
+            padding: 96px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -180px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(197,161,78,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.36;
+            letter-spacing: -0.012em;
+            margin-bottom: 22px;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--navy);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .promise-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 22px;
+            opacity: 0.7;
+        }
+
+        /* ── PRACTICE AREAS ────────────────────────────────── */
+        .practice {
+            background: var(--paper-warm);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .practice-card {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            padding: 36px 30px 32px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            min-height: 260px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .practice-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .practice-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.22;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-bottom: 0;
+            flex-grow: 1;
+            font-weight: 400;
+        }
+        .practice-tag {
+            display: inline-block;
+            background: var(--gold-soft);
+            color: var(--gold-darker);
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--gold-pale);
+            margin-top: 14px;
+            align-self: flex-start;
+        }
+
+        /* ── TEAM (Brennan + Dennis legacy) ──────────────── */
+        .team {
+            background: var(--bg);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            border-top: 4px solid var(--gold);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .team-photo {
+            aspect-ratio: 4 / 3.4;
+            overflow: hidden;
+            background: var(--cream);
+            position: relative;
+        }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.5s ease;
+        }
+        .team-card:hover .team-photo img { transform: scale(1.04); }
+        .team-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(10,19,66,0.18) 100%);
+            pointer-events: none;
+        }
+        .team-info {
+            padding: 30px 30px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        .team-info .role-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 4px;
+        }
+        .team-info .role {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .team-info .badge {
+            font-size: 0.6rem;
+            background: var(--gold);
+            color: var(--navy-darker);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+        .team-info .badge.legacy {
+            background: var(--royal-soft);
+            color: var(--royal-deep);
+        }
+        .team-info h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.65rem;
+            color: var(--ink);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.18;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+        .team-info h4 strong { font-style: normal; font-weight: 700; }
+        .team-info .credentials {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 12px;
+        }
+        .team-info p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.68;
+            margin-bottom: 14px;
+            flex-grow: 1;
+        }
+        .team-honours {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .team-honours span {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--navy);
+            background: var(--royal-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--royal-pale);
+        }
+
+        /* ── LOCALITY (Athabasca sunrise) ─────────────────── */
+        .locality {
+            position: relative;
+            color: var(--paper);
+            padding: 100px 0;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(6,11,42,0.85) 0%, rgba(10,19,66,0.55) 50%, rgba(10,19,66,0.20) 100%),
+                url('img/alberta.jpg') center 50% / cover no-repeat,
+                var(--ink-deep);
+        }
+        .locality::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.4;
+        }
+        .locality-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .locality-content {
+            max-width: 580px;
+        }
+        .locality .section-eyebrow {
+            justify-content: flex-start;
+            color: var(--gold-bright);
+            display: inline-flex;
+        }
+        .locality .section-eyebrow::after { display: none; }
+        .locality .section-eyebrow::before { background: var(--gold-bright); }
+        .locality h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 500;
+            color: var(--paper);
+            line-height: 1.12;
+            letter-spacing: -0.022em;
+            margin-bottom: 22px;
+            font-style: italic;
+        }
+        .locality h2 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--gold-bright);
+        }
+        .locality p {
+            color: rgba(255,255,255,0.86);
+            font-size: 1.02rem;
+            line-height: 1.75;
+            margin-bottom: 18px;
+        }
+        .locality-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(197,161,78,0.30);
+        }
+        .locality-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.94rem;
+            color: rgba(255,255,255,0.85);
+        }
+        .locality-meta-row svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold-bright);
+            flex-shrink: 0;
+        }
+        .locality-meta-row strong {
+            color: var(--paper);
+            font-weight: 700;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--royal);
+            color: var(--paper);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.18), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(10,19,66,0.30), transparent 55%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.2vw, 2.8rem);
+            color: var(--paper);
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .cta-inner h2 strong { font-style: normal; color: var(--gold-bright); font-weight: 700; }
+        .cta-inner p {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.04rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-gold-cta {
+            background: var(--gold);
+            color: var(--navy-darker);
+            border: 1px solid var(--gold);
+        }
+        .cta-band .btn-gold-cta:hover {
+            background: var(--gold-bright);
+            border-color: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(197,161,78,0.55);
+        }
+        .cta-band .btn-ghost-light {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.45);
+        }
+        .cta-band .btn-ghost-light:hover {
+            background: rgba(255,255,255,0.10);
+            border-color: var(--gold-bright);
+            color: var(--gold-bright);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--ink);
+            margin-bottom: 28px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            font-style: italic;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: var(--gold-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.5;
+            transition: color 0.15s;
+        }
+        .contact-list a:hover { color: var(--navy); }
+        .contact-list .alt {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+        }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            padding: 36px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            font-style: italic;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.7rem;
+            color: var(--ink);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border-soft);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%230F1E5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 12px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--gold);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--paper);
+            padding: 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid var(--gold);
+        }
+        .form-btn:hover {
+            background: var(--gold);
+            color: var(--navy-darker);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        .map-wrap {
+            border: 1px solid var(--border-soft);
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--navy-darker);
+            color: rgba(255,255,255,0.65);
+            padding: 64px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand .m-mark { margin-bottom: 18px; }
+        .footer-brand p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-col h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.74rem;
+            color: var(--gold-bright);
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.66);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--gold-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.10);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(255,255,255,0.50);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--ink-deep);
+            color: var(--paper);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--gold);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--gold-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .hero-stats { gap: 32px; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: 1fr; max-width: 540px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 8px; }
+            .top-bar .heritage { display: none; }
+            .top-bar-inner { gap: 14px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 48px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 28px 22px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .m-name { font-size: 1.1rem; }
+            .m-monogram { width: 42px; height: 42px; font-size: 1.2rem; }
+            .locality { padding: 70px 0; }
+            .hero-stats { gap: 24px; padding-top: 28px; }
+            .hero-stat-num { font-size: 1.8rem; }
+        }
+
+        ::selection { background: var(--gold); color: var(--navy-darker); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:7809178615">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (780) 917-8615
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:bstarnaud@mcallisterllp.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            bstarnaud@mcallisterllp.com
+        </a>
+        <span class="divider"></span>
+        <span class="heritage"><strong>Whitecourt, AB</strong> Serving Whitecourt since 1985</span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="m-mark" aria-label="McAllister LLP, Whitecourt Law Office">
+            <span class="m-monogram" aria-hidden="true">M</span>
+            <span class="m-wordmark">
+                <span class="m-name">McAllister<span class="llp">LLP</span></span>
+                <span class="m-sub">Barristers &amp; Solicitors</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#practice">Areas of Practice</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#practice">Areas of Practice</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-eyebrow">Whitecourt, Alberta &middot; Established 1985</p>
+        <h1>Wills &amp; estates, business, <em>and real estate</em> &mdash; <strong>for Whitecourt.</strong></h1>
+        <p class="hero-sub">
+            Headquartered in Edmonton with a satellite office in Whitecourt, we assist individuals, families, and businesses with the legal matters that shape a life or a balance sheet &mdash; treated with respect, guided with expertise.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-gold">
+                Get in Touch
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#practice" class="btn btn-ghost">
+                Areas of Practice
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-num">40</span>
+                <span class="hero-stat-label">Years in Whitecourt</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">5</span>
+                <span class="hero-stat-label">Areas of Practice</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">2</span>
+                <span class="hero-stat-label">Office Locations</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise" id="about">
+    <div class="container">
+        <div class="promise-inner">
+            <div class="promise-divider"></div>
+            <blockquote>
+                We assist individuals, families, and businesses with a variety of legal needs &mdash; treating clients with <strong>respect</strong> and guiding them through their matters with <strong>expertise and professionalism.</strong>
+            </blockquote>
+            <p class="promise-cite">&mdash; The McAllister Promise</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Areas of Practice</p>
+            <h2 class="section-h2">Five focused areas, <em>handled by lawyers who know the ground.</em></h2>
+            <p class="section-lead">From the document that protects a family for generations to the business deal that takes a town's worth of work to close &mdash; we know what it means to own a business, and what it takes to settle an estate properly.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <span class="practice-num">i.</span>
+                <h3>Estate Planning</h3>
+                <p>Wills, trusts, powers of attorney, and healthcare directives &mdash; with attention to tax considerations, asset protection, and long-term care planning. Designed to protect assets, honour wishes, and provide peace of mind.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">ii.</span>
+                <h3>Estate Administration</h3>
+                <p>Helping executors, administrators, and beneficiaries navigate settling a loved one's estate &mdash; Grant of Probate, gathering assets, paying debts and taxes, distributing inheritances, and dispute resolution.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">iii.</span>
+                <h3>Real Estate Transactions</h3>
+                <p>Comprehensive legal services for buying, selling, or leasing property &mdash; purchase and sale agreements, leases, financing documents, title examinations, and representation for residential and commercial transactions.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">iv.</span>
+                <h3>Business &amp; Corporate</h3>
+                <p>A full range of services for businesses, directors, and shareholders &mdash; entity selection, agreement drafting, financing, regulatory compliance, governance, M&amp;A, contracts, and employment matters.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">v.</span>
+                <h3>Represented Adult &mdash; Guardianship &amp; Trustee</h3>
+                <p>Legal support for matters involving represented adults (formerly known as dependent adults) &mdash; guardianship establishment, trusteeship, ongoing administration, court compliance, and decision-making support.</p>
+                <span class="practice-tag">Alberta-Specific</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Team</p>
+            <h2 class="section-h2">Two lawyers <em>on the file.</em></h2>
+            <p class="section-lead">University of Alberta-trained counsel for the matters that shape lives and balance sheets &mdash; estates, business, and real estate.</p>
+        </div>
+
+        <div class="team-grid">
+            <article class="team-card">
+                <div class="team-photo">
+                    <img src="img/brennan.webp" alt="Brennan St. Arnaud, Lawyer">
+                </div>
+                <div class="team-info">
+                    <p class="role">Lawyer</p>
+                    <h4><strong>Brennan St. Arnaud</strong></h4>
+                    <p class="credentials">Juris Doctor, University of Alberta</p>
+                    <p>Born and raised in Alberta. Brennan practises in estates, business, and real estate matters, and has taken on a longtime commitment to the Whitecourt community. In his free time, he enjoys watching the Oilers and listening to podcasts about history.</p>
+                    <div class="team-honours">
+                        <span>Estates</span>
+                        <span>Business</span>
+                        <span>Real Estate</span>
+                    </div>
+                </div>
+            </article>
+            <article class="team-card">
+                <div class="team-photo">
+                    <img src="img/dennis.webp" alt="Dennis B. Denis, K.C.">
+                </div>
+                <div class="team-info">
+                    <p class="role">Lawyer &middot; Whitecourt since 1985</p>
+                    <h4><em>Dennis B. Denis</em>&nbsp;<strong>K.C.</strong></h4>
+                    <p class="credentials">B.A. (Spec.) 1980 &middot; LL.B. 1983, University of Alberta &middot; Called to the Alberta Bar 1984</p>
+                    <p>Practised law in Whitecourt starting in 1985. Awarded the Queen's Golden Jubilee Medal for community service in 2002 and obtained his King's Counsel (K.C.) designation in 2010. Retired November 30, 2024, after transitioning the practice to Brennan.</p>
+                    <div class="team-honours">
+                        <span>K.C., 2010</span>
+                        <span>Queen's Golden Jubilee Medal, 2002</span>
+                        <span>Alberta Bar, 1984</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- LOCALITY (Athabasca sunrise) -->
+<section class="locality">
+    <div class="locality-inner">
+        <div class="locality-content">
+            <p class="section-eyebrow">Where We Are</p>
+            <h2>Whitecourt, <strong>at the river's edge.</strong></h2>
+            <p>Whitecourt sits at the confluence of the Athabasca and McLeod Rivers &mdash; a small, working town that built itself on forestry, oil, and gas. The kind of place where forty years of legal counsel means knowing not just the file but the family.</p>
+            <p>Our Whitecourt office is at <strong>4907-52 Avenue</strong>, with our headquarters in downtown Edmonton at <strong>10109 - 106 Street NW</strong>. We're easy to reach by either.</p>
+            <div class="locality-meta">
+                <div class="locality-meta-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span><strong>Whitecourt:</strong> 4907-52 Avenue, AB&nbsp; T7S 1V4</span>
+                </div>
+                <div class="locality-meta-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8a2 2 0 012-2h10a2 2 0 012 2v13"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+                    <span><strong>Edmonton (HQ):</strong> #500, 10109 - 106 Street NW, AB&nbsp; T5J 3L7</span>
+                </div>
+                <div class="locality-meta-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span><strong>(780) 917-8615</strong> &middot; (780) 706-1020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Have a will to write, a deal to close, or an estate to settle? <strong>Let's talk.</strong></h2>
+            <p>Reach out to the Whitecourt office &mdash; we'll get back to you with a real lawyer, not a screening form.</p>
+            <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+                <a href="#contact" class="btn btn-gold-cta">
+                    Get in Touch
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:7809178615" class="btn btn-ghost-light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (780) 917-8615
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Visit us at <em>52 Avenue.</em></h2>
+            <p class="section-lead">Tell us briefly about your matter &mdash; we'll be in touch from the Whitecourt office.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Whitecourt Office</strong>
+                            <span>4907-52 Avenue<br>Whitecourt, AB&nbsp; T7S 1V4</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8a2 2 0 012-2h10a2 2 0 012 2v13"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Edmonton HQ &middot; Mailing</strong>
+                            <span>#500, 10109 - 106 Street NW<br>Edmonton, AB&nbsp; T5J 3L7</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:7809178615">(780) 917-8615</a><br>
+                            <a href="tel:7807061020" class="alt">(780) 706-1020</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:bstarnaud@mcallisterllp.com">bstarnaud@mcallisterllp.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a message</h3>
+                <p class="form-sub">A few sentences about your matter is plenty &mdash; we'll be in touch.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="mf-name">Full Name</label>
+                            <input type="text" id="mf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="mf-phone">Phone</label>
+                            <input type="tel" id="mf-phone" placeholder="(780) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="mf-email">Email</label>
+                        <input type="email" id="mf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="mf-area">Area of Practice</label>
+                        <select id="mf-area">
+                            <option value="">Select a category...</option>
+                            <option>Estate Planning</option>
+                            <option>Estate Administration</option>
+                            <option>Real Estate Transactions</option>
+                            <option>Business &amp; Corporate</option>
+                            <option>Represented Adult / Guardianship</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="mf-msg">Brief Description</label>
+                        <textarea id="mf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=4907+52+Avenue+Whitecourt+AB+T7S+1V4&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="McAllister LLP &mdash; Whitecourt office"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="m-mark inverse" aria-label="McAllister LLP">
+                    <span class="m-monogram" aria-hidden="true">M</span>
+                    <span class="m-wordmark">
+                        <span class="m-name">McAllister<span class="llp">LLP</span></span>
+                        <span class="m-sub">Barristers &amp; Solicitors</span>
+                    </span>
+                </a>
+                <p>Serving Whitecourt since 1985. Headquartered in Edmonton with a satellite office in Whitecourt &mdash; estate, business, and real estate counsel for individuals, families, and businesses.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice</h5>
+                <ul>
+                    <li><a href="#practice">Estate Planning</a></li>
+                    <li><a href="#practice">Estate Administration</a></li>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Business &amp; Corporate</a></li>
+                    <li><a href="#practice">Guardianship &amp; Trustee</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Whitecourt</h5>
+                <ul>
+                    <li class="plain">4907-52 Avenue<br>Whitecourt, AB&nbsp; T7S 1V4</li>
+                    <li><a href="tel:7809178615">(780) 917-8615</a></li>
+                    <li><a href="tel:7807061020">(780) 706-1020</a></li>
+                    <li><a href="mailto:bstarnaud@mcallisterllp.com">bstarnaud@mcallisterllp.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Edmonton (HQ)</h5>
+                <ul>
+                    <li class="plain">#500, 10109 - 106 Street NW<br>Edmonton, AB&nbsp; T5J 3L7</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> McAllister LLP. All rights reserved.</span>
+            <span>Whitecourt &middot; Edmonton &middot; Since 1985</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with McAllister LLP.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .team-card, .promise-inner, .cta-inner, .map-wrap, .contact-info, .contact-form, .locality-content');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .team-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
