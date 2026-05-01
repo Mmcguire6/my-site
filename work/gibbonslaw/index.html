@@ -273,9 +273,9 @@
             padding-bottom: 40px;
             position: relative;
             background:
-                linear-gradient(105deg, rgba(242,234,210,0.86) 0%, rgba(242,234,210,0.72) 45%, rgba(242,234,210,0.42) 80%, rgba(242,234,210,0.32) 100%),
+                linear-gradient(105deg, rgba(14,39,41,0.92) 0%, rgba(14,39,41,0.78) 40%, rgba(14,39,41,0.45) 72%, rgba(14,39,41,0.30) 100%),
                 url('img/hero.jpg') center 35% / cover no-repeat;
-            color: var(--coffee);
+            color: var(--cream);
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -285,8 +285,8 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 85% 25%, rgba(184,134,47,0.22), transparent 55%),
-                radial-gradient(ellipse at 10% 80%, rgba(26,65,69,0.12), transparent 50%);
+                radial-gradient(ellipse at 85% 35%, rgba(184,134,47,0.28), transparent 55%),
+                radial-gradient(ellipse at 5% 90%, rgba(14,39,41,0.40), transparent 50%);
             pointer-events: none;
             z-index: 1;
         }
@@ -309,7 +309,7 @@
             gap: 14px;
             font-size: 0.74rem;
             font-weight: 700;
-            color: var(--brick);
+            color: var(--wheat-bright);
             letter-spacing: 0.30em;
             text-transform: uppercase;
             margin-bottom: 28px;
@@ -318,13 +318,13 @@
             content: '';
             width: 36px;
             height: 2px;
-            background: var(--brick);
+            background: var(--wheat-bright);
         }
         .hero h1 {
             font-family: 'Fraunces', serif;
             font-size: clamp(2.5rem, 5.6vw, 4.6rem);
             font-weight: 500;
-            color: var(--coffee);
+            color: var(--cream);
             line-height: 1.06;
             letter-spacing: -0.02em;
             margin-bottom: 28px;
@@ -332,12 +332,12 @@
         }
         .hero h1 em {
             font-style: italic;
-            color: var(--brick);
+            color: var(--wheat-bright);
             font-weight: 500;
         }
         .hero-sub {
             font-size: 1.16rem;
-            color: var(--coffee-mid);
+            color: rgba(242,234,210,0.84);
             line-height: 1.65;
             max-width: 660px;
             margin-bottom: 44px;
@@ -383,20 +383,20 @@
         }
         .btn-ghost {
             background: transparent;
-            color: var(--coffee);
-            border: 1.5px solid var(--coffee-mid);
+            color: var(--cream);
+            border: 1.5px solid rgba(242,234,210,0.40);
         }
         .btn-ghost:hover {
-            background: var(--coffee);
-            border-color: var(--coffee);
-            color: var(--cream);
+            background: rgba(242,234,210,0.10);
+            border-color: var(--wheat-bright);
+            color: var(--wheat-bright);
         }
         .hero-stats {
             display: flex;
             gap: 56px;
             flex-wrap: wrap;
             padding-top: 36px;
-            border-top: 2px solid var(--brick-pale);
+            border-top: 1px solid rgba(232,213,168,0.32);
         }
         .hero-stat {
             display: flex;
@@ -407,14 +407,14 @@
             font-family: 'Fraunces', serif;
             font-style: italic;
             font-size: 2rem;
-            color: var(--brick);
+            color: var(--wheat-bright);
             font-weight: 500;
             line-height: 1;
             font-variation-settings: "opsz" 144, "SOFT" 100;
         }
         .hero-stat-label {
             font-size: 0.72rem;
-            color: var(--coffee-light);
+            color: rgba(242,234,210,0.72);
             letter-spacing: 0.18em;
             text-transform: uppercase;
             font-weight: 600;
@@ -1017,8 +1017,24 @@
 
         /* ── CONTACT ──────────────────────────────────────── */
         .contact {
-            background: var(--bg);
+            background:
+                linear-gradient(180deg, rgba(246,242,232,0.94) 0%, rgba(246,242,232,0.92) 50%, rgba(246,242,232,0.96) 100%),
+                url('img/gibbons-elevator.jpg') center 50% / cover no-repeat;
+            position: relative;
         }
+        .contact-credit {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-faint);
+            font-style: italic;
+            margin-top: 32px;
+            opacity: 0.75;
+        }
+        .contact-credit a {
+            color: var(--text-soft);
+            text-decoration: underline;
+        }
+        .contact-credit a:hover { color: var(--brick); }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.1fr;
@@ -1250,6 +1266,20 @@
             gap: 12px;
             color: rgba(248,241,228,0.50);
         }
+        .footer-credit {
+            margin-top: 14px;
+            padding-top: 12px;
+            font-size: 0.7rem;
+            color: rgba(248,241,228,0.35);
+            text-align: center;
+            font-style: italic;
+        }
+        .footer-credit a {
+            color: rgba(248,241,228,0.55);
+            text-decoration: underline;
+            transition: color 0.15s;
+        }
+        .footer-credit a:hover { color: var(--wheat-bright); }
 
         /* ── DEMO BANNER ──────────────────────────────────── */
         .demo-banner {
@@ -1725,6 +1755,10 @@
         <div class="map-wrap">
             <iframe src="https://www.google.com/maps?q=5018+48+Street,+Gibbons,+AB+T0A+1N0&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Gibbons Law Office location"></iframe>
         </div>
+
+        <p class="contact-credit">
+            Background: Gibbons grain elevator &mdash; photo by <a href="https://commons.wikimedia.org/wiki/File:Gibbons_alberta_grain_elevator.jpg" target="_blank" rel="noopener">Awmcphee</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
+        </p>
     </div>
 </section>
 
