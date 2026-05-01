@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dixon Law &mdash; Your Local, Legal Professionals in Red Deer, Alberta</title>
+    <meta name="description" content="Dixon Law (Old Court House Law) &mdash; a Red Deer law firm led by James L. Dixon, Q.C. Real estate, estates, litigation, and corporate counsel since 1981.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Dixon Law — cool navy-teal UI to accentuate warm brick courthouse + oak desk photography */
+            --navy:         #15303E;          /* deep petrol navy-teal — contrasts brick + oak photos */
+            --navy-bright:  #244A5C;
+            --navy-deep:    #0A1D26;
+            --navy-darker:  #051218;
+            --navy-pale:    #B8C5CC;
+            --navy-tint:    #DCE4E8;
+            --navy-soft:    #EEF2F4;
+
+            --gold:         #B89241;          /* subtle gold — picks up oak desk warmth */
+            --gold-bright:  #D2A85C;
+            --gold-deep:    #7C611C;
+            --gold-darker:  #4A3A0E;
+            --gold-pale:    #E8D5A0;
+            --gold-tint:    #F2E5C2;
+
+            --ink:          #0A1418;
+            --text:         #1A2A33;
+            --text-mid:     #3A4A55;
+            --text-soft:    #5A6A75;
+            --text-faint:   #8A9AA5;
+
+            --paper:        #FBF8F0;          /* warm aged paper */
+            --bg:           #F5EFE0;          /* warm parchment cream */
+            --bg-soft:      #F8F3E5;
+            --parchment:    #E8DDC4;          /* warm parchment — top bar */
+            --parchment-deep: #DBCAA6;
+            --cream:        #F0E5C8;
+
+            --border:       #DBCAA6;
+            --border-soft:  #E5D9BD;
+
+            --topbar-h:     40px;
+            --nav-h:        80px;
+            --total-nav:    120px;
+
+            --shadow-sm:    0 1px 3px rgba(10,29,38,0.08);
+            --shadow-md:    0 8px 24px -8px rgba(10,29,38,0.22), 0 2px 6px -2px rgba(10,29,38,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(10,29,38,0.32), 0 8px 16px -8px rgba(10,29,38,0.12);
+            --shadow-navy:  0 12px 28px -8px rgba(21,48,62,0.45);
+            --shadow-gold:  0 12px 28px -8px rgba(184,146,65,0.42);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--navy-deep);
+            line-height: 1.14;
+            font-weight: 700;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── BRAND MARK (designed: pediment + columns + bold wordmark) ── */
+        .dl-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .dl-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            display: block;
+        }
+        .dl-icon .pediment { fill: var(--navy-deep); }
+        .dl-icon .architrave { fill: var(--gold); }
+        .dl-icon .column { fill: var(--gold-deep); }
+        .dl-icon .base { fill: var(--navy-deep); }
+        .dl-icon .step { fill: var(--gold); }
+        .dl-wordmark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        .dl-name-1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--navy-deep);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .dl-name-2 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.78rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.015em;
+            margin-top: 5px;
+            line-height: 1;
+        }
+        .dl-mark.inverse .dl-icon .pediment { fill: var(--gold); }
+        .dl-mark.inverse .dl-icon .architrave { fill: var(--gold-bright); }
+        .dl-mark.inverse .dl-icon .column { fill: var(--gold-pale); }
+        .dl-mark.inverse .dl-icon .base { fill: var(--gold); }
+        .dl-mark.inverse .dl-icon .step { fill: var(--gold-bright); }
+        .dl-mark.inverse .dl-name-1 { color: var(--paper); }
+        .dl-mark.inverse .dl-name-2 { color: var(--gold-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--navy-darker);
+            color: rgba(232,221,196,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(184,146,65,0.30);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(232,221,196,0.88);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--gold-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(232,221,196,0.18); }
+        .top-bar .top-tag {
+            color: var(--gold-pale);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.86rem;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(232,221,196,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--parchment-deep);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--navy-deep);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--gold-deep); }
+        .nav-cta {
+            background: var(--navy);
+            color: var(--paper) !important;
+            padding: 12px 22px;
+            border-radius: 2px;
+            font-weight: 700 !important;
+            font-size: 0.78rem !important;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover {
+            background: var(--navy-deep);
+            color: var(--paper) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-navy);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--navy-deep);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--parchment);
+            border-bottom: 1px solid var(--parchment-deep);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--navy-deep); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: var(--total-nav);
+            padding-bottom: 40px;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(5,18,24,0.92) 0%, rgba(10,29,38,0.78) 40%, rgba(21,48,62,0.65) 100%),
+                url('img/ch-2.jpg') center 35% / cover no-repeat;
+            color: var(--paper);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 25%, rgba(184,146,65,0.24), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(5,18,24,0.40), transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 56px;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-content {
+            max-width: 100%;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero-form-card {
+            background: rgba(251,248,240,0.98);
+            border: 1px solid rgba(255,255,255,0.30);
+            border-radius: 4px;
+            padding: 36px 32px 32px;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+        .hero-form-card .form-eyebrow {
+            font-size: 0.7rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-form-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: var(--navy-deep);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .hero-form-card .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--gold-deep);
+            margin-bottom: 8px;
+        }
+        .hero-form-card .form-sub {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            margin-bottom: 22px;
+        }
+        .hero-form-card .form-field { margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+        .hero-form-card .form-field label {
+            font-size: 0.68rem;
+            color: var(--navy-deep);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .hero-form-card .form-field input,
+        .hero-form-card .form-field textarea {
+            width: 100%;
+            background: var(--bg);
+            border: 1.5px solid var(--border-soft);
+            border-radius: 2px;
+            padding: 11px 14px;
+            font-size: 0.94rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+            font-family: inherit;
+        }
+        .hero-form-card .form-field textarea {
+            min-height: 72px;
+            resize: vertical;
+        }
+        .hero-form-card .form-field input:focus,
+        .hero-form-card .form-field textarea:focus {
+            border-color: var(--gold);
+            background-color: var(--paper);
+        }
+        .hero-form-card .form-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--paper);
+            padding: 13px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .hero-form-card .form-btn:hover {
+            background: var(--navy-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-navy);
+        }
+        .hero-form-card .form-btn svg { width: 14px; height: 14px; }
+        .hero-form-card .form-foot {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .hero h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.8rem, 7vw, 5.4rem);
+            font-weight: 800;
+            color: var(--paper);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.3rem, 2.6vw, 1.95rem);
+            color: var(--gold-bright);
+            line-height: 1.2;
+            margin-bottom: 32px;
+            letter-spacing: -0.005em;
+        }
+        .hero-sub {
+            font-size: 1.06rem;
+            color: rgba(255,255,255,0.84);
+            line-height: 1.65;
+            max-width: 620px;
+            margin: 0 auto 44px;
+            font-weight: 300;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy-darker);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(184,146,65,0.55);
+        }
+        .btn-paper {
+            background: var(--paper);
+            color: var(--navy-deep);
+        }
+        .btn-paper:hover {
+            background: var(--parchment);
+            color: var(--navy-deep);
+            transform: translateY(-2px);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.32);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-top: 32px;
+            border-top: 1px solid rgba(232,213,160,0.25);
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hero-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--gold-bright);
+            font-weight: 500;
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.72);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ── COURTHOUSE BANNER (hero photo strip) ─────────── */
+        .courthouse-banner {
+            position: relative;
+            height: 480px;
+            background: var(--navy-darker);
+            overflow: hidden;
+            border-top: 4px solid var(--gold);
+        }
+        .courthouse-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+        }
+        .courthouse-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(10,29,38,0.55) 100%);
+            pointer-events: none;
+        }
+        .courthouse-caption {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--paper);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            text-align: center;
+            z-index: 1;
+        }
+        .courthouse-caption strong {
+            display: block;
+            font-style: normal;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.74rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            margin-bottom: 6px;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .section-h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2rem, 4.4vw, 3rem);
+            font-weight: 800;
+            color: var(--navy-deep);
+            margin-bottom: 18px;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            line-height: 1.06;
+        }
+        .section-h2-italic {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--gold-deep);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.7em;
+            margin-top: 8px;
+        }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── PROMISE STRIP ────────────────────────────────── */
+        .promise {
+            background: var(--bg);
+            padding: 80px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.4rem, 2.7vw, 2rem);
+            font-weight: 400;
+            color: var(--navy-deep);
+            line-height: 1.36;
+            letter-spacing: -0.005em;
+            margin-bottom: 18px;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--gold-deep);
+        }
+        .promise-cite {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── PRACTICE (3 grouped cards) ───────────────────── */
+        .practice {
+            background: var(--paper);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .practice-card {
+            background: var(--bg);
+            border: 1px solid var(--border-soft);
+            padding: 44px 36px 36px;
+            border-radius: 2px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .practice-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            color: var(--gold-bright);
+            border-radius: 2px;
+            margin-bottom: 24px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .practice-card:hover .practice-icon {
+            background: var(--gold);
+            color: var(--navy-darker);
+        }
+        .practice-icon svg { width: 26px; height: 26px; }
+        .practice-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            color: var(--navy-deep);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .practice-tag {
+            font-size: 0.74rem;
+            padding: 5px 11px;
+            background: var(--navy-soft);
+            color: var(--navy-deep);
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .practice-card:hover .practice-tag {
+            background: var(--gold-tint);
+            color: var(--gold-deep);
+        }
+
+        /* ── APPROACH (4 pillars) ─────────────────────────── */
+        .approach {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            top: -160px;
+            right: -160px;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(184,146,65,0.07), transparent 70%);
+            pointer-events: none;
+        }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 32px 0 0;
+            border-top: 2px solid var(--gold);
+        }
+        .approach-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--gold-deep);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+        .approach-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy-deep);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        .approach-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-top: 4px;
+        }
+
+        /* ── COUNSEL (Jim solo featured) ──────────────────── */
+        .counsel {
+            background: var(--paper);
+        }
+        .counsel-featured {
+            background: var(--bg);
+            border: 1px solid var(--border-soft);
+            border-left: 4px solid var(--gold);
+            border-radius: 2px;
+            padding: 56px 48px;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .counsel-featured:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .counsel-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid var(--gold);
+            box-shadow: var(--shadow-md);
+            background: var(--navy-tint);
+        }
+        .counsel-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            display: block;
+        }
+        .counsel-info .role {
+            font-size: 0.72rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .counsel-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.65rem;
+            color: var(--navy-deep);
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        .counsel-info p {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .counsel-creds {
+            font-size: 0.86rem;
+            color: var(--text-soft);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* ── ABOUT TEASER ─────────────────────────────────── */
+        .about {
+            background:
+                linear-gradient(135deg, rgba(5,18,24,0.86) 0%, rgba(10,29,38,0.78) 50%, rgba(21,48,62,0.72) 100%),
+                url('img/books-1.jpg') center 50% / cover no-repeat;
+            color: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .about::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(184,146,65,0.22), transparent 55%),
+                radial-gradient(ellipse at 20% 80%, rgba(36,74,92,0.40), transparent 50%);
+            pointer-events: none;
+        }
+        .about .container { position: relative; z-index: 1; }
+        .about-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-inner .section-eyebrow { color: var(--gold-bright); }
+        .about-inner .section-eyebrow::before,
+        .about-inner .section-eyebrow::after { background: var(--gold-bright); }
+        .about-inner h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2rem, 4.4vw, 3rem);
+            font-weight: 800;
+            color: var(--paper);
+            margin-bottom: 22px;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+        }
+        .about-inner h2 em {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--gold-bright);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.72em;
+            margin-top: 8px;
+        }
+        .about-inner > p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.84);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+        .about-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--paper);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--gold);
+            padding: 4px 0;
+            transition: gap 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .about-link:hover { gap: 16px; color: var(--gold-bright); }
+        .about-link svg { width: 14px; height: 14px; }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--gold);
+            color: var(--navy-darker);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.18), transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(10,29,38,0.10), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1.8rem, 3.8vw, 2.4rem);
+            color: var(--navy-darker);
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.005em;
+            text-transform: uppercase;
+        }
+        .cta-inner h2 em {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--navy);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.78em;
+            margin-top: 6px;
+        }
+        .cta-inner p {
+            color: rgba(10,29,38,0.78);
+            font-size: 1.04rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-navy {
+            background: var(--navy-darker);
+            color: var(--paper);
+        }
+        .cta-band .btn-navy:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(10,29,38,0.50);
+        }
+        .cta-band .btn-ghost-dark {
+            background: transparent;
+            color: var(--navy-darker);
+            border: 1.5px solid rgba(10,29,38,0.45);
+        }
+        .cta-band .btn-ghost-dark:hover {
+            background: rgba(255,255,255,0.20);
+            border-color: var(--navy-darker);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            color: var(--navy-deep);
+            margin-bottom: 28px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: var(--gold-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.15s;
+        }
+        .contact-list a:hover { color: var(--navy); }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            padding: 36px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: var(--navy-deep);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.72rem;
+            color: var(--navy-deep);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border-soft);
+            border-radius: 2px;
+            padding: 13px 16px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%2315303E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 12px;
+            padding-right: 46px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--gold);
+            background-color: var(--paper);
+        }
+        .form-field select:focus {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%2315303E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 7l5 -5 5 5'/></svg>");
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--paper);
+            padding: 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-btn:hover {
+            background: var(--navy-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-navy);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        .map-wrap {
+            border: 1px solid var(--border-soft);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--navy-darker);
+            color: rgba(232,221,196,0.65);
+            padding: 64px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        .footer-brand .dl-mark { margin-bottom: 18px; }
+        .footer-brand p {
+            color: rgba(232,221,196,0.62);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-col h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.84rem;
+            color: var(--gold-bright);
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.9rem;
+            color: rgba(232,221,196,0.65);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--gold-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.10);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(232,221,196,0.50);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--navy-darker);
+            color: var(--paper);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--gold);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(232,221,196,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--gold-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .practice-grid { grid-template-columns: 1fr; gap: 20px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .counsel-featured { grid-template-columns: 180px 1fr; gap: 36px; padding: 44px 32px; }
+            .counsel-photo { width: 180px; height: 180px; }
+            .courthouse-banner { height: 360px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero-form-card { max-width: 520px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .top-tag { display: none; }
+            .top-bar-inner { gap: 14px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 48px; }
+            .approach-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 28px 22px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .hero-stats { gap: 24px; }
+            .hero-stat-num { font-size: 1.7rem; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .dl-name-1 { font-size: 0.95rem; }
+            .dl-name-2 { font-size: 0.82rem; }
+            .counsel-featured { grid-template-columns: 1fr; text-align: center; padding: 36px 24px; gap: 28px; }
+            .counsel-photo { margin: 0 auto; width: 160px; height: 160px; }
+            .courthouse-banner { height: 280px; }
+        }
+
+        ::selection { background: var(--gold); color: var(--navy-darker); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:4033431160">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            403-343-1160
+        </a>
+        <span class="divider"></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Old Courthouse Professional Centre &middot; Red Deer</span>
+        <span class="divider"></span>
+        <span class="top-tag">Established 1981</span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="dl-mark" aria-label="Dixon Law">
+            <svg class="dl-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon class="pediment" points="6,18 30,5 54,18"/>
+                <rect class="architrave" x="5" y="18" width="50" height="3.5"/>
+                <rect class="column" x="9" y="22" width="4" height="26"/>
+                <rect class="column" x="19" y="22" width="4" height="26"/>
+                <rect class="column" x="29" y="22" width="4" height="26"/>
+                <rect class="column" x="37" y="22" width="4" height="26"/>
+                <rect class="column" x="47" y="22" width="4" height="26"/>
+                <rect class="base" x="5" y="48" width="50" height="3"/>
+                <rect class="step" x="3" y="51" width="54" height="2"/>
+                <rect class="base" x="1" y="53" width="58" height="2.5"/>
+            </svg>
+            <span class="dl-wordmark">
+                <span class="dl-name-1">Dixon Law</span>
+                <span class="dl-name-2">Old Court House Law</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">Practices of Law</a></li>
+            <li><a href="#approach">Our Firm</a></li>
+            <li><a href="#counsel">Lawyer</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">Practices of Law</a></li>
+        <li><a href="#approach">Our Firm</a></li>
+        <li><a href="#counsel">Lawyer</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Red Deer &middot; Established 1981</span>
+                <h1>Dixon Law</h1>
+                <p class="hero-tagline">Your Local, Legal Professionals.</p>
+                <p class="hero-sub">
+                    Providing legal services to Central Alberta since 1981 &mdash; and through predecessor firms, since 1961. Centrally located in the historic Old Courthouse Professional Centre, downtown Red Deer.
+                </p>
+                <div class="hero-actions">
+                    <a href="tel:4033431160" class="btn btn-ghost">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        403-343-1160
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">Since 1981</span>
+                        <span class="hero-stat-label">Dixon Law</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">Since 1961</span>
+                        <span class="hero-stat-label">Predecessor Firms</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">30+ Years</span>
+                        <span class="hero-stat-label">Q.C. Lead Counsel</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero-form-card">
+                <p class="form-eyebrow">Book a Consultation</p>
+                <h3>Talk to Dixon Law</h3>
+                <p class="form-italic">A short message is enough to start.</p>
+                <form onsubmit="return false;">
+                    <div class="form-field">
+                        <label for="hf-name">Full Name</label>
+                        <input type="text" id="hf-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="hf-phone">Phone</label>
+                        <input type="tel" id="hf-phone" placeholder="(403) 000-0000">
+                    </div>
+                    <div class="form-field">
+                        <label for="hf-email">Email</label>
+                        <input type="email" id="hf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="hf-msg">Brief Description</label>
+                        <textarea id="hf-msg" placeholder="A line or two about your matter."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-foot">Or just call &mdash; 403-343-1160.</p>
+                </form>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise">
+    <div class="container">
+        <div class="promise-inner">
+            <blockquote>
+                Conducting the practice of law based on <strong>small town or country style values</strong> &mdash; placing service to people, their families, and their businesses first and foremost.
+            </blockquote>
+            <p class="promise-cite">&mdash; James L. Dixon, Q.C.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Practices of Law</p>
+            <h2 class="section-h2">Full-Service Legal Counsel<span class="section-h2-italic">Under one roof, on Ross Street</span></h2>
+            <p class="section-lead">Dixon Law endeavours to provide all manner of legal services to Central Alberta &mdash; the matters that most often shape a life, a family, or a business in Red Deer.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 3 L21 12"/><path d="M5 10 L5 21 L19 21 L19 10"/><path d="M10 21 L10 14 L14 14 L14 21"/></svg>
+                </div>
+                <h3>Real Estate &amp; Property</h3>
+                <p>Purchases, sales, refinances, conveyancing, and tenant matters &mdash; the legal work that puts the keys in your hand or keeps the rent flowing.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Real Estate</span>
+                    <span class="practice-tag">Landlord Law</span>
+                </div>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                </div>
+                <h3>Wills &amp; Estates</h3>
+                <p>Wills, powers of attorney, personal directives, estate administration, and guardianship &mdash; the documents that protect your family before, during, and after.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Wills &amp; POA</span>
+                    <span class="practice-tag">Estate Administration</span>
+                    <span class="practice-tag">Guardianship</span>
+                </div>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3>Business &amp; Disputes</h3>
+                <p>Incorporations, contracts, employment matters, civil litigation, and personal injury &mdash; the legal counsel a small business or an individual actually needs.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Corporate</span>
+                    <span class="practice-tag">Civil Litigation</span>
+                    <span class="practice-tag">Personal Injury</span>
+                    <span class="practice-tag">Employment</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section approach">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Firm</p>
+            <h2 class="section-h2">Experienced Excellence<span class="section-h2-italic">Four commitments, one handshake</span></h2>
+            <p class="section-lead">The principles that have shaped Dixon Law for over four decades of practice in Central Alberta.</p>
+        </div>
+
+        <div class="approach-grid">
+            <article class="approach-card">
+                <span class="approach-num">i.</span>
+                <h3>Country-Style Values</h3>
+                <p>Small town or country style values &mdash; placing service to people, their families, and their businesses first and foremost.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">ii.</span>
+                <h3>Q.C. Lead Counsel</h3>
+                <p>Three decades of practice from a Queen's Counsel &mdash; the experience to spot the issue before it becomes one.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">iii.</span>
+                <h3>Established 1981</h3>
+                <p>Dixon Law has been providing legal services to Central Alberta since 1981 &mdash; with predecessor firms reaching back to 1961.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">iv.</span>
+                <h3>Accessible to All</h3>
+                <p>Throughout its existence, the firm has endeavoured to provide all manner of legal services and be accessible to the general public.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- COUNSEL -->
+<section class="section counsel">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Lawyer</p>
+            <h2 class="section-h2">Meet James L. Dixon, Q.C.<span class="section-h2-italic">Founder &middot; Lead Counsel</span></h2>
+            <p class="section-lead">Three decades of practice in Red Deer, with roots near Medicine Hat and a degree from Edmonton.</p>
+        </div>
+
+        <article class="counsel-featured">
+            <div class="counsel-photo">
+                <img src="img/jim.jpg" alt="James L. Dixon, Q.C.">
+            </div>
+            <div class="counsel-info">
+                <p class="role">Founder &middot; Queen's Counsel</p>
+                <h3>James L. Dixon, Q.C.</h3>
+                <p>Three decades of practice in Red Deer &mdash; with deep community ties through sports organizations, school boards, and municipal council.</p>
+                <p class="counsel-creds">Q.C. (Queen's Counsel) &middot; LL.B. &middot; B.Ed. &middot; B.A.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="section about">
+    <div class="container">
+        <div class="about-inner">
+            <p class="section-eyebrow">About Dixon Law</p>
+            <h2>More Than Legal Representation<em>By working with Dixon Law, you get a Red Deer firm.</em></h2>
+            <p>By working with Dixon Law, you get more than professional legal representation &mdash; you get a firm that has practiced in Red Deer since 1981 (and through predecessor firms, since 1961), and an office in the historic Old Courthouse Professional Centre. Centrally located, deeply rooted, and accessible to the general public.</p>
+            <a href="#contact" class="about-link">
+                Visit the Old Courthouse
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Got a matter to talk through?<em>The first call is the easiest part.</em></h2>
+            <p>Reach out by phone, email, or stop by the Old Courthouse Professional Centre.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="#contact" class="btn btn-navy">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:4033431160" class="btn btn-ghost-dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    403-343-1160
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="section-h2">Visit Us On Ross Street<span class="section-h2-italic">In the historic Old Courthouse</span></h2>
+            <p class="section-lead">Tell us a bit about your matter and we'll be in touch.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>101, 4836 Ross Street<br>Red Deer, AB&nbsp; T4N 1X4</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:4033431160">403-343-1160</a><br>
+                            <span style="color:var(--text-mid);font-size:0.92rem;">Fax 403-342-2260</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:jld@dixonlaw.ca">jld@dixonlaw.ca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Mon &ndash; Thu&nbsp; 9 AM &ndash; 4 PM<br>Friday&nbsp; 9 AM &ndash; 3 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(403) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Real Estate</option>
+                            <option>Wills, Estates &amp; Probate</option>
+                            <option>Civil Litigation</option>
+                            <option>Personal Injury</option>
+                            <option>Corporate or Commercial</option>
+                            <option>Employment Law</option>
+                            <option>Landlord/Tenant</option>
+                            <option>Guardianship/Trusteeship</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=4836+Ross+Street,+Red+Deer,+AB+T4N+1X4&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dixon Law office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="dl-mark inverse" aria-label="Dixon Law">
+                    <svg class="dl-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon class="pediment" points="6,18 30,5 54,18"/>
+                <rect class="architrave" x="5" y="18" width="50" height="3.5"/>
+                <rect class="column" x="9" y="22" width="4" height="26"/>
+                <rect class="column" x="19" y="22" width="4" height="26"/>
+                <rect class="column" x="29" y="22" width="4" height="26"/>
+                <rect class="column" x="37" y="22" width="4" height="26"/>
+                <rect class="column" x="47" y="22" width="4" height="26"/>
+                <rect class="base" x="5" y="48" width="50" height="3"/>
+                <rect class="step" x="3" y="51" width="54" height="2"/>
+                <rect class="base" x="1" y="53" width="58" height="2.5"/>
+            </svg>
+                    <span class="dl-wordmark">
+                        <span class="dl-name-1">Dixon Law</span>
+                        <span class="dl-name-2">Old Court House Law</span>
+                    </span>
+                </a>
+                <p>A Red Deer law firm led by James L. Dixon, Q.C. &mdash; serving Central Alberta with full-service legal counsel since 1981, from the historic Old Courthouse Professional Centre.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Firm</h5>
+                <ul>
+                    <li><a href="#practice">Practices of Law</a></li>
+                    <li><a href="#approach">Our Firm</a></li>
+                    <li><a href="#counsel">Lawyer</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:4033431160">403-343-1160</a></li>
+                    <li><a href="mailto:jld@dixonlaw.ca">jld@dixonlaw.ca</a></li>
+                    <li class="plain">101, 4836 Ross Street<br>Red Deer, AB&nbsp; T4N 1X4</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Dixon Law. All rights reserved.</span>
+            <span>Red Deer, Alberta &middot; Old Courthouse Professional Centre</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with Dixon Law.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // In-page hash links are intentionally inert on this landing demo —
+    // each section will become its own dedicated page in the production build.
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    // Mobile nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .approach-card, .counsel-featured, .about-inner, .contact-info, .contact-form, .cta-inner, .map-wrap, .promise-inner');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .approach-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
