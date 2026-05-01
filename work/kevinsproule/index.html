@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Kevin Sproule Law Office &mdash; Criminal Defence in Red Deer &amp; Central Alberta</title>
+    <meta name="description" content="Kevin Sproule Law Office &mdash; criminal defence lawyer in Red Deer, Alberta. Practicing since 1982. Have Criminal Code, Will Travel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Kevin Sproule — confident, photo-led: deep ink + crimson + ivory */
+            --ink:        #0E0E0E;
+            --char:       #1A1A1A;
+            --char-mid:   #2C2C2C;
+            --char-light: #4A4A4A;
+
+            --crimson:        #A8182A;
+            --crimson-bright: #C72236;
+            --crimson-deep:   #6E0E1A;
+
+            --text:       #1A1A1A;
+            --text-mid:   #4A4A4A;
+            --text-soft:  #707070;
+            --text-faint: #9A9A9A;
+
+            --paper:      #FFFFFF;
+            --bg:         #F4EFE2;
+            --bg-soft:    #F8F4EA;
+            --cream:      #EBE3CE;
+
+            --border:     #DDD3BB;
+            --border-soft: #ECE4CE;
+
+            --topbar-h:   38px;
+            --nav-h:      72px;
+            --total-nav:  110px;
+
+            --shadow-sm:  0 1px 3px rgba(0,0,0,0.10);
+            --shadow-md:  0 16px 48px -16px rgba(0,0,0,0.32), 0 4px 12px -4px rgba(0,0,0,0.10);
+            --shadow-lg:  0 32px 72px -24px rgba(0,0,0,0.40);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            line-height: 1.06;
+            font-weight: 700;
+            letter-spacing: -0.018em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink);
+            color: rgba(255,255,255,0.86);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.74rem;
+            z-index: 901;
+            padding: 0 28px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+        .top-bar .top-left, .top-bar .top-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .top-bar a { color: rgba(255,255,255,0.92); transition: color 0.15s; }
+        .top-bar a:hover { color: var(--crimson-bright); }
+        .top-bar .divider { width: 1px; height: 12px; background: rgba(255,255,255,0.22); }
+        .top-bar .pill {
+            background: var(--crimson);
+            color: var(--paper);
+            padding: 4px 10px;
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(14,14,14,0.95);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid rgba(168,24,42,0.40);
+        }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .ks-mark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        .ks-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: var(--paper);
+            line-height: 1;
+            letter-spacing: -0.01em;
+        }
+        .ks-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.62rem;
+            color: var(--crimson-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links > li > a {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.88);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+        .nav-links > li > a:hover { color: var(--crimson-bright); }
+        .nav-cta {
+            background: var(--crimson) !important;
+            color: var(--paper) !important;
+            padding: 11px 22px;
+            font-size: 0.74rem !important;
+            letter-spacing: 0.18em !important;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover {
+            background: var(--crimson-deep) !important;
+            color: var(--paper) !important;
+        }
+        .nav-hamburger {
+            display: none;
+            width: 28px; height: 22px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--paper);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 3px; }
+        .nav-hamburger span:nth-child(2) { top: 10px; }
+        .nav-hamburger span:nth-child(3) { top: 17px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--ink);
+            border-bottom: 1px solid var(--crimson);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+        .mobile-nav a { color: var(--paper); font-size: 0.92rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; }
+
+        /* ── HERO (full-bleed dark, photo-led) ────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            padding-top: var(--total-nav);
+            padding-bottom: 0;
+            background: var(--ink);
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+        }
+        .hero-photo-bg {
+            position: absolute;
+            top: 0; right: 0; bottom: 0;
+            width: 58%;
+            background: var(--ink);
+            overflow: hidden;
+        }
+        .hero-photo-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 28%;
+            display: block;
+            filter: contrast(1.08) saturate(0.95);
+        }
+        .hero-photo-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, var(--ink) 0%, rgba(14,14,14,0.86) 22%, rgba(14,14,14,0.30) 50%, transparent 75%);
+            z-index: 1;
+        }
+        .hero-photo-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0;
+            width: 8px;
+            background: var(--crimson);
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 56px 32px 64px;
+            width: 100%;
+            color: var(--paper);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--crimson-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            max-width: 56%;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6.4vw, 5.4rem);
+            font-weight: 700;
+            color: var(--paper);
+            line-height: 1;
+            letter-spacing: -0.025em;
+            margin-bottom: 24px;
+            max-width: 60%;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--crimson-bright);
+            font-weight: 600;
+        }
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--paper);
+            line-height: 1.3;
+            margin-bottom: 28px;
+            max-width: 56%;
+            font-weight: 500;
+        }
+        .hero-sub {
+            font-size: 1.02rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.65;
+            max-width: 52%;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-crimson {
+            background: var(--crimson);
+            color: var(--paper);
+        }
+        .btn-crimson:hover {
+            background: var(--crimson-deep);
+            color: var(--paper);
+        }
+        .btn-paper {
+            background: var(--paper);
+            color: var(--ink);
+        }
+        .btn-paper:hover {
+            background: var(--bg);
+            color: var(--ink);
+        }
+        .btn-ghost-light {
+            background: transparent;
+            color: var(--paper);
+            border: 2px solid rgba(255,255,255,0.45);
+            padding: 14px 26px;
+        }
+        .btn-ghost-light:hover {
+            border-color: var(--crimson);
+            background: rgba(168,24,42,0.18);
+        }
+        .hero-meta {
+            display: flex;
+            gap: 0;
+            border-top: 1px solid rgba(255,255,255,0.18);
+            padding-top: 20px;
+            max-width: 56%;
+        }
+        .hero-meta-item {
+            flex: 1;
+            padding-right: 20px;
+            border-right: 1px solid rgba(255,255,255,0.18);
+        }
+        .hero-meta-item:first-child { padding-left: 0; }
+        .hero-meta-item:last-child { border-right: none; padding-left: 20px; padding-right: 0; }
+        .hero-meta-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.45rem;
+            color: var(--crimson-bright);
+            line-height: 1;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .hero-meta-label {
+            font-size: 0.62rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── DECK STRIP ───────────────────────────────────── */
+        .deck {
+            background: var(--crimson);
+            color: var(--paper);
+            padding: 18px 0;
+            border-bottom: 1px solid var(--crimson-deep);
+        }
+        .deck-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            font-size: 0.74rem;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .deck-inner span:not(.dot) { color: var(--paper); }
+        .deck-inner .dot {
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section { padding: 80px 0; position: relative; }
+        .section-dark { background: var(--ink); color: var(--paper); }
+        .section-dark .h2 { color: var(--paper); }
+        .section-dark .h2 em { color: var(--crimson-bright); }
+        .section-dark .lede { color: rgba(255,255,255,0.78); }
+        .section-dark .kicker { color: var(--crimson-bright); border-color: var(--crimson-bright); }
+
+        .kicker {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            padding-left: 14px;
+            border-left: 3px solid var(--crimson);
+        }
+        .h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            line-height: 1.04;
+        }
+        .h2 em { font-style: italic; color: var(--crimson); font-weight: 600; }
+        .lede {
+            font-size: 1.04rem;
+            color: var(--text-mid);
+            line-height: 1.65;
+            max-width: 720px;
+            margin-bottom: 32px;
+        }
+
+        /* ── PROMISE BAND (dark with quote) ───────────────── */
+        .promise {
+            background: var(--char);
+            color: var(--paper);
+            padding: 64px 0;
+            border-top: 4px solid var(--crimson);
+            border-bottom: 4px solid var(--crimson);
+            position: relative;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 32px;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.4rem, 2.6vw, 1.95rem);
+            font-weight: 500;
+            color: var(--paper);
+            line-height: 1.4;
+            margin-bottom: 16px;
+            letter-spacing: -0.005em;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--crimson-bright);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── PRACTICE (dense 4-up) ────────────────────────── */
+        .practice {
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 36px;
+            border: 1px solid var(--ink);
+            background: var(--ink);
+        }
+        .practice-card {
+            padding: 32px 24px 28px;
+            background: var(--paper);
+            border-right: 1px solid var(--border);
+            transition: background 0.25s, transform 0.25s;
+            position: relative;
+        }
+        .practice-card:last-child { border-right: none; }
+        .practice-card:hover {
+            background: var(--ink);
+            color: var(--paper);
+        }
+        .practice-card:hover .practice-num,
+        .practice-card:hover .practice-title { color: var(--crimson-bright); }
+        .practice-card:hover .practice-desc { color: rgba(255,255,255,0.78); }
+        .practice-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--crimson);
+            margin-bottom: 8px;
+            font-weight: 600;
+            transition: color 0.25s;
+        }
+        .practice-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--ink);
+            line-height: 1.1;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.012em;
+            transition: color 0.25s;
+        }
+        .practice-desc {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            line-height: 1.55;
+            transition: color 0.25s;
+        }
+        .practice-note {
+            margin-top: 24px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.02rem;
+            color: var(--text-mid);
+        }
+        .practice-note strong {
+            color: var(--crimson);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /* ── BIO (compact, dense) ─────────────────────────── */
+        .bio {
+            background: var(--paper);
+        }
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 56px;
+            align-items: center;
+        }
+        .bio-photo {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            background: var(--ink);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .bio-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+            filter: contrast(1.05);
+        }
+        .bio-photo::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 6px;
+            background: var(--crimson);
+        }
+        .bio-content .h2 { margin-bottom: 20px; }
+        .bio-pullquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.32rem;
+            color: var(--ink);
+            line-height: 1.4;
+            margin: 22px 0;
+            padding: 18px 0 18px 24px;
+            border-left: 4px solid var(--crimson);
+            font-weight: 500;
+        }
+        .body-copy {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+        }
+        .body-copy + .body-copy { margin-top: 14px; }
+        .bio-creds {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        /* ── CIRCUIT (dark, dense grid) ───────────────────── */
+        .circuit { background: var(--ink); color: var(--paper); padding: 80px 0; }
+        .circuit .kicker { color: var(--crimson-bright); border-color: var(--crimson-bright); }
+        .circuit .h2 { color: var(--paper); }
+        .circuit .h2 em { color: var(--crimson-bright); }
+        .circuit .lede { color: rgba(255,255,255,0.78); }
+        .circuit-list {
+            margin-top: 36px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .circuit-cell {
+            padding: 24px 18px;
+            border-right: 1px solid rgba(255,255,255,0.18);
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .circuit-cell:nth-child(3n) { border-right: none; }
+        .circuit-cell:nth-last-child(-n+3) { border-bottom: none; }
+        .circuit-cell:hover { background: rgba(168,24,42,0.30); }
+        .circuit-cell .city {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--paper);
+            line-height: 1.1;
+            margin-bottom: 4px;
+            font-weight: 700;
+            letter-spacing: -0.012em;
+        }
+        .circuit-cell.home .city { color: var(--crimson-bright); }
+        .circuit-cell .meta {
+            font-size: 0.62rem;
+            color: rgba(255,255,255,0.62);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact { background: var(--bg); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            margin-top: 36px;
+            align-items: start;
+        }
+        .contact-info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .contact-info-list li {
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .contact-info-list li:last-child { border-bottom: none; }
+        .contact-info-label {
+            font-size: 0.64rem;
+            color: var(--crimson);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .contact-info-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.18rem;
+            color: var(--ink);
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        .contact-info-value a { transition: color 0.15s; }
+        .contact-info-value a:hover { color: var(--crimson); }
+        .contact-info-sub {
+            font-size: 0.86rem;
+            color: var(--text-mid);
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            padding: 32px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 4px;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+        .contact-form .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--crimson);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .form-field {
+            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 0.64rem;
+            color: var(--ink);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg-soft);
+            border: 1.5px solid var(--border);
+            border-radius: 0;
+            padding: 11px 14px;
+            font-size: 0.94rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23A8182A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--ink);
+            background: var(--paper);
+        }
+        .form-field textarea {
+            min-height: 90px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--crimson);
+            color: var(--paper);
+            padding: 14px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            transition: background 0.2s;
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .form-btn:hover { background: var(--crimson-deep); }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        .map-wrap {
+            border: 2px solid var(--ink);
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 36px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 28px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.65);
+            padding: 56px 0 22px;
+            border-top: 4px solid var(--crimson);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 44px;
+            margin-bottom: 36px;
+        }
+        .footer-brand .ks-mark { margin-bottom: 16px; }
+        .footer-brand p {
+            color: rgba(255,255,255,0.62);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            max-width: 380px;
+        }
+        .footer-col h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            color: var(--crimson-bright);
+            font-weight: 800;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.86rem;
+            color: rgba(255,255,255,0.66);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--crimson-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.10);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(255,255,255,0.42);
+            letter-spacing: 0.06em;
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--ink);
+            color: var(--paper);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.78rem;
+            border-top: 2px solid var(--crimson);
+            z-index: 999;
+        }
+        .demo-banner a { color: var(--crimson-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--crimson-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1100px) {
+            .hero-photo-bg { width: 50%; }
+            .hero-photo-bg::before { background: linear-gradient(90deg, var(--ink) 0%, rgba(14,14,14,0.90) 30%, rgba(14,14,14,0.50) 55%, transparent 80%); }
+            .hero h1, .hero-tagline, .hero-sub, .hero-eyebrow, .hero-meta { max-width: 64%; }
+        }
+        @media (max-width: 1024px) {
+            .hero-photo-bg { width: 100%; opacity: 0.42; }
+            .hero-photo-bg::before { background: linear-gradient(180deg, rgba(14,14,14,0.78) 0%, rgba(14,14,14,0.92) 100%); }
+            .hero h1, .hero-tagline, .hero-sub, .hero-eyebrow, .hero-meta { max-width: 100%; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .practice-card:nth-child(2n) { border-right: none; }
+            .practice-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+            .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+            .bio-photo { max-width: 480px; margin: 0 auto; aspect-ratio: 5 / 4; }
+            .circuit-list { grid-template-columns: repeat(2, 1fr); }
+            .circuit-cell:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.18); }
+            .circuit-cell:nth-child(2n) { border-right: none; }
+            .circuit-cell:nth-last-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,0.18); }
+            .circuit-cell:nth-last-child(-n+1) { border-bottom: none; }
+            .circuit-cell:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+            .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.66rem; padding: 0 14px; }
+            .top-bar .top-left .pill { display: none; }
+            .top-bar .top-right { gap: 10px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 60px 0; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .practice-card { border-right: none; border-bottom: 1px solid var(--border); }
+            .practice-card:last-child { border-bottom: none; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .demo-banner { font-size: 0.7rem; padding: 10px 42px 10px 14px; }
+            .circuit-list { grid-template-columns: 1fr; }
+            .circuit-cell { border-right: none !important; }
+            .circuit-cell:last-child { border-bottom: none; }
+            .deck-inner { gap: 14px; font-size: 0.66rem; }
+        }
+
+        ::selection { background: var(--crimson); color: var(--paper); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <span class="pill">Criminal Defence</span>
+        <span>Red Deer &middot; Central Alberta Circuit</span>
+    </div>
+    <div class="top-right">
+        <a href="tel:4033401600">403-340-1600</a>
+        <span class="divider"></span>
+        <a href="mailto:kevin@smcrimlaw.ca">kevin@smcrimlaw.ca</a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="ks-mark" aria-label="Kevin Sproule Law Office">
+            <span class="ks-name">Kevin Sproule</span>
+            <span class="ks-tag">Law Office &middot; Criminal Defence</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">The Practice</a></li>
+            <li><a href="#bio">About Kevin</a></li>
+            <li><a href="#circuit">The Circuit</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">The Practice</a></li>
+        <li><a href="#bio">About Kevin</a></li>
+        <li><a href="#circuit">The Circuit</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-photo-bg">
+        <img src="img/kevin-hero.jpg" alt="Kevin Sproule, Criminal Defence Lawyer">
+    </div>
+    <div class="hero-content">
+        <p class="hero-eyebrow">Practicing Since 1982 &middot; Central Alberta</p>
+        <h1>Criminal defence work has <em>always been my passion.</em></h1>
+        <p class="hero-tagline">"Have Criminal Code, Will Travel."</p>
+        <p class="hero-sub">
+            Kevin Sproule has spent over four decades being a bit of a thorn in the side of the establishment &mdash; representing the accused across Central Alberta, in any court that needs covering.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-crimson">
+                If You've Been Charged
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="tel:4033401600" class="btn btn-ghost-light">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                403-340-1600
+            </a>
+        </div>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <p class="hero-meta-num">1982</p>
+                <p class="hero-meta-label">In Practice</p>
+            </div>
+            <div class="hero-meta-item">
+                <p class="hero-meta-num">Solo</p>
+                <p class="hero-meta-label">One Lawyer</p>
+            </div>
+            <div class="hero-meta-item">
+                <p class="hero-meta-num">8 Courts</p>
+                <p class="hero-meta-label">Central AB Circuit</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DECK STRIP -->
+<section class="deck">
+    <div class="container">
+        <div class="deck-inner">
+            <span>A Bit of a Thorn</span>
+            <span class="dot"></span>
+            <span>Independent</span>
+            <span class="dot"></span>
+            <span>Sole Practitioner</span>
+            <span class="dot"></span>
+            <span>Forty-Plus Years</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE BAND -->
+<section class="promise">
+    <div class="promise-inner">
+        <blockquote>
+            "Willing to be a bit of a <strong>thorn in the side of the establishment.</strong>"
+        </blockquote>
+        <p class="promise-cite">&mdash; Kevin Sproule</p>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <p class="kicker">The Practice</p>
+        <h2 class="h2">If you've been <em>charged.</em></h2>
+        <p class="lede">Criminal, quasi-criminal, and regulatory offences &mdash; under the Criminal Code, the Controlled Drugs and Substances Act, the Traffic Safety Act, and many other statutes.</p>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <p class="practice-num">i.</p>
+                <h3 class="practice-title">Criminal Code</h3>
+                <p class="practice-desc">Indictable and summary offences under the Criminal Code of Canada.</p>
+            </article>
+            <article class="practice-card">
+                <p class="practice-num">ii.</p>
+                <h3 class="practice-title">Drug Offences</h3>
+                <p class="practice-desc">Possession, trafficking, and production under the Controlled Drugs and Substances Act.</p>
+            </article>
+            <article class="practice-card">
+                <p class="practice-num">iii.</p>
+                <h3 class="practice-title">Traffic Safety Act</h3>
+                <p class="practice-desc">Impaired driving, dangerous driving, and serious traffic charges.</p>
+            </article>
+            <article class="practice-card">
+                <p class="practice-num">iv.</p>
+                <h3 class="practice-title">Regulatory &amp; Quasi-Criminal</h3>
+                <p class="practice-desc">Provincial regulatory offences and quasi-criminal matters of every kind.</p>
+            </article>
+        </div>
+
+        <p class="practice-note">Don't see your charge? <strong>Call anyway.</strong> If I can help, I will.</p>
+    </div>
+</section>
+
+<!-- BIO -->
+<section class="section bio" id="bio">
+    <div class="container">
+        <div class="bio-grid">
+            <div class="bio-photo">
+                <img src="img/img-2.jpg" alt="Kevin Sproule's office">
+            </div>
+            <div class="bio-content">
+                <p class="kicker">About Kevin</p>
+                <h2 class="h2">From a family farm in Lafleche <em>to a Red Deer courtroom.</em></h2>
+                <p class="body-copy">
+                    "I was born and raised on the family farm near Lafleche, Saskatchewan. Dad was a farmer and community leader, mom was a teacher and farm wife extraordinaire. Five siblings."
+                </p>
+                <p class="body-copy">
+                    Started a general small-town practice in Stettler, Alberta in 1982 &mdash; doing a bit of everything. Moved to Red Deer in the early 1990s, focusing more and more on criminal defence ever since.
+                </p>
+                <div class="bio-pullquote">
+                    "Willing to be a bit of a thorn in the side of the establishment."
+                </div>
+                <p class="bio-creds">
+                    Lafleche Central High School, 1972 &middot; B.A., University of Regina, 1976 &middot; LL.B., University of Saskatchewan, 1979
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CIRCUIT -->
+<section class="circuit" id="circuit">
+    <div class="container">
+        <p class="kicker">The Circuit</p>
+        <h2 class="h2">Wherever your matter <em>is heard.</em></h2>
+        <p class="lede">Court appearances across Central Alberta &mdash; not just in Red Deer.</p>
+
+        <div class="circuit-list">
+            <article class="circuit-cell home">
+                <p class="city">Red Deer</p>
+                <p class="meta">Home Office</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Stettler</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Rocky Mountain House</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Rimbey</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Ponoka</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Didsbury</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Coronation</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Drumheller</p>
+                <p class="meta">Court Day</p>
+            </article>
+            <article class="circuit-cell">
+                <p class="city">Wetaskiwin</p>
+                <p class="meta">Court Day</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <p class="kicker">Get In Touch</p>
+        <h2 class="h2">If you've been charged, <em>start here.</em></h2>
+        <p class="lede">Confidential consultation by phone, email, or message.</p>
+
+        <div class="contact-grid">
+            <ul class="contact-info-list">
+                <li>
+                    <p class="contact-info-label">Office</p>
+                    <p class="contact-info-value">Suite 101, 4706 &ndash; 48 Avenue<br>Red Deer, AB&nbsp; T4N 6J4</p>
+                </li>
+                <li>
+                    <p class="contact-info-label">Phone</p>
+                    <p class="contact-info-value"><a href="tel:4033401600">403-340-1600</a></p>
+                </li>
+                <li>
+                    <p class="contact-info-label">Email</p>
+                    <p class="contact-info-value"><a href="mailto:kevin@smcrimlaw.ca">kevin@smcrimlaw.ca</a></p>
+                </li>
+                <li>
+                    <p class="contact-info-label">Practice Focus</p>
+                    <p class="contact-info-value">Criminal Defence Only</p>
+                    <p class="contact-info-sub">Red Deer &middot; Stettler &middot; Rocky Mountain House &middot; Rimbey &middot; Ponoka &middot; Didsbury &middot; Coronation &middot; Drumheller &middot; Wetaskiwin</p>
+                </li>
+            </ul>
+
+            <div class="contact-form">
+                <h3>Confidential Inquiry</h3>
+                <p class="form-italic">Tell me briefly about your matter.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(403) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Criminal Code</option>
+                            <option>Drug Offences</option>
+                            <option>Impaired Driving / Traffic</option>
+                            <option>Regulatory or Quasi-Criminal</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about the charge."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=4706+48+Avenue,+Red+Deer,+AB+T4N+6J4&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kevin Sproule Law Office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="ks-mark" aria-label="Kevin Sproule Law Office">
+                    <span class="ks-name" style="color: var(--paper);">Kevin Sproule</span>
+                    <span class="ks-tag">Law Office &middot; Criminal Defence</span>
+                </a>
+                <p>A Red Deer criminal defence lawyer practicing across Central Alberta since 1982 &mdash; sole practitioner, criminal defence only.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice</h5>
+                <ul>
+                    <li><a href="#practice">The Practice</a></li>
+                    <li><a href="#bio">About Kevin</a></li>
+                    <li><a href="#circuit">The Circuit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:4033401600">403-340-1600</a></li>
+                    <li><a href="mailto:kevin@smcrimlaw.ca">kevin@smcrimlaw.ca</a></li>
+                    <li class="plain">Suite 101, 4706 &ndash; 48 Ave<br>Red Deer, AB&nbsp; T4N 6J4</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Kevin Sproule Law Office. All Rights Reserved.</span>
+            <span>Red Deer &middot; Central Alberta &middot; Criminal Defence Only</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with Kevin Sproule Law Office.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll('.kicker, .h2, .lede, .practice-card, .practice-note, .bio-photo, .bio-content, .circuit-cell, .contact-info-list li, .contact-form, .map-wrap, .promise-inner');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
