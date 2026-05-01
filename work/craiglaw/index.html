@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Craig Law LLP &mdash; Barristers and Solicitors &middot; Calgary &amp; Lethbridge</title>
+    <meta name="description" content="Craig Law LLP &mdash; a boutique Alberta law firm with offices in Calgary and Lethbridge. Real estate, corporate, hospitality, employment, intellectual property, family, and wills &amp; estates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Craig Law — matching actual brand: warm tan/cream + bronze + dark charcoal */
+            --ink:          #1A1410;
+            --ink-deep:     #0E0A07;
+            --brown-deep:   #4A3D2A;
+            --brown:        #6B583B;
+            --brown-mid:    #8C7556;
+
+            --bronze:       #9C7E4C;          /* their accent — bronze gold */
+            --bronze-bright:#B89460;
+            --bronze-deep:  #6E5832;
+            --bronze-pale:  #DCC596;
+            --bronze-tint:  #E9D7B0;
+            --bronze-soft:  #F5EAD0;
+
+            --tan:          #B5A689;          /* their main bg */
+            --tan-bright:   #C9BCA0;
+            --tan-deep:     #998A6B;
+            --tan-pale:     #DCD2BB;
+
+            --cream:        #EDE3CA;
+            --cream-deep:   #DDD0B0;
+            --paper-warm:   #F5EFE0;
+            --bg:           #FAF6EA;
+            --bg-soft:      #FCF9EE;
+
+            --paper:        #FFFFFF;
+            --text:         #2A2218;
+            --text-mid:     #5A4D3A;
+            --text-soft:    #7B6F58;
+            --text-faint:   #A39882;
+
+            --border:       #D7CCB0;
+            --border-soft:  #E5DCC4;
+
+            --topbar-h:     42px;
+            --nav-h:        82px;
+            --total-nav:    124px;
+
+            --shadow-sm:    0 1px 3px rgba(26,20,16,0.07);
+            --shadow-md:    0 8px 24px -8px rgba(26,20,16,0.22), 0 2px 6px -2px rgba(26,20,16,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(26,20,16,0.32), 0 8px 16px -8px rgba(26,20,16,0.12);
+            --shadow-bronze:0 12px 28px -8px rgba(156,126,76,0.42);
+            --shadow-ink:   0 12px 28px -8px rgba(26,20,16,0.55);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.012em;
+            line-height: 1.16;
+            font-weight: 600;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .c-mark {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 12px;
+            line-height: 1;
+        }
+        .c-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1.55rem;
+            color: var(--bronze-deep);
+            letter-spacing: 0.18em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .c-llp {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.82rem;
+            color: var(--bronze);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transform: translateY(-4px);
+        }
+        .c-tag {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.78rem;
+            color: var(--brown);
+            letter-spacing: 0.04em;
+            margin-top: 4px;
+            display: block;
+        }
+        .c-mark.full {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+        .c-mark.full .c-row { display: flex; align-items: baseline; gap: 10px; }
+        .c-mark.inverse .c-name { color: var(--bronze-pale); }
+        .c-mark.inverse .c-llp { color: var(--bronze-bright); }
+        .c-mark.inverse .c-tag { color: rgba(255,255,255,0.55); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink);
+            color: rgba(255,255,255,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(156,126,76,0.30);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1240px;
+            width: 100%;
+        }
+        .top-bar a {
+            color: rgba(255,255,255,0.88);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar a:hover { color: var(--bronze-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--bronze-bright); flex-shrink: 0; }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+        .top-bar .label {
+            color: var(--bronze-bright);
+            font-weight: 700;
+            font-size: 0.66rem;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-right: 4px;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(245,239,224,0.95);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--bronze-deep); }
+        .nav-cta {
+            background: var(--ink);
+            color: var(--paper-warm) !important;
+            padding: 12px 22px;
+            border-radius: 2px;
+            font-weight: 700 !important;
+            font-size: 0.76rem !important;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--bronze);
+        }
+        .nav-cta:hover {
+            background: var(--bronze);
+            color: var(--ink) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-bronze);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper-warm);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--ink); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            background: var(--paper-warm);
+            padding-top: calc(var(--total-nav) + 56px);
+            padding-bottom: 0;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--bronze) 50%, transparent 100%);
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .hero-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px 70px;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--bronze-deep);
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--bronze);
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 5.6vw, 4.8rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.04;
+            letter-spacing: -0.024em;
+            margin: 0 auto 22px;
+            font-style: italic;
+            max-width: 900px;
+        }
+        .hero h1 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--bronze-deep);
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--brown-deep);
+            font-weight: 500;
+        }
+        .hero-sub {
+            font-size: 1.08rem;
+            color: var(--text-mid);
+            line-height: 1.72;
+            margin: 0 auto 40px;
+            max-width: 660px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-ink {
+            background: var(--ink);
+            color: var(--paper-warm);
+            border: 1px solid var(--ink);
+        }
+        .btn-ink:hover {
+            background: var(--ink-deep);
+            border-color: var(--bronze);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-ink);
+        }
+        .btn-bronze {
+            background: var(--bronze);
+            color: var(--paper-warm);
+            border: 1px solid var(--bronze);
+            box-shadow: var(--shadow-bronze);
+        }
+        .btn-bronze:hover {
+            background: var(--bronze-deep);
+            border-color: var(--bronze-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(110,88,50,0.55);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--ink);
+            border: 1.5px solid var(--brown-mid);
+        }
+        .btn-ghost:hover {
+            background: var(--cream);
+            border-color: var(--bronze);
+            color: var(--bronze-deep);
+            transform: translateY(-2px);
+        }
+
+        /* Dual cities band — the modernized echo of their split-skyline header */
+        .cities {
+            background: var(--ink);
+            padding: 0;
+            position: relative;
+        }
+        .cities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .city-panel {
+            position: relative;
+            min-height: 380px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            color: var(--paper-warm);
+            transition: transform 0.5s ease;
+        }
+        .city-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.7s ease, filter 0.5s ease;
+            z-index: 1;
+        }
+        .city-panel.calgary::before {
+            background-image: url('img/calgary.jpg');
+        }
+        .city-panel.lethbridge::before {
+            background-image: url('img/lethbridge.jpg');
+            background-position: center 60%;
+        }
+        .city-panel::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(26,20,16,0.20) 0%, rgba(26,20,16,0.55) 70%, rgba(14,10,7,0.92) 100%);
+            z-index: 2;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .city-panel:hover::before {
+            transform: scale(1.04);
+            filter: brightness(1.05);
+        }
+        .city-panel.calgary {
+            border-right: 1px solid rgba(156,126,76,0.40);
+        }
+        .city-panel-inner {
+            position: relative;
+            z-index: 3;
+            padding: 48px 40px 44px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+        }
+        .city-panel-info { flex: 1; min-width: 0; }
+        .city-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.66rem;
+            color: var(--bronze-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .city-label::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--bronze);
+        }
+        .city-panel h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+            color: var(--paper-warm);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.012em;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        .city-panel h3 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--bronze-pale);
+        }
+        .city-panel-address {
+            font-size: 0.86rem;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        .city-panel-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--bronze-pale);
+            font-size: 0.78rem;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-bottom: 1.5px solid var(--bronze);
+            padding-bottom: 4px;
+            transition: gap 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+        .city-panel-cta svg { width: 14px; height: 14px; }
+        .city-panel:hover .city-panel-cta { gap: 14px; color: var(--bronze-bright); }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--bronze-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--bronze);
+        }
+        .section-h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 22px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .section-h2 strong { font-style: normal; font-weight: 700; color: var(--ink); }
+        .section-h2 em { color: var(--bronze-deep); font-weight: 600; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── PROMISE / ABOUT STRIP ────────────────────────── */
+        .promise {
+            background: var(--cream);
+            padding: 96px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -180px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(156,126,76,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.36;
+            letter-spacing: -0.012em;
+            margin-bottom: 22px;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--bronze-deep);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .promise-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--bronze);
+            margin: 0 auto 22px;
+            opacity: 0.7;
+        }
+
+        /* ── PRACTICE AREAS (9 disciplines) ────────────────── */
+        .practice {
+            background: var(--paper-warm);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--paper);
+        }
+        .practice-card {
+            padding: 44px 32px 40px;
+            background: var(--paper);
+            border-right: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+            position: relative;
+            transition: background 0.3s;
+        }
+        .practice-card:nth-child(3n) { border-right: none; }
+        .practice-card:nth-last-child(-n+3) { border-bottom: none; }
+        .practice-card:hover { background: var(--bronze-soft); }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--bronze);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--bronze);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 14px;
+        }
+        .practice-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.2;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-bottom: 0;
+            flex-grow: 1;
+            font-weight: 400;
+        }
+        .practice-tag {
+            display: inline-block;
+            background: var(--bronze-soft);
+            color: var(--bronze-deep);
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--bronze-tint);
+            margin-top: 14px;
+            align-self: flex-start;
+        }
+
+        /* ── SPECIALTIES (editorial feature) ──────────────── */
+        .specialties {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        .specialties::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(156,126,76,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            position: relative;
+            z-index: 1;
+        }
+        .specialty-card {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--ink);
+            min-height: 520px;
+            display: flex;
+            align-items: flex-end;
+            color: var(--paper-warm);
+            transition: transform 0.4s ease;
+            box-shadow: var(--shadow-md);
+        }
+        .specialty-card:hover { transform: translateY(-4px); }
+        .specialty-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.7s ease;
+            z-index: 1;
+        }
+        .specialty-card.hospitality::before {
+            background-image: url('img/hospitality.jpg');
+            background-position: center 30%;
+        }
+        .specialty-card.corporate::before {
+            background-image: url('img/downtown.jpg');
+        }
+        .specialty-card:hover::before {
+            transform: scale(1.04);
+        }
+        .specialty-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(26,20,16,0.10) 0%, rgba(26,20,16,0.55) 55%, rgba(14,10,7,0.95) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .specialty-inner {
+            position: relative;
+            z-index: 3;
+            padding: 44px 40px 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .specialty-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--bronze-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            align-self: flex-start;
+        }
+        .specialty-tag::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--bronze);
+        }
+        .specialty-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 600;
+            color: var(--paper-warm);
+            line-height: 1.1;
+            letter-spacing: -0.012em;
+            margin: 4px 0 6px;
+        }
+        .specialty-card h3 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--bronze-pale);
+        }
+        .specialty-card p {
+            font-size: 0.96rem;
+            color: rgba(255,255,255,0.84);
+            line-height: 1.65;
+            margin-bottom: 10px;
+            max-width: 460px;
+        }
+        .specialty-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.78rem;
+            font-weight: 500;
+            margin-top: 6px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(220,197,150,0.20);
+        }
+        .specialty-meta svg {
+            width: 16px;
+            height: 16px;
+            color: var(--bronze-bright);
+            flex-shrink: 0;
+        }
+        .specialty-meta strong {
+            color: var(--paper-warm);
+            font-weight: 700;
+        }
+
+        /* ── LAWYERS ──────────────────────────────────────── */
+        .lawyers {
+            background: var(--bg);
+        }
+        .lawyers-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .lawyer-card {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            border-top: 3px solid var(--bronze);
+            border-radius: 4px;
+            padding: 32px 26px 28px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .lawyer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .lawyer-monogram {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--cream);
+            border: 1.5px solid var(--bronze);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--bronze-deep);
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+        }
+        .lawyer-card .role {
+            font-size: 0.62rem;
+            color: var(--bronze-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .lawyer-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.32rem;
+            color: var(--ink);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.18;
+            margin-bottom: 14px;
+        }
+        .lawyer-card p {
+            font-size: 0.86rem;
+            color: var(--text-mid);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+        .lawyer-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        .lawyer-areas span {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--brown);
+            background: var(--cream);
+            padding: 3px 8px;
+            border-radius: 2px;
+            border: 1px solid var(--border-soft);
+            text-transform: uppercase;
+        }
+
+        /* ── APPROACH / PILLARS ─────────────────────────── */
+        .pillars {
+            background: var(--ink);
+            color: var(--paper-warm);
+            position: relative;
+            overflow: hidden;
+        }
+        .pillars::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(156,126,76,0.16), transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(74,61,42,0.5), transparent 55%);
+            pointer-events: none;
+        }
+        .pillars .container { position: relative; z-index: 1; }
+        .pillars .section-h2 { color: var(--paper-warm); }
+        .pillars .section-h2 strong { color: var(--paper-warm); }
+        .pillars .section-h2 em { color: var(--bronze-bright); }
+        .pillars .section-eyebrow { color: var(--bronze-bright); }
+        .pillars .section-eyebrow::before,
+        .pillars .section-eyebrow::after { background: var(--bronze-bright); }
+        .pillars .section-lead { color: rgba(255,255,255,0.76); }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 16px;
+        }
+        .pillar-card {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 32px 0 0;
+            border-top: 1px solid var(--bronze);
+        }
+        .pillar-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--bronze-bright);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+        .pillar-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--paper-warm);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.2;
+        }
+        .pillar-card p {
+            color: rgba(255,255,255,0.78);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--bronze);
+            color: var(--ink);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.18), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(26,20,16,0.18), transparent 55%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.2vw, 2.8rem);
+            color: var(--ink);
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .cta-inner h2 strong { font-style: normal; color: var(--ink-deep); font-weight: 700; }
+        .cta-inner p {
+            color: rgba(26,20,16,0.85);
+            font-size: 1.04rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-ink-cta {
+            background: var(--ink);
+            color: var(--paper-warm);
+            border: 1px solid var(--ink);
+        }
+        .cta-band .btn-ink-cta:hover {
+            background: var(--ink-deep);
+            border-color: var(--ink-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(26,20,16,0.45);
+        }
+        .cta-band .btn-ghost-dark {
+            background: transparent;
+            color: var(--ink);
+            border: 1.5px solid rgba(26,20,16,0.35);
+        }
+        .cta-band .btn-ghost-dark:hover {
+            background: rgba(26,20,16,0.06);
+            border-color: var(--ink);
+        }
+
+        /* ── CONTACT (dual office) ─────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .offices-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 56px;
+        }
+        .office-card {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            border-top: 4px solid var(--bronze);
+            border-radius: 4px;
+            padding: 40px 36px 36px;
+        }
+        .office-card .office-label {
+            font-size: 0.66rem;
+            color: var(--bronze-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .office-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .office-card h3 strong { font-style: normal; font-weight: 700; }
+        .office-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .office-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .office-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--ink);
+            color: var(--bronze-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .office-icon svg { width: 16px; height: 16px; }
+        .office-list strong {
+            display: block;
+            font-size: 0.66rem;
+            color: var(--bronze-deep);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .office-list a, .office-list span {
+            font-size: 0.94rem;
+            color: var(--text);
+            line-height: 1.5;
+            transition: color 0.15s;
+        }
+        .office-list a:hover { color: var(--bronze-deep); }
+        .office-fax {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+        }
+
+        .contact-form-wrap {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            padding: 40px 40px 36px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form-wrap h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            font-style: italic;
+        }
+        .contact-form-wrap .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.7rem;
+            color: var(--ink);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border-soft);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%239C7E4C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 12px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--bronze);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--ink);
+            color: var(--paper-warm);
+            padding: 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid var(--bronze);
+        }
+        .form-btn:hover {
+            background: var(--bronze);
+            color: var(--ink);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-bronze);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 56px;
+        }
+        .map-wrap {
+            border: 1px solid var(--border-soft);
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 4 / 3;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        .map-label {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.66rem;
+            color: var(--bronze-deep);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.65);
+            padding: 64px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+            margin-top: 18px;
+        }
+        .footer-col h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.74rem;
+            color: var(--bronze-bright);
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.66);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--bronze-bright); }
+        .footer-col .city-hd {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--bronze-bright);
+            font-weight: 600;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        .footer-col .city-hd:first-child { margin-top: 0; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.10);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(255,255,255,0.50);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--ink-deep);
+            color: var(--paper-warm);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--bronze);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--bronze-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--bronze-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .practice-card:nth-child(3n) { border-right: 1px solid var(--border-soft); }
+            .practice-card:nth-child(2n) { border-right: none; }
+            .practice-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--border-soft); }
+            .practice-card:nth-last-child(-n+2) { border-bottom: none; }
+            .lawyers-grid { grid-template-columns: repeat(2, 1fr); }
+            .offices-grid, .maps-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .specialty-grid { grid-template-columns: 1fr; gap: 24px; }
+            .specialty-card { min-height: 380px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.68rem; padding: 0 8px; }
+            .top-bar-inner { gap: 12px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 48px; }
+            .pillars-grid { grid-template-columns: 1fr; gap: 24px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .practice-card { border-right: none !important; border-bottom: 1px solid var(--border-soft) !important; }
+            .practice-card:last-child { border-bottom: none !important; }
+            .lawyers-grid { grid-template-columns: 1fr; max-width: 480px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form-wrap, .office-card { padding: 28px 22px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .cities-grid { grid-template-columns: 1fr; }
+            .city-panel { min-height: 280px; }
+            .city-panel.calgary { border-right: none; border-bottom: 1px solid rgba(156,126,76,0.40); }
+            .specialty-card { min-height: 320px; }
+            .specialty-inner { padding: 32px 24px 28px; }
+            .city-panel-inner { padding: 32px 24px 28px; flex-direction: column; align-items: flex-start; gap: 18px; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .c-name { font-size: 1.2rem; }
+            .c-llp { font-size: 0.7rem; }
+        }
+
+        ::selection { background: var(--bronze); color: var(--paper-warm); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="label">Calgary</span>
+        <a href="tel:14032970130">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (403) 297-0130
+        </a>
+        <span class="divider"></span>
+        <span class="label">Lethbridge</span>
+        <a href="tel:14033312367">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (403) 331-2367
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:reception@craiglawfirm.ca">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            reception@craiglawfirm.ca
+        </a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="c-mark full" aria-label="Craig Law LLP">
+            <span class="c-row">
+                <span class="c-name">Craig Law</span>
+                <span class="c-llp">LLP</span>
+            </span>
+            <span class="c-tag">Barristers &amp; Solicitors</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#lawyers">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#lawyers">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-eyebrow">Boutique Law Firm &middot; Alberta</p>
+        <h1>Two offices. <strong>Nine disciplines.</strong> <em>One boutique.</em></h1>
+        <p class="hero-sub">
+            Craig Law LLP is a boutique Alberta law firm with offices in Calgary and Lethbridge &mdash; advising clients on real estate, corporate, hospitality, IP, employment, family, and wills &amp; estates from a small team that knows your file.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-ink">
+                Get in Touch
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#practice" class="btn btn-ghost">
+                View Practice Areas
+            </a>
+        </div>
+    </div>
+
+    <!-- Dual cities band — modernized echo of their split skyline -->
+    <div class="cities">
+        <div class="cities-grid">
+            <a href="#contact" class="city-panel calgary">
+                <div class="city-panel-inner">
+                    <div class="city-panel-info">
+                        <p class="city-label">Calgary Office</p>
+                        <h3>Foothills <strong>headquarters.</strong></h3>
+                        <p class="city-panel-address">Unit 201, 10836, 24th Street SE<br>Calgary, Alberta, T2Z 4C9</p>
+                    </div>
+                    <span class="city-panel-cta">
+                        Visit
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </div>
+            </a>
+            <a href="#contact" class="city-panel lethbridge">
+                <div class="city-panel-inner">
+                    <div class="city-panel-info">
+                        <p class="city-label">Lethbridge Office</p>
+                        <h3>Southern Alberta <strong>presence.</strong></h3>
+                        <p class="city-panel-address">Suite 909, 400 - 4th Avenue South<br>Lethbridge, Alberta, T1J 4E1</p>
+                    </div>
+                    <span class="city-panel-cta">
+                        Visit
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE / ABOUT -->
+<section class="promise" id="about">
+    <div class="container">
+        <div class="promise-inner">
+            <div class="promise-divider"></div>
+            <blockquote>
+                Craig Law is a <strong>boutique law firm</strong> with office locations in Calgary, Alberta and Lethbridge, Alberta &mdash; offering services in multiple areas of practice from a small, experienced team.
+            </blockquote>
+            <p class="promise-cite">&mdash; Our Promise</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Areas of Practice</p>
+            <h2 class="section-h2">Nine disciplines, <em>one team that knows the file.</em></h2>
+            <p class="section-lead">From start-up incorporation to commercial real estate, hospitality, IP, and estate planning &mdash; Craig Law's lawyers are cross-trained, so the matter stays with people who already understand your business.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <span class="practice-num">i.</span>
+                <h3>Start-Up Companies</h3>
+                <p>Company formation, financing, contract negotiation, IP setup, and the licensing &amp; distribution agreements every new venture eventually needs.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">ii.</span>
+                <h3>Corporate &amp; Commercial</h3>
+                <p>Debt and equity financings, mergers and acquisitions, joint ventures, recapitalizations, restructurings, and changes in ownership.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">iii.</span>
+                <h3>Residential Real Estate</h3>
+                <p>Buying or selling a house, condominium, or raw land &mdash; with lawyers and staff who handle conveyancing every day.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">iv.</span>
+                <h3>Commercial Real Estate</h3>
+                <p>Developers, investors, and lenders through every phase &mdash; planning, land acquisition, construction, property management, and financing.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">v.</span>
+                <h3>Hospitality</h3>
+                <p>Hotel and restaurant operators on real estate, leasing, financing, trademarks, management agreements, construction, licensing, and employment.</p>
+                <span class="practice-tag">Specialty</span>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">vi.</span>
+                <h3>Wills &amp; Estates</h3>
+                <p>Wills, enduring powers of attorney, and personal directives &mdash; the planning that protects your family and your assets.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">vii.</span>
+                <h3>Employment &amp; Labour</h3>
+                <p>Employees and employers on wrongful dismissal, contracts, and merger-related employment matters &mdash; both sides of the table.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">viii.</span>
+                <h3>Family Law</h3>
+                <p>Divorce, separation, custody, parenting time, and the property division that comes with it &mdash; handled with care.</p>
+            </article>
+            <article class="practice-card">
+                <span class="practice-num">ix.</span>
+                <h3>Intellectual Property</h3>
+                <p>Trademark and copyright applications, patent strategy, infringement matters, and domain disputes &mdash; with a registered Trademark Agent on the team.</p>
+                <span class="practice-tag">In-House Trademark Agent</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIALTIES (editorial feature) -->
+<section class="section specialties" id="specialties">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Industry Specialties</p>
+            <h2 class="section-h2">Two areas where Craig Law <em>punches above its weight.</em></h2>
+            <p class="section-lead">Most boutiques don't go deep on hospitality or IP. Craig Law does &mdash; with a partner who's lived through the hotel industry's legal cycle, and a registered Trademark Agent in-house.</p>
+        </div>
+
+        <div class="specialty-grid">
+            <article class="specialty-card hospitality">
+                <div class="specialty-inner">
+                    <span class="specialty-tag">Specialty 01</span>
+                    <h3>Hospitality, <strong>actually understood.</strong></h3>
+                    <p>Hotels, restaurants, and operators &mdash; advised on real estate, leasing, financing, trademarks, management agreements, construction, licensing, and employment. The cycle of a hospitality business is a body of work, not a checklist.</p>
+                    <div class="specialty-meta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8a2 2 0 012-2h4V4a2 2 0 012-2h2a2 2 0 012 2v2h4a2 2 0 012 2v13"/><path d="M3 21h18"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+                        Led by <strong>Locklynn &ldquo;Lockey&rdquo; Craig</strong>, Partner
+                    </div>
+                </div>
+            </article>
+            <article class="specialty-card corporate">
+                <div class="specialty-inner">
+                    <span class="specialty-tag">Specialty 02</span>
+                    <h3>Intellectual property, <strong>in-house.</strong></h3>
+                    <p>Trademark and copyright applications, patent strategy, infringement matters, and domain disputes &mdash; with a registered Trademark Agent on the team rather than referred out.</p>
+                    <div class="specialty-meta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        Led by <strong>Regan Dahl</strong>, Associate &amp; Registered Trademark Agent
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- LAWYERS -->
+<section class="section lawyers" id="lawyers">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Team</p>
+            <h2 class="section-h2">Five lawyers. <em>One file, start to finish.</em></h2>
+            <p class="section-lead">A boutique by design &mdash; small enough that the partner you meet is the partner you keep, broad enough to handle the unusual matter when it lands.</p>
+        </div>
+
+        <div class="lawyers-grid">
+            <article class="lawyer-card">
+                <div class="lawyer-monogram">RKC</div>
+                <p class="role">Founding Partner</p>
+                <h4>R. Kipp Craig</h4>
+                <p>Corporate and general business matters &mdash; mergers, share and asset acquisitions and dispositions &mdash; with personal injury, residential real estate, and estates work.</p>
+                <div class="lawyer-areas">
+                    <span>Corporate</span>
+                    <span>M&amp;A</span>
+                    <span>Real Estate</span>
+                    <span>Estates</span>
+                </div>
+            </article>
+            <article class="lawyer-card">
+                <div class="lawyer-monogram">LC</div>
+                <p class="role">Partner</p>
+                <h4>Locklynn &ldquo;Lockey&rdquo; Craig</h4>
+                <p>Real estate, corporate, and general business matters &mdash; with significant hospitality industry and real estate development experience.</p>
+                <div class="lawyer-areas">
+                    <span>Real Estate</span>
+                    <span>Hospitality</span>
+                    <span>Corporate</span>
+                </div>
+            </article>
+            <article class="lawyer-card">
+                <div class="lawyer-monogram">DK</div>
+                <p class="role">Senior Associate</p>
+                <h4>David G. Kusick</h4>
+                <p>Family law, labour and employment, criminal defence, and general litigation &mdash; previously a labour relations specialist, criminal defence lawyer in Lethbridge, and crown prosecutor in Medicine Hat.</p>
+                <div class="lawyer-areas">
+                    <span>Family</span>
+                    <span>Labour</span>
+                    <span>Criminal</span>
+                    <span>Litigation</span>
+                </div>
+            </article>
+            <article class="lawyer-card">
+                <div class="lawyer-monogram">CS</div>
+                <p class="role">Associate</p>
+                <h4>Cameron Smith</h4>
+                <p>Corporate and commercial law, real estate, employment law, and estate planning &mdash; active on local not-for-profit boards.</p>
+                <div class="lawyer-areas">
+                    <span>Corporate</span>
+                    <span>Real Estate</span>
+                    <span>Employment</span>
+                    <span>Estates</span>
+                </div>
+            </article>
+            <article class="lawyer-card">
+                <div class="lawyer-monogram">RD</div>
+                <p class="role">Associate</p>
+                <h4>Regan Dahl</h4>
+                <p>Intellectual property, corporate, labour and employment, family law, and general litigation &mdash; with M&amp;A and patent / trademark experience as a registered Trademark Agent.</p>
+                <div class="lawyer-areas">
+                    <span>IP</span>
+                    <span>Corporate</span>
+                    <span>Labour</span>
+                    <span>Trademarks</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH / PILLARS -->
+<section class="section pillars" id="approach">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Boutique <em>by design.</em></h2>
+            <p class="section-lead">Four commitments that shape how Craig Law works with every client &mdash; from the first call to the last document.</p>
+        </div>
+
+        <div class="pillars-grid">
+            <article class="pillar-card">
+                <span class="pillar-num">i.</span>
+                <h3>Small by Design</h3>
+                <p>The partner you meet is the partner who runs your file. No handoff to associates you've never met.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">ii.</span>
+                <h3>Cross-Trained</h3>
+                <p>Most of our lawyers practise across multiple disciplines &mdash; so the unusual matter doesn't need a referral elsewhere.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">iii.</span>
+                <h3>Two Offices</h3>
+                <p>Calgary and Lethbridge presence covers Southern Alberta &mdash; without a corporate-firm footprint or rate sheet.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">iv.</span>
+                <h3>Industry-Aware</h3>
+                <p>Hospitality, real estate development, and IP-heavy start-ups are not afterthoughts &mdash; they're practice specialties.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Have a matter? <strong>Tell us about it.</strong></h2>
+            <p>Reach out to either office &mdash; we'll get back to you with a real lawyer, not a screening form.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="#contact" class="btn btn-ink-cta">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:14032970130" class="btn btn-ghost-dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (403) 297-0130
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Two offices, <em>one quick reply.</em></h2>
+            <p class="section-lead">Both addresses, both phone numbers. Tell us about your matter and we'll route it to whichever office makes most sense.</p>
+        </div>
+
+        <div class="offices-grid">
+            <div class="office-card">
+                <p class="office-label">Calgary Office</p>
+                <h3>10836 <strong>24th Street SE</strong></h3>
+                <ul class="office-list">
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Unit 201, 10836, 24th Street SE<br>Calgary, Alberta, T2Z 4C9</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:14032970130">(403) 297-0130</a><br>
+                            <span class="office-fax">Fax: (403) 297-0133</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:reception@craiglawfirm.ca">reception@craiglawfirm.ca</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="office-card">
+                <p class="office-label">Lethbridge Office</p>
+                <h3>400 <strong>4th Avenue South</strong></h3>
+                <ul class="office-list">
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Suite 909, 400 - 4th Avenue South<br>Lethbridge, Alberta, T1J 4E1</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:14033312367">(403) 331-2367</a><br>
+                            <span class="office-fax">Fax: (403) 380-4936</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="office-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:lethbridge.reception@craiglawfirm.ca">lethbridge.reception@craiglawfirm.ca</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-form-wrap">
+            <h3>Send a message</h3>
+            <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch from the appropriate office.</p>
+            <form onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cf-name">Full Name</label>
+                        <input type="text" id="cf-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-phone">Phone</label>
+                        <input type="tel" id="cf-phone" placeholder="(403) 000-0000">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-office">Preferred Office</label>
+                        <select id="cf-office">
+                            <option>No preference &mdash; whoever's quickest</option>
+                            <option>Calgary</option>
+                            <option>Lethbridge</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="cf-area">Practice Area</label>
+                    <select id="cf-area">
+                        <option value="">Select a category...</option>
+                        <option>Start-Up Companies</option>
+                        <option>Corporate &amp; Commercial</option>
+                        <option>Residential Real Estate</option>
+                        <option>Commercial Real Estate</option>
+                        <option>Hospitality</option>
+                        <option>Wills &amp; Estates</option>
+                        <option>Employment &amp; Labour</option>
+                        <option>Family Law</option>
+                        <option>Intellectual Property</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="cf-msg">Brief Description</label>
+                    <textarea id="cf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                </div>
+                <button class="form-btn" type="submit">
+                    Send Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="maps-grid">
+            <div>
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps?q=10836+24th+Street+SE+Calgary+AB+T2Z+4C9&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Craig Law LLP &mdash; Calgary office"></iframe>
+                </div>
+                <span class="map-label">Calgary Office</span>
+            </div>
+            <div>
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps?q=400+4th+Avenue+South+Lethbridge+AB+T1J+4E1&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Craig Law LLP &mdash; Lethbridge office"></iframe>
+                </div>
+                <span class="map-label">Lethbridge Office</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="c-mark full inverse" aria-label="Craig Law LLP">
+                    <span class="c-row">
+                        <span class="c-name">Craig Law</span>
+                        <span class="c-llp">LLP</span>
+                    </span>
+                    <span class="c-tag">Barristers &amp; Solicitors</span>
+                </a>
+                <p>A boutique Alberta law firm with offices in Calgary and Lethbridge, offering services across nine practice areas from a small, experienced team.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice</h5>
+                <ul>
+                    <li><a href="#practice">Start-Ups</a></li>
+                    <li><a href="#practice">Corporate &amp; Commercial</a></li>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Hospitality</a></li>
+                    <li><a href="#practice">Wills &amp; Estates</a></li>
+                    <li><a href="#practice">Employment &amp; Labour</a></li>
+                    <li><a href="#practice">Family Law</a></li>
+                    <li><a href="#practice">Intellectual Property</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Calgary</h5>
+                <ul>
+                    <li class="plain">Unit 201, 10836,<br>24th Street SE<br>Calgary, AB&nbsp; T2Z 4C9</li>
+                    <li><a href="tel:14032970130">(403) 297-0130</a></li>
+                    <li class="plain">Fax: (403) 297-0133</li>
+                    <li><a href="mailto:reception@craiglawfirm.ca">reception@craiglawfirm.ca</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Lethbridge</h5>
+                <ul>
+                    <li class="plain">Suite 909, 400 -<br>4th Avenue South<br>Lethbridge, AB&nbsp; T1J 4E1</li>
+                    <li><a href="tel:14033312367">(403) 331-2367</a></li>
+                    <li class="plain">Fax: (403) 380-4936</li>
+                    <li><a href="mailto:lethbridge.reception@craiglawfirm.ca">lethbridge.reception@craiglawfirm.ca</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Craig Law LLP. All rights reserved.</span>
+            <span>Calgary &middot; Lethbridge</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with Craig Law LLP.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .pillar-card, .lawyer-card, .promise-inner, .cta-inner, .map-wrap, .office-card, .contact-form-wrap, .city-panel, .specialty-card');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .pillars-grid, .lawyers-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 60) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
