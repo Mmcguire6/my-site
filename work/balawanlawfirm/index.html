@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Balawan Law Firm &mdash; The Lawyers who Listen &middot; Calgary, Alberta</title>
+    <meta name="description" content="Balawan Law Firm &mdash; bilingual English &amp; Tagalog legal services in Calgary. Immigration, real estate, wills &amp; estate, family, criminal, notary public &amp; SPA. Serving Calgary, Red Deer, Canmore, Banff, Okotoks, High River, and Chestermere.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Balawan — matching actual brand: deep navy + brass gold + warm cream */
+            --navy:         #0F2A40;
+            --navy-bright:  #163A56;
+            --navy-deep:    #0A1F31;
+            --navy-darker:  #061523;
+            --navy-pale:    #6B8094;
+            --navy-tint:    #B5C2CE;
+
+            --gold:         #C9A24E;
+            --gold-bright:  #E0BB6E;
+            --gold-deep:    #9C7A36;
+            --gold-darker:  #6E5524;
+            --gold-pale:    #ECDDB1;
+            --gold-tint:    #F4E9C8;
+            --gold-soft:    #FAF3DD;
+
+            --cream:        #F5F2EC;
+            --cream-deep:   #E8E2D2;
+            --bg:           #FAF8F2;
+            --bg-soft:      #FDFBF6;
+
+            --ink:          #1A2433;
+            --text:         #1F2A3A;
+            --text-mid:     #4B566A;
+            --text-soft:    #6F7B8E;
+            --text-faint:   #9AA5B5;
+
+            --paper:        #FFFFFF;
+            --border:       #E0DAC9;
+            --border-soft:  #ECE7D7;
+
+            --topbar-h:     42px;
+            --nav-h:        82px;
+            --total-nav:    124px;
+
+            --shadow-sm:    0 1px 3px rgba(15,42,64,0.07);
+            --shadow-md:    0 8px 24px -8px rgba(15,42,64,0.22), 0 2px 6px -2px rgba(15,42,64,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(15,42,64,0.32), 0 8px 16px -8px rgba(15,42,64,0.12);
+            --shadow-gold:  0 12px 28px -8px rgba(201,162,78,0.45);
+            --shadow-navy:  0 12px 28px -8px rgba(15,42,64,0.55);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.012em;
+            line-height: 1.16;
+            font-weight: 600;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .b-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .b-monogram {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .b-monogram svg {
+            width: 100%;
+            height: 100%;
+        }
+        .b-wordmark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        .b-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--navy);
+            letter-spacing: 0.18em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .b-sub {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.62rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-top: 7px;
+        }
+        .b-mark.inverse .b-name { color: var(--paper); }
+        .b-mark.inverse .b-sub { color: var(--gold-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--navy-darker);
+            color: rgba(255,255,255,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(201,162,78,0.30);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(255,255,255,0.88);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--gold-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+        .top-bar .lang {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-bright);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+        .top-bar .lang strong {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.66rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+            border-right: 1px solid rgba(255,255,255,0.20);
+            padding-right: 10px;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--gold-deep); }
+        .nav-cta {
+            background: var(--navy);
+            color: var(--paper) !important;
+            padding: 12px 22px;
+            border-radius: 2px;
+            font-weight: 700 !important;
+            font-size: 0.76rem !important;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--gold);
+        }
+        .nav-cta:hover {
+            background: var(--gold);
+            color: var(--navy-darker) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--ink); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        /* ── HERO (split layout — lawyers front and center) ── */
+        .hero {
+            min-height: 92vh;
+            padding-top: calc(var(--total-nav) + 24px);
+            padding-bottom: 80px;
+            position: relative;
+            background:
+                linear-gradient(180deg, rgba(6,21,35,0.92) 0%, rgba(10,31,49,0.94) 100%),
+                url('img/hero.jpg') center 35% / cover no-repeat,
+                var(--navy-darker);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            color: var(--paper);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 85% 25%, rgba(201,162,78,0.18), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(22,58,86,0.45), transparent 55%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.55;
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .hero-text { display: flex; flex-direction: column; }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            margin-bottom: 26px;
+            align-self: flex-start;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 5.4vw, 4.8rem);
+            font-weight: 500;
+            color: var(--paper);
+            line-height: 1.02;
+            letter-spacing: -0.022em;
+            margin-bottom: 22px;
+            font-style: italic;
+        }
+        .hero h1 strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--gold-bright);
+        }
+        .hero-tagalog {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+            color: rgba(236,221,177,0.90);
+            font-weight: 500;
+            margin-bottom: 18px;
+            letter-spacing: 0.02em;
+        }
+        .hero-tagalog::before {
+            content: '\201C';
+            margin-right: 4px;
+        }
+        .hero-tagalog::after {
+            content: '\201D';
+            margin-left: 4px;
+        }
+        .hero-sub {
+            font-size: 1.04rem;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.7;
+            margin: 0 0 36px;
+            max-width: 560px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+
+        /* Lawyer portraits — the focal point */
+        .hero-portraits {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .hero-portraits::before {
+            content: '';
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            width: 72px;
+            height: 72px;
+            border-top: 2px solid var(--gold);
+            border-left: 2px solid var(--gold);
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .hero-portraits::after {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            right: -18px;
+            width: 72px;
+            height: 72px;
+            border-bottom: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .hero-portrait {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 3px;
+            background: var(--cream);
+            box-shadow: 0 24px 56px -16px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,162,78,0.20) inset;
+        }
+        .hero-portrait:nth-child(1) { transform: translateY(-12px); }
+        .hero-portrait:nth-child(2) { transform: translateY(12px); }
+        .hero-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 22%;
+            transition: transform 0.6s ease;
+        }
+        .hero-portrait:hover img { transform: scale(1.04); }
+        .hero-portrait::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(6,21,35,0.78) 100%);
+            pointer-events: none;
+        }
+        .hero-portrait-label {
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 14px;
+            z-index: 2;
+            color: var(--paper);
+        }
+        .hero-portrait-label .role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .hero-portrait-label .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.15;
+            display: block;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy-darker);
+            border: 1px solid var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-bright);
+            border-color: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(201,162,78,0.55);
+        }
+        .btn-navy {
+            background: var(--navy);
+            color: var(--paper);
+            border: 1px solid var(--navy);
+        }
+        .btn-navy:hover {
+            background: var(--navy-deep);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-navy);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.35);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+        .hero-trust-wrap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            border-top: 1px solid rgba(201,162,78,0.22);
+            background: linear-gradient(180deg, transparent 0%, rgba(6,21,35,0.55) 50%, rgba(6,21,35,0.85) 100%);
+            padding: 22px 0;
+        }
+        .hero-trust-inner {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.84rem;
+            font-weight: 500;
+        }
+        .hero-trust-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gold-bright);
+            flex-shrink: 0;
+        }
+
+        /* ── COVERAGE BAND ────────────────────────────────── */
+        .coverage-band {
+            background: var(--navy-darker);
+            color: var(--paper);
+            padding: 30px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(201,162,78,0.25);
+        }
+        .coverage-band::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.5;
+        }
+        .coverage-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 36px;
+            flex-wrap: wrap;
+        }
+        .coverage-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold-bright);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+        }
+        .coverage-label svg { width: 18px; height: 18px; }
+        .coverage-list {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.92);
+            font-weight: 500;
+        }
+        .coverage-list span {
+            position: relative;
+        }
+        .coverage-list span:not(:last-child)::after {
+            content: '\2022';
+            position: absolute;
+            right: -16px;
+            color: var(--gold);
+            opacity: 0.7;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .section-h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 22px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .section-h2 strong { font-style: normal; font-weight: 700; color: var(--navy); }
+        .section-h2 em { color: var(--gold-deep); font-weight: 600; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── ABOUT / PROMISE STRIP ────────────────────────── */
+        .promise {
+            background: var(--cream);
+            padding: 96px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -180px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(201,162,78,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .promise::after {
+            content: '';
+            position: absolute;
+            bottom: -180px;
+            left: -180px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(15,42,64,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.34;
+            letter-spacing: -0.012em;
+            margin-bottom: 22px;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--gold-deep);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .promise-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 22px;
+            opacity: 0.7;
+        }
+
+        /* ── PRACTICE AREAS ────────────────────────────────── */
+        .practice {
+            background: var(--paper);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid var(--border-soft);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .practice-card {
+            padding: 48px 36px 44px;
+            background: var(--paper);
+            border-right: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            display: flex;
+            flex-direction: column;
+            min-height: 320px;
+            position: relative;
+            transition: background 0.3s;
+        }
+        .practice-card:nth-child(3n) { border-right: none; }
+        .practice-card:nth-last-child(-n+3) { border-bottom: none; }
+        .practice-card:hover { background: var(--bg-soft); }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-deep);
+            margin-bottom: 24px;
+            background: var(--gold-soft);
+            border: 1px solid var(--gold-tint);
+            border-radius: 50%;
+            transition: background 0.3s, border-color 0.3s, color 0.3s;
+        }
+        .practice-card:hover .practice-icon {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--paper);
+        }
+        .practice-icon svg { width: 24px; height: 24px; }
+        .practice-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 14px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.2;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            flex-grow: 1;
+            font-weight: 400;
+        }
+        .practice-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid var(--gold);
+            padding-bottom: 4px;
+            align-self: flex-start;
+            transition: gap 0.2s, color 0.2s;
+        }
+        .practice-link:hover { gap: 14px; color: var(--gold-deep); }
+        .practice-link svg { width: 12px; height: 12px; }
+
+        /* ── LAWYERS ─────────────────────────────────────── */
+        .lawyers {
+            background: var(--bg);
+        }
+        .lawyers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .lawyer-card {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            border-top: 4px solid var(--gold);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .lawyer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .lawyer-photo {
+            aspect-ratio: 4 / 3.4;
+            overflow: hidden;
+            background: var(--cream);
+            position: relative;
+        }
+        .lawyer-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.5s ease;
+        }
+        .lawyer-card:hover .lawyer-photo img { transform: scale(1.04); }
+        .lawyer-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(15,42,64,0.18) 100%);
+            pointer-events: none;
+        }
+        .lawyer-info {
+            padding: 30px 30px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .lawyer-info .role {
+            font-size: 0.68rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .lawyer-info h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.15;
+            margin-bottom: 6px;
+        }
+        .lawyer-info .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 8px;
+            margin: 14px 0 16px;
+        }
+        .lawyer-info .practice-tags span {
+            background: var(--gold-soft);
+            color: var(--gold-darker);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--gold-tint);
+        }
+        .lawyer-info .languages {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            color: var(--text-mid);
+            font-weight: 500;
+            margin-top: 4px;
+        }
+        .lawyer-info .languages svg {
+            width: 14px;
+            height: 14px;
+            color: var(--gold-deep);
+        }
+        .lawyer-info .languages strong {
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.02em;
+        }
+
+        .team-note {
+            margin-top: 56px;
+            padding: 28px;
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            border-left: 4px solid var(--gold);
+            border-radius: 4px;
+            text-align: center;
+        }
+        .team-note-label {
+            font-size: 0.68rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .team-note-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.18rem;
+            color: var(--ink);
+            font-weight: 500;
+        }
+        .team-note-text strong {
+            font-style: normal;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        /* ── STORY VIDEO ──────────────────────────────────── */
+        .story {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+        }
+        .story::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 560px;
+            height: 560px;
+            background: radial-gradient(circle, rgba(201,162,78,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .story-text .section-eyebrow {
+            justify-content: flex-start;
+        }
+        .story-text .section-eyebrow::after { display: none; }
+        .story-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.12;
+            letter-spacing: -0.022em;
+            font-style: italic;
+            margin-bottom: 22px;
+        }
+        .story-text h2 strong {
+            font-style: normal;
+            color: var(--navy);
+            font-weight: 700;
+        }
+        .story-text h2 em {
+            color: var(--gold-deep);
+            font-weight: 600;
+        }
+        .story-text p {
+            color: var(--text-mid);
+            font-size: 1.02rem;
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
+        .story-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .story-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+        }
+        .story-meta-row svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold-deep);
+            flex-shrink: 0;
+        }
+        .story-meta-row strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+        .video-frame {
+            position: relative;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--navy-darker);
+            padding: 14px;
+            box-shadow: var(--shadow-lg);
+        }
+        .video-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            opacity: 0.45;
+            pointer-events: none;
+        }
+        .video-aspect {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: var(--navy-darker);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .video-aspect iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+        .video-caption {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4px 2px;
+            font-size: 0.74rem;
+            color: rgba(255,255,255,0.65);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .video-caption .video-title {
+            color: var(--gold-bright);
+        }
+
+        /* ── SERVICE PILLARS (we come to you) ─────────── */
+        .pillars {
+            background: var(--navy);
+            color: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .pillars::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(201,162,78,0.16), transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(15,42,64,0.5), transparent 55%);
+            pointer-events: none;
+        }
+        .pillars .container { position: relative; z-index: 1; }
+        .pillars .section-h2 { color: var(--paper); }
+        .pillars .section-h2 strong { color: var(--paper); }
+        .pillars .section-h2 em { color: var(--gold-bright); }
+        .pillars .section-eyebrow { color: var(--gold-bright); }
+        .pillars .section-eyebrow::before,
+        .pillars .section-eyebrow::after { background: var(--gold-bright); }
+        .pillars .section-lead { color: rgba(255,255,255,0.78); }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 16px;
+        }
+        .pillar-card {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 32px 0 0;
+            border-top: 2px solid var(--gold);
+        }
+        .pillar-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--gold-bright);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+        .pillar-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: var(--paper);
+            font-weight: 600;
+            letter-spacing: -0.012em;
+            line-height: 1.2;
+        }
+        .pillar-card p {
+            color: rgba(255,255,255,0.78);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--gold);
+            color: var(--navy-darker);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.18), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(15,42,64,0.10), transparent 55%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.2vw, 2.8rem);
+            color: var(--navy-darker);
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: -0.022em;
+            font-style: italic;
+        }
+        .cta-inner h2 strong { font-style: normal; color: var(--navy); font-weight: 700; }
+        .cta-inner p {
+            color: rgba(15,42,64,0.85);
+            font-size: 1.04rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-navy-cta {
+            background: var(--navy);
+            color: var(--paper);
+            border: 1px solid var(--navy);
+        }
+        .cta-band .btn-navy-cta:hover {
+            background: var(--navy-darker);
+            border-color: var(--navy-darker);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(15,42,64,0.45);
+        }
+        .cta-band .btn-ghost-dark {
+            background: transparent;
+            color: var(--navy-darker);
+            border: 1.5px solid rgba(15,42,64,0.35);
+        }
+        .cta-band .btn-ghost-dark:hover {
+            background: rgba(15,42,64,0.06);
+            border-color: var(--navy);
+            color: var(--navy);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            margin-bottom: 28px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: var(--gold-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.5;
+            transition: color 0.15s;
+        }
+        .contact-list a:hover { color: var(--gold-deep); }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border-soft);
+            padding: 36px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.7rem;
+            color: var(--ink);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border-soft);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23C9A24E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 12px;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--gold);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--navy);
+            color: var(--paper);
+            padding: 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid var(--gold);
+        }
+        .form-btn:hover {
+            background: var(--gold);
+            color: var(--navy-darker);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+
+        .map-wrap {
+            border: 1px solid var(--border-soft);
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--navy-darker);
+            color: rgba(255,255,255,0.65);
+            padding: 64px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand .b-mark { margin-bottom: 18px; }
+        .footer-brand p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 360px;
+        }
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .footer-socials a {
+            width: 36px; height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(201,162,78,0.40);
+            color: var(--gold-bright);
+            border-radius: 50%;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .footer-socials a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--navy-darker);
+        }
+        .footer-socials svg { width: 16px; height: 16px; }
+        .footer-col h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: var(--gold-bright);
+            font-weight: 700;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.66);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--gold-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.10);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(255,255,255,0.50);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--navy-darker);
+            color: var(--paper);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--gold);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--gold-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 120px; }
+            .hero-content { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+            .hero-text { align-items: center; }
+            .hero-eyebrow { align-self: center; }
+            .hero-sub { margin: 0 auto 32px; }
+            .hero-actions { justify-content: center; }
+            .hero-portraits { max-width: 480px; margin: 0 auto; }
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .practice-card:nth-child(3n) { border-right: 1px solid var(--border-soft); }
+            .practice-card:nth-child(2n) { border-right: none; }
+            .practice-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--border-soft); }
+            .practice-card:nth-last-child(-n+2) { border-bottom: none; }
+            .lawyers-grid { grid-template-columns: 1fr; max-width: 580px; }
+            .story-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .coverage-inner { gap: 16px; }
+            .coverage-list { font-size: 1rem; gap: 22px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .lang { display: none; }
+            .top-bar-inner { gap: 14px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 48px; }
+            .pillars-grid { grid-template-columns: 1fr; gap: 24px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .practice-card { border-right: none !important; border-bottom: 1px solid var(--border-soft) !important; }
+            .practice-card:last-child { border-bottom: none !important; }
+            .story { padding: 70px 0; }
+            .story-grid { gap: 32px; }
+            .video-frame { padding: 8px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 28px 22px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .hero { min-height: auto; padding-bottom: 130px; }
+            .hero-portraits::before, .hero-portraits::after { display: none; }
+            .hero-portrait:nth-child(1), .hero-portrait:nth-child(2) { transform: none; }
+            .hero-trust-inner { gap: 16px; padding: 0 20px; }
+            .hero-trust-item { font-size: 0.74rem; flex: 1 1 100%; justify-content: center; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .b-name { font-size: 0.86rem; letter-spacing: 0.16em; }
+            .b-sub { font-size: 0.55rem; }
+            .b-monogram { width: 42px; height: 42px; }
+            .coverage-band { padding: 22px 0; }
+            .coverage-list { font-size: 0.94rem; flex-direction: column; gap: 6px; }
+            .coverage-list span:not(:last-child)::after { display: none; }
+        }
+
+        ::selection { background: var(--gold); color: var(--navy-darker); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:4034046981">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +1 (403) 404-6981
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:info@balawanlawfirm.ca">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@balawanlawfirm.ca
+        </a>
+        <span class="divider"></span>
+        <span class="lang"><strong>EN&nbsp;&middot;&nbsp;TL</strong> Nagsasalita kami ng Tagalog</span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="b-mark" aria-label="Balawan Law Firm">
+            <span class="b-monogram" aria-hidden="true">
+                <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="25,4 46,42 4,42" fill="none" stroke="#C9A24E" stroke-width="2.5" stroke-linejoin="round"/>
+                    <text x="25" y="33" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="20" fill="#C9A24E" font-style="italic">B</text>
+                </svg>
+            </span>
+            <span class="b-wordmark">
+                <span class="b-name">Balawan</span>
+                <span class="b-sub">Law Firm</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#lawyers">Our Team</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Book Consultation</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#lawyers">Our Team</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Book Consultation</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-eyebrow">Calgary &middot; English &amp; Tagalog</p>
+            <h1>The Lawyers <strong>who Listen.</strong></h1>
+            <p class="hero-tagalog">Mga abogadong nakikinig.</p>
+            <p class="hero-sub">
+                A bilingual Calgary law firm serving the Filipino-Canadian community and beyond &mdash; immigration, real estate, wills &amp; estate, family, criminal, and notary public matters, handled with care.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-gold">
+                    Book a Consultation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:4034046981" class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (403) 404-6981
+                </a>
+            </div>
+        </div>
+        <div class="hero-portraits" aria-label="Christopher Balawan and Justine Rivera">
+            <figure class="hero-portrait">
+                <img src="img/christopher.jpg" alt="Christopher Chaclag Balawan, Lawyer">
+                <figcaption class="hero-portrait-label">
+                    <span class="role">Lawyer</span>
+                    <span class="name">Christopher Balawan</span>
+                </figcaption>
+            </figure>
+            <figure class="hero-portrait">
+                <img src="img/justine.jpg" alt="Justine Camille Rivera, Lawyer">
+                <figcaption class="hero-portrait-label">
+                    <span class="role">Lawyer</span>
+                    <span class="name">Justine Camille Rivera</span>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="hero-trust-wrap">
+        <div class="hero-trust-inner">
+            <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                Bilingual: English &amp; Tagalog
+            </div>
+            <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 4l9 5.5"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg>
+                Mobile service to home or hospital
+            </div>
+            <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12 L21 12"/><path d="M12 3 a14 14 0 010 18 a14 14 0 010 -18"/></svg>
+                Same-day notary services
+            </div>
+            <div class="hero-trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Calgary &middot; Red Deer &middot; Banff &middot; Canmore
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COVERAGE BAND -->
+<section class="coverage-band">
+    <div class="container">
+        <div class="coverage-inner">
+            <span class="coverage-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Serving Calgary &amp; Beyond
+            </span>
+            <div class="coverage-list">
+                <span>Calgary</span>
+                <span>Red Deer</span>
+                <span>Canmore</span>
+                <span>Banff</span>
+                <span>Okotoks</span>
+                <span>High River</span>
+                <span>Chestermere</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise">
+    <div class="container">
+        <div class="promise-inner">
+            <div class="promise-divider"></div>
+            <blockquote>
+                At Balawan Law Firm, we are dedicated to providing exceptional legal services, driven by our <strong>passion for helping individuals achieve their legal goals.</strong>
+            </blockquote>
+            <p class="promise-cite">&mdash; Our Promise to You</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">Personal matters or <em>complex legal issues</em> &mdash; <strong>we are here to help.</strong></h2>
+            <p class="section-lead">Six focused practice areas, handled bilingually in English and Tagalog &mdash; with the same-day notary and mobile service Calgary families actually need.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+                </div>
+                <h3>Immigration Law</h3>
+                <p>Permanent residency, work permits, study permits, family sponsorship, citizenship, and appeals &mdash; guidance through Canada's immigration pathways.</p>
+                <a href="#contact" class="practice-link">
+                    Discuss your case
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 3 L21 12"/><path d="M5 10 L5 21 L19 21 L19 10"/><path d="M10 21 L10 14 L14 14 L14 21"/></svg>
+                </div>
+                <h3>Real Estate</h3>
+                <p>Residential purchases, sales, refinancing, and conveyancing &mdash; from first-home buyers to seasoned investors moving across Southern Alberta.</p>
+                <a href="#contact" class="practice-link">
+                    Get a quote
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                </div>
+                <h3>Wills &amp; Estate</h3>
+                <p>Wills, enduring powers of attorney, personal directives, and probate &mdash; the planning that protects your family on both sides of the ocean.</p>
+                <a href="#contact" class="practice-link">
+                    Plan your estate
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22 C7 18 4 14 4 9 a8 8 0 0116 0 c0 5 -3 9 -8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                </div>
+                <h3>Family Law</h3>
+                <p>Separation, divorce, parenting and custody, child and spousal support, and property division &mdash; with discretion and compassion.</p>
+                <a href="#contact" class="practice-link">
+                    Speak in confidence
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L12 21"/><path d="M5 8 L19 8"/><path d="M3 14 L8 14 L5.5 8 Z"/><path d="M16 14 L21 14 L18.5 8 Z"/></svg>
+                </div>
+                <h3>Criminal Law</h3>
+                <p>Steady representation for charges from impaired driving and assault to theft and drug offences &mdash; protecting your record, family, and future.</p>
+                <a href="#contact" class="practice-link">
+                    Get representation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8 L16 8"/><path d="M8 12 L16 12"/><path d="M8 16 L13 16"/><circle cx="17" cy="17" r="3" fill="currentColor" opacity="0.15"/></svg>
+                </div>
+                <h3>Notary Public &amp; SPA</h3>
+                <p>Same-day notarizations, commissioner of oaths, and Special Powers of Attorney (SPA) &mdash; including documents executed for use overseas.</p>
+                <a href="#contact" class="practice-link">
+                    Book same-day
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- LAWYERS -->
+<section class="section lawyers" id="lawyers">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Lawyers</p>
+            <h2 class="section-h2">Two lawyers who <em>actually listen</em> &mdash; <strong>and a team that follows through.</strong></h2>
+            <p class="section-lead">Bilingual in English and Tagalog. Whether you walk in or call from the hospital, you'll be heard before any paperwork is opened.</p>
+        </div>
+
+        <div class="lawyers-grid">
+            <article class="lawyer-card">
+                <div class="lawyer-photo">
+                    <img src="img/christopher.jpg" alt="Christopher Chaclag Balawan, Lawyer">
+                </div>
+                <div class="lawyer-info">
+                    <p class="role">Lawyer</p>
+                    <h4>Christopher Chaclag Balawan</h4>
+                    <div class="practice-tags">
+                        <span>Family Law</span>
+                        <span>Criminal Law</span>
+                        <span>Wills &amp; Estate</span>
+                        <span>Immigration</span>
+                        <span>Notary</span>
+                    </div>
+                    <p class="languages">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        Speaks <strong>English &amp; Tagalog</strong>
+                    </p>
+                </div>
+            </article>
+            <article class="lawyer-card">
+                <div class="lawyer-photo">
+                    <img src="img/justine.jpg" alt="Justine Camille Rivera, Lawyer">
+                </div>
+                <div class="lawyer-info">
+                    <p class="role">Lawyer</p>
+                    <h4>Justine Camille Rivera</h4>
+                    <div class="practice-tags">
+                        <span>Immigration</span>
+                        <span>Real Estate</span>
+                        <span>Wills &amp; Estate</span>
+                        <span>Family Law</span>
+                        <span>Notary</span>
+                    </div>
+                    <p class="languages">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        Speaks <strong>English &amp; Tagalog</strong>
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="team-note">
+            <p class="team-note-label">Plus a Five-Person Support Team</p>
+            <p class="team-note-text">
+                Behind the lawyers: <strong>Loraine Balawan</strong> (Business Administrator), <strong>Demi Daliyong-Wanna</strong> (Immigration Legal Assistant), <strong>Mikee Cosalan</strong> (Real Estate Legal Assistant), <strong>Kyle Rivera</strong> (Immigration / Real Estate Legal Assistant), and <strong>Elizabeth Taganile</strong> (Immigration Case Manager).
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- STORY VIDEO -->
+<section class="story" id="story">
+    <div class="container">
+        <div class="story-grid">
+            <div class="story-text">
+                <p class="section-eyebrow">Meet the Firm</p>
+                <h2>A short visit <em>inside</em> <strong>Balawan Law Firm.</strong></h2>
+                <p>The fastest way to know if a lawyer is right for you is to see how they listen. Watch a quick walk-through of the firm, the team, and the kind of conversations our clients actually have when they walk through our door.</p>
+                <p>Filmed at our Macleod Trail office in Calgary &mdash; produced with Katigbak Technologies.</p>
+                <div class="story-meta">
+                    <div class="story-meta-row">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        <span><strong>Bilingual:</strong> Conversations available in English &amp; Tagalog.</span>
+                    </div>
+                    <div class="story-meta-row">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span><strong>Same-day notary</strong> by appointment. Mobile service to home or hospital.</span>
+                    </div>
+                    <div class="story-meta-row">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span><strong>Suite 204&ndash;5920 Macleod Trail SW</strong>, Calgary &middot; near Chinook Mall.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-frame">
+                <div class="video-aspect">
+                    <iframe src="https://www.youtube-nocookie.com/embed/ARbWqG_j9A8?rel=0" title="Balawan Law Firm Calgary &mdash; Katigbak Technologies" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="video-title">Balawan Law Firm Calgary</span>
+                    <span>Watch on YouTube</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH / PILLARS -->
+<section class="section pillars" id="approach">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Listen first. <em>Then act.</em></h2>
+            <p class="section-lead">Four commitments that have shaped how Balawan Law Firm works with every client &mdash; from the first call to the last document.</p>
+        </div>
+
+        <div class="pillars-grid">
+            <article class="pillar-card">
+                <span class="pillar-num">i.</span>
+                <h3>We Listen</h3>
+                <p>Every matter starts with hearing the full story &mdash; in your language, at your pace &mdash; before any paperwork is opened.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">ii.</span>
+                <h3>Bilingual by Design</h3>
+                <p>The whole firm works in English and Tagalog. Nothing important gets lost in translation between you and your lawyer.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">iii.</span>
+                <h3>We Travel to You</h3>
+                <p>Mobile services to your home or hospital when getting to our office isn't possible. Same-day notary by appointment.</p>
+            </article>
+            <article class="pillar-card">
+                <span class="pillar-num">iv.</span>
+                <h3>Across Southern Alberta</h3>
+                <p>Calgary is home, but we serve clients in Red Deer, Canmore, Banff, Okotoks, High River, and Chestermere too.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Have a question? <strong>Tell us everything.</strong></h2>
+            <p>Reach out by phone, email, or send a message &mdash; we'll listen, then we'll get to work.</p>
+            <div class="hero-actions" style="justify-content:center;margin-bottom:0;">
+                <a href="#contact" class="btn btn-navy-cta">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:4034046981" class="btn btn-ghost-dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (403) 404-6981
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Visit us at <em>Macleod Trail.</em></h2>
+            <p class="section-lead">Near Chinook Mall in Southwest Calgary. Tell us about your matter and we'll be in touch.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Suite 204&ndash;5920 Macleod Trail SW<br>Calgary, AB&nbsp; T2H 0K2</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:4034046981">+1 (403) 404-6981</a><br>
+                            <span style="color:var(--text-soft);font-size:0.88rem;">Fax: +1 (403) 452-4277</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@balawanlawfirm.ca">info@balawanlawfirm.ca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Monday&ndash;Thursday &middot; 9:00 AM &ndash; 5:00 PM<br>Friday &middot; 9:00 AM &ndash; 1:00 PM<br><span style="color:var(--text-soft);font-size:0.88rem;">Closed on holidays</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="bf-name">Full Name</label>
+                            <input type="text" id="bf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="bf-phone">Phone</label>
+                            <input type="tel" id="bf-phone" placeholder="(403) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="bf-email">Email</label>
+                        <input type="email" id="bf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="bf-area">Practice Area</label>
+                            <select id="bf-area">
+                                <option value="">Select a category...</option>
+                                <option>Immigration Law</option>
+                                <option>Real Estate</option>
+                                <option>Wills &amp; Estate</option>
+                                <option>Family Law</option>
+                                <option>Criminal Law</option>
+                                <option>Notary / SPA</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="bf-lang">Preferred Language</label>
+                            <select id="bf-lang">
+                                <option>English</option>
+                                <option>Tagalog</option>
+                                <option>Either is fine</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="bf-msg">Brief Description</label>
+                        <textarea id="bf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=Suite+204+5920+Macleod+Trail+SW+Calgary+AB+T2H+0K2&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Balawan Law Firm location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="b-mark inverse" aria-label="Balawan Law Firm">
+                    <span class="b-monogram" aria-hidden="true">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="25,4 46,42 4,42" fill="none" stroke="#E0BB6E" stroke-width="2.5" stroke-linejoin="round"/>
+                            <text x="25" y="33" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="20" fill="#E0BB6E" font-style="italic">B</text>
+                        </svg>
+                    </span>
+                    <span class="b-wordmark">
+                        <span class="b-name">Balawan</span>
+                        <span class="b-sub">Law Firm</span>
+                    </span>
+                </a>
+                <p>The Lawyers who Listen. A bilingual English &amp; Tagalog law firm in Calgary, serving the Filipino-Canadian community across Southern Alberta.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/BalawanLawFirm" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/balawan-law/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/balawan_law_firm/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Practice</h5>
+                <ul>
+                    <li><a href="#practice">Immigration Law</a></li>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Wills &amp; Estate</a></li>
+                    <li><a href="#practice">Family Law</a></li>
+                    <li><a href="#practice">Criminal Law</a></li>
+                    <li><a href="#practice">Notary &amp; SPA</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Firm</h5>
+                <ul>
+                    <li><a href="#lawyers">Our Lawyers</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#contact">Book Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:4034046981">+1 (403) 404-6981</a></li>
+                    <li class="plain">Fax: (403) 452-4277</li>
+                    <li><a href="mailto:info@balawanlawfirm.ca">info@balawanlawfirm.ca</a></li>
+                    <li class="plain">Suite 204&ndash;5920 Macleod Trail SW<br>Calgary, AB&nbsp; T2H 0K2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Balawan Law Firm. All rights reserved.</span>
+            <span>Calgary &middot; Bilingual EN &middot; TL</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with Balawan Law Firm.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .pillar-card, .lawyer-card, .team-note, .promise-inner, .cta-inner, .map-wrap, .contact-info, .contact-form, .coverage-inner, .story-text, .video-frame');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .pillars-grid, .lawyers-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
