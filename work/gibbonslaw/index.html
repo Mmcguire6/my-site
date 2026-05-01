@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Gibbons Law Office &mdash; Full-Service Legal Counsel in Gibbons, Alberta</title>
+    <meta name="description" content="The Gibbons Law Office &mdash; a full-service Alberta law firm serving Gibbons and the surrounding area since 2008. Big-city lawyers with small-town spirit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* The Gibbons Law Office — small-town respected: deep petrol teal + brass gold + cream */
+            /* Variable names preserved for diff clarity — values shifted from warm wheat to teal/brass */
+            --brick:        #1A4145;          /* deep petrol teal — primary dark/CTA */
+            --brick-bright: #266068;
+            --brick-deep:   #0E2729;
+            --brick-darker: #061518;
+            --brick-pale:   #B8D5D7;
+            --brick-tint:   #E1ECEC;
+            --brick-soft:   #F0F6F6;
+
+            --wheat:        #B8862F;          /* brass gold — accent */
+            --wheat-bright: #D4A04C;
+            --wheat-deep:   #7A5818;
+            --wheat-darker: #4D3613;
+            --wheat-pale:   #E8D5A8;
+            --wheat-tint:   #F2E5BC;
+            --wheat-soft:   #FAF2DD;
+
+            --coffee:       #15252A;          /* deep ink anchor — for footer/about */
+            --coffee-mid:   #2C3D42;
+            --coffee-light: #5A6B70;
+
+            --text:         #1F2A2D;
+            --text-mid:     #4A5559;
+            --text-soft:    #6E797E;
+            --text-faint:   #98A2A6;
+
+            --paper:        #FFFFFF;
+            --bg:           #F6F2E8;          /* warm cream */
+            --bg-soft:      #FAF7EE;
+            --cream:        #F2EAD2;          /* warm ivory cream */
+            --cream-deep:   #E8DDB8;
+
+            --border:       #DCD2BB;
+            --border-soft:  #E8E0CC;
+
+            --topbar-h:     40px;
+            --nav-h:        80px;
+            --total-nav:    120px;
+
+            --shadow-sm:    0 1px 3px rgba(21,37,42,0.06);
+            --shadow-md:    0 8px 24px -8px rgba(21,37,42,0.22), 0 2px 6px -2px rgba(21,37,42,0.08);
+            --shadow-lg:    0 24px 56px -20px rgba(21,37,42,0.32), 0 8px 16px -8px rgba(21,37,42,0.10);
+            --shadow-brick: 0 12px 28px -8px rgba(26,65,69,0.40);
+            --shadow-wheat: 0 12px 28px -8px rgba(184,134,47,0.40);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', 'Times New Roman', serif;
+            color: var(--coffee);
+            letter-spacing: -0.005em;
+            line-height: 1.16;
+            font-weight: 500;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .gl-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .gl-monogram {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--brick);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.4rem;
+            letter-spacing: 0;
+            border: 2px solid var(--wheat);
+            flex-shrink: 0;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .gl-wordmark {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
+        }
+        .gl-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--coffee);
+            letter-spacing: -0.005em;
+            font-variation-settings: "opsz" 144;
+        }
+        .gl-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--brick);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        .gl-mark.inverse .gl-monogram { background: var(--wheat); color: var(--coffee); border-color: var(--wheat-pale); }
+        .gl-mark.inverse .gl-name { color: var(--cream); }
+        .gl-mark.inverse .gl-tag { color: var(--wheat-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--coffee);
+            color: rgba(248,241,228,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 1px solid rgba(184,134,47,0.32);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(248,241,228,0.88);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--wheat-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--wheat); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(248,241,228,0.18); }
+        .top-bar .top-tag {
+            color: var(--wheat-pale);
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 0.86rem;
+            font-weight: 400;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--coffee);
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--brick); }
+        .nav-cta {
+            background: var(--brick);
+            color: var(--cream) !important;
+            padding: 13px 22px;
+            border-radius: 999px;
+            font-weight: 600 !important;
+            font-size: 0.84rem !important;
+            letter-spacing: 0.04em;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover {
+            background: var(--brick-deep);
+            color: var(--cream) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-brick);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--coffee);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s ease;
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--coffee); font-size: 1rem; font-weight: 500; }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: var(--total-nav);
+            padding-bottom: 40px;
+            position: relative;
+            background:
+                linear-gradient(105deg, rgba(242,234,210,0.86) 0%, rgba(242,234,210,0.72) 45%, rgba(242,234,210,0.42) 80%, rgba(242,234,210,0.32) 100%),
+                url('img/hero.jpg') center 35% / cover no-repeat;
+            color: var(--coffee);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 85% 25%, rgba(184,134,47,0.22), transparent 55%),
+                radial-gradient(ellipse at 10% 80%, rgba(26,65,69,0.12), transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--brick) 0%, var(--wheat) 50%, var(--brick) 100%);
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 940px;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--brick);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 2px;
+            background: var(--brick);
+        }
+        .hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+            font-weight: 500;
+            color: var(--coffee);
+            line-height: 1.06;
+            letter-spacing: -0.02em;
+            margin-bottom: 28px;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--brick);
+            font-weight: 500;
+        }
+        .hero-sub {
+            font-size: 1.16rem;
+            color: var(--coffee-mid);
+            line-height: 1.65;
+            max-width: 660px;
+            margin-bottom: 44px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            border-radius: 999px;
+            transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-brick {
+            background: var(--brick);
+            color: var(--cream);
+            box-shadow: var(--shadow-brick);
+        }
+        .btn-brick:hover {
+            background: var(--brick-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(26,65,69,0.55);
+        }
+        .btn-cream {
+            background: var(--paper);
+            color: var(--coffee);
+            border: 1.5px solid var(--border);
+        }
+        .btn-cream:hover {
+            background: var(--cream);
+            border-color: var(--brick);
+            transform: translateY(-2px);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--coffee);
+            border: 1.5px solid var(--coffee-mid);
+        }
+        .btn-ghost:hover {
+            background: var(--coffee);
+            border-color: var(--coffee);
+            color: var(--cream);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 56px;
+            flex-wrap: wrap;
+            padding-top: 36px;
+            border-top: 2px solid var(--brick-pale);
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hero-stat-num {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--brick);
+            font-weight: 500;
+            line-height: 1;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .hero-stat-label {
+            font-size: 0.72rem;
+            color: var(--coffee-light);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--brick);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--wheat);
+        }
+        .section-h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+            font-weight: 500;
+            color: var(--coffee);
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+        .section-h2 em { font-style: italic; color: var(--brick); font-weight: 500; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── PROMISE STRIP ────────────────────────────────── */
+        .promise {
+            background:
+                linear-gradient(135deg, rgba(26,65,69,0.92) 0%, rgba(14,39,41,0.88) 50%, rgba(26,65,69,0.94) 100%),
+                url('img/wheat-hero.jpg') center 40% / cover no-repeat;
+            padding: 100px 0;
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 25% 30%, rgba(255,255,255,0.08), transparent 55%),
+                radial-gradient(ellipse at 75% 70%, rgba(0,0,0,0.18), transparent 50%);
+            pointer-events: none;
+        }
+        .promise::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, var(--wheat-bright) 50%, transparent 100%);
+        }
+        .promise-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .promise blockquote {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.4rem, 2.7vw, 2.05rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--cream);
+            line-height: 1.36;
+            letter-spacing: -0.01em;
+            margin-bottom: 18px;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .promise blockquote em {
+            font-style: italic;
+            color: var(--wheat-pale);
+        }
+        .promise-cite {
+            font-size: 0.78rem;
+            color: rgba(248,241,228,0.78);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── PRACTICE (3 editorial cards) ─────────────────── */
+        .practice {
+            background: var(--paper);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .practice-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 44px 36px 36px;
+            border-radius: 16px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--wheat);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .practice-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--wheat);
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--brick-tint);
+            color: var(--brick);
+            border-radius: 50%;
+            margin-bottom: 24px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .practice-card:hover .practice-icon {
+            background: var(--brick);
+            color: var(--cream);
+        }
+        .practice-icon svg { width: 26px; height: 26px; }
+        .practice-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.65rem;
+            color: var(--coffee);
+            margin-bottom: 12px;
+            font-weight: 500;
+            letter-spacing: -0.014em;
+            line-height: 1.2;
+            font-variation-settings: "opsz" 144;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.98rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .practice-tag {
+            font-size: 0.74rem;
+            padding: 5px 12px;
+            background: var(--brick-soft);
+            color: var(--brick-deep);
+            border-radius: 999px;
+            font-weight: 600;
+        }
+        .practice-card:hover .practice-tag {
+            background: var(--cream-deep);
+        }
+        .practice-note {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--text-mid);
+            font-variation-settings: "opsz" 144;
+        }
+        .practice-note strong {
+            color: var(--brick);
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /* ── APPROACH (4 pillars) ─────────────────────────── */
+        .approach {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            top: -160px;
+            right: -160px;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(184,134,47,0.10), transparent 70%);
+            pointer-events: none;
+        }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 32px 0 0;
+            border-top: 2px solid var(--brick);
+        }
+        .approach-num {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--brick);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            font-variation-settings: "opsz" 144;
+        }
+        .approach-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.45rem;
+            color: var(--coffee);
+            font-weight: 500;
+            letter-spacing: -0.012em;
+            line-height: 1.22;
+            font-variation-settings: "opsz" 144;
+        }
+        .approach-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-top: 4px;
+        }
+
+        /* ── TESTIMONIALS ─────────────────────────────────── */
+        .testimonials {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(184,134,47,0.08), transparent 70%);
+            pointer-events: none;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            max-width: 1080px;
+            margin: 0 auto 36px;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 44px 40px 36px;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--wheat);
+            border-radius: 16px 16px 0 0;
+            transform: scaleX(0.20);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--wheat);
+            box-shadow: var(--shadow-md);
+        }
+        .testimonial-card:hover::before { transform: scaleX(1); }
+        .testimonial-quote-mark {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 4rem;
+            color: var(--wheat);
+            line-height: 1;
+            margin-bottom: 4px;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .testimonial-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 18px;
+            color: var(--wheat);
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+        .testimonial-card blockquote {
+            font-family: 'Fraunces', serif;
+            font-size: 1.08rem;
+            line-height: 1.6;
+            color: var(--text);
+            font-weight: 400;
+            margin-bottom: 24px;
+            flex-grow: 1;
+            font-variation-settings: "opsz" 144;
+        }
+        .testimonial-cite {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .testimonial-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--coffee);
+            font-variation-settings: "opsz" 144;
+        }
+        .testimonial-source {
+            font-size: 0.74rem;
+            color: var(--brick);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .testimonial-source svg { width: 12px; height: 12px; }
+        .testimonials-link-wrap {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonials-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--brick);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--wheat);
+            padding: 4px 0;
+            transition: gap 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .testimonials-link:hover { gap: 18px; color: var(--brick-deep); border-color: var(--brick); }
+        .testimonials-link svg { width: 14px; height: 14px; }
+
+        /* ── COUNSEL (Darren + Dale) ──────────────────────── */
+        .counsel {
+            background: var(--paper);
+        }
+        .counsel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            max-width: 920px;
+            margin: 0 auto 36px;
+        }
+        .counsel-card {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 44px 36px;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .counsel-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--wheat);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .counsel-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--brick);
+            box-shadow: var(--shadow-md);
+        }
+        .counsel-card:hover::before { transform: scaleX(1); }
+        .counsel-avatar {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: var(--brick);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.7rem;
+            font-weight: 500;
+            flex-shrink: 0;
+            border: 2px solid var(--wheat);
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .counsel-info h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            color: var(--coffee);
+            font-weight: 600;
+            margin-bottom: 4px;
+            letter-spacing: -0.012em;
+            font-variation-settings: "opsz" 144;
+        }
+        .counsel-info .role {
+            font-size: 0.72rem;
+            color: var(--brick);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .counsel-link-wrap {
+            text-align: center;
+        }
+        .counsel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--brick);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--wheat);
+            padding: 4px 0;
+            transition: gap 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .counsel-link:hover { gap: 18px; color: var(--brick-deep); border-color: var(--brick); }
+        .counsel-link svg { width: 14px; height: 14px; }
+
+        /* ── ABOUT TEASER ─────────────────────────────────── */
+        .about {
+            background:
+                linear-gradient(135deg, rgba(21,37,42,0.78) 0%, rgba(14,39,41,0.86) 50%, rgba(21,37,42,0.88) 100%),
+                url('img/about-prairie.jpg') center 50% / cover no-repeat;
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        .about::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(184,134,47,0.16), transparent 55%),
+                radial-gradient(ellipse at 20% 80%, rgba(26,65,69,0.20), transparent 50%);
+            pointer-events: none;
+        }
+        .about .container { position: relative; z-index: 1; }
+        .about-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-inner .section-eyebrow { color: var(--wheat-bright); }
+        .about-inner .section-eyebrow::before,
+        .about-inner .section-eyebrow::after { background: var(--wheat-bright); }
+        .about-inner h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+            font-weight: 500;
+            color: var(--cream);
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+        .about-inner h2 em { font-style: italic; color: var(--wheat-bright); font-weight: 500; }
+        .about-inner > p {
+            font-size: 1.1rem;
+            color: rgba(248,241,228,0.85);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            font-weight: 400;
+        }
+        .about-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--wheat);
+            padding: 4px 0;
+            transition: gap 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .about-link:hover { gap: 16px; color: var(--wheat-bright); }
+        .about-link svg { width: 14px; height: 14px; }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--wheat);
+            color: var(--coffee);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.18), transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(21,37,42,0.10), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            color: var(--coffee);
+            font-weight: 500;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+        .cta-inner h2 em { font-style: italic; color: var(--brick-deep); font-weight: 500; }
+        .cta-inner p {
+            color: rgba(21,37,42,0.82);
+            font-size: 1.04rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-coffee {
+            background: var(--coffee);
+            color: var(--cream);
+        }
+        .cta-band .btn-coffee:hover {
+            background: var(--brick-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(21,37,42,0.45);
+        }
+        .cta-band .btn-ghost-dark {
+            background: transparent;
+            color: var(--coffee);
+            border: 1.5px solid rgba(21,37,42,0.45);
+        }
+        .cta-band .btn-ghost-dark:hover {
+            background: rgba(255,255,255,0.20);
+            border-color: var(--coffee);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.65rem;
+            color: var(--coffee);
+            margin-bottom: 28px;
+            font-weight: 500;
+            letter-spacing: -0.014em;
+            font-variation-settings: "opsz" 144;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--coffee);
+            color: var(--wheat);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--brick);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.15s;
+        }
+        .contact-list a:hover { color: var(--brick); }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            color: var(--coffee);
+            margin-bottom: 8px;
+            font-weight: 500;
+            letter-spacing: -0.014em;
+            font-variation-settings: "opsz" 144;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field label {
+            font-size: 0.72rem;
+            color: var(--coffee);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg-soft);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 13px 16px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%231A4145' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 12px;
+            padding-right: 46px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--brick);
+            background-color: var(--paper);
+        }
+        .form-field select:focus {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%231A4145' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 7l5 -5 5 5'/></svg>");
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+            padding: 12px;
+        }
+        .form-field select option[value=""] {
+            color: var(--text-soft);
+            font-style: italic;
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--brick);
+            color: var(--cream);
+            padding: 16px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border-radius: 999px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-btn:hover {
+            background: var(--brick-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-brick);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-note {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--coffee);
+            color: rgba(248,241,228,0.65);
+            padding: 64px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        .footer-brand .gl-mark { margin-bottom: 18px; }
+        .footer-brand p {
+            color: rgba(248,241,228,0.65);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-col h5 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            color: var(--wheat-bright);
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.005em;
+            font-variation-settings: "opsz" 144;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.9rem;
+            color: rgba(248,241,228,0.65);
+            transition: color 0.15s;
+        }
+        .footer-col a:hover { color: var(--wheat-bright); }
+        .footer-bottom {
+            border-top: 1px solid rgba(248,241,228,0.12);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(248,241,228,0.50);
+        }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--coffee);
+            color: var(--cream);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--wheat);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--wheat-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(248,241,228,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+        }
+        .demo-banner-close:hover { color: var(--wheat-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .practice-grid { grid-template-columns: 1fr; gap: 20px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .counsel-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .top-tag { display: none; }
+            .top-bar-inner { gap: 14px; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 48px; }
+            .approach-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .hero-stats { gap: 24px; }
+            .hero-stat-num { font-size: 1.7rem; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .gl-name { font-size: 1.05rem; }
+            .gl-tag { font-size: 0.55rem; }
+            .gl-monogram { width: 42px; height: 42px; font-size: 1.2rem; }
+            .counsel-card { flex-direction: column; text-align: center; padding: 36px 24px; }
+        }
+
+        ::selection { background: var(--wheat); color: var(--coffee); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:7809233446">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (780) 923-3446
+        </a>
+        <span class="divider"></span>
+        <a href="tel:7809141552">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            After Hours (780) 914-1552
+        </a>
+        <span class="divider"></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Gibbons, Alberta</span>
+        <span class="divider"></span>
+        <span class="top-tag">A little law office with the biggest heart</span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="gl-mark" aria-label="The Gibbons Law Office">
+            <span class="gl-monogram">G</span>
+            <span class="gl-wordmark">
+                <span class="gl-name">The Gibbons Law Office</span>
+                <span class="gl-tag">Since 2008</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">What We Do</a></li>
+            <li><a href="#approach">Our Approach</a></li>
+            <li><a href="#counsel">Our Lawyers</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">What We Do</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#counsel">Our Lawyers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Gibbons, Alberta &middot; Since 2008</span>
+            <h1>A little law office with the <em>biggest heart.</em></h1>
+            <p class="hero-sub">
+                Big-city lawyers, small-town spirit. The Gibbons Law Office is a full-service Alberta firm helping our community with the everyday matters and the once-in-a-lifetime ones &mdash; for nearly two decades.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-brick">
+                    Talk to Us
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:7809233446" class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (780) 923-3446
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">Since 2008</span>
+                    <span class="hero-stat-label">Serving Gibbons</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">Full-Service</span>
+                    <span class="hero-stat-label">From Wills to Real Estate</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">Local</span>
+                    <span class="hero-stat-label">Right on 48 Street</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE STRIP -->
+<section class="promise">
+    <div class="container">
+        <div class="promise-inner">
+            <blockquote>
+                &ldquo;We may have big city lawyers, but we are proud to maintain the small town spirit and friendliness <em>that Gibbons, Alberta so easily radiates.</em>&rdquo;
+            </blockquote>
+            <p class="promise-cite">&mdash; The Gibbons Law Office</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">What We Do</p>
+            <h2 class="section-h2">Full-service legal counsel, <em>under one roof.</em></h2>
+            <p class="section-lead">From the matters that keep your family safe to the deals that build your business &mdash; the Gibbons Law Office handles the legal work small-town and surrounding-area Albertans need.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 3 L21 12"/><path d="M5 10 L5 21 L19 21 L19 10"/><path d="M10 21 L10 14 L14 14 L14 21"/></svg>
+                </div>
+                <h3>Property &amp; Real Estate</h3>
+                <p>Buying, selling, refinancing, and the things that come with property ownership &mdash; handled cleanly and on time.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Real Estate</span>
+                    <span class="practice-tag">Mortgages</span>
+                    <span class="practice-tag">Foreclosure</span>
+                    <span class="practice-tag">Landlord/Tenant</span>
+                </div>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Family &amp; Estates</h3>
+                <p>The legal documents that protect your family &mdash; before, during, and after the moments that change everything.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Wills &amp; POA</span>
+                    <span class="practice-tag">Estates &amp; Probate</span>
+                    <span class="practice-tag">Divorce</span>
+                    <span class="practice-tag">Mediation</span>
+                    <span class="practice-tag">Guardianship</span>
+                </div>
+            </article>
+            <article class="practice-card">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3>Business &amp; Personal</h3>
+                <p>From your incorporation to your injury claim &mdash; the day-to-day legal services every Albertan needs at some point.</p>
+                <div class="practice-tags">
+                    <span class="practice-tag">Corporate</span>
+                    <span class="practice-tag">Personal Injury</span>
+                    <span class="practice-tag">Notary &amp; Commissioner</span>
+                </div>
+            </article>
+        </div>
+
+        <p class="practice-note">
+            Don't see your matter? <strong>Just give us a call.</strong> If we can help, we will &mdash; and if we can't, we'll point you the right way.
+        </p>
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section approach" id="approach">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Expert. Detailed. <em>Down the street.</em></h2>
+            <p class="section-lead">The four commitments that have shaped the Gibbons Law Office since 2008.</p>
+        </div>
+
+        <div class="approach-grid">
+            <article class="approach-card">
+                <span class="approach-num">i.</span>
+                <h3>Expert Counsel</h3>
+                <p>Big-city training and experience &mdash; brought home to Gibbons and the surrounding area where it's needed most.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">ii.</span>
+                <h3>Detailed Service</h3>
+                <p>Expert, detailed, professional services &mdash; for all of your legal matters, however big or small.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">iii.</span>
+                <h3>Small-Town Spirit</h3>
+                <p>The friendliness Gibbons so easily radiates &mdash; carried right through every interaction at our office.</p>
+            </article>
+            <article class="approach-card">
+                <span class="approach-num">iv.</span>
+                <h3>Always Reachable</h3>
+                <p>Office hours when you need them &mdash; and an after-hours line for the matters that won't wait until Monday.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Client Reviews</p>
+            <h2 class="section-h2">What our <em>community says.</em></h2>
+            <p class="section-lead">Real reviews from clients across Gibbons and the surrounding area.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>I have been dealing with Lorrie and her team for more than 15 years. She has always been professional, honest and very efficient. I highly recommend them to anyone in Gibbons and the surrounding area. You will not be disappointed with their service.</blockquote>
+                <p class="testimonial-cite">
+                    <span class="testimonial-name">David Jobin</span>
+                    <span class="testimonial-source">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="currentColor"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor"/></svg>
+                        Google Review
+                    </span>
+                </p>
+            </article>
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>Very personable, friendly and professional staff. The Gibbons Law Office is our 'go to' for all our legal needs.</blockquote>
+                <p class="testimonial-cite">
+                    <span class="testimonial-name">Maureen Amonson</span>
+                    <span class="testimonial-source">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="currentColor"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor"/></svg>
+                        Google Review
+                    </span>
+                </p>
+            </article>
+        </div>
+
+        <div class="testimonials-link-wrap">
+            <a href="https://www.google.com/search?q=The+Gibbons+Law+Office+reviews" class="testimonials-link" target="_blank" rel="noopener">
+                Read all reviews on Google
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- COUNSEL -->
+<section class="section counsel" id="counsel">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Lawyers</p>
+            <h2 class="section-h2">Two lawyers, <em>one office.</em></h2>
+            <p class="section-lead">An association of independent lawyers serving the Gibbons community side-by-side.</p>
+        </div>
+
+        <div class="counsel-grid">
+            <article class="counsel-card">
+                <div class="counsel-avatar">DM</div>
+                <div class="counsel-info">
+                    <h4>Darren W. Moroz</h4>
+                    <p class="role">Barrister &amp; Solicitor</p>
+                </div>
+            </article>
+            <article class="counsel-card">
+                <div class="counsel-avatar">DO</div>
+                <div class="counsel-info">
+                    <h4>Dale W. Osborne</h4>
+                    <p class="role">Barrister &amp; Solicitor</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="counsel-link-wrap">
+            <a href="#contact" class="counsel-link">
+                Meet our team
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="about-inner">
+            <p class="section-eyebrow">About the Office</p>
+            <h2>A small office <em>with a long memory.</em></h2>
+            <p>The Gibbons Law Office opened in 2008 as a place where the people of Gibbons and the surrounding area could find expert, detailed legal services without having to leave town &mdash; or feel like they were dealing with a stranger when they got there.</p>
+            <a href="#contact" class="about-link">
+                Stop by 48 Street
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <div class="cta-inner">
+            <h2>Got something <em>to talk through?</em></h2>
+            <p>Give us a call, drop by the office, or send a message &mdash; and we'll get back to you.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="#contact" class="btn btn-coffee">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:7809233446" class="btn btn-ghost-dark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (780) 923-3446
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Find us on <em>48 Street.</em></h2>
+            <p class="section-lead">Tell us a bit about your matter and we'll be in touch.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>5018 48 Street<br>Gibbons, AB&nbsp; T0A 1N0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:7809233446">(780) 923-3446</a><br>
+                            <span style="color:var(--text-mid);font-size:0.92rem;">After hours: <a href="tel:7809141552">(780) 914-1552</a> (Lorrie)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:ldomsky@thegibbonslawoffice.com">ldomsky@thegibbonslawoffice.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>9:00 AM &ndash; 4:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(780) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Real Estate</option>
+                            <option>Wills, POA &amp; Estates</option>
+                            <option>Divorce or Family Law</option>
+                            <option>Corporate or Business</option>
+                            <option>Personal Injury</option>
+                            <option>Notary or Commissioner for Oaths</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about what you need — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=5018+48+Street,+Gibbons,+AB+T0A+1N0&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Gibbons Law Office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="gl-mark inverse" aria-label="The Gibbons Law Office">
+                    <span class="gl-monogram">G</span>
+                    <span class="gl-wordmark">
+                        <span class="gl-name">The Gibbons Law Office</span>
+                        <span class="gl-tag">Since 2008</span>
+                    </span>
+                </a>
+                <p>A full-service Alberta law firm serving Gibbons and the surrounding area &mdash; with the small-town spirit and friendliness that Gibbons so easily radiates.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Firm</h5>
+                <ul>
+                    <li><a href="#practice">What We Do</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#counsel">Our Lawyers</a></li>
+                    <li><a href="#about">About the Office</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:7809233446">(780) 923-3446</a></li>
+                    <li><a href="mailto:ldomsky@thegibbonslawoffice.com">ldomsky@thegibbonslawoffice.com</a></li>
+                    <li class="plain">5018 48 Street<br>Gibbons, AB&nbsp; T0A 1N0</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> The Gibbons Law Office. All rights reserved.</span>
+            <span>Gibbons, Alberta &middot; Full-Service Counsel Since 2008</span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank">Matthew McGuire</a> &mdash; not affiliated with The Gibbons Law Office.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // In-page hash links are intentionally inert on this landing demo —
+    // each section will become its own dedicated page in the production build.
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (a) e.preventDefault();
+    });
+
+    // Mobile nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.section-head, .practice-card, .approach-card, .counsel-card, .counsel-link-wrap, .testimonial-card, .testimonials-link-wrap, .about-inner, .contact-info, .contact-form, .cta-inner, .map-wrap, .promise-inner, .practice-note');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.practice-grid, .approach-grid, .counsel-grid, .testimonials-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
