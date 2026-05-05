@@ -1,195 +1,1010 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Matthew McGuire</title>
-    <link rel="icon" href="mm-favicon.svg" type="image/svg+xml"><link rel="icon" href="mm-favicon.png">
-    <meta name="description" content="Get in touch with Matthew McGuire — available for freelance web design and development projects. Let's build something together.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Contact — Matthew McGuire">
-    <meta property="og:description" content="Get in touch with Matthew McGuire — available for freelance web design and development projects.">
-    <meta property="og:image" content="https://matthewmcguire.ca/img/og-image.png">
-    <meta property="og:url" content="https://matthewmcguire.ca/contact.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="css/contact.css">
-    <style>html{opacity:0}</style>
-    <script src="js/transitions.js" defer></script>
-    <script src="js/pages.js" defer></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "wh3e6pv2u4");
-    </script>
+<title>Contact — Matthew McGuire · Web Design Studio · Edmonton</title>
+<meta name="description" content="Start a project with Matthew McGuire. Send a few sentences about your firm and I'll respond within one business day with thoughts and a rough scope. Async over email, no discovery calls." />
+
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="mm-favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://matthewmcguire.ca/contact.html" />
+<meta property="og:title" content="Contact — Matthew McGuire · Web Design Studio · Edmonton" />
+<meta property="og:description" content="Send a few sentences about your firm. I'll respond within one business day." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CR8009ZP6T');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+
+<style>
+    :root {
+        --paper:        #EFE7D2;
+        --paper-soft:   #E6DBC0;
+        --paper-deeper: #D6C8A8;
+        --ink:          #1A1813;
+        --ink-2:        #4A4339;
+        --ink-3:        #847B6B;
+        --rule:         #CFC2A6;
+        --rule-soft:    #DDD2BA;
+        --accent:       #2C3D24;
+        --accent-deep:  #1A2516;
+        --accent-soft:  #C0CCB0;
+        --rust:         #7A4A28;
+        --rust-deep:    #4A2E1F;
+        --stone:        #5C5848;
+
+        --serif: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+        --sans:  'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+        --mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+        --max:    1240px;
+        --gutter: clamp(20px, 4vw, 56px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--ink);
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+    .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--gutter);
+    }
+
+    .skip-link {
+        position: absolute; top: -40px; left: 8px;
+        background: var(--ink); color: var(--paper);
+        padding: 8px 14px; font-size: 13px; font-weight: 500;
+        border-radius: 4px; z-index: 200;
+        transition: top 200ms ease;
+    }
+    .skip-link:focus { top: 8px; }
+
+    .eyebrow {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-deep);
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--accent);
+    }
+
+    /* MASTHEAD */
+    .masthead {
+        background: var(--ink);
+        color: color-mix(in oklch, var(--paper) 78%, transparent);
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent);
+    }
+    .masthead-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        gap: 16px;
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+    }
+    .masthead-edition {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .masthead-edition::before {
+        content: "";
+        width: 22px; height: 1px;
+        background: color-mix(in oklch, var(--rust) 90%, transparent);
+    }
+    .masthead-meta {
+        color: color-mix(in oklch, var(--paper) 60%, transparent);
+    }
+    @media (max-width: 600px) {
+        .masthead-meta { display: none; }
+        .masthead-edition::before { width: 16px; }
+        .masthead-inner { font-size: 9px; letter-spacing: 0.18em; }
+    }
+
+    /* NAV */
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--paper);
+        border-bottom: 1px solid transparent;
+        transition: border-color 240ms ease;
+    }
+    .nav.scrolled {
+        border-bottom-color: var(--rule);
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 0;
+        gap: 24px;
+    }
+    .nav-mark {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 12px;
+        color: var(--ink);
+    }
+    .nav-mark-letters {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+    .nav-mark-name {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+    .nav-links a {
+        font-size: 14px;
+        color: var(--ink-2);
+        position: relative;
+        padding: 4px 0;
+        transition: color 200ms ease;
+    }
+    .nav-links a[aria-current="page"] {
+        color: var(--ink);
+    }
+    .nav-links a[aria-current="page"]::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 1px;
+        background: var(--rust);
+    }
+    .nav-links a:not([aria-current="page"])::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 1px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 240ms cubic-bezier(.2,.7,.2,1);
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:not([aria-current="page"]):hover::after { transform: scaleX(1); }
+    .nav-cta {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink);
+        padding: 11px 20px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        transition: background 200ms ease, color 200ms ease;
+    }
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
+    @media (max-width: 760px) {
+        .nav-links { display: none; }
+        .nav-mark-name { display: none; }
+    }
+
+    /* BUTTONS */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 26px;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+        border-radius: 999px;
+        transition: all 220ms cubic-bezier(.2,.7,.2,1);
+        white-space: nowrap;
+    }
+    .btn-primary {
+        background: var(--ink);
+        color: var(--paper);
+    }
+    .btn-primary:hover {
+        background: var(--rust-deep);
+        transform: translateY(-1px);
+    }
+    .btn-secondary {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--ink);
+    }
+    .btn-secondary:hover {
+        background: var(--ink);
+        color: var(--paper);
+    }
+    .btn .arrow { transition: transform 220ms ease; display: inline-block; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* ── CONTACT HERO ── */
+    .contact-hero {
+        padding: clamp(72px, 9vw, 132px) 0 clamp(64px, 8vw, 120px);
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+    }
+    .contact-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(40px, 6vw, 96px);
+        align-items: start;
+    }
+    .contact-hero-h1 {
+        font-family: var(--serif);
+        font-size: clamp(48px, 7.4vw, 116px);
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: -0.032em;
+        line-height: 0.94;
+        color: var(--ink);
+        margin: 28px 0 28px;
+    }
+    .contact-hero-h1 .accent { color: var(--rust-deep); }
+    .contact-hero-tag {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2vw, 28px);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--ink-2);
+        margin: 0 0 28px;
+        max-width: 32ch;
+        letter-spacing: -0.012em;
+    }
+    .contact-hero-tag em {
+        font-style: normal;
+        color: var(--ink);
+        font-weight: 500;
+    }
+    .contact-hero-lede {
+        font-size: clamp(15px, 1.15vw, 17px);
+        line-height: 1.7;
+        color: var(--ink-2);
+        max-width: 50ch;
+        margin: 0 0 32px;
+    }
+    .contact-hero-fast {
+        margin-top: 28px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .contact-hero-fast-row {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 24px;
+        align-items: baseline;
+    }
+    .contact-hero-fast-key {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .contact-hero-fast-val {
+        font-family: var(--serif);
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--ink);
+    }
+    .contact-hero-fast-val em { font-style: italic; color: var(--ink-2); }
+    .contact-hero-fast-val a {
+        color: var(--ink);
+        border-bottom: 1px solid color-mix(in oklch, var(--ink) 30%, transparent);
+        padding-bottom: 1px;
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .contact-hero-fast-val a:hover {
+        color: var(--rust-deep);
+        border-bottom-color: var(--rust);
+    }
+
+    /* Form card */
+    .contact-form-card {
+        background: var(--paper-soft);
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        padding: clamp(32px, 4vw, 56px);
+        box-shadow:
+            0 1px 2px rgba(26, 24, 19, 0.04),
+            0 32px 64px -32px rgba(26, 24, 19, 0.18);
+    }
+    .contact-form-eyebrow {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rust-deep);
+        margin-bottom: 14px;
+    }
+    .contact-form-title {
+        font-family: var(--serif);
+        font-size: clamp(28px, 3vw, 40px);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.022em;
+        color: var(--ink);
+        margin: 0 0 12px;
+    }
+    .contact-form-title em { font-style: italic; font-weight: 500; color: var(--ink-2); }
+    .contact-form-sub {
+        font-family: var(--sans);
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--ink-2);
+        margin: 0 0 32px;
+    }
+    .cf-form { display: flex; flex-direction: column; gap: 20px; }
+    .cf-hp {
+        position: absolute;
+        left: -10000px; top: auto;
+        width: 1px; height: 1px;
+        overflow: hidden;
+    }
+    .cf-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .cf-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+    }
+    .cf-field label {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        font-weight: 500;
+    }
+    .cf-field input,
+    .cf-field textarea {
+        width: 100%;
+        max-width: 100%;
+        font-family: var(--sans);
+        font-size: 15px;
+        color: var(--ink);
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 3px;
+        padding: 12px 14px;
+        transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
+        outline: none;
+    }
+    .cf-field input:hover,
+    .cf-field textarea:hover { border-color: var(--ink-3); }
+    .cf-field input:focus,
+    .cf-field textarea:focus {
+        border-color: var(--rust);
+        box-shadow: 0 0 0 3px color-mix(in oklch, var(--rust) 14%, transparent);
+    }
+    .cf-field textarea {
+        resize: vertical;
+        min-height: 132px;
+        line-height: 1.55;
+    }
+    .cf-submit {
+        margin-top: 6px;
+        align-self: flex-start;
+        background: var(--ink);
+        color: var(--paper);
+        padding: 14px 28px;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+        border-radius: 999px;
+        transition: all 220ms cubic-bezier(.2,.7,.2,1);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .cf-submit:hover {
+        background: var(--rust-deep);
+        transform: translateY(-1px);
+    }
+    .cf-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .cf-submit .arrow { transition: transform 220ms ease; display: inline-block; }
+    .cf-submit:hover .arrow { transform: translateX(4px); }
+    .cf-foot {
+        margin-top: 8px;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .cf-foot a {
+        color: var(--ink);
+        border-bottom: 1px solid var(--rule);
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .cf-foot a:hover { color: var(--rust-deep); border-bottom-color: var(--rust); }
+    .cf-success,
+    .cf-error {
+        font-size: 14px;
+        line-height: 1.55;
+        padding: 14px 16px;
+        border-radius: 3px;
+        margin-top: 8px;
+    }
+    .cf-success {
+        background: color-mix(in oklch, var(--accent-soft) 60%, var(--paper));
+        border: 1px solid var(--accent-soft);
+        color: var(--ink);
+    }
+    .cf-success strong { color: var(--accent-deep); font-weight: 600; }
+    .cf-error {
+        background: #fdecea;
+        border: 1px solid #f5c2c0;
+        color: #6b1f1c;
+    }
+    .cf-error a { text-decoration: underline; }
+
+    @media (max-width: 980px) {
+        .contact-hero-grid { grid-template-columns: 1fr; gap: 56px; }
+        .cf-row { grid-template-columns: 1fr; gap: 20px; }
+        .contact-hero-fast-row { grid-template-columns: 1fr; gap: 6px; }
+    }
+
+    /* ── WHAT HAPPENS NEXT ── */
+    .next {
+        padding: clamp(80px, 9vw, 128px) 0;
+        background: var(--paper-soft);
+        border-bottom: 1px solid var(--rule);
+    }
+    .next-head {
+        margin-bottom: clamp(48px, 5vw, 72px);
+        max-width: 720px;
+    }
+    .next-head-h {
+        font-family: var(--serif);
+        font-size: clamp(36px, 4.6vw, 64px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.022em;
+        color: var(--ink);
+        margin: 16px 0 18px;
+        max-width: 14ch;
+    }
+    .next-head-h em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .next-head-lede {
+        font-size: clamp(15px, 1.15vw, 17px);
+        line-height: 1.7;
+        color: var(--ink-2);
+        max-width: 56ch;
+        margin: 0;
+    }
+    .next-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        border-top: 1px solid var(--rule);
+        border-left: 1px solid var(--rule);
+    }
+    .next-step {
+        padding: clamp(28px, 3vw, 40px);
+        border-right: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: var(--paper);
+    }
+    .next-step-n {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rust-deep);
+    }
+    .next-step-h {
+        font-family: var(--serif);
+        font-size: clamp(22px, 2vw, 28px);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.018em;
+        color: var(--ink);
+    }
+    .next-step-h em { font-style: italic; font-weight: 500; color: var(--ink-2); }
+    .next-step-body {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-2);
+    }
+    @media (max-width: 760px) {
+        .next-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── DIRECT CONTACTS ── */
+    .direct {
+        padding: clamp(72px, 8vw, 112px) 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+    }
+    .direct-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(48px, 6vw, 96px);
+        align-items: start;
+    }
+    .direct-h {
+        font-family: var(--serif);
+        font-size: clamp(36px, 4.6vw, 60px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.022em;
+        color: var(--ink);
+        margin: 18px 0 0;
+        max-width: 12ch;
+    }
+    .direct-h em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .direct-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid var(--rule);
+    }
+    .direct-list li {
+        border-bottom: 1px solid var(--rule);
+    }
+    .direct-list a {
+        display: grid;
+        grid-template-columns: 110px 1fr auto;
+        gap: 24px;
+        align-items: center;
+        padding: 22px 0;
+        color: var(--ink);
+        transition: color 220ms ease;
+    }
+    .direct-list a:hover { color: var(--rust-deep); }
+    .direct-list a:hover .direct-arrow { transform: translateX(6px); color: var(--rust); }
+    .direct-key {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .direct-val {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2vw, 26px);
+        font-weight: 500;
+        letter-spacing: -0.012em;
+    }
+    .direct-val em { font-style: italic; color: var(--ink-2); font-weight: 400; }
+    .direct-arrow {
+        font-family: var(--mono);
+        font-size: 16px;
+        color: var(--ink-3);
+        transition: transform 240ms cubic-bezier(.2,.7,.2,1), color 200ms ease;
+    }
+    @media (max-width: 880px) {
+        .direct-grid { grid-template-columns: 1fr; gap: 32px; }
+        .direct-list a { grid-template-columns: 90px 1fr auto; gap: 16px; }
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+        background: var(--paper-soft);
+        border-top: 1px solid var(--rule);
+        padding: 64px 0 48px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: clamp(32px, 4vw, 64px);
+        margin-bottom: 48px;
+    }
+    .footer-brand {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+    }
+    .footer-blurb {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-3);
+        max-width: 32ch;
+    }
+    .footer-h5 {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        margin-bottom: 18px;
+        font-weight: 500;
+    }
+    .footer-col ul {
+        list-style: none;
+        margin: 0; padding: 0;
+        display: flex; flex-direction: column;
+        gap: 10px;
+    }
+    .footer-col li { font-size: 14px; color: var(--ink-2); }
+    .footer-col a {
+        color: var(--ink-2);
+        transition: color 200ms ease;
+    }
+    .footer-col a:hover { color: var(--ink); }
+    .footer-bottom {
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: var(--ink-3);
+    }
+    @media (max-width: 760px) {
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    ::selection { background: var(--rust); color: var(--paper); }
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="ac-header">
-        <a class="ac-brand" href="portfolio.html"><img src="img/matthew_mcguire_hero.svg" class="ac-brand-logo" alt="MM"></a>
-        <a class="ac-avatar" href="index.html" title="Switch Profile">MM</a>
-        <button class="ac-hamburger" id="ac-hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
-    <div class="ac-mobile-nav" id="ac-mobile-nav">
-        <button class="ac-mobile-close" id="ac-mobile-close">&#x2715;</button>
-        <ul>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+<!-- MASTHEAD BAND -->
+<div class="masthead" role="presentation">
+    <div class="wrap masthead-inner">
+        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
     </div>
+</div>
 
-    <div class="ac-layout">
+<!-- NAV -->
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+            <span class="nav-mark-letters">Matthew McGuire</span>
+            <span class="nav-mark-name">Designer · developer</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="about.html">About</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#how">How I work</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <a href="#contact-form" class="nav-cta">Start a project →</a>
+    </div>
+</header>
 
-        <!-- Sidebar -->
-        <aside class="ac-sidebar">
-            <a href="portfolio.html" class="sidebar-back">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-                Back to Portfolio
-            </a>
-            <nav class="sidebar-nav">
-                <a href="portfolio.html#home" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Overview
-                </a>
-                <a href="portfolio.html#work" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    Work
-                </a>
-                <a href="about.html" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    About
-                </a>
-                <a href="skills.html" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Skills
-                </a>
-                <a href="contact.html" class="sidebar-link active">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
-                    Contact
-                </a>
-            </nav>
-        </aside>
+<main id="main">
 
-        <!-- Main -->
-        <main class="ac-main">
+<!-- HERO + FORM -->
+<section class="contact-hero">
+    <div class="wrap">
+        <div class="contact-hero-grid">
+            <div class="contact-hero-text">
+                <span class="eyebrow">Get in touch</span>
+                <h1 class="contact-hero-h1">Let&rsquo;s <span class="accent">talk.</span></h1>
+                <p class="contact-hero-tag">
+                    Tell me about <em>your firm.</em>
+                </p>
+                <p class="contact-hero-lede">
+                    A few sentences is plenty. I&rsquo;ll come back within one business day with thoughts, a rough scope, and &mdash; often &mdash; a working preview within a few days. Async over email is the default. No discovery calls, no pitch decks, no commitment until you&rsquo;ve seen what&rsquo;s possible.
+                </p>
 
-            <h1 class="ac-title">Contact</h1>
-            <p class="ac-subtitle">Let's Work Together</p>
-            <!-- Contact form -->
-            <div class="ac-block">
-                <p class="ac-section-label">Send a Message</p>
-                <form class="ac-form" name="contact" method="POST" data-netlify="true" id="contact-form">
-                    <input type="hidden" name="form-name" value="contact">
-                    <div class="form-row">
-                        <label class="form-label" for="name">Name</label>
-                        <input class="form-input" id="name" name="name" type="text" placeholder="Your name" required>
+                <div class="contact-hero-fast">
+                    <div class="contact-hero-fast-row">
+                        <span class="contact-hero-fast-key">Response time</span>
+                        <span class="contact-hero-fast-val">Within <em>one business day</em></span>
                     </div>
-                    <div class="form-row">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-input" id="email" name="email" type="email" placeholder="your@email.com" required>
+                    <div class="contact-hero-fast-row">
+                        <span class="contact-hero-fast-key">Direct email</span>
+                        <span class="contact-hero-fast-val"><a href="mailto:matt@matthewmcguire.ca?subject=Project%20enquiry">matt@matthewmcguire.ca</a></span>
                     </div>
-                    <div class="form-row form-row--area">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea class="form-input form-textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    <div class="contact-hero-fast-row">
+                        <span class="contact-hero-fast-key">Based in</span>
+                        <span class="contact-hero-fast-val">Edmonton, Alberta &mdash; <em>working with firms across Canada</em></span>
                     </div>
-                    <div class="form-footer">
-                        <button class="submit-btn" type="submit" id="submit-btn">Send Message</button>
+                    <div class="contact-hero-fast-row">
+                        <span class="contact-hero-fast-key">Engagements</span>
+                        <span class="contact-hero-fast-val">Two to three weeks <em>from signed scope to launch</em></span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="contact-form-card" id="contact-form">
+                <p class="contact-form-eyebrow">Start a project</p>
+                <h2 class="contact-form-title">Send a <em>note.</em></h2>
+                <p class="contact-form-sub">Anything you can share helps &mdash; what you do, what you&rsquo;re working on, what&rsquo;s prompting the rebuild. I respond personally to every message.</p>
+
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    class="cf-form"
+                    id="cf-form"
+                >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="cf-hp" aria-hidden="true">
+                        <label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                    </p>
+
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label for="cf-name">Name</label>
+                            <input type="text" id="cf-name" name="name" required autocomplete="name" />
+                        </div>
+                        <div class="cf-field">
+                            <label for="cf-email">Email</label>
+                            <input type="email" id="cf-email" name="email" required autocomplete="email" />
+                        </div>
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-firm">Firm or company</label>
+                        <input type="text" id="cf-firm" name="firm" autocomplete="organization" />
+                    </div>
+                    <div class="cf-field">
+                        <label for="cf-message">What are you working on?</label>
+                        <textarea id="cf-message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cf-submit">
+                        Send message <span class="arrow">→</span>
+                    </button>
+                    <p class="cf-foot">Or email <a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a> directly.</p>
+
+                    <div class="cf-success" hidden>
+                        <strong>Thanks &mdash; message received.</strong> I&rsquo;ll be in touch within one business day.
+                    </div>
+                    <div class="cf-error" hidden>
+                        Something went wrong sending the message. Please email <a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a> directly.
                     </div>
                 </form>
-                <div id="form-success" style="display:none;margin-top:1rem;padding:1.25rem 1.5rem;border:1.5px solid #d1fae5;border-radius:8px;background:#f0fdf4;">
-                    <p style="font-size:0.9rem;font-weight:600;color:#15803d;margin-bottom:0.2rem;">Message sent</p>
-                    <p style="font-size:0.84rem;color:#166534;">Thanks for reaching out — I'll get back to you within 1–2 business days.</p>
-                </div>
-                <div id="form-error" style="display:none;margin-top:1rem;padding:1.25rem 1.5rem;border:1.5px solid #fee2e2;border-radius:8px;background:#fef2f2;">
-                    <p style="font-size:0.9rem;font-weight:600;color:#dc2626;margin-bottom:0.2rem;">Something went wrong</p>
-                    <p style="font-size:0.84rem;color:#991b1b;">Please try emailing me directly at <a href="mailto:mattmcguire@shaw.ca" style="color:#991b1b;">mattmcguire@shaw.ca</a></p>
-                </div>
-            </div>
-
-            <!-- Quick links -->
-            <div class="ac-block">
-                <p class="ac-section-label">Quick Links</p>
-                <a href="mailto:mattmcguire@shaw.ca" class="quick-link">
-                    <svg class="ql-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
-                    <div class="ql-body">
-                        <p class="ql-name">Email</p>
-                        <p class="ql-sub">mattmcguire@shaw.ca</p>
-                    </div>
-                    <svg class="ql-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" class="quick-link">
-                    <svg class="ql-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    <div class="ql-body">
-                        <p class="ql-name">LinkedIn</p>
-                        <p class="ql-sub">linkedin.com/in/matthew-mcguire-44666b389</p>
-                    </div>
-                    <svg class="ql-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a href="https://github.com/mmcguire6" target="_blank" class="quick-link">
-                    <svg class="ql-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                    <div class="ql-body">
-                        <p class="ql-name">GitHub</p>
-                        <p class="ql-sub">github.com/mmcguire6</p>
-                    </div>
-                    <svg class="ql-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-            </div>
-
-        </main>
-    </div>
-
-    <script>
-        const form = document.getElementById('contact-form');
-        const btn = document.getElementById('submit-btn');
-        const success = document.getElementById('form-success');
-        const error = document.getElementById('form-error');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            try {
-                const res = await fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(new FormData(form)).toString()
-                });
-
-                if (res.ok) {
-                    form.style.display = 'none';
-                    success.style.display = 'block';
-                } else {
-                    throw new Error();
-                }
-            } catch {
-                error.style.display = 'block';
-                btn.textContent = 'Send Message';
-                btn.disabled = false;
-            }
-        });
-    </script>
-
-    <footer class="ac-footer">
-        <p class="ac-footer-copy">&copy; 2026 Matthew McGuire</p>
-        <div class="ac-footer-links">
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
-            <a href="https://github.com/mmcguire6" target="_blank">GitHub</a>
+            </aside>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next">
+    <div class="wrap">
+        <header class="next-head">
+            <span class="eyebrow">What happens next</span>
+            <h2 class="next-head-h">
+                From note to <em>preview.</em>
+            </h2>
+            <p class="next-head-lede">
+                Here&rsquo;s what the first ten days usually look like after you send a message &mdash; so you know what to expect, and there&rsquo;s nothing to wonder about.
+            </p>
+        </header>
+
+        <div class="next-grid">
+            <article class="next-step">
+                <span class="next-step-n">Day 01</span>
+                <h3 class="next-step-h">A direct <em>reply.</em></h3>
+                <p class="next-step-body">
+                    Within one business day, you&rsquo;ll get a personal email back from me &mdash; not a templated auto-response. I&rsquo;ll ask a couple of clarifying questions if I have them, and confirm whether the studio is the right fit for what you&rsquo;re after.
+                </p>
+            </article>
+
+            <article class="next-step">
+                <span class="next-step-n">Days 02&ndash;05</span>
+                <h3 class="next-step-h">A working <em>preview.</em></h3>
+                <p class="next-step-body">
+                    If we&rsquo;re a fit, I build a real preview of your firm&rsquo;s site &mdash; not a Figma mockup, not a stock template. Your brand, your content polished from your existing copy, real responsive pages you can click around on. No commitment yet.
+                </p>
+            </article>
+
+            <article class="next-step">
+                <span class="next-step-n">Days 06&ndash;10</span>
+                <h3 class="next-step-h">Scope, deposit, <em>build.</em></h3>
+                <p class="next-step-body">
+                    If the preview lands, I send a fixed scope and a 50% deposit invoice. From there it&rsquo;s two to three weeks of focused build, two rounds of revisions, and a launch date you can plan around. The remaining 50% bills at launch.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- DIRECT CONTACTS -->
+<section class="direct">
+    <div class="wrap">
+        <div class="direct-grid">
+            <aside>
+                <span class="eyebrow">Other ways to reach</span>
+                <h2 class="direct-h">Find me <em>elsewhere.</em></h2>
+            </aside>
+            <ul class="direct-list">
+                <li>
+                    <a href="mailto:matt@matthewmcguire.ca">
+                        <span class="direct-key">Email</span>
+                        <span class="direct-val">matt@matthewmcguire.ca</span>
+                        <span class="direct-arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmcguire6" target="_blank" rel="noopener">
+                        <span class="direct-key">GitHub</span>
+                        <span class="direct-val">github.com/<em>mmcguire6</em></span>
+                        <span class="direct-arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">
+                        <span class="direct-key">LinkedIn</span>
+                        <span class="direct-val">linkedin.com/in/<em>matthew-mcguire</em></span>
+                        <span class="direct-arrow">→</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Matthew McGuire</p>
+                <p class="footer-blurb">A one-person studio designing and building dignified websites for the firms people trust.</p>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Site</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#work">Selected work</a></li>
+                    <li><a href="index.html#how">How I work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Reach</h5>
+                <ul>
+                    <li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li>
+                    <li><a href="https://github.com/mmcguire6" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Based</h5>
+                <ul>
+                    <li>Edmonton, Alberta</li>
+                    <li>Working with firms across Canada</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span>Designed &amp; built by hand</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('site-nav');
+    if (nav) {
+        var onScroll = function () {
+            if (window.scrollY > 12) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Contact form — Netlify Forms AJAX submit
+    var form = document.getElementById('cf-form');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var submitBtn = form.querySelector('.cf-submit');
+            var success = form.querySelector('.cf-success');
+            var error = form.querySelector('.cf-error');
+            if (success) success.hidden = true;
+            if (error) error.hidden = true;
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.dataset.originalLabel = submitBtn.dataset.originalLabel || submitBtn.innerHTML;
+                submitBtn.textContent = 'Sending…';
+            }
+
+            var data = new FormData(form);
+            var body = new URLSearchParams();
+            data.forEach(function (value, key) { body.append(key, value); });
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: body.toString(),
+            })
+            .then(function (response) {
+                if (!response.ok) throw new Error('Network response was not ok: ' + response.status);
+                form.querySelectorAll('input, textarea').forEach(function (el) {
+                    if (el.type !== 'hidden') el.value = '';
+                });
+                if (success) success.hidden = false;
+                if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'contact_form_submit', { event_category: 'engagement' });
+                }
+            })
+            .catch(function () {
+                if (error) error.hidden = false;
+            })
+            .finally(function () {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = submitBtn.dataset.originalLabel;
+                }
+            });
+        });
+    }
+</script>
 
 </body>
 </html>
