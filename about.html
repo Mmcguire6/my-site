@@ -1,170 +1,1179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Matthew McGuire</title>
-    <link rel="icon" href="mm-favicon.svg" type="image/svg+xml"><link rel="icon" href="mm-favicon.png">
-    <meta name="description" content="About Matthew McGuire — freelance web designer and developer specialising in clean, high-performance digital products for startups and small teams.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta property="og:title" content="About — Matthew McGuire">
-    <meta property="og:description" content="Web designer and developer focused on building fast, focused digital products for startups and small teams.">
-    <meta property="og:image" content="https://matthewmcguire.ca/img/og-image.png">
-    <meta property="og:url" content="https://matthewmcguire.ca/about.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="css/contact.css">
-    <style>html{opacity:0}</style>
-    <script src="js/transitions.js" defer></script>
-    <script src="js/pages.js" defer></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "wh3e6pv2u4");
-    </script>
+<title>About — Matthew McGuire · Web Design Studio · Edmonton</title>
+<meta name="description" content="A one-person web studio out of Edmonton, Alberta. Designing and building modern, brand-coherent websites for small-to-mid professional services firms across Canada." />
+
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="mm-favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://matthewmcguire.ca/about.html" />
+<meta property="og:title" content="About — Matthew McGuire · Web Design Studio · Edmonton" />
+<meta property="og:description" content="A one-person studio building dignified websites for the firms people trust." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CR8009ZP6T');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+
+<style>
+    :root {
+        --paper:        #EFE7D2;
+        --paper-soft:   #E6DBC0;
+        --paper-deeper: #D6C8A8;
+        --ink:          #1A1813;
+        --ink-2:        #4A4339;
+        --ink-3:        #847B6B;
+        --rule:         #CFC2A6;
+        --rule-soft:    #DDD2BA;
+        --accent:       #2C3D24;
+        --accent-deep:  #1A2516;
+        --accent-soft:  #C0CCB0;
+        --rust:         #7A4A28;
+        --rust-deep:    #4A2E1F;
+        --stone:        #5C5848;
+
+        --serif: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+        --sans:  'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+        --mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+        --max:    1240px;
+        --gutter: clamp(20px, 4vw, 56px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--ink);
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+    .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--gutter);
+    }
+
+    .skip-link {
+        position: absolute; top: -40px; left: 8px;
+        background: var(--ink); color: var(--paper);
+        padding: 8px 14px; font-size: 13px; font-weight: 500;
+        border-radius: 4px; z-index: 200;
+        transition: top 200ms ease;
+    }
+    .skip-link:focus { top: 8px; }
+
+    .eyebrow {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-deep);
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--accent);
+    }
+
+    /* MASTHEAD */
+    .masthead {
+        background: var(--ink);
+        color: color-mix(in oklch, var(--paper) 78%, transparent);
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent);
+    }
+    .masthead-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        gap: 16px;
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+    }
+    .masthead-edition {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .masthead-edition::before {
+        content: "";
+        width: 22px; height: 1px;
+        background: color-mix(in oklch, var(--rust) 90%, transparent);
+    }
+    .masthead-meta {
+        color: color-mix(in oklch, var(--paper) 60%, transparent);
+    }
+    @media (max-width: 600px) {
+        .masthead-meta { display: none; }
+        .masthead-edition::before { width: 16px; }
+        .masthead-inner { font-size: 9px; letter-spacing: 0.18em; }
+    }
+
+    /* NAV */
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--paper);
+        border-bottom: 1px solid transparent;
+        transition: border-color 240ms ease;
+    }
+    .nav.scrolled {
+        border-bottom-color: var(--rule);
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 0;
+        gap: 24px;
+    }
+    .nav-mark {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 12px;
+        color: var(--ink);
+    }
+    .nav-mark-letters {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+    .nav-mark-name {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+    .nav-links a {
+        font-size: 14px;
+        color: var(--ink-2);
+        position: relative;
+        padding: 4px 0;
+        transition: color 200ms ease;
+    }
+    .nav-links a[aria-current="page"] {
+        color: var(--ink);
+    }
+    .nav-links a[aria-current="page"]::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 1px;
+        background: var(--rust);
+    }
+    .nav-links a:not([aria-current="page"])::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 1px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 240ms cubic-bezier(.2,.7,.2,1);
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:not([aria-current="page"]):hover::after { transform: scaleX(1); }
+    .nav-cta {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink);
+        padding: 11px 20px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        transition: background 200ms ease, color 200ms ease;
+    }
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
+    @media (max-width: 760px) {
+        .nav-links { display: none; }
+        .nav-mark-name { display: none; }
+    }
+
+    /* BUTTONS */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 26px;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+        border-radius: 999px;
+        transition: all 220ms cubic-bezier(.2,.7,.2,1);
+        white-space: nowrap;
+    }
+    .btn-primary {
+        background: var(--ink);
+        color: var(--paper);
+    }
+    .btn-primary:hover {
+        background: var(--rust-deep);
+        transform: translateY(-1px);
+    }
+    .btn-secondary {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--ink);
+    }
+    .btn-secondary:hover {
+        background: var(--ink);
+        color: var(--paper);
+    }
+    .btn .arrow { transition: transform 220ms ease; display: inline-block; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* ── ABOUT HERO ── */
+    .about-hero {
+        padding: clamp(72px, 9vw, 132px) 0 clamp(64px, 8vw, 120px);
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+    }
+    .about-hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(40px, 6vw, 96px);
+        align-items: start;
+    }
+    .about-hero-text {
+        padding-top: 4px;
+    }
+    .about-hero-h1 {
+        font-family: var(--serif);
+        font-size: clamp(48px, 7.4vw, 116px);
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: -0.032em;
+        line-height: 0.94;
+        color: var(--ink);
+        margin: 28px 0 28px;
+    }
+    .about-hero-h1 .last { color: var(--rust-deep); }
+    .about-hero-tag {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2vw, 28px);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--ink-2);
+        margin: 0 0 28px;
+        max-width: 32ch;
+        letter-spacing: -0.012em;
+    }
+    .about-hero-tag em {
+        font-style: normal;
+        color: var(--ink);
+        font-weight: 500;
+    }
+    .about-hero-lede {
+        font-size: clamp(15px, 1.15vw, 17px);
+        line-height: 1.7;
+        color: var(--ink-2);
+        max-width: 56ch;
+        margin: 0 0 32px;
+    }
+    .about-hero-credentials {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 32px;
+    }
+    .about-hero-cred-key {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        margin-bottom: 6px;
+    }
+    .about-hero-cred-val {
+        font-family: var(--serif);
+        font-size: 17px;
+        line-height: 1.4;
+        color: var(--ink);
+    }
+    .about-hero-cred-val em { font-style: italic; color: var(--ink-2); }
+    .about-hero-cred-val .small {
+        font-family: var(--sans);
+        font-style: normal;
+        font-size: 13px;
+        color: var(--ink-3);
+        display: block;
+        margin-top: 2px;
+        letter-spacing: 0;
+    }
+
+    /* Portrait card */
+    .about-hero-portrait {
+        position: relative;
+        background: var(--paper-soft);
+        border-radius: 2px;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        box-shadow:
+            0 1px 2px rgba(26, 24, 19, 0.04),
+            0 32px 64px -32px rgba(26, 24, 19, 0.24);
+    }
+    .about-hero-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .about-hero-portrait-meta {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        background: color-mix(in oklch, var(--paper) 92%, transparent);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        padding: 14px 18px;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .about-hero-portrait-meta strong { color: var(--ink); font-weight: 600; }
+
+    @media (max-width: 980px) {
+        .about-hero-grid { grid-template-columns: 1fr; gap: 56px; }
+        .about-hero-portrait { max-width: 480px; aspect-ratio: 4 / 5; }
+        .about-hero-credentials { grid-template-columns: 1fr; gap: 18px; }
+    }
+
+    /* ── LONG-FORM NARRATIVE ── */
+    .about-body {
+        padding: clamp(80px, 9vw, 128px) 0;
+        background: var(--paper-soft);
+        border-bottom: 1px solid var(--rule);
+    }
+    .about-body-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(48px, 6vw, 96px);
+        align-items: start;
+    }
+    .about-body-aside {
+        position: sticky;
+        top: clamp(96px, 12vh, 140px);
+        padding-top: 8px;
+    }
+    .about-body-aside-h {
+        font-family: var(--serif);
+        font-size: clamp(36px, 4.6vw, 64px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.024em;
+        color: var(--ink);
+        margin-top: 18px;
+        max-width: 14ch;
+    }
+    .about-body-aside-h em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--rust-deep);
+    }
+    .about-body-aside-tag {
+        margin-top: 22px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        line-height: 1.7;
+    }
+    .about-body-prose {
+        font-size: clamp(16px, 1.2vw, 18px);
+        line-height: 1.8;
+        color: var(--ink-2);
+        max-width: 60ch;
+    }
+    .about-body-prose p + p { margin-top: 1.2em; }
+    .about-body-prose strong { color: var(--ink); font-weight: 500; }
+    .about-body-prose > p:first-of-type::first-letter {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 4.4em;
+        float: left;
+        line-height: 0.85;
+        margin: 0.06em 0.1em -0.06em 0;
+        color: var(--rust-deep);
+    }
+    .about-body-prose a {
+        color: var(--rust-deep);
+        border-bottom: 1px solid color-mix(in oklch, var(--rust) 40%, transparent);
+        padding-bottom: 1px;
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .about-body-prose a:hover {
+        color: var(--accent-deep);
+        border-bottom-color: var(--accent);
+    }
+
+    @media (max-width: 980px) {
+        .about-body-grid { grid-template-columns: 1fr; gap: 36px; }
+        .about-body-aside { position: static; }
+    }
+
+    /* ── STACK ── */
+    .stack {
+        padding: clamp(72px, 8vw, 112px) 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+    }
+    .stack-head {
+        margin-bottom: clamp(40px, 5vw, 64px);
+        max-width: 720px;
+    }
+    .stack-head-h {
+        font-family: var(--serif);
+        font-size: clamp(36px, 4.6vw, 64px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.022em;
+        color: var(--ink);
+        margin: 16px 0 18px;
+        max-width: 16ch;
+    }
+    .stack-head-h em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .stack-head-lede {
+        font-size: clamp(15px, 1.15vw, 17px);
+        line-height: 1.7;
+        color: var(--ink-2);
+        max-width: 54ch;
+        margin: 0;
+    }
+    .stack-rows {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-top: 1px solid var(--rule);
+    }
+    .stack-row {
+        display: grid;
+        grid-template-columns: minmax(120px, 220px) 1fr;
+        gap: clamp(20px, 3vw, 48px);
+        padding: 22px 0;
+        border-bottom: 1px solid var(--rule);
+        align-items: baseline;
+    }
+    .stack-row-key {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .stack-row-val {
+        font-family: var(--serif);
+        font-size: clamp(18px, 1.6vw, 22px);
+        line-height: 1.4;
+        color: var(--ink);
+        font-weight: 500;
+    }
+    .stack-row-val em { font-style: italic; color: var(--ink-2); font-weight: 400; }
+    @media (max-width: 600px) {
+        .stack-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+    }
+
+    /* ── ANTI-LIST ── */
+    .anti {
+        padding: clamp(80px, 9vw, 128px) 0;
+        background: var(--paper-soft);
+        border-bottom: 1px solid var(--rule);
+    }
+    .anti-head {
+        margin-bottom: clamp(48px, 5vw, 72px);
+        max-width: 720px;
+    }
+    .anti-head-h {
+        font-family: var(--serif);
+        font-size: clamp(40px, 5.6vw, 76px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.024em;
+        color: var(--ink);
+        margin: 18px 0 22px;
+        max-width: 16ch;
+    }
+    .anti-head-h em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--rust-deep);
+    }
+    .anti-head-lede {
+        font-size: clamp(15px, 1.15vw, 17px);
+        line-height: 1.7;
+        color: var(--ink-2);
+        max-width: 56ch;
+        margin: 0;
+    }
+    .anti-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        border-top: 1px solid var(--rule);
+        border-left: 1px solid var(--rule);
+    }
+    .anti-item {
+        padding: clamp(28px, 3vw, 40px);
+        border-right: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        background: var(--paper);
+    }
+    .anti-item-no {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rust-deep);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .anti-item-no::before {
+        content: "✕";
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .anti-item-h {
+        font-family: var(--serif);
+        font-size: clamp(22px, 2vw, 28px);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.018em;
+        color: var(--ink);
+    }
+    .anti-item-h em { font-style: italic; font-weight: 500; color: var(--ink-2); }
+    .anti-item-body {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-2);
+    }
+    @media (max-width: 760px) {
+        .anti-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PULL QUOTE ── */
+    .about-quote-band {
+        padding: clamp(96px, 11vw, 152px) 0;
+        background: var(--paper);
+        text-align: center;
+        border-bottom: 1px solid var(--rule);
+    }
+    .about-quote-band blockquote {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 500;
+        font-size: clamp(28px, 3.6vw, 50px);
+        line-height: 1.2;
+        letter-spacing: -0.018em;
+        color: var(--ink);
+        max-width: 22ch;
+        margin: 0 auto;
+    }
+    .about-quote-band blockquote::before {
+        content: "“";
+        display: block;
+        font-family: var(--serif);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: var(--rust-deep);
+        line-height: 0.7;
+        margin-bottom: 4px;
+    }
+    .about-quote-band cite {
+        display: block;
+        margin-top: 28px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        font-style: normal;
+    }
+
+    /* ── CONNECT ── */
+    .connect {
+        padding: clamp(72px, 8vw, 112px) 0;
+        background: var(--paper-soft);
+        border-bottom: 1px solid var(--rule);
+    }
+    .connect-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(48px, 6vw, 96px);
+        align-items: start;
+    }
+    .connect-h {
+        font-family: var(--serif);
+        font-size: clamp(36px, 4.6vw, 60px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.022em;
+        color: var(--ink);
+        margin: 18px 0 0;
+        max-width: 12ch;
+    }
+    .connect-h em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .connect-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid var(--rule);
+    }
+    .connect-list li {
+        border-bottom: 1px solid var(--rule);
+    }
+    .connect-list a {
+        display: grid;
+        grid-template-columns: 110px 1fr auto;
+        gap: 24px;
+        align-items: center;
+        padding: 22px 0;
+        color: var(--ink);
+        transition: color 220ms ease;
+    }
+    .connect-list a:hover { color: var(--rust-deep); }
+    .connect-list a:hover .connect-arrow { transform: translateX(6px); color: var(--rust); }
+    .connect-key {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .connect-val {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2vw, 26px);
+        font-weight: 500;
+        letter-spacing: -0.012em;
+    }
+    .connect-val em { font-style: italic; color: var(--ink-2); font-weight: 400; }
+    .connect-arrow {
+        font-family: var(--mono);
+        font-size: 16px;
+        color: var(--ink-3);
+        transition: transform 240ms cubic-bezier(.2,.7,.2,1), color 200ms ease;
+    }
+    @media (max-width: 880px) {
+        .connect-grid { grid-template-columns: 1fr; gap: 32px; }
+        .connect-list a { grid-template-columns: 90px 1fr auto; gap: 16px; }
+    }
+
+    /* ── CTA BAND (mirrors index) ── */
+    .cta-band {
+        background:
+            radial-gradient(ellipse 60% 100% at 50% 100%, color-mix(in oklch, var(--accent) 22%, transparent) 0%, transparent 60%),
+            #0F2218;
+        color: var(--paper);
+        padding: clamp(96px, 11vw, 160px) 0;
+        text-align: center;
+        border-top: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+    }
+    .cta-band .eyebrow {
+        color: color-mix(in oklch, var(--rust) 78%, white 22%);
+    }
+    .cta-band .eyebrow::before { background: var(--rust); }
+    .cta-band-h2 {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: clamp(44px, 6.4vw, 92px);
+        line-height: 0.98;
+        letter-spacing: -0.026em;
+        max-width: 18ch;
+        margin: 22px auto 28px;
+        color: var(--paper);
+    }
+    .cta-band-h2 em {
+        font-style: italic;
+        font-weight: 500;
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
+    }
+    .cta-band-lede {
+        font-size: clamp(16px, 1.3vw, 19px);
+        line-height: 1.65;
+        color: color-mix(in oklch, var(--paper) 70%, var(--ink-3) 30%);
+        max-width: 54ch;
+        margin: 0 auto 40px;
+    }
+    .cta-band-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .cta-band .btn-primary {
+        background: var(--paper);
+        color: var(--ink);
+    }
+    .cta-band .btn-primary:hover {
+        background: var(--rust);
+        color: var(--paper);
+        transform: translateY(-1px);
+    }
+    .cta-band .btn-secondary {
+        color: var(--paper);
+        border-color: color-mix(in oklch, var(--paper) 50%, transparent);
+    }
+    .cta-band .btn-secondary:hover {
+        background: var(--paper);
+        color: var(--ink);
+        border-color: var(--paper);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+        background: var(--paper-soft);
+        border-top: 1px solid var(--rule);
+        padding: 64px 0 48px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: clamp(32px, 4vw, 64px);
+        margin-bottom: 48px;
+    }
+    .footer-brand {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+    }
+    .footer-blurb {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-3);
+        max-width: 32ch;
+    }
+    .footer-h5 {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        margin-bottom: 18px;
+        font-weight: 500;
+    }
+    .footer-col ul {
+        list-style: none;
+        margin: 0; padding: 0;
+        display: flex; flex-direction: column;
+        gap: 10px;
+    }
+    .footer-col li { font-size: 14px; color: var(--ink-2); }
+    .footer-col a {
+        color: var(--ink-2);
+        transition: color 200ms ease;
+    }
+    .footer-col a:hover { color: var(--ink); }
+    .footer-bottom {
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: var(--ink-3);
+    }
+    @media (max-width: 760px) {
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    ::selection { background: var(--rust); color: var(--paper); }
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="ac-header">
-        <a class="ac-brand" href="portfolio.html"><img src="img/matthew_mcguire_hero.svg" class="ac-brand-logo" alt="MM"></a>
-        <a class="ac-avatar" href="index.html" title="Switch Profile">MM</a>
-        <button class="ac-hamburger" id="ac-hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
-    <div class="ac-mobile-nav" id="ac-mobile-nav">
-        <button class="ac-mobile-close" id="ac-mobile-close">&#x2715;</button>
-        <ul>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<!-- MASTHEAD BAND -->
+<div class="masthead" role="presentation">
+    <div class="wrap masthead-inner">
+        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
     </div>
+</div>
 
-    <div class="ac-layout">
-
-        <!-- Sidebar -->
-        <aside class="ac-sidebar">
-            <a href="portfolio.html" class="sidebar-back">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-                Back to Portfolio
-            </a>
-            <nav class="sidebar-nav">
-                <a href="portfolio.html#home" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Overview
-                </a>
-                <a href="portfolio.html#work" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    Work
-                </a>
-                <a href="about.html" class="sidebar-link active">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    About
-                </a>
-                <a href="skills.html" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Skills
-                </a>
-                <a href="contact.html" class="sidebar-link">
-                    <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
-                    Contact
-                </a>
-            </nav>
-        </aside>
-
-        <!-- Main -->
-        <main class="ac-main">
-
-            <div class="about-split">
-                <div class="about-split-text">
-                    <h1 class="ac-title">About</h1>
-                    <p class="ac-subtitle">Web Designer &amp; Developer</p>
-                    <p class="about-split-bio">I'm a web designer and developer focused on building clean, high-performance digital products. I work with startups and small teams to take ideas from concept to launch — handling everything from visual design to front-end development.</p>
-                    <p class="about-split-bio">I care about the details: fast load times, sharp UI, and products that actually convert. Whether it's a SaaS dashboard, a Shopify store, or a marketing site, I aim to ship work that looks great and performs even better.</p>
-                </div>
-                <img src="img/headshot/matt-headshot.png" class="about-headshot" alt="Matthew McGuire">
-            </div>
-
-            <!-- Stack -->
-            <div class="ac-block">
-                <p class="ac-section-label">Stack &amp; Tools</p>
-                <div class="about-stack">
-                    <div class="stack-row">
-                        <span class="stack-label">Frontend</span>
-                        <span class="stack-value">React, Next.js, TypeScript, Tailwind CSS</span>
-                    </div>
-                    <div class="stack-row">
-                        <span class="stack-label">Design</span>
-                        <span class="stack-value">Figma, Design Systems, Brand Identity</span>
-                    </div>
-                    <div class="stack-row">
-                        <span class="stack-label">Platforms</span>
-                        <span class="stack-value">Shopify, Vercel, Supabase</span>
-                    </div>
-                    <div class="stack-row">
-                        <span class="stack-label">Background</span>
-                        <span class="stack-value">Data Analytics — SQL, Python, Power BI</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- What I Build -->
-            <div class="ac-block">
-                <p class="ac-section-label">What I Build</p>
-                <div class="about-services">
-                    <div class="service-item">
-                        <p class="service-name">Custom Web Apps &amp; SaaS</p>
-                        <p class="service-desc">Full product builds from wireframe to deployment.</p>
-                    </div>
-                    <div class="service-item">
-                        <p class="service-name">Shopify Storefronts</p>
-                        <p class="service-desc">Custom themes, app integrations, and conversion-focused builds.</p>
-                    </div>
-                    <div class="service-item">
-                        <p class="service-name">Landing Pages</p>
-                        <p class="service-desc">Fast, focused pages built to convert.</p>
-                    </div>
-                    <div class="service-item">
-                        <p class="service-name">Brand Identity</p>
-                        <p class="service-desc">Logos, design systems, and visual direction.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Status -->
-            <div class="ac-block">
-                <p class="ac-section-label">Status</p>
-                <div class="about-status">
-                    <span class="status-dot"></span>
-                    <span class="status-text">Available for freelance projects</span>
-                </div>
-                <a href="contact.html" class="ac-action-link" style="margin-top: 1rem; display: inline-flex;">
-                    Get in Touch
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-            </div>
-
-        </main>
-    </div>
-
-    <footer class="ac-footer">
-        <p class="ac-footer-copy">&copy; 2026 Matthew McGuire</p>
-        <div class="ac-footer-links">
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
+<!-- NAV -->
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+            <span class="nav-mark-letters">Matthew McGuire</span>
+            <span class="nav-mark-name">Designer · developer</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="about.html" aria-current="page">About</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#how">How I work</a>
             <a href="contact.html">Contact</a>
-            <a href="https://github.com/mmcguire6" target="_blank">GitHub</a>
+        </nav>
+        <a href="contact.html" class="nav-cta">Start a project →</a>
+    </div>
+</header>
+
+<main id="main">
+
+<!-- HERO / INTRO -->
+<section class="about-hero">
+    <div class="wrap">
+        <div class="about-hero-grid">
+            <div class="about-hero-text">
+                <span class="eyebrow">About the studio</span>
+                <h1 class="about-hero-h1">Matthew <span class="last">McGuire.</span></h1>
+                <p class="about-hero-tag">
+                    A one-person web studio. <em>By design.</em>
+                </p>
+                <p class="about-hero-lede">
+                    I design and build modern, brand-coherent websites for small-to-mid professional services firms across Canada &mdash; lawyers, consultants, CPAs, dental and medical clinics. No agency overhead, no junior handoffs, no offshore production. Just one person, working directly with the firms I build for, from the first preview to the day the site goes live.
+                </p>
+
+                <div class="about-hero-credentials">
+                    <div>
+                        <p class="about-hero-cred-key">Discipline</p>
+                        <p class="about-hero-cred-val">Web design <em>&amp; development</em><span class="small">Strategy · brand · code · deploy</span></p>
+                    </div>
+                    <div>
+                        <p class="about-hero-cred-key">Training</p>
+                        <p class="about-hero-cred-val">Web Design <em>&amp; Development</em><span class="small">NAIT · Edmonton, Alberta</span></p>
+                    </div>
+                    <div>
+                        <p class="about-hero-cred-key">Based</p>
+                        <p class="about-hero-cred-val">Edmonton<span class="small">Working with firms across Canada</span></p>
+                    </div>
+                    <div>
+                        <p class="about-hero-cred-key">Availability</p>
+                        <p class="about-hero-cred-val">Currently <em>open</em><span class="small">Two-to-three-week engagements</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <figure class="about-hero-portrait">
+                <img src="img/headshot/matt-headshot.png" alt="Portrait of Matthew McGuire" />
+                <figcaption class="about-hero-portrait-meta">
+                    <span><strong>Matthew McGuire</strong></span>
+                    <span>Edmonton, AB</span>
+                </figcaption>
+            </figure>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- LONG-FORM NARRATIVE -->
+<section class="about-body">
+    <div class="wrap">
+        <div class="about-body-grid">
+            <aside class="about-body-aside">
+                <span class="eyebrow">Background</span>
+                <h2 class="about-body-aside-h">
+                    The case for <em>one person.</em>
+                </h2>
+                <p class="about-body-aside-tag">
+                    Studio of one &middot; <br />
+                    Strategy &middot; Design &middot; Code &middot; Deploy
+                </p>
+            </aside>
+
+            <div class="about-body-prose">
+                <p>I&rsquo;m a web designer and developer working out of Edmonton, Alberta. I trained in <strong>Web Design &amp; Development at NAIT</strong> &mdash; the formal craft side of the discipline, not just the coding side &mdash; and I&rsquo;ve been building websites and digital products full-time since. The studio is what I do, every day. Not a side project, not a second income stream. Web is the work.</p>
+
+                <p>I started this studio because most web work for small firms gets routed through the same broken path. An agency or freelance shop takes the brief, hands the brand to one person, the design to another, the build to a third, the launch to a fourth. By the time the site is live, the original intent has been smoothed flat by four layers of telephone. The firm gets a competent template that could belong to anyone. The work that made the firm worth hiring &mdash; the judgment, the precision, the care &mdash; never makes it into the website that&rsquo;s supposed to represent it.</p>
+
+                <p>That&rsquo;s the gap I built this studio to close. I work directly with each firm I build for. There is no project manager between us, no rotating cast, no offshore handoff. I do the strategy, the brand, the typography, the layout, the copy polish, the build, and the deploy &mdash; the whole pass, one head. When something looks right, it&rsquo;s because one person made every call. When something needs to change, there&rsquo;s one inbox to write to.</p>
+
+                <p>The point isn&rsquo;t that one-person is romantic. It&rsquo;s that the work gets <strong>better</strong> when the same person who chose the typeface also writes the contact form copy. Decisions stack on each other. Details that would die in a handoff &mdash; the spacing of an em-dash, the weight of a section rule, the cadence of a bio paragraph &mdash; are the quiet things that separate a designed site from a templated one. They only survive when nobody&rsquo;s passing the work along.</p>
+
+                <p>I work in focused stretches, two to three weeks per build. Most engagements start with a working preview I&rsquo;ve already put together &mdash; your firm&rsquo;s actual site, refined and ready to look at. From there it&rsquo;s a fixed scope, a 50% deposit, two rounds of revisions, and a launch date. After launch, ongoing edits and hosting roll into a small monthly plan. No discovery calls, no Figma mockups, no pitch decks. You see real working pages and decide.</p>
+
+                <p>The firms I build for tend to be doing serious work for clients who don&rsquo;t cut corners &mdash; <strong>law, accounting, consulting, healthcare</strong>. Their websites should signal what their work actually is: precise, careful, current, never showy. That&rsquo;s the brief I keep coming back to. <a href="contact.html">If that sounds like your firm, get in touch.</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STACK -->
+<section class="stack">
+    <div class="wrap">
+        <header class="stack-head">
+            <span class="eyebrow">The stack</span>
+            <h2 class="stack-head-h">
+                Modern tools, <em>no flash.</em>
+            </h2>
+            <p class="stack-head-lede">
+                The toolkit is current, the choices are deliberate, and nothing is on the page because it&rsquo;s trendy. What ends up in your site is what serves it &mdash; not what looks good on a r&eacute;sum&eacute;.
+            </p>
+        </header>
+
+        <div class="stack-rows">
+            <div class="stack-row">
+                <span class="stack-row-key">Frontend</span>
+                <span class="stack-row-val">React, Next.js, TypeScript, <em>Tailwind CSS</em></span>
+            </div>
+            <div class="stack-row">
+                <span class="stack-row-key">Static &amp; CMS</span>
+                <span class="stack-row-val">Hand-built HTML/CSS, <em>Astro</em>, custom Shopify themes</span>
+            </div>
+            <div class="stack-row">
+                <span class="stack-row-key">Design</span>
+                <span class="stack-row-val">Figma, custom design systems, <em>typography-led brand work</em></span>
+            </div>
+            <div class="stack-row">
+                <span class="stack-row-key">Hosting &amp; deploy</span>
+                <span class="stack-row-val">Netlify, Vercel, Cloudflare &mdash; <em>zero-downtime launches</em></span>
+            </div>
+            <div class="stack-row">
+                <span class="stack-row-key">Performance</span>
+                <span class="stack-row-val">Lighthouse-tuned, <em>sub-second loads</em>, accessibility-first</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT I DON'T DO -->
+<section class="anti">
+    <div class="wrap">
+        <header class="anti-head">
+            <span class="eyebrow">Boundaries</span>
+            <h2 class="anti-head-h">
+                What I <em>don&rsquo;t</em> do.
+            </h2>
+            <p class="anti-head-lede">
+                The shape of the studio is set by what it doesn&rsquo;t do as much as what it does. Six things I&rsquo;ve deliberately left out, and why each one is on the cutting-room floor.
+            </p>
+        </header>
+
+        <div class="anti-grid">
+            <article class="anti-item">
+                <span class="anti-item-no">No. 01</span>
+                <h3 class="anti-item-h">Discovery calls.</h3>
+                <p class="anti-item-body">
+                    The default first contact in this industry is a forty-minute call to &ldquo;learn about your firm.&rdquo; I&rsquo;d rather spend that time looking at your existing site, your competitors, and your actual work, then send you a real preview to react to. Async over email, not synchronous over Zoom.
+                </p>
+            </article>
+
+            <article class="anti-item">
+                <span class="anti-item-no">No. 02</span>
+                <h3 class="anti-item-h">Figma mockups.</h3>
+                <p class="anti-item-body">
+                    Mockups always look better than the site that ships from them. I&rsquo;d rather show you a working build &mdash; real type, real responsive behaviour, real load times &mdash; than a picture of a website that nobody will ever actually use.
+                </p>
+            </article>
+
+            <article class="anti-item">
+                <span class="anti-item-no">No. 03</span>
+                <h3 class="anti-item-h">Offshore handoffs.</h3>
+                <p class="anti-item-body">
+                    The same person who designs the page writes the CSS that ships it. No subcontractors, no global production line, no five-day round-trip on a small change. Slower in theory, faster in practice.
+                </p>
+            </article>
+
+            <article class="anti-item">
+                <span class="anti-item-no">No. 04</span>
+                <h3 class="anti-item-h">Long retainer lock-ins.</h3>
+                <p class="anti-item-body">
+                    The post-launch plan is month-to-month at $99. No twelve-month minimums, no exit fees. If you decide to migrate the site off the plan later, I&rsquo;ll hand it over for a small one-time fee and zero hard feelings.
+                </p>
+            </article>
+
+            <article class="anti-item">
+                <span class="anti-item-no">No. 05</span>
+                <h3 class="anti-item-h">Surprise <em>bills.</em></h3>
+                <p class="anti-item-body">
+                    Fixed scope, two payments &mdash; 50% to start, 50% at launch &mdash; and the monthly plan after. If something falls outside the scope, I&rsquo;ll quote it before doing it. No clock running in the background, no &ldquo;account-management hours.&rdquo;
+                </p>
+            </article>
+
+            <article class="anti-item">
+                <span class="anti-item-no">No. 06</span>
+                <h3 class="anti-item-h">Vague <em>timelines.</em></h3>
+                <p class="anti-item-body">
+                    Two to three weeks from signed scope to launch is the standard cadence. If a build will run longer because the scope is larger, you&rsquo;ll know before signing, not the week before launch.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="about-quote-band">
+    <div class="wrap">
+        <blockquote>
+            The web should look like the firms behind it &mdash; not the other way around.
+        </blockquote>
+        <cite>&mdash; the brief, every time</cite>
+    </div>
+</section>
+
+<!-- CONNECT -->
+<section class="connect">
+    <div class="wrap">
+        <div class="connect-grid">
+            <aside>
+                <span class="eyebrow">Connect</span>
+                <h2 class="connect-h">Where to <em>find me.</em></h2>
+            </aside>
+            <ul class="connect-list">
+                <li>
+                    <a href="mailto:matt@matthewmcguire.ca">
+                        <span class="connect-key">Email</span>
+                        <span class="connect-val">matt@matthewmcguire.ca</span>
+                        <span class="connect-arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmcguire6" target="_blank" rel="noopener">
+                        <span class="connect-key">GitHub</span>
+                        <span class="connect-val">github.com/<em>mmcguire6</em></span>
+                        <span class="connect-arrow">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">
+                        <span class="connect-key">LinkedIn</span>
+                        <span class="connect-val">linkedin.com/in/<em>matthew-mcguire</em></span>
+                        <span class="connect-arrow">→</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-band" aria-labelledby="cta-band-title">
+    <div class="wrap">
+        <span class="eyebrow">Take the next step</span>
+        <h2 id="cta-band-title" class="cta-band-h2">
+            Let&rsquo;s see what your firm <em>could look like.</em>
+        </h2>
+        <p class="cta-band-lede">
+            Send me a few sentences about what you&rsquo;re working on. I&rsquo;ll come back with thoughts, a rough scope, and &mdash; often &mdash; a working preview within a few days.
+        </p>
+        <div class="cta-band-actions">
+            <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
+            <a href="index.html#work" class="btn btn-secondary">See selected work <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Matthew McGuire</p>
+                <p class="footer-blurb">A one-person studio designing and building dignified websites for the firms people trust.</p>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Site</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#work">Selected work</a></li>
+                    <li><a href="index.html#how">How I work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Reach</h5>
+                <ul>
+                    <li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li>
+                    <li><a href="https://github.com/mmcguire6" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Based</h5>
+                <ul>
+                    <li>Edmonton, Alberta</li>
+                    <li>Working with firms across Canada</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span>Designed &amp; built by hand</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('site-nav');
+    if (nav) {
+        var onScroll = function () {
+            if (window.scrollY > 12) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
