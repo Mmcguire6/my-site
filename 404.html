@@ -1,108 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 — Matthew McGuire</title>
-    <link rel="icon" href="mm-favicon.svg" type="image/svg+xml"><link rel="icon" href="mm-favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>html{opacity:0}</style>
-    <script src="js/transitions.js" defer></script>
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --red: #e50914; --dark: #141414; --border: #2a2a2a; --muted: #808080; }
-        body {
-            background: var(--dark);
-            color: #e5e5e5;
-            font-family: 'DM Sans', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-        }
-        .nf-label {
-            font-size: 0.7rem;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            margin-bottom: 1.5rem;
-        }
-        .nf-code {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(6rem, 18vw, 14rem);
-            line-height: 1;
-            color: var(--red);
-            letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
-        }
-        .nf-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            color: #e5e5e5;
-            margin-bottom: 0.75rem;
-        }
-        .nf-desc {
-            font-size: 0.9rem;
-            color: var(--muted);
-            max-width: 380px;
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-        }
-        .nf-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.6rem 1.4rem;
-            background: #fff;
-            color: #141414;
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .nf-btn:hover { opacity: 0.82; }
-        .nf-back {
-            margin-top: 1.25rem;
-            font-size: 0.8rem;
-            color: var(--muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .nf-back:hover { color: #e5e5e5; }
-        .nf-divider {
-            width: 40px;
-            height: 2px;
-            background: var(--red);
-            margin: 0 auto 2rem;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "wh3e6pv2u4");
-    </script>
+<title>404 — Matthew McGuire · Web Design Studio · Edmonton</title>
+<meta name="description" content="That page isn't here. Find your way back to the studio." />
+
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="mm-favicon.png" />
+
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+
+<style>
+    :root {
+        --paper:        #EFE7D2;
+        --paper-soft:   #E6DBC0;
+        --ink:          #1A1813;
+        --ink-2:        #4A4339;
+        --ink-3:        #847B6B;
+        --rule:         #CFC2A6;
+        --accent:       #2C3D24;
+        --accent-deep:  #1A2516;
+        --rust:         #7A4A28;
+        --rust-deep:    #4A2E1F;
+        --woods:        #0F2218;
+
+        --serif: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+        --sans:  'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+        --mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+        --max:    1240px;
+        --gutter: clamp(20px, 4vw, 56px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--paper);
+        background:
+            radial-gradient(ellipse 55% 45% at 50% 52%,
+                color-mix(in oklch, #0F2218 78%, transparent) 0%,
+                color-mix(in oklch, #0F2218 60%, transparent) 55%,
+                color-mix(in oklch, #0F2218 28%, transparent) 100%
+            ),
+            url('img/404-waterfall-3.jpg') center / cover no-repeat fixed,
+            var(--woods);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    @media (max-width: 760px) {
+        body {
+            background:
+                radial-gradient(ellipse 80% 50% at 50% 52%,
+                    color-mix(in oklch, #0F2218 82%, transparent) 0%,
+                    color-mix(in oklch, #0F2218 65%, transparent) 60%,
+                    color-mix(in oklch, #0F2218 35%, transparent) 100%
+                ),
+                url('img/404-waterfall-3.jpg') center / cover no-repeat,
+                var(--woods);
+        }
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--gutter);
+        width: 100%;
+    }
+
+    /* MASTHEAD */
+    .masthead {
+        background: #000;
+        color: color-mix(in oklch, var(--paper) 78%, transparent);
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent);
+    }
+    .masthead-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        gap: 16px;
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+    }
+    .masthead-edition {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .masthead-edition::before {
+        content: "";
+        width: 22px; height: 1px;
+        background: color-mix(in oklch, var(--rust) 90%, transparent);
+    }
+    .masthead-meta {
+        color: color-mix(in oklch, var(--paper) 60%, transparent);
+    }
+    @media (max-width: 600px) {
+        .masthead-meta { display: none; }
+        .masthead-edition::before { width: 16px; }
+        .masthead-inner { font-size: 9px; letter-spacing: 0.18em; }
+    }
+
+    /* NAV */
+    .nav {
+        padding: 22px 0;
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent);
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+    .nav-mark {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 12px;
+        color: var(--paper);
+    }
+    .nav-mark-letters {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+    .nav-mark-name {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: color-mix(in oklch, var(--paper) 55%, transparent);
+    }
+    .nav-back {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--paper);
+        padding: 11px 20px;
+        border: 1px solid color-mix(in oklch, var(--paper) 50%, transparent);
+        border-radius: 999px;
+        transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+    }
+    .nav-back:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+    @media (max-width: 600px) {
+        .nav-mark-name { display: none; }
+    }
+
+    /* MAIN: 404 hero */
+    main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(80px, 12vh, 160px) 0;
+    }
+    .nf-inner {
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 var(--gutter);
+    }
+    .nf-eyebrow {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .nf-eyebrow::before,
+    .nf-eyebrow::after {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--rust);
+    }
+    .nf-num {
+        font-family: var(--serif);
+        font-size: clamp(120px, 20vw, 260px);
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        line-height: 0.85;
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
+        margin-bottom: 22px;
+        position: relative;
+    }
+    .nf-num::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 1px;
+        background: color-mix(in oklch, var(--rust) 80%, transparent);
+        margin: 28px auto 0;
+    }
+    .nf-h1 {
+        font-family: var(--serif);
+        font-size: clamp(36px, 5vw, 64px);
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: -0.022em;
+        line-height: 1.0;
+        color: var(--paper);
+        margin: 0 0 20px;
+        max-width: 18ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nf-h1 em {
+        font-style: italic;
+        font-weight: 500;
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
+    }
+    .nf-desc {
+        font-size: clamp(15px, 1.2vw, 17px);
+        line-height: 1.7;
+        color: color-mix(in oklch, var(--paper) 72%, var(--ink-3) 28%);
+        max-width: 52ch;
+        margin: 0 auto 40px;
+    }
+
+    .nf-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 26px;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+        border-radius: 999px;
+        transition: all 220ms cubic-bezier(.2,.7,.2,1);
+        white-space: nowrap;
+    }
+    .btn-primary {
+        background: var(--paper);
+        color: var(--ink);
+    }
+    .btn-primary:hover {
+        background: var(--rust);
+        color: var(--paper);
+        transform: translateY(-1px);
+    }
+    .btn-secondary {
+        background: transparent;
+        color: var(--paper);
+        border: 1px solid color-mix(in oklch, var(--paper) 50%, transparent);
+    }
+    .btn-secondary:hover {
+        background: var(--paper);
+        color: var(--ink);
+        border-color: var(--paper);
+    }
+    .btn .arrow { transition: transform 220ms ease; display: inline-block; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* FOOTNOTE */
+    .nf-foot {
+        text-align: center;
+        padding: 28px 0 36px;
+        border-top: 1px solid color-mix(in oklch, var(--paper) 12%, transparent);
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: color-mix(in oklch, var(--paper) 50%, transparent);
+    }
+    .nf-foot a {
+        color: color-mix(in oklch, var(--paper) 70%, transparent);
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 30%, transparent);
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .nf-foot a:hover {
+        color: var(--paper);
+        border-bottom-color: color-mix(in oklch, var(--rust) 80%, transparent);
+    }
+
+    ::selection { background: var(--rust); color: var(--paper); }
+</style>
 </head>
 <body>
-    <p class="nf-label">Matthew McGuire</p>
-    <p class="nf-code">404</p>
-    <div class="nf-divider"></div>
-    <h1 class="nf-title">This page got cancelled.</h1>
-    <p class="nf-desc">Looks like this content doesn't exist — or maybe it never shipped. Let's get you back somewhere real.</p>
-    <a href="portfolio.html" class="nf-btn">&#9654;&nbsp; Back to Portfolio</a>
-    <br>
-    <a href="contact.html" class="nf-back">or get in touch →</a>
+
+<!-- MASTHEAD BAND -->
+<div class="masthead" role="presentation">
+    <div class="wrap masthead-inner">
+        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
+    </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+            <span class="nav-mark-letters">Matthew McGuire</span>
+            <span class="nav-mark-name">Designer · developer</span>
+        </a>
+        <a href="index.html" class="nav-back">← Back to home</a>
+    </div>
+</header>
+
+<main>
+    <div class="nf-inner">
+        <p class="nf-eyebrow">Error &middot; 404</p>
+        <p class="nf-num">404</p>
+        <h1 class="nf-h1">Lost in <em>the woods.</em></h1>
+        <p class="nf-desc">
+            The page you&rsquo;re looking for isn&rsquo;t here &mdash; it may have moved, been retired, or never quite made it through the build. Let&rsquo;s get you back on the path.
+        </p>
+        <div class="nf-actions">
+            <a href="index.html" class="btn btn-primary">Back to home <span class="arrow">→</span></a>
+            <a href="contact.html" class="btn btn-secondary">Get in touch <span class="arrow">→</span></a>
+        </div>
+    </div>
+</main>
+
+<footer class="nf-foot">
+    <div class="wrap">
+        <span>&copy; <span id="footer-year">2026</span> Matthew McGuire &middot; <a href="index.html">matthewmcguire.ca</a></span>
+    </div>
+</footer>
+
+<script>
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>

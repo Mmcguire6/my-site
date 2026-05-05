@@ -273,9 +273,22 @@
 
     /* ── CONTACT HERO ── */
     .contact-hero {
-        padding: clamp(72px, 9vw, 132px) 0 clamp(64px, 8vw, 120px);
-        background: var(--paper);
-        border-bottom: 1px solid var(--rule);
+        position: relative;
+        padding: clamp(80px, 10vw, 144px) 0 clamp(72px, 9vw, 128px);
+        background:
+            linear-gradient(180deg,
+                color-mix(in oklch, #0F2218 72%, transparent) 0%,
+                color-mix(in oklch, #0F2218 62%, transparent) 50%,
+                color-mix(in oklch, #0F2218 78%, transparent) 100%
+            ),
+            url('img/404-waterfall-3.jpg') center / cover no-repeat;
+        color: var(--paper);
+    }
+    .contact-hero .eyebrow {
+        color: color-mix(in oklch, var(--rust) 78%, white 22%);
+    }
+    .contact-hero .eyebrow::before {
+        background: var(--rust);
     }
     .contact-hero-grid {
         display: grid;
@@ -290,37 +303,39 @@
         font-weight: 700;
         letter-spacing: -0.032em;
         line-height: 0.94;
-        color: var(--ink);
+        color: var(--paper);
         margin: 28px 0 28px;
     }
-    .contact-hero-h1 .accent { color: var(--rust-deep); }
+    .contact-hero-h1 .accent {
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
+    }
     .contact-hero-tag {
         font-family: var(--serif);
         font-size: clamp(20px, 2vw, 28px);
         font-style: italic;
         font-weight: 400;
         line-height: 1.3;
-        color: var(--ink-2);
+        color: color-mix(in oklch, var(--paper) 80%, var(--ink-3) 20%);
         margin: 0 0 28px;
         max-width: 32ch;
         letter-spacing: -0.012em;
     }
     .contact-hero-tag em {
         font-style: normal;
-        color: var(--ink);
+        color: var(--paper);
         font-weight: 500;
     }
     .contact-hero-lede {
         font-size: clamp(15px, 1.15vw, 17px);
         line-height: 1.7;
-        color: var(--ink-2);
+        color: color-mix(in oklch, var(--paper) 78%, var(--ink-3) 22%);
         max-width: 50ch;
         margin: 0 0 32px;
     }
     .contact-hero-fast {
         margin-top: 28px;
         padding-top: 24px;
-        border-top: 1px solid var(--rule);
+        border-top: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
         display: flex;
         flex-direction: column;
         gap: 18px;
@@ -336,23 +351,26 @@
         font-size: 10px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: var(--ink-3);
+        color: color-mix(in oklch, var(--paper) 55%, transparent);
     }
     .contact-hero-fast-val {
         font-family: var(--serif);
         font-size: 16px;
         line-height: 1.5;
-        color: var(--ink);
+        color: var(--paper);
     }
-    .contact-hero-fast-val em { font-style: italic; color: var(--ink-2); }
+    .contact-hero-fast-val em {
+        font-style: italic;
+        color: color-mix(in oklch, var(--paper) 70%, var(--ink-3) 30%);
+    }
     .contact-hero-fast-val a {
-        color: var(--ink);
-        border-bottom: 1px solid color-mix(in oklch, var(--ink) 30%, transparent);
+        color: var(--paper);
+        border-bottom: 1px solid color-mix(in oklch, var(--paper) 35%, transparent);
         padding-bottom: 1px;
         transition: color 200ms ease, border-color 200ms ease;
     }
     .contact-hero-fast-val a:hover {
-        color: var(--rust-deep);
+        color: color-mix(in oklch, var(--rust) 80%, white 20%);
         border-bottom-color: var(--rust);
     }
 
