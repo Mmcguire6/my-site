@@ -170,7 +170,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 22px 0;
+        padding: 22px clamp(28px, 4vw, 56px);
         gap: 24px;
     }
     .nav-mark {
@@ -254,6 +254,7 @@
         transition: background 200ms ease, border-color 200ms ease;
     }
     .nav-toggle:hover { background: color-mix(in oklch, var(--ink) 6%, transparent); }
+    .nav-toggle:active { transform: scale(0.92); transition: transform 120ms cubic-bezier(.2,.7,.2,1); }
     .nav-toggle-bars {
         position: relative;
         width: 18px;
@@ -323,7 +324,7 @@
             gap: 8px;
         }
         .nav-mobile-links a {
-            display: block;
+            display: inline-block;
             padding: 12px 0;
             font-family: var(--serif);
             font-style: italic;
@@ -331,8 +332,36 @@
             color: var(--ink);
             letter-spacing: -0.022em;
             line-height: 1;
+            position: relative;
+            transform-origin: left center;
+            transition: transform 220ms cubic-bezier(.2,.7,.2,1), color 240ms ease;
+        }
+        .nav-mobile-links a::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: 4px;
+            height: 2px;
+            background: var(--ink);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 360ms cubic-bezier(.2,.7,.2,1), background-color 200ms ease;
+        }
+        .nav-mobile-links a:active {
+            transform: scale(0.97);
+            color: var(--rust-deep);
+        }
+        .nav-mobile-links a:active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+            background: var(--rust);
+            transition: transform 220ms cubic-bezier(.2,.7,.2,1);
         }
         .nav-mobile-links a[aria-current="page"] { color: var(--rust-deep); }
+        .nav-mobile-links a[aria-current="page"]::after {
+            transform: scaleX(1);
+            transform-origin: left;
+            background: var(--rust);
+        }
         .nav-mobile-cta {
             display: inline-flex;
             align-items: center;
@@ -346,6 +375,11 @@
             background: var(--ink);
             padding: 14px 22px;
             border-radius: 999px;
+            transition: transform 200ms cubic-bezier(.2,.7,.2,1), background 200ms ease;
+        }
+        .nav-mobile-cta:active {
+            transform: scale(0.96);
+            background: var(--rust-deep);
         }
     }
 
