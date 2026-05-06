@@ -1274,6 +1274,165 @@
         .footer-grid { grid-template-columns: 1fr 1fr; }
     }
 
+    /* ── SERVICES (What's included) ── */
+    .services {
+        background: var(--paper);
+        padding: clamp(80px, 10vw, 144px) 0;
+        border-bottom: 1px solid var(--rule);
+    }
+    .services-head {
+        max-width: 760px;
+        margin-bottom: clamp(48px, 6vw, 80px);
+    }
+    .services-h2 {
+        font-family: var(--serif);
+        font-size: clamp(40px, 5.6vw, 72px);
+        font-weight: 700;
+        line-height: 1.0;
+        letter-spacing: -0.022em;
+        margin: 18px 0 24px;
+        color: var(--ink);
+        max-width: 18ch;
+    }
+    .services-h2 em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .services-lede {
+        font-size: clamp(16px, 1.3vw, 19px);
+        line-height: 1.65;
+        color: var(--ink-2);
+        max-width: 56ch;
+        margin: 0;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        border-top: 1px solid var(--rule);
+        border-left: 1px solid var(--rule);
+    }
+    .service-card {
+        padding: clamp(36px, 4vw, 56px) clamp(28px, 3vw, 40px);
+        border-right: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: var(--paper);
+        position: relative;
+        transition: background 240ms ease;
+    }
+    .service-card:hover { background: var(--paper-soft); }
+    .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: var(--rust);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 320ms cubic-bezier(.2,.7,.2,1);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+        width: 32px; height: 32px;
+        color: var(--rust-deep);
+        flex-shrink: 0;
+    }
+    .service-h3 {
+        font-family: var(--serif);
+        font-size: clamp(22px, 2.2vw, 28px);
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.018em;
+        line-height: 1.15;
+        margin: 0;
+    }
+    .service-h3 em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .service-p {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-2);
+        margin: 0;
+    }
+    .services-foot {
+        margin-top: clamp(40px, 5vw, 64px);
+        padding-top: 28px;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .services-foot-text {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .services-foot-text strong { color: var(--ink); font-weight: 500; }
+    .services-foot-link {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: gap 240ms ease, color 200ms ease;
+    }
+    .services-foot-link:hover { gap: 12px; color: var(--rust-deep); }
+    @media (max-width: 980px) {
+        .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+        .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+        background: var(--paper-soft);
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        padding: clamp(48px, 6vw, 80px) 0;
+    }
+    .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(28px, 3.5vw, 56px);
+    }
+    .trust-item {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .trust-icon {
+        width: 30px; height: 30px;
+        color: var(--rust-deep);
+        flex-shrink: 0;
+    }
+    .trust-h3 {
+        font-family: var(--serif);
+        font-size: clamp(20px, 1.9vw, 26px);
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.014em;
+        line-height: 1.15;
+        margin: 0;
+    }
+    .trust-h3 em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .trust-p {
+        font-size: 14.5px;
+        line-height: 1.6;
+        color: var(--ink-2);
+        max-width: 32ch;
+        margin: 0;
+    }
+    @media (max-width: 760px) {
+        .trust-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+
     ::selection { background: var(--accent); color: var(--paper); }
 </style>
 </head>
@@ -1393,6 +1552,106 @@
                     </div>
                 </form>
             </aside>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="Why hire this studio">
+    <div class="wrap">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                <h3 class="trust-h3">Hand-coded, <em>no templates.</em></h3>
+                <p class="trust-p">No website builders, no theme buys, no proprietary CMS. Real, hand-written code, custom-fit to your firm.</p>
+            </div>
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <h3 class="trust-h3">Preview <em>before you sign.</em></h3>
+                <p class="trust-p">Most engagements start with a working preview I&rsquo;ve already built. See your firm&rsquo;s actual site before any commitment.</p>
+            </div>
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <h3 class="trust-h3">Edmonton-based, <em>Canadian-owned.</em></h3>
+                <p class="trust-p">A one-person studio in Alberta, working with professional services firms across Canada and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES — What's included -->
+<section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+        <header class="services-head">
+            <span class="eyebrow">What&rsquo;s included</span>
+            <h2 id="services-title" class="services-h2">Everything in one <em>$200 subscription.</em></h2>
+            <p class="services-lede">No upsells, no surprise invoices, no &ldquo;buy hosting separately.&rdquo; Six concrete deliverables, all included from day one of the engagement.</p>
+        </header>
+
+        <div class="services-grid">
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/><path d="M5 12h2"/><path d="M17 12h2"/>
+                </svg>
+                <h3 class="service-h3">Custom typography &amp; <em>palette.</em></h3>
+                <p class="service-p">Type and color drawn around your firm&rsquo;s identity, not a marketplace theme buy. Every layout decision made by one designer.</p>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+                <h3 class="service-h3">Hand-coded <em>build.</em></h3>
+                <p class="service-p">Real, hand-written code &mdash; no website builders, no theme swaps, no proprietary CMS lock-in. Fast, lean, accessible by default.</p>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="6" rx="1"/><rect x="2" y="14" width="20" height="6" rx="1"/><line x1="6" y1="7" x2="6.01" y2="7"/><line x1="6" y1="17" x2="6.01" y2="17"/>
+                </svg>
+                <h3 class="service-h3">Hosting, SSL &amp; <em>analytics.</em></h3>
+                <p class="service-p">Domain registration, SSL certificate, analytics, contact-form wiring, search-engine submission. All included &mdash; never billed separately.</p>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4Z"/>
+                </svg>
+                <h3 class="service-h3">Edits handled by <em>me.</em></h3>
+                <p class="service-p">Email when something needs updating &mdash; new bios, practice areas, blog posts, seasonal banners, layout tweaks. I do them. You don&rsquo;t learn a CMS.</p>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <h3 class="service-h3">Security &amp; <em>uptime.</em></h3>
+                <p class="service-p">Patched, monitored, kept current. Sites are static and Netlify-hosted &mdash; no PHP attack surface, no plugin breakage to fix at midnight.</p>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/>
+                </svg>
+                <h3 class="service-h3">Search-ready at <em>launch.</em></h3>
+                <p class="service-p">Sitemap submitted to Google, schema markup, page-speed optimization, fast-loading pages. Foundational SEO done the day the site goes live.</p>
+            </article>
+
+        </div>
+
+        <div class="services-foot">
+            <span class="services-foot-text"><strong>Six</strong> things, no upsells &middot; from <strong>$200/mo</strong></span>
+            <a href="how.html" class="services-foot-link">Read the full process <span aria-hidden="true">→</span></a>
         </div>
     </div>
 </section>
