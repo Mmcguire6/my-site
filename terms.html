@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Terms of Use — Matthew McGuire · Web Design Studio</title>
+<meta name="description" content="Terms governing the use of matthewmcguire.ca and Matthew McGuire's web design services." />
+<meta name="robots" content="noindex" />
+
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="mm-favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+    :root {
+        --paper:        #EFE7D2;
+        --paper-soft:   #E6DBC0;
+        --ink:          #1A1813;
+        --ink-2:        #4A4339;
+        --ink-3:        #847B6B;
+        --rule:         #CFC2A6;
+        --accent:       #2C3D24;
+        --accent-deep:  #1A2516;
+        --rust:         #7A4A28;
+        --rust-deep:    #4A2E1F;
+        --serif: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+        --sans:  'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+        --mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+        --max:    1240px;
+        --gutter: clamp(20px, 4vw, 56px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: var(--sans); font-size: 16px; line-height: 1.7;
+        color: var(--ink); background: var(--paper);
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        animation: pageEnter 380ms cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes pageEnter { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pageLeave { from { opacity: 1; } to { opacity: 0; } }
+    body.is-leaving { animation: pageLeave 260ms cubic-bezier(.4,.1,.3,1) forwards; }
+    @media (prefers-reduced-motion: reduce) {
+        body, body.is-leaving { animation: none !important; }
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Masthead + Nav */
+    .masthead { background: var(--ink); color: color-mix(in oklch, var(--paper) 78%, transparent); border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent); }
+    .masthead-inner { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; gap: 16px; font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
+    .masthead-edition { display: inline-flex; align-items: center; gap: 12px; }
+    .masthead-edition::before { content: ""; width: 22px; height: 1px; background: color-mix(in oklch, var(--rust) 90%, transparent); }
+    .masthead-meta { color: color-mix(in oklch, var(--paper) 60%, transparent); }
+    @media (max-width: 600px) { .masthead-meta { display: none; } }
+
+    .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid transparent; transition: border-color 240ms ease; }
+    .nav.scrolled { border-bottom-color: var(--rule); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(28px, 4vw, 56px); gap: 24px; }
+    .nav-mark { display: inline-flex; align-items: baseline; gap: 12px; color: var(--ink); }
+    .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
+    .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 11px 20px; border: 1px solid var(--ink); border-radius: 999px; transition: background 200ms ease, color 200ms ease; }
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
+    .nav-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; padding: 0; transition: background 200ms ease, border-color 200ms ease; }
+    .nav-toggle:hover { background: color-mix(in oklch, var(--ink) 6%, transparent); }
+    .nav-toggle:active { transform: scale(0.92); transition: transform 120ms cubic-bezier(.2,.7,.2,1); }
+    .nav-toggle-bars { position: relative; width: 18px; height: 12px; }
+    .nav-toggle-bars::before, .nav-toggle-bars::after { content: ""; position: absolute; left: 0; width: 100%; height: 1.5px; background: var(--ink); transition: top 200ms ease 200ms, transform 240ms cubic-bezier(.2,.7,.2,1); }
+    .nav-toggle-bars::before { top: 2px; }
+    .nav-toggle-bars::after  { top: 8px; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 5px; transform: rotate(45deg); transition: top 200ms ease, transform 240ms cubic-bezier(.2,.7,.2,1) 200ms; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { top: 5px; transform: rotate(-45deg); transition: top 200ms ease, transform 240ms cubic-bezier(.2,.7,.2,1) 200ms; }
+    .nav-mobile { display: none; }
+    @media (max-width: 760px) {
+        .nav-links { display: none; }
+        .nav-mark-name { display: none; }
+        .nav-cta { display: none; }
+        .nav-toggle { display: inline-flex; }
+        #site-nav { z-index: 70; }
+        .nav-mobile { display: flex; flex-direction: column; justify-content: center; position: fixed; inset: 0; background: var(--paper); padding: 100px 32px 56px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 280ms ease, transform 320ms cubic-bezier(.2,.7,.2,1); z-index: 60; overflow-y: auto; }
+        body.nav-open .nav-mobile { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        body.nav-open { overflow: hidden; }
+        .nav-mobile-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+        .nav-mobile-links a { display: inline-block; padding: 12px 0; font-family: var(--serif); font-style: italic; font-size: clamp(40px, 9vw, 64px); color: var(--ink); letter-spacing: -0.022em; line-height: 1; position: relative; transform-origin: left center; transition: transform 220ms cubic-bezier(.2,.7,.2,1), color 240ms ease; }
+        .nav-mobile-links a:active { transform: scale(0.97); color: var(--rust-deep); }
+        .nav-mobile-cta { display: inline-flex; align-items: center; align-self: flex-start; margin-top: 40px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 14px 22px; border-radius: 999px; }
+    }
+
+    /* PAGE CONTENT */
+    .legal-hero {
+        padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+        border-bottom: 1px solid var(--rule);
+    }
+    .legal-eyebrow {
+        font-family: var(--mono); font-size: 11px; font-weight: 500;
+        letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-deep);
+        display: inline-flex; align-items: center; gap: 12px;
+    }
+    .legal-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+    .legal-h1 {
+        font-family: var(--serif); font-size: clamp(40px, 6vw, 80px);
+        font-style: italic; font-weight: 700; line-height: 0.98;
+        letter-spacing: -0.024em; color: var(--ink); margin: 22px 0 18px;
+        max-width: 18ch;
+    }
+    .legal-meta {
+        font-family: var(--mono); font-size: 11px;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .legal-body {
+        padding: clamp(56px, 7vw, 96px) 0 clamp(72px, 9vw, 128px);
+    }
+    .legal-prose {
+        max-width: 70ch;
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--ink-2);
+    }
+    .legal-prose h2 {
+        font-family: var(--serif); font-size: clamp(24px, 2.6vw, 32px);
+        font-weight: 700; color: var(--ink); margin: 2.4em 0 0.6em;
+        letter-spacing: -0.014em; line-height: 1.2;
+    }
+    .legal-prose h2:first-child { margin-top: 0; }
+    .legal-prose h2 em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+    .legal-prose p { margin: 0.9em 0; }
+    .legal-prose strong { color: var(--ink); font-weight: 500; }
+    .legal-prose ul {
+        list-style: none; padding: 0; margin: 1em 0;
+        display: flex; flex-direction: column; gap: 6px;
+    }
+    .legal-prose li {
+        padding-left: 22px; position: relative;
+    }
+    .legal-prose li::before {
+        content: "—"; position: absolute; left: 0; color: var(--rust);
+        font-weight: 600;
+    }
+    .legal-prose a {
+        color: var(--rust-deep);
+        border-bottom: 1px solid color-mix(in oklch, var(--rust) 40%, transparent);
+        padding-bottom: 1px;
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .legal-prose a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+
+    /* Footer */
+    .footer { background: var(--paper-soft); border-top: 1px solid var(--rule); padding: 64px 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: clamp(32px, 4vw, 64px); margin-bottom: 48px; }
+    .footer-brand { font-family: var(--serif); font-style: italic; font-size: 28px; letter-spacing: -0.01em; color: var(--ink); }
+    .footer-blurb { margin-top: 14px; font-size: 14px; line-height: 1.6; color: var(--ink-3); max-width: 32ch; }
+    .footer-credit {
+        margin-top: 18px; font-family: var(--mono); font-size: 10px; font-weight: 600;
+        letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+        display: inline-flex; align-items: center; gap: 10px;
+    }
+    .footer-credit-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--rust); }
+    .footer-h5 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 18px; font-weight: 500; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col li { font-size: 14px; color: var(--ink-2); }
+    .footer-col a { color: var(--ink-2); transition: color 200ms ease; }
+    .footer-col a:hover { color: var(--ink); }
+    .footer-bottom { padding-top: 24px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-3); }
+    .footer-bottom-links a { color: inherit; border-bottom: 1px solid color-mix(in oklch, var(--rule) 70%, transparent); padding-bottom: 1px; transition: color 200ms ease, border-color 200ms ease; }
+    .footer-bottom-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+    .footer-bottom-links .dot { margin: 0 6px; opacity: 0.6; }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+
+    ::selection { background: var(--rust); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead" role="presentation">
+    <div class="wrap masthead-inner">
+        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
+    </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+            <span class="nav-mark-letters">Matthew McGuire</span>
+            <span class="nav-mark-name">Designer · developer</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="how.html">How I work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="nav-cta">Start a project →</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
+    <ul class="nav-mobile-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="how.html">How I work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
+</aside>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="legal-hero">
+    <div class="wrap">
+        <span class="legal-eyebrow">Legal</span>
+        <h1 class="legal-h1">Terms of Use.</h1>
+        <p class="legal-meta">Last updated &middot; May 5, 2026</p>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="legal-body">
+    <div class="wrap">
+        <div class="legal-prose">
+
+            <h2>The <em>short version.</em></h2>
+            <p>These terms govern the use of matthewmcguire.ca and any service you engage me for as Matthew McGuire (&ldquo;the studio&rdquo;). By browsing this site or signing a service agreement, you agree to these terms. If anything below is unclear, email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> &mdash; I&rsquo;ll explain in plain language.</p>
+
+            <h2>What the studio <em>provides.</em></h2>
+            <p>I design and build websites for small-to-mid professional services firms. Engagements are run on a single inclusive monthly plan that covers design, build, hosting, ongoing edits, security patches, and small additions. Specifics of any individual engagement &mdash; page count, content scope, integrations &mdash; are documented in a service agreement signed by both parties before work begins.</p>
+
+            <h2>Pricing and <em>payment.</em></h2>
+            <ul>
+                <li><strong>$0 down to sign.</strong> No deposit is collected when the service agreement is signed.</li>
+                <li><strong>$250 per month, all-inclusive.</strong> The monthly plan begins on your site&rsquo;s launch day and covers design, build, hosting, edits, security, and small additions.</li>
+                <li><strong>Twelve-month minimum term.</strong> The first twelve months are committed; after that, the plan continues month-to-month.</li>
+                <li><strong>Cancel any time after twelve months.</strong> No exit fees, no penalty.</li>
+                <li><strong>Major add-ons are quoted separately.</strong> New features outside the agreed scope (booking systems, e-commerce, custom calculators, full redesigns) are quoted in writing and rolled into the monthly plan when added.</li>
+                <li><strong>Domain and SSL fees are passed through at cost</strong> &mdash; the domain is registered in your firm&rsquo;s name and owned by you, not the studio.</li>
+            </ul>
+            <p>Invoices are sent monthly. Payment is due within fourteen days of receipt. Late payments more than thirty days past due may result in suspension of the monthly plan until brought current.</p>
+
+            <h2>Cancellation and <em>refunds.</em></h2>
+            <p>You may cancel the monthly plan at any time after the twelve-month minimum has been served by giving thirty days&rsquo; written notice. Cancellation within the first twelve months requires payment of the remaining balance of the term unless the studio has materially failed to deliver the service.</p>
+            <p>Because the build is included in the monthly plan and bears no upfront fee, the studio does not issue refunds for completed monthly periods. If you are dissatisfied at any point, email me before considering cancellation &mdash; problems are usually solvable.</p>
+
+            <h2>Ownership of <em>work.</em></h2>
+            <p>The site code, design, and all client-provided content remain the property of your firm at all times. There is no proprietary CMS, no rented templates, no vendor lock-in. If you cancel after the twelve-month term, the entire codebase is yours to migrate to any developer or hosting provider you choose.</p>
+            <p>I retain the right to display screenshots, working URLs, and descriptions of the engagement in my portfolio (matthewmcguire.ca/work) for marketing purposes, unless you request otherwise in writing before launch.</p>
+
+            <h2>Use of this <em>website.</em></h2>
+            <p>You may browse, link to, and reference matthewmcguire.ca freely. You may not scrape, reproduce, or republish substantial portions of its content without permission. Automated scraping of contact forms, mass enquiries, or any attempt to interfere with the site&rsquo;s operation is prohibited.</p>
+
+            <h2>Liability.</h2>
+            <p>The studio provides services with reasonable professional care. To the extent permitted by law, the studio&rsquo;s aggregate liability for any claim arising out of an engagement is limited to the total fees paid to the studio over the preceding twelve months. The studio is not liable for indirect, consequential, or business-interruption damages. Nothing in these terms limits liability for fraud, gross negligence, or anything that cannot be limited under applicable law.</p>
+
+            <h2>Indemnity.</h2>
+            <p>You agree to indemnify the studio against claims arising from your firm&rsquo;s use of content you provide for the site &mdash; including but not limited to copyright, trademark, defamation, or regulatory claims related to your firm&rsquo;s practice or materials.</p>
+
+            <h2>Governing <em>law.</em></h2>
+            <p>These terms are governed by the laws of the Province of Alberta, Canada. Disputes will be resolved in the courts of Alberta, except where a different forum is required by applicable consumer protection law.</p>
+
+            <h2>Changes to these <em>terms.</em></h2>
+            <p>These terms may be updated as the studio&rsquo;s practices evolve. The &ldquo;Last updated&rdquo; date at the top of this page reflects the most recent revision. Material changes affecting active engagements will be communicated by email at least thirty days in advance. Continued use of the service after a change constitutes acceptance.</p>
+
+            <h2>Contact.</h2>
+            <p>Questions about these terms? Email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a>.</p>
+
+            <p style="margin-top:2.5em; font-style:italic; color: var(--ink-3); font-size: 14px;">These terms are written in plain language for clarity. They are not a substitute for an executed service agreement and should be read alongside any signed engagement contract. If you operate in a jurisdiction with stricter consumer protection rules, those rules take precedence over anything written here.</p>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Matthew McGuire</p>
+                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That&rsquo;s what the studio is for.</p>
+                <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Site</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="work.html">Selected work</a></li>
+                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Reach</h5>
+                <ul>
+                    <li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li>
+                    <li><a href="https://github.com/mmcguire6" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Based</h5>
+                <ul>
+                    <li>Edmonton, Alberta</li>
+                    <li>Working with firms across Canada</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a><span class="dot">·</span><a href="terms.html">Terms</a>
+            </span>
+            <span>Designed &amp; built by hand</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('site-nav');
+    if (nav) {
+        var onScroll = function () {
+            if (window.scrollY > 12) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    var navToggle = document.querySelector('.nav-toggle');
+    var navMobile = document.querySelector('.nav-mobile');
+    function setNav(open) {
+        document.body.classList.toggle('nav-open', open);
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+    }
+    if (navToggle) navToggle.addEventListener('click', function () {
+        setNav(!document.body.classList.contains('nav-open'));
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false);
+    });
+    if (navMobile) navMobile.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setNav(false); });
+    });
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (!href) return;
+        if (a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+            href.charAt(0) === '#' || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 ||
+            a.hasAttribute('download')) return;
+        if (a.host && a.host !== window.location.host) return;
+        if (a.pathname === window.location.pathname && a.hash) return;
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(function () { window.location.href = href; }, 260);
+    });
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) document.body.classList.remove('is-leaving');
+    });
+</script>
+
+</body>
+</html>

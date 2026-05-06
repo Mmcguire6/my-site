@@ -4,16 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Matthew McGuire — Designer &amp; developer for professional services firms</title>
-<meta name="description" content="Matthew McGuire is a one-person web studio based in Edmonton, Alberta. I design and build dignified, brand-coherent websites for small-to-mid professional services firms across Canada — lawyers, consultants, CPAs, clinics." />
+<title>$0 Down · $250/Month · Custom Websites for Alberta Firms — Matthew McGuire</title>
+<meta name="description" content="Hand-built, custom-designed websites for small-to-mid professional services firms across Canada. $0 down, $250 a month all-inclusive — design, hosting, edits, support — 12-month minimum." />
 
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="mm-favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://matthewmcguire.ca/" />
-<meta property="og:title" content="Matthew McGuire — Designer &amp; developer for professional services firms" />
-<meta property="og:description" content="A one-person web studio building dignified websites for the firms people trust. Lawyers · Consultants · CPAs · Clinics." />
+<meta property="og:title" content="$0 Down · $250/Month · Custom Websites for Alberta Firms — Matthew McGuire" />
+<meta property="og:description" content="A one-person web studio building dignified websites for the firms people trust. $0 down, $250/mo all-inclusive, 12-month minimum." />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -503,7 +503,43 @@
         line-height: 1.65;
         color: var(--ink-2);
         max-width: 50ch;
+        margin: 0 0 28px;
+    }
+    .hero-price {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 14px;
+        row-gap: 6px;
         margin: 0 0 36px;
+        padding-top: 22px;
+        border-top: 1px solid var(--rule);
+        max-width: 56ch;
+        font-family: var(--serif);
+        font-size: clamp(17px, 1.4vw, 21px);
+        font-weight: 500;
+        color: var(--ink);
+        letter-spacing: -0.008em;
+    }
+    .hero-price-tag {
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .hero-price strong {
+        font-weight: 700;
+        font-style: italic;
+        color: var(--rust-deep);
+    }
+    .hero-price-term {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
     }
     .hero-actions {
         display: flex;
@@ -1173,6 +1209,34 @@
         color: var(--ink-3);
         max-width: 32ch;
     }
+    .footer-credit {
+        margin-top: 18px;
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-credit-dot {
+        width: 8px; height: 8px;
+        border-radius: 999px;
+        background: var(--rust);
+    }
+    .footer-bottom-links a {
+        color: inherit;
+        border-bottom: 1px solid color-mix(in oklch, var(--rule) 70%, transparent);
+        padding-bottom: 1px;
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .footer-bottom-links a:hover {
+        color: var(--ink);
+        border-bottom-color: var(--ink);
+    }
+    .footer-bottom-links .dot { margin: 0 6px; opacity: 0.6; }
     .footer-h5 {
         font-family: var(--mono);
         font-size: 10px;
@@ -1261,7 +1325,7 @@
     <div class="wrap">
         <div class="hero-grid">
             <div class="hero-text">
-                <p class="hero-availability">Currently accepting new projects</p>
+                <p class="hero-availability">Custom-designed, hand-built &middot; Now accepting new projects</p>
                 <h1 class="hero-name">Matthew <span class="last">McGuire.</span></h1>
                 <p class="hero-tag">
                     I design and build modern websites for the <em>firms people trust.</em>
@@ -1269,9 +1333,14 @@
                 <p class="hero-lede">
                     A one-person studio out of Edmonton, Alberta — building for lawyers, consultants, CPAs, and clinics across Canada that want a web presence to match the work they actually do.
                 </p>
+                <p class="hero-price">
+                    <span class="hero-price-tag">From</span>
+                    <strong>$0 down</strong> &middot; $250 per month all-inclusive
+                    <span class="hero-price-term">12-month minimum</span>
+                </p>
                 <div class="hero-actions">
                     <a href="work.html" class="btn btn-primary">See selected work <span class="arrow">→</span></a>
-                    <a href="about.html" class="btn btn-secondary">More about me <span class="arrow">→</span></a>
+                    <a href="how.html" class="btn btn-secondary">How I work <span class="arrow">→</span></a>
                 </div>
             </div>
 
@@ -1534,7 +1603,8 @@
         <div class="footer-grid">
             <div>
                 <p class="footer-brand">Matthew McGuire</p>
-                <p class="footer-blurb">A one-person studio designing and building dignified websites for the firms people trust.</p>
+                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That&rsquo;s what the studio is for.</p>
+                <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
                 <h5 class="footer-h5">Site</h5>
@@ -1561,6 +1631,9 @@
         </div>
         <div class="footer-bottom">
             <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a><span class="dot">·</span><a href="terms.html">Terms</a>
+            </span>
             <span>Designed &amp; built by hand</span>
         </div>
     </div>
