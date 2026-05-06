@@ -232,12 +232,15 @@
     .nav-links a::after {
         content: "";
         position: absolute;
-        left: 0; right: 0; bottom: -2px;
-        height: 1px;
-        background: var(--ink);
+        left: -4px; right: -4px; bottom: -8px;
+        height: 9px;
+        background-image: url("img/brush-underline.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
         transform: scaleX(0);
         transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1), background-color 200ms ease;
+        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
     }
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after {
@@ -248,8 +251,6 @@
     .nav-links a[aria-current="page"]::after {
         transform: scaleX(1);
         transform-origin: left;
-        background: var(--rust);
-        height: 1.5px;
     }
     .nav-cta {
         font-family: var(--mono);
@@ -410,7 +411,7 @@
     /* ── HERO ── */
     .hero {
         position: relative;
-        padding: clamp(72px, 10vw, 136px) 0 clamp(72px, 9vw, 120px);
+        padding: clamp(48px, 6vw, 88px) 0 clamp(56px, 6vw, 96px);
         background:
             linear-gradient(
                 100deg,
@@ -475,13 +476,14 @@
     }
     .hero-name {
         font-family: var(--serif);
-        font-size: clamp(46px, 7.4vw, 116px);
+        font-size: clamp(36px, 4.4vw, 64px);
         font-style: italic;
         font-weight: 700;
-        letter-spacing: -0.032em;
-        line-height: 0.94;
+        letter-spacing: -0.022em;
+        line-height: 1.05;
         color: var(--ink);
-        margin: 0 0 28px;
+        margin: 0 0 24px;
+        max-width: 18ch;
     }
     .hero-name .last { color: var(--rust-deep); }
     .hero-tag {
@@ -512,36 +514,38 @@
         flex-wrap: wrap;
         align-items: baseline;
         column-gap: 14px;
-        row-gap: 6px;
-        margin: 0 0 36px;
-        padding-top: 22px;
+        row-gap: 8px;
+        margin: 0 0 28px;
+        padding: 16px 0 18px;
         border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
         max-width: 56ch;
         font-family: var(--serif);
-        font-size: clamp(17px, 1.4vw, 21px);
+        font-size: clamp(19px, 1.7vw, 25px);
         font-weight: 500;
         color: var(--ink);
         letter-spacing: -0.008em;
-    }
-    .hero-price-tag {
-        font-family: var(--mono);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--ink-3);
     }
     .hero-price strong {
         font-weight: 700;
         font-style: italic;
         color: var(--rust-deep);
+        text-decoration: none;
+        background-image: url("img/brush-underline.png");
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 100% 0.55em;
+        padding-bottom: 0.05em;
     }
     .hero-price-term {
+        flex-basis: 100%;
         font-family: var(--mono);
-        font-size: 10px;
+        font-size: 10.5px;
+        font-weight: 600;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--ink-3);
+        margin-top: 4px;
     }
     .hero-actions {
         display: flex;
@@ -1003,7 +1007,7 @@
         margin: 18px 0 24px;
         color: var(--paper);
     }
-    .how-h2 em { color: color-mix(in oklch, var(--accent) 78%, white 22%); }
+    .how-h2 em { color: #D88F4E; }
     .how-lede {
         font-size: clamp(16px, 1.3vw, 19px);
         line-height: 1.65;
@@ -1032,7 +1036,7 @@
         position: absolute;
         top: 0; left: 0; right: 0;
         height: 2px;
-        background: var(--accent);
+        background: #D88F4E;
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 320ms cubic-bezier(.2,.7,.2,1);
@@ -1042,7 +1046,7 @@
         font-family: var(--mono);
         font-size: 11px;
         letter-spacing: 0.18em;
-        color: var(--accent);
+        color: #D88F4E;
     }
     .how-step-title {
         font-family: var(--serif);
@@ -1052,7 +1056,7 @@
         color: var(--paper);
         font-weight: 700;
     }
-    .how-step-title em { font-style: italic; font-weight: 500; color: color-mix(in oklch, var(--rust) 84%, white 16%); }
+    .how-step-title em { font-style: italic; font-weight: 500; color: #D88F4E; }
     .how-step-body {
         font-size: 14px;
         line-height: 1.7;
@@ -1080,7 +1084,7 @@
         position: absolute;
         left: 0; top: 8px;
         width: 10px; height: 1px;
-        background: var(--accent);
+        background: #D88F4E;
     }
     @media (max-width: 880px) {
         .how-grid { grid-template-columns: 1fr; }
@@ -1584,18 +1588,14 @@
     <div class="wrap">
         <div class="hero-grid">
             <div class="hero-text">
-                <p class="hero-availability">Custom-designed, hand-built &middot; Now accepting new projects</p>
-                <h1 class="hero-name">Matthew <span class="last">McGuire.</span></h1>
-                <p class="hero-tag">
-                    I design and build modern websites for the <em>firms people trust.</em>
+                <p class="hero-availability">Edmonton studio &middot; Now accepting new projects</p>
+                <h1 class="hero-name">Modern websites for the <span class="last">firms people trust.</span></h1>
+                <p class="hero-price">
+                    <strong>$0 down</strong> &middot; <strong>$199 / month</strong> all-inclusive
+                    <span class="hero-price-term">12-month minimum &middot; or $3,800 lump sum</span>
                 </p>
                 <p class="hero-lede">
-                    A one-person studio out of Edmonton, Alberta — building for lawyers, consultants, CPAs, and clinics across Canada that want a web presence to match the work they actually do.
-                </p>
-                <p class="hero-price">
-                    <span class="hero-price-tag">From</span>
-                    <strong>$0 down</strong> &middot; $199 per month all-inclusive
-                    <span class="hero-price-term">12-month minimum</span>
+                    Custom-designed and hand-coded by one person &mdash; for law firms, CPAs, and clinics across Canada that want a web presence to match the work they actually do. Design, hosting, edits, security &mdash; everything included.
                 </p>
                 <div class="hero-actions">
                     <a href="work.html" class="btn btn-primary">See selected work <span class="arrow">→</span></a>
@@ -1756,29 +1756,12 @@
     </div>
 </section>
 
-<!-- FOUNDER CARD -->
-<section class="founder" aria-labelledby="founder-title">
-    <div class="wrap">
-        <div class="founder-card">
-            <figure class="founder-photo">
-                <img src="img/headshot/matt-headshot.png" alt="Matthew McGuire — owner and developer of the studio" loading="lazy" />
-            </figure>
-            <div class="founder-text">
-                <span class="eyebrow">Owner &middot; Developer</span>
-                <h2 id="founder-title" class="founder-h2">Hi, I&rsquo;m <em>Matthew.</em></h2>
-                <p>One person, end-to-end &mdash; strategy, design, build, deploy. No project managers, no junior handoffs, no offshore production. When you email the studio, you&rsquo;re emailing me. When you call, you get the person who designed your site.</p>
-                <a href="about.html" class="founder-link">More about the studio <span aria-hidden="true">→</span></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT (with desk photo) -->
+<!-- ABOUT -->
 <section id="about" class="section about">
     <div class="wrap">
         <div class="about-grid">
             <figure class="about-photo">
-                <img src="img/about-desk-plants.jpg" alt="A wood desk in window light — monitor on a wooden riser showing a forest wallpaper, headphones and keyboard in front, framed by green houseplants on both sides" />
+                <img src="img/headshot/matt-headshot.png" alt="Matthew McGuire — owner and developer of the studio" />
             </figure>
 
             <div class="about-text">
