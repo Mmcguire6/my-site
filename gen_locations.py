@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Generate SEO-optimized Canadian-city landing pages for matthewmcguire.ca.
+"""Generate SEO-optimized Alberta-city landing pages for matthewmcguire.ca.
 
 Each page targets the high-intent local keyword pattern "[city] web designer"
 with a keyword-targeted title/H1/H2 hierarchy, ~1000 words of body, an FAQ
 block (FAQPage schema), and internal links to nearby cities.
 
+Scope: only Alberta cities the studio actually serves. (A previous version
+included pages for every Canadian province; that was a doorway-page pattern
+and was scoped down on 2026-05-06.)
+
 Run from the my-site directory:  python gen_locations.py
 Outputs:
-  - locations/<slug>.html   (55 pages)
+  - locations/<slug>.html   (8 pages)
   - locations.html          (index page grouping cities by province)
   - sitemap.xml             (regenerated with all city URLs)
 """
@@ -41,132 +45,14 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
          "St. Albert is a quiet, prosperous suburb full of two- and three-person professional practices — family lawyers, dental clinics, financial planners. Most of these firms are too small to bother with a Toronto agency, but their clients still expect a website that looks like 2026. That's the gap I'm built for."),
         ("sherwood-park", "Sherwood Park",
          "Sherwood Park has one of the densest concentrations of small professional firms in Alberta. Strathcona County clinics, Baseline Road lawyers, and accountants serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $199 a month, everything included."),
-        ("red-deer", "Red Deer",
-         "Red Deer firms serve a regional client base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the practice does. I build for central Alberta lawyers, CPAs, and clinics remotely — discovery happens over email, design happens in the browser, and your firm's site goes live without anyone having to drive Highway 2."),
-        ("lethbridge", "Lethbridge",
-         "Lethbridge is a university town with a professional-services backbone — agriculture lawyers, regional accounting practices, family clinics. The studio works with southern Alberta firms the same way it works with everyone: clear pricing, hand-coded sites, and an ongoing relationship that doesn't disappear after launch."),
-        ("medicine-hat", "Medicine Hat",
-         "Medicine Hat firms serve clients across the southeast — Brooks, Redcliff, the Hutterite colonies, the Saskatchewan border towns. The website should communicate that range without feeling like a template. Every Medicine Hat build is custom-designed and coded by hand, then handed back to you with hosting included."),
-        ("fort-mcmurray", "Fort McMurray",
-         "Fort McMurray firms work with a workforce that's half rotational, half rooted — and a website needs to communicate to both. Most of my Fort Mac clients are professional-services practices serving the camps and the community: family lawyers, accounting firms, medical clinics. The remote workflow suits the city well."),
-        ("camrose", "Camrose",
-         "Camrose is a small city with a disproportionately strong professional-services base — Augustana spillover, regional law and accounting practices, agricultural consultancies. I build the kind of website that travels well: looks credible to a client three hours away, edits cleanly when the firm grows, and doesn't require a marketing manager to maintain."),
-        ("wetaskiwin", "Wetaskiwin",
-         "Wetaskiwin is one of those Alberta cities where the firms are smaller than the work they do — solo lawyers handling estate files, two-person accounting practices, family clinics serving generations of patients. A modern website signals to younger clients that the firm has moved with the times. That's what the studio is for."),
         ("leduc", "Leduc",
          "Leduc firms serve a corridor that's exploded in the last decade — international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
-        ("grande-prairie", "Grande Prairie",
-         "Grande Prairie is the professional hub for the Peace Country, which means firms here serve clients from Beaverlodge to Fairview to the BC border. A website should reflect that reach without overcomplicating the message. I work with GP practices remotely — every build, every edit, every conversation happens online."),
         ("spruce-grove", "Spruce Grove",
          "Spruce Grove and Stony Plain together form one of the fastest-growing professional markets in the Edmonton region. I build for the small firms that are growing into that market — family lawyers expanding to two associates, CPAs adding a junior, clinics opening a second location. The $199/month plan grows with the practice."),
         ("airdrie", "Airdrie",
          "Airdrie has tripled in population in twenty years, and the professional-services market is still catching up. Most Airdrie firms are bootstrapping — solo lawyers, single-CPA practices, two-doctor clinics. A custom website without an enterprise budget is exactly the gap the studio fills."),
-    ]),
-    ("British Columbia", "BC", [
-        ("vancouver", "Vancouver",
-         "Vancouver's professional-services market is one of the most design-aware in the country, which means a generic Squarespace template gets noticed for the wrong reasons. The studio builds hand-coded sites for boutique Vancouver firms that want their website to read at the level of their work — without paying $20,000 for a downtown agency build."),
-        ("victoria", "Victoria",
-         "Victoria firms serve a clientele that values craft — government workers, retirees with assets, established Island families. A website should feel as considered as the practice. Every Victoria build is custom-designed for the firm, hand-coded, and hosted on infrastructure that loads in under a second from the Inner Harbour."),
-        ("surrey", "Surrey",
-         "Surrey's professional-services market is multilingual, multicultural, and one of the fastest-growing in BC. The studio builds sites that communicate clearly across that diversity — no jargon, no template clichés, just clear copy and a design that respects the firm's clientele."),
-        ("burnaby", "Burnaby",
-         "Burnaby sits between Vancouver's design expectations and the suburban firms growing along the SkyTrain line. Whatever side of that divide your practice is on, the studio builds the same way: hand-coded, custom-designed, $0 down and $199 a month all-inclusive."),
-        ("kelowna", "Kelowna",
-         "Kelowna is now a serious professional-services market — Okanagan lawyers, CPAs serving wineries and orchards, clinics handling a steady stream of new residents. A modern website tells incoming clients the firm is part of where the city is going, not where it was twenty years ago."),
-        ("nanaimo", "Nanaimo",
-         "Nanaimo firms serve a corridor running from Cobble Hill to Campbell River, and the website should travel as well as the practice does. I build clean, fast sites that work for clients researching from a ferry, a coffee shop, or a kitchen table. The remote workflow suits Island firms well."),
-        ("kamloops", "Kamloops",
-         "Kamloops is the regional hub for the BC Interior — TRU, the railway, professional firms serving the entire Thompson-Nicola region. A custom site without an enterprise build budget is exactly the kind of work the studio is built for."),
-        ("abbotsford", "Abbotsford",
-         "Abbotsford and the Fraser Valley are full of established family firms — multi-generation farms, second-generation lawyers, accounting practices that have served the same clients for thirty years. A modern website signals to the next generation of clients that the firm has kept pace, without abandoning what made it work."),
-    ]),
-    ("Saskatchewan", "SK", [
-        ("saskatoon", "Saskatoon",
-         "Saskatoon firms serve a province-wide professional network — University of Saskatchewan spillover, downtown lawyers, regional accounting practices, family clinics. The studio builds custom-coded websites that communicate the practice's actual character, not a template's idea of what a 'professional services site' looks like."),
-        ("regina", "Regina",
-         "Regina is Saskatchewan's government and legal hub, which means the firms here are used to communicating clearly and without fluff. The studio's design language matches that: editorial typography, restrained colour, and copy that says exactly what the firm does. $0 down, $199 a month, everything included."),
-        ("prince-albert", "Prince Albert",
-         "Prince Albert firms serve clients across the northern half of the province — communities most national agencies forget exist. A custom website signals to those clients that the firm is investing in how it presents itself. That's what the studio does."),
-        ("moose-jaw", "Moose Jaw",
-         "Moose Jaw is a small city with a deep professional-services base — military, corrections, healthcare, established family firms. The studio works with Moose Jaw practices remotely, the same way it works with Edmonton or Calgary. The location of the firm doesn't change the build."),
-    ]),
-    ("Manitoba", "MB", [
-        ("winnipeg", "Winnipeg",
-         "Winnipeg firms serve a clientele that's seen plenty of agency work and plenty of bad templates. A hand-coded, editorial-quality site stands out in that market without trying too hard. I work with Winnipeg lawyers, CPAs, and clinics remotely — the discovery, design, and launch all happen online."),
-        ("brandon", "Brandon",
-         "Brandon firms serve the southwestern corner of the province, which means clients are spread across hundreds of kilometres of farmland. A fast, mobile-first website is non-negotiable. Every build the studio ships is hand-coded, optimized, and fast enough to load on a tractor cab phone."),
-        ("steinbach", "Steinbach",
-         "Steinbach is one of Canada's fastest-growing small cities, with a professional-services market expanding to match. The studio builds for the firms growing into that market — solo lawyers adding partners, family CPAs hiring juniors, clinics opening second locations. The $199/month plan scales with the practice."),
-    ]),
-    ("Ontario", "ON", [
-        ("toronto", "Toronto",
-         "Toronto's professional-services market expects polish. The studio's editorial design language — Playfair Display headlines, restrained colour, careful typography — was built with downtown firms in mind. Every Toronto build is hand-coded, custom-designed, and lives at $0 down with $199 a month covering hosting, edits, and support."),
-        ("ottawa", "Ottawa",
-         "Ottawa firms serve government clients, federal regulators, and a professional-class clientele that notices when a website looks like a 2014 template. The studio builds custom sites that read at the level of the work — for boutique law firms, consultancies, and clinics across the National Capital Region."),
-        ("hamilton", "Hamilton",
-         "Hamilton's professional-services market has been transformed by the last fifteen years of Toronto spillover. Mid-size firms are hiring, growing, and rebranding. A modern website is part of that — and the studio builds the kind of custom site that signals the firm has joined the new Hamilton, without losing sight of the old one."),
-        ("london", "London",
-         "London firms serve a corridor running from Sarnia to Woodstock, and a website needs to work for clients across that whole range. I build clean, hand-coded sites for southwestern Ontario law firms, accounting practices, and clinics — $0 down, $199 a month, everything included for as long as you stay."),
-        ("kitchener", "Kitchener",
-         "Kitchener-Waterloo's professional-services firms work alongside one of the most tech-aware client bases in Canada. Templates get noticed. The studio builds custom-coded sites for KW law firms, CPAs, and clinics — sites that load fast, look considered, and signal the firm is serious about its presence."),
-        ("mississauga", "Mississauga",
-         "Mississauga is a professional-services market that's outgrown 'suburb of Toronto' as a description. The firms here are full-service, multi-generational, and competing for the same clients as downtown practices. A custom website is part of that competitive position — and the studio builds it without the downtown agency price tag."),
-        ("brampton", "Brampton",
-         "Brampton's professional-services market is multilingual, multicultural, and one of the fastest-growing in the GTA. The studio builds websites that communicate clearly across that diversity — no agency jargon, no template clichés, just clear copy and a design that respects the firm's clientele."),
-        ("windsor", "Windsor",
-         "Windsor firms serve a cross-border professional clientele — Detroit business, automotive, healthcare. A website needs to read credibly to clients on either side of the river. The studio builds Windsor sites the same way it builds everywhere else: hand-coded, custom-designed, hosted, and supported on a $199-a-month plan."),
-        ("kingston", "Kingston",
-         "Kingston is a small professional city with disproportionately strong legal, medical, and academic firms. The clients these practices serve — Queen's faculty, military, government workers — notice when a website looks considered. That's what the studio builds."),
-        ("sudbury", "Sudbury",
-         "Sudbury firms serve a vast Northeastern Ontario clientele, and a website is often the first impression a client three hours away ever gets. The studio builds custom sites that load fast, read clearly, and represent the practice as well in Timmins as they do in downtown Sudbury."),
-    ]),
-    ("Quebec", "QC", [
-        ("montreal", "Montreal",
-         "Montreal's professional-services market is bilingual, design-aware, and one of the most discerning in Canada. The studio builds English-language and bilingual sites for Montreal law firms, consultancies, and clinics — hand-coded, editorial in feel, and priced at $0 down with $199 a month covering hosting and edits."),
-        ("quebec-city", "Quebec City",
-         "Quebec City firms serve a francophone professional clientele that values craft and continuity — and a website should feel that way too. The studio builds bilingual sites for Quebec City practices remotely, with the same design discipline and pricing model as every other build."),
-        ("gatineau", "Gatineau",
-         "Gatineau firms serve a cross-river professional market, with clients on both sides of the Ottawa River. A bilingual, fast-loading, custom-coded site is non-negotiable. The studio builds Gatineau sites at $0 down, $199 a month, everything included."),
-        ("sherbrooke", "Sherbrooke",
-         "Sherbrooke is the regional professional hub for the Eastern Townships, with firms serving a mix of francophone, anglophone, and cross-border clients. A custom website that handles that range without feeling generic is exactly what the studio is built to deliver."),
-        ("trois-rivieres", "Trois-Rivières",
-         "Trois-Rivières firms serve a regional professional clientele between Montreal and Quebec City — manufacturing, healthcare, family law, accounting. A modern, hand-coded website signals to that clientele that the practice has kept pace with the rest of the corridor."),
-    ]),
-    ("New Brunswick", "NB", [
-        ("moncton", "Moncton",
-         "Moncton firms serve a bilingual Maritime clientele, and a website needs to work in English, French, and across three provinces. The studio builds custom sites for Moncton practices remotely — every build is hand-coded, fast, and priced at $0 down with $199 a month all-inclusive."),
-        ("saint-john", "Saint John",
-         "Saint John is one of New Brunswick's oldest professional-services markets — multi-generation law firms, established CPAs, family clinics. A modern website signals to the next generation of clients that the practice has moved with the times, without losing what made it work for the previous generation."),
-        ("fredericton", "Fredericton",
-         "Fredericton firms serve a government, university, and professional clientele used to clean, considered design. The studio builds custom-coded sites that read at the level of the work — for boutique New Brunswick law firms, consultancies, and clinics."),
-    ]),
-    ("Nova Scotia", "NS", [
-        ("halifax", "Halifax",
-         "Halifax's professional-services market is the design-aware hub of Atlantic Canada, and templates get noticed in the wrong way. The studio builds custom-coded, editorial-quality sites for Halifax law firms, CPAs, and clinics — hand-built, hosted, and supported at $0 down and $199 a month."),
-        ("dartmouth", "Dartmouth",
-         "Dartmouth firms work alongside Halifax's professional-services market while serving their own communities — a website should communicate that local rootedness without feeling provincial. The studio builds Dartmouth sites the same way it builds everywhere else: custom-designed, hand-coded, and priced honestly."),
-    ]),
-    ("Prince Edward Island", "PE", [
-        ("charlottetown", "Charlottetown",
-         "Charlottetown firms serve an Island-wide professional clientele — generations-deep family law practices, regional CPAs, family clinics. A modern, hand-coded website signals that the practice has invested in how it presents to clients, without losing the small-Island character that made it work in the first place."),
-    ]),
-    ("Newfoundland and Labrador", "NL", [
-        ("st-johns", "St. John's",
-         "St. John's firms serve a Newfoundland-wide professional clientele, often from a single downtown office. A custom website is the studio's specialty — hand-coded, fast, and hosted on infrastructure that loads quickly even on rural Newfoundland connections."),
-        ("corner-brook", "Corner Brook",
-         "Corner Brook firms serve western Newfoundland from one of the province's two regional professional hubs. The studio builds Corner Brook sites the same way it builds everywhere else: custom-designed, hand-coded, $0 down, $199 a month all-inclusive."),
-    ]),
-    ("Yukon", "YT", [
-        ("whitehorse", "Whitehorse",
-         "Whitehorse firms serve a Yukon-wide professional clientele, often as the only practice of their kind in the territory. A custom website is non-negotiable — and the studio builds it without forcing northern firms to fly south for a discovery call. Every build, edit, and conversation happens online."),
-    ]),
-    ("Northwest Territories", "NT", [
-        ("yellowknife", "Yellowknife",
-         "Yellowknife firms serve a vast NWT clientele, often as the only specialist practice within hundreds of kilometres. A hand-coded, fast-loading site is essential — and the studio's remote workflow means a Yellowknife firm can launch a new website without anyone leaving the territory."),
-    ]),
-    ("Nunavut", "NU", [
-        ("iqaluit", "Iqaluit",
-         "Iqaluit firms serve a Nunavut-wide professional clientele, with logistical realities that no national agency understands. The studio builds remotely for Iqaluit practices — hand-coded sites, fast hosting, and a $199-a-month plan that covers everything for as long as you stay."),
+        ("red-deer", "Red Deer",
+         "Red Deer firms serve a regional client base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the practice does. I build for central Alberta lawyers, CPAs, and clinics remotely — discovery happens over email, design happens in the browser, and your firm's site goes live without anyone having to drive Highway 2."),
     ]),
 ]
 
@@ -174,71 +60,14 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
 # `areas` is a one-line phrase that gets dropped into "across {areas}".
 # `nearby` is a list of slugs (must exist elsewhere in CITIES).
 EXTRAS: dict[str, dict] = {
-    "edmonton":       {"areas": "downtown, Whyte Avenue, the west end, St. Albert, Sherwood Park, and the surrounding capital region", "nearby": ["st-albert", "sherwood-park", "leduc"]},
-    "calgary":        {"areas": "downtown, the Beltline, Mission, Kensington, and the suburban office parks of Mahogany, Tuscany, and Auburn Bay", "nearby": ["airdrie", "red-deer", "lethbridge"]},
-    "st-albert":      {"areas": "downtown St. Albert, Erin Ridge, Mission, and the Sturgeon County edge", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
-    "sherwood-park":  {"areas": "Baseline Road, Sherwood Drive, Centre in the Park, and Strathcona County's industrial corridor", "nearby": ["edmonton", "st-albert", "camrose"]},
-    "red-deer":       {"areas": "downtown, Riverside, Oriole Park, and the QE2 corridor stretching to Penhold and Innisfail", "nearby": ["calgary", "edmonton", "camrose"]},
-    "lethbridge":     {"areas": "downtown, the University, and the agricultural belt around Coaldale and Coalhurst", "nearby": ["medicine-hat", "calgary", "red-deer"]},
-    "medicine-hat":   {"areas": "downtown, the Flats, Crescent Heights, and the southeast Alberta border country", "nearby": ["lethbridge", "calgary", "moose-jaw"]},
-    "fort-mcmurray":  {"areas": "downtown, Thickwood, Timberlea, and the regional camps", "nearby": ["edmonton", "grande-prairie", "red-deer"]},
-    "camrose":        {"areas": "downtown Camrose, Augustana, and the Beaver County region", "nearby": ["edmonton", "wetaskiwin", "red-deer"]},
-    "wetaskiwin":     {"areas": "downtown, Millet, Pigeon Lake, and the Highway 13 corridor", "nearby": ["edmonton", "camrose", "leduc"]},
-    "leduc":          {"areas": "downtown Leduc, Nisku, Beaumont, and the airport corridor", "nearby": ["edmonton", "wetaskiwin", "spruce-grove"]},
-    "grande-prairie": {"areas": "downtown, Hillside, Beaverlodge, and the Peace Country region stretching to Dawson Creek", "nearby": ["edmonton", "fort-mcmurray", "red-deer"]},
-    "spruce-grove":   {"areas": "Spruce Grove proper, Stony Plain, Parkland County, and the western Edmonton region", "nearby": ["edmonton", "st-albert", "leduc"]},
-    "airdrie":        {"areas": "downtown, Bayside, the QE2 corridor, and the bedroom communities north of Calgary", "nearby": ["calgary", "red-deer", "edmonton"]},
-
-    "vancouver":      {"areas": "downtown, Yaletown, Kitsilano, Mount Pleasant, and the surrounding Lower Mainland", "nearby": ["burnaby", "surrey", "victoria"]},
-    "victoria":       {"areas": "downtown, Oak Bay, Saanich, and the Inner Harbour", "nearby": ["vancouver", "nanaimo", "burnaby"]},
-    "surrey":         {"areas": "Whalley, Newton, Cloverdale, South Surrey, and the Fraser River corridor", "nearby": ["vancouver", "burnaby", "abbotsford"]},
-    "burnaby":        {"areas": "Metrotown, Brentwood, Burnaby Heights, and the SkyTrain spine", "nearby": ["vancouver", "surrey", "abbotsford"]},
-    "kelowna":        {"areas": "downtown, Mission, Glenmore, and the Okanagan Lake region", "nearby": ["kamloops", "vancouver", "victoria"]},
-    "nanaimo":        {"areas": "downtown, Departure Bay, Lantzville, and the central Island region", "nearby": ["victoria", "vancouver", "burnaby"]},
-    "kamloops":       {"areas": "downtown, Sahali, Aberdeen, and the Thompson Valley", "nearby": ["kelowna", "vancouver", "abbotsford"]},
-    "abbotsford":     {"areas": "downtown, Clearbrook, the Fraser Valley, and the corridor to Mission and Chilliwack", "nearby": ["surrey", "burnaby", "vancouver"]},
-
-    "saskatoon":      {"areas": "downtown, the U of S district, Riversdale, and the Saskatchewan Valley", "nearby": ["regina", "prince-albert", "moose-jaw"]},
-    "regina":         {"areas": "downtown, Cathedral, Lakeview, and the Wascana corridor", "nearby": ["saskatoon", "moose-jaw", "winnipeg"]},
-    "prince-albert":  {"areas": "downtown, the West Hill, and the gateway to northern Saskatchewan", "nearby": ["saskatoon", "regina", "edmonton"]},
-    "moose-jaw":      {"areas": "downtown, the Crescents, and the Trans-Canada corridor", "nearby": ["regina", "saskatoon", "medicine-hat"]},
-
-    "winnipeg":       {"areas": "downtown, the Exchange District, Osborne Village, and the Manitoba capital region", "nearby": ["brandon", "steinbach", "regina"]},
-    "brandon":        {"areas": "downtown, the BU campus, and the southwestern Manitoba region", "nearby": ["winnipeg", "saskatoon", "regina"]},
-    "steinbach":      {"areas": "downtown, the Mennonite Heritage area, and the southeastern Manitoba region", "nearby": ["winnipeg", "brandon", "saskatoon"]},
-
-    "toronto":        {"areas": "downtown, King West, Yorkville, Liberty Village, and the GTA from Mississauga to Markham", "nearby": ["mississauga", "brampton", "hamilton"]},
-    "ottawa":         {"areas": "downtown, the ByWard Market, the Glebe, Westboro, and the National Capital Region", "nearby": ["kingston", "gatineau", "toronto"]},
-    "hamilton":       {"areas": "downtown, Westdale, Stoney Creek, Ancaster, and the Niagara Escarpment region", "nearby": ["toronto", "mississauga", "kitchener"]},
-    "london":         {"areas": "downtown, Old North, Wortley Village, and the Highway 401 corridor", "nearby": ["kitchener", "windsor", "hamilton"]},
-    "kitchener":      {"areas": "downtown Kitchener, Uptown Waterloo, and the KW innovation corridor", "nearby": ["london", "hamilton", "toronto"]},
-    "mississauga":    {"areas": "Port Credit, Streetsville, Square One, and the Lakeshore corridor", "nearby": ["toronto", "brampton", "hamilton"]},
-    "brampton":       {"areas": "downtown, Heart Lake, Mount Pleasant, and the Peel Region", "nearby": ["mississauga", "toronto", "kitchener"]},
-    "windsor":        {"areas": "downtown, Walkerville, Riverside, and the Detroit-Windsor corridor", "nearby": ["london", "kitchener", "toronto"]},
-    "kingston":       {"areas": "downtown, the Queen's University district, Cataraqui, and the eastern Lake Ontario shore", "nearby": ["ottawa", "toronto", "kitchener"]},
-    "sudbury":        {"areas": "downtown, the Donovan, New Sudbury, and Northeastern Ontario", "nearby": ["toronto", "ottawa", "kingston"]},
-
-    "montreal":       {"areas": "downtown, the Plateau, Mile End, Old Montreal, and the West Island", "nearby": ["quebec-city", "sherbrooke", "trois-rivieres"]},
-    "quebec-city":    {"areas": "Vieux-Québec, Saint-Roch, Sainte-Foy, and the Capitale-Nationale region", "nearby": ["montreal", "trois-rivieres", "sherbrooke"]},
-    "gatineau":       {"areas": "downtown Hull, Aylmer, the Outaouais, and the Ottawa-Gatineau capital region", "nearby": ["ottawa", "montreal", "kingston"]},
-    "sherbrooke":     {"areas": "downtown, the Université de Sherbrooke district, and the Estrie region", "nearby": ["montreal", "trois-rivieres", "quebec-city"]},
-    "trois-rivieres": {"areas": "downtown, Cap-de-la-Madeleine, and the Mauricie region", "nearby": ["montreal", "quebec-city", "sherbrooke"]},
-
-    "moncton":        {"areas": "downtown, Riverview, Dieppe, and the southeastern New Brunswick region", "nearby": ["saint-john", "fredericton", "halifax"]},
-    "saint-john":     {"areas": "Uptown, the West Side, Rothesay, and the Bay of Fundy region", "nearby": ["moncton", "fredericton", "halifax"]},
-    "fredericton":    {"areas": "downtown, the UNB district, and the central New Brunswick region", "nearby": ["moncton", "saint-john", "halifax"]},
-
-    "halifax":        {"areas": "downtown, the South End, the North End, Bedford, and the Halifax Regional Municipality", "nearby": ["dartmouth", "moncton", "charlottetown"]},
-    "dartmouth":      {"areas": "downtown, Cole Harbour, Burnside, and the Halifax-Dartmouth corridor", "nearby": ["halifax", "moncton", "charlottetown"]},
-
-    "charlottetown":  {"areas": "downtown, Stratford, Cornwall, and the Island-wide region", "nearby": ["halifax", "moncton", "dartmouth"]},
-
-    "st-johns":       {"areas": "downtown, Quidi Vidi, Mount Pearl, and the Avalon Peninsula", "nearby": ["corner-brook", "halifax", "moncton"]},
-    "corner-brook":   {"areas": "downtown, Curling, and the Bay of Islands region", "nearby": ["st-johns", "halifax", "moncton"]},
-
-    "whitehorse":     {"areas": "downtown, Riverdale, Porter Creek, and the Yukon-wide region", "nearby": ["yellowknife", "edmonton", "vancouver"]},
-    "yellowknife":    {"areas": "downtown, Old Town, Frame Lake, and the NWT-wide region", "nearby": ["whitehorse", "edmonton", "iqaluit"]},
-    "iqaluit":        {"areas": "downtown, Apex, and the Nunavut-wide region", "nearby": ["ottawa", "yellowknife", "halifax"]},
+    "edmonton":      {"areas": "downtown, Whyte Avenue, the west end, St. Albert, Sherwood Park, and the surrounding capital region", "nearby": ["st-albert", "sherwood-park", "leduc"]},
+    "calgary":       {"areas": "downtown, the Beltline, Mission, Kensington, and the suburban office parks of Mahogany, Tuscany, and Auburn Bay", "nearby": ["airdrie", "red-deer", "edmonton"]},
+    "st-albert":     {"areas": "downtown St. Albert, Erin Ridge, Mission, and the Sturgeon County edge", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
+    "sherwood-park": {"areas": "Baseline Road, Sherwood Drive, Centre in the Park, and Strathcona County's industrial corridor", "nearby": ["edmonton", "st-albert", "leduc"]},
+    "leduc":         {"areas": "downtown Leduc, Nisku, Beaumont, and the airport corridor", "nearby": ["edmonton", "spruce-grove", "st-albert"]},
+    "spruce-grove":  {"areas": "Spruce Grove proper, Stony Plain, Parkland County, and the western Edmonton region", "nearby": ["edmonton", "st-albert", "leduc"]},
+    "airdrie":       {"areas": "downtown, Bayside, the QE2 corridor, and the bedroom communities north of Calgary", "nearby": ["calgary", "red-deer", "edmonton"]},
+    "red-deer":      {"areas": "downtown, Riverside, Oriole Park, and the QE2 corridor stretching to Penhold and Innisfail", "nearby": ["calgary", "edmonton", "airdrie"]},
 }
 
 # Look up display name for a slug — used for nearby-city links.
@@ -344,7 +173,7 @@ CITY_PAGE = """<!DOCTYPE html>
     </button>
     <div class="nm-loc-content">
         <p class="eyebrow">Locations</p>
-        <h2 class="nm-loc-h">Web designer <em>across Canada.</em></h2>
+        <h2 class="nm-loc-h">Web designer <em>across Alberta.</em></h2>
 {mobile_loc_provinces}
         <a href="../locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
     </div>
@@ -906,6 +735,7 @@ ul, ol { list-style: none; }
 @media (max-width: 880px) {
     .nav-links { display: none; }
     .nav-mark-name { display: none; }
+    body.nav-open .nav-mark-letters { display: none; }
     .nav-cta { display: none; }
     .nav-toggle { display: inline-flex; }
     #site-nav { z-index: 70; }
@@ -1486,15 +1316,15 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Web Designer Across Canada — Custom Websites for Local Firms — Matthew McGuire</title>
-<meta name="description" content="Web designer serving professional-services firms in every province and territory across Canada. Custom-coded websites, $0 down, $199/month all-inclusive." />
+<title>Alberta Web Designer — Custom Websites for Edmonton, Calgary &amp; Area Firms — Matthew McGuire</title>
+<meta name="description" content="Alberta web designer serving professional-services firms in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with firms anywhere in Canada." />
 <link rel="canonical" href="https://matthewmcguire.ca/locations.html" />
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="mm-favicon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://matthewmcguire.ca/locations.html" />
-<meta property="og:title" content="Web Designer Across Canada — Matthew McGuire" />
-<meta property="og:description" content="Custom-coded websites for firms in every province and territory across Canada." />
+<meta property="og:title" content="Alberta Web Designer — Matthew McGuire" />
+<meta property="og:description" content="Custom-coded websites for Alberta firms — Edmonton, Calgary, and the surrounding region. Remote work with firms anywhere in Canada." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1616,7 +1446,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     </button>
     <div class="nm-loc-content">
         <p class="eyebrow">Locations</p>
-        <h2 class="nm-loc-h">Web designer <em>across Canada.</em></h2>
+        <h2 class="nm-loc-h">Web designer <em>across Alberta.</em></h2>
 {mobile_loc_provinces_root}
         <a href="locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
     </div>
@@ -1627,8 +1457,8 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <section class="loc-hero">
     <div class="wrap">
         <p class="eyebrow">Locations</p>
-        <h1>Web designer serving firms <em>across Canada.</em></h1>
-        <p class="lede">The studio is based in Edmonton, but works remotely with professional-services firms in every province and territory. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum) — or $3,800 lump sum if you'd rather own the site outright.</p>
+        <h1>Web designer serving firms <em>across Alberta.</em></h1>
+        <p class="lede">The studio is based in Edmonton and works with professional-services firms across Alberta — Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles firms anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum) — or $3,800 lump sum if you'd rather own the site outright.</p>
     </div>
 </section>
 
