@@ -70,6 +70,143 @@
     .nav-links a::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px; background-image: url("img/brush-underline.png"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+    /* === LOCATIONS DROPDOWN === */
+    .nav-links { position: relative; }
+    .nav-dd { position: relative; display: inline-flex; align-items: center; }
+    .nav-dd-trigger {
+        font-size: 14px;
+        color: var(--ink-2);
+        position: relative;
+        padding: 4px 0;
+        background: none;
+        border: none;
+        font-family: inherit;
+        cursor: pointer;
+        transition: color 200ms ease;
+    }
+    .nav-dd-trigger::after {
+        content: "";
+        position: absolute;
+        left: -4px; right: -4px; bottom: -8px;
+        height: 9px;
+        background-image: url("img/brush-underline.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+    }
+    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after {
+        transform: scaleX(1); transform-origin: left;
+    }
+    .nav-dd-panel {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--paper);
+        background-clip: padding-box;
+        border: 1px solid var(--rule);
+        box-shadow: 0 24px 56px -28px rgba(19,22,19,0.32);
+        padding: 14px 0;
+        min-width: 240px;
+        list-style: none;
+        margin: 0;
+        margin-top: 14px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-4px);
+        transition: opacity 200ms ease 80ms, transform 220ms cubic-bezier(.2,.7,.2,1) 80ms;
+        z-index: 60;
+    }
+    /* Invisible bridge so the cursor can cross the 14px gap between the
+       trigger and the panel without losing :hover state. */
+    .nav-dd-panel::before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: -16px; height: 16px;
+    }
+    .nav-dd:hover > .nav-dd-panel,
+    .nav-dd:focus-within > .nav-dd-panel {
+        opacity: 1; pointer-events: auto; transform: translateY(0);
+    }
+    .nav-dd-panel li { position: relative; list-style: none; }
+    .nav-dd-panel > li > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 22px;
+        font-size: 13.5px;
+        color: var(--ink-2);
+        font-family: var(--sans);
+        transition: background 160ms ease, color 160ms ease;
+    }
+    .nav-dd-panel > li > a::after {
+        content: "›";
+        font-size: 18px;
+        color: var(--ink-3);
+        margin-left: 16px;
+        transition: transform 200ms ease, color 200ms ease;
+    }
+    .nav-dd-panel > li:hover > a {
+        background: color-mix(in oklch, var(--ink) 6%, transparent);
+        color: var(--ink);
+    }
+    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+
+    .nav-dd-sub {
+        position: absolute;
+        top: -14px;
+        left: 100%;
+        min-width: 220px;
+        list-style: none;
+        margin: 0;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        box-shadow: 0 24px 56px -28px rgba(19,22,19,0.32);
+        padding: 14px 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-4px);
+        transition: opacity 200ms ease 80ms, transform 220ms cubic-bezier(.2,.7,.2,1) 80ms;
+    }
+    /* Bridge so the cursor can move from a province li into its sub-panel
+       without losing :hover state. */
+    .nav-dd-panel > li::after {
+        content: "";
+        position: absolute;
+        top: 0; bottom: 0;
+        right: -8px; width: 8px;
+        pointer-events: none;
+    }
+    .nav-dd-panel > li:hover::after { pointer-events: auto; }
+    .nav-dd-panel > li:hover > .nav-dd-sub,
+    .nav-dd-panel > li:focus-within > .nav-dd-sub {
+        opacity: 1; pointer-events: auto; transform: translateX(0);
+    }
+    .nav-dd-sub a {
+        display: block;
+        padding: 7px 22px;
+        font-size: 13px;
+        color: var(--ink-2);
+        transition: background 140ms ease, color 140ms ease;
+    }
+    .nav-dd-sub a:hover {
+        background: color-mix(in oklch, var(--ink) 6%, transparent);
+        color: var(--ink);
+    }
+
+    @media (max-width: 1100px) {
+        .nav-dd-panel { right: auto; left: 0; }
+    }
+    @media (max-width: 760px) {
+        .nav-dd { display: none; }
+    }
+    /* === END LOCATIONS DROPDOWN === */
+
     .nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 11px 20px; border: 1px solid var(--ink); border-radius: 999px; transition: background 200ms ease, color 200ms ease; }
     .nav-cta:hover { background: var(--ink); color: var(--paper); }
     .nav-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; padding: 0; transition: background 200ms ease, border-color 200ms ease; }
@@ -205,6 +342,132 @@
             <a href="work.html">Work</a>
             <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
+            <!-- LOCATIONS_DROPDOWN_INJECTED -->
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Locations</button>
+                <ul class="nav-dd-panel">
+                    <li>
+                        <a href="locations.html#ab">Alberta</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/edmonton.html">Edmonton</a></li>
+                            <li><a href="locations/calgary.html">Calgary</a></li>
+                            <li><a href="locations/st-albert.html">St. Albert</a></li>
+                            <li><a href="locations/sherwood-park.html">Sherwood Park</a></li>
+                            <li><a href="locations/red-deer.html">Red Deer</a></li>
+                            <li><a href="locations/lethbridge.html">Lethbridge</a></li>
+                            <li><a href="locations/medicine-hat.html">Medicine Hat</a></li>
+                            <li><a href="locations/fort-mcmurray.html">Fort McMurray</a></li>
+                            <li><a href="locations/camrose.html">Camrose</a></li>
+                            <li><a href="locations/wetaskiwin.html">Wetaskiwin</a></li>
+                            <li><a href="locations/leduc.html">Leduc</a></li>
+                            <li><a href="locations/grande-prairie.html">Grande Prairie</a></li>
+                            <li><a href="locations/spruce-grove.html">Spruce Grove</a></li>
+                            <li><a href="locations/airdrie.html">Airdrie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#bc">British Columbia</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/vancouver.html">Vancouver</a></li>
+                            <li><a href="locations/victoria.html">Victoria</a></li>
+                            <li><a href="locations/surrey.html">Surrey</a></li>
+                            <li><a href="locations/burnaby.html">Burnaby</a></li>
+                            <li><a href="locations/kelowna.html">Kelowna</a></li>
+                            <li><a href="locations/nanaimo.html">Nanaimo</a></li>
+                            <li><a href="locations/kamloops.html">Kamloops</a></li>
+                            <li><a href="locations/abbotsford.html">Abbotsford</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#sk">Saskatchewan</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/saskatoon.html">Saskatoon</a></li>
+                            <li><a href="locations/regina.html">Regina</a></li>
+                            <li><a href="locations/prince-albert.html">Prince Albert</a></li>
+                            <li><a href="locations/moose-jaw.html">Moose Jaw</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#mb">Manitoba</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/winnipeg.html">Winnipeg</a></li>
+                            <li><a href="locations/brandon.html">Brandon</a></li>
+                            <li><a href="locations/steinbach.html">Steinbach</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#on">Ontario</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/toronto.html">Toronto</a></li>
+                            <li><a href="locations/ottawa.html">Ottawa</a></li>
+                            <li><a href="locations/hamilton.html">Hamilton</a></li>
+                            <li><a href="locations/london.html">London</a></li>
+                            <li><a href="locations/kitchener.html">Kitchener</a></li>
+                            <li><a href="locations/mississauga.html">Mississauga</a></li>
+                            <li><a href="locations/brampton.html">Brampton</a></li>
+                            <li><a href="locations/windsor.html">Windsor</a></li>
+                            <li><a href="locations/kingston.html">Kingston</a></li>
+                            <li><a href="locations/sudbury.html">Sudbury</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#qc">Quebec</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/montreal.html">Montreal</a></li>
+                            <li><a href="locations/quebec-city.html">Quebec City</a></li>
+                            <li><a href="locations/gatineau.html">Gatineau</a></li>
+                            <li><a href="locations/sherbrooke.html">Sherbrooke</a></li>
+                            <li><a href="locations/trois-rivieres.html">Trois-Rivières</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#nb">New Brunswick</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/moncton.html">Moncton</a></li>
+                            <li><a href="locations/saint-john.html">Saint John</a></li>
+                            <li><a href="locations/fredericton.html">Fredericton</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#ns">Nova Scotia</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/halifax.html">Halifax</a></li>
+                            <li><a href="locations/dartmouth.html">Dartmouth</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#pe">Prince Edward Island</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/charlottetown.html">Charlottetown</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#nl">Newfoundland and Labrador</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/st-johns.html">St. John's</a></li>
+                            <li><a href="locations/corner-brook.html">Corner Brook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#yt">Yukon</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/whitehorse.html">Whitehorse</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#nt">Northwest Territories</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/yellowknife.html">Yellowknife</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="locations.html#nu">Nunavut</a>
+                        <ul class="nav-dd-sub">
+                            <li><a href="locations/iqaluit.html">Iqaluit</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
         <a href="contact.html" class="nav-cta">Start a project →</a>
@@ -221,6 +484,7 @@
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="locations.html">Locations</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
@@ -313,6 +577,7 @@
                     <li><a href="how.html">How I work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="locations.html">All locations</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
