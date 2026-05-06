@@ -430,6 +430,17 @@
         letter-spacing: -0.028em;
     }
     .tier-card.featured .tier-price { color: #F0B97A; }
+    .tier-price em {
+        font-style: normal;
+        font-family: var(--mono);
+        font-size: 0.22em;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: color-mix(in oklch, var(--paper) 60%, transparent);
+        margin-left: 6px;
+        vertical-align: 0.55em;
+    }
+    .tier-card.featured .tier-price em { color: color-mix(in oklch, #F0B97A 70%, transparent); }
     .tier-price-unit {
         font-family: var(--mono);
         font-size: 13px;
@@ -442,11 +453,10 @@
         flex-basis: 100%;
         font-family: var(--mono);
         font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: color-mix(in oklch, var(--paper) 55%, transparent);
-        margin-top: 6px;
-        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: color-mix(in oklch, var(--paper) 60%, transparent);
+        margin-top: 10px;
+        line-height: 1.55;
     }
     .tier-list {
         list-style: none;
@@ -468,7 +478,7 @@
         font-weight: 400;
         color: color-mix(in oklch, var(--paper) 92%, transparent);
     }
-    .tier-list li.is-out { opacity: 0.55; }
+    .tier-list li.is-out { opacity: 0.55; text-decoration: line-through; text-decoration-color: color-mix(in oklch, var(--paper) 40%, transparent); text-decoration-thickness: 1px; }
     .tier-check {
         width: 22px;
         height: 22px;
@@ -568,6 +578,90 @@
         margin: 0;
     }
     .tiers-help strong { color: var(--ink); font-weight: 500; }
+    .tiers-help-important {
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--rule);
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-2);
+    }
+    .tiers-help-important strong { color: var(--rust-deep); font-weight: 600; }
+    .tiers-help-currency {
+        margin-top: 14px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+
+    /* ── COMPARISON BLOCK ── */
+    .tiers-compare {
+        max-width: 720px;
+        margin: clamp(40px, 5vw, 64px) auto 0;
+        padding: clamp(24px, 2.6vw, 32px);
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+    }
+    .tiers-compare-h {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rust-deep);
+        margin: 0 0 18px;
+    }
+    .tiers-compare-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .tiers-compare-list li {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 4px 18px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--rule-soft);
+    }
+    .tiers-compare-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .tc-label {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 17px;
+        color: var(--ink);
+    }
+    .tc-math {
+        grid-column: 1 / -1;
+        font-family: var(--mono);
+        font-size: 11.5px;
+        letter-spacing: 0.04em;
+        color: var(--ink-3);
+    }
+    .tc-total {
+        grid-row: 1;
+        grid-column: 2;
+        font-family: var(--mono);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--rust-deep);
+        white-space: nowrap;
+    }
+    .tiers-compare-note {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-2);
+        margin: 0;
+    }
+    @media (max-width: 540px) {
+        .tiers-compare-list li { grid-template-columns: 1fr; }
+        .tc-total { grid-column: 1; grid-row: auto; }
+    }
 
     /* ── CANCELLATION NOTE — compact ── */
     .cancel-note {
@@ -776,37 +870,34 @@
                 <ul class="tier-list">
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        Design And Development
+                        Design and development
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        $25/mo Hosting
+                        $150 one-time per page after 5
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        $150 one-time fee per page after 5
+                        +$50/month unlimited edits (optional)
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        +$50/mo Unlimited Edits Add-on
-                    </li>
-                    <li>
-                        <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        +$250 To Add A Blog
+                        +$250 one-time to add a blog (optional)
                     </li>
                     <li class="is-out">
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg>
-                        24/7 Support
+                        24/7 support (not included)
                     </li>
                     <li class="is-out">
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg>
-                        Lifetime Updates
+                        Lifetime updates (not included)
                     </li>
                 </ul>
 
                 <div class="tier-price-wrap">
-                    <span class="tier-price">$3800</span>
-                    <span class="tier-price-unit">+$25/mo Hosting</span>
+                    <span class="tier-price">$3,800<em> CAD</em></span>
+                    <span class="tier-price-unit">one-time</span>
+                    <span class="tier-price-extra">+$25/month hosting (optional &mdash; or host elsewhere)</span>
                 </div>
 
                 <a href="contact.html" class="tier-cta">Get Started <span aria-hidden="true">→</span></a>
@@ -819,37 +910,38 @@
                 <ul class="tier-list">
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        Design And Development
+                        Design and development
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        Includes Hosting
+                        Hosting included
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        $150 one-time fee per page after 5
+                        $150 one-time per page after 5
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        +$250 To Add A Blog
+                        +$250 one-time to add a blog (optional)
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        Unlimited Edits
+                        Unlimited edits
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        24/7 Support
+                        24/7 support
                     </li>
                     <li>
                         <svg class="tier-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 10 9 14 16 6"/></svg>
-                        Lifetime Updates
+                        Lifetime updates
                     </li>
                 </ul>
 
                 <div class="tier-price-wrap">
-                    <span class="tier-price">$199</span>
-                    <span class="tier-price-unit">Per Month</span>
+                    <span class="tier-price">$199<em> CAD</em></span>
+                    <span class="tier-price-unit">/ month</span>
+                    <span class="tier-price-extra">$0 down &middot; 12-month minimum, then month-to-month &middot; cancel after 12 months with 30 days&rsquo; notice &middot; if subscription ends, the site goes offline (you keep your domain)</span>
                 </div>
 
                 <a href="contact.html" class="tier-cta">Get Started <span aria-hidden="true">→</span></a>
@@ -857,10 +949,30 @@
 
         </div>
 
+        <!-- COMPARISON: math over 24 months -->
+        <div class="tiers-compare" aria-labelledby="tiers-compare-title">
+            <h3 id="tiers-compare-title" class="tiers-compare-h">Quick comparison over 24 months</h3>
+            <ul class="tiers-compare-list">
+                <li>
+                    <span class="tc-label">Lump sum (with edits add-on)</span>
+                    <span class="tc-math">$3,800 + ($25 hosting &times; 24) + ($50 edits &times; 24)</span>
+                    <span class="tc-total">$5,600 over 2 years</span>
+                </li>
+                <li>
+                    <span class="tc-label">Monthly subscription</span>
+                    <span class="tc-math">$199 &times; 24</span>
+                    <span class="tc-total">$4,776 over 2 years</span>
+                </li>
+            </ul>
+            <p class="tiers-compare-note">Most clients pick monthly because it works out cheaper over time and includes everything. The lump sum option is for clients who want to own the code outright, even if it costs more over time.</p>
+        </div>
+
         <!-- "Not sure which to pick?" explanation -->
         <div class="tiers-help">
             <h3 class="tiers-help-h">Not sure which to pick?</h3>
             <p>Most clients choose the monthly plan because it works out cheaper over time and includes everything &mdash; design, hosting, edits, and ongoing support. The lump sum option is for clients who prefer to pay once and own the site outright. <strong>Both options use the same design and build process &mdash; the only difference is what&rsquo;s included after launch.</strong></p>
+            <p class="tiers-help-important"><strong>Important:</strong> the monthly subscription is a service relationship &mdash; if you cancel after the 12-month minimum, the built site goes offline. You always keep your domain. If long-term ownership of the code matters more than ongoing service, choose the lump sum option.</p>
+            <p class="tiers-help-currency">All prices in Canadian dollars.</p>
         </div>
     </div>
 </section>
