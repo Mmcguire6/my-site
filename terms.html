@@ -207,7 +207,7 @@
     }
     /* === END LOCATIONS DROPDOWN === */
 
-    .nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 11px 20px; border: 1px solid var(--ink); border-radius: 999px; transition: background 200ms ease, color 200ms ease; }
+    .nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 8px 20px; border: 1px solid var(--ink); border-radius: 8px; transition: background 200ms ease, color 200ms ease; }
     .nav-cta:hover { background: var(--ink); color: var(--paper); }
     .nav-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; padding: 0; transition: background 200ms ease, border-color 200ms ease; }
     .nav-toggle:hover { background: color-mix(in oklch, var(--ink) 6%, transparent); }
@@ -225,13 +225,36 @@
         .nav-cta { display: none; }
         .nav-toggle { display: inline-flex; }
         #site-nav { z-index: 70; }
-        .nav-mobile { display: flex; flex-direction: column; justify-content: center; position: fixed; inset: 0; background: var(--paper); padding: 100px 32px 56px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 280ms ease, transform 320ms cubic-bezier(.2,.7,.2,1); z-index: 60; overflow-y: auto; }
+        .nav-mobile { display: flex; flex-direction: column; justify-content: flex-start; position: fixed; inset: 0; background: var(--paper); padding: 110px 32px 56px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 280ms ease, transform 320ms cubic-bezier(.2,.7,.2,1); z-index: 60; overflow-y: auto; }
         body.nav-open .nav-mobile { opacity: 1; pointer-events: auto; transform: translateY(0); }
         body.nav-open { overflow: hidden; }
         .nav-mobile-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
         .nav-mobile-links a { display: inline-block; padding: 12px 0; font-family: var(--serif); font-style: italic; font-size: clamp(40px, 9vw, 64px); color: var(--ink); letter-spacing: -0.022em; line-height: 1; position: relative; transform-origin: left center; transition: transform 220ms cubic-bezier(.2,.7,.2,1), color 240ms ease; }
         .nav-mobile-links a:active { transform: scale(0.97); color: var(--rust-deep); }
-        .nav-mobile-cta { display: inline-flex; align-items: center; align-self: flex-start; margin-top: 40px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 14px 22px; border-radius: 999px; }
+        .nav-mobile-cta { display: inline-flex; align-items: center; align-self: flex-start; margin-top: 40px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 10px 22px; border-radius: 8px; }
+
+        .nav-mobile-links a, .nav-mobile-links .nm-loc-trigger { display: inline-flex; align-items: baseline; gap: 12px; padding: 8px 0; font-family: var(--serif); font-style: italic; font-size: clamp(30px, 7vw, 48px); color: var(--ink); letter-spacing: -0.022em; line-height: 1; position: relative; background: none; border: none; cursor: pointer; text-align: left; }
+        .nm-loc-chev { font-family: var(--mono); font-style: normal; font-weight: 400; font-size: 0.36em; color: var(--ink-3); align-self: center; transition: transform 200ms ease, color 200ms ease; }
+        .nm-loc-trigger:active .nm-loc-chev { transform: translateX(4px); color: var(--rust); }
+        .nav-mobile-locations { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--paper); padding: 88px 28px 56px; opacity: 0; pointer-events: none; transform: translateX(100%); transition: transform 320ms cubic-bezier(.2,.7,.2,1), opacity 240ms ease; z-index: 80; overflow-y: auto; }
+        body.nav-loc-open .nav-mobile-locations { opacity: 1; pointer-events: auto; transform: translateX(0); }
+        body.nav-loc-open { overflow: hidden; }
+        .nm-loc-back { position: fixed; top: 22px; left: 22px; z-index: 90; display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 10px 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; cursor: pointer; transition: background 180ms ease, color 180ms ease, transform 160ms cubic-bezier(.2,.7,.2,1); }
+        .nm-loc-back:active { background: var(--ink); color: var(--paper); transform: scale(0.96); }
+        .nm-loc-back-arrow { font-size: 14px; line-height: 1; }
+        .nm-loc-content { padding-top: 8px; }
+        .nm-loc-h { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: clamp(34px, 7vw, 52px); letter-spacing: -0.022em; line-height: 1.05; color: var(--ink); margin: 14px 0 32px; }
+        .nm-loc-h em { font-style: italic; color: var(--rust-deep); }
+        .nm-loc-prov { margin-bottom: 24px; border-top: 1px solid var(--rule); padding-top: 18px; }
+        .nm-loc-prov h3 { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust-deep); margin-bottom: 12px; }
+        .nm-loc-prov ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 18px; }
+        .nm-loc-prov ul a { display: block; padding: 8px 0; font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.2; color: var(--ink); transition: color 160ms ease, padding 200ms ease; }
+        .nm-loc-prov ul a:active { color: var(--rust-deep); padding-left: 4px; }
+        .nm-loc-all-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust-deep); padding: 10px 0; }
+        .nm-loc-all-link .arrow { transition: transform 200ms ease; }
+        .nm-loc-all-link:active { color: var(--ink); }
+        .nm-loc-all-link:active .arrow { transform: translateX(3px); }
+        @media (max-width: 380px) { .nm-loc-prov ul { grid-template-columns: 1fr; } }
     }
 
     /* PAGE CONTENT */
@@ -317,6 +340,11 @@
     @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
     ::selection { background: var(--rust); color: var(--paper); }
+
+/* Hide the locations panel above mobile breakpoint. */
+@media (min-width: 881px) {
+    .nav-mobile-locations { display: none !important; }
+}
 </style>
 </head>
 <body>
@@ -484,10 +512,142 @@
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="locations.html">Locations</a></li>
+        <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
+</aside>
+
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+    <button type="button" class="nm-loc-back" aria-label="Back to main menu">
+        <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
+        <span class="nm-loc-back-label">Back</span>
+    </button>
+    <div class="nm-loc-content">
+        <p class="eyebrow">Locations</p>
+        <h2 class="nm-loc-h">Web designer <em>across Canada.</em></h2>
+        <div class="nm-loc-prov">
+            <h3>Alberta</h3>
+            <ul>
+                <li><a href="locations/edmonton.html">Edmonton</a></li>
+                <li><a href="locations/calgary.html">Calgary</a></li>
+                <li><a href="locations/st-albert.html">St. Albert</a></li>
+                <li><a href="locations/sherwood-park.html">Sherwood Park</a></li>
+                <li><a href="locations/red-deer.html">Red Deer</a></li>
+                <li><a href="locations/lethbridge.html">Lethbridge</a></li>
+                <li><a href="locations/medicine-hat.html">Medicine Hat</a></li>
+                <li><a href="locations/fort-mcmurray.html">Fort McMurray</a></li>
+                <li><a href="locations/camrose.html">Camrose</a></li>
+                <li><a href="locations/wetaskiwin.html">Wetaskiwin</a></li>
+                <li><a href="locations/leduc.html">Leduc</a></li>
+                <li><a href="locations/grande-prairie.html">Grande Prairie</a></li>
+                <li><a href="locations/spruce-grove.html">Spruce Grove</a></li>
+                <li><a href="locations/airdrie.html">Airdrie</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>British Columbia</h3>
+            <ul>
+                <li><a href="locations/vancouver.html">Vancouver</a></li>
+                <li><a href="locations/victoria.html">Victoria</a></li>
+                <li><a href="locations/surrey.html">Surrey</a></li>
+                <li><a href="locations/burnaby.html">Burnaby</a></li>
+                <li><a href="locations/kelowna.html">Kelowna</a></li>
+                <li><a href="locations/nanaimo.html">Nanaimo</a></li>
+                <li><a href="locations/kamloops.html">Kamloops</a></li>
+                <li><a href="locations/abbotsford.html">Abbotsford</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Saskatchewan</h3>
+            <ul>
+                <li><a href="locations/saskatoon.html">Saskatoon</a></li>
+                <li><a href="locations/regina.html">Regina</a></li>
+                <li><a href="locations/prince-albert.html">Prince Albert</a></li>
+                <li><a href="locations/moose-jaw.html">Moose Jaw</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Manitoba</h3>
+            <ul>
+                <li><a href="locations/winnipeg.html">Winnipeg</a></li>
+                <li><a href="locations/brandon.html">Brandon</a></li>
+                <li><a href="locations/steinbach.html">Steinbach</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Ontario</h3>
+            <ul>
+                <li><a href="locations/toronto.html">Toronto</a></li>
+                <li><a href="locations/ottawa.html">Ottawa</a></li>
+                <li><a href="locations/hamilton.html">Hamilton</a></li>
+                <li><a href="locations/london.html">London</a></li>
+                <li><a href="locations/kitchener.html">Kitchener</a></li>
+                <li><a href="locations/mississauga.html">Mississauga</a></li>
+                <li><a href="locations/brampton.html">Brampton</a></li>
+                <li><a href="locations/windsor.html">Windsor</a></li>
+                <li><a href="locations/kingston.html">Kingston</a></li>
+                <li><a href="locations/sudbury.html">Sudbury</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Quebec</h3>
+            <ul>
+                <li><a href="locations/montreal.html">Montreal</a></li>
+                <li><a href="locations/quebec-city.html">Quebec City</a></li>
+                <li><a href="locations/gatineau.html">Gatineau</a></li>
+                <li><a href="locations/sherbrooke.html">Sherbrooke</a></li>
+                <li><a href="locations/trois-rivieres.html">Trois-Rivières</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>New Brunswick</h3>
+            <ul>
+                <li><a href="locations/moncton.html">Moncton</a></li>
+                <li><a href="locations/saint-john.html">Saint John</a></li>
+                <li><a href="locations/fredericton.html">Fredericton</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Nova Scotia</h3>
+            <ul>
+                <li><a href="locations/halifax.html">Halifax</a></li>
+                <li><a href="locations/dartmouth.html">Dartmouth</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Prince Edward Island</h3>
+            <ul>
+                <li><a href="locations/charlottetown.html">Charlottetown</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Newfoundland and Labrador</h3>
+            <ul>
+                <li><a href="locations/st-johns.html">St. John's</a></li>
+                <li><a href="locations/corner-brook.html">Corner Brook</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Yukon</h3>
+            <ul>
+                <li><a href="locations/whitehorse.html">Whitehorse</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Northwest Territories</h3>
+            <ul>
+                <li><a href="locations/yellowknife.html">Yellowknife</a></li>
+            </ul>
+        </div>
+        <div class="nm-loc-prov">
+            <h3>Nunavut</h3>
+            <ul>
+                <li><a href="locations/iqaluit.html">Iqaluit</a></li>
+            </ul>
+        </div>
+        <a href="locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
+    </div>
 </aside>
 
 <main id="main">
@@ -639,7 +799,8 @@
         var onScroll = function () {
             if (window.scrollY > 12) nav.classList.add('scrolled');
             else nav.classList.remove('scrolled');
-        };
+        }
+
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
@@ -650,6 +811,7 @@
     var navMobile = document.querySelector('.nav-mobile');
     function setNav(open) {
         document.body.classList.toggle('nav-open', open);
+        if (!open) document.body.classList.remove('nav-loc-open');
         if (navToggle) {
             navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
@@ -661,8 +823,24 @@
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false);
     });
+    var navMobileLoc = document.querySelector('.nav-mobile-locations');
+    function setLoc(open) {
+        document.body.classList.toggle('nav-loc-open', open);
+        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        var trig = document.querySelector('.nm-loc-trigger');
+        if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
     if (navMobile) navMobile.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () { setNav(false); });
+    });
+    document.querySelectorAll('.nm-loc-trigger').forEach(function (b) {
+        b.addEventListener('click', function () { setLoc(true); });
+    });
+    document.querySelectorAll('.nm-loc-back').forEach(function (b) {
+        b.addEventListener('click', function () { setLoc(false); });
+    });
+    if (navMobileLoc) navMobileLoc.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setLoc(false); setNav(false); });
     });
 
     document.addEventListener('click', function (e) {

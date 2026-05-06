@@ -331,10 +331,23 @@ CITY_PAGE = """<!DOCTYPE html>
         <li><a href="../work.html">Work</a></li>
         <li><a href="../how.html">How I work</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
-        <li><a href="../locations.html" aria-current="page">Locations</a></li>
+        <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="../contact.html">Contact</a></li>
     </ul>
     <a href="../contact.html" class="nav-mobile-cta">Start a project →</a>
+</aside>
+
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+    <button type="button" class="nm-loc-back" aria-label="Back to main menu">
+        <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
+        <span class="nm-loc-back-label">Back</span>
+    </button>
+    <div class="nm-loc-content">
+        <p class="eyebrow">Locations</p>
+        <h2 class="nm-loc-h">Web designer <em>across Canada.</em></h2>
+{mobile_loc_provinces}
+        <a href="../locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
+    </div>
 </aside>
 
 <main id="main">
@@ -581,8 +594,16 @@ CITY_PAGE = """<!DOCTYPE html>
 
     var navToggle = document.querySelector('.nav-toggle');
     var navMobile = document.querySelector('.nav-mobile');
+    var navMobileLoc = document.querySelector('.nav-mobile-locations');
+    function setLoc(open) {{
+        document.body.classList.toggle('nav-loc-open', open);
+        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        var trig = document.querySelector('.nm-loc-trigger');
+        if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }}
     function setNav(open) {{
         document.body.classList.toggle('nav-open', open);
+        if (!open) setLoc(false);
         if (navToggle) {{
             navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
@@ -592,10 +613,22 @@ CITY_PAGE = """<!DOCTYPE html>
         setNav(!document.body.classList.contains('nav-open'));
     }});
     document.addEventListener('keydown', function (e) {{
-        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false);
+        if (e.key === 'Escape') {{
+            if (document.body.classList.contains('nav-loc-open')) setLoc(false);
+            else if (document.body.classList.contains('nav-open')) setNav(false);
+        }}
     }});
     if (navMobile) navMobile.querySelectorAll('a').forEach(function (a) {{
         a.addEventListener('click', function () {{ setNav(false); }});
+    }});
+    document.querySelectorAll('.nm-loc-trigger').forEach(function (b) {{
+        b.addEventListener('click', function () {{ setLoc(true); }});
+    }});
+    document.querySelectorAll('.nm-loc-back').forEach(function (b) {{
+        b.addEventListener('click', function () {{ setLoc(false); }});
+    }});
+    if (navMobileLoc) navMobileLoc.querySelectorAll('a').forEach(function (a) {{
+        a.addEventListener('click', function () {{ setLoc(false); setNav(false); }});
     }});
 
     document.addEventListener('click', function (e) {{
@@ -847,8 +880,8 @@ ul, ol { list-style: none; }
 
 .nav-cta {
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--ink); padding: 11px 20px;
-    border: 1px solid var(--ink); border-radius: 999px;
+    text-transform: uppercase; color: var(--ink); padding: 8px 20px;
+    border: 1px solid var(--ink); border-radius: 8px;
     transition: background 200ms ease, color 200ms ease;
 }
 .nav-cta:hover { background: var(--ink); color: var(--paper); }
@@ -878,9 +911,9 @@ ul, ol { list-style: none; }
     #site-nav { z-index: 70; }
 
     .nav-mobile {
-        display: flex; flex-direction: column; justify-content: center;
+        display: flex; flex-direction: column; justify-content: flex-start;
         position: fixed; inset: 0; background: var(--paper);
-        padding: 100px 32px 56px; opacity: 0; pointer-events: none;
+        padding: 110px 32px 56px; opacity: 0; pointer-events: none;
         transform: translateY(8px);
         transition: opacity 280ms ease, transform 320ms cubic-bezier(.2,.7,.2,1);
         z-index: 60; overflow-y: auto;
@@ -888,19 +921,96 @@ ul, ol { list-style: none; }
     body.nav-open .nav-mobile { opacity: 1; pointer-events: auto; transform: translateY(0); }
     body.nav-open { overflow: hidden; }
 
-    .nav-mobile-links { display: flex; flex-direction: column; gap: 8px; }
-    .nav-mobile-links a {
-        display: inline-block; padding: 12px 0; font-family: var(--serif);
-        font-style: italic; font-size: clamp(34px, 8vw, 56px); color: var(--ink);
+    .nav-mobile-links { display: flex; flex-direction: column; gap: 4px; }
+    .nav-mobile-links a, .nav-mobile-links .nm-loc-trigger {
+        display: inline-flex; align-items: baseline; gap: 12px;
+        padding: 8px 0; font-family: var(--serif);
+        font-style: italic; font-size: clamp(30px, 7vw, 48px); color: var(--ink);
         letter-spacing: -0.022em; line-height: 1; position: relative;
+        background: none; border: none; cursor: pointer; text-align: left;
     }
     .nav-mobile-links a[aria-current="page"] { color: var(--rust-deep); }
+    .nm-loc-chev {
+        font-family: var(--mono); font-style: normal; font-weight: 400;
+        font-size: 0.36em; color: var(--ink-3);
+        align-self: center; transition: transform 200ms ease, color 200ms ease;
+    }
+    .nm-loc-trigger:active .nm-loc-chev { transform: translateX(4px); color: var(--rust); }
     .nav-mobile-cta {
-        display: inline-flex; align-self: flex-start; margin-top: 36px;
+        display: inline-flex; align-self: flex-start; margin-top: 28px;
         font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
         text-transform: uppercase; color: var(--paper); background: var(--ink);
-        padding: 14px 22px; border-radius: 999px;
+        padding: 10px 22px; border-radius: 8px;
     }
+
+    /* MOBILE LOCATIONS PANEL — slides in from right when triggered */
+    .nav-mobile-locations {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0; background: var(--paper);
+        padding: 88px 28px 56px;
+        opacity: 0; pointer-events: none;
+        transform: translateX(100%);
+        transition: transform 320ms cubic-bezier(.2,.7,.2,1), opacity 240ms ease;
+        z-index: 80; overflow-y: auto;
+    }
+    body.nav-loc-open .nav-mobile-locations {
+        opacity: 1; pointer-events: auto; transform: translateX(0);
+    }
+    .nm-loc-back {
+        position: fixed; top: 22px; left: 22px; z-index: 90;
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: var(--mono); font-size: 10.5px;
+        letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ink); padding: 7px 14px;
+        background: var(--paper); border: 1px solid var(--rule);
+        border-radius: 8px; cursor: pointer;
+        transition: background 180ms ease, color 180ms ease, transform 160ms cubic-bezier(.2,.7,.2,1);
+    }
+    .nm-loc-back:active { background: var(--ink); color: var(--paper); transform: scale(0.96); }
+    .nm-loc-back-arrow { font-size: 14px; line-height: 1; }
+    .nm-loc-content { padding-top: 8px; }
+    .nm-loc-h {
+        font-family: var(--serif); font-style: italic; font-weight: 700;
+        font-size: clamp(34px, 7vw, 52px); letter-spacing: -0.022em;
+        line-height: 1.05; color: var(--ink); margin: 14px 0 32px;
+    }
+    .nm-loc-h em { font-style: italic; color: var(--rust-deep); }
+    .nm-loc-prov {
+        margin-bottom: 24px; border-top: 1px solid var(--rule); padding-top: 18px;
+    }
+    .nm-loc-prov h3 {
+        font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+        letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--rust-deep); margin-bottom: 12px;
+    }
+    .nm-loc-prov ul {
+        list-style: none; display: grid;
+        grid-template-columns: 1fr 1fr; gap: 2px 18px;
+    }
+    .nm-loc-prov ul a {
+        display: block; padding: 8px 0;
+        font-family: var(--serif); font-style: italic;
+        font-size: 17px; line-height: 1.2; color: var(--ink);
+        transition: color 160ms ease, padding 200ms ease;
+    }
+    .nm-loc-prov ul a:active { color: var(--rust-deep); padding-left: 4px; }
+    @media (max-width: 380px) {
+        .nm-loc-prov ul { grid-template-columns: 1fr; }
+    }
+    .nm-loc-all-link {
+        display: inline-flex; align-items: center; gap: 10px;
+        margin-top: 24px; font-family: var(--mono);
+        font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--rust-deep); padding: 10px 0;
+    }
+    .nm-loc-all-link .arrow { transition: transform 200ms ease; }
+    .nm-loc-all-link:active { color: var(--ink); }
+    .nm-loc-all-link:active .arrow { transform: translateX(3px); }
+}
+
+/* Hide the locations panel completely above mobile breakpoint. */
+@media (min-width: 881px) {
+    .nav-mobile-locations { display: none !important; }
 }
 
 /* HERO */
@@ -979,7 +1089,7 @@ ul, ol { list-style: none; }
     display: inline-flex; align-items: center; gap: 12px;
     font-family: var(--mono); font-size: 11.5px; font-weight: 500;
     letter-spacing: 0.16em; text-transform: uppercase;
-    padding: 14px 22px; border-radius: 999px;
+    padding: 10px 22px; border-radius: 8px;
     transition: background 200ms ease, color 200ms ease, transform 160ms cubic-bezier(.2,.7,.2,1);
 }
 .btn .arrow { transition: transform 220ms cubic-bezier(.2,.7,.2,1); }
@@ -1042,7 +1152,7 @@ ul, ol { list-style: none; }
 }
 .pricing-card {
     background: var(--paper-soft); border: 1px solid var(--rule);
-    padding: clamp(28px, 3vw, 40px); border-radius: 6px;
+    padding: clamp(28px, 3vw, 40px); border-radius: 8px;
 }
 .pricing-card-name {
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
@@ -1155,6 +1265,23 @@ ul, ol { list-style: none; }
 # ---------------------------------------------------------------------------
 # DROPDOWN HTML for city-page nav (paths relative to /locations/)
 # ---------------------------------------------------------------------------
+
+def mobile_loc_provinces_html(prefix: str) -> str:
+    """Build the province blocks for the slide-in mobile locations panel.
+
+    `prefix` is the relative path to the city pages (e.g. "../locations/" or "locations/").
+    """
+    out = []
+    for prov, _abbr, cities in CITIES:
+        out.append('        <div class="nm-loc-prov">')
+        out.append(f'            <h3>{prov}</h3>')
+        out.append('            <ul>')
+        for slug, name, _intro in cities:
+            out.append(f'                <li><a href="{prefix}{slug}.html">{name}</a></li>')
+        out.append('            </ul>')
+        out.append('        </div>')
+    return "\n".join(out)
+
 
 def desktop_dropdown() -> str:
     out = []
@@ -1343,6 +1470,7 @@ def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
         ld_json=build_ld_json(slug, name, province, intro),
         nav_dropdown_desktop=desktop_dropdown(),
         nearby_links=nearby_links_html(extras["nearby"]),
+        mobile_loc_provinces=mobile_loc_provinces_html("../locations/"),
     )
     path = OUT / f"{slug}.html"
     path.write_text(html, encoding="utf-8")
@@ -1475,10 +1603,23 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="locations.html" aria-current="page">Locations</a></li>
+        <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
+</aside>
+
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+    <button type="button" class="nm-loc-back" aria-label="Back to main menu">
+        <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
+        <span class="nm-loc-back-label">Back</span>
+    </button>
+    <div class="nm-loc-content">
+        <p class="eyebrow">Locations</p>
+        <h2 class="nm-loc-h">Web designer <em>across Canada.</em></h2>
+{mobile_loc_provinces_root}
+        <a href="locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
+    </div>
 </aside>
 
 <main id="main">
@@ -1570,8 +1711,16 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
     var navToggle = document.querySelector('.nav-toggle');
     var navMobile = document.querySelector('.nav-mobile');
+    var navMobileLoc = document.querySelector('.nav-mobile-locations');
+    function setLoc(open) {{
+        document.body.classList.toggle('nav-loc-open', open);
+        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        var trig = document.querySelector('.nm-loc-trigger');
+        if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }}
     function setNav(open) {{
         document.body.classList.toggle('nav-open', open);
+        if (!open) setLoc(false);
         if (navToggle) {{
             navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
@@ -1581,10 +1730,22 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         setNav(!document.body.classList.contains('nav-open'));
     }});
     document.addEventListener('keydown', function (e) {{
-        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false);
+        if (e.key === 'Escape') {{
+            if (document.body.classList.contains('nav-loc-open')) setLoc(false);
+            else if (document.body.classList.contains('nav-open')) setNav(false);
+        }}
     }});
     if (navMobile) navMobile.querySelectorAll('a').forEach(function (a) {{
         a.addEventListener('click', function () {{ setNav(false); }});
+    }});
+    document.querySelectorAll('.nm-loc-trigger').forEach(function (b) {{
+        b.addEventListener('click', function () {{ setLoc(true); }});
+    }});
+    document.querySelectorAll('.nm-loc-back').forEach(function (b) {{
+        b.addEventListener('click', function () {{ setLoc(false); }});
+    }});
+    if (navMobileLoc) navMobileLoc.querySelectorAll('a').forEach(function (a) {{
+        a.addEventListener('click', function () {{ setLoc(false); setNav(false); }});
     }});
 
     document.addEventListener('click', function (e) {{
@@ -1639,6 +1800,7 @@ def build_locations_index() -> Path:
         styles_root=styles_for_root(),
         nav_dropdown_root=desktop_dropdown_for_root(active=True),
         prov_blocks="\n".join(blocks),
+        mobile_loc_provinces_root=mobile_loc_provinces_html("locations/"),
     )
     path = ROOT / "locations.html"
     path.write_text(html, encoding="utf-8")
