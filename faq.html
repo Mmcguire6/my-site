@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>FAQ — Matthew McGuire · Web Design Studio · Edmonton</title>
+<meta name="description" content="Common questions about pricing, plans, SEO, and how the studio builds websites for professional services firms across Canada." />
+
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="mm-favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://matthewmcguire.ca/faq.html" />
+<meta property="og:title" content="FAQ — Matthew McGuire · Web Design Studio" />
+<meta property="og:description" content="Pricing, plans, SEO, websites — answered in plain language." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+    :root {
+        --paper:        #EFE7D2;
+        --paper-soft:   #E6DBC0;
+        --paper-deeper: #D6C8A8;
+        --ink:          #1A1813;
+        --ink-2:        #4A4339;
+        --ink-3:        #847B6B;
+        --rule:         #CFC2A6;
+        --rule-soft:    #DDD2BA;
+        --accent:       #2C3D24;
+        --accent-deep:  #1A2516;
+        --accent-soft:  #C0CCB0;
+        --rust:         #7A4A28;
+        --rust-deep:    #4A2E1F;
+        --serif: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+        --sans:  'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+        --mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+        --max:    1240px;
+        --gutter: clamp(20px, 4vw, 56px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: var(--sans); font-size: 16px; line-height: 1.7;
+        color: var(--ink); background: var(--paper);
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        animation: pageEnter 380ms cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes pageEnter { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pageLeave { from { opacity: 1; } to { opacity: 0; } }
+    body.is-leaving { animation: pageLeave 260ms cubic-bezier(.4,.1,.3,1) forwards; }
+    @media (prefers-reduced-motion: reduce) {
+        body, body.is-leaving { animation: none !important; }
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .eyebrow { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-deep); display: inline-flex; align-items: center; gap: 12px; }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+
+    /* Masthead + Nav (mirrors site) */
+    .masthead { background: var(--ink); color: color-mix(in oklch, var(--paper) 78%, transparent); border-bottom: 1px solid color-mix(in oklch, var(--paper) 14%, transparent); }
+    .masthead-inner { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; gap: 16px; font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
+    .masthead-edition { display: inline-flex; align-items: center; gap: 12px; }
+    .masthead-edition::before { content: ""; width: 22px; height: 1px; background: color-mix(in oklch, var(--rust) 90%, transparent); }
+    .masthead-meta { color: color-mix(in oklch, var(--paper) 60%, transparent); }
+    @media (max-width: 600px) { .masthead-meta { display: none; } }
+
+    .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid transparent; transition: border-color 240ms ease; }
+    .nav.scrolled { border-bottom-color: var(--rule); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(28px, 4vw, 56px); gap: 24px; }
+    .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
+    .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
+    .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a[aria-current="page"] { color: var(--ink); }
+    .nav-links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; background: var(--rust); height: 1.5px; }
+    .nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); padding: 11px 20px; border: 1px solid var(--ink); border-radius: 999px; transition: background 200ms ease, color 200ms ease; }
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
+    .nav-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; padding: 0; transition: background 200ms ease, border-color 200ms ease; }
+    .nav-toggle:hover { background: color-mix(in oklch, var(--ink) 6%, transparent); }
+    .nav-toggle:active { transform: scale(0.92); transition: transform 120ms cubic-bezier(.2,.7,.2,1); }
+    .nav-toggle-bars { position: relative; width: 18px; height: 12px; }
+    .nav-toggle-bars::before, .nav-toggle-bars::after { content: ""; position: absolute; left: 0; width: 100%; height: 1.5px; background: var(--ink); transition: top 200ms ease 200ms, transform 240ms cubic-bezier(.2,.7,.2,1); }
+    .nav-toggle-bars::before { top: 2px; }
+    .nav-toggle-bars::after  { top: 8px; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { top: 5px; transform: rotate(45deg); transition: top 200ms ease, transform 240ms cubic-bezier(.2,.7,.2,1) 200ms; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after  { top: 5px; transform: rotate(-45deg); transition: top 200ms ease, transform 240ms cubic-bezier(.2,.7,.2,1) 200ms; }
+    .nav-mobile { display: none; }
+    @media (max-width: 760px) {
+        .nav-links { display: none; }
+        .nav-mark-name { display: none; }
+        .nav-cta { display: none; }
+        .nav-toggle { display: inline-flex; }
+        #site-nav { z-index: 70; }
+        .nav-mobile { display: flex; flex-direction: column; justify-content: center; position: fixed; inset: 0; background: var(--paper); padding: 100px 32px 56px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 280ms ease, transform 320ms cubic-bezier(.2,.7,.2,1); z-index: 60; overflow-y: auto; }
+        body.nav-open .nav-mobile { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        body.nav-open { overflow: hidden; }
+        .nav-mobile-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+        .nav-mobile-links a { display: inline-block; padding: 12px 0; font-family: var(--serif); font-style: italic; font-size: clamp(40px, 9vw, 64px); color: var(--ink); letter-spacing: -0.022em; line-height: 1; position: relative; transform-origin: left center; transition: transform 220ms cubic-bezier(.2,.7,.2,1), color 240ms ease; }
+        .nav-mobile-links a:active { transform: scale(0.97); color: var(--rust-deep); }
+        .nav-mobile-links a[aria-current="page"] { color: var(--rust-deep); }
+        .nav-mobile-cta { display: inline-flex; align-items: center; align-self: flex-start; margin-top: 40px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 14px 22px; border-radius: 999px; }
+    }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; font-family: var(--sans); font-size: 14px; font-weight: 500; letter-spacing: -0.005em; border-radius: 999px; transition: all 220ms cubic-bezier(.2,.7,.2,1); white-space: nowrap; }
+    .btn-primary { background: var(--ink); color: var(--paper); }
+    .btn-primary:hover { background: var(--rust-deep); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+    .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+    .btn .arrow { transition: transform 220ms ease; display: inline-block; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* ── FAQ HERO ── */
+    .faq-hero {
+        padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
+        border-bottom: 1px solid var(--rule);
+        text-align: center;
+    }
+    .faq-h1 {
+        font-family: var(--serif);
+        font-size: clamp(40px, 6vw, 80px);
+        font-style: italic; font-weight: 700;
+        letter-spacing: -0.028em; line-height: 0.98;
+        color: var(--ink); margin: 22px 0 18px;
+        max-width: 18ch;
+        margin-left: auto; margin-right: auto;
+    }
+    .faq-h1 em { color: var(--rust-deep); }
+    .faq-lede {
+        font-size: clamp(15px, 1.2vw, 18px);
+        line-height: 1.65;
+        color: var(--ink-2);
+        max-width: 56ch;
+        margin: 0 auto;
+    }
+
+    /* ── FAQ JUMP NAV ── */
+    .faq-nav {
+        background: var(--paper-soft);
+        border-bottom: 1px solid var(--rule);
+        padding: clamp(20px, 2.4vw, 32px) 0;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+    }
+    .faq-nav-inner {
+        display: flex;
+        gap: clamp(14px, 2vw, 28px);
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+    }
+    .faq-nav-label {
+        color: var(--ink-3);
+        font-size: 10px;
+    }
+    .faq-nav a {
+        color: var(--ink-2);
+        padding: 6px 14px;
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        background: var(--paper);
+        transition: color 200ms ease, background 200ms ease, border-color 200ms ease, transform 200ms ease;
+    }
+    .faq-nav a:hover {
+        color: var(--ink);
+        background: var(--paper-deeper);
+        border-color: var(--ink-3);
+        transform: translateY(-1px);
+    }
+
+    /* ── FAQ CATEGORIES ── */
+    .faq-section {
+        padding: clamp(56px, 7vw, 96px) 0;
+        border-bottom: 1px solid var(--rule);
+    }
+    .faq-section:nth-child(even) { background: var(--paper-soft); }
+    .faq-section-head {
+        max-width: 760px;
+        margin: 0 auto clamp(36px, 4vw, 56px);
+        text-align: center;
+    }
+    .faq-section-h {
+        font-family: var(--serif);
+        font-size: clamp(28px, 3.6vw, 44px);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.018em;
+        color: var(--ink);
+        margin: 14px 0 0;
+    }
+    .faq-section-h em { font-style: italic; font-weight: 500; color: var(--rust-deep); }
+
+    .faq-list {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 880px;
+        border-top: 1px solid var(--rule);
+    }
+    .faq-list > li { border-bottom: 1px solid var(--rule); }
+    .faq-list details { padding: clamp(20px, 2.4vw, 28px) 0; }
+    .faq-list summary {
+        list-style: none;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: baseline;
+        font-family: var(--serif);
+        font-size: clamp(19px, 1.9vw, 24px);
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: -0.012em;
+        color: var(--ink);
+        transition: color 200ms ease;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary:hover { color: var(--rust-deep); }
+    .faq-list summary::after {
+        content: "+";
+        font-family: var(--mono);
+        font-size: 22px;
+        color: var(--ink-3);
+        transition: transform 240ms cubic-bezier(.2,.7,.2,1), color 200ms ease;
+    }
+    .faq-list details[open] summary::after { transform: rotate(45deg); color: var(--rust); }
+    .faq-list details[open] summary { color: var(--rust-deep); }
+    .faq-body {
+        margin-top: 16px;
+        font-size: 15.5px;
+        line-height: 1.75;
+        color: var(--ink-2);
+        max-width: 70ch;
+    }
+    .faq-body p + p { margin-top: 0.9em; }
+    .faq-body strong { color: var(--ink); font-weight: 500; }
+    .faq-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0.8em 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .faq-body li {
+        padding-left: 22px;
+        position: relative;
+    }
+    .faq-body li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--rust);
+        font-weight: 600;
+    }
+    .faq-body a {
+        color: var(--rust-deep);
+        border-bottom: 1px solid color-mix(in oklch, var(--rust) 40%, transparent);
+        padding-bottom: 1px;
+        transition: color 200ms ease, border-color 200ms ease;
+    }
+    .faq-body a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+        background:
+            radial-gradient(ellipse 60% 100% at 50% 100%, color-mix(in oklch, var(--accent) 22%, transparent) 0%, transparent 60%),
+            #0F2218;
+        color: var(--paper);
+        padding: clamp(80px, 10vw, 144px) 0;
+        text-align: center;
+        border-top: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+    }
+    .cta-band .eyebrow { color: color-mix(in oklch, var(--rust) 78%, white 22%); }
+    .cta-band .eyebrow::before { background: var(--rust); }
+    .cta-band-h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 5.4vw, 72px); line-height: 1.0; letter-spacing: -0.024em; max-width: 18ch; margin: 22px auto 24px; color: var(--paper); }
+    .cta-band-h2 em { font-style: italic; font-weight: 500; color: color-mix(in oklch, var(--rust) 80%, white 20%); }
+    .cta-band-lede { font-size: clamp(15px, 1.2vw, 18px); line-height: 1.65; color: color-mix(in oklch, var(--paper) 70%, var(--ink-3) 30%); max-width: 54ch; margin: 0 auto 36px; }
+    .cta-band-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-band .btn-primary { background: var(--paper); color: var(--ink); }
+    .cta-band .btn-primary:hover { background: var(--rust); color: var(--paper); transform: translateY(-1px); }
+    .cta-band .btn-secondary { color: var(--paper); border-color: color-mix(in oklch, var(--paper) 50%, transparent); }
+    .cta-band .btn-secondary:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+
+    /* Footer */
+    .footer { background: var(--paper-soft); border-top: 1px solid var(--rule); padding: 64px 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: clamp(32px, 4vw, 64px); margin-bottom: 48px; }
+    .footer-brand { font-family: var(--serif); font-style: italic; font-size: 28px; letter-spacing: -0.01em; color: var(--ink); }
+    .footer-blurb { margin-top: 14px; font-size: 14px; line-height: 1.6; color: var(--ink-3); max-width: 32ch; }
+    .footer-credit { margin-top: 18px; font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); display: inline-flex; align-items: center; gap: 10px; }
+    .footer-credit-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--rust); }
+    .footer-h5 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 18px; font-weight: 500; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col li { font-size: 14px; color: var(--ink-2); }
+    .footer-col a { color: var(--ink-2); transition: color 200ms ease; }
+    .footer-col a:hover { color: var(--ink); }
+    .footer-bottom { padding-top: 24px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-3); }
+    .footer-bottom-links a { color: inherit; border-bottom: 1px solid color-mix(in oklch, var(--rule) 70%, transparent); padding-bottom: 1px; transition: color 200ms ease, border-color 200ms ease; }
+    .footer-bottom-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+    .footer-bottom-links .dot { margin: 0 6px; opacity: 0.6; }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+
+    ::selection { background: var(--rust); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead" role="presentation">
+    <div class="wrap masthead-inner">
+        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
+    </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+            <span class="nav-mark-letters">Matthew McGuire</span>
+            <span class="nav-mark-name">Designer · developer</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="how.html">How I work</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="nav-cta">Start a project →</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
+    <ul class="nav-mobile-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="how.html">How I work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
+</aside>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="faq-hero">
+    <div class="wrap">
+        <span class="eyebrow">Frequently asked questions</span>
+        <h1 class="faq-h1">Things people <em>ask first.</em></h1>
+        <p class="faq-lede">Pricing, plans, SEO, websites &mdash; answered in plain language. Don&rsquo;t see your question? <a href="mailto:matt@mattmcguiredesign.com" style="color:var(--rust-deep);border-bottom:1px solid color-mix(in oklch, var(--rust) 40%, transparent);padding-bottom:1px;">Email me</a>.</p>
+    </div>
+</section>
+
+<!-- JUMP NAV -->
+<nav class="faq-nav" aria-label="FAQ categories">
+    <div class="wrap faq-nav-inner">
+        <span class="faq-nav-label">Jump to</span>
+        <a href="#pricing">Pricing &amp; payments</a>
+        <a href="#plans">Plans</a>
+        <a href="#seo">SEO &amp; websites</a>
+    </div>
+</nav>
+
+<!-- PRICING & PAYMENTS -->
+<section class="faq-section" id="pricing">
+    <div class="wrap">
+        <header class="faq-section-head">
+            <span class="eyebrow">Pricing &amp; payments</span>
+            <h2 class="faq-section-h">Money <em>questions.</em></h2>
+        </header>
+
+        <ul class="faq-list">
+            <li>
+                <details>
+                    <summary>How much does a website cost?</summary>
+                    <div class="faq-body">
+                        <p>Two options, both transparent:</p>
+                        <ul>
+                            <li><strong>Lump sum &mdash; $3,800 one-time.</strong> Pay once, own the site outright. Hosting after launch is $25/month, or take the code and host it wherever you like.</li>
+                            <li><strong>Monthly &mdash; $0 down, $199/month.</strong> Twelve-month minimum, then month-to-month. Everything included &mdash; design, build, hosting, edits, security, lifetime updates.</li>
+                        </ul>
+                        <p>See <a href="pricing.html">the pricing page</a> for the full feature comparison.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What&rsquo;s included in the $199/month plan?</summary>
+                    <div class="faq-body">
+                        <p>Everything: design and development, hosting, SSL, analytics, security patches, lifetime updates, 24/7 support, and unlimited ongoing edits. You email me when something needs updating &mdash; new lawyer bios, updated practice areas, blog posts, seasonal banners, layout tweaks &mdash; and I do them.</p>
+                        <p>The plan covers up to five pages by default. Additional pages are <strong>$150 each, one-time</strong>. Adding a blog is <strong>$250 one-time</strong>. Major new features (e-commerce, booking systems, custom calculators) are quoted separately.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What&rsquo;s included in the $3,800 lump sum?</summary>
+                    <div class="faq-body">
+                        <p>Design and development, custom typography and palette, hand-coded build, mobile-responsive layout, on-page SEO setup, working contact form, domain &amp; SSL setup, and 30 days of post-launch support. Up to five pages.</p>
+                        <p>After launch, hosting is <strong>$25/month</strong> if you want me to keep hosting the site, or you can take the code and host it anywhere. Ongoing edits are <strong>not included</strong> with the lump sum &mdash; available as a <strong>$50/month unlimited edits add-on</strong>, or billed at $75/hour as needed.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What if I want to cancel the monthly plan?</summary>
+                    <div class="faq-body">
+                        <p><strong>Within the first twelve months</strong> &mdash; cancellation requires payment of $3,800 (the lump-sum equivalent) minus what you&rsquo;ve already paid. So if you cancel after five months at $199 = $995 paid, the early termination fee is $2,805. This is what makes $0 down financially viable for a one-person studio.</p>
+                        <p><strong>After the twelve-month minimum</strong> &mdash; cancel any time with thirty days&rsquo; written notice, no exit fee. At the end of the notice period, the subscription ends and the site is taken offline.</p>
+                        <p>Your domain stays in your firm&rsquo;s name and is yours regardless. Anything you provided (logo, photos, written content) is yours to keep. <strong>The built site itself is not transferable</strong> &mdash; the monthly plan is a subscription, not a buyout. See <a href="terms.html">the full terms</a>.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I switch from monthly to lump sum (or vice versa)?</summary>
+                    <div class="faq-body">
+                        <p>Generally no &mdash; they&rsquo;re separate offers with different financial structures. If you start on the monthly plan and later want to own the site outright, you&rsquo;d need to commission a new lump-sum build. If you start with the lump sum and want ongoing maintenance, the studio&rsquo;s $50/month unlimited edits add-on is the path.</p>
+                        <p>If you&rsquo;re unsure which fits, email me &mdash; happy to walk through the math for your firm&rsquo;s situation.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Are there any hidden fees?</summary>
+                    <div class="faq-body">
+                        <p>No. The only items billed beyond the headline price are:</p>
+                        <ul>
+                            <li>Domain renewal (passed through at registrar cost &mdash; typically $15&ndash;25/year)</li>
+                            <li>Add-ons you choose (extra pages at $150 each, blog at $250, edits add-on for lump sum at $50/month)</li>
+                            <li>Major new features quoted separately and only built after written approval</li>
+                        </ul>
+                        <p>The studio doesn&rsquo;t bill for revisions inside scope, doesn&rsquo;t charge &ldquo;account-management hours,&rdquo; doesn&rsquo;t mark up hosting, and doesn&rsquo;t add surprise fees. The quote is the quote.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>How do I pay?</summary>
+                    <div class="faq-body">
+                        <p>Invoices are sent via email. Payment is due within fourteen days of receipt. Accepted methods include credit card, e-transfer (Canada), or ACH for monthly recurring billing. For the lump-sum tier, payment is split 50% on signing and 50% at launch.</p>
+                    </div>
+                </details>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- PLANS -->
+<section class="faq-section" id="plans">
+    <div class="wrap">
+        <header class="faq-section-head">
+            <span class="eyebrow">Plans</span>
+            <h2 class="faq-section-h">What&rsquo;s in scope, <em>what isn&rsquo;t.</em></h2>
+        </header>
+
+        <ul class="faq-list">
+            <li>
+                <details>
+                    <summary>How many pages do I get?</summary>
+                    <div class="faq-body">
+                        <p>Both plans include up to <strong>five pages</strong> by default &mdash; typically Home, About, Services, Team, and Contact. Most professional services firms find five pages is enough to launch a clean, complete site. If you need more, additional pages are <strong>$150 one-time</strong> each, and can be added at any point.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I add a blog?</summary>
+                    <div class="faq-body">
+                        <p>Yes. Adding a blog architecture is a <strong>$250 one-time</strong> add-on. That covers the blog index page, individual post layouts, and the publishing workflow. Each blog post you write counts as a content edit and is included in the monthly plan&rsquo;s unlimited edits (or billed under the $50/month edits add-on for the lump-sum tier).</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Do you offer e-commerce?</summary>
+                    <div class="faq-body">
+                        <p>Yes, but it&rsquo;s a separate quote. E-commerce builds are scoped per project and typically run from $4,500 starting, depending on integrations (Shopify, Stripe, custom checkout) and product catalog complexity. Once built, the ongoing maintenance rolls into your monthly plan.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What about booking systems and custom calculators?</summary>
+                    <div class="faq-body">
+                        <p>Both available as add-ons. Booking systems (consultations, intake calls) start at $800 depending on which scheduling platform you want integrated. Custom calculators &mdash; conveyancing fees, estate-planning estimators, retainer cost previews &mdash; start at $1,200 depending on logic complexity.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What&rsquo;s the minimum commitment for the monthly plan?</summary>
+                    <div class="faq-body">
+                        <p><strong>Twelve months</strong>. After that, the plan continues month-to-month indefinitely &mdash; cancel any time with thirty days&rsquo; notice, no exit fee. The twelve-month minimum exists because the studio is recouping the build cost over time rather than collecting it up front.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I scale up later?</summary>
+                    <div class="faq-body">
+                        <p>Yes. Add-ons can be added at any time during the engagement. Want to add a blog six months in? $250, done in a week. Need an extra five pages for a new practice area? $750, queued in. Want to add a booking system for client intake? Quoted to scope. Everything compounds with the existing plan &mdash; no &ldquo;upgrade tier&rdquo; mechanics.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What kinds of firms do you usually work with?</summary>
+                    <div class="faq-body">
+                        <p>Mostly law firms (criminal, family, real estate, wills &amp; estates, civil litigation), but also CPAs, consulting practices, and small medical and dental clinics. The thread is professional services with a careful, precise client experience &mdash; firms whose work is the opposite of flashy, and whose websites should reflect that.</p>
+                    </div>
+                </details>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- SEO & WEBSITES -->
+<section class="faq-section" id="seo">
+    <div class="wrap">
+        <header class="faq-section-head">
+            <span class="eyebrow">SEO &amp; websites</span>
+            <h2 class="faq-section-h">How the work <em>actually works.</em></h2>
+        </header>
+
+        <ul class="faq-list">
+            <li>
+                <details>
+                    <summary>Do you do SEO?</summary>
+                    <div class="faq-body">
+                        <p><strong>Foundational SEO is included</strong> at launch &mdash; sitemap submitted to Google, schema markup, optimized meta tags and titles, fast-loading pages, mobile-friendly layout, and clean URL structure. These are the things that matter most for ranking and they&rsquo;re built in by default.</p>
+                        <p>What&rsquo;s <strong>not</strong> included: ongoing SEO content campaigns (writing blog posts targeted to specific keywords each month), backlink-building services, paid Google Ads management. Those are specialty services and the studio doesn&rsquo;t offer them. If you need them, I&rsquo;m happy to recommend a few firms I trust.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>How long does it take to build?</summary>
+                    <div class="faq-body">
+                        <p><strong>Two to three weeks</strong> from preview-accept to launch is typical. Most engagements start with a working preview I&rsquo;ve already put together based on your existing site &mdash; so you see real working pages before any commitment. From there it&rsquo;s a fixed scope, two rounds of revisions, and a launch date you can plan around.</p>
+                        <p>Faster timelines are possible if your content is ready and revisions are quick. Slower timelines happen if there are major copy rewrites or if you need to coordinate sign-off with multiple partners.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Will my site be mobile-responsive?</summary>
+                    <div class="faq-body">
+                        <p>Yes &mdash; every site, both tiers. Layouts are designed mobile-first and tested on phones, tablets, and desktops before launch. Most law-firm clients see well over half their traffic from mobile devices; the site is built to handle that from day one.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What&rsquo;s the difference between hand-coded and a site builder?</summary>
+                    <div class="faq-body">
+                        <p>Hand-coded sites (HTML, CSS, JS, deployed as static files) are <strong>faster, lighter, more accessible, and more durable</strong>. There&rsquo;s no PHP runtime, no plugin updates that break the site at midnight, no database to backup or migrate, no theme that becomes deprecated and stranded.</p>
+                        <p>Site builders (WordPress, Wix, Squarespace) trade speed and flexibility for ease of self-editing. They&rsquo;re fine for some clients. They&rsquo;re not what this studio builds, because for the firms I work with, the trade is the wrong direction &mdash; speed, security, and sharp typography matter more than DIY editing.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I update content myself?</summary>
+                    <div class="faq-body">
+                        <p>You don&rsquo;t need to. Edits are handled by me &mdash; you email when something needs updating, and I do it. Most edits go live the same day, or next business day at the latest.</p>
+                        <p>This is intentional. The firms I work with would rather pay for someone to handle it correctly than learn yet another tool. If you genuinely want self-edit capability for a high-volume blog, we can talk about adding a headless CMS &mdash; but it&rsquo;s a quoted add-on, and most clients don&rsquo;t need it.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What hosting do you use?</summary>
+                    <div class="faq-body">
+                        <p><strong>Netlify</strong>. It&rsquo;s static hosting with a global CDN, automatic SSL, and 99.99%+ uptime. Sites are served from edge servers near your visitors, which means sub-second page loads almost everywhere. No server management, no maintenance windows, no &ldquo;the site is down because the database fell over&rdquo; surprises.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I keep my existing domain?</summary>
+                    <div class="faq-body">
+                        <p>Yes. The site lives on Netlify under your existing domain &mdash; I handle the DNS pointer at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.</p>
+                        <p>If you don&rsquo;t have a domain yet, I&rsquo;ll register one in your firm&rsquo;s name through a registrar of your choice and pass the cost through (typically $15&ndash;25/year).</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Will my site be fast?</summary>
+                    <div class="faq-body">
+                        <p>Yes. Static sites on a CDN typically load in under one second on a normal connection &mdash; Google PageSpeed Insights scores in the 95&ndash;100 range for both mobile and desktop are the baseline, not the goal.</p>
+                        <p>Speed matters for two reasons: it improves your Google ranking (PageSpeed is a confirmed ranking factor) and it improves conversion (slow sites lose visitors before they finish reading the first paragraph).</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>What about SSL and security?</summary>
+                    <div class="faq-body">
+                        <p>Included. SSL certificates are auto-provisioned and auto-renewed by Netlify. The static-hosting model has a much smaller attack surface than WordPress or other dynamic platforms &mdash; no PHP, no database, no admin panel to compromise, no plugins that need patching. Security patches and monitoring are part of the monthly plan.</p>
+                    </div>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Can I use my existing logo and branding?</summary>
+                    <div class="faq-body">
+                        <p>Yes. Send what you have &mdash; logo files (SVG ideal, but I can work with PNG or JPG), brand colors if you have them documented, photography, and any existing copy. I&rsquo;ll work around your existing identity rather than impose a new one.</p>
+                        <p>If you don&rsquo;t have a polished logo or brand kit yet, I can draft a simple wordmark and palette as part of the build. That&rsquo;s common for firms that have grown organically without ever doing a formal brand pass.</p>
+                    </div>
+                </details>
+            </li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<!-- BOTTOM CTA -->
+<section class="cta-band" aria-labelledby="cta-band-title">
+    <div class="wrap">
+        <span class="eyebrow">Take the next step</span>
+        <h2 id="cta-band-title" class="cta-band-h2">
+            Still have <em>questions?</em>
+        </h2>
+        <p class="cta-band-lede">
+            Email me a few sentences about what you&rsquo;re working on. I&rsquo;ll come back within one business day with thoughts, a rough scope, and &mdash; often &mdash; a working preview within a few days.
+        </p>
+        <div class="cta-band-actions">
+            <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
+            <a href="pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Matthew McGuire</p>
+                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That&rsquo;s what the studio is for.</p>
+                <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Site</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="work.html">Selected work</a></li>
+                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Reach</h5>
+                <ul>
+                    <li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li>
+                    <li><a href="https://github.com/mmcguire6" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" target="_blank" rel="noopener">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5 class="footer-h5">Based</h5>
+                <ul>
+                    <li>Edmonton, Alberta</li>
+                    <li>Working with firms across Canada</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a><span class="dot">·</span><a href="terms.html">Terms</a>
+            </span>
+            <span>Designed &amp; built by hand</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('site-nav');
+    if (nav) {
+        var onScroll = function () {
+            if (window.scrollY > 12) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    var navToggle = document.querySelector('.nav-toggle');
+    var navMobile = document.querySelector('.nav-mobile');
+    function setNav(open) {
+        document.body.classList.toggle('nav-open', open);
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+    }
+    if (navToggle) navToggle.addEventListener('click', function () {
+        setNav(!document.body.classList.contains('nav-open'));
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false);
+    });
+    if (navMobile) navMobile.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setNav(false); });
+    });
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (!href) return;
+        if (a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+            href.charAt(0) === '#' || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 ||
+            a.hasAttribute('download')) return;
+        if (a.host && a.host !== window.location.host) return;
+        if (a.pathname === window.location.pathname && a.hash) return;
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(function () { window.location.href = href; }, 260);
+    });
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) document.body.classList.remove('is-leaving');
+    });
+</script>
+
+</body>
+</html>

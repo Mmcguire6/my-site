@@ -62,7 +62,7 @@
     .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid transparent; transition: border-color 240ms ease; }
     .nav.scrolled { border-bottom-color: var(--rule); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(28px, 4vw, 56px); gap: 24px; }
-    .nav-mark { display: inline-flex; align-items: baseline; gap: 12px; color: var(--ink); }
+    .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
     .nav-links { display: flex; gap: 32px; align-items: center; }
@@ -200,6 +200,7 @@
             <span class="nav-mark-name">Designer · developer</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="work.html">Work</a>
             <a href="how.html">How I work</a>
@@ -215,6 +216,7 @@
 
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
@@ -242,38 +244,54 @@
 
             <h2>The <em>short version.</em></h2>
             <p>These terms govern the use of matthewmcguire.ca and any service you engage me for as Matthew McGuire (&ldquo;the studio&rdquo;). By browsing this site or signing a service agreement, you agree to these terms. If anything below is unclear, email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> &mdash; I&rsquo;ll explain in plain language.</p>
-            <p><strong>The single most important thing to understand:</strong> the studio operates on a subscription model, not a buyout model. $0 down + $200/month buys you ongoing access to a hand-built site that the studio designs, builds, hosts, and maintains. If your subscription ends, the site goes offline. You keep your domain and any content you provided, but you do not own the built site itself. Read the Cancellation section below for details &mdash; this is how the $0-down pricing is financially viable.</p>
+            <p><strong>The studio offers two engagement types.</strong> Pick the one that fits your firm:</p>
+            <ul>
+                <li><strong>Lump sum &mdash; $3,800 one-time.</strong> You pay once, you own the built site outright. Hosting after launch is $25/month, or you can host the code wherever you like. Ongoing edits and support are not included &mdash; available as add-ons or billed hourly.</li>
+                <li><strong>Monthly subscription &mdash; $0 down, $199/month.</strong> The studio designs, builds, hosts, and maintains the site as an ongoing service. Twelve-month minimum, then month-to-month. <strong>This is a subscription, not a buyout</strong> &mdash; if your subscription ends, the built site goes offline. You always keep your domain and the content you provided.</li>
+            </ul>
+            <p>Read the rest of these terms for full details on payment, cancellation, ownership, and liability.</p>
 
             <h2>What the studio <em>provides.</em></h2>
-            <p>I design and build websites for small-to-mid professional services firms. Engagements are run on a single inclusive monthly subscription that covers design, build, hosting, ongoing edits, security patches, and small additions. Specifics of any individual engagement &mdash; page count, content scope, integrations &mdash; are documented in a service agreement signed by both parties before work begins.</p>
+            <p>I design and build websites for small-to-mid professional services firms. Engagements run as either a one-time lump-sum build (you own the site outright) or an inclusive monthly subscription (the studio hosts and maintains the site as a service). Specifics of any individual engagement &mdash; page count, content scope, integrations, included pages &mdash; are documented in a service agreement signed by both parties before work begins.</p>
 
             <h2>Pricing and <em>payment.</em></h2>
+            <p><strong>Lump sum tier.</strong></p>
+            <ul>
+                <li><strong>$3,800 one-time.</strong> Covers design, hand-coded build, up to five pages, mobile-responsive layout, on-page SEO setup, contact form, domain &amp; SSL setup, and thirty days of post-launch support.</li>
+                <li><strong>+ $25 / month hosting after launch</strong> if the studio continues to host the site. The client may also host the code with any provider of their choosing.</li>
+                <li><strong>Add-ons:</strong> $150 per additional page beyond five, $250 to add a blog, $50/month for unlimited edits, edits beyond the add-on billed at $75/hour.</li>
+                <li><strong>Payment terms:</strong> 50% deposit on signing, 50% at launch. Both invoices due within fourteen days of receipt.</li>
+                <li><strong>Ownership:</strong> the client owns the site, code, and design outright at the end of the engagement. No subscription required after launch.</li>
+            </ul>
+            <p><strong>Monthly subscription tier.</strong></p>
             <ul>
                 <li><strong>$0 down to sign.</strong> No deposit is collected when the service agreement is signed.</li>
-                <li><strong>$200 per month, all-inclusive.</strong> The monthly subscription begins on your site&rsquo;s launch day and covers design, build, hosting, edits, security, and small additions.</li>
+                <li><strong>$199 per month, all-inclusive.</strong> The monthly subscription begins on your site&rsquo;s launch day and covers design, build, hosting, ongoing edits, security patches, lifetime updates, and small additions.</li>
                 <li><strong>Twelve-month minimum commitment.</strong> The first twelve months of the subscription are committed; after that, the subscription continues month-to-month indefinitely.</li>
-                <li><strong>Major add-ons are quoted separately.</strong> New features outside the agreed scope (booking systems, e-commerce, custom calculators, full redesigns) are quoted in writing and rolled into the monthly when added.</li>
-                <li><strong>Domain and SSL fees are passed through at cost</strong> &mdash; the domain is registered in your firm&rsquo;s name and owned by you.</li>
+                <li><strong>Add-ons:</strong> $150 per additional page beyond five, $250 to add a blog. Major new features (e-commerce, booking systems, custom calculators, full redesigns) are quoted in writing and rolled into the monthly when added.</li>
+                <li><strong>Domain and SSL fees are passed through at cost</strong> &mdash; the domain is registered in your firm&rsquo;s name and owned by you, regardless of subscription status.</li>
+                <li><strong>Ownership:</strong> the built site (code, design, deployed URL) remains the property of the studio. <strong>This is a subscription, not a buyout.</strong> See Cancellation below for details.</li>
             </ul>
-            <p>Invoices are sent monthly. Payment is due within fourteen days of receipt. Late payments more than thirty days past due may result in suspension of the subscription and the site going offline until brought current.</p>
+            <p>Invoices are sent monthly for the subscription tier, or per the deposit/launch schedule for the lump-sum tier. Payment is due within fourteen days of receipt. Late payments more than thirty days past due may result in suspension of services and, for the subscription tier, the site going offline until brought current.</p>
 
-            <h2>Cancellation.</h2>
+            <h2>Cancellation &mdash; <em>monthly subscription only.</em></h2>
+            <p>The lump-sum tier has no recurring obligation; once the engagement is complete and the site is delivered, there is nothing to cancel. The cancellation rules below apply only to the monthly subscription.</p>
             <p><strong>Within the first twelve months</strong> &mdash; if you cancel before completing the twelve-month minimum, an early termination fee equal to the difference between the studio&rsquo;s lump-sum build equivalent of <strong>$3,800</strong> and the total subscription payments you have made to date is due on cancellation. For example, if you have paid $1,000 over five months and choose to cancel, the early termination fee is $2,800.</p>
             <p><strong>After the twelve-month minimum</strong> &mdash; you may cancel at any time with thirty days&rsquo; written notice, no early termination fee. At the end of the notice period, the subscription ends and the site is taken offline.</p>
-            <p>The studio does not offer a buyout or one-time purchase price for the site. Continued access to the built site requires continued subscription. This is how the $0-down model is financially viable for a one-person studio &mdash; the build cost is recouped over multiple years of subscription, so departures with the site cannot be permitted.</p>
+            <p>The monthly subscription does not include a buyout or upgrade-to-ownership option. Clients who want to own the site outright should choose the lump-sum tier from the start, or be prepared to commission a fresh build with a different vendor at the end of the subscription. This separation is how the $0-down monthly pricing is financially viable for a one-person studio.</p>
 
             <h2>What you keep on <em>cancellation.</em></h2>
-            <p>If your subscription ends for any reason, you retain ownership of:</p>
+            <p>If your monthly subscription ends for any reason, you retain ownership of:</p>
             <ul>
                 <li><strong>Your domain.</strong> Registered in your firm&rsquo;s name from day one, transferred to a registrar of your choosing if needed.</li>
                 <li><strong>Your content.</strong> Anything you provided to the studio &mdash; logo, photos, written copy, branding files &mdash; is yours to take to whatever new vendor you engage.</li>
                 <li><strong>Anything you produced during the engagement.</strong> Bios you wrote, photos you commissioned, blog posts you authored.</li>
             </ul>
-            <p>What does <em>not</em> transfer on cancellation:</p>
+            <p>What does <em>not</em> transfer on cancellation of the monthly subscription:</p>
             <ul>
                 <li><strong>The built site itself</strong> &mdash; its code, design, layout, custom typography work, hosting setup, and deployed URL. These remain the property of the studio and the live site goes offline at the end of the subscription period.</li>
             </ul>
-            <p>To be plain: this is a subscription model, not a buyout model. You are paying for ongoing access to a hand-built site and the studio&rsquo;s ongoing maintenance of it. If access ends, the site ends. Anyone signing up should understand this clearly &mdash; it is in this section of these terms specifically because it is not buried, and it is the foundation of how the $0-down pricing works.</p>
+            <p>(Lump-sum clients have no equivalent loss &mdash; they own the site outright from the start of the engagement, and nothing changes if their hosting arrangement with the studio ends.)</p>
 
             <h2>Studio rights to <em>portfolio use.</em></h2>
             <p>The studio retains the right to display screenshots, working URLs, and descriptions of the engagement in its portfolio (matthewmcguire.ca/work) for marketing purposes, unless you request otherwise in writing before launch.</p>
@@ -320,6 +338,7 @@
                     <li><a href="work.html">Selected work</a></li>
                     <li><a href="how.html">How I work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

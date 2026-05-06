@@ -175,9 +175,11 @@
     }
     .nav-mark {
         display: inline-flex;
-        align-items: baseline;
-        gap: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
         color: var(--ink);
+        line-height: 1;
     }
     .nav-mark-letters {
         font-family: var(--serif);
@@ -907,6 +909,7 @@
             <span class="nav-mark-name">Designer · developer</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="work.html">Work</a>
             <a href="how.html">How I work</a>
@@ -922,6 +925,7 @@
 
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
@@ -1054,7 +1058,7 @@
                 <span class="next-step-n">Days 06&ndash;10</span>
                 <h3 class="next-step-h">Scope, deposit, <em>build.</em></h3>
                 <p class="next-step-body">
-                    If the preview lands, I send a fixed scope and a service agreement &mdash; sign and return, no money down. From there it&rsquo;s two to three weeks of focused build, two rounds of revisions, and a launch date you can plan around. Your $200/month subscription begins on launch day &mdash; that&rsquo;s the only invoice, and it covers everything ongoing.
+                    If the preview lands, I send a fixed scope and a service agreement &mdash; sign and return, no money down. From there it&rsquo;s two to three weeks of focused build, two rounds of revisions, and a launch date you can plan around. Your $199/month subscription begins on launch day &mdash; that&rsquo;s the only invoice, and it covers everything ongoing.
                 </p>
             </article>
         </div>
@@ -1114,6 +1118,7 @@
                     <li><a href="work.html">Selected work</a></li>
                     <li><a href="how.html">How I work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

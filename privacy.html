@@ -62,7 +62,7 @@
     .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid transparent; transition: border-color 240ms ease; }
     .nav.scrolled { border-bottom-color: var(--rule); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(28px, 4vw, 56px); gap: 24px; }
-    .nav-mark { display: inline-flex; align-items: baseline; gap: 12px; color: var(--ink); }
+    .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
     .nav-links { display: flex; gap: 32px; align-items: center; }
@@ -200,6 +200,7 @@
             <span class="nav-mark-name">Designer · developer</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="work.html">Work</a>
             <a href="how.html">How I work</a>
@@ -215,6 +216,7 @@
 
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="how.html">How I work</a></li>
@@ -310,6 +312,7 @@
                     <li><a href="work.html">Selected work</a></li>
                     <li><a href="how.html">How I work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
