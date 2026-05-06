@@ -866,6 +866,36 @@
         grid-template-columns: repeat(3, 1fr);
         gap: clamp(20px, 2.5vw, 32px);
     }
+    .work-foot {
+        margin-top: clamp(36px, 4.5vw, 56px);
+        padding-top: 28px;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .work-foot-text {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+    }
+    .work-foot-text strong { color: var(--ink); font-weight: 500; }
+    .work-foot-link {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: gap 240ms ease, color 200ms ease;
+    }
+    .work-foot-link:hover { gap: 12px; color: var(--rust-deep); }
     .work-card {
         display: flex;
         flex-direction: column;
@@ -1695,7 +1725,7 @@
                 </h2>
             </div>
             <p class="work-head-lede">
-                Three projects from the past two years — a real client engagement and two product builds. Click any card to see the full case.
+                Three featured engagements from the past two years &mdash; a real client build and two product launches I designed end-to-end. Plus a working archive of concept rebuilds for law firms across Canada and the United States.
             </p>
         </header>
 
@@ -1746,6 +1776,11 @@
                 </div>
             </a>
 
+        </div>
+
+        <div class="work-foot">
+            <span class="work-foot-text"><strong>Three featured</strong> &middot; <strong>twelve+</strong> concept rebuilds in the archive</span>
+            <a href="work.html" class="work-foot-link">See the full archive <span aria-hidden="true">→</span></a>
         </div>
     </div>
 </section>
