@@ -1656,9 +1656,9 @@ def build_sitemap() -> Path:
         ("privacy.html", 0.4),
         ("terms.html", 0.4),
         ("skills.html", 0.6),
-        ("work/fwsllp/", 0.7),
-        ("work/kjicpa/", 0.7),
-        ("work/sockettlaw-squarespace/", 0.7),
+        # /work/* is intentionally excluded — those are prospect-preview
+        # pages and should not be indexed (also noindexed at the page level
+        # and disallowed in robots.txt).
     ]
     urls = []
     for path, prio in main_pages:
