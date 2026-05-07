@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Capstone Law Office | Regina, SK | Practical Legal Solutions</title>
+    <meta name="description" content="Capstone Law Office — service-oriented Regina law firm offering practical legal solutions in real estate, criminal, immigration, corporate, wills &amp; estates, and family law. Call (306) 559-2463.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --ink:           #14223A;
+            --ink-deep:      #0A1325;
+            --char:          #1F2C44;
+            --char-2:        #2A3753;
+
+            --royal:         #1E4A9E;
+            --royal-bright:  #2C66C2;
+            --royal-deep:    #133872;
+            --royal-pale:    #BFD3F0;
+            --royal-tint:    #E2ECF8;
+            --royal-soft:    #F2F7FD;
+
+            --magenta:       #5B9BC2;
+            --magenta-bright:#80B7DB;
+            --magenta-deep:  #3A7AAB;
+            --magenta-tint:  #DDEBF6;
+
+            --paper:         #FFFFFF;
+            --bg:            #F8FAFC;
+            --bg-soft:       #FBFCFD;
+
+            --text:          #1F2C44;
+            --text-mid:      #4A5568;
+            --text-soft:     #6B7280;
+            --text-faint:    #9CA3AF;
+
+            --border:        #E5EAF1;
+            --border-soft:   #EDF1F6;
+
+            --shadow-sm:     0 1px 3px rgba(20,34,58,0.07);
+            --shadow-md:     0 8px 24px -8px rgba(20,34,58,0.18);
+            --shadow-lg:     0 24px 50px -16px rgba(20,34,58,0.22);
+            --shadow-royal:  0 12px 28px -8px rgba(30,74,158,0.40);
+
+            --total-nav: 132px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--paper);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        button, input, select, textarea { font-family: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+        .section { padding: 96px 0; }
+        .section-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--magenta);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before {
+            content: '';
+            width: 26px;
+            height: 1.5px;
+            background: var(--magenta);
+        }
+        .section-h2, .h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3.6vw, 2.8rem);
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .section-h2 em, .h2 em {
+            font-style: italic;
+            color: var(--royal);
+            font-weight: 600;
+        }
+        .section-lead, .lede {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            max-width: 640px;
+            line-height: 1.65;
+        }
+        .section-head { margin-bottom: 56px; max-width: 720px; }
+
+        /* ── BUTTONS ───────────────────────────────── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            border-radius: 999px;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .btn svg { width: 16px; height: 16px; }
+        .btn-royal {
+            background: var(--royal);
+            color: #fff;
+            border-color: var(--royal);
+            box-shadow: var(--shadow-royal);
+        }
+        .btn-royal:hover { background: var(--royal-bright); border-color: var(--royal-bright); transform: translateY(-1px); }
+        .btn-magenta {
+            background: var(--magenta);
+            color: #fff;
+            border-color: var(--magenta);
+        }
+        .btn-magenta:hover { background: var(--magenta-bright); transform: translateY(-1px); }
+        .btn-ghost {
+            background: transparent;
+            color: var(--ink);
+            border-color: var(--royal);
+        }
+        .btn-ghost:hover { background: var(--royal); color: #fff; }
+        .btn-ghost-light {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,0.5);
+        }
+        .btn-ghost-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+        /* ── TOP BAR + NAV ───────────────────────────── */
+        .top-bar {
+            background: var(--ink-deep);
+            color: rgba(255,255,255,0.92);
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+        }
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 32px;
+            max-width: 1240px;
+            margin: 0 auto;
+            gap: 18px;
+        }
+        .top-bar a { display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--magenta-bright); }
+        .top-bar svg { width: 14px; height: 14px; }
+        .top-bar-tag { color: rgba(255,255,255,0.6); font-weight: 500; }
+
+        .nav {
+            background: var(--paper);
+            border-bottom: 1px solid var(--border-soft);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 32px;
+            max-width: 1240px;
+            margin: 0 auto;
+            gap: 24px;
+        }
+        .cl-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .cl-mark-icon {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .cl-mark-icon::before,
+        .cl-mark-icon::after {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border: 2.5px solid;
+            transform: rotate(45deg);
+            border-radius: 2px;
+        }
+        .cl-mark-icon::before {
+            border-color: var(--magenta);
+            top: 2px;
+            left: 2px;
+        }
+        .cl-mark-icon::after {
+            border-color: var(--royal);
+            top: 8px;
+            left: 8px;
+        }
+        .cl-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+        .cl-sub {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 600;
+            color: var(--magenta);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-mid);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--royal); }
+        .nav-links .nav-cta {
+            background: var(--royal);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 999px;
+            letter-spacing: 0.06em;
+        }
+        .nav-links .nav-cta:hover { background: var(--royal-bright); color: #fff; }
+        .nav-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--ink);
+            cursor: pointer;
+        }
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--ink);
+            margin: 5px 0;
+            transition: 0.2s;
+        }
+        .mobile-nav {
+            display: none;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 16px 32px;
+        }
+        .mobile-nav.open { display: block; }
+        .mobile-nav ul { display: flex; flex-direction: column; gap: 12px; }
+        .mobile-nav a {
+            display: block;
+            padding: 10px 0;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        /* ── HERO ────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 86vh;
+            background:
+                linear-gradient(120deg, rgba(8,15,30,0.92) 0%, rgba(20,34,58,0.78) 45%, rgba(30,74,158,0.55) 100%),
+                url('img/hero-lady-justice.jpg') center 30% / cover no-repeat,
+                var(--ink-deep);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(217,70,167,0.22), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(30,74,158,0.45), transparent 50%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+        .hero-eyebrow {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--magenta-bright);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 32px;
+            height: 1.5px;
+            background: var(--magenta-bright);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+            margin-bottom: 22px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 600;
+            color: var(--magenta-bright);
+        }
+        .hero-sub {
+            font-size: 1.12rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 36px;
+            max-width: 560px;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 44px;
+        }
+        .hero-meta {
+            display: flex;
+            gap: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .hero-meta-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--magenta-bright);
+            line-height: 1;
+        }
+        .hero-meta-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        /* ── PROMISE BAND ──────────────────────────── */
+        .promise {
+            background: var(--royal);
+            color: #fff;
+            padding: 48px 0;
+            text-align: center;
+        }
+        .promise-inner {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-weight: 500;
+            line-height: 1.45;
+            color: #fff;
+        }
+        .promise blockquote strong { color: var(--magenta-bright); font-weight: 700; }
+        .promise-cite {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-top: 18px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ── PRACTICE AREAS ────────────────────────── */
+        .practice { background: var(--bg); }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .practice-card {
+            background: var(--paper);
+            padding: 36px 28px;
+            border: 1px solid var(--border-soft);
+            border-top: 4px solid var(--royal);
+            border-radius: 6px;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+        }
+        .practice-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--magenta);
+        }
+        .practice-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: var(--royal-tint);
+            color: var(--royal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: background 0.25s, color 0.25s;
+        }
+        .practice-card:hover .practice-icon {
+            background: var(--magenta-tint);
+            color: var(--magenta);
+        }
+        .practice-icon svg { width: 26px; height: 26px; }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .practice-card p {
+            font-size: 0.94rem;
+            line-height: 1.65;
+            color: var(--text-mid);
+        }
+
+        /* ── ATTORNEYS / TEAM ──────────────────────── */
+        .team { background: var(--paper); }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: var(--bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .team-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .team-monogram {
+            aspect-ratio: 4 / 3;
+            background: linear-gradient(135deg, var(--royal-deep) 0%, var(--royal) 60%, var(--magenta-deep) 130%);
+            color: rgba(255,255,255,0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 4rem;
+            letter-spacing: 0.04em;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-monogram img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            display: block;
+        }
+        .team-monogram::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.18), transparent 55%),
+                radial-gradient(ellipse at 15% 80%, rgba(0,0,0,0.18), transparent 55%);
+            pointer-events: none;
+        }
+        .team-info {
+            padding: 26px 28px 30px;
+        }
+        .team-info .role {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--magenta);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .team-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+        .team-info p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: var(--text-mid);
+        }
+
+        /* ── ABOUT ─────────────────────────────────── */
+        .about { background: var(--bg-soft); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 64px;
+            align-items: start;
+        }
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3.4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 22px;
+        }
+        .about-content h2 em {
+            font-style: italic;
+            color: var(--royal);
+            font-weight: 600;
+        }
+        .about-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-mid);
+            margin-bottom: 16px;
+        }
+        .about-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: var(--paper);
+            padding: 36px 32px;
+            border: 1px solid var(--border-soft);
+            border-left: 4px solid var(--magenta);
+            border-radius: 6px;
+        }
+        .about-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-soft);
+            gap: 18px;
+        }
+        .about-stat:last-child { border-bottom: none; }
+        .about-stat-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-mid);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .about-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--royal-deep);
+            text-align: right;
+        }
+
+        /* ── CONTACT ───────────────────────────────── */
+        .contact { background: var(--paper); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--royal-tint);
+            color: var(--royal);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--magenta);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .contact-list span,
+        .contact-list a {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.5;
+            transition: color 0.2s;
+        }
+        .contact-list a:hover { color: var(--royal); }
+
+        .contact-form {
+            background: var(--bg);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-soft);
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .form-sub {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            margin-bottom: 26px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        .form-field { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+        .form-field label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-mid);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            background: var(--paper);
+            border-radius: 6px;
+            font-size: 0.94rem;
+            color: var(--text);
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%231E4A9E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 11px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--royal);
+        }
+        .form-field textarea { min-height: 110px; resize: vertical; }
+        .form-btn {
+            background: var(--royal);
+            color: #fff;
+            padding: 13px 28px;
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: var(--shadow-royal);
+        }
+        .form-btn:hover { background: var(--royal-bright); transform: translateY(-1px); }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-note {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+        }
+
+        /* ── CTA BAND ──────────────────────────────── */
+        .cta-band {
+            background:
+                linear-gradient(135deg, rgba(19,56,114,0.92) 0%, rgba(30,74,158,0.82) 50%, rgba(58,122,171,0.86) 100%),
+                url('img/cta-leather-books.jpg') center 40% / cover no-repeat,
+                var(--royal-deep);
+            color: #fff;
+            padding: 88px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.10), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.22), transparent 55%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3.6vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--magenta-bright);
+        }
+        .cta-inner p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 30px;
+        }
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+        .cta-band .btn-royal {
+            background: #fff;
+            color: var(--royal-deep);
+            border-color: #fff;
+            box-shadow: none;
+        }
+        .cta-band .btn-royal:hover { background: var(--magenta-bright); color: #fff; border-color: var(--magenta-bright); }
+
+        /* ── FOOTER ────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(255,255,255,0.78);
+            padding: 60px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 44px;
+        }
+        .footer-brand .cl-mark { margin-bottom: 18px; }
+        .footer-brand .cl-name { color: #fff; }
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.6);
+            max-width: 320px;
+        }
+        .footer-col h5 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--magenta-bright);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-col a, .footer-col li {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.7);
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.10);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.06em;
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.55); text-decoration: underline; }
+
+        /* ── DEMO BANNER ──────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: var(--ink-deep);
+            color: #fff;
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.78rem;
+            border-top: 2px solid var(--magenta);
+            z-index: 999;
+            box-shadow: 0 -4px 18px rgba(0,0,0,0.4);
+        }
+        .demo-banner a { color: var(--magenta-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px; top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.65);
+            font-size: 1.05rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .demo-banner-close:hover { color: #fff; }
+
+        /* ── REVEAL ──────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ──────────────────────────── */
+        @media (max-width: 1024px) {
+            .practice-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar-inner { flex-wrap: wrap; gap: 8px; padding: 8px 16px; }
+            .top-bar-tag { display: none; }
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .container { padding: 0 20px; }
+            .section { padding: 70px 0; }
+            .section-head { margin-bottom: 40px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .hero-meta { flex-wrap: wrap; gap: 22px; }
+        }
+
+        ::selection { background: var(--magenta); color: #fff; }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="top-bar-tag">Capstone Law Office &middot; Regina, Saskatchewan</span>
+        <a href="tel:+13065592463">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (306) 559-2463
+        </a>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#" class="cl-mark" aria-label="Capstone Law Office">
+            <span class="cl-mark-icon" aria-hidden="true"></span>
+            <span>
+                <span class="cl-name">Capstone Law Office</span>
+                <span class="cl-sub">Regina &middot; Saskatchewan</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#practice">Areas of Practice</a></li>
+            <li><a href="#team">Attorneys</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#practice">Areas of Practice</a></li>
+        <li><a href="#team">Attorneys</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Regina &middot; Saskatchewan</p>
+            <h1>Practical legal solutions <em>for your legal needs.</em></h1>
+            <p class="hero-sub">
+                Capstone Law Office is a service-oriented Regina firm offering focused, knowledgeable representation across real estate, criminal, immigration, corporate, wills &amp; estates, and family matters &mdash; with the personal attention you deserve.
+            </p>
+            <div class="hero-actions">
+                <a href="#team" class="btn btn-magenta">
+                    Meet Your Team
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:+13065592463" class="btn btn-ghost-light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    (306) 559-2463
+                </a>
+            </div>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <p class="hero-meta-num">6</p>
+                    <p class="hero-meta-label">Areas of Practice</p>
+                </div>
+                <div class="hero-meta-item">
+                    <p class="hero-meta-num">Regina</p>
+                    <p class="hero-meta-label">Head Office</p>
+                </div>
+                <div class="hero-meta-item">
+                    <p class="hero-meta-num">Free</p>
+                    <p class="hero-meta-label">30-min Consultation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+    <div class="promise-inner">
+        <blockquote>
+            "We offer <strong>efficient and practical legal solutions</strong> for your legal needs."
+        </blockquote>
+        <p class="promise-cite">&mdash; Capstone Law Office &middot; Regina, Saskatchewan</p>
+    </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">What We Do</p>
+            <h2 class="section-h2">Six focused <em>areas of practice.</em></h2>
+            <p class="section-lead">From buying a home to handling a serious criminal charge to navigating an immigration application — Capstone covers the full breadth of personal and business legal matters Regina families need.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 3 L21 12"/><path d="M5 10 L5 21 L19 21 L19 10"/><path d="M10 21 L10 14 L14 14 L14 21"/></svg>
+                </div>
+                <h3>Real Estate</h3>
+                <p>Residential and commercial purchases, sales, refinances, and title work. Plain-language guidance through the closing process so you know exactly what's happening, when.</p>
+            </article>
+
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/><path d="M9 12 L11 14 L15 10"/></svg>
+                </div>
+                <h3>Criminal Law</h3>
+                <p>Defence representation for individuals facing criminal charges in Regina and surrounding Saskatchewan. Focused, rigorous advocacy at every stage of the process.</p>
+            </article>
+
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+                </div>
+                <h3>Immigration Law</h3>
+                <p>Permanent residency, work and study permits, family sponsorship, and citizenship applications. Practical, dependable guidance through the Canadian immigration system.</p>
+            </article>
+
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3>Corporate Law</h3>
+                <p>Incorporations, shareholder agreements, contract review, and ongoing legal support for small and growing Saskatchewan businesses. Clear advice you can act on.</p>
+            </article>
+
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                </div>
+                <h3>Wills &amp; Estates</h3>
+                <p>Wills, powers of attorney, and estate administration. Make decisions today that ease your family's burden tomorrow &mdash; with clear, careful drafting.</p>
+            </article>
+
+            <article class="practice-card reveal">
+                <div class="practice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Family Law</h3>
+                <p>Separation, divorce, custody, support, and matrimonial property matters. Sensitive, focused representation through some of life's most difficult decisions.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team">
+    <div class="container">
+        <div class="section-head reveal" style="text-align:center; margin: 0 auto 56px;">
+            <p class="section-eyebrow" style="justify-content: center;">Our Attorneys</p>
+            <h2 class="section-h2">Lawyers you can <em>count on.</em></h2>
+            <p class="section-lead" style="margin: 0 auto;">Capstone is led by two experienced lawyers committed to focused representation and the personal attention larger firms rarely offer.</p>
+        </div>
+
+        <div class="team-grid">
+            <article class="team-card reveal">
+                <div class="team-monogram"><img src="img/omolara-olayemi.jpg" alt="Omolara Olayemi, attorney at Capstone Law Office" /></div>
+                <div class="team-info">
+                    <p class="role">Attorney &middot; Capstone Law Office</p>
+                    <h4>Omolara Olayemi</h4>
+                    <p>An attorney at Capstone Law Office serving clients across Regina and surrounding Saskatchewan with focused, knowledgeable representation across the firm's six practice areas.</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal">
+                <div class="team-monogram"><img src="img/akinola-olayemi.jpg" alt="Akinola (AK) Olayemi, attorney at Capstone Law Office" /></div>
+                <div class="team-info">
+                    <p class="role">Attorney &middot; Capstone Law Office</p>
+                    <h4>Akinola (AK) Olayemi</h4>
+                    <p>An attorney at Capstone Law Office focused on delivering practical legal solutions to individuals, families, and businesses in Regina, Saskatchewan, and beyond.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content reveal">
+                <p class="section-eyebrow">Our Mission</p>
+                <h2>A <em>service-oriented law firm</em> for Regina &mdash; and beyond.</h2>
+                <p>If you're in Regina, or surrounding areas in Saskatchewan, and are looking for legal representation you can count on, you couldn't have come to a better place.</p>
+                <p>Capstone Law Office is a service-oriented law firm dedicated to providing exceptional legal services to clients in need of focused, knowledgeable, dependable lawyers they can trust. We take pride in our firm's commitment to help our clients gain the results they need for their case.</p>
+                <p>If you want to find out more about how Capstone Law Office can provide you with the quality legal representation you need, please call us today for a free 30-minute consultation at <a href="tel:+13065592463" style="color:var(--royal);font-weight:600;">(306) 559-2463</a>.</p>
+            </div>
+            <div class="about-stats reveal">
+                <div class="about-stat">
+                    <span class="about-stat-label">Office</span>
+                    <span class="about-stat-value">Regina, SK</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-label">Hours</span>
+                    <span class="about-stat-value">Mon&ndash;Fri 8:30am&ndash;5pm</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-label">After-Hours</span>
+                    <span class="about-stat-value">Available by appointment</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-label">Consultation</span>
+                    <span class="about-stat-value">Free 30 minutes</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-label">Practice Areas</span>
+                    <span class="about-stat-value">Six focused areas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="cta-inner">
+        <h2>Ready to <em>start the conversation?</em></h2>
+        <p>Call today for a free 30-minute consultation. We're here to help you navigate the legal system &mdash; whatever your matter, whenever you need us.</p>
+        <div class="cta-actions">
+            <a href="#contact" class="btn btn-royal">
+                Get In Touch
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="tel:+13065592463" class="btn btn-ghost-light">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                (306) 559-2463
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Visit us on <em>Broad Street.</em></h2>
+            <p class="section-lead">Drop in, give us a call, or send a message &mdash; we respond promptly and treat every conversation as confidential.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>357 Broad Street<br>Regina, Saskatchewan&nbsp; S4R 1X2</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:+13065592463">(306) 559-2463</a><br>
+                            <span style="color:var(--text-soft);font-size:0.86rem;">Fax: (306) 559-2464</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Monday &ndash; Friday: 8:30am &ndash; 5:00pm<br><span style="color:var(--text-soft);font-size:0.86rem;">Closed weekends. Appointments available after hours and on weekends.</span></span>
+                        </div>
+                    </li>
+                </ul>
+                <iframe src="https://www.google.com/maps?q=357+Broad+Street+Regina+SK+S4R+1X2&output=embed" width="100%" height="220" style="border:0;border-radius:8px;margin-top:24px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Capstone Law Office — Regina, SK"></iframe>
+            </div>
+
+            <div class="contact-form reveal">
+                <h3>Send a Message</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll respond promptly.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field" style="margin:0;">
+                            <label for="cf-fname">First Name</label>
+                            <input type="text" id="cf-fname" placeholder="First name">
+                        </div>
+                        <div class="form-field" style="margin:0;">
+                            <label for="cf-lname">Last Name</label>
+                            <input type="text" id="cf-lname" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-phone">Phone</label>
+                        <input type="tel" id="cf-phone" placeholder="(306) 000-0000">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Area of Law</label>
+                        <select id="cf-area">
+                            <option value="">Select a category…</option>
+                            <option>Real Estate</option>
+                            <option>Criminal Law</option>
+                            <option>Immigration Law</option>
+                            <option>Corporate Law</option>
+                            <option>Wills &amp; Estates</option>
+                            <option>Family Law</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Message
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-note">All inquiries are treated as strictly confidential.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="cl-mark" aria-label="Capstone Law Office">
+                    <span class="cl-mark-icon" aria-hidden="true"></span>
+                    <span class="cl-name">Capstone Law Office</span>
+                </a>
+                <p>Practical legal solutions for clients in Regina and across Saskatchewan &mdash; real estate, criminal, immigration, corporate, wills &amp; estates, and family law.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice</h5>
+                <ul>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Criminal Law</a></li>
+                    <li><a href="#practice">Immigration</a></li>
+                    <li><a href="#practice">Corporate</a></li>
+                    <li><a href="#practice">Wills &amp; Estates</a></li>
+                    <li><a href="#practice">Family Law</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Firm</h5>
+                <ul>
+                    <li><a href="#team">Attorneys</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Office</h5>
+                <ul>
+                    <li class="plain">357 Broad Street<br>Regina, SK&nbsp; S4R 1X2</li>
+                    <li><a href="tel:+13065592463">(306) 559-2463</a></li>
+                    <li class="plain">Mon&ndash;Fri 8:30&ndash;5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Capstone Law Office. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Capstone Law Office.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (hamburger) hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    if (mobileNav) mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+        });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
