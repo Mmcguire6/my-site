@@ -464,6 +464,122 @@
             pointer-events: none;
             z-index: 2;
         }
+        /* Hero form card (replaces portrait) */
+        .hero-form-card {
+            position: relative;
+            background: rgba(10, 18, 25, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(184, 131, 42, 0.45);
+            border-radius: 2px;
+            padding: 36px 32px;
+            box-shadow: var(--shadow-lg), 0 0 0 6px rgba(184,131,42,0.10);
+        }
+        .hero-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--gold);
+        }
+        .hero-form-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-form-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 1.5px;
+            background: var(--gold);
+        }
+        .hero-form-h {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 2.2vw, 1.85rem);
+            font-weight: 700;
+            color: var(--paper);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
+        }
+        .hero-form-h em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 600;
+        }
+        .hero-form-sub {
+            font-size: 0.86rem;
+            line-height: 1.5;
+            color: rgba(245, 240, 230, 0.72);
+            margin-bottom: 22px;
+        }
+        .hero-form { display: flex; flex-direction: column; gap: 14px; }
+        .hero-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .hero-form-field { display: flex; flex-direction: column; gap: 6px; }
+        .hero-form-field label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: rgba(245, 240, 230, 0.7);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .hero-form-field input,
+        .hero-form-field textarea {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1.5px solid rgba(245, 240, 230, 0.18);
+            border-radius: 2px;
+            padding: 11px 13px;
+            font-size: 0.9rem;
+            color: var(--paper);
+            font-family: inherit;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .hero-form-field input::placeholder,
+        .hero-form-field textarea::placeholder {
+            color: rgba(245, 240, 230, 0.40);
+        }
+        .hero-form-field input:focus,
+        .hero-form-field textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.10);
+        }
+        .hero-form-field textarea { min-height: 80px; resize: vertical; }
+        .hero-form-btn {
+            background: var(--gold);
+            color: var(--ink-deep);
+            padding: 13px 24px;
+            border: none;
+            border-radius: 2px;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 4px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .hero-form-btn:hover { background: var(--gold-bright); transform: translateY(-1px); }
+        .hero-form-btn svg { width: 14px; height: 14px; }
+        @media (max-width: 540px) {
+            .hero-form-row { grid-template-columns: 1fr; }
+        }
+
         .hero-portrait-label {
             position: absolute;
             bottom: 22px;
@@ -1692,15 +1808,34 @@
         </div>
         <div class="hero-portrait-wrap">
             <div class="hero-portrait-deco-tl"></div>
-            <div class="hero-portrait-frame">
-                <img src="img/mitchell-garrett.jpg" alt="Mitchell Garrett, Principal Counsel at Garrett Law">
-                <div class="hero-portrait-badge">
-                    Super<br>Lawyer
-                </div>
-                <div class="hero-portrait-label">
-                    <span class="role">Principal Counsel</span>
-                    <span class="name">Mitchell Garrett</span>
-                </div>
+            <div class="hero-form-card">
+                <p class="hero-form-eyebrow">Free Consultation</p>
+                <h3 class="hero-form-h">Tell Mitchell about <em>your matter.</em></h3>
+                <p class="hero-form-sub">A few sentences is plenty. All inquiries are strictly confidential.</p>
+                <form class="hero-form" onsubmit="return false;">
+                    <div class="hero-form-row">
+                        <div class="hero-form-field">
+                            <label for="hf-name">Full name</label>
+                            <input type="text" id="hf-name" name="name" placeholder="Your full name" required />
+                        </div>
+                        <div class="hero-form-field">
+                            <label for="hf-phone">Phone</label>
+                            <input type="tel" id="hf-phone" name="phone" placeholder="(918) 000-0000" required />
+                        </div>
+                    </div>
+                    <div class="hero-form-field">
+                        <label for="hf-email">Email</label>
+                        <input type="email" id="hf-email" name="email" placeholder="you@example.com" required />
+                    </div>
+                    <div class="hero-form-field">
+                        <label for="hf-msg">Brief description</label>
+                        <textarea id="hf-msg" name="message" placeholder="A few sentences about your matter &mdash; that&rsquo;s plenty." required></textarea>
+                    </div>
+                    <button class="hero-form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
             </div>
             <div class="hero-portrait-deco"></div>
         </div>
