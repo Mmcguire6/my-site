@@ -396,6 +396,52 @@
             background: var(--crimson-bright);
             margin-top: 14px;
         }
+        .hero-creds {
+            list-style: none;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 22px 0 38px;
+            padding: 0;
+        }
+        .hero-creds li {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px 16px;
+            background: rgba(14,13,12,0.45);
+            border: 1px solid rgba(184,148,65,0.36);
+            border-left: 3px solid var(--gold-bright);
+            line-height: 1;
+            transition: border-color 0.25s, background 0.25s, transform 0.25s;
+        }
+        .hero-creds li:hover {
+            background: rgba(70,8,19,0.55);
+            border-color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+        .hero-creds .cred-mark {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 0.94rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.04em;
+        }
+        .hero-creds .cred-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.58rem;
+            font-weight: 800;
+            color: rgba(247,243,236,0.74);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+        @media (max-width: 720px) {
+            .hero-creds { gap: 8px; }
+            .hero-creds li { padding: 8px 12px; }
+            .hero-creds .cred-mark { font-size: 0.84rem; }
+            .hero-creds .cred-label { font-size: 0.54rem; letter-spacing: 0.16em; }
+        }
         .hero-stamp {
             display: inline-flex;
             align-items: center;
@@ -672,6 +718,122 @@
             letter-spacing: 0.26em;
             text-transform: uppercase;
             font-weight: 700;
+        }
+        .promise-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .promise-eyebrow::before, .promise-eyebrow::after {
+            content: '';
+            width: 28px; height: 2px;
+            background: var(--gold-bright);
+        }
+        .promise-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--paper);
+            font-weight: 700;
+            letter-spacing: -0.018em;
+            text-transform: uppercase;
+            line-height: 1.06;
+            margin-bottom: 14px;
+        }
+        .promise-h2 em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: -0.010em;
+        }
+        .promise-lead {
+            font-size: 1.0rem;
+            color: rgba(247,243,236,0.74);
+            line-height: 1.65;
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+        .never-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 48px;
+            text-align: left;
+        }
+        .never-card {
+            position: relative;
+            padding: 32px 28px 28px;
+            background: rgba(14,13,12,0.55);
+            border: 1px solid rgba(184,148,65,0.32);
+            border-top: 3px solid var(--crimson-bright);
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), border-color 0.4s, background 0.4s;
+            overflow: hidden;
+        }
+        .never-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold-bright);
+            background: linear-gradient(180deg, rgba(70,8,19,0.50) 0%, rgba(14,13,12,0.65) 100%);
+        }
+        .never-card::after {
+            content: 'Never.';
+            position: absolute;
+            right: -10px;
+            bottom: -28px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 5.6rem;
+            color: rgba(184,148,65,0.06);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            pointer-events: none;
+            transition: color 0.4s;
+        }
+        .never-card:hover::after { color: rgba(184,148,65,0.14); }
+        .never-stamp {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--gold-bright);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            margin-bottom: 4px;
+        }
+        .never-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--paper);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.010em;
+            line-height: 1.10;
+            margin-bottom: 12px;
+        }
+        .never-card p {
+            color: rgba(247,243,236,0.72);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+        }
+        .never-rule {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--crimson-bright);
+            margin-top: 16px;
+            transition: width 0.4s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+        }
+        .never-card:hover .never-rule { width: 56px; background: var(--gold-bright); }
+        @media (max-width: 1024px) {
+            .never-grid { grid-template-columns: 1fr; gap: 18px; }
         }
 
         /* ── PRACTICE AREAS ────────────────────────────────── */
@@ -2129,6 +2291,36 @@
         .practice-card h3,
         .practice-card p,
         .practice-card .practice-tags { position: relative; z-index: 1; }
+        .practice-card.is-flagship {
+            border-color: var(--gold) !important;
+            background: linear-gradient(180deg, rgba(184,148,65,0.06) 0%, transparent 60%), var(--paper);
+        }
+        .practice-card.is-flagship::before {
+            background: linear-gradient(90deg, var(--gold-bright) 0%, var(--crimson) 100%) !important;
+        }
+        .flagship-badge {
+            position: absolute;
+            top: 14px; left: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 9px 4px 7px;
+            background: linear-gradient(135deg, var(--ink) 0%, var(--crimson-deep) 100%);
+            color: var(--gold-bright);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.54rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border: 1px solid var(--gold);
+            z-index: 2;
+            line-height: 1;
+        }
+        .flagship-badge svg {
+            width: 10px; height: 10px;
+            color: var(--gold-bright);
+            stroke-width: 2.4;
+        }
         .practice-link {
             position: relative;
             display: inline-flex;
@@ -2322,12 +2514,12 @@
 <!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-bar-inner">
-        <a href="tel:+19185825444">
+        <a href="#">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             Office: (918) 582-5444
         </a>
         <span class="divider"></span>
-        <a href="tel:+19182617508">
+        <a href="#">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             Mobile: (918) 261-7508
         </a>
@@ -2339,20 +2531,20 @@
 <!-- MAIN NAV -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
-        <a href="https://jayrameylaw.com/" target="_blank" rel="noopener" class="jkr-mark" aria-label="Jay K. Ramey, Attorney at Law — open in new tab">
+        <a href="#" class="jkr-mark" aria-label="Jay K. Ramey, Attorney at Law — open in new tab">
             <span class="jkr-name">Jay K. Ramey</span>
             <span class="jkr-rule"></span>
             <span class="jkr-tag">Attorney at Law &middot; Tulsa, Oklahoma</span>
         </a>
         <ul class="nav-links" id="nav-links">
-            <li><a href="https://jayrameylaw.com/" target="_blank" rel="noopener">Home</a></li>
-            <li><a href="https://jayrameylaw.com/about/" target="_blank" rel="noopener">About</a></li>
-            <li><a href="https://jayrameylaw.com/experience/" target="_blank" rel="noopener">Experience</a></li>
-            <li><a href="https://jayrameylaw.com/fees/" target="_blank" rel="noopener">Fees</a></li>
-            <li><a href="https://jayrameylaw.com/know-your-rights/" target="_blank" rel="noopener">Know Your Rights</a></li>
-            <li><a href="https://jayrameylaw.com/flex-your-rights/" target="_blank" rel="noopener">Flex Your Rights</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Fees</a></li>
+            <li><a href="#">Know Your Rights</a></li>
+            <li><a href="#">Flex Your Rights</a></li>
             <li>
-                <a href="https://jayrameylaw.com/contact-me/" target="_blank" rel="noopener" class="nav-cta">
+                <a href="#" class="nav-cta">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
                     <span class="nav-cta-stack">
                         <span class="nav-cta-label">Contact Me</span>
@@ -2369,13 +2561,13 @@
 
 <div class="mobile-nav" id="mobile-nav">
     <ul>
-        <li><a href="https://jayrameylaw.com/" target="_blank" rel="noopener">Home</a></li>
-        <li><a href="https://jayrameylaw.com/about/" target="_blank" rel="noopener">About</a></li>
-        <li><a href="https://jayrameylaw.com/experience/" target="_blank" rel="noopener">Experience</a></li>
-        <li><a href="https://jayrameylaw.com/fees/" target="_blank" rel="noopener">Fees</a></li>
-        <li><a href="https://jayrameylaw.com/know-your-rights/" target="_blank" rel="noopener">Know Your Rights</a></li>
-        <li><a href="https://jayrameylaw.com/flex-your-rights/" target="_blank" rel="noopener">Flex Your Rights</a></li>
-        <li><a href="https://jayrameylaw.com/contact-me/" target="_blank" rel="noopener" class="nav-cta">Contact Me &middot; (918) 582-5444</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Know Your Rights</a></li>
+        <li><a href="#">Flex Your Rights</a></li>
+        <li><a href="#" class="nav-cta">Contact Me &middot; (918) 582-5444</a></li>
     </ul>
 </div>
 
@@ -2403,12 +2595,30 @@
             <p class="hero-sub">
                 Jay K. Ramey has spent his entire career on the defense side &mdash; never a prosecutor, never law enforcement. He fights for the rights of the individual throughout Oklahoma.
             </p>
+            <ul class="hero-creds" aria-label="Professional affiliations">
+                <li>
+                    <span class="cred-mark">NORML</span>
+                    <span class="cred-label">Lifetime &middot; Legal Committee</span>
+                </li>
+                <li>
+                    <span class="cred-mark">USCCA</span>
+                    <span class="cred-label">Affiliated Attorney</span>
+                </li>
+                <li>
+                    <span class="cred-mark">ACLDN</span>
+                    <span class="cred-label">Armed Citizens' Network</span>
+                </li>
+                <li>
+                    <span class="cred-mark">OK &middot; KS &middot; Federal</span>
+                    <span class="cred-label">Bar Admitted</span>
+                </li>
+            </ul>
             <div class="hero-actions">
-                <a href="tel:+19185825444" class="btn btn-crimson">
+                <a href="#" class="btn btn-crimson">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
                     Call (918) 582-5444
                 </a>
-                <a href="#practice" class="btn btn-ghost">
+                <a href="#" class="btn btn-ghost">
                     View Practice Areas
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2467,6 +2677,31 @@
 <section class="promise">
     <div class="container">
         <div class="promise-inner">
+            <p class="promise-eyebrow">The One-Side Attorney</p>
+            <h2 class="promise-h2">Three Words <em>That Define This Practice.</em></h2>
+            <p class="promise-lead">Since becoming a lawyer in 2001, every day of Jay Ramey's career has been spent on one side of the courtroom &mdash; the defense side.</p>
+
+            <div class="never-grid">
+                <article class="never-card">
+                    <span class="never-stamp">Never</span>
+                    <h3>A Prosecutor</h3>
+                    <p>Has never asked a jury to send someone to prison. Has never signed a search warrant. Has never ordered anyone to prison.</p>
+                    <span class="never-rule"></span>
+                </article>
+                <article class="never-card">
+                    <span class="never-stamp">Never</span>
+                    <h3>Law Enforcement</h3>
+                    <p>Has never been a police officer or worked in any type of law enforcement capacity. Has never placed anyone under arrest.</p>
+                    <span class="never-rule"></span>
+                </article>
+                <article class="never-card">
+                    <span class="never-stamp">Never</span>
+                    <h3>A Judge</h3>
+                    <p>Has never worked as a judge. Loyalty has always been &mdash; and will only ever be &mdash; to the individual being defended.</p>
+                    <span class="never-rule"></span>
+                </article>
+            </div>
+
             <blockquote>
                 &ldquo;I am an attorney that is <strong>completely dedicated to the protection of your Constitutional rights.</strong> Since I became a lawyer in 2001, I have been dedicated to the protection of the rights of the individual.&rdquo;
             </blockquote>
@@ -2514,7 +2749,7 @@
                             <span><strong>Search, seizure &amp; forfeiture</strong> — Fourth Amendment defense.</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="feature-link">
+                    <a href="#" class="feature-link">
                         Discuss Your Charges
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
@@ -2546,7 +2781,7 @@
                             <span><strong>Second Amendment cases</strong> — federal and state firearms charges.</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="feature-link">
+                    <a href="#" class="feature-link">
                         Talk About Your Case
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
@@ -2633,12 +2868,16 @@
     <div class="container">
         <div class="section-head reveal">
             <p class="section-eyebrow">Practice Areas</p>
-            <h2 class="section-h2">Practice areas. <em>One unwavering commitment.</em></h2>
-            <p class="section-lead">From drug charges and gun rights to forfeitures and civil rights — Jay Ramey provides experienced criminal defense throughout Oklahoma with a special interest in the following types of cases.</p>
+            <h2 class="section-h2">Drug Defense &amp; Gun Rights. <em>Plus the rest of Oklahoma criminal law.</em></h2>
+            <p class="section-lead">Jay Ramey takes a special interest in drug offenses — as one of three Oklahoma attorneys with lifetime NORML Legal Committee membership — and in self-defense, open and concealed carry, and gun rights as a USCCA and ACLDN affiliated attorney. He provides experienced criminal defense throughout Oklahoma in every category below.</p>
         </div>
 
         <div class="practice-grid">
-            <article class="practice-card reveal">
+            <article class="practice-card is-flagship reveal">
+                <span class="flagship-badge" aria-label="Special-interest flagship area">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 10 17 15 18 22 12 18 6 22 7 15 2 10 9 9 12 2"/></svg>
+                    Special Interest &middot; NORML
+                </span>
                 <span class="practice-num" aria-hidden="true">i</span>
                 <div class="practice-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L12 22"/><path d="M8 6 C6 8 5 11 6 14 C7 17 9 19 12 19 C15 19 17 17 18 14 C19 11 18 8 16 6"/><path d="M10 2 C10 4 8 5 8 7"/><path d="M14 2 C14 4 16 5 16 7"/></svg>
@@ -2651,13 +2890,17 @@
                     <span>Methamphetamine</span>
                     <span>Cocaine</span>
                 </div>
-                <a href="#contact" class="practice-link" aria-label="Learn more about Drug Offenses">
+                <a href="#" class="practice-link" aria-label="Learn more about Drug Offenses">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
             </article>
 
-            <article class="practice-card reveal">
+            <article class="practice-card is-flagship reveal">
+                <span class="flagship-badge" aria-label="Special-interest flagship area">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 10 17 15 18 22 12 18 6 22 7 15 2 10 9 9 12 2"/></svg>
+                    Special Interest &middot; USCCA
+                </span>
                 <span class="practice-num" aria-hidden="true">ii</span>
                 <div class="practice-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3 L22 7 L14 15 L12 16 L11 14 Z"/><path d="M2 22 L11 13"/><path d="M9 5 L4 5 L4 20 L19 20 L19 15"/></svg>
@@ -2670,7 +2913,7 @@
                     <span>Gun Rights</span>
                     <span>2nd Amendment</span>
                 </div>
-                <a href="#contact" class="practice-link" aria-label="Learn more about Gun Rights &amp; Self-Defense">
+                <a href="#" class="practice-link" aria-label="Learn more about Gun Rights &amp; Self-Defense">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2689,7 +2932,7 @@
                     <span>Juvenile</span>
                     <span>Criminal</span>
                 </div>
-                <a href="#contact" class="practice-link" aria-label="Learn more about Criminal Defense">
+                <a href="#" class="practice-link" aria-label="Learn more about Criminal Defense">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2707,7 +2950,7 @@
                     <span>Civil Forfeiture</span>
                     <span>Property Rights</span>
                 </div>
-                <a href="#contact" class="practice-link" aria-label="Learn more about Forfeitures">
+                <a href="#" class="practice-link" aria-label="Learn more about Forfeitures">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2726,7 +2969,7 @@
                     <span>&sect;1983</span>
                     <span>Constitutional</span>
                 </div>
-                <a href="#contact" class="practice-link" aria-label="Learn more about Civil Rights and Police Abuse cases">
+                <a href="#" class="practice-link" aria-label="Learn more about Civil Rights and Police Abuse cases">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2794,11 +3037,11 @@
                 <p>All citizens should know their rights, especially when dealing with law enforcement. Whether you are in Tulsa, other parts of Oklahoma or elsewhere in the US, you need to know and use your rights as a citizen.</p>
                 <p>Please familiarize yourself with the information available so you can be prepared to exercise your rights. The moment you are confronted by law enforcement is not the moment to learn what your rights are.</p>
                 <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-                    <a href="tel:+19185825444" class="btn btn-crimson">
+                    <a href="#" class="btn btn-crimson">
                         Call Jay Now
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
-                    <a href="#contact" class="btn btn-ghost-dark">
+                    <a href="#" class="btn btn-ghost-dark">
                         Send a Message
                     </a>
                 </div>
@@ -2891,7 +3134,7 @@
             <p class="section-eyebrow">The Practice</p>
             <h2>Since 2001. <em>One side only.</em></h2>
             <p>Since becoming a lawyer in 2001, Jay Ramey has never worked as a prosecutor, police officer, or judge. He has never placed anyone under arrest, asked a jury to send someone to prison, or signed a search warrant. Every day of his legal career has been spent defending the rights of the individual.</p>
-            <a href="#contact" class="about-link">
+            <a href="#" class="about-link">
                 Talk to Jay Ramey
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -2906,11 +3149,11 @@
             <h2>If you've been charged, <em>the first call matters.</em></h2>
             <p>Do not speak to law enforcement without counsel. Call Jay Ramey immediately for a confidential consultation — drug charges, gun rights, forfeitures, civil rights, or any criminal matter throughout Oklahoma.</p>
             <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
-                <a href="tel:+19185825444" class="btn btn-ink">
+                <a href="#" class="btn btn-ink">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
                     Call (918) 582-5444
                 </a>
-                <a href="#contact" class="btn btn-ghost-light">
+                <a href="#" class="btn btn-ghost-light">
                     Send a Message
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -2938,7 +3181,7 @@
                         </span>
                         <div>
                             <strong>Office</strong>
-                            <a href="tel:+19185825444">(918) 582-5444</a>
+                            <a href="#">(918) 582-5444</a>
                         </div>
                     </li>
                     <li>
@@ -2947,7 +3190,7 @@
                         </span>
                         <div>
                             <strong>Mobile</strong>
-                            <a href="tel:+19182617508">(918) 261-7508</a>
+                            <a href="#">(918) 261-7508</a>
                         </div>
                     </li>
                     <li>
@@ -2956,7 +3199,7 @@
                         </span>
                         <div>
                             <strong>Email</strong>
-                            <a href="mailto:jay@jayrameylaw.com">jay@jayrameylaw.com</a>
+                            <a href="#">jay@jayrameylaw.com</a>
                         </div>
                     </li>
                     <li>
@@ -3040,7 +3283,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="https://jayrameylaw.com/" target="_blank" rel="noopener" class="jkr-mark inverse" aria-label="Jay K. Ramey, Attorney at Law — open in new tab">
+                <a href="#" class="jkr-mark inverse" aria-label="Jay K. Ramey, Attorney at Law — open in new tab">
                     <span class="jkr-name">Jay K. Ramey</span>
                     <span class="jkr-rule"></span>
                     <span class="jkr-tag">Attorney at Law &middot; Tulsa, Oklahoma</span>
@@ -3050,27 +3293,27 @@
             <div class="footer-col">
                 <h5>Practice Areas</h5>
                 <ul>
-                    <li><a href="#practice">Drug Offences</a></li>
-                    <li><a href="#practice">Gun Rights &amp; Self-Defense</a></li>
-                    <li><a href="#practice">Criminal Defense</a></li>
-                    <li><a href="#practice">Forfeitures</a></li>
-                    <li><a href="#practice">Civil Rights / Police Abuse</a></li>
+                    <li><a href="#">Drug Offences</a></li>
+                    <li><a href="#">Gun Rights &amp; Self-Defense</a></li>
+                    <li><a href="#">Criminal Defense</a></li>
+                    <li><a href="#">Forfeitures</a></li>
+                    <li><a href="#">Civil Rights / Police Abuse</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Know Your Rights</h5>
                 <ul>
-                    <li><a href="#rights">Your Rights with Law Enforcement</a></li>
-                    <li><a href="#rights">Flex Your Rights</a></li>
-                    <li><a href="#affiliations">NORML Legal Committee</a></li>
-                    <li><a href="#affiliations">U.S. Concealed Carry Association</a></li>
+                    <li><a href="#">Your Rights with Law Enforcement</a></li>
+                    <li><a href="#">Flex Your Rights</a></li>
+                    <li><a href="#">NORML Legal Committee</a></li>
+                    <li><a href="#">U.S. Concealed Carry Association</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Contact</h5>
                 <ul>
-                    <li><a href="tel:+19185825444">Office: (918) 582-5444</a></li>
-                    <li><a href="tel:+19182617508">Mobile: (918) 261-7508</a></li>
+                    <li><a href="#">Office: (918) 582-5444</a></li>
+                    <li><a href="#">Mobile: (918) 261-7508</a></li>
                     <li class="plain">Tulsa, Oklahoma</li>
                     <li class="plain">Serving all of Oklahoma</li>
                 </ul>
@@ -3078,30 +3321,22 @@
         </div>
         <div class="footer-bottom">
             <span>&copy; <span id="year"></span> Jay K. Ramey, Attorney at Law. All rights reserved.</span>
-            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+            <span>Concept by <a href="#">Matthew McGuire</a></span>
         </div>
     </div>
 </footer>
 
 <!-- DEMO BANNER -->
 <div class="demo-banner" id="demo-banner">
-    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Jay K. Ramey, Attorney at Law.</p>
+    <p>Unsolicited concept redesign by <a href="#">Matthew McGuire</a> &mdash; not affiliated with Jay K. Ramey, Attorney at Law.</p>
     <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
 </div>
 
 <script>
-    // Inert hash links on this landing demo
+    // Demo build: every link is inert — clickable but goes nowhere.
     document.addEventListener('click', (e) => {
-        const a = e.target.closest('a[href^="#"]');
-        if (a) {
-            e.preventDefault();
-            const target = document.querySelector(a.getAttribute('href'));
-            if (target) {
-                const offset = 130;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
-        }
+        const a = e.target.closest('a');
+        if (a && a.hasAttribute('href')) e.preventDefault();
     });
 
     // Mobile nav
