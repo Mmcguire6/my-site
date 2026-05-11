@@ -1878,14 +1878,10 @@
                 <p class="hero-form-sub">A few sentences is plenty. I respond within one business day.</p>
 
                 <form
-                    name="contact"
                     method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
                     class="hero-form"
                     id="contact-form"
                 >
-                    <input type="hidden" name="form-name" value="contact" />
                     <p class="hf-hp" aria-hidden="true">
                         <label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
                     </p>
@@ -2349,7 +2345,7 @@
         if (e.persisted) document.body.classList.remove('is-leaving');
     });
 
-    // Hero contact form — Netlify Forms AJAX submit
+    // Hero contact form — submits to Cloudflare Worker, which relays via Resend.
     var form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -2365,14 +2361,13 @@
                 submitBtn.textContent = 'Sending…';
             }
 
-            var data = new FormData(form);
-            var body = new URLSearchParams();
-            data.forEach(function (value, key) { body.append(key, value); });
+            var payload = {};
+            new FormData(form).forEach(function (value, key) { payload[key] = value; });
 
-            fetch('/', {
+            fetch('https://contact-form.mattmcguire.workers.dev', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: body.toString(),
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
             })
             .then(function (response) {
                 if (!response.ok) throw new Error('Network response was not ok: ' + response.status);
