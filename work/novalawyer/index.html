@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Richardson's Law Office | Halifax & HRM | Est. 1982</title>
+    <meta name="description" content="Richardson's Law Office — Halifax & HRM since 1982. Personal injury, criminal defence, real estate, family law, immigration. Call (902) 864-2300.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Richardson's Law — heritage crimson + brass on warm parchment */
+            --ink:           #1A1514;
+            --ink-deep:      #0E0A09;
+            --char:          #2B2422;
+            --char-mid:      #3F3733;
+            --char-light:    #5C524D;
+
+            --crimson:       #7A1818;
+            --crimson-bright: #9A2424;
+            --crimson-deep:  #561010;
+            --crimson-darker: #380808;
+            --crimson-pale:  #D9B5B5;
+            --crimson-tint:  #EFD9D9;
+            --crimson-soft:  #F6E6E6;
+
+            --brass:         #B8892A;
+            --brass-bright:  #D2A24E;
+            --brass-deep:    #886218;
+            --brass-darker:  #5A3F0E;
+            --brass-pale:    #E6D4A0;
+            --brass-soft:    #F4E8C8;
+
+            --bone:          #F6EFE3;
+            --bone-deep:     #ECE3D2;
+            --paper:         #FFFCF6;
+            --bg:            #FBF6EC;
+            --bg-soft:       #FDF9F1;
+            --parchment:     #F0E5CE;
+
+            --text:          #1A1514;
+            --text-mid:      #4A413D;
+            --text-soft:     #6E6359;
+            --text-faint:    #948876;
+
+            --border:        #DECDB1;
+            --border-soft:   #E8DBC4;
+
+            --topbar-h:      40px;
+            --nav-h:         84px;
+            --total-nav:     124px;
+
+            --shadow-sm:     0 1px 3px rgba(26,21,20,0.07);
+            --shadow-md:     0 8px 24px -8px rgba(26,21,20,0.22), 0 2px 6px -2px rgba(26,21,20,0.10);
+            --shadow-lg:     0 24px 56px -20px rgba(26,21,20,0.34), 0 8px 16px -8px rgba(26,21,20,0.14);
+            --shadow-crimson: 0 12px 28px -8px rgba(122,24,24,0.50);
+            --shadow-brass:  0 12px 28px -8px rgba(184,137,42,0.45);
+            --shadow-ink:    0 12px 28px -8px rgba(26,21,20,0.50);
+
+            --ease-expensive: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+            mix-blend-mode: multiply;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+            font-weight: 700;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        section { scroll-margin-top: 140px; position: relative; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+        /* ── EDITORIAL CHAPTER MARKS ─────────────────────────── */
+        .chapter-mark {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 300;
+            color: var(--crimson);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            opacity: 0.40;
+            z-index: 10;
+            pointer-events: none;
+            font-variant-numeric: tabular-nums;
+        }
+        .chapter-mark.on-dark { color: var(--brass-bright); opacity: 0.55; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .r-mark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+            position: relative;
+        }
+        .r-mark .r-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.58rem;
+            color: var(--brass-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        .r-mark .r-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.45rem;
+            color: var(--ink);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .r-mark .r-name em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--crimson);
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .r-mark .r-rule {
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 8px 0 5px;
+        }
+        .r-mark .r-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--crimson);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .r-mark.inverse .r-eyebrow { color: var(--brass-bright); }
+        .r-mark.inverse .r-name { color: var(--bone); }
+        .r-mark.inverse .r-name em { color: var(--brass-bright); }
+        .r-mark.inverse .r-rule { background: var(--brass); }
+        .r-mark.inverse .r-tag { color: var(--brass-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink-deep);
+            color: rgba(246,239,227,0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(246,239,227,0.92);
+            transition: color 0.15s var(--ease-expensive);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--brass-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--brass-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.20); }
+        .top-bar .since {
+            color: var(--brass-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,252,246,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s var(--ease-expensive);
+        }
+        .nav.scrolled {
+            box-shadow: 0 2px 16px -4px rgba(26,21,20,0.10);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: color 0.18s var(--ease-expensive);
+            position: relative;
+            padding: 6px 0;
+        }
+        .nav-links a:not(.nav-cta)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1.5px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .nav-links a:not(.nav-cta):hover::after,
+        .nav-links a:not(.nav-cta).active::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+        .nav-links a:not(.nav-cta):hover { color: var(--crimson); }
+        .nav-links a.active { color: var(--crimson); }
+        .nav-cta {
+            background: var(--crimson);
+            color: var(--bone) !important;
+            padding: 13px 26px;
+            border: 1.5px solid var(--brass);
+            border-radius: 2px;
+            font-weight: 800 !important;
+            letter-spacing: 0.10em !important;
+            font-size: 0.74rem !important;
+            transition: background 0.25s var(--ease-expensive), transform 0.25s var(--ease-expensive), box-shadow 0.25s var(--ease-expensive);
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            line-height: 1.1;
+            box-shadow: 0 2px 6px rgba(122,24,24,0.25);
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta-label {
+            font-size: 0.66rem;
+            letter-spacing: 0.16em;
+        }
+        .nav-cta-phone {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.86rem;
+            letter-spacing: 0.02em;
+            color: var(--brass-bright);
+            text-transform: none;
+        }
+        .nav-cta:hover {
+            background: var(--crimson-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+            cursor: pointer;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+        .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.4s var(--ease-expensive);
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: calc(var(--total-nav) + 24px);
+            padding-bottom: 80px;
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--ink-deep);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(115deg, rgba(14,10,9,0.92) 0%, rgba(26,21,20,0.78) 40%, rgba(122,24,24,0.50) 100%),
+                url('img/hero.jpg') center 35% / cover no-repeat;
+            z-index: 0;
+            transform: scale(1.04);
+            filter: contrast(1.05) saturate(0.85);
+            animation: hero-drift 24s var(--ease-expensive) infinite alternate;
+        }
+        @keyframes hero-drift {
+            0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+            100% { transform: scale(1.06) translate3d(-1.5%, -1%, 0); }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(184,137,42,0.22), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(86,16,16,0.55), transparent 50%),
+                linear-gradient(180deg, rgba(14,10,9,0.20) 0%, transparent 30%, rgba(14,10,9,0.55) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            opacity: 0.6;
+            z-index: 2;
+        }
+        .hero-corner-ornament {
+            position: absolute;
+            top: calc(var(--total-nav) + 40px);
+            right: 40px;
+            z-index: 3;
+            opacity: 0.55;
+            pointer-events: none;
+            color: var(--brass-bright);
+        }
+        .hero-corner-ornament svg {
+            width: 84px;
+            height: 84px;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+        }
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--brass-bright);
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+        }
+        .hero-stamp::before,
+        .hero-stamp::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--brass);
+            opacity: 0.7;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--brass-bright);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 2px;
+            background: var(--brass);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5.4rem);
+            font-weight: 800;
+            color: var(--bone);
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            max-width: 900px;
+        }
+        .hero h1 .h1-line {
+            display: inline-block;
+        }
+        .hero h1 em {
+            display: inline-block;
+            font-style: italic;
+            color: var(--brass-bright);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+            position: relative;
+        }
+        .hero h1 em::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -8px;
+            height: 3px;
+            background: var(--crimson);
+        }
+        .hero-sub {
+            font-size: 1.08rem;
+            color: rgba(246,239,227,0.84);
+            line-height: 1.7;
+            max-width: 680px;
+            margin-bottom: 36px;
+            font-weight: 400;
+        }
+        .hero-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(246,239,227,0.06);
+            border: 1px solid rgba(184,137,42,0.40);
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: rgba(246,239,227,0.92);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            backdrop-filter: blur(4px);
+        }
+        .hero-pill svg {
+            width: 12px;
+            height: 12px;
+            color: var(--brass-bright);
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.3s var(--ease-expensive), background 0.3s var(--ease-expensive), color 0.3s var(--ease-expensive), border-color 0.3s var(--ease-expensive), box-shadow 0.3s var(--ease-expensive);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-crimson {
+            background: var(--crimson);
+            color: var(--bone);
+            box-shadow: var(--shadow-crimson);
+            border: 1px solid var(--brass);
+        }
+        .btn-crimson:hover {
+            background: var(--crimson-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(122,24,24,0.65);
+        }
+        .btn-brass {
+            background: var(--brass);
+            color: var(--ink-deep);
+            box-shadow: var(--shadow-brass);
+        }
+        .btn-brass:hover {
+            background: var(--brass-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(184,137,42,0.55);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(246,239,227,0.35);
+        }
+        .btn-ghost:hover {
+            background: rgba(246,239,227,0.06);
+            border-color: var(--brass);
+            color: var(--brass-bright);
+            transform: translateY(-2px);
+        }
+
+        /* ── RECOGNITION STRIP ────────────────────────────── */
+        .recognition {
+            background: var(--ink-deep);
+            color: var(--bone);
+            padding: 36px 0;
+            border-bottom: 1px solid rgba(184,137,42,0.25);
+            position: relative;
+        }
+        .recognition::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(184,137,42,0.40) 50%, transparent 100%);
+        }
+        .recognition-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .recognition-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 0;
+            flex: 1;
+            text-align: center;
+            padding: 6px 18px;
+            border-right: 1px solid rgba(246,239,227,0.10);
+        }
+        .recognition-item:last-child { border-right: none; }
+        .recognition-label {
+            font-size: 0.6rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .recognition-value {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--bone);
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0.01em;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ── PROMISE BAND ─────────────────────────────────── */
+        .promise {
+            background: var(--bone);
+            padding: 100px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise-quote-mark {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 28rem;
+            color: var(--crimson);
+            opacity: 0.06;
+            line-height: 0.8;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            user-select: none;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise-rule {
+            width: 60px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 0 auto 28px;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.32;
+            letter-spacing: -0.012em;
+            margin-bottom: 28px;
+            hanging-punctuation: first last;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--crimson);
+        }
+        .promise-cite {
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+        .section-h2 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── FEATURED 2-UP ────────────────────────────────── */
+        .featured {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(184,137,42,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .featured-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s var(--ease-expensive), box-shadow 0.5s var(--ease-expensive), border-color 0.5s var(--ease-expensive);
+        }
+        .featured-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--crimson);
+            box-shadow: var(--shadow-lg);
+        }
+        .featured-photo {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background: var(--ink);
+        }
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--ease-expensive);
+        }
+        .featured-card:hover .featured-photo img {
+            transform: scale(1.05);
+        }
+        .featured-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(14,10,9,0.55) 100%);
+            pointer-events: none;
+        }
+        .featured-stamp {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            padding: 6px 14px;
+            background: var(--ink-deep);
+            border: 1px solid var(--brass);
+            color: var(--brass-bright);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.74rem;
+            letter-spacing: 0.18em;
+            font-weight: 500;
+        }
+        .featured-body {
+            padding: 40px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .featured-eyebrow {
+            font-size: 0.66rem;
+            color: var(--crimson);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .featured-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            margin-bottom: 8px;
+            line-height: 1.18;
+            text-transform: uppercase;
+        }
+        .featured-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--brass-deep);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .featured-card p {
+            color: var(--text-mid);
+            font-size: 0.98rem;
+            line-height: 1.72;
+            margin-bottom: 22px;
+        }
+        .featured-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .featured-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        .featured-highlights li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--crimson);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            position: relative;
+            padding: 4px 0;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        .learn-more::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1.5px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.5s var(--ease-expensive);
+        }
+        .featured-card:hover .learn-more::after {
+            transform: scaleX(1);
+        }
+        .learn-more svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .featured-card:hover .learn-more svg {
+            transform: translateX(4px);
+        }
+
+        /* ── KNOWN FOR EDITORIAL BANDS ────────────────────── */
+        .known {
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .known-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 100px;
+            position: relative;
+        }
+        .known-row:last-child { margin-bottom: 0; }
+        .known-row.reverse {
+            direction: rtl;
+        }
+        .known-row.reverse > * {
+            direction: ltr;
+        }
+        .known-numeral {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(8rem, 14vw, 16rem);
+            color: var(--crimson);
+            opacity: 0.10;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+            font-variant-numeric: tabular-nums;
+            top: -30px;
+            z-index: 0;
+        }
+        .known-row:not(.reverse) .known-numeral {
+            left: -20px;
+        }
+        .known-row.reverse .known-numeral {
+            right: -20px;
+        }
+        .known-text {
+            position: relative;
+            z-index: 1;
+        }
+        .known-eyebrow {
+            font-size: 0.7rem;
+            color: var(--brass-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .known-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--brass);
+        }
+        .known-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.018em;
+            margin-bottom: 22px;
+            line-height: 1.12;
+            text-transform: uppercase;
+        }
+        .known-text h3 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .known-text p {
+            color: var(--text-mid);
+            font-size: 1.02rem;
+            line-height: 1.78;
+            margin-bottom: 28px;
+        }
+        .known-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 22px;
+            background: var(--bone);
+            border-left: 3px solid var(--crimson);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.12rem;
+            color: var(--ink);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            font-variant-numeric: tabular-nums;
+        }
+        .known-stat::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--brass);
+            flex-shrink: 0;
+        }
+        .known-motif {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: var(--shadow-lg);
+        }
+        .known-motif::before {
+            content: '';
+            position: absolute;
+            inset: 14px;
+            border: 1px solid var(--brass);
+            opacity: 0.55;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .known-motif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--ease-expensive);
+        }
+        .known-motif:hover img {
+            transform: scale(1.04);
+        }
+        .known-motif::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(14,10,9,0.30) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .known-roman {
+            position: absolute;
+            bottom: 22px;
+            right: 26px;
+            z-index: 3;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--brass-bright);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* ── PRACTICE GRID ────────────────────────────────── */
+        .practice {
+            background: var(--bone);
+            position: relative;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .practice-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 44px 32px 32px;
+            border-radius: 2px;
+            transition: transform 0.5s var(--ease-expensive), border-color 0.5s var(--ease-expensive), box-shadow 0.5s var(--ease-expensive);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.55s var(--ease-expensive);
+        }
+        .practice-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--crimson);
+            box-shadow: var(--shadow-lg);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-numeral {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--crimson-tint);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.5s var(--ease-expensive), transform 0.5s var(--ease-expensive);
+        }
+        .practice-card:hover .practice-numeral {
+            color: var(--crimson);
+            transform: translateX(-4px);
+        }
+        .practice-roundel {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 24px;
+            border: 2px solid var(--brass);
+            box-shadow: 0 4px 12px rgba(122,24,24,0.15);
+            position: relative;
+            background: var(--bone);
+        }
+        .practice-roundel::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border: 1px solid rgba(184,137,42,0.30);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .practice-roundel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease-expensive);
+        }
+        .practice-card:hover .practice-roundel img {
+            transform: scale(1.10);
+        }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--ink);
+            margin-bottom: 14px;
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+        .practice-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--crimson-deep);
+            background: var(--crimson-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--crimson-tint);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ── APPROACH DARK BAND ───────────────────────────── */
+        .approach {
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            padding: 140px 0;
+            background-color: var(--ink-deep);
+            background-image:
+                linear-gradient(rgba(14,10,9,0.78), rgba(14,10,9,0.92)),
+                url('img/approach-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 0% 0%, rgba(184,137,42,0.22), transparent 50%),
+                radial-gradient(ellipse at 100% 100%, rgba(184,137,42,0.18), transparent 50%),
+                linear-gradient(180deg, rgba(184,137,42,0.10), transparent 30%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .approach::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            z-index: 2;
+        }
+        .approach-bottom-rule {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            z-index: 2;
+        }
+        .approach-side-stamp {
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: left center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 800;
+            color: var(--brass-bright);
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .approach .container { position: relative; z-index: 3; }
+        .approach .section-head { margin-bottom: 96px; }
+        .approach .section-eyebrow { color: var(--brass-bright); }
+        .approach .section-eyebrow::before,
+        .approach .section-eyebrow::after { background: var(--brass); }
+        .approach .section-h2 { color: var(--bone); }
+        .approach .section-h2 em { color: var(--brass-bright); }
+        .approach .section-lead { color: rgba(246,239,227,0.78); }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .approach-grid::before {
+            content: '';
+            position: absolute;
+            top: 70px;
+            left: 12%;
+            right: 12%;
+            height: 1px;
+            background-image: linear-gradient(90deg, var(--brass) 50%, transparent 50%);
+            background-size: 12px 1px;
+            background-repeat: repeat-x;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .approach-card {
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+        .approach-medallion {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--ink-deep);
+            border: 2px solid var(--brass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 32px;
+            box-shadow: 0 12px 32px -8px rgba(0,0,0,0.6), inset 0 1px 0 rgba(184,137,42,0.30);
+        }
+        .approach-medallion::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 1px dashed var(--brass);
+            border-radius: 50%;
+            opacity: 0.45;
+            animation: rotate-ring 60s linear infinite;
+        }
+        @keyframes rotate-ring {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .approach-medallion span {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 2.6rem;
+            color: var(--brass-bright);
+            font-variant-numeric: tabular-nums;
+        }
+        .approach-eyebrow {
+            font-size: 0.66rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--bone);
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.005em;
+            text-transform: uppercase;
+        }
+        .approach-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--brass-bright);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .approach-card p {
+            color: rgba(246,239,227,0.78);
+            font-size: 0.95rem;
+            line-height: 1.72;
+            margin-bottom: 18px;
+        }
+        .approach-rule {
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--brass);
+            margin: 0 auto;
+            opacity: 0.6;
+            transition: width 0.6s var(--ease-expensive);
+        }
+        .approach-card:hover .approach-rule {
+            width: 64px;
+            opacity: 1;
+        }
+
+        /* ── COVERAGE STRIP ───────────────────────────────── */
+        .coverage {
+            background: var(--bone);
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .coverage-inner {
+            text-align: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .coverage-label {
+            font-size: 0.66rem;
+            color: var(--brass-deep);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+        .coverage-cities {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 0;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2vw, 1.7rem);
+            color: var(--ink);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        .coverage-cities span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .coverage-cities span:not(:last-child)::after {
+            content: '\00B7';
+            color: var(--brass);
+            margin: 0 18px;
+            font-weight: 900;
+            font-size: 1.2em;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.10), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.20), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-band::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            opacity: 0.6;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cta-eyebrow {
+            font-size: 0.7rem;
+            color: var(--brass-pale);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--bone);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--brass-bright);
+            font-weight: 500;
+            text-transform: none;
+        }
+        .cta-inner p {
+            color: rgba(246,239,227,0.94);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .cta-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cta-band .btn-ink {
+            background: var(--ink-deep);
+            color: var(--bone);
+            border: 1px solid var(--brass);
+        }
+        .cta-band .btn-ink:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-ink);
+        }
+        .cta-band .btn-ghost-light {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(246,239,227,0.55);
+        }
+        .cta-band .btn-ghost-light:hover {
+            background: rgba(246,239,227,0.12);
+            border-color: var(--bone);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .contact-info-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.08rem;
+            color: var(--crimson);
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 32px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--ink);
+            color: var(--brass-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.66rem;
+            color: var(--crimson);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+        .contact-list a, .contact-list span.contact-text {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.18s var(--ease-expensive);
+            position: relative;
+        }
+        .contact-list a {
+            display: inline-block;
+        }
+        .contact-list a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .contact-list a:hover { color: var(--crimson); }
+        .contact-list a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 44px 40px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--crimson);
+        }
+        .form-eyebrow {
+            font-size: 0.66rem;
+            color: var(--brass-deep);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .contact-form .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--crimson);
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .form-field {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 0.66rem;
+            color: var(--ink);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bone);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.25s var(--ease-expensive), background 0.25s var(--ease-expensive);
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%237A1818' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--crimson);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+        }
+        .form-field textarea {
+            min-height: 110px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 16px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.3s var(--ease-expensive), transform 0.3s var(--ease-expensive), box-shadow 0.3s var(--ease-expensive);
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: 1px solid var(--brass);
+        }
+        .form-btn:hover {
+            background: var(--crimson-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-foot {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            margin-top: 16px;
+            font-style: italic;
+        }
+        .form-foot strong {
+            color: var(--crimson);
+            font-style: normal;
+            font-weight: 800;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 64px;
+            box-shadow: var(--shadow-sm);
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 36px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(246,239,227,0.62);
+            padding: 72px 0 28px;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        .footer-brand .r-mark { margin-bottom: 22px; }
+        .footer-brand p {
+            color: rgba(246,239,227,0.62);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-brand-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--brass-bright);
+            font-size: 1rem;
+            margin-top: 14px;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.84rem;
+            color: var(--brass-bright);
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(246,239,227,0.65);
+            transition: color 0.2s var(--ease-expensive);
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background: var(--brass-bright);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .footer-col a:hover { color: var(--brass-bright); }
+        .footer-col a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(246,239,227,0.10);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(246,239,227,0.50);
+        }
+        .footer-bottom a { color: rgba(246,239,227,0.65); position: relative; }
+        .footer-bottom a:hover { color: var(--brass-bright); }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(14,10,9,0.95);
+            backdrop-filter: blur(8px);
+            color: var(--bone);
+            padding: 12px 56px 12px 56px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--crimson);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+        }
+        .demo-banner a { color: var(--brass-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(246,239,227,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s var(--ease-expensive);
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .demo-banner-close:hover { color: var(--brass-bright); }
+
+        /* ── REVEAL ANIMATIONS ────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s var(--ease-expensive), transform 0.6s var(--ease-expensive);
+        }
+        .reveal.from-left {
+            transform: translateX(-40px);
+        }
+        .reveal.from-right {
+            transform: translateX(40px);
+        }
+        .reveal.scale-in {
+            transform: scale(0.96);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Late-page heavier reveals */
+        .approach .reveal,
+        .coverage .reveal,
+        .cta-inner.reveal {
+            transition-duration: 0.85s;
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+        }
+        @media (max-width: 1024px) {
+            .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 80px; }
+            .hero-corner-ornament { display: none; }
+            .featured-grid { grid-template-columns: 1fr; gap: 32px; }
+            .known-row { grid-template-columns: 1fr; gap: 32px; margin-bottom: 80px; }
+            .known-row.reverse { direction: ltr; }
+            .known-numeral { position: relative !important; left: 0 !important; right: auto !important; top: auto !important; opacity: 0.08; font-size: clamp(6rem, 18vw, 10rem); margin-bottom: -40px; }
+            .known-motif { max-width: 540px; margin: 0 auto; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .approach-grid { grid-template-columns: 1fr; gap: 56px; }
+            .approach-grid::before { display: none; }
+            .approach-side-stamp { display: none; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .recognition-inner { gap: 18px; }
+            .recognition-item { flex: 1 1 calc(50% - 18px); border-right: none; border-bottom: 1px solid rgba(246,239,227,0.10); padding-bottom: 16px; }
+            .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .since { display: none; }
+            .top-bar-inner { gap: 14px; padding: 0; }
+            .top-bar .divider { display: none; }
+            .container { padding: 0 20px; }
+            .section { padding: 80px 0; }
+            .section-head { margin-bottom: 56px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+            .contact-form { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .recognition { padding: 28px 0; }
+            .recognition-item { flex: 1 1 100%; padding: 12px 0; border-right: none; border-bottom: 1px solid rgba(246,239,227,0.10); }
+            .recognition-item:last-child { border-bottom: none; }
+            .hero h1 em::after { bottom: -4px; height: 2px; }
+            .approach { padding: 90px 0; }
+            .approach-medallion { width: 110px; height: 110px; }
+            .approach-medallion span { font-size: 2rem; }
+            .nav-cta-phone { font-size: 0.78rem; }
+            .promise-quote-mark { font-size: 18rem; }
+            .featured-body { padding: 32px 26px 28px; }
+            .known-text h3 { font-size: 1.6rem; }
+            .coverage-cities { font-size: 1rem; flex-direction: column; gap: 4px; }
+            .coverage-cities span:not(:last-child)::after { display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal,
+            .reveal.from-left,
+            .reveal.from-right,
+            .reveal.scale-in {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .hero-bg {
+                animation: none !important;
+                transform: scale(1.04) !important;
+            }
+            .approach-medallion::before {
+                animation: none !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        ::selection { background: var(--crimson); color: var(--bone); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="tel:+19028642300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (902) 864-2300
+        </a>
+        <span class="divider"></span>
+        <a href="tel:+18773042300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2 a15.3 15.3 0 010 20 a15.3 15.3 0 010 -20"/></svg>
+            1-877-304-2300 Toll-Free
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:staff@novalawyer.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            staff@novalawyer.com
+        </a>
+        <span class="divider"></span>
+        <span class="since">Established 1982</span>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="r-mark" aria-label="Richardson's Law Office">
+            <span class="r-eyebrow">Est. 1982</span>
+            <span class="r-name">Richardson's <em>Law</em> Office</span>
+            <span class="r-rule"></span>
+            <span class="r-tag">Halifax &middot; Lower Sackville</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-section="hero">Home</a></li>
+            <li><a href="#known" data-section="known">Why Richardson's</a></li>
+            <li><a href="#practice" data-section="practice">Practice Areas</a></li>
+            <li><a href="#approach" data-section="approach">Our Approach</a></li>
+            <li><a href="#contact" class="nav-cta">
+                <span class="nav-cta-label">Contact Us</span>
+                <span class="nav-cta-phone">(902) 864-2300</span>
+            </a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why Richardson's</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#contact">Contact Us &middot; (902) 864-2300</a></li>
+    </ul>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     01 / HERO
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <span class="chapter-mark on-dark">01 / 11 — Heritage</span>
+    <div class="hero-corner-ornament" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="50" cy="50" r="44"/>
+            <circle cx="50" cy="50" r="36" stroke-dasharray="2 4"/>
+            <line x1="50" y1="22" x2="50" y2="78"/>
+            <line x1="22" y1="50" x2="78" y2="50"/>
+            <path d="M28 38 L42 38 L35 50 Z" fill="currentColor" fill-opacity="0.3"/>
+            <path d="M58 38 L72 38 L65 50 Z" fill="currentColor" fill-opacity="0.3"/>
+            <line x1="28" y1="38" x2="42" y2="38"/>
+            <line x1="58" y1="38" x2="72" y2="38"/>
+            <line x1="35" y1="38" x2="35" y2="60"/>
+            <line x1="65" y1="38" x2="65" y2="60"/>
+            <line x1="28" y1="60" x2="42" y2="60"/>
+            <line x1="58" y1="60" x2="72" y2="60"/>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <p class="hero-stamp reveal">Est. 1982 &middot; Lower Sackville, Nova Scotia</p>
+        <span class="hero-eyebrow reveal">Halifax &middot; HRM &middot; General Practice</span>
+        <h1 class="reveal">
+            <span class="h1-line">Experience.</span>
+            <span class="h1-line">Compassion.</span>
+            <em>Results.</em>
+        </h1>
+        <p class="hero-sub reveal">
+            Richardson's Law Office has served Halifax and the HRM since 1982 &mdash; handling personal injury, criminal defence, real estate, and family law with an aggressive yet compassionate approach designed to maximize your legal options.
+        </p>
+        <div class="hero-pills reveal">
+            <span class="hero-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg>
+                NS Courts
+            </span>
+            <span class="hero-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3 L21 3 L21 21 L3 21 Z"/><path d="M9 3 L9 21"/><path d="M3 9 L21 9"/></svg>
+                APTLA Founding Member
+            </span>
+            <span class="hero-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Free Consult
+            </span>
+            <span class="hero-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 18 L6 21 L7 14 L2 9 L9 8 Z"/></svg>
+                40+ Years
+            </span>
+        </div>
+        <div class="hero-actions reveal">
+            <a href="tel:+19028642300" class="btn btn-crimson">
+                Call (902) 864-2300
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </a>
+            <a href="#practice" class="btn btn-ghost">
+                Practice Areas
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     02 / RECOGNITION STRIP
+     ════════════════════════════════════════════════════════════ -->
+<section class="recognition" id="recognition" aria-label="Firm credentials">
+    <span class="chapter-mark on-dark">02 / 11 — Credentials</span>
+    <div class="container">
+        <div class="recognition-inner">
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Established</span>
+                <span class="recognition-value">Since 1982</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Headquarters</span>
+                <span class="recognition-value">Lower Sackville</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">In Practice</span>
+                <span class="recognition-value">40+ Years</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Founding Member</span>
+                <span class="recognition-value">APTLA</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Senior Counsel</span>
+                <span class="recognition-value">Kim Richardson</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     03 / PROMISE BAND
+     ════════════════════════════════════════════════════════════ -->
+<section class="promise" id="promise">
+    <span class="chapter-mark">03 / 11 — Promise</span>
+    <div class="promise-quote-mark" aria-hidden="true">&ldquo;</div>
+    <div class="container">
+        <div class="promise-inner">
+            <div class="promise-rule reveal"></div>
+            <blockquote class="reveal">
+                Our aggressive yet compassionate and pragmatic approach is designed to <strong>maximize your legal options while minimizing your costs.</strong>
+            </blockquote>
+            <p class="promise-cite reveal">&mdash; Richardson's Law Office</p>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     04 / FEATURED 2-UP
+     ════════════════════════════════════════════════════════════ -->
+<section class="section featured" id="featured">
+    <span class="chapter-mark">04 / 11 — Featured</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Flagship Practice</p>
+            <h2 class="section-h2">Where Richardson's <em>builds its reputation.</em></h2>
+            <p class="section-lead">Two practice areas anchor the firm: the personal injury and disability work Kim Richardson has pursued for four decades, and the immigration practice Elisabeth Isakov has brought to the HRM &mdash; both handled with the same depth of care.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card reveal from-left">
+                <div class="featured-photo">
+                    <img src="img/featured-1.jpg" alt="Personal injury and disability claims at Richardson's Law Office">
+                    <span class="featured-stamp">Our Flagship</span>
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Personal Injury &amp; Disability</p>
+                    <h3>Personal Injury &amp; Disability Claims</h3>
+                    <p class="featured-italic">Contingent fee &mdash; you pay nothing unless we succeed.</p>
+                    <p>With literally thousands of cases successfully concluded, Richardson's Law Office brings unmatched depth of experience to personal injury, wrongful death, and disability insurance claims throughout Nova Scotia. Contingent fee arrangements are available &mdash; you pay nothing unless we succeed on your behalf.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free initial consultation
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Contingent fee &mdash; no win, no fee
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Experience at all levels of Nova Scotia courts
+                        </li>
+                    </ul>
+                    <a href="#contact" class="learn-more">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card reveal from-right">
+                <div class="featured-photo">
+                    <img src="img/featured-2.jpg" alt="Immigration law practice at Richardson's Law Office">
+                    <span class="featured-stamp">Expanding Practice</span>
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Immigration Law</p>
+                    <h3>Immigration Law</h3>
+                    <p class="featured-italic">English &middot; Russian &middot; Hebrew counsel.</p>
+                    <p>Independent Counsel Elisabeth Isakov brings focused expertise in Canadian immigration law, handling Humanitarian and Compassionate applications, Family Class applications to IRCC, Federal Court judicial reviews, and a growing range of estate, family, and small business matters for new Canadians in the HRM.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Humanitarian and Compassionate applications
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Family Class applications to IRCC
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Federal Court judicial reviews
+                        </li>
+                    </ul>
+                    <a href="#contact" class="learn-more">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     05 / KNOWN FOR (editorial bands)
+     ════════════════════════════════════════════════════════════ -->
+<section class="section known" id="known">
+    <span class="chapter-mark">05 / 11 — Known For</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Why Richardson's</p>
+            <h2 class="section-h2">Four decades of <em>quiet authority.</em></h2>
+            <p class="section-lead">From thousands of trial-litigation files to thousands of real estate closings, from complex immigration matters to deep community roots in Lower Sackville &mdash; the work that defines Richardson's Law Office.</p>
+        </div>
+
+        <!-- ROW 1 -->
+        <div class="known-row">
+            <span class="known-numeral" aria-hidden="true">01</span>
+            <div class="known-text reveal from-left">
+                <p class="known-eyebrow">Trial Litigation</p>
+                <h3>Thousands of Cases &mdash; <em>successfully concluded</em></h3>
+                <p>Kim Richardson has successfully concluded literally thousands of cases involving serious personal injury and wrongful death, disability insurance claims, criminal defence, and other litigation. With experience at all levels of the Nova Scotia courts, he is prepared to seek justice for every client who walks through the door.</p>
+                <span class="known-stat">40+ Years in Litigation</span>
+            </div>
+            <div class="known-motif reveal from-right">
+                <img src="img/known-1.jpg" alt="Courtroom interior representing four decades of trial litigation">
+                <span class="known-roman">I.</span>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="known-row reverse">
+            <span class="known-numeral" aria-hidden="true">02</span>
+            <div class="known-text reveal from-right">
+                <p class="known-eyebrow">Real Estate</p>
+                <h3>Thousands of Closings &mdash; <em>handled with precision</em></h3>
+                <p>In addition to over 40 years in litigation practice, Kim Richardson has been a prolific real estate practitioner, closing thousands of sales, purchases, and financings throughout Nova Scotia. Fixed-fee pricing keeps every transaction transparent and accessible.</p>
+                <span class="known-stat">Thousands of Transactions Closed</span>
+            </div>
+            <div class="known-motif reveal from-left">
+                <img src="img/known-2.jpg" alt="Halifax waterfront representing real estate practice across Nova Scotia">
+                <span class="known-roman">II.</span>
+            </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="known-row">
+            <span class="known-numeral" aria-hidden="true">03</span>
+            <div class="known-text reveal from-left">
+                <p class="known-eyebrow">Immigration Law</p>
+                <h3>Complex Applications &mdash; <em>navigated with care</em></h3>
+                <p>Independent Counsel Elisabeth Isakov brings years of focused immigration law experience, handling complex Humanitarian and Compassionate applications, Family Class applications to IRCC, and Federal Court judicial reviews. She communicates with clients in English, Russian, and Hebrew.</p>
+                <span class="known-stat">English &middot; Russian &middot; Hebrew</span>
+            </div>
+            <div class="known-motif reveal from-right">
+                <img src="img/known-3.jpg" alt="Immigration documents representing focused immigration law practice">
+                <span class="known-roman">III.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     06 / PRACTICE GRID
+     ════════════════════════════════════════════════════════════ -->
+<section class="section practice" id="practice">
+    <span class="chapter-mark">06 / 11 — Practice</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">A general practice, <em>handled in full.</em></h2>
+            <p class="section-lead">We have expertise in just about every field of law, so we can represent you on most issues or refer you to appropriate counsel &mdash; the matters that most often shape a life or a livelihood in Halifax and the HRM.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card reveal">
+                <span class="practice-numeral">I.</span>
+                <div class="practice-roundel">
+                    <img src="img/known-1.jpg" alt="Personal injury and disability claims">
+                </div>
+                <h3>Personal Injury &amp; Disability</h3>
+                <p>Contingent fee available. We have successfully concluded literally thousands of cases involving serious personal injury and wrongful death, and disability insurance claims.</p>
+                <div class="practice-tags">
+                    <span>Personal Injury</span>
+                    <span>Wrongful Death</span>
+                    <span>Disability</span>
+                    <span>Contingent Fee</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">II.</span>
+                <div class="practice-roundel">
+                    <img src="img/known-1.jpg" alt="Criminal defence in Nova Scotia courts">
+                </div>
+                <h3>Criminal Defence</h3>
+                <p>With experience at all levels of the Nova Scotia courts, Kim Richardson is prepared to seek justice for clients facing criminal charges.</p>
+                <div class="practice-tags">
+                    <span>Criminal Defence</span>
+                    <span>NS Courts</span>
+                    <span>Trial</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">III.</span>
+                <div class="practice-roundel">
+                    <img src="img/featured-1.jpg" alt="Separation and divorce family law">
+                </div>
+                <h3>Separation &amp; Divorce</h3>
+                <p>We handle separation and divorce matters with an aggressive yet compassionate and pragmatic approach designed to maximize your legal options while minimizing your costs.</p>
+                <div class="practice-tags">
+                    <span>Family Law</span>
+                    <span>Separation</span>
+                    <span>Divorce</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">IV.</span>
+                <div class="practice-roundel">
+                    <img src="img/featured-2.jpg" alt="Wills and estates planning">
+                </div>
+                <h3>Wills &amp; Estates</h3>
+                <p>Estate planning and probate matters handled with care. Elisabeth Isakov provides Estate and Probate law services alongside the firm's long-standing wills practice.</p>
+                <div class="practice-tags">
+                    <span>Wills</span>
+                    <span>Estates</span>
+                    <span>Probate</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">V.</span>
+                <div class="practice-roundel">
+                    <img src="img/known-2.jpg" alt="Real estate purchases and sales in Nova Scotia">
+                </div>
+                <h3>Real Estate</h3>
+                <p>Kim Richardson has been a prolific real estate practitioner, closing thousands of sales, purchases, and financings. Nova Scotia residents &mdash; call for non-resident prices.</p>
+                <div class="practice-tags">
+                    <span>Real Estate</span>
+                    <span>Purchase</span>
+                    <span>Sale</span>
+                    <span>Financing</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">VI.</span>
+                <div class="practice-roundel">
+                    <img src="img/known-3.jpg" alt="Immigration law applications and Federal Court reviews">
+                </div>
+                <h3>Immigration Law</h3>
+                <p>Elisabeth Isakov has years of experience handling complex Humanitarian and Compassionate applications, Family Class applications to IRCC, and Federal Court judicial reviews.</p>
+                <div class="practice-tags">
+                    <span>Immigration</span>
+                    <span>H&amp;C Applications</span>
+                    <span>Federal Court</span>
+                    <span>Family Class</span>
+                </div>
+                <a href="#contact" class="learn-more">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     07 / APPROACH (dark band)
+     ════════════════════════════════════════════════════════════ -->
+<section class="approach" id="approach">
+    <span class="chapter-mark on-dark">07 / 11 — Approach</span>
+    <span class="approach-side-stamp" aria-hidden="true">Our Approach &mdash; Aggressive, Compassionate, Pragmatic</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Three commitments &mdash; <em>every client, every file.</em></h2>
+            <p class="section-lead">The Richardson's Law Office promise comes down to three things, repeated for over forty years. Aggressive when necessary. Compassionate always. Pragmatic in every matter.</p>
+        </div>
+
+        <div class="approach-grid">
+            <article class="approach-card reveal scale-in">
+                <div class="approach-medallion">
+                    <span>01</span>
+                </div>
+                <p class="approach-eyebrow">Pillar One</p>
+                <h3>Experienced</h3>
+                <p class="approach-italic">Forty years of practice, in service of you.</p>
+                <p>We have been in the business of taking care of people like you for over 40 years &mdash; thousands of personal injury, wrongful death, disability, criminal defence, and real estate matters successfully concluded across Nova Scotia.</p>
+                <span class="approach-rule"></span>
+            </article>
+
+            <article class="approach-card reveal scale-in">
+                <div class="approach-medallion">
+                    <span>02</span>
+                </div>
+                <p class="approach-eyebrow">Pillar Two</p>
+                <h3>Full Service</h3>
+                <p class="approach-italic">Most matters, one trusted firm.</p>
+                <p>We have expertise in just about every field of law, so we can represent you on most issues &mdash; or refer you to appropriate counsel when a matter calls for specialist help. The general-practice approach Halifax families need.</p>
+                <span class="approach-rule"></span>
+            </article>
+
+            <article class="approach-card reveal scale-in">
+                <div class="approach-medallion">
+                    <span>03</span>
+                </div>
+                <p class="approach-eyebrow">Pillar Three</p>
+                <h3>Affordable</h3>
+                <p class="approach-italic">Competitive fees. Transparent pricing.</p>
+                <p>We offer competitive fees to ensure you can rely on us affordably &mdash; with contingent-fee arrangements available for personal injury and disability matters, and fixed-fee pricing on real estate transactions for Nova Scotia residents.</p>
+                <span class="approach-rule"></span>
+            </article>
+        </div>
+    </div>
+    <div class="approach-bottom-rule" aria-hidden="true"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     08 / COVERAGE STRIP
+     ════════════════════════════════════════════════════════════ -->
+<section class="coverage" id="coverage">
+    <span class="chapter-mark">08 / 11 — Coverage</span>
+    <div class="container">
+        <div class="coverage-inner reveal">
+            <p class="coverage-label">Serving Halifax &amp; the HRM</p>
+            <p class="coverage-cities">
+                <span>Halifax</span>
+                <span>Lower Sackville</span>
+                <span>Dartmouth</span>
+                <span>Bedford</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     09 / CTA BAND  (no testimonials — none in scrape)
+     ════════════════════════════════════════════════════════════ -->
+<section class="cta-band" id="cta">
+    <span class="chapter-mark on-dark">09 / 11 &mdash; Call</span>
+    <div class="container">
+        <div class="cta-inner reveal">
+            <p class="cta-eyebrow">Don't Delay</p>
+            <h2>The best solution for legal issues &mdash; <em>contact us today.</em></h2>
+            <p>Free consultations available. Tell us briefly about your matter and we'll be in touch &mdash; from our office in Lower Sackville, serving Halifax and the HRM.</p>
+            <div class="cta-actions">
+                <a href="tel:+19028642300" class="btn btn-ink">
+                    Call (902) 864-2300
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     10 / CONTACT
+     ════════════════════════════════════════════════════════════ -->
+<section class="section contact" id="contact">
+    <span class="chapter-mark">10 / 11 — Contact</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">153 Sackville Drive &middot; <em>Lower Sackville.</em></h2>
+            <p class="section-lead">Call, email, or send a message. We'll get back to you &mdash; from a real lawyer, not a screening form.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal from-left">
+                <h3>Office Details</h3>
+                <p class="contact-info-italic">Stop by during our office hours, or call any time.</p>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span class="contact-text">Richardson's Law Office<br>153 Sackville Drive<br>Lower Sackville, Nova Scotia&nbsp; B4C 2R3</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:+19028642300">(902) 864-2300</a><br>
+                            <a href="tel:+18773042300">1-877-304-2300 &mdash; Toll-Free</a><br>
+                            <span class="contact-text" style="color:var(--text-mid);font-size:0.92rem;">Fax (902) 864-4410</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:staff@novalawyer.com">staff@novalawyer.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span class="contact-text">Call (902) 864-2300 to Reach Us<br><span style="color:var(--text-soft);font-size:0.88rem;">Lower Sackville &middot; Serving Halifax &amp; the HRM</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form reveal from-right">
+                <p class="form-eyebrow">Free &middot; Confidential</p>
+                <h3>Have an Inquiry?</h3>
+                <p class="form-italic">Tell us briefly about your matter.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(902) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Personal Injury &amp; Disability</option>
+                            <option>Criminal Defence</option>
+                            <option>Real Estate</option>
+                            <option>Family Law &amp; Divorce</option>
+                            <option>Wills &amp; Estates</option>
+                            <option>Immigration Law</option>
+                            <option>Small Business Law</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about your matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-foot">Or call <strong>(902) 864-2300</strong> to reach us directly.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap reveal">
+            <iframe src="https://www.google.com/maps?q=153+Sackville+Drive,+Lower+Sackville,+NS+B4C+2R3&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Richardson's Law Office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     11 / FOOTER
+     ════════════════════════════════════════════════════════════ -->
+<footer id="footer">
+    <span class="chapter-mark on-dark">11 / 11 — Footer</span>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="r-mark inverse" aria-label="Richardson's Law Office">
+                    <span class="r-eyebrow">Est. 1982</span>
+                    <span class="r-name">Richardson's <em>Law</em> Office</span>
+                    <span class="r-rule"></span>
+                    <span class="r-tag">Halifax &middot; Lower Sackville</span>
+                </a>
+                <p>A general legal practice in Lower Sackville serving Halifax and the HRM since 1982 &mdash; personal injury, criminal defence, real estate, family law, wills, and immigration matters.</p>
+                <p class="footer-brand-italic">Serving Halifax &amp; the HRM Since 1982</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#practice">Personal Injury &amp; Disability</a></li>
+                    <li><a href="#practice">Criminal Defence</a></li>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Family Law &amp; Divorce</a></li>
+                    <li><a href="#practice">Wills &amp; Estates</a></li>
+                    <li><a href="#practice">Immigration Law</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>The Firm</h5>
+                <ul>
+                    <li><a href="#known">Why Richardson's</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#featured">Featured Practice</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+19028642300">(902) 864-2300</a></li>
+                    <li><a href="tel:+18773042300">1-877-304-2300 Toll-Free</a></li>
+                    <li class="plain">Fax: (902) 864-4410</li>
+                    <li><a href="mailto:staff@novalawyer.com">staff@novalawyer.com</a></li>
+                    <li class="plain">153 Sackville Drive<br>Lower Sackville, NS B4C 2R3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Richardson's Law Office. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Richardson's Law Office.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // ── Smooth scroll for in-page anchors with hash update ──
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#' || href.length < 2) {
+            e.preventDefault();
+            return;
+        }
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', href);
+        }
+    });
+
+    // ── Mobile drawer ──
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileNav.classList.remove('open');
+        });
+    });
+
+    // ── Year stamp ──
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Nav scroll shadow ──
+    const navEl = document.getElementById('nav');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        navEl.classList.toggle('scrolled', y > 40);
+        lastScroll = y;
+    }, { passive: true });
+
+    // ── Reveal on scroll ──
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    // ── Stagger delays through grids ──
+    document.querySelectorAll('.recognition-inner').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 80) + 'ms';
+        });
+    });
+    document.querySelectorAll('.practice-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 100) + 'ms';
+        });
+    });
+    document.querySelectorAll('.approach-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 140) + 'ms';
+        });
+    });
+    document.querySelectorAll('.featured-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 120) + 'ms';
+        });
+    });
+    document.querySelectorAll('.hero-pills').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 60) + 'ms';
+        });
+    });
+
+    // ── Active-state nav tied to scroll position ──
+    const sectionMap = [
+        { id: 'hero',       link: 'hero' },
+        { id: 'recognition', link: 'hero' },
+        { id: 'promise',    link: 'hero' },
+        { id: 'featured',   link: 'known' },
+        { id: 'known',      link: 'known' },
+        { id: 'practice',   link: 'practice' },
+        { id: 'approach',   link: 'approach' },
+        { id: 'coverage',   link: 'approach' },
+        { id: 'cta',        link: 'approach' },
+        { id: 'contact',    link: 'approach' }
+    ];
+    const navLinkEls = document.querySelectorAll('.nav-links a[data-section]');
+    function updateActiveNav() {
+        const scrollPos = window.scrollY + 200;
+        let activeLink = 'hero';
+        for (const { id, link } of sectionMap) {
+            const el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollPos) {
+                activeLink = link;
+            }
+        }
+        navLinkEls.forEach(el => {
+            el.classList.toggle('active', el.dataset.section === activeLink);
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // ── Animated stat counters (years in practice) ──
+    const statEls = document.querySelectorAll('.recognition-value');
+    // Light enhancement only — no hard counters needed; reveal already handles entry.
+</script>
+
+</body>
+</html>
