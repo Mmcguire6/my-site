@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>DSB Law | Dan Seeley-Baechler, LL.B — Cambridge Lawyer</title>
+<meta name="description" content="Cambridge real estate, wills, powers of attorney & corporate law. Dan Seeley-Baechler, LL.B — accessible, client-centred legal counsel in Cambridge, Kitchener & Waterloo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    /* DSB Law — forest green + antique gold + parchment cream */
+    --forest:           #2E4A3A;
+    --forest-bright:    #3D5F4B;
+    --forest-deep:      #1E3326;
+    --forest-darker:    #122017;
+    --forest-pale:      #B5C7BD;
+    --forest-tint:      #D4E0D8;
+    --forest-soft:      #E8EFEA;
+
+    --gold:             #C4912A;
+    --gold-bright:      #D9A847;
+    --gold-deep:        #8E6818;
+    --gold-darker:      #5E4510;
+    --gold-pale:        #E8D4A0;
+    --gold-tint:        #F1E4BC;
+    --gold-soft:        #FAF2DD;
+
+    --ink:              #1A1A1A;
+    --ink-deep:         #0E0E0E;
+    --char:             #262626;
+    --char-mid:         #3A3A3A;
+    --char-light:       #5A5A5A;
+
+    --text:             #1A1A1A;
+    --text-mid:         #4A4A50;
+    --text-soft:        #6E6E76;
+    --text-faint:       #94949C;
+
+    --bone:             #F6F2EA;
+    --bone-deep:        #ECE5D5;
+    --paper:            #FFFFFF;
+    --bg:               #FAF7EE;
+    --bg-soft:          #FDFBF4;
+
+    --border:           #DDD5BF;
+    --border-soft:      #E8E1CD;
+
+    --topbar-h:         40px;
+    --nav-h:            82px;
+    --total-nav:        122px;
+
+    --shadow-sm:        0 1px 3px rgba(46,74,58,0.07);
+    --shadow-md:        0 8px 24px -8px rgba(46,74,58,0.22), 0 2px 6px -2px rgba(46,74,58,0.10);
+    --shadow-lg:        0 24px 56px -20px rgba(46,74,58,0.34), 0 8px 16px -8px rgba(46,74,58,0.14);
+    --shadow-forest:    0 12px 28px -8px rgba(46,74,58,0.45);
+    --shadow-gold:      0 12px 28px -8px rgba(196,145,42,0.45);
+    --shadow-ink:       0 12px 28px -8px rgba(28,28,28,0.50);
+
+    --ease-out-expo:    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    color: var(--text);
+    background: var(--bone);
+    overflow-x: hidden;
+    line-height: 1.7;
+    font-weight: 400;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+    mix-blend-mode: multiply;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    line-height: 1.12;
+    font-weight: 700;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: inherit; }
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+/* ── EDITORIAL CHAPTER MARK ───────────────────────── */
+.chapter-mark {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-family: 'Inter', monospace;
+    font-weight: 300;
+    font-size: 0.55rem;
+    letter-spacing: 0.24em;
+    color: var(--gold-deep);
+    opacity: 0.40;
+    text-transform: uppercase;
+    z-index: 10;
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+}
+
+/* ── BRAND MARK ─────────────────────────────────────── */
+.dsb-mark {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    position: relative;
+}
+.dsb-mark .dsb-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.58rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+.dsb-mark .dsb-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.45rem;
+    color: var(--forest-deep);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.dsb-mark .dsb-name em {
+    font-style: normal;
+    color: var(--gold);
+}
+.dsb-mark .dsb-rule {
+    display: block;
+    width: 36px;
+    height: 2px;
+    background: var(--gold);
+    margin: 8px 0 5px;
+}
+.dsb-mark .dsb-tag {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.6rem;
+    color: var(--forest);
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.dsb-mark.inverse .dsb-eyebrow { color: var(--gold-bright); }
+.dsb-mark.inverse .dsb-name { color: var(--bone); }
+.dsb-mark.inverse .dsb-name em { color: var(--gold-bright); }
+.dsb-mark.inverse .dsb-rule { background: var(--gold); }
+.dsb-mark.inverse .dsb-tag { color: var(--gold-bright); }
+
+/* ── TOP BAR ─────────────────────────────────────── */
+.top-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--topbar-h);
+    background: var(--forest-darker);
+    color: rgba(246,242,234,0.86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    z-index: 901;
+    border-bottom: 2px solid var(--gold);
+}
+.top-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.top-bar a {
+    color: rgba(246,242,234,0.92);
+    transition: color 0.15s var(--ease-out-expo);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.top-bar a:hover { color: var(--gold-bright); }
+.top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); }
+.top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.20); }
+.top-bar .free {
+    color: var(--gold-bright);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+/* ── MAIN NAV ─────────────────────────────────────── */
+.nav {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0; right: 0;
+    height: var(--nav-h);
+    background: rgba(246,242,234,0.98);
+    backdrop-filter: blur(12px);
+    z-index: 900;
+    border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+.nav-links a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--forest-deep);
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    transition: color 0.18s var(--ease-out-expo);
+    position: relative;
+    padding: 6px 0;
+    display: inline-block;
+}
+.nav-links a:not(.nav-cta)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.5px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.32s var(--ease-out-expo);
+}
+.nav-links a:not(.nav-cta):hover::after,
+.nav-links a:not(.nav-cta).active::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+.nav-links a:hover { color: var(--gold-deep); }
+.nav-cta {
+    background: var(--forest);
+    color: var(--bone) !important;
+    padding: 14px 26px;
+    border-radius: 2px;
+    font-weight: 800 !important;
+    letter-spacing: 0.10em !important;
+    font-size: 0.72rem !important;
+    transition: background 0.22s var(--ease-out-expo), transform 0.22s var(--ease-out-expo), box-shadow 0.22s var(--ease-out-expo);
+    border: 1.5px solid var(--gold) !important;
+    box-shadow: 0 2px 6px rgba(46,74,58,0.20);
+    display: inline-flex !important;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.15;
+    gap: 2px;
+}
+.nav-cta .cta-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+}
+.nav-cta .cta-phone {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--gold-bright);
+    letter-spacing: 0;
+    text-transform: none;
+}
+.nav-cta:hover {
+    background: var(--forest-deep);
+    color: var(--bone) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-forest);
+}
+.nav-cta::after { display: none !important; }
+
+.nav-hamburger {
+    display: none;
+    width: 32px; height: 24px;
+    position: relative;
+}
+.nav-hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--forest-deep);
+    transition: transform 0.28s var(--ease-out-expo), opacity 0.28s var(--ease-out-expo);
+}
+.nav-hamburger span:nth-child(1) { top: 4px; }
+.nav-hamburger span:nth-child(2) { top: 11px; }
+.nav-hamburger span:nth-child(3) { top: 18px; }
+
+.mobile-nav {
+    position: fixed;
+    top: calc(var(--topbar-h) + var(--nav-h));
+    left: 0; right: 0;
+    background: var(--bone);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 32px;
+    transform: translateY(-110%);
+    transition: transform 0.36s var(--ease-out-expo);
+    z-index: 899;
+    box-shadow: var(--shadow-md);
+}
+.mobile-nav.open { transform: translateY(0); }
+.mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+.mobile-nav a { color: var(--forest-deep); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.mobile-nav .nav-cta { display: inline-flex; }
+
+/* ── HERO (form-card variant) ───────────────────── */
+.hero {
+    min-height: 100vh;
+    padding-top: calc(var(--total-nav) + 24px);
+    padding-bottom: 60px;
+    position: relative;
+    color: var(--bone);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: var(--forest-darker);
+    scroll-margin-top: var(--total-nav);
+}
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(115deg, rgba(18,32,23,0.94) 0%, rgba(30,51,38,0.82) 40%, rgba(46,74,58,0.62) 100%),
+        url('img/hero.jpg') center 35% / cover no-repeat;
+    z-index: 0;
+    transform: scale(1.04);
+    filter: contrast(1.05) saturate(0.92);
+    animation: hero-drift 22s ease-in-out infinite alternate;
+}
+@keyframes hero-drift {
+    0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+    100% { transform: scale(1.06) translate3d(-1.5%, -1%, 0); }
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 80% 30%, rgba(196,145,42,0.18), transparent 55%),
+        radial-gradient(ellipse at 15% 85%, rgba(30,51,38,0.55), transparent 50%),
+        linear-gradient(180deg, rgba(18,32,23,0.20) 0%, transparent 30%, rgba(18,32,23,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+/* Scales corner ornament */
+.hero-ornament {
+    position: absolute;
+    top: calc(var(--total-nav) - 8px);
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    z-index: 3;
+    color: var(--gold-bright);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 3;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+}
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--gold-bright);
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    align-self: flex-start;
+    font-variant-caps: small-caps;
+}
+.hero-eyebrow::before {
+    content: '';
+    width: 36px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.hero-est {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--gold-bright);
+    margin-bottom: 12px;
+    align-self: flex-start;
+    letter-spacing: 0.04em;
+    opacity: 0.92;
+}
+.hero-est::before, .hero-est::after {
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5.6vw, 4.8rem);
+    font-weight: 800;
+    color: var(--bone);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+.hero h1 .line-1 { display: block; }
+.hero h1 .line-2 {
+    display: block;
+    color: var(--bone);
+    margin-top: 6px;
+}
+.hero h1 .accent-line {
+    display: block;
+    color: var(--gold-bright);
+    font-style: italic;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    margin-top: 10px;
+    position: relative;
+}
+.hero h1 .accent-line::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--gold);
+    margin-top: 18px;
+}
+
+.hero-sub {
+    font-size: 1.06rem;
+    color: rgba(246,242,234,0.84);
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 24px 0 32px;
+    font-weight: 400;
+}
+
+.hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+}
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(196,145,42,0.10);
+    border: 1px solid rgba(196,145,42,0.35);
+    color: var(--gold-bright);
+    padding: 7px 14px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+.hero-pill svg { width: 11px; height: 11px; }
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: transform 0.22s var(--ease-out-expo), background 0.22s var(--ease-out-expo), color 0.22s var(--ease-out-expo), border-color 0.22s var(--ease-out-expo), box-shadow 0.22s var(--ease-out-expo);
+    cursor: pointer;
+    border: 1.5px solid transparent;
+}
+.btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.btn-forest {
+    background: var(--gold);
+    color: var(--forest-darker);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+}
+.btn-forest:hover {
+    background: var(--gold-bright);
+    border-color: var(--gold-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px -8px rgba(196,145,42,0.65);
+}
+.btn-ghost {
+    background: transparent;
+    color: var(--bone);
+    border: 1.5px solid rgba(246,242,234,0.35);
+}
+.btn-ghost:hover {
+    background: rgba(246,242,234,0.06);
+    border-color: var(--gold);
+    color: var(--gold-bright);
+    transform: translateY(-2px);
+}
+
+/* Hero form card */
+.hero-form-card {
+    background: rgba(246,242,234,0.98);
+    color: var(--ink);
+    border-radius: 4px;
+    padding: 36px 32px 32px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(196,145,42,0.40);
+    position: relative;
+}
+.hero-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--forest);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.hero-form-card::after {
+    content: '';
+    position: absolute;
+    top: 4px; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+}
+.form-eyebrow {
+    font-size: 0.66rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 6px;
+    font-variant-caps: small-caps;
+}
+.hero-form-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    color: var(--forest-deep);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+}
+.hero-form-card .form-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    color: var(--gold-deep);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.hero-form-card .form-sub {
+    color: var(--text-mid);
+    font-size: 0.88rem;
+    margin-bottom: 22px;
+    line-height: 1.55;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-field {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-field label {
+    font-size: 0.66rem;
+    color: var(--forest-deep);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+    background: var(--bone);
+    border: 1.5px solid var(--border);
+    border-radius: 2px;
+    padding: 11px 13px;
+    font-size: 0.94rem;
+    color: var(--text);
+    transition: border-color 0.20s var(--ease-out-expo), background 0.20s var(--ease-out-expo);
+    outline: none;
+}
+.form-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%232E4A3A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px;
+    padding-right: 38px;
+    cursor: pointer;
+}
+.form-field input:focus,
+.form-field select:hover,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--forest);
+    background: var(--paper);
+}
+.form-field select option {
+    background: var(--paper);
+    color: var(--text);
+}
+.form-field textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+}
+.form-btn {
+    width: 100%;
+    background: var(--forest);
+    color: var(--bone);
+    padding: 14px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.22s var(--ease-out-expo), transform 0.22s var(--ease-out-expo), box-shadow 0.22s var(--ease-out-expo);
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+.form-btn:hover {
+    background: var(--forest-deep);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-forest);
+}
+.form-btn svg { width: 14px; height: 14px; }
+.form-foot {
+    text-align: center;
+    font-size: 0.76rem;
+    color: var(--text-soft);
+    margin-top: 12px;
+    font-style: italic;
+}
+.form-foot strong {
+    color: var(--forest);
+    font-style: normal;
+    font-weight: 800;
+}
+
+/* ── RECOGNITION STRIP ────────────────────────────── */
+.recognition {
+    background: var(--forest-darker);
+    color: var(--bone);
+    padding: 34px 0;
+    border-bottom: 1px solid rgba(196,145,42,0.25);
+    position: relative;
+    scroll-margin-top: var(--total-nav);
+}
+.recognition::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(196,145,42,0.45) 50%, transparent 100%);
+}
+.recognition-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.recognition-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    flex: 1;
+    text-align: center;
+    padding: 6px 18px;
+    border-right: 1px solid rgba(246,242,234,0.10);
+}
+.recognition-item:last-child { border-right: none; }
+.recognition-label {
+    font-size: 0.62rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.recognition-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.02rem;
+    color: var(--bone);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
+}
+.recognition-value em {
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 500;
+}
+
+/* ── PROMISE STRIP ────────────────────────────────── */
+.promise {
+    background: var(--bone);
+    padding: 96px 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: var(--total-nav);
+}
+.promise-quote-mark {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18rem;
+    line-height: 1;
+    color: var(--gold);
+    opacity: 0.06;
+    pointer-events: none;
+    user-select: none;
+    font-weight: 700;
+}
+.promise-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.promise-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 24px;
+}
+.promise blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.45rem, 2.9vw, 2.2rem);
+    font-weight: 500;
+    color: var(--forest-deep);
+    line-height: 1.34;
+    letter-spacing: -0.012em;
+    margin-bottom: 22px;
+    hanging-punctuation: first last;
+}
+.promise blockquote strong {
+    font-style: normal;
+    color: var(--gold-deep);
+    font-weight: 700;
+}
+.promise-cite {
+    font-size: 0.74rem;
+    color: var(--text-soft);
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* ── SECTION DEFAULTS ─────────────────────────────── */
+.section {
+    padding: 120px 0;
+    position: relative;
+    scroll-margin-top: var(--total-nav);
+}
+.section-head {
+    max-width: 760px;
+    margin: 0 auto 72px;
+    text-align: center;
+}
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--gold-deep);
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-variant-caps: small-caps;
+}
+.section-eyebrow::before,
+.section-eyebrow::after {
+    content: '';
+    width: 28px;
+    height: 2px;
+    background: var(--gold);
+}
+.section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+    font-weight: 800;
+    color: var(--forest-deep);
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+.section-h2 em {
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.005em;
+}
+.section-lead {
+    font-size: 1.06rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+/* ── FEATURED 2-UP ─────────────────────────────── */
+.featured {
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: var(--total-nav);
+}
+.featured::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 540px;
+    height: 540px;
+    background: radial-gradient(circle, rgba(196,145,42,0.06), transparent 70%);
+    pointer-events: none;
+}
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.featured-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.42s var(--ease-out-expo), box-shadow 0.42s var(--ease-out-expo), border-color 0.42s var(--ease-out-expo);
+    position: relative;
+}
+.featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
+}
+.featured-img {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--forest-deep);
+}
+.featured-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease-out-expo);
+}
+.featured-card:hover .featured-img img { transform: scale(1.05); }
+.featured-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(18,32,23,0.45) 100%);
+    pointer-events: none;
+}
+.featured-stamp {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: rgba(246,242,234,0.96);
+    color: var(--gold-deep);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--gold-pale);
+    z-index: 2;
+}
+.featured-body {
+    padding: 36px 32px 34px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.featured-body .eyebrow {
+    font-size: 0.66rem;
+    font-weight: 800;
+    color: var(--gold-deep);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.featured-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    color: var(--forest-deep);
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    line-height: 1.18;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.featured-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold-deep);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+.featured-body p {
+    color: var(--text-mid);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+.featured-highlights {
+    list-style: none;
+    margin: 4px 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.featured-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--text);
+    font-weight: 500;
+}
+.featured-highlights li svg {
+    width: 16px; height: 16px;
+    flex-shrink: 0;
+    color: var(--gold);
+    margin-top: 3px;
+}
+.featured-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    color: var(--forest);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: auto;
+    align-self: flex-start;
+    position: relative;
+    padding-bottom: 4px;
+}
+.featured-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.5px;
+    width: 20px;
+    background: var(--gold);
+    transition: width 0.36s var(--ease-out-expo);
+}
+.featured-link:hover::after { width: 100%; }
+.featured-link svg { width: 14px; height: 14px; }
+
+/* ── KNOWN FOR EDITORIAL BANDS ────────────────────── */
+.known {
+    background: var(--bone);
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: var(--total-nav);
+}
+.known::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 540px;
+    height: 540px;
+    background: radial-gradient(circle, rgba(46,74,58,0.05), transparent 70%);
+    pointer-events: none;
+}
+.known-bands {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.known-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border-soft);
+    position: relative;
+}
+.known-band:last-child { border-bottom: none; }
+.known-band.flip { grid-template-columns: 1fr 1fr; }
+.known-band.flip .known-text { order: 2; }
+.known-band.flip .known-motif { order: 1; }
+
+.known-text {
+    position: relative;
+}
+.known-number {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 8.5rem;
+    line-height: 0.9;
+    font-weight: 300;
+    color: var(--gold-pale);
+    letter-spacing: -0.04em;
+    margin-bottom: 14px;
+    display: block;
+    transition: color 0.5s var(--ease-out-expo);
+}
+.known-band:hover .known-number { color: var(--gold); }
+.known-eyebrow {
+    font-size: 0.7rem;
+    color: var(--forest);
+    font-weight: 800;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+    font-variant-caps: small-caps;
+}
+.known-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 2.7vw, 2.2rem);
+    color: var(--forest-deep);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    margin-bottom: 18px;
+}
+.known-headline em {
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+}
+.known-body {
+    color: var(--text-mid);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+.known-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px 10px 16px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--forest-deep);
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+.known-stat::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.known-motif {
+    position: relative;
+    aspect-ratio: 5 / 4;
+}
+.known-motif-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--gold-pale);
+    padding: 10px;
+    background: var(--paper);
+    box-shadow: var(--shadow-md);
+}
+.known-motif-frame::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--gold);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 2;
+}
+.known-motif-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.known-motif-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out-expo);
+}
+.known-band:hover .known-motif-img img { transform: scale(1.04); }
+.known-motif-caption {
+    position: absolute;
+    bottom: -28px;
+    right: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.74rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+/* ── PRACTICE GRID ─────────────────────────────────── */
+.practice {
+    background: var(--paper);
+    scroll-margin-top: var(--total-nav);
+}
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.practice-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 44px 34px 36px;
+    border-radius: 2px;
+    transition: transform 0.42s var(--ease-out-expo), border-color 0.42s var(--ease-out-expo), box-shadow 0.42s var(--ease-out-expo), background 0.42s var(--ease-out-expo);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.practice-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-expo);
+}
+.practice-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    background: var(--paper);
+    box-shadow: var(--shadow-md);
+}
+.practice-card:hover::before { transform: scaleX(1); }
+
+.practice-numeral {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--gold-pale);
+    font-weight: 400;
+    line-height: 1;
+    transition: color 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+.practice-card:hover .practice-numeral { color: var(--gold); transform: translateX(-4px); }
+
+.practice-roundel {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 22px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 4px 12px rgba(196,145,42,0.20);
+    background: var(--forest-deep);
+    flex-shrink: 0;
+}
+.practice-roundel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.practice-roundel::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 1px solid rgba(246,242,234,0.4);
+    pointer-events: none;
+}
+
+.practice-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--forest-deep);
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    line-height: 1.18;
+    text-transform: uppercase;
+}
+.practice-card p {
+    color: var(--text-mid);
+    font-size: 0.93rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+.practice-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-soft);
+}
+.practice-tags span {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--forest-deep);
+    background: var(--forest-soft);
+    padding: 4px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--forest-tint);
+    letter-spacing: 0.04em;
+}
+.practice-learn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--forest);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+    align-self: flex-start;
+    margin-top: auto;
+}
+.practice-learn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.5px;
+    width: 18px;
+    background: var(--gold);
+    transition: width 0.4s var(--ease-out-expo);
+}
+.practice-card:hover .practice-learn::after { width: 100%; }
+.practice-learn svg { width: 12px; height: 12px; }
+
+/* ── APPROACH DARK BAND ──────────────────────────── */
+.approach {
+    position: relative;
+    color: var(--bone);
+    overflow: hidden;
+    padding: 130px 0 140px;
+    background: var(--forest-darker);
+    scroll-margin-top: var(--total-nav);
+    background-blend-mode: multiply;
+}
+.approach::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(18,32,23,0.78), rgba(18,32,23,0.92)),
+        url('img/approach-bg.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+    z-index: 0;
+}
+.approach::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(196,145,42,0.22), transparent 50%),
+        radial-gradient(ellipse at 85% 85%, rgba(196,145,42,0.18), transparent 50%),
+        linear-gradient(180deg, rgba(196,145,42,0.04) 0%, rgba(196,145,42,0.08) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+.approach-rule-top, .approach-rule-bottom {
+    position: absolute;
+    left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    z-index: 2;
+}
+.approach-rule-top { top: 0; }
+.approach-rule-bottom { bottom: 0; }
+
+.approach-side-stamp {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 0.72rem;
+    letter-spacing: 0.62em;
+    color: var(--gold);
+    opacity: 0.55;
+    text-transform: uppercase;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.approach .container { position: relative; z-index: 4; }
+.approach .section-eyebrow { color: var(--gold-bright); }
+.approach .section-eyebrow::before,
+.approach .section-eyebrow::after { background: var(--gold-bright); }
+.approach .section-h2 { color: var(--bone); }
+.approach .section-h2 em { color: var(--gold-bright); }
+.approach .section-lead { color: rgba(246,242,234,0.84); }
+
+.approach-medallions {
+    margin-top: 70px;
+    position: relative;
+}
+.approach-connector {
+    position: absolute;
+    top: 56px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 6px, transparent 6px, transparent 14px);
+    opacity: 0.45;
+    z-index: 0;
+}
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+.approach-card {
+    text-align: center;
+    padding: 0 8px;
+}
+.approach-medallion {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--forest-darker);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 24px -8px rgba(196,145,42,0.45);
+}
+.approach-medallion::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 1px dashed var(--gold);
+    opacity: 0.45;
+}
+.approach-medallion::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 1px solid rgba(196,145,42,0.35);
+}
+.approach-medallion span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: var(--gold-bright);
+    font-weight: 400;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+.approach-eyebrow {
+    font-size: 0.66rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-variant-caps: small-caps;
+}
+.approach-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--bone);
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+}
+.approach-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold-bright);
+    font-size: 1rem;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+.approach-card p {
+    color: rgba(246,242,234,0.78);
+    font-size: 0.94rem;
+    line-height: 1.7;
+    max-width: 280px;
+    margin: 0 auto 18px;
+}
+.approach-rule {
+    display: block;
+    width: 32px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 0 auto;
+    opacity: 0.7;
+    transition: width 0.6s var(--ease-out-expo);
+}
+.approach-card:hover .approach-rule { width: 60px; }
+
+/* ── COVERAGE STRIP ──────────────────────────────── */
+.coverage {
+    background: var(--bone);
+    padding: 56px 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    text-align: center;
+    scroll-margin-top: var(--total-nav);
+}
+.coverage-label {
+    font-size: 0.66rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 16px;
+    font-variant-caps: small-caps;
+}
+.coverage-list {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    color: var(--forest-deep);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.coverage-list .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: inline-block;
+}
+
+/* ── CTA BAND ─────────────────────────────────────── */
+.cta-band {
+    background: var(--forest);
+    color: var(--bone);
+    padding: 92px 0;
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: var(--total-nav);
+}
+.cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(196,145,42,0.18), transparent 55%),
+        radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.20), transparent 50%);
+    pointer-events: none;
+}
+.cta-band::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    opacity: 0.6;
+}
+.cta-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.cta-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--bone);
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+.cta-inner h2 em {
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 500;
+    text-transform: none;
+}
+.cta-inner p {
+    color: rgba(246,242,234,0.94);
+    font-size: 1.08rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+.cta-band .btn-ink {
+    background: var(--ink-deep);
+    color: var(--bone);
+}
+.cta-band .btn-ink:hover {
+    background: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-ink);
+}
+.cta-band .btn-ghost-light {
+    background: transparent;
+    color: var(--bone);
+    border: 1.5px solid rgba(246,242,234,0.55);
+}
+.cta-band .btn-ghost-light:hover {
+    background: rgba(246,242,234,0.12);
+    border-color: var(--bone);
+}
+
+/* ── CONTACT ──────────────────────────────────────── */
+.contact {
+    background: var(--bg);
+    scroll-margin-top: var(--total-nav);
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 56px;
+    align-items: start;
+}
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: var(--forest-deep);
+    margin-bottom: 28px;
+    font-weight: 800;
+    letter-spacing: -0.014em;
+    text-transform: uppercase;
+}
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+.contact-list li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+.contact-icon {
+    width: 46px;
+    height: 46px;
+    background: var(--forest);
+    color: var(--gold-bright);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--gold);
+}
+.contact-icon svg { width: 18px; height: 18px; }
+.contact-list strong {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--gold-deep);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 800;
+}
+.contact-list a, .contact-list span {
+    font-size: 0.98rem;
+    color: var(--text);
+    line-height: 1.55;
+    transition: color 0.18s var(--ease-out-expo);
+}
+.contact-list a {
+    position: relative;
+    display: inline-block;
+}
+.contact-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.32s var(--ease-out-expo);
+}
+.contact-list a:hover { color: var(--gold-deep); }
+.contact-list a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.contact-form {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 2px;
+    box-shadow: var(--shadow-sm);
+}
+.contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--forest-deep);
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: -0.014em;
+    text-transform: uppercase;
+}
+.contact-form .form-sub {
+    color: var(--text-mid);
+    font-size: 0.94rem;
+    margin-bottom: 28px;
+}
+.contact-form .form-field input,
+.contact-form .form-field select,
+.contact-form .form-field textarea {
+    background: var(--bg);
+    padding: 13px 16px;
+    font-size: 0.96rem;
+}
+.contact-form .form-field textarea { min-height: 120px; }
+.contact-form .form-btn {
+    background: var(--forest-deep);
+    padding: 16px;
+}
+.contact-form .form-btn:hover {
+    background: var(--gold-deep);
+    box-shadow: var(--shadow-gold);
+}
+.form-note {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 14px;
+    font-style: italic;
+}
+
+.map-wrap {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--paper);
+    aspect-ratio: 24 / 7;
+    margin-top: 56px;
+}
+.map-wrap iframe { width: 100%; height: 100%; border: 0; }
+@media (max-width: 720px) {
+    .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+    background: var(--forest-darker);
+    color: rgba(246,242,234,0.62);
+    padding: 72px 0 28px;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    opacity: 0.5;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 56px;
+    margin-bottom: 48px;
+}
+.footer-brand .dsb-mark { margin-bottom: 18px; }
+.footer-brand p {
+    color: rgba(246,242,234,0.62);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    max-width: 380px;
+}
+.footer-col h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.84rem;
+    color: var(--gold-bright);
+    font-weight: 800;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a, .footer-col li.plain {
+    font-size: 0.88rem;
+    color: rgba(246,242,234,0.65);
+    transition: color 0.18s var(--ease-out-expo);
+    position: relative;
+    display: inline-block;
+}
+.footer-col a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.32s var(--ease-out-expo);
+}
+.footer-col a:hover { color: var(--gold-bright); }
+.footer-col a:hover::after { transform: scaleX(1); transform-origin: left; }
+.footer-bottom {
+    border-top: 1px solid rgba(246,242,234,0.10);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: rgba(246,242,234,0.50);
+}
+.footer-bottom a { color: rgba(246,242,234,0.75); }
+.footer-bottom a:hover { color: var(--gold-bright); }
+
+/* ── DEMO BANNER ──────────────────────────────────── */
+.demo-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(18,32,23,0.95);
+    backdrop-filter: blur(10px);
+    color: var(--bone);
+    padding: 12px 56px 12px 20px;
+    text-align: center;
+    font-size: 0.82rem;
+    border-top: 2px solid var(--gold);
+    z-index: 999;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+}
+.demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+.demo-banner-close {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(246,242,234,0.7);
+    font-size: 1.05rem;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.18s var(--ease-out-expo);
+}
+.demo-banner-close:hover { color: var(--gold-bright); }
+
+/* ── REVEAL ANIMATIONS ─────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+.reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+.reveal-late { transition-duration: 0.95s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .hero-bg {
+        animation: none !important;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 1100px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: block; }
+}
+@media (max-width: 1024px) {
+    .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 80px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-form-card { max-width: 540px; margin: 0 auto; width: 100%; }
+    .featured-grid { grid-template-columns: 1fr; gap: 24px; }
+    .known-band { grid-template-columns: 1fr; gap: 40px; padding: 60px 0; }
+    .known-band.flip .known-text { order: 1; }
+    .known-band.flip .known-motif { order: 2; }
+    .known-number { font-size: 6rem; }
+    .practice-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .approach-grid { grid-template-columns: 1fr; gap: 50px; }
+    .approach-connector { display: none; }
+    .approach-side-stamp { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .recognition-inner { gap: 18px; }
+    .recognition-item { flex: 1 1 calc(50% - 18px); border-right: none; border-bottom: 1px solid rgba(246,242,234,0.10); padding-bottom: 16px; }
+    .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+    .hero-ornament { display: none; }
+}
+@media (max-width: 720px) {
+    .top-bar { font-size: 0.7rem; padding: 0 12px; }
+    .top-bar .free { display: none; }
+    .top-bar-inner { gap: 14px; }
+    .container { padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .section-head { margin-bottom: 52px; }
+    .practice-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .contact-form { padding: 32px 24px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+    .recognition { padding: 28px 0; }
+    .recognition-item { flex: 1 1 100%; padding: 12px 0; border-right: none; border-bottom: 1px solid rgba(246,242,234,0.10); }
+    .recognition-item:last-child { border-bottom: none; }
+    .hero-form-card { padding: 28px 22px; }
+    .promise-quote-mark { font-size: 12rem; }
+    .approach-medallion { width: 96px; height: 96px; }
+    .approach-medallion span { font-size: 2rem; }
+    .coverage-list .dot { width: 4px; height: 4px; }
+    .known-motif-caption { position: relative; bottom: auto; margin-top: 14px; }
+}
+@media(max-width:720px){.top-bar{padding:0 10px;}.top-bar .divider{display:none;}.top-bar-inner{gap:14px;padding:0;}}
+
+::selection { background: var(--gold); color: var(--forest-darker); }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="free">Cambridge · Solicitor</span>
+        <span class="divider"></span>
+        <a href="tel:+15196224448">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (519) 622-4448
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:dan@dsb-law.ca">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            dan@dsb-law.ca
+        </a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="dsb-mark" aria-label="DSB Law — Dan Seeley-Baechler, LL.B">
+            <span class="dsb-eyebrow">The Law Office of</span>
+            <span class="dsb-name">Seeley-<em>Baechler</em></span>
+            <span class="dsb-rule"></span>
+            <span class="dsb-tag">Cambridge &middot; Ontario</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-section="hero">Home</a></li>
+            <li><a href="#known" data-section="known">Why DSB</a></li>
+            <li><a href="#practice" data-section="practice">Practice Areas</a></li>
+            <li><a href="#principal" data-section="principal">The Lawyer</a></li>
+            <li><a href="#approach" data-section="approach">Approach</a></li>
+            <li>
+                <a href="#contact" class="nav-cta">
+                    <span class="cta-label">Contact Us</span>
+                    <span class="cta-phone">(519) 622-4448</span>
+                </a>
+            </li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why DSB</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#principal">The Lawyer</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li>
+            <a href="#contact" class="nav-cta">
+                <span class="cta-label">Contact Us</span>
+                <span class="cta-phone">(519) 622-4448</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- 01 / HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Scales of justice corner ornament -->
+    <svg class="hero-ornament" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M32 8 L32 56"/>
+        <path d="M16 56 L48 56"/>
+        <path d="M32 8 L12 18 L20 32"/>
+        <path d="M32 8 L52 18 L44 32"/>
+        <ellipse cx="16" cy="32" rx="8" ry="4"/>
+        <ellipse cx="48" cy="32" rx="8" ry="4"/>
+        <circle cx="32" cy="8" r="2.4" fill="currentColor"/>
+    </svg>
+
+    <span class="chapter-mark">01 / 10 — Hero</span>
+
+    <div class="hero-grid">
+        <div class="hero-content">
+            <span class="hero-est">Est. 2008 &middot; Cambridge, Ontario</span>
+            <span class="hero-eyebrow">Cambridge &middot; Solicitor</span>
+            <h1>
+                <span class="line-1">Trusted Legal</span>
+                <span class="line-2">Counsel</span>
+                <span class="accent-line">close to home.</span>
+            </h1>
+            <p class="hero-sub">
+                Professional, client-centred legal services in real estate, wills &amp; powers of attorney, and corporate law &mdash; tailored to Cambridge, Kitchener, Waterloo, and the surrounding communities. As a lifelong member of this community, my advice is grounded in local practice and personal accessibility.
+            </p>
+            <div class="hero-pills">
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Waterloo Region
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    LL.B Osgoode Hall
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Called to Bar 2004
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Accessible Counsel
+                </span>
+            </div>
+            <div class="hero-actions">
+                <a href="tel:+15196224448" class="btn btn-forest">
+                    Call (519) 622-4448
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#practice" class="btn btn-ghost">
+                    Practice Areas
+                </a>
+            </div>
+        </div>
+
+        <aside class="hero-form-card">
+            <p class="form-eyebrow">No Obligation &middot; Confidential</p>
+            <h3>Request a Consultation</h3>
+            <p class="form-italic">Tell us about your matter.</p>
+            <p class="form-sub">Whether it's a purchase, a will, or a corporate question &mdash; we'll listen first, then advise.</p>
+            <form onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="hf-name">Your Name</label>
+                        <input type="text" id="hf-name" placeholder="Full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="hf-phone">Phone</label>
+                        <input type="tel" id="hf-phone" placeholder="(519) 000-0000">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="hf-email">Email</label>
+                    <input type="email" id="hf-email" placeholder="you@example.com">
+                </div>
+                <div class="form-field">
+                    <label for="hf-area">Type of Matter</label>
+                    <select id="hf-area">
+                        <option value="">Select a category...</option>
+                        <option>Real Estate &mdash; Purchase</option>
+                        <option>Real Estate &mdash; Sale</option>
+                        <option>Real Estate &mdash; Refinance</option>
+                        <option>Wills</option>
+                        <option>Powers of Attorney</option>
+                        <option>Estate Planning</option>
+                        <option>Corporate &mdash; Incorporation</option>
+                        <option>Corporate &mdash; Contracts</option>
+                        <option>Commercial Transactions</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="hf-msg">Brief Description</label>
+                    <textarea id="hf-msg" placeholder="A few sentences about your matter &mdash; that's plenty to start."></textarea>
+                </div>
+                <button class="form-btn" type="submit">
+                    Send &mdash; Confidential
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="form-foot">Or call <strong>(519) 622-4448</strong> for direct service.</p>
+            </form>
+        </aside>
+    </div>
+</section>
+
+<!-- 02 / RECOGNITION STRIP -->
+<section class="recognition" aria-label="Firm credentials" id="recognition">
+    <span class="chapter-mark" style="color:var(--gold-bright);opacity:0.50;">02 / 10 &mdash; Recognition</span>
+    <div class="container">
+        <div class="recognition-inner">
+            <div class="recognition-item">
+                <span class="recognition-label">Established</span>
+                <span class="recognition-value"><em>2008</em></span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Headquarters</span>
+                <span class="recognition-value">Cambridge, ON</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Team Size</span>
+                <span class="recognition-value">Solo Practice</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Coverage</span>
+                <span class="recognition-value">Waterloo Region</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Principal</span>
+                <span class="recognition-value">Dan Seeley-Baechler</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 03 / PROMISE STRIP -->
+<section class="promise" id="promise">
+    <span class="chapter-mark">03 / 10 &mdash; Promise</span>
+    <span class="promise-quote-mark" aria-hidden="true">&ldquo;</span>
+    <div class="container">
+        <div class="promise-inner">
+            <div class="promise-rule"></div>
+            <blockquote>
+                My top priority is ensuring that I am <strong>accessible and responsive</strong> to my clients.
+            </blockquote>
+            <p class="promise-cite">&mdash; Dan Seeley-Baechler, LL.B &middot; Cambridge</p>
+        </div>
+    </div>
+</section>
+
+<!-- 04 / FEATURED 2-UP -->
+<section class="section featured" id="featured">
+    <span class="chapter-mark">04 / 10 &mdash; Featured</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Flagship Practice</p>
+            <h2 class="section-h2">The work we are <em>known for.</em></h2>
+            <p class="section-lead">Real estate is the most common reason clients walk through our door &mdash; and the area where local knowledge matters most. Below, the practice that built DSB Law, paired with the planning work that protects everything you've built.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card">
+                <div class="featured-img">
+                    <span class="featured-stamp">Our Flagship</span>
+                    <img src="img/featured-1.jpg" alt="Cambridge Ontario heritage architecture &mdash; Real Estate practice">
+                </div>
+                <div class="featured-body">
+                    <p class="eyebrow">Practice One</p>
+                    <h3>Real Estate</h3>
+                    <p class="featured-italic">Local knowledge for your largest investment.</p>
+                    <p>Dealing with real estate is one of the most common reasons to visit a lawyer. At the Law Office of Dan Seeley-Baechler, every real estate transaction &mdash; whether you are purchasing your first home, selling a property, or refinancing &mdash; is handled with the thoroughness and personal attention it deserves. As a community-rooted Cambridge practitioner, Dan brings practical local knowledge to every transaction.</p>
+                    <ul class="featured-highlights">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Residential purchases &amp; sales</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Refinancing &amp; title transfers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Accessible, community-rooted counsel</li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card">
+                <div class="featured-img">
+                    <span class="featured-stamp">For Every Stage</span>
+                    <img src="img/known-2.jpg" alt="Estate planning documents &mdash; Wills &amp; Powers of Attorney">
+                </div>
+                <div class="featured-body">
+                    <p class="eyebrow">Practice Two</p>
+                    <h3>Wills &amp; Powers of Attorney</h3>
+                    <p class="featured-italic">Planning that protects your family.</p>
+                    <p>Regardless of age or health, having a professionally drafted will and powers of attorney is crucial to protect you, your assets, and your family members in case of death or disability. From young families needing protection for minor children, to maturing estates seeking tax-efficient distribution &mdash; advice is custom-tailored to each family's unique needs.</p>
+                    <ul class="featured-highlights">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Wills for every family stage</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>POA for Property &amp; Personal Care</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tax-efficient estate planning</li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 05 / KNOWN FOR EDITORIAL BANDS -->
+<section class="section known" id="known">
+    <span class="chapter-mark">05 / 10 &mdash; Known For</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Why DSB Law</p>
+            <h2 class="section-h2">Three commitments, <em>every client.</em></h2>
+            <p class="section-lead">Three things define the way DSB Law practices &mdash; the way every file is handled, from the first phone call to the closing handshake. Read on for what that means in practice.</p>
+        </div>
+
+        <div class="known-bands">
+            <!-- Band 01 — marker left -->
+            <article class="known-band">
+                <div class="known-text">
+                    <span class="known-number">01</span>
+                    <span class="known-eyebrow">Real Estate</span>
+                    <h3 class="known-headline">Every transaction handled <em>with diligence.</em></h3>
+                    <p class="known-body">Dealing with real estate is one of the most common reasons to visit a lawyer. At the Law Office of Dan Seeley-Baechler, every purchase, sale, and refinancing is approached with the thoroughness and personal attention your most significant investment deserves. Local market knowledge makes every difference.</p>
+                    <div class="known-stat">Cambridge's trusted real estate counsel</div>
+                </div>
+                <div class="known-motif">
+                    <div class="known-motif-frame">
+                        <div class="known-motif-img">
+                            <img src="img/known-1.jpg" alt="House keys at closing &mdash; real estate motif">
+                        </div>
+                    </div>
+                    <span class="known-motif-caption">&mdash; I &middot;</span>
+                </div>
+            </article>
+
+            <!-- Band 02 — marker right (flip) -->
+            <article class="known-band flip">
+                <div class="known-text">
+                    <span class="known-number">02</span>
+                    <span class="known-eyebrow">Estate Planning</span>
+                    <h3 class="known-headline">Protecting your family <em>at every stage.</em></h3>
+                    <p class="known-body">Regardless of age or health, having a professionally drafted will and powers of attorney is crucial to protect you, your assets, and your family members in case of death or disability. At the Law Office of Dan Seeley-Baechler, advice is custom-tailored to each family's unique needs &mdash; from young families to maturing estates.</p>
+                    <div class="known-stat">Wills &middot; Powers of Attorney &middot; Estate Planning</div>
+                </div>
+                <div class="known-motif">
+                    <div class="known-motif-frame">
+                        <div class="known-motif-img">
+                            <img src="img/known-2.jpg" alt="Estate planning documents &mdash; wills and POA motif">
+                        </div>
+                    </div>
+                    <span class="known-motif-caption">&mdash; II &middot;</span>
+                </div>
+            </article>
+
+            <!-- Band 03 — marker left -->
+            <article class="known-band">
+                <div class="known-text">
+                    <span class="known-number">03</span>
+                    <span class="known-eyebrow">Corporate Law</span>
+                    <h3 class="known-headline">Business counsel <em>you can count on.</em></h3>
+                    <p class="known-body">Creating and operating a business takes drive, expertise, hard work, and good advisors. At DSB Law, Dan Seeley-Baechler provides practical corporate and commercial legal services tailored to the realities of running a business in Cambridge and the Waterloo Region. With several years of experience with local businesses, the advice you receive is built around how your business actually operates.</p>
+                    <div class="known-stat">Practical advice for Cambridge businesses</div>
+                </div>
+                <div class="known-motif">
+                    <div class="known-motif-frame">
+                        <div class="known-motif-img">
+                            <img src="img/known-3.jpg" alt="Business contract signing &mdash; corporate practice motif">
+                        </div>
+                    </div>
+                    <span class="known-motif-caption">&mdash; III &middot;</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 06 / PRACTICE GRID -->
+<section class="section practice" id="practice">
+    <span class="chapter-mark">06 / 10 &mdash; Practice Areas</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">Three focused areas, <em>one trusted lawyer.</em></h2>
+            <p class="section-lead">Real estate, estate planning, and corporate counsel &mdash; the matters that shape the major chapters of a life or a business. Each handled directly by Dan, with the personal attention a solo practice makes possible.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <span class="practice-numeral">I</span>
+                <div class="practice-roundel">
+                    <img src="img/known-1.jpg" alt="">
+                </div>
+                <h3>Real Estate</h3>
+                <p>Dealing with real estate is one of the most common reasons to visit a lawyer. At the Law Office of Dan Seeley-Baechler, every transaction is handled with thoroughness and personal attention &mdash; matched with experience in the local market.</p>
+                <div class="practice-tags">
+                    <span>Purchases</span>
+                    <span>Sales</span>
+                    <span>Refinancing</span>
+                    <span>Title Transfers</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">II</span>
+                <div class="practice-roundel">
+                    <img src="img/known-2.jpg" alt="">
+                </div>
+                <h3>Wills &amp; Powers of Attorney</h3>
+                <p>Regardless of age or health, having a professionally drafted will and powers of attorney is crucial to protect you, your assets, and your family members in case of death or disability. Advice tailored to each family's stage.</p>
+                <div class="practice-tags">
+                    <span>Wills</span>
+                    <span>POA &mdash; Property</span>
+                    <span>POA &mdash; Personal Care</span>
+                    <span>Estate Planning</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">III</span>
+                <div class="practice-roundel">
+                    <img src="img/known-3.jpg" alt="">
+                </div>
+                <h3>Corporate &amp; Commercial</h3>
+                <p>Creating and operating a business takes drive, expertise, hard work, and good advisors. You can rely on DSB Law for practical corporate and commercial legal counsel, in concert with you, your business, and your accountants.</p>
+                <div class="practice-tags">
+                    <span>Incorporations</span>
+                    <span>Contracts</span>
+                    <span>Commercial Transactions</span>
+                    <span>Business Counsel</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 06.5 / PRINCIPAL -->
+<section class="section" id="principal" style="background:var(--bg);">
+    <span class="chapter-mark">&middot; The Lawyer</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Principal Counsel</p>
+            <h2 class="section-h2">Meet <em>Dan Seeley-Baechler.</em></h2>
+            <p class="section-lead">Lifelong resident of the Cambridge area &mdash; raised in Ayr, educated at Waterloo and Osgoode Hall, and practicing law in the community he calls home since 2005.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 240px 1fr; gap: 56px; align-items:start; max-width:1080px; margin:0 auto; background:var(--paper); border:1px solid var(--border); border-left:4px solid var(--gold); padding:56px 48px; border-radius:2px; box-shadow: var(--shadow-md);" class="principal-card-wrap">
+            <div style="width:240px; height:240px; border-radius:50%; background:var(--forest-darker); display:flex; align-items:center; justify-content:center; border:3px solid var(--gold); box-shadow:var(--shadow-forest); flex-shrink:0;">
+                <span style="font-family:'Playfair Display', serif; font-style:italic; font-size:7.5rem; color:var(--gold-bright); font-weight:400; line-height:1; letter-spacing:-0.04em;">DS</span>
+            </div>
+            <div>
+                <p style="font-size:0.72rem; color:var(--gold-deep); letter-spacing:0.28em; text-transform:uppercase; font-weight:800; margin-bottom:12px;">Principal Counsel</p>
+                <h3 style="font-family:'Playfair Display', serif; font-size:2.2rem; color:var(--forest-deep); font-weight:800; margin-bottom:18px; letter-spacing:-0.018em; text-transform:uppercase; line-height:1.05;">Dan Seeley-Baechler, <em style="font-style:italic; color:var(--gold-deep); font-weight:500; text-transform:none;">LL.B</em></h3>
+                <p style="color:var(--text-mid); font-size:1rem; line-height:1.75; margin-bottom:18px;">Dan Seeley-Baechler is a lifelong resident of the Cambridge area. Raised in the town of Ayr, he attended high school at Southwood Secondary and went on to study political science at the University of Waterloo. He completed his LL.B at Osgoode Hall Law School and was called to the bar in 2004 &mdash; articling and practicing at a well-known firm in Brantford before returning to Cambridge in 2005.</p>
+                <p style="color:var(--text-mid); font-size:1rem; line-height:1.75; margin-bottom:22px;">In June 2008, Dan opened his own practice on Grand Avenue South, specializing in real estate, wills and powers of attorney, and corporate/commercial law. He and his wife Jocelyn stay busy running after their five kids &mdash; Gavin, Brynn, Claudia, Nathan, and Ben. In the time between his family and his work, Dan enjoys reading, gardening, football, and general tinkering.</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:26px; padding-top:24px; border-top:1px solid var(--border);">
+                    <div>
+                        <strong style="display:block; font-size:0.66rem; color:var(--gold-deep); letter-spacing:0.24em; text-transform:uppercase; font-weight:800; margin-bottom:10px;">Education</strong>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:6px;">
+                            <li style="font-size:0.92rem; color:var(--text); font-weight:500; line-height:1.45;"><span style="color:var(--gold-deep); margin-right:8px;">&#9642;</span>University of Waterloo &mdash; Political Science</li>
+                            <li style="font-size:0.92rem; color:var(--text); font-weight:500; line-height:1.45;"><span style="color:var(--gold-deep); margin-right:8px;">&#9642;</span>Osgoode Hall Law School &mdash; LL.B</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong style="display:block; font-size:0.66rem; color:var(--gold-deep); letter-spacing:0.24em; text-transform:uppercase; font-weight:800; margin-bottom:10px;">Bar &amp; Focus</strong>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:6px;">
+                            <li style="font-size:0.92rem; color:var(--text); font-weight:500; line-height:1.45;"><span style="color:var(--gold-deep); margin-right:8px;">&#9642;</span>Called to Ontario Bar, 2004</li>
+                            <li style="font-size:0.92rem; color:var(--text); font-weight:500; line-height:1.45;"><span style="color:var(--gold-deep); margin-right:8px;">&#9642;</span>Real Estate &middot; Wills &amp; POA &middot; Corporate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 07 / APPROACH DARK BAND -->
+<section class="approach" id="approach">
+    <span class="approach-rule-top"></span>
+    <span class="chapter-mark" style="color:var(--gold-bright);opacity:0.50;">07 / 10 &mdash; Approach</span>
+    <span class="approach-side-stamp">Our Approach &middot; Your Neighbour at Law</span>
+
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Three principles, <em>one handshake.</em></h2>
+            <p class="section-lead">The way DSB Law practices comes from the same place Dan comes from &mdash; this community. These are the commitments behind every file.</p>
+        </div>
+
+        <div class="approach-medallions">
+            <span class="approach-connector" aria-hidden="true"></span>
+            <div class="approach-grid">
+                <article class="approach-card">
+                    <div class="approach-medallion"><span>01</span></div>
+                    <p class="approach-eyebrow">Pillar One</p>
+                    <h3>Accessible</h3>
+                    <p class="approach-italic">Quick, relevant, by any channel.</p>
+                    <p>My top priority is ensuring that I am accessible and responsive to my clients. Whether via email, phone, fax, or mail, you can be assured of a quick and relevant response.</p>
+                    <span class="approach-rule"></span>
+                </article>
+
+                <article class="approach-card">
+                    <div class="approach-medallion"><span>02</span></div>
+                    <p class="approach-eyebrow">Pillar Two</p>
+                    <h3>Community-Rooted</h3>
+                    <p class="approach-italic">Lifelong resident. Local counsel.</p>
+                    <p>As a lifelong resident of the Cambridge area, I provide legal advice custom-tailored to the needs and practices of this community &mdash; advice that only a local practitioner can offer.</p>
+                    <span class="approach-rule"></span>
+                </article>
+
+                <article class="approach-card">
+                    <div class="approach-medallion"><span>03</span></div>
+                    <p class="approach-eyebrow">Pillar Three</p>
+                    <h3>Client-Centred</h3>
+                    <p class="approach-italic">Individual attention. Custom advice.</p>
+                    <p>Professional, client-centred service means your matter receives individual attention &mdash; not a one-size-fits-all approach. Each client's goals and circumstances are unique.</p>
+                    <span class="approach-rule"></span>
+                </article>
+            </div>
+        </div>
+    </div>
+    <span class="approach-rule-bottom"></span>
+</section>
+
+<!-- 08 / COVERAGE STRIP -->
+<section class="coverage" id="coverage">
+    <span class="chapter-mark">08 / 10 &mdash; Coverage</span>
+    <div class="container">
+        <p class="coverage-label">Serving the Waterloo Region</p>
+        <p class="coverage-list">
+            <span>Cambridge</span>
+            <span class="dot"></span>
+            <span>Kitchener</span>
+            <span class="dot"></span>
+            <span>Waterloo</span>
+        </p>
+    </div>
+</section>
+
+<!-- 09 / CTA BAND -->
+<section class="cta-band" id="cta">
+    <span class="chapter-mark" style="color:var(--gold-bright);opacity:0.55;">09 / 10 &mdash; Speak with Dan</span>
+    <div class="container">
+        <div class="cta-inner">
+            <h2>The first call is <em>the easy part.</em></h2>
+            <p>Reach out by phone, email, or message &mdash; you'll be assured of a quick and relevant response.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="tel:+15196224448" class="btn btn-ink">
+                    Call (519) 622-4448
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 10 / CONTACT -->
+<section class="section contact" id="contact">
+    <span class="chapter-mark">10 / 10 &mdash; Contact</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-h2">Grand Avenue South &middot; <em>Cambridge.</em></h2>
+            <p class="section-lead">Tell us briefly about your matter and we'll be in touch. Whether via email, phone, fax, or mail, you can be assured of a quick and relevant response.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>The Law Office of Dan Seeley-Baechler<br>32 Grand Avenue South<br>Cambridge, Ontario&nbsp; N1S 2L6</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:+15196224448">(519) 622-4448</a><br>
+                            <span style="color:var(--text-mid);font-size:0.92rem;">Fax (519) 622-8202</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:dan@dsb-law.ca">dan@dsb-law.ca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Contact us to schedule an appointment<br><span style="color:var(--text-soft);font-size:0.88rem;">Downtown Cambridge &middot; Grand Avenue South</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Confidential Inquiry</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(519) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Real Estate &mdash; Purchase</option>
+                            <option>Real Estate &mdash; Sale</option>
+                            <option>Real Estate &mdash; Refinance</option>
+                            <option>Real Estate &mdash; Title Transfer</option>
+                            <option>Wills</option>
+                            <option>Powers of Attorney</option>
+                            <option>Estate Planning</option>
+                            <option>Corporate &mdash; Incorporation</option>
+                            <option>Corporate &mdash; Contracts</option>
+                            <option>Commercial Transactions</option>
+                            <option>Business Counsel</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about your matter &mdash; keep it brief, we'll follow up."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-note">All inquiries are treated as confidential.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=32+Grand+Avenue+South,+Cambridge,+Ontario+N1S+2L6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="DSB Law office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="dsb-mark inverse" aria-label="DSB Law">
+                    <span class="dsb-eyebrow">The Law Office of</span>
+                    <span class="dsb-name">Seeley-<em>Baechler</em></span>
+                    <span class="dsb-rule"></span>
+                    <span class="dsb-tag">Cambridge &middot; Ontario</span>
+                </a>
+                <p>Trusted legal counsel in Cambridge and the Waterloo Region. Real estate, wills &amp; powers of attorney, and corporate counsel &mdash; from a community-rooted Cambridge practitioner.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#practice">Real Estate</a></li>
+                    <li><a href="#practice">Wills &amp; Powers of Attorney</a></li>
+                    <li><a href="#practice">Corporate / Commercial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li class="plain">32 Grand Avenue South</li>
+                    <li class="plain">Cambridge, Ontario N1S 2L6</li>
+                    <li><a href="tel:+15196224448">(519) 622-4448</a></li>
+                    <li class="plain">Fax: (519) 622-8202</li>
+                    <li><a href="mailto:dan@dsb-law.ca">dan@dsb-law.ca</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> The Law Office of Dan Seeley-Baechler. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with The Law Office of Dan Seeley-Baechler.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // Smooth scroll anchor + hash update
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#') { e.preventDefault(); return; }
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', href);
+        }
+    });
+
+    // Mobile drawer
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal animations — decelerating curve with later sections heavier
+    const heroReveals = document.querySelectorAll('.hero-content, .hero-form-card');
+    const earlyReveals = document.querySelectorAll('.recognition-item, .promise-inner');
+    const midReveals = document.querySelectorAll('.featured-card, .practice-card, .known-text, .known-motif, .section-head');
+    const lateReveals = document.querySelectorAll('.approach-card, .coverage-list, .cta-inner, .contact-info, .contact-form, .map-wrap, .principal-card-wrap');
+
+    heroReveals.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDuration = '0.55s';
+        el.style.transitionDelay = (i * 80) + 'ms';
+    });
+    earlyReveals.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDuration = '0.6s';
+        el.style.transitionDelay = (i * 90) + 'ms';
+    });
+    midReveals.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDuration = '0.75s';
+    });
+    lateReveals.forEach((el) => {
+        el.classList.add('reveal');
+        el.style.transitionDuration = '0.95s';
+    });
+
+    // Alternate slide direction for known band motifs
+    document.querySelectorAll('.known-band').forEach((band, i) => {
+        const text = band.querySelector('.known-text');
+        const motif = band.querySelector('.known-motif');
+        if (text) text.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+        if (motif) motif.classList.add(i % 2 === 0 ? 'reveal-right' : 'reveal-left');
+    });
+
+    const allReveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.10, rootMargin: '0px 0px -50px 0px' });
+    allReveals.forEach(el => io.observe(el));
+
+    // Stagger card grids — early 80ms, late 140ms
+    document.querySelectorAll('.practice-grid, .featured-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 80) + 'ms';
+        });
+    });
+    document.querySelectorAll('.approach-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 140) + 'ms';
+        });
+    });
+    document.querySelectorAll('.recognition-inner').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 70) + 'ms';
+        });
+    });
+
+    // Active-state nav based on scroll position
+    const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+    const sectionIds = ['hero', 'known', 'practice', 'principal', 'approach'];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+    const setActiveNav = () => {
+        const scrollY = window.scrollY + 200;
+        let current = sections[0]?.id || 'hero';
+        sections.forEach(sec => {
+            if (sec && sec.offsetTop <= scrollY) current = sec.id;
+        });
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-section') === current);
+        });
+    };
+    window.addEventListener('scroll', setActiveNav, { passive: true });
+    setActiveNav();
+</script>
+
+</body>
+</html>

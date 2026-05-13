@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Veralrud &amp; Fowler | Personal Injury &amp; Criminal Defense Attorneys Eugene, Oregon</title>
+    <meta name="description" content="Veralrud &amp; Fowler — Eugene's AV-rated trial firm. 30+ years fighting for injury victims and criminal defendants across Lane County, Oregon.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Veralrud & Fowler — AV-rated litigator: deep crimson on parchment, steel-ink accent */
+            --ink:          #1A1A1A;
+            --ink-deep:     #0C0C0C;
+            --char:         #232323;
+            --char-mid:     #363636;
+            --char-light:   #5A5A5A;
+
+            --crimson:        #7A1C1C;
+            --crimson-bright: #9A2828;
+            --crimson-deep:   #54100F;
+            --crimson-darker: #350807;
+            --crimson-pale:   #D9B3B3;
+            --crimson-tint:   #EFD6D6;
+            --crimson-soft:   #F8EAEA;
+
+            --steel:        #2C3340;
+            --steel-bright: #3D4756;
+            --steel-deep:   #1A2030;
+            --steel-pale:   #8A93A4;
+            --steel-tint:   #C7CDDA;
+            --steel-soft:   #E5E8EE;
+
+            --brass:        #B8924A;
+            --brass-bright: #D0A85E;
+            --brass-deep:   #816327;
+            --brass-pale:   #E5D4A4;
+            --brass-soft:   #F4ECD2;
+
+            --bone:         #F4EFE6;
+            --bone-deep:    #EBE3D2;
+            --paper:        #FFFFFF;
+            --bg:           #FBF7EE;
+            --bg-soft:      #FDFAF3;
+
+            --text:         #1A1A1A;
+            --text-mid:     #4A4A50;
+            --text-soft:    #6E6E76;
+            --text-faint:   #94949C;
+
+            --border:       #E2DCCC;
+            --border-soft:  #ECE6D6;
+
+            --topbar-h:     40px;
+            --nav-h:        82px;
+            --total-nav:    122px;
+
+            --shadow-sm:    0 1px 3px rgba(26,26,26,0.07);
+            --shadow-md:    0 8px 24px -8px rgba(26,26,26,0.22), 0 2px 6px -2px rgba(26,26,26,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(26,26,26,0.34), 0 8px 16px -8px rgba(26,26,26,0.14);
+            --shadow-crimson: 0 12px 28px -8px rgba(122,28,28,0.50);
+            --shadow-steel: 0 12px 28px -8px rgba(44,51,64,0.45);
+            --shadow-ink:   0 12px 28px -8px rgba(26,26,26,0.50);
+
+            --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+            position: relative;
+        }
+
+        /* Paper grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+            mix-blend-mode: multiply;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+            font-weight: 700;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+        /* ── CHAPTER MARKS ──────────────────────────────────── */
+        .chapter-mark {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 0.54rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            opacity: 0.42;
+            z-index: 4;
+            pointer-events: none;
+        }
+        .chapter-mark.on-dark {
+            color: var(--brass-bright);
+            opacity: 0.45;
+        }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .vf-mark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+            position: relative;
+        }
+        .vf-mark .vf-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.56rem;
+            color: var(--crimson);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        .vf-mark .vf-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.42rem;
+            color: var(--ink);
+            letter-spacing: 0.025em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .vf-mark .vf-name em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 600;
+            text-transform: none;
+            font-size: 1.2rem;
+            padding: 0 4px;
+        }
+        .vf-mark .vf-rule {
+            display: block;
+            width: 38px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 8px 0 5px;
+        }
+        .vf-mark .vf-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.58rem;
+            color: var(--steel);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .vf-mark.inverse .vf-eyebrow { color: var(--brass-bright); }
+        .vf-mark.inverse .vf-name { color: var(--bone); }
+        .vf-mark.inverse .vf-name em { color: var(--crimson-pale); }
+        .vf-mark.inverse .vf-rule { background: var(--brass); }
+        .vf-mark.inverse .vf-tag { color: var(--brass-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink-deep);
+            color: rgba(244,239,230,0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(244,239,230,0.92);
+            transition: color 0.18s var(--ease-out);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+        }
+        .top-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--brass-bright);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s var(--ease-out);
+        }
+        .top-bar a:hover { color: var(--brass-bright); }
+        .top-bar a:hover::after { transform: scaleX(1); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--brass-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.20); }
+        .top-bar .av-rated {
+            color: var(--brass-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.66rem;
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(14px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+            padding: 6px 0;
+        }
+        .nav-links a:not(.nav-cta)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s var(--ease-out);
+        }
+        .nav-links a:not(.nav-cta):hover::after,
+        .nav-links a:not(.nav-cta).active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .nav-links a:hover { color: var(--crimson); }
+        .nav-links a.active { color: var(--crimson); }
+
+        .nav-cta {
+            background: var(--crimson) !important;
+            color: var(--bone) !important;
+            padding: 12px 26px !important;
+            border: 1.5px solid var(--crimson-deep) !important;
+            border-radius: 2px;
+            font-weight: 800 !important;
+            letter-spacing: 0.10em !important;
+            font-size: 0.74rem !important;
+            transition: background 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+            box-shadow: 0 3px 10px rgba(122,28,28,0.32);
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.15;
+            gap: 2px;
+        }
+        .nav-cta span.cta-phone {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: rgba(244,239,230,0.85);
+            letter-spacing: 0.08em;
+        }
+        .nav-cta:hover {
+            background: var(--crimson-deep) !important;
+            color: var(--bone) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(122,28,28,0.45);
+        }
+        .nav-cta::after { display: none !important; }
+
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.35s var(--ease-out);
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        section { scroll-margin-top: calc(var(--total-nav) + 24px); }
+
+        /* ── HERO ───────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: calc(var(--total-nav) + 24px);
+            padding-bottom: 90px;
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--ink-deep);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(115deg, rgba(12,12,12,0.86) 0%, rgba(26,26,26,0.74) 40%, rgba(122,28,28,0.52) 100%),
+                url('img/hero.jpg') center 38% / cover no-repeat;
+            z-index: 0;
+            transform: scale(1.05);
+            filter: contrast(1.05) saturate(0.92);
+            animation: hero-drift 22s ease-in-out infinite alternate;
+        }
+        @keyframes hero-drift {
+            0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+            100% { transform: scale(1.07) translate3d(-1.5%, -1%, 0); }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 30%, rgba(184,146,74,0.20), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(84,16,15,0.55), transparent 50%),
+                linear-gradient(180deg, rgba(12,12,12,0.20) 0%, transparent 30%, rgba(12,12,12,0.55) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            opacity: 0.6;
+            z-index: 2;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 3;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 56px;
+            align-items: center;
+        }
+        .hero-corner {
+            position: absolute;
+            top: calc(var(--total-nav) + 12px);
+            right: 32px;
+            z-index: 4;
+            width: 90px;
+            height: 90px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .hero-corner svg { width: 100%; height: 100%; }
+
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.94rem;
+            color: var(--brass-bright);
+            margin-bottom: 24px;
+        }
+        .hero-stamp::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--brass-bright);
+        }
+        .hero-stamp strong {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 0.7rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--bone);
+            border-left: 1px solid rgba(244,239,230,0.30);
+            padding-left: 12px;
+            margin-left: 4px;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 5.4vw, 4.6rem);
+            font-weight: 800;
+            color: var(--bone);
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .hero h1 .line-1 { display: block; }
+        .hero h1 .line-2 {
+            display: block;
+            color: var(--bone);
+            margin-top: 4px;
+        }
+        .hero-accent {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+            color: var(--crimson-pale);
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: 0.01em;
+        }
+        .hero-rule {
+            width: 64px;
+            height: 3px;
+            background: var(--brass);
+            margin-bottom: 28px;
+        }
+        .hero-sub {
+            font-size: 1.06rem;
+            color: rgba(244,239,230,0.86);
+            line-height: 1.68;
+            max-width: 560px;
+            margin-bottom: 34px;
+            font-weight: 400;
+        }
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(244,239,230,0.06);
+            border: 1px solid rgba(184,146,74,0.34);
+            color: rgba(244,239,230,0.88);
+            border-radius: 2px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: border-color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+        }
+        .hero-pill:hover {
+            border-color: var(--brass-bright);
+            background: rgba(184,146,74,0.12);
+        }
+        .hero-pill svg {
+            width: 12px;
+            height: 12px;
+            color: var(--brass-bright);
+            flex-shrink: 0;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.22s var(--ease-out), background 0.22s var(--ease-out), color 0.22s var(--ease-out), border-color 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-crimson {
+            background: var(--crimson);
+            color: var(--bone);
+            box-shadow: var(--shadow-crimson);
+        }
+        .btn-crimson:hover {
+            background: var(--crimson-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(122,28,28,0.65);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,230,0.40);
+        }
+        .btn-ghost:hover {
+            background: rgba(244,239,230,0.08);
+            border-color: var(--brass);
+            color: var(--brass-bright);
+            transform: translateY(-2px);
+        }
+
+        /* Hero right column — credentials card */
+        .hero-creds {
+            background: rgba(12,12,12,0.55);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(184,146,74,0.30);
+            padding: 36px 32px;
+            border-radius: 3px;
+            position: relative;
+        }
+        .hero-creds::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--brass);
+        }
+        .hero-creds-eyebrow {
+            font-size: 0.64rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .hero-creds h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.18;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: -0.005em;
+        }
+        .hero-creds .creds-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--crimson-pale);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .hero-creds-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .hero-creds-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.86rem;
+            color: rgba(244,239,230,0.88);
+            line-height: 1.4;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(184,146,74,0.18);
+        }
+        .hero-creds-list li:last-child { border-bottom: none; padding-bottom: 0; }
+        .hero-creds-list svg {
+            width: 16px;
+            height: 16px;
+            color: var(--brass-bright);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .hero-creds-list strong {
+            color: var(--bone);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* ── RECOGNITION STRIP ─────────────────────────────── */
+        .recognition {
+            background: var(--ink-deep);
+            color: var(--bone);
+            padding: 34px 0;
+            border-bottom: 1px solid rgba(184,146,74,0.28);
+            position: relative;
+        }
+        .recognition::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(184,146,74,0.40) 50%, transparent 100%);
+        }
+        .recognition-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        .recognition-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 0;
+            flex: 1;
+            text-align: center;
+            padding: 6px 18px;
+            border-right: 1px solid rgba(244,239,230,0.10);
+        }
+        .recognition-item:last-child { border-right: none; }
+        .recognition-label {
+            font-size: 0.6rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .recognition-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.015em;
+            font-variant-numeric: tabular-nums;
+        }
+        .recognition-value em {
+            font-style: italic;
+            color: var(--brass-bright);
+            font-weight: 500;
+            text-transform: none;
+        }
+
+        /* ── PROMISE BAND ──────────────────────────────────── */
+        .promise {
+            background: var(--bone);
+            padding: 110px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise-quote-mark {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 18rem;
+            line-height: 0.8;
+            color: var(--crimson);
+            opacity: 0.06;
+            font-style: italic;
+            font-weight: 700;
+            pointer-events: none;
+            user-select: none;
+        }
+        .promise-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise-rule {
+            width: 60px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 0 auto 24px;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+            font-style: italic;
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.36;
+            letter-spacing: -0.008em;
+            margin-bottom: 26px;
+            hanging-punctuation: first last;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--crimson);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* ── FEATURED PRACTICE 2-UP ────────────────────────── */
+        .featured {
+            background: var(--paper);
+            padding: 130px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 18px;
+            letter-spacing: -0.018em;
+            line-height: 1.06;
+            text-transform: uppercase;
+        }
+        .section-h2 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .section-lead {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.78;
+            font-weight: 400;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+        .featured-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), border-color 0.45s var(--ease-out);
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--crimson);
+        }
+        .featured-photo {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s var(--ease-out);
+        }
+        .featured-card:hover .featured-photo img { transform: scale(1.04); }
+        .featured-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, transparent 35%, rgba(12,12,12,0.78) 100%);
+            pointer-events: none;
+        }
+        .featured-stamp {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 2;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.84rem;
+            color: var(--bone);
+            background: rgba(122,28,28,0.92);
+            padding: 6px 14px;
+            border: 1px solid var(--brass);
+            letter-spacing: 0.02em;
+        }
+        .featured-info {
+            padding: 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .featured-info .eyebrow {
+            font-size: 0.66rem;
+            color: var(--crimson);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .featured-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            color: var(--ink);
+            font-weight: 800;
+            line-height: 1.14;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: -0.005em;
+        }
+        .featured-info .accent-line {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.08rem;
+            color: var(--crimson);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .featured-info p {
+            color: var(--text-mid);
+            font-size: 0.98rem;
+            line-height: 1.72;
+            margin-bottom: 24px;
+        }
+        .featured-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .featured-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.45;
+            font-weight: 500;
+        }
+        .featured-highlights svg {
+            width: 16px;
+            height: 16px;
+            color: var(--crimson);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding-bottom: 6px;
+            position: relative;
+            margin-top: auto;
+            align-self: flex-start;
+            transition: color 0.25s var(--ease-out);
+        }
+        .featured-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            background: var(--crimson);
+            width: 0;
+            transition: width 0.4s var(--ease-out);
+        }
+        .featured-link:hover { color: var(--crimson); }
+        .featured-link:hover::after { width: 100%; }
+        .featured-link svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.3s var(--ease-out);
+        }
+        .featured-link:hover svg { transform: translateX(4px); }
+
+        /* ── KNOWN FOR (editorial bands) ──────────────────── */
+        .known {
+            background: var(--bg);
+            padding: 130px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .known::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(122,28,28,0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .known::after {
+            content: '';
+            position: absolute;
+            bottom: -200px;
+            right: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(44,51,64,0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .known-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 96px;
+            position: relative;
+            z-index: 1;
+        }
+        .known-row:last-child { margin-bottom: 0; }
+        .known-row.reverse .known-content { order: 2; }
+        .known-row.reverse .known-motif { order: 1; }
+
+        .known-content {
+            position: relative;
+        }
+        .known-numeral {
+            position: absolute;
+            top: -50px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 9rem;
+            font-weight: 300;
+            color: var(--crimson);
+            opacity: 0.10;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            pointer-events: none;
+            font-variant-numeric: oldstyle-nums;
+        }
+        .known-row:not(.reverse) .known-numeral { left: -28px; }
+        .known-row.reverse .known-numeral { right: -28px; }
+
+        .known-eyebrow {
+            display: inline-block;
+            font-size: 0.66rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .known-row h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+            color: var(--ink);
+            font-weight: 800;
+            line-height: 1.12;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -0.012em;
+        }
+        .known-row h3 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .known-row p {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.78;
+            margin-bottom: 26px;
+        }
+        .known-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: var(--paper);
+            border: 1px solid var(--crimson-tint);
+            border-left: 4px solid var(--crimson);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--crimson-deep);
+            font-weight: 600;
+        }
+        .known-stat::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--crimson);
+        }
+
+        .known-motif {
+            position: relative;
+            aspect-ratio: 4/3;
+        }
+        .known-motif-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--brass);
+            padding: 14px;
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+        }
+        .known-row:hover .known-motif-frame {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .known-motif-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid var(--brass-pale);
+        }
+        .known-motif-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s var(--ease-out);
+        }
+        .known-row:hover .known-motif-inner img { transform: scale(1.05); }
+        .known-roman {
+            position: absolute;
+            bottom: -14px;
+            right: 22px;
+            background: var(--ink-deep);
+            color: var(--brass-bright);
+            padding: 6px 14px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.84rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            border: 1px solid var(--brass);
+            z-index: 2;
+        }
+
+        /* ── PRACTICE GRID ─────────────────────────────────── */
+        .practice {
+            background: var(--paper);
+            padding: 130px 0;
+            position: relative;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .practice-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 36px 30px 32px;
+            border-radius: 2px;
+            transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background 0.4s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.45s var(--ease-out);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--crimson);
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-numeral {
+            position: absolute;
+            top: 22px;
+            right: 26px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--crimson-tint);
+            font-weight: 300;
+            line-height: 1;
+            transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+            font-variant-numeric: oldstyle-nums;
+        }
+        .practice-card:hover .practice-numeral {
+            color: var(--crimson-pale);
+            transform: translateY(-2px);
+        }
+        .practice-roundel {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 22px;
+            border: 1px solid var(--brass);
+            padding: 3px;
+            background: var(--paper);
+            position: relative;
+        }
+        .practice-roundel-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+        .practice-roundel-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease-out);
+        }
+        .practice-card:hover .practice-roundel-inner img { transform: scale(1.1); }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            line-height: 1.18;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            padding-right: 50px;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 18px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .practice-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--crimson-deep);
+            background: var(--crimson-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--crimson-tint);
+            letter-spacing: 0.04em;
+        }
+        .practice-learn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            padding-bottom: 4px;
+            position: relative;
+            align-self: flex-start;
+            transition: color 0.25s var(--ease-out);
+        }
+        .practice-learn::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1.5px;
+            background: var(--crimson);
+            width: 24px;
+            transition: width 0.4s var(--ease-out);
+        }
+        .practice-card:hover .practice-learn { color: var(--crimson); }
+        .practice-card:hover .practice-learn::after { width: 100%; }
+        .practice-learn svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s var(--ease-out);
+        }
+        .practice-card:hover .practice-learn svg { transform: translateX(3px); }
+
+        /* ── APPROACH (dark band) ──────────────────────────── */
+        .approach {
+            position: relative;
+            padding: 140px 0;
+            color: var(--bone);
+            overflow: hidden;
+            background-color: var(--ink-deep);
+            background-image:
+                linear-gradient(rgba(12,12,12,0.78), rgba(12,12,12,0.92)),
+                url('img/approach-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 25%, rgba(184,146,74,0.16), transparent 55%),
+                radial-gradient(ellipse at 85% 80%, rgba(184,146,74,0.10), transparent 55%),
+                linear-gradient(180deg, rgba(184,146,74,0.07) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .approach::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass), transparent);
+            opacity: 0.5;
+        }
+        .approach-bottom-rule {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass), transparent);
+            opacity: 0.5;
+        }
+        .approach .container { position: relative; z-index: 2; }
+        .approach-stamp {
+            position: absolute;
+            top: 50%;
+            left: 28px;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 0.62rem;
+            letter-spacing: 0.50em;
+            text-transform: uppercase;
+            color: var(--brass-bright);
+            opacity: 0.5;
+            white-space: nowrap;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .approach .section-eyebrow {
+            color: var(--brass-bright);
+        }
+        .approach .section-eyebrow::before,
+        .approach .section-eyebrow::after {
+            background: var(--brass-bright);
+        }
+        .approach .section-h2 {
+            color: var(--bone);
+        }
+        .approach .section-h2 em {
+            color: var(--brass-bright);
+        }
+        .approach .section-lead {
+            color: rgba(244,239,230,0.78);
+        }
+        .approach-medallions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+            margin-top: 80px;
+            position: relative;
+        }
+        .approach-medallions::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 14%;
+            right: 14%;
+            height: 1px;
+            background-image: linear-gradient(90deg, var(--brass) 50%, transparent 50%);
+            background-size: 8px 1px;
+            background-repeat: repeat-x;
+            opacity: 0.45;
+            z-index: 0;
+        }
+        .approach-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-medallion {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 28px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .approach-medallion::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border: 1.5px dashed var(--brass);
+            border-radius: 50%;
+            opacity: 0.55;
+            transition: transform 0.6s var(--ease-out), opacity 0.6s var(--ease-out);
+        }
+        .approach-card:hover .approach-medallion::before {
+            transform: rotate(30deg);
+            opacity: 0.85;
+        }
+        .approach-medallion-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--ink-deep);
+            border: 2px solid var(--brass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--brass-bright);
+            letter-spacing: -0.02em;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.55), inset 0 1px 0 rgba(184,146,74,0.30);
+            font-variant-numeric: oldstyle-nums;
+        }
+        .approach-card-eyebrow {
+            font-size: 0.6rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--bone);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.005em;
+            line-height: 1.18;
+            margin-bottom: 8px;
+        }
+        .approach-card .descriptor {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--crimson-pale);
+            font-size: 0.94rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .approach-card p {
+            color: rgba(244,239,230,0.80);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 320px;
+            margin: 0 auto 18px;
+        }
+        .approach-rule {
+            width: 36px;
+            height: 1.5px;
+            background: var(--brass);
+            margin: 0 auto;
+            transition: width 0.5s var(--ease-out);
+        }
+        .approach-card:hover .approach-rule {
+            width: 64px;
+        }
+
+        /* ── COVERAGE STRIP ────────────────────────────────── */
+        .coverage {
+            background: var(--bone);
+            padding: 60px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+        }
+        .coverage-inner {
+            text-align: center;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .coverage-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.66rem;
+            color: var(--crimson);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 22px;
+        }
+        .coverage-eyebrow svg { width: 16px; height: 16px; }
+        .coverage-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--ink);
+            font-weight: 500;
+        }
+        .coverage-list span {
+            position: relative;
+            transition: color 0.25s var(--ease-out);
+        }
+        .coverage-list span:hover { color: var(--crimson); }
+        .coverage-list span:not(:last-child)::after {
+            content: '\00B7';
+            position: absolute;
+            right: -16px;
+            color: var(--brass);
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* ── TESTIMONIALS ──────────────────────────────────── */
+        .testimonials {
+            background: var(--bg);
+            padding: 130px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials::before,
+        .testimonials::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass), transparent);
+            opacity: 0.35;
+        }
+        .testimonials::before { top: 0; }
+        .testimonials::after { bottom: 0; }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 44px 38px 36px;
+            border-radius: 2px;
+            position: relative;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+            overflow: hidden;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brass);
+            box-shadow: var(--shadow-md);
+        }
+        .testimonial-quote-mark {
+            position: absolute;
+            top: 14px;
+            left: 22px;
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            line-height: 0.8;
+            color: var(--brass);
+            opacity: 0.07;
+            font-weight: 700;
+            font-style: italic;
+            pointer-events: none;
+            user-select: none;
+        }
+        .testimonial-card blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.08rem;
+            color: var(--ink);
+            line-height: 1.6;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 1;
+            hanging-punctuation: first last;
+        }
+        .testimonial-rule {
+            width: 44px;
+            height: 2px;
+            background: var(--brass);
+            margin-bottom: 16px;
+        }
+        .testimonial-attr {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 0.74rem;
+            color: var(--ink);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+        .testimonial-context {
+            display: block;
+            margin-top: 6px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.82rem;
+            color: var(--crimson);
+            letter-spacing: 0.04em;
+            font-weight: 500;
+            text-transform: none;
+        }
+
+        /* ── CTA BAND ──────────────────────────────────────── */
+        .cta-band {
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 96px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.10), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.22), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .cta-inner .section-eyebrow {
+            color: var(--brass-bright);
+        }
+        .cta-inner .section-eyebrow::before,
+        .cta-inner .section-eyebrow::after {
+            background: var(--brass-bright);
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--bone);
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.018em;
+            text-transform: uppercase;
+            line-height: 1.08;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--brass-bright);
+            font-weight: 500;
+            text-transform: none;
+        }
+        .cta-inner p {
+            color: rgba(244,239,230,0.94);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .cta-band .btn-ink {
+            background: var(--ink-deep);
+            color: var(--bone);
+            border: 1.5px solid var(--ink-deep);
+        }
+        .cta-band .btn-ink:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-ink);
+        }
+        .cta-band .btn-ghost-light {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,230,0.55);
+        }
+        .cta-band .btn-ghost-light:hover {
+            background: rgba(244,239,230,0.10);
+            border-color: var(--bone);
+            transform: translateY(-2px);
+        }
+
+        /* ── CONTACT ───────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+            padding: 130px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--ink);
+            margin-bottom: 28px;
+            font-weight: 800;
+            letter-spacing: -0.012em;
+            text-transform: uppercase;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--ink);
+            color: var(--brass-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.68rem;
+            color: var(--crimson);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+        }
+        .contact-list a {
+            border-bottom: 1px solid transparent;
+            transition: color 0.18s var(--ease-out), border-color 0.25s var(--ease-out);
+            padding-bottom: 1px;
+        }
+        .contact-list a:hover {
+            color: var(--crimson);
+            border-bottom-color: var(--crimson);
+        }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 42px 40px;
+            border-radius: 3px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--crimson);
+        }
+        .form-eyebrow {
+            font-size: 0.64rem;
+            color: var(--crimson);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 4px;
+            font-weight: 800;
+            letter-spacing: -0.012em;
+            text-transform: uppercase;
+        }
+        .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.02rem;
+            color: var(--crimson);
+            margin-bottom: 8px;
+        }
+        .form-sub {
+            color: var(--text-mid);
+            font-size: 0.92rem;
+            margin-bottom: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .form-field {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 0.66rem;
+            color: var(--ink);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.95rem;
+            color: var(--text);
+            transition: border-color 0.22s var(--ease-out), background 0.22s var(--ease-out);
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%237A1C1C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--crimson);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+        }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 16px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.22s var(--ease-out), transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out);
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
+        }
+        .form-btn:hover {
+            background: var(--crimson-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-foot {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+            font-style: italic;
+        }
+        .form-foot strong {
+            color: var(--crimson);
+            font-style: normal;
+            font-weight: 800;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        /* ── TEAM (compact partner card) ───────────────────── */
+        .team {
+            background: var(--paper);
+            padding: 130px 0;
+            position: relative;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: var(--bone);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--crimson);
+            padding: 48px 44px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 36px;
+            align-items: start;
+            border-radius: 2px;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+        }
+        .team-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .team-portrait {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: var(--brass-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 3.4rem;
+            font-weight: 500;
+            border: 3px solid var(--crimson);
+            flex-shrink: 0;
+            box-shadow: var(--shadow-crimson);
+            overflow: hidden;
+            position: relative;
+        }
+        .team-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%;
+            border-radius: 50%;
+        }
+        .team-info .role {
+            font-size: 0.68rem;
+            color: var(--crimson);
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .team-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.65rem;
+            color: var(--ink);
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.012em;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+        .team-info p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .team-creds {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.88rem;
+            color: var(--crimson);
+            border-top: 1px solid var(--border);
+            padding-top: 12px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .team-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+        .team-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--crimson-deep);
+            background: var(--crimson-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--crimson-tint);
+            letter-spacing: 0.04em;
+        }
+
+        /* ── FOOTER ────────────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(244,239,230,0.62);
+            padding: 80px 0 32px;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--crimson) 30%, var(--brass) 70%, transparent);
+            opacity: 0.7;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+        }
+        .footer-brand .vf-mark { margin-bottom: 22px; }
+        .footer-brand p {
+            color: rgba(244,239,230,0.62);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.84rem;
+            color: var(--brass-bright);
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(244,239,230,0.65);
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            bottom: -2px;
+            height: 1px;
+            background: var(--brass-bright);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s var(--ease-out);
+        }
+        .footer-col a:hover { color: var(--brass-bright); }
+        .footer-col a:hover::after { transform: scaleX(1); }
+        .footer-bottom {
+            border-top: 1px solid rgba(244,239,230,0.10);
+            padding-top: 26px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.76rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(244,239,230,0.50);
+        }
+        .footer-bottom a { color: rgba(244,239,230,0.70); }
+        .footer-bottom a:hover { color: var(--brass-bright); }
+
+        /* ── DEMO BANNER ───────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(12,12,12,0.92);
+            backdrop-filter: blur(8px);
+            color: var(--bone);
+            padding: 12px 56px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--crimson);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+        }
+        .demo-banner a { color: var(--brass-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(244,239,230,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.18s var(--ease-out);
+            background: none;
+            border: none;
+        }
+        .demo-banner-close:hover { color: var(--brass-bright); }
+
+        /* ── REVEAL ANIMATIONS ─────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+        }
+        .reveal.from-left { transform: translateX(-36px); }
+        .reveal.from-right { transform: translateX(36px); }
+        .reveal.scale { transform: scale(0.96); }
+        .reveal.visible { opacity: 1; transform: translate(0,0) scale(1); }
+
+        /* Late-page reveals have heavier feel */
+        .approach .reveal,
+        .coverage .reveal,
+        .testimonials .reveal,
+        .cta-band .reveal,
+        .contact .reveal { transition-duration: 0.6s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .hero-bg { animation: none !important; }
+            * { animation: none !important; }
+        }
+
+        /* ── RESPONSIVE ────────────────────────────────────── */
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+        }
+        @media (max-width: 1024px) {
+            .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 80px; }
+            .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+            .hero-creds { max-width: 540px; width: 100%; }
+            .hero-corner { display: none; }
+            .recognition-inner { gap: 18px; }
+            .recognition-item { flex: 1 1 calc(50% - 18px); border-right: none; border-bottom: 1px solid rgba(244,239,230,0.10); padding-bottom: 16px; }
+            .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+            .featured-grid { grid-template-columns: 1fr; gap: 24px; }
+            .known-row { grid-template-columns: 1fr; gap: 36px; }
+            .known-row.reverse .known-content { order: 1; }
+            .known-row.reverse .known-motif { order: 2; }
+            .known-numeral { left: -18px !important; right: auto !important; font-size: 7rem; top: -40px; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .approach-medallions { grid-template-columns: 1fr; gap: 56px; }
+            .approach-medallions::before { display: none; }
+            .approach-stamp { display: none; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .principal-card { grid-template-columns: 180px 1fr; gap: 36px; padding: 44px 32px; }
+            .team-grid { grid-template-columns: 1fr; max-width: 720px; }
+            .team-card { grid-template-columns: 140px 1fr; gap: 28px; padding: 36px 30px; }
+            .team-portrait { width: 140px; height: 140px; font-size: 2.6rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 10px; }
+            .top-bar .av-rated { display: none; }
+            .top-bar .divider { display: none; }
+            .top-bar-inner { gap: 14px; padding: 0; }
+            .container { padding: 0 20px; }
+            .featured { padding: 80px 0; }
+            .known { padding: 80px 0; }
+            .practice { padding: 80px 0; }
+            .team { padding: 80px 0; }
+            .testimonials { padding: 80px 0; }
+            .contact { padding: 80px 0; }
+            .approach { padding: 90px 0; }
+            .section-head { margin-bottom: 52px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 30px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .demo-banner { font-size: 0.72rem; padding: 10px 42px 10px 14px; }
+            .team-card { grid-template-columns: 1fr; text-align: center; padding: 36px 24px; gap: 24px; }
+            .team-portrait { margin: 0 auto; width: 140px; height: 140px; font-size: 2.6rem; }
+            .recognition { padding: 28px 0; }
+            .recognition-item { flex: 1 1 100%; padding: 12px 0; border-right: none; border-bottom: 1px solid rgba(244,239,230,0.10); }
+            .recognition-item:last-child { border-bottom: none; }
+            .hero-pills { gap: 8px; }
+            .hero-pill { font-size: 0.66rem; padding: 6px 10px; }
+            .featured-info { padding: 28px 26px; }
+            .known-stat { font-size: 1rem; }
+            .coverage-list { font-size: 1.1rem; }
+            .chapter-mark { display: none; }
+        }
+
+        ::selection { background: var(--crimson); color: var(--bone); }
+    </style>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ════════════════════════════════════════════ -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="av-rated">AV-Rated &middot; Martindale-Hubbell</span>
+        <span class="divider"></span>
+        <a href="tel:+15413453333" aria-label="Call (541) 345-3333">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (541) 345-3333
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:info@oregonattorney.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@oregonattorney.com
+        </a>
+    </div>
+</div>
+
+<!-- ═══ MAIN NAV ═══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="vf-mark" aria-label="Veralrud &amp; Fowler, Eugene Oregon">
+            <span class="vf-eyebrow">The Firm of</span>
+            <span class="vf-name">Veralrud <em>&amp;</em> Fowler</span>
+            <span class="vf-rule"></span>
+            <span class="vf-tag">Eugene &middot; Trial Attorneys</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-nav-target="hero">Home</a></li>
+            <li><a href="#known" data-nav-target="known">Why Veralrud</a></li>
+            <li><a href="#practice" data-nav-target="practice">Practice Areas</a></li>
+            <li><a href="#team" data-nav-target="team">Our Team</a></li>
+            <li><a href="#approach" data-nav-target="approach">Approach</a></li>
+            <li>
+                <a href="#contact" class="nav-cta">
+                    <span>Contact Us</span>
+                    <span class="cta-phone">(541) 345-3333</span>
+                </a>
+            </li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why Veralrud</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact" class="nav-cta"><span>Contact Us &middot; (541) 345-3333</span></a></li>
+    </ul>
+</div>
+
+<!-- ═══ 01 — HERO ══════════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <span class="chapter-mark on-dark">01 / 11 &mdash; Hero</span>
+    <div class="hero-corner" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#D0A85E" stroke-width="1.4" stroke-linecap="round">
+            <circle cx="50" cy="50" r="36" stroke-opacity="0.45"/>
+            <path d="M50 24 L50 76 M28 38 L72 38 M28 62 L72 62" stroke-opacity="0.7"/>
+            <path d="M30 38 L70 38 L62 70 L38 70 Z" stroke-opacity="0.85"/>
+            <circle cx="50" cy="50" r="4" fill="#D0A85E" stroke="none"/>
+            <path d="M22 80 L78 80" stroke-opacity="0.6"/>
+        </svg>
+    </div>
+    <div class="hero-inner">
+        <div class="hero-content reveal from-left">
+            <p class="hero-stamp">
+                
+                <strong>Eugene &middot; Oregon</strong>
+            </p>
+            <h1>
+                <span class="line-1">Experienced</span>
+                <span class="line-2">Trial Attorneys</span>
+            </h1>
+            <p class="hero-accent"><em>for Eugene &amp; Lane County</em></p>
+            <div class="hero-rule"></div>
+            <p class="hero-sub">
+                AV-rated by Martindale-Hubbell. Ranked among Oregon's Best Law Firms. Over 30 years securing just and fair results for Eugene, Springfield, and Lane County residents.
+            </p>
+            <div class="hero-pills">
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+                    AV Rated
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Lane County
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22 C8 18 4 14 4 9 a8 8 0 0116 0 c0 5 -4 9 -8 13z"/></svg>
+                    Free Injury Consult
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L12 21"/><path d="M5 8 L19 8"/><path d="M3 14 L8 14 L5.5 8 Z"/><path d="M16 14 L21 14 L18.5 8 Z"/></svg>
+                    Trial Tested
+                </span>
+            </div>
+            <div class="hero-actions">
+                <a href="tel:+15413453333" class="btn btn-crimson">
+                    Call (541) 345-3333
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#practice" class="btn btn-ghost">
+                    Practice Areas
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+        <aside class="hero-creds reveal from-right scale">
+            <p class="hero-creds-eyebrow">The Credentials</p>
+            <h3>One of Eugene's Top Trial Firms</h3>
+            <p class="creds-italic">Built case by case, courtroom by courtroom.</p>
+            <ul class="hero-creds-list">
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+                    <span><strong>AV &mdash; Martindale-Hubbell</strong>The highest national rating for legal ability and ethics.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><path d="M9 14 L15 14"/></svg>
+                    <span><strong>Best Law Firms in Oregon</strong>Selected by U.S. News and Business Report.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8h14v13"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+                    <span><strong>Federal, State &amp; Supreme Court</strong>Trial and appellate experience to the Ninth Circuit &amp; U.S. Supreme Court.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span><strong>30+ Years &middot; Lane County</strong>Continuous trial advocacy in the courthouses we know best.</span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+</section>
+
+<!-- ═══ 02 — RECOGNITION STRIP ═════════════════════════════ -->
+<section class="recognition" aria-label="Firm credentials">
+    <div class="container">
+        <span class="chapter-mark on-dark">02 / 11 &mdash; Recognition</span>
+        <div class="recognition-inner">
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Established</span>
+                <span class="recognition-value"><em>30+</em> Years</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Headquarters</span>
+                <span class="recognition-value">Eugene, OR</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Practice Focus</span>
+                <span class="recognition-value">Trial Advocacy</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Coverage</span>
+                <span class="recognition-value">Lane County</span>
+            </div>
+            <div class="recognition-item reveal">
+                <span class="recognition-label">Lead Counsel</span>
+                <span class="recognition-value">Greg <em>Veralrud</em></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 03 — PROMISE BAND ══════════════════════════════════ -->
+<section class="promise">
+    <span class="promise-quote-mark" aria-hidden="true">&ldquo;</span>
+    <div class="container">
+        <span class="chapter-mark">03 / 11 &mdash; Promise</span>
+        <div class="promise-inner reveal">
+            <div class="promise-rule"></div>
+            <blockquote>
+                Our firm has <strong>vigorously represented Eugene, Springfield, and Lane County residents for over 30 years</strong>, securing just and fair results in our areas of practice.
+            </blockquote>
+            <p class="promise-cite">&mdash; Veralrud &amp; Fowler</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 04 — FEATURED PRACTICE 2-UP ════════════════════════ -->
+<section class="featured" id="featured">
+    <div class="container">
+        <span class="chapter-mark">04 / 11 &mdash; Featured</span>
+        <div class="section-head">
+            <p class="section-eyebrow">Two Practices, One Firm</p>
+            <h2 class="section-h2">The flagship work that <em>built our reputation</em></h2>
+            <p class="section-lead">Veralrud &amp; Fowler holds a dual-practice focus: the firm that fights insurance carriers for injured Oregonians and also provides aggressive criminal defense.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card reveal from-left">
+                <div class="featured-photo">
+                    <img src="img/featured-1.jpg" alt="Personal injury practice — Veralrud &amp; Fowler" loading="lazy">
+                    <span class="featured-stamp">Our Flagship</span>
+                </div>
+                <div class="featured-info">
+                    <p class="eyebrow">Practice 01</p>
+                    <h3>Personal Injury</h3>
+                    <p class="accent-line">No fee until you collect.</p>
+                    <p>When you have been injured through no fault of your own, Veralrud &amp; Fowler fights with the full force of its 30-year trial record to secure fair compensation. The firm handles vehicle accidents, aviation disasters, wrongful death, medical malpractice, and commercial trucking accidents &mdash; all on a contingent fee basis so there is no financial risk to you until you recover.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free initial consultation on all injury matters
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            No fee until you collect &mdash; contingent fee basis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Experience from Lane County courts to the United States Supreme Court
+                        </li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card reveal from-right">
+                <div class="featured-photo">
+                    <img src="img/featured-2.jpg" alt="Criminal defense practice — Veralrud &amp; Fowler" loading="lazy">
+                    <span class="featured-stamp">Proven Defense</span>
+                </div>
+                <div class="featured-info">
+                    <p class="eyebrow">Practice 02</p>
+                    <h3>Criminal Defense</h3>
+                    <p class="accent-line">A former prosecutor, now on your side.</p>
+                    <p>Drawing on experience as a former Lane County Deputy District Attorney, the criminal defense practice offers clients an unmatched inside view of prosecutorial strategy. Whether facing DUII charges, federal criminal allegations, or serious misdemeanors, Veralrud &amp; Fowler provides aggressive, experienced representation in every Oregon court that matters.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Former Lane County Deputy District Attorney
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Past President, Oregon Criminal Defense Lawyers Association
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            DUII and federal criminal defense across Lane County
+                        </li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 05 — KNOWN FOR ═════════════════════════════════════ -->
+<section class="known" id="known">
+    <div class="container">
+        <span class="chapter-mark">05 / 11 &mdash; Known For</span>
+        <div class="section-head">
+            <p class="section-eyebrow">Why Veralrud &amp; Fowler</p>
+            <h2 class="section-h2">Three things, <em>done at the highest level</em></h2>
+            <p class="section-lead">A reputation 30 years in the making &mdash; built on trial verdicts and settlement leverage that insurance carriers and prosecutors take seriously.</p>
+        </div>
+
+        <article class="known-row reveal">
+            <span class="known-numeral">01</span>
+            <div class="known-content">
+                <span class="known-eyebrow">Courtroom Record</span>
+                <h3>Trial attorneys who know how to <em>win in court</em></h3>
+                <p>Veralrud &amp; Fowler has built its reputation on aggressive trial advocacy &mdash; not settlement pressure alone. With experience in Federal, State, and Municipal Courts, the Ninth Circuit Court of Appeals, and the United States Supreme Court, the firm brings high-court depth to Lane County clients who need a team that can go all the way.</p>
+                <span class="known-stat">30+ Years Tried</span>
+            </div>
+            <div class="known-motif">
+                <div class="known-motif-frame">
+                    <div class="known-motif-inner">
+                        <img src="img/known-1.jpg" alt="Courtroom interior, Lane County" loading="lazy">
+                    </div>
+                </div>
+                <span class="known-roman">I</span>
+            </div>
+        </article>
+
+        <article class="known-row reverse reveal">
+            <span class="known-numeral">02</span>
+            <div class="known-content">
+                <span class="known-eyebrow">Personal Injury</span>
+                <h3>Fighting for the injured with <em>no fee until you collect</em></h3>
+                <p>From vehicle accidents and medical malpractice to wrongful death and aviation disasters, the personal injury practice is built on contingent-fee access &mdash; meaning every injured Oregonian can afford to fight back. Free initial consultations ensure you know your options before committing to any legal costs.</p>
+                <span class="known-stat">Free Consultation</span>
+            </div>
+            <div class="known-motif">
+                <div class="known-motif-frame">
+                    <div class="known-motif-inner">
+                        <img src="img/known-2.jpg" alt="Personal injury law — Veralrud &amp; Fowler" loading="lazy">
+                    </div>
+                </div>
+                <span class="known-roman">II</span>
+            </div>
+        </article>
+
+        <article class="known-row reveal">
+            <span class="known-numeral">03</span>
+            <div class="known-content">
+                <span class="known-eyebrow">Criminal Defense</span>
+                <h3>A former prosecutor who now <em>defends the accused</em></h3>
+                <p>As a former Lane County Deputy District Attorney and Past President of the Oregon Criminal Defense Lawyers Association, Greg Veralrud understands both sides of the courtroom. That insider perspective informs strategy for criminal defense clients facing DUII charges or serious allegations across Lane County.</p>
+                <span class="known-stat">Former Lane Co. Dep. D.A.</span>
+            </div>
+            <div class="known-motif">
+                <div class="known-motif-frame">
+                    <div class="known-motif-inner">
+                        <img src="img/known-3.jpg" alt="Criminal defense at the courthouse" loading="lazy">
+                    </div>
+                </div>
+                <span class="known-roman">III</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ═══ 06 — PRACTICE GRID ═════════════════════════════════ -->
+<section class="practice" id="practice">
+    <div class="container">
+        <span class="chapter-mark">06 / 11 &mdash; Practice</span>
+        <div class="section-head">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">From the highway to the <em>operating room</em></h2>
+            <p class="section-lead">Personal injury and criminal defense, in every form they take in Lane County &mdash; with one trial firm representing you from first call to verdict.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card reveal">
+                <span class="practice-numeral">I</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/feature-personal-injury.jpg" alt="Personal injury" loading="lazy">
+                    </div>
+                </div>
+                <h3>Personal Injury</h3>
+                <p>Were you injured? We'll fight for you. No fee until you collect &mdash; free initial consultation on all injury matters.</p>
+                <div class="practice-tags">
+                    <span>Vehicle Accidents</span>
+                    <span>Medical Malpractice</span>
+                    <span>Wrongful Death</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">II</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/practice-personal-injury-wide.jpg" alt="Vehicle accidents" loading="lazy">
+                    </div>
+                </div>
+                <h3>Vehicle Accidents</h3>
+                <p>Need help processing your insurance claim? We handle all aspects of motor vehicle accident claims in Oregon.</p>
+                <div class="practice-tags">
+                    <span>Auto Accidents</span>
+                    <span>Insurance Claims</span>
+                    <span>Lane County</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">III</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/section-experience.jpg" alt="Aviation accidents" loading="lazy">
+                    </div>
+                </div>
+                <h3>Aviation Accidents</h3>
+                <p>Were you or a loved one in a plane crash? We fight for victims of aviation disasters with the full force of trial advocacy.</p>
+                <div class="practice-tags">
+                    <span>Plane Crash</span>
+                    <span>Aviation</span>
+                    <span>Serious Injury</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">IV</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/section-reputation.jpg" alt="Wrongful death" loading="lazy">
+                    </div>
+                </div>
+                <h3>Wrongful Death</h3>
+                <p>Was your loved one's death a result of negligence? We hold the responsible parties accountable.</p>
+                <div class="practice-tags">
+                    <span>Negligence</span>
+                    <span>Wrongful Death</span>
+                    <span>Damages</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">V</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/known-2.jpg" alt="Medical malpractice" loading="lazy">
+                    </div>
+                </div>
+                <h3>Medical Malpractice</h3>
+                <p>Were you the victim of possible medical negligence? We take on hospitals and providers on behalf of harmed patients.</p>
+                <div class="practice-tags">
+                    <span>Medical Negligence</span>
+                    <span>Hospital</span>
+                    <span>Malpractice</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">VI</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/known-1.jpg" alt="Trucking accidents" loading="lazy">
+                    </div>
+                </div>
+                <h3>Trucking Accidents</h3>
+                <p>Were you injured in an accident involving a commercial truck? We pursue maximum recovery against carriers and insurers.</p>
+                <div class="practice-tags">
+                    <span>Commercial Truck</span>
+                    <span>Carrier</span>
+                    <span>Semi-Truck</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal" style="grid-column: 1 / -1;">
+                <span class="practice-numeral">VII</span>
+                <div class="practice-roundel">
+                    <div class="practice-roundel-inner">
+                        <img src="img/feature-criminal-defense.jpg" alt="Criminal defense" loading="lazy">
+                    </div>
+                </div>
+                <h3>Criminal Defense &middot; DUII &middot; Federal Court</h3>
+                <p>Aggressive criminal defense representation in federal, state, and municipal courts &mdash; including DUII cases across Lane County. A former Deputy District Attorney's insight, applied for the defense.</p>
+                <div class="practice-tags">
+                    <span>DUII</span>
+                    <span>Federal Court</span>
+                    <span>Criminal</span>
+                    <span>Lane County</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 07 — APPROACH (dark) ═══════════════════════════════ -->
+<section class="approach" id="approach">
+    <span class="approach-stamp">OUR APPROACH &middot; REPUTATION &middot; EXPERIENCE &middot; RESULTS</span>
+    <span class="chapter-mark on-dark" style="color: var(--brass-bright); opacity: 0.5;">07 / 11 &mdash; Approach</span>
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Reputation. Experience. <em>Results.</em></h2>
+            <p class="section-lead">The three principles that have shaped Veralrud &amp; Fowler for over three decades of trial advocacy in Lane County.</p>
+        </div>
+
+        <div class="approach-medallions">
+            <article class="approach-card reveal">
+                <div class="approach-medallion">
+                    <div class="approach-medallion-inner">01</div>
+                </div>
+                <p class="approach-card-eyebrow">Pillar I</p>
+                <h3>Reputation</h3>
+                <p class="descriptor">Aggressive trial &amp; settlement</p>
+                <p>We are known as aggressive trial and settlement attorneys &mdash; our firm has secured an &ldquo;AV&rdquo; rating from Martindale-Hubbell, one of Lane County's &ldquo;A&rdquo; Rated Trial Firms, and selected to Best Law Firms in Oregon by U.S. News and Business Report.</p>
+                <div class="approach-rule"></div>
+            </article>
+
+            <article class="approach-card reveal">
+                <div class="approach-medallion">
+                    <div class="approach-medallion-inner">02</div>
+                </div>
+                <p class="approach-card-eyebrow">Pillar II</p>
+                <h3>Experience</h3>
+                <p class="descriptor">Federal to Supreme Court</p>
+                <p>Our attorneys bring experience across Federal, State &amp; Municipal Courts, the Ninth Circuit Court of Appeals, and the United States Supreme Court. Greg Veralrud is a former Lane County Deputy District Attorney, Past President of the OCDLA, and University of Oregon Trial Instructor.</p>
+                <div class="approach-rule"></div>
+            </article>
+
+            <article class="approach-card reveal">
+                <div class="approach-medallion">
+                    <div class="approach-medallion-inner">03</div>
+                </div>
+                <p class="approach-card-eyebrow">Pillar III</p>
+                <h3>Results</h3>
+                <p class="descriptor">Just &amp; fair, for 30 years</p>
+                <p>Our firm has vigorously represented Eugene, Springfield, and Lane County residents for over 30 years, securing just and fair results in our areas of practice. On injury cases we work on a contingent fee basis &mdash; no fee until you collect.</p>
+                <div class="approach-rule"></div>
+            </article>
+        </div>
+    </div>
+    <div class="approach-bottom-rule" aria-hidden="true"></div>
+</section>
+
+<!-- ═══ 08 — COVERAGE STRIP ════════════════════════════════ -->
+<section class="coverage">
+    <div class="container">
+        <span class="chapter-mark">08 / 11 &mdash; Coverage</span>
+        <div class="coverage-inner reveal">
+            <p class="coverage-eyebrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Serving these Lane County communities
+            </p>
+            <div class="coverage-list">
+                <span>Eugene</span>
+                <span>Springfield</span>
+                <span>Bethel</span>
+                <span>Glenwood</span>
+                <span>Santa Clara</span>
+                <span>Coburg</span>
+                <span>Lane County</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 08.5 — TESTIMONIALS ════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <span class="chapter-mark">09 / 11 &mdash; Testimonials</span>
+        <div class="section-head">
+            <p class="section-eyebrow">In Their Own Words</p>
+            <h2 class="section-h2">What clients <em>actually say</em></h2>
+            <p class="section-lead">Three decades of verdicts and settlements have left a trail of clients with one thing in common &mdash; the conviction that picking up the phone was the right call.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <article class="testimonial-card reveal from-left">
+                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Mr. Veralrud handled my case with great care and skill. He obviously knows his way around a courtroom. He kept me informed and made some unexpected court appearances for me without extra charge. I'm very pleased and highly recommend him if you've got a legal problem.</blockquote>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-attr">Verified Client</p>
+            </article>
+
+            <article class="testimonial-card reveal from-right">
+                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Having Greg represent me, made me feel like I was in good hands. From the first moment, he was a stong communicator. Letting me know all of my option, with every possible outcome. Keeping me informed, every step of the way. His experience got my case dismissed. He was very proffesional and worth every penny!! Thanks again Greg!</blockquote>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-attr">Verified Client<span class="testimonial-context">Criminal Defense</span></p>
+            </article>
+
+            <article class="testimonial-card reveal from-left">
+                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I have worked with Mr. Veralrud on a couple of occasions in which I needed legal counsel. Each time I found him to be extremely responsive, knowledgeable and detail oriented. He fully explained all of my options and delivered the best outcome that I could have asked for. I would definitely use Mr. Veralrud again and would highly recommend him to others.</blockquote>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-attr">Verified Client</p>
+            </article>
+
+            <article class="testimonial-card reveal from-right">
+                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I am writing today to share my experience with one of the finest attorneys I have ever met. I come from a long line of attorneys myself, so after a vicious dog attack that left me with a horrible injury to my face, I knew who to go to for the best handling of my case. Greg Veralrud is not only an incredible attorney, he is a really nice person. I wanted the best, but I also needed an attorney with a big heart and the ability to show empathy and compassion to me at a very painful time in my life. Greg Veralrud more than delivered.</blockquote>
+                <div class="testimonial-rule"></div>
+                <p class="testimonial-attr">Verified Client<span class="testimonial-context">Personal Injury &mdash; Dog Attack</span></p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TEAM (extra band — partner profiles) ═══════════════ -->
+<section class="team" id="team">
+    <div class="container">
+        <span class="chapter-mark">&mdash; The Attorneys</span>
+        <div class="section-head">
+            <p class="section-eyebrow">The Attorneys</p>
+            <h2 class="section-h2"><em>One Eugene firm</em></h2>
+            <p class="section-lead">A former Lane County prosecutor and an experienced trial partner &mdash; representing Eugene and Lane County clients in personal injury and criminal defense.</p>
+        </div>
+
+        <div class="team-grid">
+            <article class="team-card reveal from-left">
+                <div class="team-portrait" aria-label="Greg Veralrud monogram">GV</div>
+                <div class="team-info">
+                    <p class="role">Lead Attorney</p>
+                    <h3>Greg Veralrud</h3>
+                    <p>Greg Veralrud is a former Lane County Deputy District Attorney and Past President of the Oregon Criminal Defense Lawyers Association who has spent more than 30 years fighting for Eugene and Lane County residents. He has argued cases in Federal, State and Municipal Courts, the Ninth Circuit Court of Appeals, and the United States Supreme Court, and serves as a Trial Instructor at the University of Oregon.</p>
+                    <p class="team-creds">AV Rated &mdash; Martindale-Hubbell &middot; Oregon Bar</p>
+                    <div class="team-tags">
+                        <span>Personal Injury</span>
+                        <span>Criminal Defense</span>
+                        <span>DUII</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="team-card reveal from-right">
+                <div class="team-portrait">
+                    <img src="img/lindsay-fowler.png" alt="Lindsay Fowler, Partner at Veralrud &amp; Fowler" loading="lazy">
+                </div>
+                <div class="team-info">
+                    <p class="role">Partner</p>
+                    <h3>Lindsay Fowler</h3>
+                    <p>Lindsay Fowler is a partner at Veralrud &amp; Fowler, contributing to the firm's representation of Eugene and Lane County clients in personal injury and criminal defense matters &mdash; bringing the same trial-tested standards that have defined the firm for three decades.</p>
+                    <p class="team-creds">Oregon Bar &middot; Trial Practice</p>
+                    <div class="team-tags">
+                        <span>Personal Injury</span>
+                        <span>Criminal Defense</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 09 — CTA BAND ══════════════════════════════════════ -->
+<section class="cta-band">
+    <div class="container">
+        <span class="chapter-mark on-dark" style="color: var(--brass-bright); opacity: 0.55;">10 / 11 &mdash; Call to Action</span>
+        <div class="cta-inner reveal scale">
+            <p class="section-eyebrow">Talk to a Trial Attorney</p>
+            <h2>If you've been injured or charged, <em>the first call matters</em></h2>
+            <p>FREE initial consultation on all injury matters &mdash; no fee until you collect. Confidential conversations on criminal defense by phone or message, anywhere in Lane County.</p>
+            <div class="cta-actions">
+                <a href="tel:+15413453333" class="btn btn-ink">
+                    Call (541) 345-3333
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 10 — CONTACT ═══════════════════════════════════════ -->
+<section class="contact" id="contact">
+    <div class="container">
+        <span class="chapter-mark">11 / 11 &mdash; Contact</span>
+        <div class="section-head">
+            <p class="section-eyebrow">Contact Us</p>
+            <h2 class="section-h2">Eugene, Oregon &middot; <em>Lane County</em></h2>
+            <p class="section-lead">FREE initial consultation on all injury matters. Confidential inquiries on criminal defense answered promptly.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal from-left">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Veralrud &amp; Fowler<br>Eugene, Oregon</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:+15413453333">(541) 345-3333</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@oregonattorney.com">info@oregonattorney.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22 C7 18 4 14 4 9 a8 8 0 0116 0 c0 5 -3 9 -8 13z"/><path d="M9 11 L11 13 L15 9"/></svg>
+                        </span>
+                        <div>
+                            <strong>Free Injury Consult</strong>
+                            <span>No fee until you collect on personal injury matters.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form reveal from-right">
+                <p class="form-eyebrow">Confidential Inquiry</p>
+                <h3>Talk to a Trial Attorney</h3>
+                <p class="form-italic">A few sentences is enough to start.</p>
+                <p class="form-sub">All inquiries are treated as confidential. Free initial consultation on injury matters.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(541) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Personal Injury</option>
+                            <option>Vehicle Accident</option>
+                            <option>Aviation Accident</option>
+                            <option>Wrongful Death</option>
+                            <option>Medical Malpractice</option>
+                            <option>Trucking Accident</option>
+                            <option>Criminal Defense</option>
+                            <option>DUII</option>
+                            <option>Federal Court</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about your matter — keep it brief, we'll follow up."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-foot">Or call <strong>(541) 345-3333</strong> for immediate help.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap reveal">
+            <iframe src="https://www.google.com/maps?q=Veralrud+Fowler+Attorney+Eugene+Oregon&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Veralrud &amp; Fowler &mdash; Eugene, Oregon location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 11 — FOOTER ════════════════════════════════════════ -->
+<footer>
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#hero" class="vf-mark inverse" aria-label="Veralrud &amp; Fowler">
+                    <span class="vf-eyebrow">The Firm of</span>
+                    <span class="vf-name">Veralrud <em>&amp;</em> Fowler</span>
+                    <span class="vf-rule"></span>
+                    <span class="vf-tag">Eugene &middot; Trial Attorneys</span>
+                </a>
+                <p>Experienced. Effective. Successful. Serving Eugene &amp; Lane County for Over 30 Years. AV-rated trial advocacy from the courthouses we know best.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#practice">Personal Injury</a></li>
+                    <li><a href="#practice">Vehicle Accidents</a></li>
+                    <li><a href="#practice">Wrongful Death</a></li>
+                    <li><a href="#practice">Medical Malpractice</a></li>
+                    <li><a href="#practice">Trucking Accidents</a></li>
+                    <li><a href="#practice">Criminal Defense</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>The Firm</h5>
+                <ul>
+                    <li><a href="#known">Why Veralrud</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Service Areas</h5>
+                <ul>
+                    <li><a href="#contact">Eugene</a></li>
+                    <li><a href="#contact">Springfield</a></li>
+                    <li><a href="#contact">Bethel</a></li>
+                    <li><a href="#contact">Glenwood</a></li>
+                    <li><a href="#contact">Santa Clara</a></li>
+                    <li><a href="#contact">Coburg</a></li>
+                    <li><a href="#contact">Lane County</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+15413453333">(541) 345-3333</a></li>
+                    <li><a href="mailto:info@oregonattorney.com">info@oregonattorney.com</a></li>
+                    <li class="plain">Eugene, Oregon</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Veralrud &amp; Fowler. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- ═══ DEMO BANNER ════════════════════════════════════════ -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Veralrud &amp; Fowler.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss banner">&#x2715;</button>
+</div>
+
+<script>
+    // ─── Smooth scroll for in-page anchors with hash update ──
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#' || href.length < 2) return;
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', href);
+        }
+    });
+
+    // ─── Mobile drawer ──────────────────────────────────────
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        mobileNav.setAttribute('aria-hidden', String(!isOpen));
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileNav.setAttribute('aria-hidden', 'true');
+        });
+    });
+
+    // ─── Year stamp ─────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ─── Reveal-on-scroll ───────────────────────────────────
+    const reveals = document.querySelectorAll('.reveal, .section-head, .practice-card, .featured-card, .known-row, .approach-card, .testimonial-card, .recognition-item, .promise-inner, .coverage-inner, .cta-inner, .map-wrap, .contact-info, .contact-form, .team-card, .hero-content, .hero-creds');
+    reveals.forEach(el => { if (!el.classList.contains('reveal')) el.classList.add('reveal'); });
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    // ─── Staggered transition delays through grids ──────────
+    document.querySelectorAll('.recognition-inner, .practice-grid, .approach-medallions, .testimonial-grid, .team-grid, .featured-grid').forEach(group => {
+        const isLatePage = group.closest('.approach, .testimonials, .cta-band, .coverage') !== null;
+        const baseDelay = isLatePage ? 140 : 80;
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * baseDelay) + 'ms';
+        });
+    });
+
+    // ─── Active-state nav underline tied to scroll position ─
+    const navLinks = document.querySelectorAll('.nav-links a[data-nav-target]');
+    const sections = ['hero', 'known', 'practice', 'team', 'approach'].map(id => document.getElementById(id)).filter(Boolean);
+    const sectionObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navLinks.forEach(link => {
+                    if (link.getAttribute('data-nav-target') === id) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(s => sectionObs.observe(s));
+</script>
+
+</body>
+</html>
