@@ -441,6 +441,16 @@
         transition: transform 240ms cubic-bezier(.2,.7,.2,1), background 220ms ease;
     }
     .footer-dir:hover { transform: translateY(-2px); background: var(--white); }
+    .footer-map-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .footer-maplink {
+        display: inline-flex; align-items: center; gap: 9px;
+        font-size: 0.86rem; font-weight: 600; color: rgba(251,248,240,.86);
+        border: 1px solid rgba(251,248,240,.28);
+        padding: 10px 19px; border-radius: 100px;
+        transition: color 220ms ease, border-color 220ms ease, background 220ms ease, transform 240ms cubic-bezier(.2,.7,.2,1);
+    }
+    .footer-maplink:hover { color: var(--white); border-color: var(--amber-soft); background: rgba(208,122,56,.16); transform: translateY(-2px); }
+    .footer-maplink svg { color: var(--amber-soft); }
 
     /* ===== FOOTER ===== */
     .footer { background: var(--ink); color: rgba(251,248,240,.74); padding: 92px 0 38px; }
@@ -871,10 +881,16 @@
 
         <div class="footer-map-head">
             <h5>Find us — 100 Ray McBride Street, Canmore</h5>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=100+Ray+McBride+Street%2C+Canmore%2C+Alberta+T1W+0B1" target="_blank" rel="noopener" class="footer-dir">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Get directions
-            </a>
+            <div class="footer-map-actions">
+                <a href="canmore-visitor-map.pdf" target="_blank" rel="noopener" class="footer-maplink" download>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+                    Download the area map
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=100+Ray+McBride+Street%2C+Canmore%2C+Alberta+T1W+0B1" target="_blank" rel="noopener" class="footer-dir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Get directions
+                </a>
+            </div>
         </div>
         <div class="footer-map">
             <iframe
