@@ -425,6 +425,16 @@
     .footer .brand-name .brand-sub { color: rgba(251,248,240,.55); }
     .footer .brand-mark { color: var(--sage); }
     .footer-intro { margin-top: 22px; font-size: 0.96rem; max-width: 340px; line-height: 1.7; }
+    .footer-social {
+        display: inline-flex; align-items: center; gap: 10px;
+        margin-top: 22px; font-size: 0.9rem; font-weight: 600;
+        color: rgba(251,248,240,.86);
+        border: 1px solid rgba(251,248,240,.22);
+        padding: 11px 20px; border-radius: 100px;
+        transition: color 220ms ease, border-color 220ms ease, background 220ms ease, transform 240ms cubic-bezier(.2,.7,.2,1);
+    }
+    .footer-social:hover { color: var(--white); border-color: var(--amber-soft); background: rgba(208,122,56,.16); transform: translateY(-2px); }
+    .footer-social svg { color: var(--amber-soft); }
     .footer-col h5 { font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); margin-bottom: 22px; }
     .footer-col a, .footer-col p { display: block; font-size: 0.95rem; color: rgba(251,248,240,.74); margin-bottom: 13px; transition: color 220ms ease; }
     .footer-col a:hover { color: var(--amber-soft); }
@@ -778,6 +788,10 @@
                     <span class="brand-name">Wapiti<span class="brand-sub">Campground · Canmore</span></span>
                 </div>
                 <p class="footer-intro">The only campground in Canmore, Alberta — first-come, first-serve, family-friendly camping in the foothills of the Canadian Rockies.</p>
+                <a href="https://www.facebook.com/profile.php?id=61576186441471" target="_blank" rel="noopener" class="footer-social" aria-label="Wapiti Campground on Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+                    Follow on Facebook
+                </a>
             </div>
             <div class="footer-col">
                 <h5>Contact</h5>
