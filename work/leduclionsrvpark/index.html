@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leduc Lions Campground &amp; RV Park — A family-friendly location</title>
+<meta name="description" content="Leduc Lions Campground & RV Park is a family-friendly campground owned and operated by the Leduc Lions Club — full-hookup RV sites, tenting, playgrounds and pickleball, next to the Leduc Recreation Centre and 25 minutes south of Edmonton." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Leduc Lions Campground & RV Park" />
+<meta property="og:description" content="A family-friendly campground run by the Leduc Lions Club — full-hookup and tenting sites, playgrounds, pickleball, next to the Leduc Recreation Centre." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+    :root {
+        --paper:       #F0F3EC;
+        --paper-soft:  #E2EADD;
+        --paper-deep:  #CEDCC6;
+        --ink:         #16271F;
+        --ink-2:       #36473C;
+        --ink-3:       #677567;
+        --teal:        #1F6B5A;
+        --teal-deep:   #103229;
+        --leaf:        #4E9C5E;
+        --sun:         #E8A72C;
+        --sun-soft:    #F4C25A;
+        --rule:        #BFD0BB;
+        --rule-soft:   #D2DECC;
+        --white:       #FBFCF6;
+        --shadow:      0 26px 60px -30px rgba(16,39,33,.42);
+        --shadow-soft: 0 15px 36px -22px rgba(16,39,33,.30);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
+    em { font-style: italic; }
+    .wrap { width: min(1240px, 92vw); margin: 0 auto; }
+    a { color: inherit; text-decoration: none; }
+    .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sun); display: inline-flex; align-items: center; gap: 12px; }
+    .eyebrow::before { content: ""; width: 30px; height: 1.5px; background: var(--sun); display: inline-block; }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 26px 0; transition: background 360ms ease, box-shadow 360ms ease, padding 360ms ease; }
+    .nav.scrolled { background: rgba(240,243,236,.94); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--rule-soft); padding: 16px 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .brand { display: flex; align-items: center; gap: 13px; }
+    .brand-mark { width: 40px; height: 40px; flex: none; display: grid; place-items: center; color: var(--white); transition: transform 400ms cubic-bezier(.2,.7,.2,1); }
+    .nav.scrolled .brand-mark { color: var(--teal); }
+    .brand:hover .brand-mark { transform: rotate(-8deg) scale(1.06); }
+    .brand-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.26rem; line-height: 1; color: var(--white); }
+    .nav.scrolled .brand-name { color: var(--ink); }
+    .brand-name .brand-sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(251,252,246,.66); margin-top: 5px; }
+    .nav.scrolled .brand-name .brand-sub { color: var(--ink-3); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-link { font-size: 0.85rem; font-weight: 500; position: relative; color: rgba(251,252,246,.9); white-space: nowrap; transition: color 240ms ease; }
+    .nav.scrolled .nav-link { color: var(--ink-2); }
+    .nav-link::after { content: ""; position: absolute; left: 0; bottom: -7px; width: 100%; height: 2px; background: var(--sun); transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
+    .nav-link:hover, .nav-link.active { color: var(--sun-soft); }
+    .nav.scrolled .nav-link:hover, .nav.scrolled .nav-link.active { color: var(--sun); }
+    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+    .nav-cta { font-size: 0.84rem; font-weight: 600; background: var(--sun); color: var(--ink); padding: 12px 22px; border-radius: 100px; white-space: nowrap; transition: transform 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms ease, background 240ms ease; box-shadow: 0 10px 22px -12px rgba(232,167,44,.7); }
+    .nav-cta:hover { transform: translateY(-2px); background: var(--sun-soft); box-shadow: 0 16px 28px -12px rgba(232,167,44,.85); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 30px; height: 22px; position: relative; }
+    .nav-toggle span { position: absolute; left: 0; width: 100%; height: 2.5px; background: var(--white); border-radius: 2px; transition: all 280ms cubic-bezier(.2,.7,.2,1); }
+    .nav.scrolled .nav-toggle span { background: var(--ink); }
+    .nav-toggle span:nth-child(1) { top: 0; } .nav-toggle span:nth-child(2) { top: 9.5px; } .nav-toggle span:nth-child(3) { top: 19px; }
+    .nav-toggle.open span:nth-child(1) { top: 9.5px; transform: rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { top: 9.5px; transform: rotate(-45deg); }
+
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 150px 0 160px; overflow: hidden; background: linear-gradient(150deg, var(--teal-deep) 0%, var(--teal) 55%, #2a7a4c 100%); }
+    .hero::before { content: ""; position: absolute; inset: 0; opacity: .5; background-image: radial-gradient(circle at 18% 30%, rgba(244,194,90,.18) 0, transparent 38%), radial-gradient(circle at 82% 70%, rgba(78,156,94,.30) 0, transparent 42%); }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .14; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.5) 0 1px, transparent 1px 26px); }
+    .hero-inner { position: relative; z-index: 2; color: var(--white); max-width: 900px; }
+    .hero .eyebrow { color: var(--sun-soft); } .hero .eyebrow::before { background: var(--sun-soft); }
+    .hero h1 { font-size: clamp(2.9rem, 7vw, 5.7rem); font-weight: 600; color: var(--white); margin: 26px 0 22px; letter-spacing: -0.02em; }
+    .hero h1 em { color: var(--sun-soft); font-weight: 500; }
+    .hero-lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: rgba(251,252,246,.92); max-width: 640px; margin-bottom: 38px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { font-size: 0.95rem; font-weight: 600; background: var(--sun); color: var(--ink); padding: 17px 34px; border-radius: 100px; display: inline-flex; align-items: center; gap: 11px; transition: transform 260ms cubic-bezier(.2,.7,.2,1), box-shadow 260ms ease, background 240ms ease; box-shadow: 0 16px 34px -16px rgba(232,167,44,.8); }
+    .btn-primary:hover { transform: translateY(-3px); background: var(--sun-soft); box-shadow: 0 22px 42px -16px rgba(232,167,44,.9); }
+    .btn-primary .ar { transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
+    .btn-primary:hover .ar { transform: translateX(5px); }
+    .btn-ghost { font-size: 0.95rem; font-weight: 600; color: var(--white); padding: 17px 30px; border-radius: 100px; border: 1.5px solid rgba(251,252,246,.45); display: inline-flex; align-items: center; gap: 10px; transition: background 240ms ease, border-color 240ms ease, transform 260ms cubic-bezier(.2,.7,.2,1); }
+    .btn-ghost:hover { background: rgba(251,252,246,.12); border-color: var(--white); transform: translateY(-3px); }
+    .hero-pills { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 42px; }
+    .hero-pill { font-size: 0.78rem; font-weight: 600; color: var(--white); background: rgba(251,252,246,.12); border: 1px solid rgba(251,252,246,.24); padding: 9px 17px; border-radius: 100px; backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 8px; }
+    .hero-pill svg { width: 14px; height: 14px; color: var(--sun-soft); }
+    .scroll-cue { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1; pointer-events: none; color: rgba(251,252,246,.65); font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 9px; }
+    .scroll-cue .line { width: 1px; height: 30px; background: rgba(251,252,246,.5); animation: cue 2.4s ease-in-out infinite; transform-origin: top; }
+    @keyframes cue { 0%,100% { transform: scaleY(.3); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
+    @media (max-height: 820px) { .scroll-cue { display: none; } }
+
+    .facts { background: var(--teal-deep); color: var(--white); }
+    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .fact { padding: 46px 30px; text-align: center; border-right: 1px solid rgba(251,252,246,.12); }
+    .fact:last-child { border-right: 0; }
+    .fact-n { font-family: 'Fraunces', serif; font-size: clamp(1.9rem, 3.2vw, 2.8rem); font-weight: 600; color: var(--sun-soft); line-height: 1.05; }
+    .fact-label { font-size: 0.8rem; font-weight: 500; color: rgba(251,252,246,.76); margin-top: 12px; }
+
+    .section { padding: 130px 0; }
+    .section-head { max-width: 730px; margin-bottom: 60px; }
+    .section-head h2 { font-size: clamp(2.1rem, 4.2vw, 3.5rem); margin: 22px 0 20px; }
+    .section-head h2 em { color: var(--teal); font-weight: 500; }
+    .section-head p { font-size: 1.08rem; color: var(--ink-2); }
+
+    .about { background: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; }
+    .about-copy h2 { font-size: clamp(2rem, 4vw, 3.3rem); margin: 22px 0 24px; }
+    .about-copy h2 em { color: var(--teal); font-weight: 500; }
+    .about-copy p { font-size: 1.07rem; color: var(--ink-2); margin-bottom: 20px; }
+    .about-copy p strong { color: var(--ink); font-weight: 600; }
+    .about-card { background: var(--teal); color: var(--white); border-radius: 10px; padding: 46px 42px; box-shadow: var(--shadow); }
+    .about-card h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 18px; }
+    .about-card ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .about-card li { font-size: 0.98rem; color: rgba(251,252,246,.9); display: flex; align-items: flex-start; gap: 12px; }
+    .about-card li svg { width: 19px; height: 19px; color: var(--sun-soft); flex: none; margin-top: 2px; }
+
+    .rates { background: var(--paper-soft); }
+    .rate-table { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-soft); margin-top: 56px; }
+    .rate-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 17px 30px; border-bottom: 1px solid var(--rule-soft); font-size: 0.97rem; color: var(--ink-2); }
+    .rate-row:last-child { border-bottom: 0; }
+    .rate-row.head { background: var(--teal); color: var(--white); font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; }
+    .rate-row .rate-n { font-family: 'Fraunces', serif; font-weight: 700; color: var(--teal); font-size: 1.1rem; white-space: nowrap; text-align: right; }
+    .rate-row.head .rate-n { color: var(--sun-soft); }
+    .rates-note { margin-top: 30px; font-size: 0.95rem; color: var(--ink-2); padding-left: 18px; border-left: 3px solid var(--sun); max-width: 860px; }
+
+    .amen { background: var(--paper); }
+    .amen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); border-radius: 8px; overflow: hidden; margin-top: 56px; }
+    .amen-cell { background: var(--paper); padding: 44px 36px; transition: background 360ms ease; }
+    .amen-cell:hover { background: var(--white); }
+    .amen-ico { width: 52px; height: 52px; border-radius: 12px; background: rgba(31,107,90,.10); color: var(--teal); display: grid; place-items: center; margin-bottom: 20px; transition: transform 400ms cubic-bezier(.2,.7,.2,1), background 360ms ease, color 360ms ease; }
+    .amen-cell:hover .amen-ico { transform: translateY(-4px) rotate(-6deg); background: var(--sun); color: var(--ink); }
+    .amen-ico svg { width: 26px; height: 26px; }
+    .amen-cell h4 { font-size: 1.16rem; margin-bottom: 9px; }
+    .amen-cell p { font-size: 0.93rem; color: var(--ink-2); }
+
+    .map-sec { background: var(--paper-soft); }
+    .map-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; margin-top: 50px; }
+    .map-frame { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--rule-soft); background: var(--white); }
+    .map-frame img { width: 100%; display: block; }
+    .map-copy h3 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: 16px; }
+    .map-copy h3 em { color: var(--teal); font-weight: 500; }
+    .map-copy p { font-size: 1.04rem; color: var(--ink-2); margin-bottom: 22px; }
+    .map-dl { display: inline-flex; align-items: center; gap: 10px; font-size: 0.92rem; font-weight: 600; color: var(--white); background: var(--teal); padding: 13px 24px; border-radius: 100px; transition: transform 240ms cubic-bezier(.2,.7,.2,1), background 220ms ease; }
+    .map-dl:hover { transform: translateY(-2px); background: #185547; }
+
+    .gtk { background: var(--teal-deep); color: var(--white); }
+    .gtk .section-head h2 { color: var(--white); } .gtk .section-head h2 em { color: var(--sun-soft); }
+    .gtk .section-head p { color: rgba(251,252,246,.82); }
+    .gtk .eyebrow { color: var(--sun-soft); } .gtk .eyebrow::before { background: var(--sun-soft); }
+    .gtk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 54px; }
+    .gtk-item { border: 1px solid rgba(251,252,246,.16); border-radius: 8px; padding: 32px 30px; background: rgba(251,252,246,.04); transition: transform 380ms cubic-bezier(.2,.7,.2,1), border-color 380ms ease; }
+    .gtk-item:hover { transform: translateY(-6px); border-color: rgba(244,194,90,.55); }
+    .gtk-medallion { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--sun-soft); color: var(--sun-soft); display: grid; place-items: center; margin-bottom: 18px; font-family: 'Fraunces', serif; font-weight: 700; }
+    .gtk-item h4 { font-size: 1.15rem; color: var(--white); margin-bottom: 9px; }
+    .gtk-item p { font-size: 0.92rem; color: rgba(251,252,246,.78); }
+
+    .cta { background: var(--sun); color: var(--ink); padding: 110px 0; text-align: center; position: relative; overflow: hidden; }
+    .cta::before { content: ""; position: absolute; top: -60%; right: -10%; width: 540px; height: 540px; border-radius: 50%; background: rgba(255,255,255,.18); }
+    .cta .wrap { position: relative; z-index: 1; }
+    .cta h2 { font-size: clamp(2.2rem, 4.6vw, 3.7rem); margin-bottom: 18px; }
+    .cta p { font-size: 1.12rem; color: rgba(22,39,31,.78); max-width: 580px; margin: 0 auto 38px; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-light { background: var(--ink); color: var(--white); font-size: 1rem; font-weight: 600; padding: 18px 38px; border-radius: 100px; display: inline-flex; align-items: center; gap: 12px; transition: transform 260ms cubic-bezier(.2,.7,.2,1), box-shadow 260ms ease; box-shadow: 0 18px 38px -18px rgba(16,39,33,.55); }
+    .btn-light:hover { transform: translateY(-3px); box-shadow: 0 26px 46px -18px rgba(16,39,33,.65); }
+    .btn-light .ar { transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
+    .btn-light:hover .ar { transform: translateX(5px); }
+    .btn-line { display: inline-flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 600; color: var(--ink); padding: 18px 32px; border-radius: 100px; border: 1.6px solid rgba(22,39,31,.4); transition: background 240ms ease, border-color 240ms ease, transform 260ms cubic-bezier(.2,.7,.2,1); }
+    .btn-line:hover { background: rgba(22,39,31,.08); border-color: var(--ink); transform: translateY(-3px); }
+
+    .footer { background: var(--ink); color: rgba(251,252,246,.74); padding: 92px 0 38px; }
+    .footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(251,252,246,.13); }
+    .footer .brand-name { color: var(--white); } .footer .brand-mark { color: var(--sun-soft); }
+    .footer .brand-name .brand-sub { color: rgba(251,252,246,.55); }
+    .footer-intro { margin-top: 22px; font-size: 0.96rem; max-width: 350px; line-height: 1.7; }
+    .footer-social { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 0.9rem; font-weight: 600; color: rgba(251,252,246,.86); border: 1px solid rgba(251,252,246,.22); padding: 11px 20px; border-radius: 100px; transition: all 220ms ease; }
+    .footer-social:hover { color: var(--white); border-color: var(--sun-soft); background: rgba(232,167,44,.16); transform: translateY(-2px); }
+    .footer-social svg { color: var(--sun-soft); }
+    .footer-col h5 { font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); margin-bottom: 22px; }
+    .footer-col a, .footer-col p { display: block; font-size: 0.95rem; color: rgba(251,252,246,.74); margin-bottom: 13px; transition: color 220ms ease; }
+    .footer-col a:hover { color: var(--sun-soft); }
+    .footer-map-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin: 50px 0 18px; }
+    .footer-map-head h5 { font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
+    .footer-dir { display: inline-flex; align-items: center; gap: 9px; font-size: 0.86rem; font-weight: 600; color: var(--ink); background: var(--sun-soft); padding: 10px 19px; border-radius: 100px; transition: transform 240ms cubic-bezier(.2,.7,.2,1), background 220ms ease; }
+    .footer-dir:hover { transform: translateY(-2px); background: var(--white); }
+    .footer-map { margin: 0 0 38px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(251,252,246,.14); height: 300px; }
+    .footer-map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.3) contrast(1.05); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 0.84rem; color: rgba(251,252,246,.55); }
+    .footer-bottom a { color: rgba(251,252,246,.7); }
+
+    .reveal { opacity: 0; transform: translateY(38px); transition: opacity 900ms cubic-bezier(.2,.7,.2,1), transform 900ms cubic-bezier(.2,.7,.2,1); }
+    .reveal.left { transform: translateX(-48px); } .reveal.right { transform: translateX(48px); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 1100px) {
+        .nav-links { position: fixed; inset: 0 0 0 auto; width: min(360px, 84vw); background: var(--paper); flex-direction: column; align-items: flex-start; justify-content: center; gap: 30px; padding: 60px; transform: translateX(100%); transition: transform 460ms cubic-bezier(.2,.7,.2,1); box-shadow: -30px 0 60px -30px rgba(16,39,33,.4); }
+        .nav-links.open { transform: translateX(0); }
+        .nav-link, .nav .nav-link { color: var(--ink-2); font-size: 1.05rem; }
+        .nav-toggle { display: block; z-index: 101; }
+        .nav-toggle.open span { background: var(--ink) !important; }
+        .about-grid, .map-layout, .gtk-grid, .footer-top { grid-template-columns: 1fr; }
+        .facts-grid { grid-template-columns: 1fr 1fr; }
+        .amen-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+        .facts-grid { grid-template-columns: 1fr; }
+        .fact { border-right: 0; border-bottom: 1px solid rgba(251,252,246,.12); }
+        .section { padding: 86px 0; }
+        .hero-ctas, .cta-actions { flex-direction: column; align-items: stretch; }
+        .btn-primary, .btn-ghost { justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Leduc Lions Campground &amp; RV Park home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
+                    <path d="M24 6 L40 38 H8 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M16 26 L24 18 L32 26" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+                    <circle cx="24" cy="33" r="2.4" fill="currentColor"/>
+                </svg>
+            </span>
+            <span class="brand-name">Leduc Lions<span class="brand-sub">Campground &amp; RV Park</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#rates" class="nav-link">Rates</a>
+            <a href="#amenities" class="nav-link">Amenities</a>
+            <a href="#map" class="nav-link">Park Map</a>
+            <a href="#know" class="nav-link">Good to Know</a>
+            <a href="tel:+17809861882" class="nav-cta">Call 780-986-1882</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <div class="wrap hero-inner">
+        <span class="eyebrow">Leduc, Alberta · A family-friendly location</span>
+        <h1>Family camping,<br />run by the <em>Lions.</em></h1>
+        <p class="hero-lede">Leduc Lions Campground &amp; RV Park is owned and operated by the Leduc Lions Club — full-hookup RV sites and tenting, playgrounds and pickleball, right next to the Leduc Recreation Centre and 25 minutes south of Edmonton.</p>
+        <div class="hero-ctas">
+            <a href="tel:+17809861882" class="btn-primary">Call to reserve <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#rates" class="btn-ghost">See rates</a>
+        </div>
+        <div class="hero-pills">
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>Full-hookup to tenting sites</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 000 18M12 3a14 14 0 010 18"/></svg>4-star rated · green-park certified</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Next to the Leduc Rec Centre</span>
+        </div>
+    </div>
+    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
+</header>
+
+<section class="facts">
+    <div class="wrap">
+        <div class="facts-grid">
+            <div class="fact"><div class="fact-n">$30<span style="font-size:1rem;color:rgba(251,252,246,.65)">+</span></div><div class="fact-label">Per night, tenting &amp; overflow</div></div>
+            <div class="fact"><div class="fact-n">50&nbsp;amp</div><div class="fact-label">Full hookups available</div></div>
+            <div class="fact"><div class="fact-n">4&#9733;</div><div class="fact-label">Woodall&rsquo;s-rated, green certified</div></div>
+            <div class="fact"><div class="fact-n">25&nbsp;min</div><div class="fact-label">South of Edmonton</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <div class="wrap about-grid">
+        <div class="about-copy reveal left">
+            <span class="eyebrow">About the park</span>
+            <h2>A family-friendly <em>community park.</em></h2>
+            <p>Leduc Lions Campground &amp; RV Park is <strong>owned and operated by the Leduc Lions Club</strong> — a true family-friendly location with full-service RV sites, tenting and overflow, and plenty for the kids to do.</p>
+            <p>It's right next to the Leduc Recreation Centre, with two playgrounds, two pickleball courts and a recreational area on the grounds — and it's recognized with a 4-star Woodall's rating and green-park certification for environmental sustainability.</p>
+        </div>
+        <div class="about-card reveal right">
+            <h3>At a glance</h3>
+            <ul>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Owned &amp; operated by the Leduc Lions Club</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>15-amp partial to 50-amp full-service sites</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Tenting &amp; RV overflow available</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Adjacent to the Leduc Recreation Centre</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>The Leduc Lions Hall available for rentals</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section rates" id="rates">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Rates</span>
+            <h2>2026 camping <em>rates.</em></h2>
+            <p>Two adults are included with every site. Full payment is due when making your reservation.</p>
+        </div>
+        <div class="rate-table reveal">
+            <div class="rate-row head"><span>Site type</span><span class="rate-n">Daily / Monthly</span></div>
+            <div class="rate-row"><span>Tenting (unserviced)</span><span class="rate-n">$30 / day</span></div>
+            <div class="rate-row"><span>RV overflow (unserviced)</span><span class="rate-n">$30 / day</span></div>
+            <div class="rate-row"><span>15 amp · power &amp; water (partial)</span><span class="rate-n">$49 / $849</span></div>
+            <div class="rate-row"><span>30 amp · power, water &amp; sewer</span><span class="rate-n">$59 / $1,059 +$39 power</span></div>
+            <div class="rate-row"><span>50 amp · power, water &amp; sewer</span><span class="rate-n">$69 / $1,129 +$49 power</span></div>
+        </div>
+        <p class="rates-note reveal">Extra adults (2 included per site) $5.00/day · dog fee $1.00/day · firewood $12.00/bag. A 2-night minimum applies on regular weekends, 3 nights on long weekends. We require 48 hours' notice for cancellations; there are no refunds on early checkout. Monthly guests give 2 weeks' notice of departure.</p>
+    </div>
+</section>
+
+<section class="section amen" id="amenities">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">On the grounds</span>
+            <h2>Room for the whole <em>family.</em></h2>
+        </div>
+        <div class="amen-grid">
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 20v-6M5 14c4-3 10-3 14 0M5 14V8c4-3 10-3 14 0v6M19 20v-6"/></svg></div><h4>Two playgrounds</h4><p>Two playgrounds and a recreational area to keep the kids busy.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 4c3 4 3 12 0 16M15 4c-3 4-3 12 0 16"/></svg></div><h4>Pickleball</h4><p>Two pickleball courts right on site for a friendly game.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/><path d="M9 20v-5h6v5"/></svg></div><h4>Rec Centre next door</h4><p>Adjacent to the Leduc Recreation Centre — pools, rinks and more, steps away.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div><h4>Dog run</h4><p>A small on-site dog run, with a large off-leash park nearby.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10l9-6 9 6v10H3z"/><path d="M3 14h18"/></svg></div><h4>Lions Hall rental</h4><p>The Leduc Lions Hall is available to rent for groups and events.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h4>Seasonal office hours</h4><p>Apr 15–May 31 &amp; Sep 1–Oct 14: 9–5 · Jun 1–Aug 31: 9–7. Closed Oct 15–Apr 14.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section map-sec" id="map">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Find your site</span>
+            <h2>The park <em>map.</em></h2>
+        </div>
+        <div class="map-layout">
+            <div class="map-frame reveal left"><img src="img/park-map.jpg" alt="Leduc Lions Campground &amp; RV Park site map" /></div>
+            <div class="map-copy reveal right">
+                <h3>Plan your <em>stay.</em></h3>
+                <p>The park map shows site numbers and layout, the playgrounds, pickleball courts and facilities. Drop-in guests are welcome based on availability — note there's no guarantee on specific site numbers.</p>
+                <a href="img/park-map.jpg" target="_blank" rel="noopener" class="map-dl">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="17" height="17"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+                    Open the full park map
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section gtk" id="know">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Before you arrive</span>
+            <h2>Good to <em>know.</em></h2>
+            <p>A few clear rules keep the park calm, safe and family-friendly.</p>
+        </div>
+        <div class="gtk-grid">
+            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Check-in &amp; out</h4><p>Summer check-in 3–7pm; spring/fall 3–5pm. Check-out 12 noon — after 3pm a full day is charged.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>Quiet hours</h4><p>Quiet time 11:00pm–8:00am. Visitors to your site must leave the park by 11pm.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Pets</h4><p>Maximum 2 dogs per site, registered and leashed, barking controlled, never left unattended. Clean up in dumpsters.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">4</div><h4>Speed limit</h4><p>10 km/h, strictly enforced — speeding can result in eviction without refund.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Vehicles</h4><p>Max 2 guest vehicles per site if space allows. Visitors park in visitor parking — no visitor vehicles at sites.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Fires</h4><p>Campfires only in the fire pits provided and fully extinguished. Outside firewood prohibited; available at the office.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">7</div><h4>Occupancy</h4><p>One sleeping unit per site (trailer or tent) unless prior arrangements are made.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">8</div><h4>Minors</h4><p>No one under 18 may camp unless accompanied by a parent or guardian.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">9</div><h4>Booking</h4><p>Same-day reservations must be completed by 4:30pm. Aircraft noise is possible — the park is near the airport.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="wrap">
+        <h2>Book your family's stay</h2>
+        <p>Call the Leduc Lions Club to reserve — full payment is due at booking, and weekends fill up fast.</p>
+        <div class="cta-actions">
+            <a href="tel:+17809861882" class="btn-light">Call 780-986-1882 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=4314+Lions+Park+Rd%2C+Leduc%2C+Alberta+T9E+1C9" target="_blank" rel="noopener" class="btn-line">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M24 6 L40 38 H8 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 26 L24 18 L32 26" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="33" r="2.4" fill="currentColor"/></svg></span>
+                    <span class="brand-name">Leduc Lions<span class="brand-sub">Campground &amp; RV Park</span></span>
+                </div>
+                <p class="footer-intro">A family-friendly campground owned and operated by the Leduc Lions Club — 25 minutes south of Edmonton.</p>
+                <a href="https://www.facebook.com/LeducLionsPark/" target="_blank" rel="noopener" class="footer-social" aria-label="Leduc Lions Park on Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+                    Follow on Facebook
+                </a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17809861882">780-986-1882</a>
+                <p>4314 Lions Park Rd<br />Leduc, Alberta T9E 1C9</p>
+                <a href="https://www.instagram.com/leduclionscampground/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+            <div class="footer-col">
+                <h5>Season</h5>
+                <p>Open for the 2026 season</p>
+                <p>Office: Apr 15–Oct 14 (seasonal hours)</p>
+                <a href="#rates">Rates</a>
+                <a href="#know">Good to know</a>
+            </div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — 4314 Lions Park Rd, Leduc</h5>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=4314+Lions+Park+Rd%2C+Leduc%2C+Alberta+T9E+1C9" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
+        </div>
+        <div class="footer-map">
+            <iframe title="Map to Leduc Lions Campground &amp; RV Park" src="https://www.google.com/maps?q=4314+Lions+Park+Rd,+Leduc,+Alberta+T9E+1C9&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Leduc Lions Campground &amp; RV Park · Owned &amp; operated by the Leduc Lions Club</span>
+            <span><a href="tel:+17809861882">780-986-1882</a></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+    var toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function () { toggle.classList.toggle('open'); links.classList.toggle('open'); });
+    links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { toggle.classList.remove('open'); links.classList.remove('open'); }); });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    var secs = ['about','rates','amenities','map','know'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    var nls = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', function () { var p = window.scrollY + 120, c = ''; secs.forEach(function (s) { if (s.offsetTop <= p) c = s.id; }); nls.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + c); }); }, { passive: true });
+</script>
+</body>
+</html>

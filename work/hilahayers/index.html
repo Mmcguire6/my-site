@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hilah Ayers Wilderness RV Park — Pigeon Lake, Alberta</title>
+<meta name="description" content="Hilah Ayers Wilderness RV Park is a 45-acre gated RV park half a kilometre from Pigeon Lake — 208 seasonal and 34 overnight fully-serviced sites, mini-golf, outdoor movie theatre, beach volleyball and more, less than an hour south of Edmonton." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hilah Ayers Wilderness RV Park — Pigeon Lake" />
+<meta property="og:description" content="A 45-acre gated RV park near Pigeon Lake — 208 seasonal & 34 overnight fully-serviced sites, mini-golf, outdoor movie theatre, walking trails. Less than an hour from Edmonton." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+    :root{--paper:#EFF2EF;--paper-soft:#DEE8E5;--paper-deep:#C4D6D2;--ink:#162523;--ink-2:#364946;--ink-3:#677A76;--lake:#1F7A77;--lake-deep:#0F2E2C;--reed:#6E9A6F;--sun:#E08A3C;--sun-soft:#F0A85C;--rule:#BED0CC;--rule-soft:#D2DEDA;--white:#FBFCF9;--shadow:0 26px 60px -30px rgba(15,46,44,.42);--shadow-soft:0 15px 36px -22px rgba(15,46,44,.30);}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+    em{font-style:italic}
+    .wrap{width:min(1240px,92vw);margin:0 auto}
+    a{color:inherit;text-decoration:none}
+    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sun);display:inline-flex;align-items:center;gap:12px}
+    .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--sun);display:inline-block}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:background .36s,box-shadow .36s,padding .36s}
+    .nav.scrolled{background:rgba(239,242,239,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:16px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+    .nav.scrolled .brand-mark{color:var(--lake)}
+    .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.06)}
+    .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem;line-height:1;color:var(--white)}
+    .nav.scrolled .brand-name{color:var(--ink)}
+    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.59rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,252,249,.66);margin-top:5px}
+    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
+    .nav-links{display:flex;align-items:center;gap:26px}
+    .nav-link{font-size:.85rem;font-weight:500;position:relative;color:rgba(251,252,249,.9);white-space:nowrap;transition:color .24s}
+    .nav.scrolled .nav-link{color:var(--ink-2)}
+    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--sun);transform:scaleX(0);transform-origin:right;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
+    .nav-link:hover,.nav-link.active{color:var(--sun-soft)}
+    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--sun)}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
+    .nav-cta{font-size:.84rem;font-weight:600;background:var(--sun);color:var(--white);padding:12px 22px;border-radius:100px;white-space:nowrap;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s,background .24s;box-shadow:0 10px 22px -12px rgba(224,138,60,.7)}
+    .nav-cta:hover{transform:translateY(-2px);background:#cc7a30}
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
+    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
+    .nav.scrolled .nav-toggle span{background:var(--ink)}
+    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
+    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 160px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,38,36,.56) 0%,rgba(15,38,36,.38) 40%,rgba(15,38,36,.74) 100%)}
+    .hero-inner{position:relative;z-index:2;color:var(--white);max-width:880px}
+    .hero .eyebrow{color:var(--sun-soft)}.hero .eyebrow::before{background:var(--sun-soft)}
+    .hero h1{font-size:clamp(2.9rem,7vw,5.6rem);font-weight:600;color:var(--white);margin:26px 0 22px;letter-spacing:-.02em}
+    .hero h1 em{color:var(--sun-soft);font-weight:500}
+    .hero-lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(251,252,249,.92);max-width:640px;margin-bottom:38px}
+    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .btn-primary{font-size:.95rem;font-weight:600;background:var(--sun);color:var(--white);padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:11px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s,background .24s;box-shadow:0 16px 34px -16px rgba(224,138,60,.8)}
+    .btn-primary:hover{transform:translateY(-3px);background:#cc7a30}
+    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-primary:hover .ar{transform:translateX(5px)}
+    .btn-ghost{font-size:.95rem;font-weight:600;color:var(--white);padding:17px 30px;border-radius:100px;border:1.5px solid rgba(251,252,249,.45);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
+    .btn-ghost:hover{background:rgba(251,252,249,.12);border-color:var(--white);transform:translateY(-3px)}
+    .hero-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
+    .hero-pill{font-size:.78rem;font-weight:600;color:var(--white);background:rgba(251,252,249,.12);border:1px solid rgba(251,252,249,.24);padding:9px 17px;border-radius:100px;backdrop-filter:blur(4px);display:inline-flex;align-items:center;gap:8px}
+    .hero-pill svg{width:14px;height:14px;color:var(--sun-soft)}
+    .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:1;pointer-events:none;color:rgba(251,252,249,.65);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
+    .scroll-cue .line{width:1px;height:30px;background:rgba(251,252,249,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+    @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+    @media(max-height:820px){.scroll-cue{display:none}}
+    .facts{background:var(--lake-deep);color:var(--white)}
+    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .fact{padding:46px 30px;text-align:center;border-right:1px solid rgba(251,252,249,.12)}
+    .fact:last-child{border-right:0}
+    .fact-n{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:600;color:var(--sun-soft);line-height:1.05}
+    .fact-label{font-size:.8rem;font-weight:500;color:rgba(251,252,249,.76);margin-top:12px}
+    .section{padding:130px 0}
+    .section-head{max-width:730px;margin-bottom:60px}
+    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:22px 0 20px}
+    .section-head h2 em{color:var(--lake);font-weight:500}
+    .section-head p{font-size:1.08rem;color:var(--ink-2)}
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:78px;align-items:center}
+    .about-copy h2{font-size:clamp(2rem,4vw,3.3rem);margin:22px 0 24px}
+    .about-copy h2 em{color:var(--lake);font-weight:500}
+    .about-copy p{font-size:1.07rem;color:var(--ink-2);margin-bottom:20px}
+    .about-copy p strong{color:var(--ink);font-weight:600}
+    .about-sig{margin-top:34px;display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid var(--rule-soft)}
+    .about-sig-mark{width:46px;height:46px;color:var(--lake);flex:none}
+    .about-sig-txt{font-size:.92rem;color:var(--ink-2)}
+    .about-sig-txt b{display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:600}
+    .about-fig{position:relative}
+    .about-fig img{width:100%;height:580px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
+    .about-fig-badge{position:absolute;bottom:-28px;left:-28px;background:var(--lake);color:var(--white);padding:24px 30px;border-radius:6px;box-shadow:var(--shadow-soft);max-width:240px}
+    .about-fig-badge .b-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1;color:var(--sun-soft)}
+    .about-fig-badge .b-l{font-size:.8rem;margin-top:7px;color:rgba(251,252,249,.85)}
+    .rates{background:var(--paper-soft)}
+    .rates-2{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:56px}
+    .rate-card{background:var(--white);border:1px solid var(--rule-soft);border-radius:10px;padding:44px 40px;box-shadow:var(--shadow-soft)}
+    .rate-card h3{font-size:1.7rem;margin-bottom:8px}
+    .rate-card .rc-sub{font-size:.9rem;color:var(--ink-3);margin-bottom:22px}
+    .rate-card ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+    .rate-card li{font-size:.97rem;color:var(--ink-2);display:flex;gap:12px;align-items:flex-start}
+    .rate-card li svg{width:19px;height:19px;color:var(--sun);flex:none;margin-top:2px}
+    .rates-note{margin-top:30px;font-size:.95rem;color:var(--ink-2);padding-left:18px;border-left:3px solid var(--sun);max-width:860px}
+    .band-wrap{background:var(--paper)}
+    .band{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;padding:70px 0}
+    .band+.band{border-top:1px solid var(--rule-soft)}
+    .band.flip .band-fig{order:2}
+    .band-fig{position:relative}
+    .band-fig img{width:100%;height:470px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
+    .band-num{position:absolute;top:-34px;right:-10px;font-family:'Fraunces',serif;font-style:italic;font-size:6.5rem;color:var(--paper-deep);line-height:1;z-index:-1}
+    .band.flip .band-num{right:auto;left:-10px}
+    .band-copy .eyebrow{margin-bottom:18px}
+    .band-copy h3{font-size:clamp(1.8rem,3.4vw,2.7rem);margin-bottom:18px}
+    .band-copy h3 em{color:var(--lake);font-weight:500}
+    .band-copy p{font-size:1.05rem;color:var(--ink-2);margin-bottom:16px}
+    .amen{background:var(--paper-soft)}
+    .amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:8px;overflow:hidden;margin-top:56px}
+    .amen-cell{background:var(--paper);padding:42px 34px;transition:background .36s}
+    .amen-cell:hover{background:var(--white)}
+    .amen-ico{width:52px;height:52px;border-radius:12px;background:rgba(31,122,119,.12);color:var(--lake);display:grid;place-items:center;margin-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .36s,color .36s}
+    .amen-cell:hover .amen-ico{transform:translateY(-4px) rotate(-6deg);background:var(--sun);color:var(--white)}
+    .amen-ico svg{width:26px;height:26px}
+    .amen-cell h4{font-size:1.14rem;margin-bottom:9px}
+    .amen-cell p{font-size:.92rem;color:var(--ink-2)}
+    .gtk{background:var(--lake-deep);color:var(--white);position:relative;overflow:hidden}
+    .gtk-bg{position:absolute;inset:0;z-index:0;opacity:.15}
+    .gtk-bg img{width:100%;height:100%;object-fit:cover}
+    .gtk::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--lake-deep) 0%,rgba(15,46,44,.86) 100%);z-index:1}
+    .gtk .wrap{position:relative;z-index:2}
+    .gtk .section-head h2{color:var(--white)}.gtk .section-head h2 em{color:var(--sun-soft)}
+    .gtk .section-head p{color:rgba(251,252,249,.82)}
+    .gtk .eyebrow{color:var(--sun-soft)}.gtk .eyebrow::before{background:var(--sun-soft)}
+    .gtk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
+    .gtk-item{border:1px solid rgba(251,252,249,.16);border-radius:8px;padding:32px 30px;background:rgba(251,252,249,.04);transition:transform .38s cubic-bezier(.2,.7,.2,1),border-color .38s}
+    .gtk-item:hover{transform:translateY(-6px);border-color:rgba(240,168,92,.55)}
+    .gtk-medallion{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--sun-soft);color:var(--sun-soft);display:grid;place-items:center;margin-bottom:18px;font-family:'Fraunces',serif;font-weight:700}
+    .gtk-item h4{font-size:1.15rem;color:var(--white);margin-bottom:9px}
+    .gtk-item p{font-size:.92rem;color:rgba(251,252,249,.78)}
+    .cta{background:var(--sun);color:var(--white);padding:110px 0;text-align:center;position:relative;overflow:hidden}
+    .cta::before{content:"";position:absolute;top:-60%;right:-10%;width:540px;height:540px;border-radius:50%;background:rgba(255,255,255,.16)}
+    .cta .wrap{position:relative;z-index:1}
+    .cta h2{font-size:clamp(2.2rem,4.6vw,3.7rem);margin-bottom:18px}
+    .cta p{font-size:1.12rem;color:rgba(251,252,249,.92);max-width:580px;margin:0 auto 38px}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-light{background:var(--ink);color:var(--white);font-size:1rem;font-weight:600;padding:18px 38px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s;box-shadow:0 18px 38px -18px rgba(15,46,44,.55)}
+    .btn-light:hover{transform:translateY(-3px)}
+    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-light:hover .ar{transform:translateX(5px)}
+    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--white);padding:18px 32px;border-radius:100px;border:1.6px solid rgba(251,252,249,.5);transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
+    .btn-line:hover{background:rgba(251,252,249,.12);border-color:var(--white);transform:translateY(-3px)}
+    .footer{background:var(--ink);color:rgba(251,252,249,.74);padding:92px 0 38px}
+    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(251,252,249,.13)}
+    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--sun-soft)}
+    .footer .brand-name .brand-sub{color:rgba(251,252,249,.55)}
+    .footer-intro{margin-top:22px;font-size:.96rem;max-width:350px;line-height:1.7}
+    .footer-col h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
+    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(251,252,249,.74);margin-bottom:13px;transition:color .22s}
+    .footer-col a:hover{color:var(--sun-soft)}
+    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
+    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--white);background:var(--sun);padding:10px 19px;border-radius:100px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
+    .footer-dir:hover{transform:translateY(-2px);background:#cc7a30}
+    .footer-map{margin:0 0 38px;border-radius:8px;overflow:hidden;border:1px solid rgba(251,252,249,.14);height:300px}
+    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.83rem;color:rgba(251,252,249,.55)}
+    .footer-bottom a{color:rgba(251,252,249,.7)}
+    .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+    .reveal.left{transform:translateX(-48px)}.reveal.right{transform:translateX(48px)}
+    .reveal.in{opacity:1;transform:none}
+    @media(max-width:1100px){
+        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .46s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(15,46,44,.4)}
+        .nav-links.open{transform:translateX(0)}
+        .nav-link,.nav .nav-link{color:var(--ink-2);font-size:1.05rem}
+        .nav-toggle{display:block;z-index:101}
+        .nav-toggle.open span{background:var(--ink)!important}
+        .about-grid,.band,.band.flip .band-fig,.rates-2,.amen-grid,.gtk-grid,.footer-top{grid-template-columns:1fr}
+        .band.flip .band-fig{order:0}
+        .facts-grid{grid-template-columns:1fr 1fr}
+        .about-fig img,.band-fig img{height:380px}.about-fig-badge{left:0}
+    }
+    @media(max-width:620px){
+        .facts-grid{grid-template-columns:1fr}
+        .fact{border-right:0;border-bottom:1px solid rgba(251,252,249,.12)}
+        .section{padding:86px 0}
+        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
+        .btn-primary,.btn-ghost{justify-content:center}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Hilah Ayers Wilderness RV Park home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M6 30c4-3 8-3 12 0s8 3 12 0 8-3 12 0M6 36c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 8 L29 20 H19 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+            <span class="brand-name">Hilah Ayers<span class="brand-sub">Wilderness RV Park · Pigeon Lake</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#sites" class="nav-link">Sites</a>
+            <a href="#do" class="nav-link">Things to Do</a>
+            <a href="#area" class="nav-link">The Area</a>
+            <a href="#know" class="nav-link">Good to Know</a>
+            <a href="https://www.campspot.com/book/hilah-ayers-wilderness-rv-park" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+<header class="hero" id="top">
+    <div class="hero-bg"><img src="img/hero.jpg" alt="A cabin among autumn trees at Hilah Ayers Wilderness RV Park near Pigeon Lake" /></div>
+    <div class="wrap hero-inner">
+        <span class="eyebrow">Mulhurst Bay, Alberta · Pigeon Lake</span>
+        <h1>Welcome to the<br /><em>great outdoors.</em></h1>
+        <p class="hero-lede">Hilah Ayers Wilderness RV Park is a 45-acre gated park half a kilometre from Pigeon Lake — fully-serviced seasonal and overnight sites, with mini-golf, an outdoor movie theatre and more, less than an hour south of Edmonton.</p>
+        <div class="hero-ctas">
+            <a href="https://www.campspot.com/book/hilah-ayers-wilderness-rv-park" target="_blank" rel="noopener" class="btn-primary">Book a site <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#do" class="btn-ghost">See what's here</a>
+        </div>
+        <div class="hero-pills">
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 16s2-2 4-2 4 2 8 2 4-2 4-2M4 11s2-2 4-2 4 2 8 2 4-2 4-2"/></svg>0.5 km from Pigeon Lake</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>208 seasonal · 34 overnight sites</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>24-hour security</span>
+        </div>
+    </div>
+    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
+</header>
+<section class="facts">
+    <div class="wrap"><div class="facts-grid">
+        <div class="fact"><div class="fact-n">45&nbsp;ac</div><div class="fact-label">Gated wilderness RV park</div></div>
+        <div class="fact"><div class="fact-n">208</div><div class="fact-label">Seasonal fully-serviced sites</div></div>
+        <div class="fact"><div class="fact-n">34</div><div class="fact-label">Overnight sites</div></div>
+        <div class="fact"><div class="fact-n">&lt;&nbsp;1&nbsp;hr</div><div class="fact-label">South of Edmonton</div></div>
+    </div></div>
+</section>
+<section class="section about" id="about">
+    <div class="wrap about-grid">
+        <div class="about-copy reveal left">
+            <span class="eyebrow">About the park</span>
+            <h2>A wilderness park <em>by the lake.</em></h2>
+            <p>Hilah Ayers Wilderness RV Park is a <strong>45-acre gated campground</strong> just half a kilometre from the shores of Pigeon Lake, with 208 seasonal sites and 34 overnight sites — all fully serviced with power, water and sewer.</p>
+            <p>It's less than an hour south of Edmonton, with a public boat launch within walking distance and a real sense of the outdoors right at your site.</p>
+            <div class="about-sig">
+                <span class="about-sig-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="about-sig-txt"><b>Gated &amp; secure</b>24-hour security cameras and a gated entrance throughout the park.</span>
+            </div>
+        </div>
+        <div class="about-fig reveal right">
+            <img src="img/about.jpg" alt="The gazebo and grounds at Hilah Ayers Wilderness RV Park" />
+            <div class="about-fig-badge"><div class="b-n">242 sites</div><div class="b-l">208 seasonal &amp; 34 overnight, fully serviced</div></div>
+        </div>
+    </div>
+</section>
+<section class="section rates" id="sites">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">The sites</span>
+            <h2>Seasonal or <em>overnight.</em></h2>
+            <p>Two ways to stay — settle in for the season, or roll in for a night or two. Booking is online through Campspot.</p>
+        </div>
+        <div class="rates-2">
+            <div class="rate-card reveal left">
+                <h3>Seasonal sites</h3>
+                <p class="rc-sub">208 fully-serviced seasonal lots</p>
+                <ul>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Full hookups — power, water &amp; sewer</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Tenant events through the season</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>The Hideaway &amp; The Meadows areas</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>2026 lease agreement available</li>
+                </ul>
+            </div>
+            <div class="rate-card reveal right">
+                <h3>Overnight sites</h3>
+                <p class="rc-sub">34 fully-serviced overnight lots</p>
+                <ul>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Full hookups for a night or a week</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Book online through Campspot</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Shower house, laundry &amp; dump station</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Full run of the park's amenities</li>
+                </ul>
+            </div>
+        </div>
+        <p class="rates-note reveal">Seasonal and overnight rates are listed on the park's booking pages. Overnight reservations are made online through Campspot — call (780) 389-4071 with any questions about seasonal lots or availability.</p>
+    </div>
+</section>
+<section class="section band-wrap" id="do">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Things to do</span>
+            <h2>There's a lot <em>going on.</em></h2>
+            <p>This is a park built for doing things — not just parking the trailer.</p>
+        </div>
+        <div class="band reveal">
+            <div class="band-fig"><span class="band-num">01</span><img src="img/known-1.jpg" alt="Grounds and amenities at Hilah Ayers Wilderness RV Park" /></div>
+            <div class="band-copy">
+                <span class="eyebrow">On the grounds</span>
+                <h3>Mini-golf, movies &amp; <em>more.</em></h3>
+                <p>A 9-hole mini-golf course, beach volleyball, horseshoe pits, walking trails and an outdoor movie theatre — there's something for every evening.</p>
+                <p>Park-like settings give kids room to play, and James &amp; Tasha's Camping Kitchen food trailer is on site (opening May 9).</p>
+            </div>
+        </div>
+        <div class="band flip reveal">
+            <div class="band-fig"><span class="band-num">02</span><img src="img/known-2.jpg" alt="Cabin and treed sites at Hilah Ayers Wilderness RV Park" /></div>
+            <div class="band-copy">
+                <span class="eyebrow">The essentials</span>
+                <h3>Everything you <em>need on site.</em></h3>
+                <p>A shower house and laundry facilities, a dumping station, and a gated entrance with 24-hour security cameras throughout.</p>
+                <p>It's a true wilderness park — the outdoors at your door, with the comforts handled.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section amen">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">At a glance</span>
+            <h2>What's <em>here.</em></h2>
+        </div>
+        <div class="amen-grid">
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h4>9-hole mini-golf</h4><p>A full mini-golf course right on the grounds.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8M12 17v4"/></svg></div><h4>Outdoor movie theatre</h4><p>Outdoor movie nights under the open sky.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 000 18"/></svg></div><h4>Beach volleyball</h4><p>A beach volleyball court plus horseshoe pits.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18s3-8 8-8 8 8 8 8M8 10l2-4 4 1"/></svg></div><h4>Walking trails</h4><p>Walking trails through the wilderness park.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v6M12 3v6M17 3v6M5 9h14l-1 12H6L5 9z"/></svg></div><h4>Shower house &amp; laundry</h4><p>Shower house, laundry and a dumping station.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h16l-1 11H5L4 9z"/><path d="M9 9V6a3 3 0 016 0v3"/></svg></div><h4>Camping Kitchen</h4><p>James &amp; Tasha's Camping Kitchen food trailer on site (opens May 9).</p></div>
+        </div>
+    </div>
+</section>
+<section class="section gtk" id="area">
+    <div class="gtk-bg"><img src="img/approach-bg.jpg" alt="" aria-hidden="true" /></div>
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">The area</span>
+            <h2>Pigeon Lake <em>&amp; beyond.</em></h2>
+            <p>You're parked in the middle of one of central Alberta's favourite summer areas.</p>
+        </div>
+        <div class="gtk-grid">
+            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Pigeon Lake</h4><p>Walking distance to Pigeon Lake and a public boat launch.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>Golf country</h4><p>Twelve golf courses within a 30-minute drive.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Music &amp; concerts</h4><p>Home to the Pigeon Lake Music Festival &amp; Concert Series.</p></div>
+            <div class="gtk-item reveal" id="know"><div class="gtk-medallion">4</div><h4>Booking</h4><p>Overnight sites book online via Campspot; call (780) 389-4071 for seasonal.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Coming soon</h4><p>The Hideaway is coming soon, alongside The Meadows seasonal area.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Find us</h4><p>Box 131, Mulhurst Bay, Alberta T0C 2C0 — less than an hour from Edmonton.</p></div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <div class="wrap">
+        <h2>Book your spot by the lake.</h2>
+        <p>Reserve an overnight site online, or call about a seasonal lot for the summer.</p>
+        <div class="cta-actions">
+            <a href="https://www.campspot.com/book/hilah-ayers-wilderness-rv-park" target="_blank" rel="noopener" class="btn-light">Book online <span class="ar" aria-hidden="true">→</span></a>
+            <a href="tel:+17803894071" class="btn-line">Call 780-389-4071</a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M6 30c4-3 8-3 12 0s8 3 12 0 8-3 12 0M6 36c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 8 L29 20 H19 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span><span class="brand-name">Hilah Ayers<span class="brand-sub">Wilderness RV Park · Pigeon Lake</span></span></div>
+                <p class="footer-intro">A 45-acre gated wilderness RV park half a kilometre from Pigeon Lake — less than an hour south of Edmonton.</p>
+            </div>
+            <div class="footer-col"><h5>Contact</h5><a href="tel:+17803894071">780-389-4071</a><p>Box 131, Mulhurst Bay<br />Alberta T0C 2C0</p><a href="https://www.campspot.com/book/hilah-ayers-wilderness-rv-park" target="_blank" rel="noopener">Book online →</a></div>
+            <div class="footer-col"><h5>The park</h5><a href="#sites">The sites</a><a href="#do">Things to do</a><a href="#area">The area</a></div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — Mulhurst Bay, Pigeon Lake</h5>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hilah+Ayers+Wilderness+RV+Park%2C+Mulhurst+Bay%2C+Alberta" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Hilah Ayers Wilderness RV Park, Mulhurst Bay" src="https://www.google.com/maps?q=Hilah+Ayers+Wilderness+RV+Park,+Mulhurst+Bay,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom"><span>© 2026 Hilah Ayers Wilderness RV Park · Pigeon Lake, Alberta</span><span><a href="tel:+17803894071">780-389-4071</a></span></div>
+    </div>
+</footer>
+<script>
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var secs=['about','sites','do','area'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
+</script>
+</body>
+</html>

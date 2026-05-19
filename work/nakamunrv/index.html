@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nakamun Store &amp; RV Park — The hub of Nakamun Lake</title>
+<meta name="description" content="Nakamun Store & RV Park is the only RV park in the Nakamun Lake area near Busby, Alberta — a full-service general store, RV dump depot, fitness centre, laundromat and a 160-acre nature reserve. Open May to October." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nakamun Store & RV Park — Nakamun Lake" />
+<meta property="og:description" content="The only RV park in the Nakamun Lake area, with a full-service general store, RV dump depot and a 160-acre nature reserve. Open May to October." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+    :root{--paper:#EEF2F1;--paper-soft:#DCE7E6;--paper-deep:#C2D5D3;--ink:#16252A;--ink-2:#33474C;--ink-3:#647A7E;--aqua:#1C7C82;--aqua-deep:#0D2C2E;--reed:#5E9B7E;--coral:#D9603F;--coral-soft:#E97F5E;--rule:#BDD0CE;--rule-soft:#D0DEDC;--white:#FBFCFA;--shadow:0 26px 60px -30px rgba(13,44,46,.42);--shadow-soft:0 15px 36px -22px rgba(13,44,46,.30);}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+    em{font-style:italic}
+    .wrap{width:min(1240px,92vw);margin:0 auto}
+    a{color:inherit;text-decoration:none}
+    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);display:inline-flex;align-items:center;gap:12px}
+    .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--coral);display:inline-block}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:background .36s,box-shadow .36s,padding .36s}
+    .nav.scrolled{background:rgba(238,242,241,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:16px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+    .nav.scrolled .brand-mark{color:var(--aqua)}
+    .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.06)}
+    .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.24rem;line-height:1;color:var(--white)}
+    .nav.scrolled .brand-name{color:var(--ink)}
+    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.59rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,252,250,.66);margin-top:5px}
+    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-link{font-size:.85rem;font-weight:500;position:relative;color:rgba(251,252,250,.9);white-space:nowrap;transition:color .24s}
+    .nav.scrolled .nav-link{color:var(--ink-2)}
+    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--coral);transform:scaleX(0);transform-origin:right;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
+    .nav-link:hover,.nav-link.active{color:var(--coral-soft)}
+    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--coral)}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
+    .nav-cta{font-size:.84rem;font-weight:600;background:var(--coral);color:var(--white);padding:12px 22px;border-radius:100px;white-space:nowrap;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s,background .24s;box-shadow:0 10px 22px -12px rgba(217,96,63,.7)}
+    .nav-cta:hover{transform:translateY(-2px);background:#c3502f}
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
+    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
+    .nav.scrolled .nav-toggle span{background:var(--ink)}
+    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
+    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 160px;overflow:hidden;background:linear-gradient(155deg,var(--aqua-deep) 0%,var(--aqua) 58%,#2c8e84 100%)}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle at 80% 22%,rgba(233,127,94,.20) 0,transparent 40%),radial-gradient(circle at 14% 76%,rgba(94,155,126,.30) 0,transparent 44%)}
+    .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;opacity:.16;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.5) 0 1px,transparent 1px 22px)}
+    .hero-inner{position:relative;z-index:2;color:var(--white);max-width:880px}
+    .hero .eyebrow{color:var(--coral-soft)}.hero .eyebrow::before{background:var(--coral-soft)}
+    .hero h1{font-size:clamp(2.9rem,7vw,5.6rem);font-weight:600;color:var(--white);margin:26px 0 22px;letter-spacing:-.02em}
+    .hero h1 em{color:var(--coral-soft);font-weight:500}
+    .hero-lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(251,252,250,.92);max-width:640px;margin-bottom:38px}
+    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .btn-primary{font-size:.95rem;font-weight:600;background:var(--coral);color:var(--white);padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:11px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s,background .24s;box-shadow:0 16px 34px -16px rgba(217,96,63,.8)}
+    .btn-primary:hover{transform:translateY(-3px);background:#c3502f}
+    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-primary:hover .ar{transform:translateX(5px)}
+    .btn-ghost{font-size:.95rem;font-weight:600;color:var(--white);padding:17px 30px;border-radius:100px;border:1.5px solid rgba(251,252,250,.45);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
+    .btn-ghost:hover{background:rgba(251,252,250,.12);border-color:var(--white);transform:translateY(-3px)}
+    .hero-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
+    .hero-pill{font-size:.78rem;font-weight:600;color:var(--white);background:rgba(251,252,250,.12);border:1px solid rgba(251,252,250,.24);padding:9px 17px;border-radius:100px;backdrop-filter:blur(4px);display:inline-flex;align-items:center;gap:8px}
+    .hero-pill svg{width:14px;height:14px;color:var(--coral-soft)}
+    .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:1;pointer-events:none;color:rgba(251,252,250,.65);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
+    .scroll-cue .line{width:1px;height:30px;background:rgba(251,252,250,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+    @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+    @media(max-height:820px){.scroll-cue{display:none}}
+    .facts{background:var(--aqua-deep);color:var(--white)}
+    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .fact{padding:46px 30px;text-align:center;border-right:1px solid rgba(251,252,250,.12)}
+    .fact:last-child{border-right:0}
+    .fact-n{font-family:'Fraunces',serif;font-size:clamp(1.7rem,3vw,2.6rem);font-weight:600;color:var(--coral-soft);line-height:1.05}
+    .fact-label{font-size:.8rem;font-weight:500;color:rgba(251,252,250,.76);margin-top:12px}
+    .section{padding:130px 0}
+    .section-head{max-width:730px;margin-bottom:60px}
+    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:22px 0 20px}
+    .section-head h2 em{color:var(--aqua);font-weight:500}
+    .section-head p{font-size:1.08rem;color:var(--ink-2)}
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .about-copy h2{font-size:clamp(2rem,4vw,3.3rem);margin:22px 0 24px}
+    .about-copy h2 em{color:var(--aqua);font-weight:500}
+    .about-copy p{font-size:1.07rem;color:var(--ink-2);margin-bottom:20px}
+    .about-copy p strong{color:var(--ink);font-weight:600}
+    .about-card{background:var(--aqua);color:var(--white);border-radius:10px;padding:46px 42px;box-shadow:var(--shadow)}
+    .about-card h3{font-size:1.5rem;color:var(--white);margin-bottom:18px}
+    .about-card ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+    .about-card li{font-size:.98rem;color:rgba(251,252,250,.9);display:flex;align-items:flex-start;gap:12px}
+    .about-card li svg{width:19px;height:19px;color:var(--coral-soft);flex:none;margin-top:2px}
+    .feat{background:var(--paper-soft)}
+    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:8px;overflow:hidden;margin-top:56px}
+    .feat-cell{background:var(--paper);padding:44px 36px;transition:background .36s}
+    .feat-cell:hover{background:var(--white)}
+    .feat-ico{width:52px;height:52px;border-radius:12px;background:rgba(28,124,130,.12);color:var(--aqua);display:grid;place-items:center;margin-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .36s,color .36s}
+    .feat-cell:hover .feat-ico{transform:translateY(-4px) rotate(-6deg);background:var(--coral);color:var(--white)}
+    .feat-ico svg{width:26px;height:26px}
+    .feat-cell h4{font-size:1.16rem;margin-bottom:9px}
+    .feat-cell p{font-size:.93rem;color:var(--ink-2)}
+    .gtk{background:var(--aqua-deep);color:var(--white)}
+    .gtk .section-head h2{color:var(--white)}.gtk .section-head h2 em{color:var(--coral-soft)}
+    .gtk .section-head p{color:rgba(251,252,250,.82)}
+    .gtk .eyebrow{color:var(--coral-soft)}.gtk .eyebrow::before{background:var(--coral-soft)}
+    .gtk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
+    .gtk-item{border:1px solid rgba(251,252,250,.16);border-radius:8px;padding:32px 30px;background:rgba(251,252,250,.04);transition:transform .38s cubic-bezier(.2,.7,.2,1),border-color .38s}
+    .gtk-item:hover{transform:translateY(-6px);border-color:rgba(233,127,94,.55)}
+    .gtk-medallion{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--coral-soft);color:var(--coral-soft);display:grid;place-items:center;margin-bottom:18px;font-family:'Fraunces',serif;font-weight:700}
+    .gtk-item h4{font-size:1.15rem;color:var(--white);margin-bottom:9px}
+    .gtk-item p{font-size:.92rem;color:rgba(251,252,250,.78)}
+    .cta{background:var(--coral);color:var(--white);padding:110px 0;text-align:center;position:relative;overflow:hidden}
+    .cta::before{content:"";position:absolute;top:-60%;right:-10%;width:540px;height:540px;border-radius:50%;background:rgba(255,255,255,.16)}
+    .cta .wrap{position:relative;z-index:1}
+    .cta h2{font-size:clamp(2.2rem,4.6vw,3.7rem);margin-bottom:18px}
+    .cta p{font-size:1.12rem;color:rgba(251,252,250,.92);max-width:580px;margin:0 auto 38px}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-light{background:var(--ink);color:var(--white);font-size:1rem;font-weight:600;padding:18px 38px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s;box-shadow:0 18px 38px -18px rgba(13,44,46,.55)}
+    .btn-light:hover{transform:translateY(-3px)}
+    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-light:hover .ar{transform:translateX(5px)}
+    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--white);padding:18px 32px;border-radius:100px;border:1.6px solid rgba(251,252,250,.5);transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
+    .btn-line:hover{background:rgba(251,252,250,.12);border-color:var(--white);transform:translateY(-3px)}
+    .footer{background:var(--ink);color:rgba(251,252,250,.74);padding:92px 0 38px}
+    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(251,252,250,.13)}
+    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--coral-soft)}
+    .footer .brand-name .brand-sub{color:rgba(251,252,250,.55)}
+    .footer-intro{margin-top:22px;font-size:.96rem;max-width:360px;line-height:1.7}
+    .footer-col h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
+    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(251,252,250,.74);margin-bottom:13px;transition:color .22s}
+    .footer-col a:hover{color:var(--coral-soft)}
+    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
+    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--white);background:var(--coral);padding:10px 19px;border-radius:100px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
+    .footer-dir:hover{transform:translateY(-2px);background:#c3502f}
+    .footer-map{margin:0 0 38px;border-radius:8px;overflow:hidden;border:1px solid rgba(251,252,250,.14);height:300px}
+    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.82rem;color:rgba(251,252,250,.55)}
+    .footer-bottom a{color:rgba(251,252,250,.7)}
+    .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+    .reveal.left{transform:translateX(-48px)}.reveal.right{transform:translateX(48px)}
+    .reveal.in{opacity:1;transform:none}
+    @media(max-width:1100px){
+        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .46s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(13,44,46,.4)}
+        .nav-links.open{transform:translateX(0)}
+        .nav-link,.nav .nav-link{color:var(--ink-2);font-size:1.05rem}
+        .nav-toggle{display:block;z-index:101}
+        .nav-toggle.open span{background:var(--ink)!important}
+        .about-grid,.feat-grid,.gtk-grid,.footer-top{grid-template-columns:1fr}
+        .facts-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+        .facts-grid{grid-template-columns:1fr}
+        .fact{border-right:0;border-bottom:1px solid rgba(251,252,250,.12)}
+        .section{padding:86px 0}
+        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
+        .btn-primary,.btn-ghost{justify-content:center}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Nakamun Store &amp; RV Park home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M8 22 L24 10 L40 22 V38 H8 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M6 38c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+            <span class="brand-name">Nakamun<span class="brand-sub">Store &amp; RV Park · Busby, AB</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#store" class="nav-link">The Store</a>
+            <a href="#park" class="nav-link">RV Park</a>
+            <a href="#know" class="nav-link">Good to Know</a>
+            <a href="https://www.nakamunrv.com/" target="_blank" rel="noopener" class="nav-cta">Visit Site</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+<header class="hero" id="top">
+    <div class="wrap hero-inner">
+        <span class="eyebrow">Nakamun Lake · Busby, Alberta</span>
+        <h1>The hub of<br /><em>Nakamun Lake.</em></h1>
+        <p class="hero-lede">Nakamun Store &amp; RV Park is the only RV park in the Nakamun Lake area — a full-service general store, RV park and lakeside basecamp, with a 160-acre nature reserve right out the door.</p>
+        <div class="hero-ctas">
+            <a href="https://www.nakamunrv.com/" target="_blank" rel="noopener" class="btn-primary">Plan a visit <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#store" class="btn-ghost">What's in the store</a>
+        </div>
+        <div class="hero-pills">
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9h16l-1 11H5L4 9z"/><path d="M9 9V6a3 3 0 016 0v3"/></svg>Full-service general store</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>The only RV park in the lake area</span>
+            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Open May 1 – October 31</span>
+        </div>
+    </div>
+    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
+</header>
+<section class="facts">
+    <div class="wrap"><div class="facts-grid">
+        <div class="fact"><div class="fact-n">Only&nbsp;one</div><div class="fact-label">RV park in the lake area</div></div>
+        <div class="fact"><div class="fact-n">160&nbsp;ac</div><div class="fact-label">Nature reserve for guests</div></div>
+        <div class="fact"><div class="fact-n">Full</div><div class="fact-label">Service general store on site</div></div>
+        <div class="fact"><div class="fact-n">May–Oct</div><div class="fact-label">Open May 1 to October 31</div></div>
+    </div></div>
+</section>
+<section class="section about" id="about">
+    <div class="wrap about-grid">
+        <div class="about-copy reveal left">
+            <span class="eyebrow">About Nakamun</span>
+            <h2>Store, RV park &amp; <em>lake life.</em></h2>
+            <p>Nakamun Store &amp; RV Park is a <strong>full-service store and the only RV park in the Nakamun Lake area</strong>, near Busby, Alberta — the practical heart of a quiet lake community.</p>
+            <p>It's where you fuel up, stock up and set up: groceries and essentials in the store, a place to park the rig, and a 160-acre nature reserve and trails to enjoy while you're here.</p>
+            <div class="about-sig">
+                <span class="about-sig-mark" aria-hidden="true" style="width:46px;height:46px;color:var(--aqua);flex:none"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span style="font-size:.92rem;color:var(--ink-2)"><b style="display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:600">One stop for the lake</b>Open seasonally, May 1 through October 31.</span>
+            </div>
+        </div>
+        <div class="about-card reveal right">
+            <h3>At a glance</h3>
+            <ul>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>The only RV park in the Nakamun Lake area</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Full-service general &amp; convenience store</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Gas station, propane &amp; RV dump depot</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Fitness centre, coffee lounge &amp; laundromat</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>160-acre nature reserve &amp; trails</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="section feat" id="store">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">The store</span>
+            <h2>Pretty much <em>everything.</em></h2>
+            <p>A genuinely full-service store — the kind that means you don't have to drive to town.</p>
+        </div>
+        <div class="feat-grid">
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h16l-1 11H5L4 9z"/><path d="M9 9V6a3 3 0 016 0v3"/></svg></div><h4>Groceries &amp; essentials</h4><p>Groceries, snacks, bottled water and ice — everything you forgot to pack.</p></div>
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 21V8a2 2 0 012-2h4l2 3h4v12"/><path d="M14 21v-6h6v6"/></svg></div><h4>Liquor &amp; ice cream</h4><p>Liquor sales and ice cream for the lake-day necessities.</p></div>
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h11v6a4 4 0 01-4 4H9a4 4 0 01-4-4z"/><path d="M16 9h2a2 2 0 010 4h-2"/><path d="M8 4v2M11 3v3"/></svg></div><h4>Fresh coffee &amp; lounge</h4><p>Fresh coffee and a coffee lounge to sit a while.</p></div>
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h3l2-6 4 12 2-6h5"/></svg></div><h4>Gas &amp; propane</h4><p>A gas station and propane — top up the tank and the rig.</p></div>
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9l3-3 2 2M19 15l-3 3-2-2M7 17l10-10"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/></svg></div><h4>Full fitness centre</h4><p>A full fitness centre — keep the routine going on the road.</p></div>
+            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="16" cy="7" r="1"/></svg></div><h4>Laundromat</h4><p>An on-site laundromat so you can stay longer.</p></div>
+        </div>
+    </div>
+</section>
+<section class="section gtk" id="park">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">The RV park</span>
+            <h2>Park up by <em>the lake.</em></h2>
+            <p>The only RV park in the area — and the gateway to Nakamun Lake and a 160-acre nature reserve.</p>
+        </div>
+        <div class="gtk-grid">
+            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>The only RV park here</h4><p>Nakamun is the only RV park in the Nakamun Lake area — a rare spot right by the water.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>RV dump depot</h4><p>An on-site RV dump depot, so you can empty the tanks before you head out.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>160-acre nature reserve</h4><p>A 160-acre nature reserve for guests to enjoy, with nature trails throughout.</p></div>
+            <div class="gtk-item reveal" id="know"><div class="gtk-medallion">4</div><h4>The lake</h4><p>Nakamun Lake is a short drive away — easy access to the water all season.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Season</h4><p>Open May 1 to October 31 — the full Alberta camping season.</p></div>
+            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Plan ahead</h4><p>Visit the website for current site availability, rates and store hours.</p></div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <div class="wrap">
+        <h2>Make Nakamun your basecamp.</h2>
+        <p>Stock up at the store, park up by the lake, and explore the nature reserve all season long.</p>
+        <div class="cta-actions">
+            <a href="https://www.nakamunrv.com/" target="_blank" rel="noopener" class="btn-light">Visit the website <span class="ar" aria-hidden="true">→</span></a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Nakamun+RV+Park%2C+Busby%2C+Alberta" target="_blank" rel="noopener" class="btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M8 22 L24 10 L40 22 V38 H8 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M6 38c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-name">Nakamun<span class="brand-sub">Store &amp; RV Park · Busby, AB</span></span></div>
+                <p class="footer-intro">A full-service store and the only RV park in the Nakamun Lake area, near Busby, Alberta — open May to October.</p>
+            </div>
+            <div class="footer-col"><h5>Contact</h5><a href="https://www.nakamunrv.com/" target="_blank" rel="noopener">nakamunrv.com</a><p>Nakamun Lake area<br />near Busby, Alberta</p></div>
+            <div class="footer-col"><h5>Here</h5><a href="#store">The store</a><a href="#park">The RV park</a><a href="#know">Good to know</a></div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — Nakamun Lake, near Busby</h5>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Nakamun+RV+Park%2C+Busby%2C+Alberta" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Nakamun Store &amp; RV Park, Busby, Alberta" src="https://www.google.com/maps?q=Nakamun+RV+Park,+Busby,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom"><span>© 2026 Nakamun Store &amp; RV Park · Nakamun Lake, Alberta</span><span><a href="https://www.nakamunrv.com/" target="_blank" rel="noopener">nakamunrv.com</a></span></div>
+    </div>
+</footer>
+<script>
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var secs=['about','store','park'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
+</script>
+</body>
+</html>
