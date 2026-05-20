@@ -1,0 +1,3276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Singleton &amp; Associates | Criminal Defence Lawyers | Halifax, NS</title>
+    <meta name="description" content="Aggressive, professional criminal defence lawyers in Halifax, NS. Voted Top Criminal Law Services in Halifax. Serving Atlantic Canada 24/7. Call (902) 492-7000.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Singleton & Associates — deep teal authority + warm gold accent on cream */
+            --ink:            #1A1C1E;
+            --ink-deep:       #0C0E10;
+            --char:           #232527;
+            --char-mid:       #34373A;
+            --char-light:     #55595E;
+
+            --teal:           #0C5E5E;
+            --teal-bright:    #128181;
+            --teal-deep:      #074545;
+            --teal-darker:    #042B2B;
+            --teal-pale:      #A8C8C8;
+            --teal-tint:      #D9E8E8;
+            --teal-soft:      #ECF3F3;
+
+            --gold:           #C49520;
+            --gold-bright:    #E2B442;
+            --gold-deep:      #8E6A14;
+            --gold-darker:    #5A430C;
+            --gold-pale:      #EAD58A;
+            --gold-tint:      #F2E7BE;
+            --gold-soft:      #F8F0D8;
+
+            --bone:           #F7F2EA;
+            --bone-deep:      #ECE4D2;
+            --paper:          #FFFFFF;
+            --bg:             #FBF7EE;
+            --bg-soft:        #FDFAF4;
+
+            --text:           #1A1C1E;
+            --text-mid:       #4A4D52;
+            --text-soft:      #6E7278;
+            --text-faint:     #9499A0;
+
+            --border:         #E2DDCD;
+            --border-soft:    #ECE6D6;
+
+            --topbar-h:       42px;
+            --nav-h:          82px;
+            --total-nav:      124px;
+
+            --shadow-sm:      0 1px 3px rgba(12,94,94,0.07);
+            --shadow-md:      0 8px 24px -8px rgba(12,94,94,0.22), 0 2px 6px -2px rgba(12,94,94,0.10);
+            --shadow-lg:      0 24px 56px -20px rgba(12,94,94,0.32), 0 8px 16px -8px rgba(12,94,94,0.12);
+            --shadow-teal:    0 12px 28px -8px rgba(12,94,94,0.50);
+            --shadow-gold:    0 12px 28px -8px rgba(196,149,32,0.45);
+            --shadow-ink:     0 12px 28px -8px rgba(26,28,30,0.50);
+
+            --ease-expensive: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+            mix-blend-mode: multiply;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+            font-weight: 700;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+        /* Section scroll margin so fixed nav doesn't cover landing */
+        section[id] { scroll-margin-top: calc(var(--total-nav) + 24px); }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .s-mark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+            position: relative;
+        }
+        .s-mark .s-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.58rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        .s-mark .s-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.45rem;
+            color: var(--ink);
+            letter-spacing: 0.04em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .s-mark .s-name em {
+            font-style: italic;
+            color: var(--teal);
+            font-weight: 500;
+            text-transform: none;
+            margin: 0 0.12em;
+        }
+        .s-mark .s-rule {
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--teal);
+            margin: 8px 0 5px;
+        }
+        .s-mark .s-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--teal);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .s-mark.inverse .s-eyebrow { color: var(--gold-bright); }
+        .s-mark.inverse .s-name { color: var(--bone); }
+        .s-mark.inverse .s-name em { color: var(--gold-pale); }
+        .s-mark.inverse .s-rule { background: var(--gold); }
+        .s-mark.inverse .s-tag { color: var(--gold-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink-deep);
+            color: rgba(247,242,234,0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 2px solid var(--teal);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(247,242,234,0.92);
+            transition: color 0.15s var(--ease-expensive);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--gold-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+        .top-bar .emergency {
+            color: var(--gold-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar .emergency::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold-bright);
+            box-shadow: 0 0 0 4px rgba(226,180,66,0.18);
+            animation: pulse 2.4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(226,180,66,0.18); }
+            50% { box-shadow: 0 0 0 8px rgba(226,180,66,0.08); }
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s var(--ease-expensive);
+        }
+        .nav.scrolled { box-shadow: 0 4px 20px -8px rgba(12,94,94,0.18); }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links > li > a {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            position: relative;
+            padding: 4px 0;
+            transition: color 0.2s var(--ease-expensive);
+        }
+        .nav-links > li > a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 1.5px;
+            background: var(--teal);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.35s var(--ease-expensive);
+        }
+        .nav-links > li > a:hover { color: var(--teal); }
+        .nav-links > li > a:hover::after,
+        .nav-links > li > a.active::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+        .nav-cta {
+            display: inline-flex !important;
+            flex-direction: column;
+            align-items: center;
+            gap: 1px !important;
+            background: var(--teal) !important;
+            color: var(--bone) !important;
+            padding: 12px 26px !important;
+            border-radius: 3px;
+            border: 1.5px solid var(--gold) !important;
+            box-shadow: 0 4px 12px -4px rgba(12,94,94,0.42);
+            letter-spacing: 0.10em !important;
+            font-size: 0.7rem !important;
+            transition: background 0.25s var(--ease-expensive), transform 0.25s var(--ease-expensive), box-shadow 0.25s var(--ease-expensive) !important;
+            line-height: 1.05 !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta .cta-label {
+            font-weight: 800;
+        }
+        .nav-cta .cta-phone {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.86rem;
+            letter-spacing: 0.02em;
+            color: var(--gold-bright);
+        }
+        .nav-cta:hover {
+            background: var(--teal-deep) !important;
+            transform: translateY(-1.5px);
+            box-shadow: var(--shadow-teal);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.3s var(--ease-expensive), opacity 0.3s var(--ease-expensive);
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+        .nav-hamburger.open span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { top: 11px; transform: rotate(-45deg); }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.45s var(--ease-expensive);
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: inline-block;
+            position: relative;
+            padding: 4px 0;
+        }
+        .mobile-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 24px; height: 1.5px;
+            background: var(--teal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s var(--ease-expensive);
+        }
+        .mobile-nav a.active::after { transform: scaleX(1); }
+        .mobile-nav .nav-cta { display: inline-flex !important; }
+
+        /* ── CHAPTER MARK ──────────────────────────────────── */
+        .chapter-mark {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-family: 'Inter', monospace;
+            font-weight: 300;
+            font-size: 0.5rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--teal);
+            opacity: 0.42;
+            z-index: 5;
+            pointer-events: none;
+        }
+        .chapter-mark.light { color: var(--gold-bright); opacity: 0.48; }
+
+        /* ── HERO (form-card variant) ───────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: calc(var(--total-nav) + 24px);
+            padding-bottom: 60px;
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--ink-deep);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(7,43,43,0.94) 0%, rgba(12,94,94,0.78) 45%, rgba(14,16,18,0.86) 100%),
+                url('img/hero.jpg') center 38% / cover no-repeat;
+            z-index: 0;
+            transform: scale(1.04);
+            filter: contrast(1.04) saturate(0.92);
+            animation: hero-drift 22s ease-in-out infinite alternate;
+        }
+        @keyframes hero-drift {
+            0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+            100% { transform: scale(1.06) translate3d(-1.5%, -1%, 0); }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 82% 28%, rgba(196,149,32,0.20), transparent 55%),
+                radial-gradient(ellipse at 12% 88%, rgba(7,43,43,0.55), transparent 50%),
+                linear-gradient(180deg, rgba(14,16,18,0.20) 0%, transparent 30%, rgba(14,16,18,0.55) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.65;
+            z-index: 2;
+        }
+        .hero-grid {
+            position: relative;
+            z-index: 3;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.18fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--gold-bright);
+            margin-bottom: 18px;
+            align-self: flex-start;
+            opacity: 0.92;
+        }
+        .hero-stamp::before,
+        .hero-stamp::after {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.55;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            align-self: flex-start;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 5.6vw, 4.8rem);
+            font-weight: 800;
+            color: var(--bone);
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .hero h1 .line-1 { display: block; }
+        .hero h1 .line-2 { display: block; }
+        .hero h1 .line-accent {
+            display: block;
+            color: var(--gold-bright);
+            font-style: italic;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+            margin-top: 8px;
+            position: relative;
+        }
+        .hero-rule {
+            display: block;
+            width: 96px;
+            height: 3px;
+            background: var(--gold);
+            margin: 22px 0 26px;
+        }
+        .hero-sub {
+            font-size: 1.06rem;
+            color: rgba(247,242,234,0.86);
+            line-height: 1.65;
+            max-width: 560px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 7px 14px;
+            background: rgba(196,149,32,0.10);
+            border: 1px solid rgba(196,149,32,0.32);
+            border-radius: 2px;
+        }
+        .hero-pill svg { width: 12px; height: 12px; }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.25s var(--ease-expensive), background 0.25s var(--ease-expensive), color 0.25s var(--ease-expensive), border-color 0.25s var(--ease-expensive), box-shadow 0.25s var(--ease-expensive);
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-teal {
+            background: var(--teal);
+            color: var(--bone);
+            box-shadow: var(--shadow-teal);
+        }
+        .btn-teal:hover {
+            background: var(--teal-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(12,94,94,0.65);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--ink-deep);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(196,149,32,0.55);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(247,242,234,0.35);
+        }
+        .btn-ghost:hover {
+            background: rgba(247,242,234,0.06);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+
+        .hero-trust {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            padding-top: 24px;
+            border-top: 1px solid rgba(196,149,32,0.28);
+        }
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: rgba(247,242,234,0.85);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+        }
+        .hero-trust-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold-bright);
+            flex-shrink: 0;
+        }
+
+        /* Hero form card */
+        .hero-form-card {
+            background: rgba(247,242,234,0.98);
+            color: var(--ink);
+            border-radius: 4px;
+            padding: 36px 32px 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(196,149,32,0.40);
+            position: relative;
+        }
+        .hero-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--teal);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .hero-form-card::after {
+            content: '24/7';
+            position: absolute;
+            top: -14px;
+            right: 28px;
+            background: var(--gold);
+            color: var(--ink-deep);
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 0.66rem;
+            letter-spacing: 0.18em;
+            padding: 6px 12px;
+            border-radius: 2px;
+            box-shadow: 0 4px 10px -2px rgba(196,149,32,0.45);
+        }
+        .form-eyebrow {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .hero-form-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: -0.005em;
+        }
+        .hero-form-card .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.02rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .hero-form-card .form-sub {
+            color: var(--text-mid);
+            font-size: 0.88rem;
+            margin-bottom: 22px;
+            line-height: 1.55;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .form-field {
+            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 0.66rem;
+            color: var(--ink);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bone);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 11px 13px;
+            font-size: 0.94rem;
+            color: var(--text);
+            transition: border-color 0.2s var(--ease-expensive), background 0.2s var(--ease-expensive);
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%230C5E5E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--teal);
+            background: var(--paper);
+        }
+        .form-field select option {
+            background: var(--paper);
+            color: var(--text);
+        }
+        .form-field textarea {
+            min-height: 80px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--teal);
+            color: var(--bone);
+            padding: 14px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.25s var(--ease-expensive), transform 0.25s var(--ease-expensive), box-shadow 0.25s var(--ease-expensive);
+            margin-top: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .form-btn:hover {
+            background: var(--teal-deep);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-teal);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-foot {
+            text-align: center;
+            font-size: 0.76rem;
+            color: var(--text-soft);
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .form-foot strong {
+            color: var(--teal);
+            font-style: normal;
+            font-weight: 800;
+        }
+
+        /* Gold corner ornament for hero */
+        .hero-ornament {
+            position: absolute;
+            bottom: 32px;
+            left: 32px;
+            z-index: 4;
+            width: 64px;
+            height: 64px;
+            opacity: 0.5;
+            color: var(--gold-bright);
+            pointer-events: none;
+        }
+
+        /* ── RECOGNITION STRIP ────────────────────────────── */
+        .recognition {
+            background: var(--ink-deep);
+            color: var(--bone);
+            padding: 38px 0;
+            border-bottom: 1px solid rgba(196,149,32,0.28);
+            position: relative;
+        }
+        .recognition::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(196,149,32,0.45) 50%, transparent 100%);
+        }
+        .recognition-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .recognition-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+            flex: 1;
+            text-align: center;
+            padding: 6px 18px;
+            border-right: 1px solid rgba(247,242,234,0.10);
+        }
+        .recognition-item:last-child { border-right: none; }
+        .recognition-label {
+            font-size: 0.6rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .recognition-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.04rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.2;
+            font-feature-settings: 'tnum' 1;
+        }
+        .recognition-value em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 500;
+        }
+
+        /* ── PROMISE STRIP ────────────────────────────────── */
+        .promise {
+            background: var(--bone);
+            padding: 110px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise-quote-mark {
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 22rem;
+            line-height: 0.85;
+            color: var(--teal);
+            opacity: 0.06;
+            pointer-events: none;
+            user-select: none;
+        }
+        .promise-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.5rem, 3vw, 2.3rem);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.34;
+            letter-spacing: -0.012em;
+            margin-bottom: 26px;
+            hanging-punctuation: first last;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--teal);
+            font-weight: 700;
+        }
+        .promise-rule {
+            width: 64px;
+            height: 2px;
+            background: var(--gold);
+            margin: 0 auto 24px;
+        }
+        .promise-cite {
+            font-size: 0.74rem;
+            color: var(--text-soft);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 780px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--teal);
+        }
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+        .section-h2 em {
+            font-style: italic;
+            color: var(--teal);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── FEATURED 2-UP ────────────────────────────────── */
+        .featured {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(12,94,94,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .featured-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            transition: transform 0.5s var(--ease-expensive), box-shadow 0.5s var(--ease-expensive), border-color 0.5s var(--ease-expensive);
+            display: flex;
+            flex-direction: column;
+        }
+        .featured-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-lg);
+        }
+        .featured-photo {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: var(--ink-deep);
+        }
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--ease-expensive);
+        }
+        .featured-card:hover .featured-photo img { transform: scale(1.06); }
+        .featured-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(7,43,43,0.20) 0%, rgba(7,43,43,0.55) 100%);
+            pointer-events: none;
+        }
+        .featured-stamp {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(247,242,234,0.96);
+            color: var(--teal-deep);
+            padding: 6px 12px;
+            border-radius: 2px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            box-shadow: 0 4px 14px -4px rgba(0,0,0,0.3);
+        }
+        .featured-stamp::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+        .featured-body {
+            padding: 36px 36px 32px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .featured-eyebrow {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .featured-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--ink);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
+            line-height: 1.15;
+        }
+        .featured-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .featured-body p {
+            color: var(--text-mid);
+            font-size: 0.96rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .featured-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 26px;
+        }
+        .featured-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .featured-highlights svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold-deep);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-top: auto;
+            align-self: flex-start;
+            position: relative;
+            padding-bottom: 6px;
+        }
+        .featured-link::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 1.5px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .featured-card:hover .featured-link::after { transform: scaleX(1); }
+        .featured-link svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.3s var(--ease-expensive);
+        }
+        .featured-card:hover .featured-link svg { transform: translateX(4px); }
+
+        /* ── KNOWN FOR (editorial bands) ──────────────────── */
+        .known {
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        .known-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+        }
+        .known-row:last-child { border-bottom: none; }
+        .known-row.reverse {
+            direction: rtl;
+        }
+        .known-row.reverse > * {
+            direction: ltr;
+        }
+        .known-text {
+            position: relative;
+        }
+        .known-num {
+            position: absolute;
+            top: -34px;
+            left: -10px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 9rem;
+            color: var(--teal-tint);
+            line-height: 0.85;
+            letter-spacing: -0.06em;
+            opacity: 0.85;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+        .known-row.reverse .known-num {
+            left: auto;
+            right: -10px;
+        }
+        .known-text-inner {
+            position: relative;
+            z-index: 1;
+        }
+        .known-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.66rem;
+            font-weight: 800;
+            color: var(--gold-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .known-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .known-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            color: var(--ink);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            margin-bottom: 22px;
+        }
+        .known-text h3 em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--teal);
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .known-text p {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+        .known-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 22px;
+            background: var(--bone);
+            border-left: 3px solid var(--gold);
+            border-radius: 2px;
+        }
+        .known-stat-icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal);
+        }
+        .known-stat-icon svg { width: 22px; height: 22px; }
+        .known-stat-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--teal-deep);
+            font-weight: 600;
+            font-feature-settings: 'tnum' 1;
+        }
+        .known-motif {
+            position: relative;
+            aspect-ratio: 5 / 4;
+            overflow: hidden;
+            background: var(--ink-deep);
+            border-radius: 3px;
+            box-shadow: var(--shadow-lg);
+        }
+        .known-motif::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(196,149,32,0.55);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .known-motif::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(7,43,43,0.18) 0%, transparent 50%, rgba(7,43,43,0.32) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .known-motif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s var(--ease-expensive);
+        }
+        .known-motif:hover img { transform: scale(1.04); }
+        .known-motif-caption {
+            position: absolute;
+            top: 26px;
+            right: 26px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.04em;
+            z-index: 3;
+            opacity: 0.92;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+        }
+
+        /* ── PRACTICE GRID ────────────────────────────────── */
+        .practice {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .practice::before {
+            content: '';
+            position: absolute;
+            bottom: -200px;
+            left: -200px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(196,149,32,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .practice-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 40px 32px 36px;
+            border-radius: 3px;
+            transition: transform 0.4s var(--ease-expensive), border-color 0.4s var(--ease-expensive), box-shadow 0.4s var(--ease-expensive);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s var(--ease-expensive);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-numeral {
+            position: absolute;
+            top: 22px;
+            right: 24px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: var(--gold);
+            opacity: 0.4;
+            letter-spacing: 0.02em;
+            transition: opacity 0.4s var(--ease-expensive), transform 0.4s var(--ease-expensive);
+        }
+        .practice-card:hover .practice-numeral {
+            opacity: 0.75;
+            transform: translateY(-2px);
+        }
+        .practice-roundel {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: var(--gold-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            position: relative;
+            transition: background 0.4s var(--ease-expensive), transform 0.4s var(--ease-expensive);
+            overflow: hidden;
+        }
+        .practice-roundel::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            border: 1px solid rgba(247,242,234,0.18);
+            pointer-events: none;
+        }
+        .practice-card:hover .practice-roundel {
+            background: var(--gold);
+            color: var(--ink);
+            transform: scale(1.06);
+        }
+        .practice-roundel svg {
+            width: 28px;
+            height: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            color: var(--ink);
+            margin-bottom: 14px;
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            line-height: 1.18;
+            text-transform: uppercase;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-soft);
+            margin-bottom: 16px;
+        }
+        .practice-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--teal-deep);
+            background: var(--teal-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--teal-tint);
+            letter-spacing: 0.04em;
+        }
+        .practice-learn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 4px;
+            align-self: flex-start;
+        }
+        .practice-learn::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%;
+            height: 1.5px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.4s var(--ease-expensive);
+        }
+        .practice-card:hover .practice-learn::after { transform: scaleX(1); }
+        .practice-learn svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s var(--ease-expensive);
+        }
+        .practice-card:hover .practice-learn svg { transform: translateX(4px); }
+
+        /* ── TEAM (5 lawyers) ─────────────────────────────── */
+        .team {
+            background: var(--paper);
+            position: relative;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .lawyer-card {
+            background: var(--bone);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--gold);
+            border-radius: 3px;
+            padding: 36px 24px 28px;
+            text-align: center;
+            transition: transform 0.4s var(--ease-expensive), box-shadow 0.4s var(--ease-expensive), border-color 0.4s var(--ease-expensive);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .lawyer-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-md);
+        }
+        .lawyer-card.principal {
+            background: var(--paper);
+            border-top-width: 4px;
+            border-top-color: var(--teal);
+            box-shadow: var(--shadow-sm);
+        }
+        .lawyer-card.principal::before {
+            content: 'FOUNDING PRINCIPAL';
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--teal);
+            color: var(--gold-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 0.54rem;
+            letter-spacing: 0.20em;
+            padding: 4px 10px;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+        .lawyer-monogram {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background: var(--ink-deep);
+            color: var(--gold-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.2rem;
+            font-weight: 500;
+            border: 2px solid var(--teal);
+            margin: 16px auto 18px;
+            position: relative;
+        }
+        .lawyer-card.principal .lawyer-monogram {
+            border-color: var(--gold);
+            border-width: 2.5px;
+            font-size: 2.4rem;
+            box-shadow: 0 6px 16px -6px rgba(12,94,94,0.45);
+        }
+        .lawyer-monogram::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border: 1px dashed var(--gold);
+            border-radius: 50%;
+            opacity: 0.32;
+        }
+        .lawyer-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.18rem;
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin-bottom: 6px;
+        }
+        .lawyer-creds {
+            font-size: 0.74rem;
+            color: var(--gold-deep);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 10px;
+        }
+        .lawyer-role {
+            font-size: 0.66rem;
+            color: var(--teal-deep);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        .lawyer-bio {
+            color: var(--text-mid);
+            font-size: 0.86rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+            flex-grow: 1;
+        }
+        .lawyer-langs {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-soft);
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+        .lawyer-langs svg {
+            width: 12px;
+            height: 12px;
+            color: var(--teal);
+        }
+        .lawyer-langs strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        /* ── APPROACH DARK BAND ───────────────────────────── */
+        .approach {
+            position: relative;
+            color: var(--bone);
+            padding: 130px 0;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(7,43,43,0.84), rgba(14,16,18,0.94)),
+                url('img/approach-bg.jpg') center/cover no-repeat;
+            background-blend-mode: multiply;
+            border-top: 1px solid rgba(196,149,32,0.30);
+            border-bottom: 1px solid rgba(196,149,32,0.30);
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 30%, rgba(196,149,32,0.20), transparent 50%),
+                radial-gradient(ellipse at 85% 75%, rgba(196,149,32,0.15), transparent 55%),
+                linear-gradient(180deg, transparent 0%, rgba(7,43,43,0.45) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .approach::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.65;
+        }
+        .approach .container { position: relative; z-index: 2; }
+        .approach-stamp {
+            position: absolute;
+            left: -32px;
+            top: 50%;
+            transform: rotate(-90deg) translateY(-50%);
+            transform-origin: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 0.66rem;
+            letter-spacing: 0.45em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.55;
+            white-space: nowrap;
+            z-index: 3;
+            display: none;
+        }
+        @media (min-width: 1200px) {
+            .approach-stamp { display: block; }
+        }
+        .approach .section-head { margin-bottom: 80px; }
+        .approach .section-eyebrow { color: var(--gold-bright); }
+        .approach .section-eyebrow::before,
+        .approach .section-eyebrow::after { background: var(--gold-bright); }
+        .approach .section-h2 { color: var(--bone); }
+        .approach .section-h2 em { color: var(--gold-bright); }
+        .approach .section-lead { color: rgba(247,242,234,0.82); }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        .approach-grid::before {
+            content: '';
+            position: absolute;
+            top: 38px;
+            left: 8%;
+            right: 8%;
+            height: 1px;
+            background-image: linear-gradient(90deg, var(--gold) 50%, transparent 50%);
+            background-size: 10px 1px;
+            background-repeat: repeat-x;
+            opacity: 0.42;
+            z-index: 0;
+        }
+        .approach-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-medallion {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: rgba(7,43,43,0.92);
+            color: var(--gold-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            font-weight: 600;
+            border: 2px solid var(--gold);
+            margin-bottom: 24px;
+            position: relative;
+            font-feature-settings: 'tnum' 1;
+            box-shadow: 0 10px 24px -8px rgba(196,149,32,0.42);
+        }
+        .approach-medallion::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border: 1px dashed var(--gold);
+            border-radius: 50%;
+            opacity: 0.55;
+        }
+        .approach-eyebrow {
+            font-size: 0.64rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--bone);
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            text-transform: uppercase;
+            line-height: 1.18;
+            margin-bottom: 8px;
+        }
+        .approach-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--gold-pale);
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+        .approach-card p {
+            color: rgba(247,242,234,0.78);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+        .approach-card-rule {
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+            margin-top: 18px;
+            opacity: 0.7;
+            transition: width 0.4s var(--ease-expensive), opacity 0.4s var(--ease-expensive);
+        }
+        .approach-card:hover .approach-card-rule {
+            width: 48px;
+            opacity: 1;
+        }
+
+        /* ── COVERAGE STRIP ──────────────────────────────── */
+        .coverage {
+            background: var(--bone);
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+        }
+        .coverage-inner {
+            text-align: center;
+            position: relative;
+        }
+        .coverage-label {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .coverage-label::before,
+        .coverage-label::after {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: var(--gold);
+        }
+        .coverage-list {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.1rem, 2vw, 1.55rem);
+            color: var(--ink);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .coverage-list span {
+            display: inline-block;
+            margin: 0 4px;
+        }
+        .coverage-dot {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin: 0 12px;
+            vertical-align: middle;
+            opacity: 0.7;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--teal);
+            color: var(--bone);
+            padding: 96px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 25% 50%, rgba(196,149,32,0.18), transparent 55%),
+                radial-gradient(ellipse at 82% 50%, rgba(7,43,43,0.40), transparent 55%);
+            pointer-events: none;
+        }
+        .cta-band::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .cta-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.66rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .cta-eyebrow::before,
+        .cta-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: var(--gold-bright);
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.9rem);
+            color: var(--bone);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            line-height: 1.08;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 500;
+            text-transform: none;
+        }
+        .cta-inner p {
+            color: rgba(247,242,234,0.92);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .cta-band .btn-ink {
+            background: var(--ink-deep);
+            color: var(--bone);
+        }
+        .cta-band .btn-ink:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-ink);
+        }
+        .cta-band .btn-ghost-light {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(247,242,234,0.55);
+        }
+        .cta-band .btn-ghost-light:hover {
+            background: rgba(247,242,234,0.12);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            margin-bottom: 28px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--ink-deep);
+            color: var(--gold-bright);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--teal);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.2s var(--ease-expensive);
+        }
+        .contact-list a {
+            position: relative;
+            display: inline-block;
+        }
+        .contact-list a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -1px;
+            width: 100%; height: 1px;
+            background: var(--teal);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.35s var(--ease-expensive);
+        }
+        .contact-list a:hover {
+            color: var(--teal);
+        }
+        .contact-list a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+        .contact-emergency {
+            display: block;
+            margin-top: 24px;
+            padding: 22px 24px;
+            background: var(--ink-deep);
+            color: var(--bone);
+            border-radius: 3px;
+            border-left: 4px solid var(--gold);
+            position: relative;
+        }
+        .contact-emergency-label {
+            font-size: 0.66rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-emergency-label::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold-bright);
+            animation: pulse 2.4s ease-in-out infinite;
+        }
+        .contact-emergency-phone {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.45rem;
+            color: var(--bone);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+            font-feature-settings: 'tnum' 1;
+        }
+        .contact-emergency-phone:hover { color: var(--gold-bright); }
+        .contact-emergency-note {
+            font-size: 0.78rem;
+            color: rgba(247,242,234,0.72);
+            font-style: italic;
+        }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 3px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--teal);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .contact-form .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .contact-form .form-field input,
+        .contact-form .form-field select,
+        .contact-form .form-field textarea {
+            background: var(--bg);
+            padding: 13px 16px;
+            font-size: 0.96rem;
+        }
+        .contact-form .form-field textarea { min-height: 120px; }
+        .contact-form .form-btn {
+            background: var(--ink-deep);
+            padding: 16px;
+        }
+        .contact-form .form-btn:hover {
+            background: var(--teal);
+            box-shadow: var(--shadow-teal);
+        }
+        .form-note {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+        @media (max-width: 720px) {
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 32px; }
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(247,242,234,0.62);
+            padding: 72px 0 28px;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(196,149,32,0.55) 50%, transparent 100%);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1.1fr;
+            gap: 48px;
+            margin-bottom: 52px;
+        }
+        .footer-brand .s-mark { margin-bottom: 20px; }
+        .footer-brand p {
+            color: rgba(247,242,234,0.66);
+            font-size: 0.94rem;
+            line-height: 1.7;
+            max-width: 380px;
+            margin-bottom: 18px;
+        }
+        .footer-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.96rem;
+            color: var(--gold-bright);
+            font-weight: 500;
+        }
+        .footer-tagline::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.84rem;
+            color: var(--gold-bright);
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.9rem;
+            color: rgba(247,242,234,0.66);
+            transition: color 0.2s var(--ease-expensive);
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -1px;
+            width: 100%; height: 1px;
+            background: var(--gold-bright);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.35s var(--ease-expensive);
+        }
+        .footer-col a:hover {
+            color: var(--gold-bright);
+        }
+        .footer-col a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(247,242,234,0.10);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(247,242,234,0.50);
+        }
+        .footer-bottom a { color: rgba(247,242,234,0.7); }
+        .footer-bottom a:hover { color: var(--gold-bright); }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(14,16,18,0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: var(--bone);
+            padding: 12px 56px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--teal);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+        }
+        .demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(247,242,234,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s var(--ease-expensive);
+        }
+        .demo-banner-close:hover { color: var(--gold-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s var(--ease-expensive), transform 0.6s var(--ease-expensive);
+        }
+        .reveal.from-left { transform: translateX(-32px); }
+        .reveal.from-right { transform: translateX(32px); }
+        .reveal.scale-in { transform: scale(0.96); }
+        .reveal.visible {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+        .reveal.late { transition-duration: 0.85s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .hero-bg { animation: none; }
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+        }
+        @media (max-width: 1024px) {
+            .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 80px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero-form-card { max-width: 560px; margin: 0 auto; width: 100%; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .known-row { grid-template-columns: 1fr; gap: 40px; padding: 56px 0; }
+            .known-row.reverse { direction: ltr; }
+            .known-num { font-size: 7rem; top: -20px; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .approach-grid::before { display: none; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .recognition-inner { gap: 18px; }
+            .recognition-item { flex: 1 1 calc(50% - 18px); border-right: none; border-bottom: 1px solid rgba(247,242,234,0.10); padding-bottom: 16px; }
+            .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .divider { display: none; }
+            .top-bar-inner { gap: 14px; padding: 0; }
+            .container { padding: 0 20px; }
+            .section { padding: 80px 0; }
+            .section-head { margin-bottom: 52px; }
+            .promise { padding: 80px 0; }
+            .promise-quote-mark { font-size: 14rem; top: 36px; }
+            .featured-body { padding: 28px 24px; }
+            .known-num { font-size: 5rem; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+            .approach-grid { grid-template-columns: 1fr; gap: 36px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; text-align: left; }
+            .hero-form-card { padding: 28px 22px; }
+            .hero-trust { gap: 16px; }
+            .recognition { padding: 28px 0; }
+            .recognition-item { flex: 1 1 100%; padding: 12px 0; border-right: none; border-bottom: 1px solid rgba(247,242,234,0.10); }
+            .recognition-item:last-child { border-bottom: none; }
+            .chapter-mark { font-size: 0.45rem; top: 18px; right: 18px; }
+        }
+
+        ::selection { background: var(--teal); color: var(--bone); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="emergency">Emergency Line 24/7</span>
+        <span class="divider"></span>
+        <a href="tel:+19024927000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (902) 492-7000
+        </a>
+        <span class="divider"></span>
+        <a href="tel:+19024833080">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            After Hours: (902) 483-3080
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:tsingleton@singleton.ns.ca">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            tsingleton@singleton.ns.ca
+        </a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="s-mark" aria-label="Singleton &amp; Associates — Halifax">
+            <span class="s-eyebrow">Established Defence Counsel</span>
+            <span class="s-name">Singleton <em>&amp;</em> Associates</span>
+            <span class="s-rule"></span>
+            <span class="s-tag">Halifax &middot; Criminal Defence</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-nav-target="hero">Home</a></li>
+            <li><a href="#known" data-nav-target="known">Why Singleton</a></li>
+            <li><a href="#practice" data-nav-target="practice">Practice Areas</a></li>
+            <li><a href="#team" data-nav-target="team">Our Lawyers</a></li>
+            <li><a href="#approach" data-nav-target="approach">Approach</a></li>
+            <li>
+                <a href="#contact" class="nav-cta" data-nav-target="contact">
+                    <span class="cta-label">Contact Us</span>
+                    <span class="cta-phone">(902) 492-7000</span>
+                </a>
+            </li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why Singleton</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#team">Our Lawyers</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li>
+            <a href="#contact" class="nav-cta">
+                <span class="cta-label">Contact Us</span>
+                <span class="cta-phone">(902) 492-7000</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- 01 — HERO -->
+<section class="hero" id="hero">
+    <span class="chapter-mark light">01 / 10 — Hero</span>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid">
+        <div class="hero-content">
+            <span class="hero-stamp">Halifax, Nova Scotia</span>
+            <span class="hero-eyebrow">Atlantic Canada &middot; Criminal Defence</span>
+            <h1>
+                <span class="line-1">Aggressive Criminal</span>
+                <span class="line-2">Defence Lawyers</span>
+                <span class="line-accent">serving Atlantic Canada</span>
+            </h1>
+            <span class="hero-rule"></span>
+            <p class="hero-sub">
+                An experienced Halifax criminal defence team, fighting for the rights of the accused across all of Atlantic Canada &mdash; <strong style="color: var(--bone); font-weight: 600;">available 24 hours a day, seven days a week.</strong>
+            </p>
+            <div class="hero-pills">
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg>
+                    Voted Top Criminal Law Services
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    24-Hour Line
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Bilingual EN &middot; FR
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L12 21"/><path d="M5 8 L19 8"/><path d="M3 14 L8 14 L5.5 8 Z"/><path d="M16 14 L21 14 L18.5 8 Z"/></svg>
+                    Five Defence Lawyers
+                </span>
+            </div>
+            <div class="hero-actions">
+                <a href="tel:+19024927000" class="btn btn-gold">
+                    Call (902) 492-7000
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#practice" class="btn btn-ghost">
+                    Practice Areas
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg>
+                    Aggressive Defence
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+                    Charter of Rights Expertise
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Downtown Halifax
+                </div>
+            </div>
+        </div>
+
+        <aside class="hero-form-card">
+            <p class="form-eyebrow">Free &middot; Confidential</p>
+            <h3>Request Consultation</h3>
+            <p class="form-italic">Call now &mdash; or send a confidential message.</p>
+            <p class="form-sub">Whatever the charge &mdash; impaired driving, assault, drugs, sexual offence, weapons &mdash; we'll listen first, then build a defence.</p>
+            <form onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="hf-name">Your Name</label>
+                        <input type="text" id="hf-name" placeholder="Full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="hf-phone">Phone</label>
+                        <input type="tel" id="hf-phone" placeholder="(902) 000-0000">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="hf-email">Email</label>
+                    <input type="email" id="hf-email" placeholder="you@example.com">
+                </div>
+                <div class="form-field">
+                    <label for="hf-area">Type of Matter</label>
+                    <select id="hf-area">
+                        <option value="">Select a category&hellip;</option>
+                        <option>Impaired Driving</option>
+                        <option>Drug Offences</option>
+                        <option>Sexual Offences</option>
+                        <option>Motor Vehicle Offences</option>
+                        <option>Assault / Violent Crime</option>
+                        <option>Weapon Offence</option>
+                        <option>Domestic Assault</option>
+                        <option>Fraud</option>
+                        <option>Cybercrime / Digital Evidence</option>
+                        <option>Other Criminal Matter</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="hf-msg">Brief Description</label>
+                    <textarea id="hf-msg" placeholder="A few sentences about the charge &mdash; that's plenty to start."></textarea>
+                </div>
+                <button class="form-btn" type="submit">
+                    Send &mdash; Confidential Inquiry
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="form-foot">Or call <strong>(902) 492-7000</strong> &mdash; after hours <strong>(902) 483-3080</strong>.</p>
+            </form>
+        </aside>
+    </div>
+    <svg class="hero-ornament" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+        <line x1="32" y1="6" x2="32" y2="56"/>
+        <line x1="14" y1="12" x2="50" y2="12"/>
+        <line x1="20" y1="30" x2="44" y2="30"/>
+        <line x1="6" y1="30" x2="14" y2="30"/>
+        <line x1="50" y1="30" x2="58" y2="30"/>
+        <line x1="6" y1="30" x2="14" y2="44"/>
+        <line x1="14" y1="30" x2="6" y2="44"/>
+        <line x1="50" y1="30" x2="58" y2="44"/>
+        <line x1="58" y1="30" x2="50" y2="44"/>
+        <line x1="4" y1="44" x2="16" y2="44"/>
+        <line x1="48" y1="44" x2="60" y2="44"/>
+        <line x1="24" y1="56" x2="40" y2="56"/>
+    </svg>
+</section>
+
+<!-- 02 — RECOGNITION STRIP -->
+<section class="recognition" aria-label="Firm credentials">
+    <span class="chapter-mark light">02 / 10 — Recognition</span>
+    <div class="container">
+        <div class="recognition-inner">
+            <div class="recognition-item">
+                <span class="recognition-label">Principal</span>
+                <span class="recognition-value">Thomas <em>J.</em> Singleton</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Office</span>
+                <span class="recognition-value">Barrington Street &middot; Halifax</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Service Territory</span>
+                <span class="recognition-value">Atlantic Canada</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Team</span>
+                <span class="recognition-value">Five <em>Defence</em> Lawyers</span>
+            </div>
+            <div class="recognition-item">
+                <span class="recognition-label">Availability</span>
+                <span class="recognition-value">24 Hours &middot; Daily</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 03 — PROMISE BAND -->
+<section class="promise">
+    <span class="chapter-mark">03 / 10 — Promise</span>
+    <span class="promise-quote-mark" aria-hidden="true">&ldquo;</span>
+    <div class="container">
+        <div class="promise-inner">
+            <blockquote>
+                Lawyers at Singleton &amp; Associates have a reputation for <strong>aggressively defending clients facing serious criminal charges</strong> before the courts in a highly professional manner.
+            </blockquote>
+            <div class="promise-rule"></div>
+            <p class="promise-cite">Singleton &amp; Associates &mdash; Halifax, Nova Scotia</p>
+        </div>
+    </div>
+</section>
+
+<!-- 04 — FEATURED 2-UP -->
+<section class="section featured" id="featured">
+    <span class="chapter-mark">04 / 10 — Featured</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Flagship Practice</p>
+            <h2 class="section-h2">Where the <em>most is at stake.</em></h2>
+            <p class="section-lead">The two areas where our aggressive defence tactics have saved careers, reputations, and futures &mdash; for doctors, accountants, airline pilots, firefighters, members of the military, and everyone else who walks through our doors.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card">
+                <div class="featured-photo">
+                    <span class="featured-stamp">Our Flagship</span>
+                    <img src="img/featured-1.jpg" alt="Impaired driving defence representation">
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Practice Area &mdash; 01</p>
+                    <h3>Impaired Driving Defence</h3>
+                    <p class="featured-italic">Aggressive tactics. Career-saving results.</p>
+                    <p>Thomas J. Singleton and Leora Lawson are highly experienced criminal defence lawyers who have successfully defended individuals charged with impaired driving throughout Nova Scotia and Atlantic Canada. Their aggressive defence tactics have saved the careers of numerous people in all walks of life &mdash; including doctors, accountants, airline pilots, firefighters, and members of the military.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Aggressive defence with proven career-saving results
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Defending clients across all of Atlantic Canada
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Full consequences managed: record, licence, insurance
+                        </li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card">
+                <div class="featured-photo">
+                    <span class="featured-stamp">Serious Charges</span>
+                    <img src="img/featured-2.jpg" alt="Sexual offences defence representation">
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Practice Area &mdash; 02</p>
+                    <h3>Sexual Offences Defence</h3>
+                    <p class="featured-italic">Maximum consequences. Immediate counsel required.</p>
+                    <p>The Criminal Code contains a number of sex related offences including sexual assault, accessing and making available child pornography, sexual interference, and sexual exploitation. Being charged is extremely serious &mdash; some carrying a maximum sentence of life in prison. If the police contact you asking questions about any sex-related offence, contact a lawyer <em>immediately</em> and do not say anything until you have done so.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Immediate consultation &mdash; do not speak to police first
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Charter of Rights defence strategies
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Full representation at all levels of court
+                        </li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 05 — KNOWN FOR -->
+<section class="section known" id="known">
+    <span class="chapter-mark">05 / 10 — Known For</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Why Singleton</p>
+            <h2 class="section-h2">Three things, <em>done at the highest level.</em></h2>
+            <p class="section-lead">Singleton &amp; Associates has built its reputation in Atlantic Canada on three pillars &mdash; Charter of Rights expertise, daily courtroom presence, and the around-the-clock availability that criminal defence actually requires.</p>
+        </div>
+
+        <article class="known-row">
+            <div class="known-text">
+                <span class="known-num">01</span>
+                <div class="known-text-inner">
+                    <p class="known-eyebrow">Charter Expertise</p>
+                    <h3>Arguments that <em>change outcomes</em> in court.</h3>
+                    <p>Mr. Singleton is well known throughout Atlantic Canada for the quality of the Charter of Rights arguments he has advanced on behalf of individuals charged with some of the most serious offences in Canadian Criminal Law.</p>
+                    <div class="known-stat">
+                        <span class="known-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                        </span>
+                        <span class="known-stat-text">Charter of Rights Expertise</span>
+                    </div>
+                </div>
+            </div>
+            <figure class="known-motif">
+                <img src="img/known-1.jpg" alt="Bound volumes of legal scholarship">
+                <figcaption class="known-motif-caption">I.</figcaption>
+            </figure>
+        </article>
+
+        <article class="known-row reverse">
+            <div class="known-text">
+                <span class="known-num">02</span>
+                <div class="known-text-inner">
+                    <p class="known-eyebrow">Courtroom Presence</p>
+                    <h3>Appearing before courts <em>every single day.</em></h3>
+                    <p>Lawyers at Singleton &amp; Associates appear before the courts on a daily basis, representing individuals charged with a wide range of criminal offences &mdash; including sexual assault, impaired driving, fraud, and firearms charges &mdash; across Nova Scotia and all of Atlantic Canada. We are not a corporate firm with a litigation department. We are a litigation firm, full stop.</p>
+                    <div class="known-stat">
+                        <span class="known-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8a2 2 0 012-2h10a2 2 0 012 2v13"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+                        </span>
+                        <span class="known-stat-text">Daily Court Appearances</span>
+                    </div>
+                </div>
+            </div>
+            <figure class="known-motif">
+                <img src="img/known-2.jpg" alt="Halifax courthouse columns">
+                <figcaption class="known-motif-caption">II.</figcaption>
+            </figure>
+        </article>
+
+        <article class="known-row">
+            <div class="known-text">
+                <span class="known-num">03</span>
+                <div class="known-text-inner">
+                    <p class="known-eyebrow">24/7 Availability</p>
+                    <h3>Defence counsel when you need it <em>most.</em></h3>
+                    <p>Criminal charges don't follow business hours. Our emergency after-hours line means that when the police knock &mdash; at 2 AM on a Saturday, on a long weekend, on Christmas Eve &mdash; you have immediate access to experienced defence counsel. Being charged with a criminal offence is not a conviction. In law you are always presumed innocent.</p>
+                    <div class="known-stat">
+                        <span class="known-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <span class="known-stat-text">(902) 483-3080 &mdash; After Hours</span>
+                    </div>
+                </div>
+            </div>
+            <figure class="known-motif">
+                <img src="img/known-3.jpg" alt="Halifax harbour at night">
+                <figcaption class="known-motif-caption">III.</figcaption>
+            </figure>
+        </article>
+    </div>
+</section>
+
+<!-- 06 — PRACTICE GRID -->
+<section class="section practice" id="practice">
+    <span class="chapter-mark">06 / 10 — Practice</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">Whatever the charge, <em>we fight for you.</em></h2>
+            <p class="section-lead">From misdemeanor to the most serious indictable offences &mdash; Singleton &amp; Associates provides aggressive criminal defence representation across every category of charge under the Criminal Code, the Controlled Drugs and Substances Act, and the Motor Vehicle Act.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card">
+                <span class="practice-numeral">I.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/><path d="M3 17h1.5"/><path d="M9.5 17h5"/><path d="M19.5 17h1.5"/><path d="M4 13l2.5-5h7l2 5"/><path d="M14 13l3-1 3 4"/></svg>
+                </div>
+                <h3>Impaired Driving</h3>
+                <p>Thomas J. Singleton and Leora Lawson are highly experienced criminal defence lawyers who have successfully defended individuals charged with impaired driving throughout Nova Scotia and Atlantic Canada. Their aggressive defence tactics have saved the careers of numerous people in all walks of life.</p>
+                <div class="practice-tags">
+                    <span>DUI</span>
+                    <span>Breathalyser</span>
+                    <span>Licence Suspension</span>
+                    <span>Criminal Code</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">II.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 L14 2 L14 7 L18 11 L18 22 L6 22 L6 11 L10 7 Z"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+                </div>
+                <h3>Drug Offences</h3>
+                <p>In Canada there are many criminal laws involving drugs making it an offence to possess, sell, grow or manufacture a number of controlled drugs and substances. It is extremely important if you are charged with a drug offence to retain the services of an experienced criminal lawyer who knows how to defend against these charges.</p>
+                <div class="practice-tags">
+                    <span>Possession</span>
+                    <span>Trafficking</span>
+                    <span>CDSA</span>
+                    <span>Grow Op</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">III.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22 C7 18 4 14 4 9 a8 8 0 0116 0 c0 5 -3 9 -8 13z"/><path d="M9 10 L11 12 L15 8"/></svg>
+                </div>
+                <h3>Sexual Offences</h3>
+                <p>Being charged with any sexual offence is extremely serious and can have enormous consequences for the person charged. Some of these offences can result in a maximum sentence of life in prison. If the police contact you asking questions about any sex-related offence you should immediately contact a lawyer.</p>
+                <div class="practice-tags">
+                    <span>Sexual Assault</span>
+                    <span>Charter Rights</span>
+                    <span>Sex Offender Registry</span>
+                    <span>Criminal Code</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">IV.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M3 11h18"/><path d="M3 11l3-5h12l3 5"/><path d="M3 17h1.5"/><path d="M8.5 17h7"/><path d="M20.5 17h.5"/><path d="M3 11v6"/><path d="M21 11v6"/></svg>
+                </div>
+                <h3>Motor Vehicle Offences</h3>
+                <p>The Criminal Code has a number of offences which relate to the operation of a motor vehicle including Dangerous Driving, Driving while a Licence is Suspended, and Hit and Run charges. A charge of Dangerous Driving is very serious and could result in a criminal record, a driving suspension and possibly a period of time in jail.</p>
+                <div class="practice-tags">
+                    <span>Dangerous Driving</span>
+                    <span>Suspended Licence</span>
+                    <span>Hit and Run</span>
+                    <span>Criminal Code</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">V.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/><path d="M8 12 L16 12"/><path d="M12 8 L12 16"/></svg>
+                </div>
+                <h3>Assault &amp; Violent Crimes</h3>
+                <p>The Criminal Code defines Assault as a crime of violence involving the intentional application of force without consent to another person. A skilled defence lawyer knows how to exploit the weaknesses in police identification evidence to the advantage of his client.</p>
+                <div class="practice-tags">
+                    <span>Assault</span>
+                    <span>Domestic Assault</span>
+                    <span>Aggravated Assault</span>
+                    <span>Violent Crime</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-numeral">VI.</span>
+                <div class="practice-roundel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13 L8 13 L9 10 L13 14 L15 11 L17 13 L21 13"/><path d="M3 13 L3 18"/><path d="M21 13 L21 18"/><path d="M3 18 L21 18"/><circle cx="9" cy="20.5" r="1.5"/><circle cx="16" cy="20.5" r="1.5"/></svg>
+                </div>
+                <h3>Weapon Offences</h3>
+                <p>Weapons charges are very serious offences under the Criminal Code and are dealt with harshly by the courts. The sentences imposed typically range from one to ten years based on the seriousness of the offence. There are mandatory minimum terms of imprisonment of at least one year for some weapons offences.</p>
+                <div class="practice-tags">
+                    <span>Firearms</span>
+                    <span>Weapons Charges</span>
+                    <span>Mandatory Minimum</span>
+                    <span>Criminal Code</span>
+                </div>
+                <a href="#contact" class="practice-learn">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION (lives inside Practice numbering — between practice & approach) -->
+<section class="section team" id="team">
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Lawyers</p>
+            <h2 class="section-h2">Five defence lawyers. <em>One firm.</em></h2>
+            <p class="section-lead">Five dedicated criminal defence lawyers &mdash; led by Thomas J. Singleton &mdash; appearing daily before courts across Nova Scotia and Atlantic Canada. Bilingual representation. Cybercrime &amp; digital evidence expertise. Charter of Rights scholarship.</p>
+        </div>
+
+        <div class="team-grid">
+            <article class="lawyer-card principal">
+                <span class="lawyer-monogram">TS</span>
+                <h4>Thomas Singleton</h4>
+                <p class="lawyer-creds">LL.B. &middot; B.C.L. &middot; LL.M.</p>
+                <p class="lawyer-role">Bilingual Criminal Defence Lawyer</p>
+                <p class="lawyer-bio">Highly experienced bilingual criminal defence lawyer well known throughout Atlantic Canada for the quality of the Charter of Rights arguments he has advanced on behalf of individuals charged with some of the most serious offences in Canadian Criminal Law.</p>
+                <p class="lawyer-langs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <strong>English</strong> &middot; <strong>French</strong>
+                </p>
+            </article>
+
+            <article class="lawyer-card">
+                <span class="lawyer-monogram">LL</span>
+                <h4>Leora Lawson</h4>
+                <p class="lawyer-creds">B.A. &middot; J.D.</p>
+                <p class="lawyer-role">Criminal Defence Lawyer</p>
+                <p class="lawyer-bio">Experienced trial lawyer and a native of Nova Scotia. Represented clients under the Criminal Code, CDSA, and Motor Vehicle Act. Juris Doctor (J.D.).</p>
+                <p class="lawyer-langs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <strong>English</strong>
+                </p>
+            </article>
+
+            <article class="lawyer-card">
+                <span class="lawyer-monogram">AM</span>
+                <h4>Abby Metcalf</h4>
+                <p class="lawyer-creds">J.D.</p>
+                <p class="lawyer-role">Criminal Defence Lawyer</p>
+                <p class="lawyer-bio">Halifax-based criminal defence attorney serving clients throughout Nova Scotia. Juris Doctor from Schulich School of Law at Dalhousie University, with a semester interning at the Dartmouth Crown attorney office.</p>
+                <p class="lawyer-langs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <strong>English</strong>
+                </p>
+            </article>
+
+            <article class="lawyer-card">
+                <span class="lawyer-monogram">LH</span>
+                <h4>Leslie Hogg</h4>
+                <p class="lawyer-creds">J.D.</p>
+                <p class="lawyer-role">Criminal Defence Lawyer</p>
+                <p class="lawyer-bio">Experienced criminal defence lawyer based in Halifax. Represented clients at all levels of Court under the Criminal Code, Cannabis Control Act, CDSA, Motor Vehicle Act, and Liquor Control Act.</p>
+                <p class="lawyer-langs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <strong>English</strong>
+                </p>
+            </article>
+
+            <article class="lawyer-card">
+                <span class="lawyer-monogram">CH</span>
+                <h4>Criss Hochhold</h4>
+                <p class="lawyer-creds">LL.B. &middot; LL.M. &middot; MSc.</p>
+                <p class="lawyer-role">Defence &middot; Cyber Breach Counsel &middot; Former RCMP</p>
+                <p class="lawyer-bio">Criminal defence lawyer focused on cybercrime and digital evidence. Cellebrite Certified Master Instructor &mdash; teaching advanced digital forensics, mobile device analysis, and electronic data examination.</p>
+                <p class="lawyer-langs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <strong>English</strong>
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 07 — APPROACH DARK BAND -->
+<section class="section approach" id="approach">
+    <span class="chapter-mark light">07 / 10 — Approach</span>
+    <span class="approach-stamp">Our Approach &middot; Aggressive Defence</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Aggressive. Professional. <em>Available.</em></h2>
+            <p class="section-lead">Four commitments that define how Singleton &amp; Associates represents the accused &mdash; from the first phone call after midnight to the moment a verdict is delivered.</p>
+        </div>
+
+        <div class="approach-grid">
+            <article class="approach-card">
+                <div class="approach-medallion">01</div>
+                <p class="approach-eyebrow">Pillar &mdash; I</p>
+                <h3>Aggressive Advocacy</h3>
+                <p class="approach-italic">In court. On the record. Every time.</p>
+                <p>Lawyers at Singleton &amp; Associates have a reputation for aggressively defending clients facing serious criminal charges before the courts in a highly professional manner.</p>
+                <span class="approach-card-rule"></span>
+            </article>
+
+            <article class="approach-card">
+                <div class="approach-medallion">02</div>
+                <p class="approach-eyebrow">Pillar &mdash; II</p>
+                <h3>Charter Expertise</h3>
+                <p class="approach-italic">Charter expertise across Atlantic Canada.</p>
+                <p>Mr. Singleton is well known throughout Atlantic Canada for the quality of the Charter of Rights arguments he has advanced on behalf of individuals charged with some of the most serious offences in Canadian Criminal Law.</p>
+                <span class="approach-card-rule"></span>
+            </article>
+
+            <article class="approach-card">
+                <div class="approach-medallion">03</div>
+                <p class="approach-eyebrow">Pillar &mdash; III</p>
+                <h3>Available 24 Hours</h3>
+                <p class="approach-italic">When the knock comes at 2 AM.</p>
+                <p>When you are arrested or charged, every hour counts. Our emergency after-hours line ensures you have access to experienced criminal defence counsel day or night, including weekends and holidays.</p>
+                <span class="approach-card-rule"></span>
+            </article>
+
+            <article class="approach-card">
+                <div class="approach-medallion">04</div>
+                <p class="approach-eyebrow">Pillar &mdash; IV</p>
+                <h3>Atlantic Canada Coverage</h3>
+                <p class="approach-italic">From Halifax to Sydney to Saint John.</p>
+                <p>Singleton &amp; Associates is a leading criminal law firm in Nova Scotia whose lawyers have represented clients in criminal matters throughout Atlantic Canada, appearing before courts on a daily basis.</p>
+                <span class="approach-card-rule"></span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 08 — COVERAGE STRIP -->
+<section class="coverage" id="coverage">
+    <span class="chapter-mark">08 / 10 — Coverage</span>
+    <div class="container">
+        <div class="coverage-inner">
+            <p class="coverage-label">Serving Across Nova Scotia</p>
+            <p class="coverage-list">
+                <span>Halifax</span><span class="coverage-dot"></span>
+                <span>Dartmouth</span><span class="coverage-dot"></span>
+                <span>Truro</span><span class="coverage-dot"></span>
+                <span>Sydney</span><span class="coverage-dot"></span>
+                <span>New Glasgow</span><span class="coverage-dot"></span>
+                <span>Amherst</span><span class="coverage-dot"></span>
+                <span>Bridgewater</span><span class="coverage-dot"></span>
+                <span>Kentville</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 09 — CTA BAND -->
+<section class="cta-band">
+    <span class="chapter-mark light">09 / 10 — Call to Action</span>
+    <div class="container">
+        <div class="cta-inner">
+            <p class="cta-eyebrow">If You've Been Charged</p>
+            <h2>The first call <em>matters most.</em></h2>
+            <p>Aggressive, confidential consultation by phone, after-hours line, or message &mdash; Halifax, Nova Scotia, and across Atlantic Canada. Being charged is not a conviction. In law, you are always presumed innocent.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="tel:+19024927000" class="btn btn-ink">
+                    Call (902) 492-7000
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 10 — CONTACT -->
+<section class="section contact" id="contact">
+    <span class="chapter-mark">10 / 10 — Contact</span>
+    <div class="container">
+        <div class="section-head">
+            <p class="section-eyebrow">Contact Us</p>
+            <h2 class="section-h2">1809 Barrington Street &middot; <em>Downtown Halifax.</em></h2>
+            <p class="section-lead">Suite 1100 in the heart of downtown Halifax &mdash; minutes from the Halifax Provincial Court, the Nova Scotia Supreme Court, and the Halifax Regional Police Headquarters.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Singleton &amp; Associates<br>1809 Barrington Street, Suite 1100<br>Halifax, Nova Scotia&nbsp; B3J 3K8</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:+19024927000">(902) 492-7000</a><br>
+                            <span style="color:var(--text-mid);font-size:0.92rem;">Fax (902) 492-4309</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:tsingleton@singleton.ns.ca">tsingleton@singleton.ns.ca</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <span>Mon &ndash; Fri&nbsp; 8:30 AM &ndash; 4:30 PM AST<br><span style="color:var(--text-soft);font-size:0.88rem;">By appointment 24 hours a day</span></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="tel:+19024833080" class="contact-emergency">
+                    <span class="contact-emergency-label">Emergency / After-Hours Line</span>
+                    <span class="contact-emergency-phone">(902) 483-3080</span>
+                    <span class="contact-emergency-note">Available 24 hours a day, 7 days a week &mdash; including weekends and holidays.</span>
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <h3>Confidential Inquiry</h3>
+                <p class="form-sub">Tell us briefly about your matter &mdash; we'll be in touch quickly.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(902) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category&hellip;</option>
+                            <option>Impaired Driving</option>
+                            <option>Drug Offences</option>
+                            <option>Sexual Offences</option>
+                            <option>Motor Vehicle Offences</option>
+                            <option>Assault / Domestic Assault</option>
+                            <option>Aggravated Assault / Violent Crime</option>
+                            <option>Weapon Offences / Firearms</option>
+                            <option>Fraud</option>
+                            <option>Cybercrime / Digital Evidence</option>
+                            <option>Other Criminal Matter</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about the charge or matter &mdash; keep it brief, we'll follow up."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-note">All inquiries are treated as strictly confidential.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?q=1809+Barrington+Street+Suite+1100+Halifax+NS+B3J+3K8&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Singleton &amp; Associates location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="s-mark inverse" aria-label="Singleton &amp; Associates">
+                    <span class="s-eyebrow">Established Defence Counsel</span>
+                    <span class="s-name">Singleton <em>&amp;</em> Associates</span>
+                    <span class="s-rule"></span>
+                    <span class="s-tag">Halifax &middot; Criminal Defence</span>
+                </a>
+                <p>A leading criminal defence firm in Halifax. Five dedicated defence lawyers representing the accused across Nova Scotia and all of Atlantic Canada &mdash; in impaired driving, drug, sexual, weapons, and violent offences. Available 24 hours a day.</p>
+                <span class="footer-tagline">Aggressive. Professional. Available 24 Hours.</span>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#practice">Impaired Driving</a></li>
+                    <li><a href="#practice">Drug Offences</a></li>
+                    <li><a href="#practice">Sexual Offences</a></li>
+                    <li><a href="#practice">Motor Vehicle Offences</a></li>
+                    <li><a href="#practice">Assault &amp; Violent Crimes</a></li>
+                    <li><a href="#practice">Weapon Offences</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Our Lawyers</h5>
+                <ul>
+                    <li><a href="#team">Thomas Singleton</a></li>
+                    <li><a href="#team">Leora Lawson</a></li>
+                    <li><a href="#team">Abby Metcalf</a></li>
+                    <li><a href="#team">Leslie Hogg</a></li>
+                    <li><a href="#team">Criss Hochhold</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+19024927000">(902) 492-7000</a></li>
+                    <li><a href="tel:+19024833080">After Hours: (902) 483-3080</a></li>
+                    <li class="plain">Fax: (902) 492-4309</li>
+                    <li><a href="mailto:tsingleton@singleton.ns.ca">tsingleton@singleton.ns.ca</a></li>
+                    <li class="plain">1809 Barrington Street, Suite 1100</li>
+                    <li class="plain">Halifax, NS&nbsp; B3J 3K8</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Singleton &amp; Associates. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Singleton &amp; Associates.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // Smooth scroll handler with hash update — explicitly handle to manage scroll-margin
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#' || href.length < 2) {
+            e.preventDefault();
+            return;
+        }
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', href);
+        }
+    });
+
+    // Mobile drawer
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Nav scroll shadow + active section tracking
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a[data-nav-target], .mobile-nav a[href^="#"]');
+    const sectionIds = ['hero', 'known', 'practice', 'team', 'approach', 'contact'];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    function updateNav() {
+        if (window.scrollY > 24) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+        // Active section detection
+        const scrollPos = window.scrollY + (window.innerHeight * 0.32);
+        let active = sections[0]?.id;
+        sections.forEach(sec => {
+            if (sec.offsetTop <= scrollPos) active = sec.id;
+        });
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#' + active || link.dataset.navTarget === active) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll — alternating left/right + scale-in for hero/featured
+    const earlySelectors = '.recognition-item, .promise-inner';
+    const midSelectors = '.featured-card, .practice-card, .lawyer-card';
+    const lateSelectors = '.approach-card, .known-text, .known-motif, .coverage-inner, .cta-inner, .contact-info, .contact-form, .map-wrap';
+    const heads = document.querySelectorAll('.section-head');
+
+    // Apply reveal classes
+    document.querySelectorAll(earlySelectors).forEach(el => el.classList.add('reveal'));
+    document.querySelectorAll(midSelectors).forEach(el => el.classList.add('reveal'));
+    document.querySelectorAll(lateSelectors).forEach(el => el.classList.add('reveal', 'late'));
+    heads.forEach(el => el.classList.add('reveal'));
+
+    // Alternating direction for known-row content
+    document.querySelectorAll('.known-row').forEach((row, i) => {
+        const text = row.querySelector('.known-text');
+        const motif = row.querySelector('.known-motif');
+        const isReverse = row.classList.contains('reverse');
+        if (text) text.classList.add('reveal', 'late', isReverse ? 'from-right' : 'from-left');
+        if (motif) motif.classList.add('reveal', 'late', isReverse ? 'from-left' : 'from-right');
+    });
+
+    // Hero form scale-in
+    document.querySelector('.hero-form-card')?.classList.add('reveal', 'scale-in');
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Staggered delays — early (80ms), late (140ms) per benchmark
+    document.querySelectorAll('.featured-grid, .practice-grid, .team-grid, .recognition-inner').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 80) + 'ms';
+        });
+    });
+    document.querySelectorAll('.approach-grid').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * 140) + 'ms';
+        });
+    });
+</script>
+
+</body>
+</html>
