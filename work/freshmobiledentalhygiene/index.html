@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fresh Mobile Dental Hygiene — Professional dental hygiene, in your home</title>
+<meta name="description" content="Fresh Mobile Dental Hygiene is a Registered Dental Hygienist-led mobile practice serving most of Alberta — complete oral exams, scaling, polishing, fluoride and more, brought to you. Run by Kim, RDH." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Fresh Mobile Dental Hygiene — Alberta" />
+<meta property="og:description" content="RDH-led mobile dental hygiene serving most of Alberta. Exams, scaling, polishing and more — in your home, with a Fort Saskatchewan office if you need it." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+    :root{
+        --white:#FFFFFF;
+        --paper:#F4FAFD;
+        --paper-soft:#E6F4FB;
+        --paper-deep:#CDE8F5;
+        --ink:#0B1F33;
+        --ink-2:#34516F;
+        --ink-3:#6E859E;
+        --blue:#0EA5E9;
+        --blue-bright:#0284C7;
+        --blue-deep:#075985;
+        --blue-darker:#0C2A41;
+        --blue-soft:#7DD3FC;
+        --blue-light:#E0F2FE;
+        --blue-tint:#F0F9FF;
+        --teal:#06B6D4;
+        --rule:#DCE9F2;
+        --rule-soft:#E9F1F7;
+        --shadow:0 28px 60px -28px rgba(11,31,51,.22);
+        --shadow-soft:0 14px 32px -18px rgba(11,31,51,.16);
+        --shadow-card:0 1px 0 rgba(11,31,51,.04), 0 16px 36px -20px rgba(11,31,51,.18);
+        --shadow-blue:0 18px 40px -16px rgba(14,165,233,.42);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:var(--white);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-feature-settings:"cv11","ss01"}
+    h1,h2,h3,h4{font-family:'Inter',sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.025em;color:var(--ink)}
+    h1{font-weight:900;letter-spacing:-.035em}
+    em{font-style:normal;color:var(--blue);font-weight:800}
+    .wrap{width:min(1240px,92vw);margin:0 auto}
+    a{color:inherit;text-decoration:none}
+    .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:12px}
+    .eyebrow::before{content:"";width:24px;height:1.5px;background:var(--blue);display:inline-block}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;transition:background .3s,box-shadow .3s,padding .3s}
+    .nav.scrolled{background:rgba(255,255,255,.93);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--rule-soft);padding:14px 0}
+    .nav.scrolled .brand-mark,.nav.scrolled .brand-name{color:var(--ink)}
+    .nav.scrolled .brand-mark{color:var(--blue)}
+    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
+    .nav.scrolled .nav-link{color:var(--ink-2)}
+    .nav.scrolled .nav-toggle span{background:var(--ink)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-mark{width:44px;height:44px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+    .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.06)}
+    .brand-name{font-weight:900;font-size:1.2rem;line-height:1;color:var(--white);letter-spacing:-.015em}
+    .brand-name .brand-sub{display:block;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-link{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);white-space:nowrap;position:relative;transition:color .24s}
+    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--blue-soft);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+    .nav-link:hover,.nav-link.active{color:var(--white)}
+    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--blue)}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left;background:var(--blue)}
+    .nav-cta{font-size:.88rem;font-weight:700;background:var(--blue);color:var(--white);padding:14px 24px;border-radius:12px;white-space:nowrap;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .24s;box-shadow:var(--shadow-blue)}
+    .nav-cta:hover{transform:translateY(-2px);background:var(--blue-bright)}
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
+    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
+    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
+    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
+
+    /* HERO — full-bleed clinical photo with overlay */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 0 160px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(108deg,rgba(7,89,133,.86) 0%,rgba(7,89,133,.72) 38%,rgba(11,31,51,.55) 62%,rgba(11,31,51,.30) 100%)}
+    .hero-inner{position:relative;z-index:2;max-width:780px;color:var(--white)}
+    .hero .eyebrow{color:var(--blue-soft)}.hero .eyebrow::before{background:var(--blue-soft)}
+    .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);font-weight:900;color:var(--white);margin:22px 0 24px;letter-spacing:-.035em;line-height:1.04}
+    .hero h1 em{color:var(--blue-soft);font-weight:900}
+    .hero-lede{font-size:clamp(1.06rem,1.4vw,1.22rem);color:rgba(255,255,255,.92);max-width:580px;margin-bottom:38px;line-height:1.7}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .btn-primary{font-size:.98rem;font-weight:700;background:var(--blue);color:var(--white);padding:18px 34px;border-radius:12px;display:inline-flex;align-items:center;gap:11px;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .24s;box-shadow:var(--shadow-blue)}
+    .btn-primary:hover{transform:translateY(-3px);background:var(--blue-bright);box-shadow:0 22px 44px -16px rgba(14,165,233,.6)}
+    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-primary:hover .ar{transform:translateX(5px)}
+    .btn-white{font-size:.98rem;font-weight:600;color:var(--white);padding:18px 30px;border-radius:12px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.45);backdrop-filter:blur(8px);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .25s cubic-bezier(.2,.7,.2,1)}
+    .btn-white:hover{background:rgba(255,255,255,.18);border-color:var(--white);transform:translateY(-3px)}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:14px;margin-top:44px;align-items:center}
+    .hero-trust-pill{display:inline-flex;align-items:center;gap:9px;font-size:.84rem;font-weight:600;color:var(--white);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:10px 18px;border-radius:12px;backdrop-filter:blur(8px)}
+    .hero-trust-pill svg{width:16px;height:16px;color:var(--blue-soft);flex:none}
+
+    /* FACTS */
+    .facts{background:var(--white);border-bottom:1px solid var(--rule-soft)}
+    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .fact{padding:52px 30px;text-align:center;border-right:1px solid var(--rule-soft)}
+    .fact:last-child{border-right:0}
+    .fact-n{font-size:clamp(2rem,3.6vw,3rem);font-weight:900;color:var(--blue);line-height:1;letter-spacing:-.025em}
+    .fact-label{font-size:.84rem;font-weight:500;color:var(--ink-3);margin-top:12px}
+
+    /* SECTIONS */
+    .section{padding:130px 0}
+    .section-head{max-width:760px;margin-bottom:64px}
+    .section-head h2{font-size:clamp(2.1rem,4.4vw,3.5rem);margin:18px 0 18px;font-weight:900;letter-spacing:-.03em}
+    .section-head h2 em{font-weight:900}
+    .section-head p{font-size:1.1rem;color:var(--ink-2);max-width:620px;line-height:1.7}
+
+    /* ABOUT */
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+    .about-fig{position:relative}
+    .about-fig-frame{aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
+    .about-fig-frame img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+    .about-fig-badge{position:absolute;right:-22px;bottom:-22px;background:var(--white);border:1px solid var(--rule);border-radius:18px;padding:20px 24px;box-shadow:var(--shadow-soft);display:flex;align-items:center;gap:14px}
+    .about-fig-badge-ico{width:44px;height:44px;border-radius:12px;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;flex:none}
+    .about-fig-badge-ico svg{width:22px;height:22px}
+    .about-fig-badge-txt{font-size:.86rem;color:var(--ink-2);line-height:1.4}
+    .about-fig-badge-txt b{display:block;color:var(--ink);font-weight:700}
+    .about-copy h2{font-size:clamp(2rem,4vw,3.2rem);margin:18px 0 22px;font-weight:900;letter-spacing:-.03em}
+    .about-copy p{font-size:1.06rem;color:var(--ink-2);margin-bottom:18px;line-height:1.75}
+    .about-copy p strong{color:var(--ink);font-weight:700}
+    .about-credits{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .about-credit{background:var(--white);border:1px solid var(--rule-soft);border-radius:16px;padding:22px 24px}
+    .about-credit .ac-n{font-size:1.7rem;font-weight:900;color:var(--blue);line-height:1;margin-bottom:6px;letter-spacing:-.02em}
+    .about-credit .ac-l{font-size:.86rem;color:var(--ink-2);line-height:1.4}
+
+    /* SERVICES */
+    .services{background:var(--white)}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}
+    .svc-card{background:var(--white);border:1px solid var(--rule);border-radius:20px;padding:36px 32px;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .25s,box-shadow .35s}
+    .svc-card:hover{transform:translateY(-6px);border-color:var(--blue-soft);box-shadow:var(--shadow-card)}
+    .svc-ico{width:56px;height:56px;border-radius:14px;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;margin-bottom:22px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .3s,color .3s}
+    .svc-card:hover .svc-ico{transform:translateY(-2px) rotate(-4deg);background:var(--blue);color:var(--white)}
+    .svc-ico svg{width:26px;height:26px}
+    .svc-card h4{font-size:1.18rem;margin-bottom:8px;font-weight:700;color:var(--ink)}
+    .svc-card p{font-size:.95rem;color:var(--ink-2);line-height:1.6}
+
+    /* SMILE BAND — emotional aspirational outcome */
+    .smile{background:var(--white)}
+    .smile-wrap{position:relative;border-radius:32px;overflow:hidden;min-height:480px;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow)}
+    .smile-photo{position:relative;overflow:hidden}
+    .smile-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+    .smile-wrap:hover .smile-photo img{transform:scale(1.05)}
+    .smile-copy{background:var(--blue-deep);color:var(--white);padding:78px 70px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+    .smile-copy::before{content:"";position:absolute;top:-40%;right:-30%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(125,211,252,.20) 0%,transparent 70%)}
+    .smile-copy *{position:relative;z-index:1}
+    .smile-copy .eyebrow{color:var(--blue-soft)}.smile-copy .eyebrow::before{background:var(--blue-soft)}
+    .smile-copy h3{font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--white);margin:18px 0 18px;font-weight:900;letter-spacing:-.025em}
+    .smile-copy h3 em{color:var(--blue-soft);font-weight:900}
+    .smile-copy p{font-size:1.05rem;color:rgba(255,255,255,.86);line-height:1.7;margin-bottom:14px}
+
+    /* HOW IT WORKS — with clinical tools image accent */
+    .how{background:var(--paper)}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+    .how-step{background:var(--white);border:1px solid var(--rule-soft);border-radius:20px;padding:38px 32px;position:relative;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .25s}
+    .how-step:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:var(--blue-soft)}
+    .how-step-n{width:42px;height:42px;border-radius:50%;background:var(--blue);color:var(--white);font-size:1rem;font-weight:800;display:grid;place-items:center;margin-bottom:22px;box-shadow:var(--shadow-blue)}
+    .how-step h4{font-size:1.3rem;margin-bottom:10px;font-weight:700}
+    .how-step p{font-size:1rem;color:var(--ink-2);line-height:1.65}
+
+    /* AREA */
+    .area{background:var(--blue-darker);color:var(--white);position:relative;overflow:hidden}
+    .area::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(125,211,252,.18) 0%,transparent 70%);filter:blur(60px);top:-180px;right:-120px}
+    .area::after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.16) 0%,transparent 70%);filter:blur(60px);bottom:-180px;left:-100px}
+    .area .wrap{position:relative;z-index:1}
+    .area .section-head h2{color:var(--white)}.area .eyebrow{color:var(--blue-soft)}.area .eyebrow::before{background:var(--blue-soft)}
+    .area .section-head p{color:rgba(255,255,255,.82)}
+    .area-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .area-copy h3{font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--white);margin-bottom:18px;font-weight:800;letter-spacing:-.025em}
+    .area-copy h3 em{color:var(--blue-soft);font-weight:800}
+    .area-copy p{font-size:1.06rem;color:rgba(255,255,255,.86);line-height:1.7;margin-bottom:16px}
+    .area-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:38px 36px;backdrop-filter:blur(4px)}
+    .area-card h4{font-size:1.18rem;color:var(--white);margin-bottom:20px;font-weight:700}
+    .area-card ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+    .area-card li{font-size:.98rem;color:rgba(255,255,255,.92);display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+    .area-card li svg{width:20px;height:20px;color:var(--blue-soft);flex:none;margin-top:2px}
+
+    /* STORE */
+    .store{background:var(--white)}
+    .store-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+    .store-card{background:var(--paper);border:1px solid var(--rule-soft);border-radius:22px;padding:46px 42px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .25s}
+    .store-card:hover{transform:translateY(-6px);border-color:var(--blue-soft);box-shadow:var(--shadow-card)}
+    .store-ico{width:62px;height:62px;border-radius:16px;background:var(--white);color:var(--blue);display:grid;place-items:center;margin-bottom:24px;box-shadow:var(--shadow-soft);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+    .store-card:hover .store-ico{transform:translateY(-2px) rotate(-4deg)}
+    .store-ico svg{width:30px;height:30px}
+    .store-card h4{font-size:1.4rem;margin-bottom:10px;font-weight:700}
+    .store-card p{font-size:.98rem;color:var(--ink-2);line-height:1.65;margin-bottom:14px}
+    .store-card p.store-meta{font-size:.84rem;color:var(--ink-3);margin-top:14px;margin-bottom:0;font-weight:500}
+    .store-head{display:flex;justify-content:flex-end;margin-bottom:6px}
+    .store-price{font-size:1.05rem;font-weight:800;color:var(--blue);background:var(--white);padding:6px 14px;border-radius:12px;border:1px solid var(--rule);letter-spacing:-.01em}
+
+    /* FORMS */
+    .forms{background:var(--paper)}
+    .forms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+    .form-card{background:var(--white);border:1px solid var(--rule);border-radius:20px;padding:34px 30px;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .25s,box-shadow .35s;display:flex;flex-direction:column;align-items:flex-start}
+    .form-card:hover{transform:translateY(-6px);border-color:var(--blue-soft);box-shadow:var(--shadow-card)}
+    .form-ico{width:54px;height:54px;border-radius:14px;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;margin-bottom:22px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .3s,color .3s}
+    .form-card:hover .form-ico{transform:translateY(-2px) rotate(-4deg);background:var(--blue);color:var(--white)}
+    .form-ico svg{width:26px;height:26px}
+    .form-card h4{font-size:1.16rem;margin-bottom:8px;font-weight:700;color:var(--ink)}
+    .form-card p{font-size:.94rem;color:var(--ink-2);line-height:1.6;margin-bottom:18px;flex:1}
+    .form-link{font-size:.86rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:color .24s,gap .24s}
+    .form-link:hover{color:var(--blue-bright);gap:10px}
+    @media(max-width:1100px){.forms-grid{grid-template-columns:1fr}}
+
+    /* CTA */
+    .cta{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-bright) 50%,var(--blue-deep) 100%);color:var(--white);padding:120px 0;text-align:center;position:relative;overflow:hidden}
+    .cta::before{content:"";position:absolute;width:580px;height:580px;border-radius:50%;background:rgba(255,255,255,.10);top:-220px;right:-180px}
+    .cta::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08);bottom:-180px;left:-140px}
+    .cta .wrap{position:relative;z-index:1}
+    .cta h2{font-size:clamp(2.2rem,4.4vw,3.5rem);margin-bottom:18px;color:var(--white);font-weight:900;letter-spacing:-.03em}
+    .cta p{font-size:1.12rem;color:rgba(255,255,255,.9);max-width:560px;margin:0 auto 38px;line-height:1.65}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-light{background:var(--white);color:var(--blue-deep);font-size:1rem;font-weight:700;padding:18px 36px;border-radius:12px;display:inline-flex;align-items:center;gap:11px;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s;box-shadow:0 18px 36px -16px rgba(11,31,51,.4)}
+    .btn-light:hover{transform:translateY(-3px);box-shadow:0 24px 44px -16px rgba(11,31,51,.5)}
+    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-light:hover .ar{transform:translateX(5px)}
+    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--white);padding:18px 30px;border-radius:12px;border:1.5px solid rgba(255,255,255,.5);transition:background .24s,border-color .24s,transform .25s cubic-bezier(.2,.7,.2,1)}
+    .btn-line:hover{background:rgba(255,255,255,.12);border-color:var(--white);transform:translateY(-3px)}
+
+    /* FOOTER */
+    .footer{background:var(--ink);color:rgba(255,255,255,.74);padding:96px 0 36px}
+    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--blue-soft)}
+    .footer .brand-name .brand-sub{color:rgba(255,255,255,.5)}
+    .footer-intro{margin-top:22px;font-size:.96rem;max-width:360px;line-height:1.7}
+    .footer-social{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.2);padding:11px 20px;border-radius:12px;transition:all .22s ease}
+    .footer-social:hover{color:var(--white);border-color:var(--blue-soft);background:rgba(125,211,252,.14);transform:translateY(-2px)}
+    .footer-social svg{color:var(--blue-soft)}
+    .footer-col h5{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
+    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(255,255,255,.74);margin-bottom:13px;transition:color .22s}
+    .footer-col a:hover{color:var(--blue-soft)}
+    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
+    .footer-map-head h5{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--white);background:var(--blue);padding:11px 20px;border-radius:12px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
+    .footer-dir:hover{transform:translateY(-2px);background:var(--blue-bright)}
+    .footer-map{margin:0 0 36px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);height:300px}
+    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.4) contrast(1.05)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.82rem;color:rgba(255,255,255,.5);padding-top:18px}
+    .footer-bottom a{color:rgba(255,255,255,.66)}
+
+    .reveal{opacity:0;transform:translateY(34px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+    .reveal.left{transform:translateX(-40px)}.reveal.right{transform:translateX(40px)}
+    .reveal.in{opacity:1;transform:none}
+
+    @media(max-width:1100px){
+        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--white);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(11,31,51,.18)}
+        .nav-links.open{transform:translateX(0)}
+        .nav-link{font-size:1.05rem;color:var(--ink-2)}
+        .nav-toggle{display:block;z-index:101}
+        .nav-toggle.open span{background:var(--ink) !important}
+        .about-grid,.svc-grid,.smile-wrap,.how-grid,.area-layout,.store-grid,.footer-top{grid-template-columns:1fr}
+        .facts-grid{grid-template-columns:1fr 1fr}
+        .about-credits{grid-template-columns:1fr 1fr}
+        .smile-copy{padding:60px 50px}
+    }
+    @media(max-width:700px){
+        .svc-grid{grid-template-columns:1fr 1fr;gap:14px}
+    }
+    @media(max-width:620px){
+        .facts-grid{grid-template-columns:1fr}
+        .fact{border-right:0;border-bottom:1px solid var(--rule-soft)}
+        .section{padding:88px 0}
+        .hero{padding:140px 0 100px}
+        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
+        .btn-primary,.btn-white{justify-content:center}
+        .svc-grid{grid-template-columns:1fr}
+        .about-credits{grid-template-columns:1fr}
+        .smile-copy{padding:48px 32px}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Fresh Mobile Dental Hygiene home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" width="44" height="44">
+                    <circle cx="24" cy="24" r="22" fill="currentColor" opacity=".14"/>
+                    <path d="M24 8c-4 0-6 2-6 2s-2-2-6-2c-4 0-6 3-6 8 0 10 12 20 12 20s12-10 12-20c0-5-2-8-6-8z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+                    <path d="M28 16c2 0 3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="brand-name">Fresh<span class="brand-sub">Mobile Dental Hygiene · Alberta</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About Kim</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#how" class="nav-link">How It Works</a>
+            <a href="#area" class="nav-link">Service Area</a>
+            <a href="#store" class="nav-link">Store</a>
+            <a href="#forms" class="nav-link">Forms</a>
+            <a href="tel:+14033939724" class="nav-cta">Call or text</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<!-- HERO — full-bleed clinical photo -->
+<header class="hero" id="top">
+    <div class="hero-bg"><img src="img/hero.jpg" alt="A clean, modern dental hygiene clinic — illustrative imagery of professional dental care" /></div>
+    <div class="wrap hero-inner">
+        <span class="eyebrow">Alberta · A Registered Dental Hygienist-led mobile practice</span>
+        <h1>Professional dental hygiene, in <em>your home.</em></h1>
+        <p class="hero-lede">Fresh Mobile Dental Hygiene brings a complete hygiene appointment to you. Run by Kim, RDH — practising hygiene since 2007 and serving most of Alberta.</p>
+        <div class="hero-ctas">
+            <a href="tel:+14033939724" class="btn-primary">Call or text to book <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#services" class="btn-white">See services</a>
+        </div>
+    </div>
+</header>
+
+<!-- FACTS -->
+<section class="facts">
+    <div class="wrap">
+        <div class="facts-grid">
+            <div class="fact"><div class="fact-n">2002</div><div class="fact-label">In the dental field since</div></div>
+            <div class="fact"><div class="fact-n">2007</div><div class="fact-label">Practising hygienist since</div></div>
+            <div class="fact"><div class="fact-n">7</div><div class="fact-label">Hygiene services offered</div></div>
+            <div class="fact"><div class="fact-n">Alberta</div><div class="fact-label">Most of the province served</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT — Kim's real photo here -->
+<section class="section about" id="about">
+    <div class="wrap about-grid">
+        <div class="about-fig reveal left">
+            <div class="about-fig-frame"><img src="img/about.jpg" alt="Kim, RDH, providing dental hygiene treatment to a patient" /></div>
+            <div class="about-fig-badge">
+                <span class="about-fig-badge-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+                <span class="about-fig-badge-txt"><b>Kim, RDH</b>Owner &amp; clinician</span>
+            </div>
+        </div>
+        <div class="about-copy reveal right">
+            <span class="eyebrow">About</span>
+            <h2>Meet <em>Kim, RDH.</em></h2>
+            <p>Kim is the owner of Fresh Mobile Dental Hygiene Inc. and a <strong>Registered Dental Hygienist</strong> — in the dental field since 2002, and practising as a hygienist since 2007 in multiple dental offices across Canada.</p>
+            <p>The mobile model is built around how patients actually live: a full, thorough hygiene appointment, delivered with care and patience, wherever you're most comfortable. Ty serves as Information Manager and keeps the practice running behind the scenes.</p>
+            <div class="about-credits">
+                <div class="about-credit"><div class="ac-n">RDH</div><div class="ac-l">Registered Dental Hygienist — same clinician every visit.</div></div>
+                <div class="about-credit"><div class="ac-n">Mobile</div><div class="ac-l">Appointments brought to your home, office or residence.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Services</span>
+            <h2>The complete hygiene <em>appointment.</em></h2>
+            <p>Everything you'd expect from a hygiene visit at the dentist — delivered to you, by a registered hygienist.</p>
+        </div>
+        <div class="svc-grid">
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Complete oral exam</h4><p>A clinical check for anything abnormal in the mouth, teeth or tissues, plus an oral cancer screen. Any decay noted is communicated to you, with a referral form to take to your dentist.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c0-3 3-5 5-5s3 1 3 1 1-1 3-1 5 2 5 5c0 5-4 8-8 8s-8-3-8-8z"/></svg></div><h4>Periodontal exam</h4><p>Measuring the bone support around the teeth and assessing recession of the gum tissue. The measurements become a baseline for future visits, so we can ensure the periodontium is healthy or improving.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4l3 3 11 11-3 3z"/><path d="M3 21l3-3"/></svg></div><h4>Scaling (debridement)</h4><p>Removal of biofilm (plaque) and calculus (tartar) — deep cleaning above and beneath the gumline to help prevent periodontal disease and tooth decay.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="9"/></svg></div><h4>Polishing</h4><p>Removal of stain and biofilm (plaque) on the teeth — that fresh-from-the-hygienist finish.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg></div><h4>Fluoride treatment</h4><p>Fluoride to help prevent tooth decay. There are proven benefits for clients who are prone to cavities or have active cavities.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div><h4>Sealants</h4><p>Recommended for teeth with deep grooves at increased risk of cavities. A small amount of plastic resin is placed in the groove and cured with a light.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v10H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg></div><h4>Oral education</h4><p>Dental-hygiene education for you or a group — denture care, self-oral screening, pediatric or geriatric sessions, or whatever you need.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/><path d="M9 20v-5h6v5"/></svg></div><h4>Treatment in your environment</h4><p>We provide treatment in your environment — where it's comfortable and familiar to you. Most of Alberta covered.</p></div>
+            <div class="svc-card reveal"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div><h4>One clinician</h4><p>Every appointment is with Kim, RDH — same trusted hygienist, every visit.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- SMILE BAND — emotional outcome -->
+<section class="smile">
+    <div class="wrap">
+        <div class="smile-wrap reveal">
+            <div class="smile-photo"><img src="img/smile.jpg" alt="A bright, healthy smile" /></div>
+            <div class="smile-copy">
+                <span class="eyebrow">Why FRESH?</span>
+                <h3>Because you want <em>to be.</em></h3>
+                <p>Because we travel to where you are. We provide treatment in your environment &mdash; where it's comfortable and familiar to you.</p>
+                <p>We're based in Fort Saskatchewan, AB, and serve most of Alberta. Clean, healthy teeth aren't an appointment, they're a routine &mdash; brought to you by a Registered Dental Hygienist.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">How it works</span>
+            <h2>From phone call to <em>clean teeth.</em></h2>
+            <p>Booking a mobile hygiene visit is straightforward — here's what to expect.</p>
+        </div>
+        <div class="how-grid">
+            <div class="how-step reveal"><div class="how-step-n">1</div><h4>Call or text to book</h4><p>Call or text 403-393-9724 to set up your appointment with Kim directly — no front-desk maze.</p></div>
+            <div class="how-step reveal"><div class="how-step-n">2</div><h4>Kim comes to you</h4><p>Kim arrives at your home (or office, or your community / seniors' residence) with everything for a full hygiene appointment.</p></div>
+            <div class="how-step reveal"><div class="how-step-n">3</div><h4>Your hygiene visit</h4><p>Exam, scaling, polishing and any other services — followed by personalised oral education to take with you.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- AREA -->
+<section class="section area" id="area">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Service area</span>
+            <h2>Most of <em>Alberta.</em></h2>
+            <p>Fresh Mobile Dental Hygiene travels — and there's a Fort Saskatchewan office option, in case you need to get out of the house.</p>
+        </div>
+        <div class="area-layout">
+            <div class="area-copy reveal left">
+                <h3>Wherever <em>you are.</em></h3>
+                <p>The mobile model is built around going to the patient. Kim serves most of Alberta — busy young families, working professionals, seniors, and anyone who'd rather have hygiene care brought to them.</p>
+                <p>Call ahead to confirm coverage in your area and book a visit that works for your schedule.</p>
+            </div>
+            <div class="area-card reveal right">
+                <h4>Who we visit</h4>
+                <ul>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>At home — most appointments</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Seniors' residences &amp; assisted living</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Busy families &amp; professionals' offices</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Fort Saskatchewan office — by appointment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STORE -->
+<section class="section store" id="store">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Fresh Store</span>
+            <h2>Take-home <em>essentials.</em></h2>
+            <p>A small line of hygienist-recommended products to keep your routine on track between appointments.</p>
+        </div>
+        <div class="store-grid">
+            <div class="store-card reveal left">
+                <div class="store-head"><span class="store-price">CA$5</span></div>
+                <div class="store-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4 L9 4 L11 9 L9 19 H7 L5 9 Z"/><rect x="9" y="2" width="2" height="3" rx="1"/></svg></div>
+                <h4>Curaprox toothbrush</h4>
+                <p>A hygienist-recommended toothbrush from Curaprox &mdash; the right tool, used well, makes most of the difference.</p>
+                <p class="store-meta">Currently available for pick up only.</p>
+            </div>
+            <div class="store-card reveal right">
+                <div class="store-head"><span class="store-price">CA$15</span></div>
+                <div class="store-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4h6l-1 5h-4z"/><path d="M9 9c-2 2-3 5-3 8a4 4 0 008 0c0-3-1-6-3-8"/></svg></div>
+                <h4>Whitening gel</h4>
+                <p>35% carbamide peroxide whitening gel &mdash; per syringe (typically ~3 mL). Noticeably brighter teeth, at home and on your schedule.</p>
+                <p class="store-meta">Currently available for pick up only.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORMS -->
+<section class="section forms" id="forms">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Patient forms</span>
+            <h2>Get ahead before <em>your visit.</em></h2>
+            <p>Two forms make the first appointment smoother. Fill them out at your own pace, on paper or on-screen.</p>
+        </div>
+        <div class="forms-grid">
+            <div class="form-card reveal">
+                <div class="form-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h11l4 4v14H5z"/><path d="M16 3v4h4"/><path d="M9 12h8M9 16h6"/></svg></div>
+                <h4>Patient insurance information</h4>
+                <p>Tell us about your dental insurance ahead of time, so billing's straightforward at your visit.</p>
+                <a href="https://www.freshmobiledentalhygiene.ca/forms.html" target="_blank" rel="noopener" class="form-link">Open form <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="form-card reveal">
+                <div class="form-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4-7-10a4 4 0 017-2 4 4 0 017 2c0 6-7 10-7 10z"/></svg></div>
+                <h4>Health history questionnaire</h4>
+                <p>A short health-history form &mdash; the same thing you'd fill out at any dental office, available fillable or printable.</p>
+                <a href="https://www.freshmobiledentalhygiene.ca/forms.html" target="_blank" rel="noopener" class="form-link">Open form <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="form-card reveal">
+                <div class="form-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h11l4 4v14H5z"/><path d="M16 3v4h4"/><circle cx="12" cy="14" r="3"/><path d="M9 19c1-2 5-2 6 0"/></svg></div>
+                <h4>Registration form</h4>
+                <p>Fill in the registration form to introduce yourself to the practice and get your first appointment set up.</p>
+                <a href="https://www.freshmobiledentalhygiene.ca/forms.html" target="_blank" rel="noopener" class="form-link">Open form <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="wrap">
+        <h2>Book your appointment with Kim.</h2>
+        <p>Call to schedule your home visit, ask about your area, or pick up products from the Fresh Store.</p>
+        <div class="cta-actions">
+            <a href="tel:+14033939724" class="btn-light">Call 403-393-9724 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="https://www.instagram.com/fresh_mobile_dental_hygiene/" target="_blank" rel="noopener" class="btn-line">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+                Follow on Instagram
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M24 8c-4 0-6 2-6 2s-2-2-6-2c-4 0-6 3-6 8 0 10 12 20 12 20s12-10 12-20c0-5-2-8-6-8z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></span>
+                    <span class="brand-name">Fresh<span class="brand-sub">Mobile Dental Hygiene · Alberta</span></span>
+                </div>
+                <p class="footer-intro">A Registered Dental Hygienist-led mobile practice — professional hygiene care, brought to your home, across most of Alberta.</p>
+                <a href="https://www.instagram.com/fresh_mobile_dental_hygiene/" target="_blank" rel="noopener" class="footer-social" aria-label="Fresh Mobile Dental Hygiene on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+                    Follow on Instagram
+                </a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+14033939724">403-393-9724</a>
+                <a href="https://www.freshmobiledentalhygiene.ca/contact.html" target="_blank" rel="noopener">Send a message →</a>
+                <p>Fort Saskatchewan, Alberta<br />+ most of Alberta, mobile</p>
+            </div>
+            <div class="footer-col">
+                <h5>The practice</h5>
+                <a href="#about">About Kim, RDH</a>
+                <a href="#services">Services</a>
+                <a href="#how">How it works</a>
+                <a href="#area">Service area</a>
+                <a href="#store">Fresh Store</a>
+                <a href="#forms">Patient forms</a>
+            </div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — Fort Saskatchewan + mobile across Alberta</h5>
+            <a href="https://maps.app.goo.gl/hrMacbHE6TdBuwnq9" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Open in Google Maps
+            </a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Fresh Mobile Dental Hygiene, Fort Saskatchewan, Alberta" src="https://www.google.com/maps?q=Fort+Saskatchewan,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Fresh Mobile Dental Hygiene Inc. · Alberta</span>
+            <span><a href="tel:+14033939724">403-393-9724</a></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var secs=['about','services','how','area','store','forms'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
+</script>
+
+</body>
+</html>
