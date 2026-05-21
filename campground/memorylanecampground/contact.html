@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact &amp; reserve — Memory Lane Campground &amp; RV Park</title>
+<meta name="description" content="Reach Memory Lane Campground &amp; RV Park — call 780-995-5555 to reserve, or send a message with your dates and rig details. Daily, weekly, monthly and seasonal welcome." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/webp" href="memlanefavicon.webp" />
+<link rel="shortcut icon" type="image/webp" href="memlanefavicon.webp" />
+<link rel="apple-touch-icon" href="memlanefavicon.webp" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="brand" aria-label="Memory Lane Campground home">
+            <span class="brand-mark" aria-hidden="true">
+                <img src="memlanelogo.webp" alt="" width="128" height="128" />
+            </span>
+            <span class="brand-name">Memory Lane<span class="brand-sub">Campground &amp; RV Park · Onoway, AB</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rates.html" class="nav-link">Rates</a>
+            <a href="photos.html" class="nav-link">Photos</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+            <a href="tel:+17809955555" class="nav-cta">Call 780-995-5555</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="page-hero-bg"><img src="img/gphoto-4.jpg" alt="" aria-hidden="true" /></div>
+    <div class="wrap">
+        <span class="eyebrow">Contact &amp; reserve</span>
+        <h1>Get in touch with <em>the campground.</em></h1>
+        <p class="page-hero-lede">Reservations are taken by phone — call to check availability and confirm your dates. Or send a message with your dates and rig details and the on-site caretaker will get back to you.</p>
+    </div>
+</header>
+
+<section class="section contact">
+    <div class="wrap">
+        <div class="contact-grid">
+            <div class="contact-card reveal left">
+                <h3>Send a <em>message.</em></h3>
+                <p style="font-size:.98rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">Tell us your dates and a bit about your rig — the on-site caretaker will get back to you with availability and next steps. Daily, weekly, monthly and seasonal stays are all welcome.</p>
+                <!-- Form submits to a Resend-backed endpoint that routes the request to the campground's inbox. -->
+                <form action="/api/contact" method="POST">
+                    <div class="form-grid">
+                        <div class="form-row full">
+                            <label for="f-name">Name <span aria-hidden="true" style="color:var(--wheat)">*</span></label>
+                            <input id="f-name" name="name" type="text" required autocomplete="name" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-email">Email <span aria-hidden="true" style="color:var(--wheat)">*</span></label>
+                            <input id="f-email" name="email" type="email" required autocomplete="email" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-phone">Phone <span aria-hidden="true" style="color:var(--wheat)">*</span></label>
+                            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" />
+                        </div>
+                        <div class="form-row full">
+                            <label for="f-dates">Dates <span aria-hidden="true" style="color:var(--wheat)">*</span></label>
+                            <input id="f-dates" name="dates" type="text" required placeholder="e.g. July 10 – 17, or seasonal May – Sept" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-type">Type of stay</label>
+                            <select id="f-type" name="stay-type">
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                                <option>Seasonal (May – Sept)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="f-amp">Site preference</label>
+                            <select id="f-amp" name="site">
+                                <option>30 amp</option>
+                                <option>50 amp</option>
+                                <option>Pull-through</option>
+                                <option>Either / not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-row full">
+                            <label for="f-rv">Length &amp; year of RV</label>
+                            <input id="f-rv" name="rv" type="text" placeholder="e.g. 32 ft, 2021 fifth-wheel" />
+                        </div>
+                        <div class="form-row full">
+                            <label for="f-msg">Anything else we should know?</label>
+                            <textarea id="f-msg" name="message" placeholder="Number of guests, accessibility needs, questions about the campground..."></textarea>
+                        </div>
+                        <div class="form-row full">
+                            <button type="submit" class="form-submit">Send request <span aria-hidden="true">→</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="inquire reveal right">
+                <span class="eyebrow">Or talk to a person</span>
+                <h3>Faster, <em>simpler.</em></h3>
+                <p>Phone is the fastest way to reach Memory Lane — the on-site caretaker can help with availability, rates, accessibility and arrival details.</p>
+                <div class="contact-direct" style="display:flex;flex-direction:column;gap:14px;margin:18px 0 22px">
+                    <a href="tel:+17809955555" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(252,248,236,.07);border:1px solid rgba(252,248,236,.16);border-radius:10px;transition:background .22s,border-color .22s">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:var(--wheat-soft);flex:none"><path d="M4 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg>
+                        <span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(252,248,236,.6);margin-bottom:4px">Call to reserve</span><strong style="color:var(--white);font-size:1.05rem;font-weight:600">1-780-995-5555</strong></span>
+                    </a>
+                    <div style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(252,248,236,.07);border:1px solid rgba(252,248,236,.16);border-radius:10px">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:var(--wheat-soft);flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                        <span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(252,248,236,.6);margin-bottom:4px">Office hours</span><strong style="color:var(--white);font-size:1.05rem;font-weight:600">8&nbsp;AM – 8&nbsp;PM daily</strong></span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(252,248,236,.07);border:1px solid rgba(252,248,236,.16);border-radius:10px">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:var(--wheat-soft);flex:none"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(252,248,236,.6);margin-bottom:4px">Address</span><strong style="color:var(--white);font-size:1.05rem;font-weight:600">56309 Range Road 13<br /><span style="font-weight:400">Onoway, Alberta</span></strong></span>
+                    </div>
+                </div>
+                <ul>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Check-in 2&nbsp;PM – 8&nbsp;PM · check-out 11&nbsp;AM</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Two-night minimum for long weekends</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Cash, Visa, Mastercard, AmEx, JCB</li>
+                </ul>
+                <a href="tel:+17809955555" class="btn-primary" style="background:var(--wheat);color:var(--ink)">Call now <span class="ar" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="wrap">
+        <h2>Looking forward to <em>meeting you.</em></h2>
+        <p>Whether you're just curious or ready to book, the easiest first step is a quick call.</p>
+        <div class="cta-actions">
+            <a href="tel:+17809955555" class="btn-light">Call 780-995-5555 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="location.html" class="btn-line">See location &amp; directions</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><img src="memlanelogo.webp" alt="" width="104" height="104" /></span>
+                    <span class="brand-name">Memory Lane<span class="brand-sub">Campground &amp; RV Park · Onoway, AB</span></span>
+                </div>
+                <p class="footer-intro">A quiet, gated country campground 30 minutes northwest of Edmonton — large fully-serviced sites with fire pit &amp; picnic table at each, on-site caretaker, wheelchair accessible.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Visit</h5>
+                <a href="about.html">About</a>
+                <a href="rates.html">Rates</a>
+                <a href="photos.html">Photos</a>
+                <a href="location.html">Location</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17809955555">780-995-5555 (call)</a>
+                <p>56309 Range Road 13<br />Onoway, Alberta</p>
+                <p>Hours: 8 AM – 8 PM daily</p>
+            </div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — 56309 Range Road 13, Onoway</h5>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=56309+Range+Road+13%2C+Onoway%2C+Alberta" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Memory Lane Campground, Onoway, Alberta" src="https://www.google.com/maps?q=56309+Range+Road+13,+Onoway,+Alberta&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Memory Lane Campground &amp; RV Park · Onoway, Alberta</span>
+            <span><a href="tel:+17809955555">780-995-5555</a></span>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

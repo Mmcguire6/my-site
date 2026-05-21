@@ -3,330 +3,232 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Memory Lane Campground &amp; RV Park — Country camping near Edmonton</title>
-<meta name="description" content="Memory Lane Campground & RV Park is a quiet, gated country campground near Edmonton in Onoway, Alberta — 45 large, fully-serviced sites, on-site caretaker, wheelchair accessible. Daily, weekly, monthly and seasonal." />
+<title>Memory Lane Campground &amp; RV Park — Country camping near Edmonton, Alberta</title>
+<meta name="description" content="Memory Lane Campground &amp; RV Park is a quiet, gated country campground 30 minutes northwest of Edmonton in Onoway, Alberta — 45 large, fully-serviced sites with fire pit and picnic table at each, on-site caretaker, wheelchair accessible. Daily, weekly, monthly &amp; seasonal." />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Memory Lane Campground & RV Park — near Edmonton" />
-<meta property="og:description" content="Quiet, gated country camping near Edmonton — 45 large fully-serviced sites, fire pit & picnic table at each, wheelchair accessible." />
+<meta property="og:title" content="Memory Lane Campground & RV Park — country camping near Edmonton" />
+<meta property="og:description" content="A quiet, gated country campground 30 minutes northwest of Edmonton — 45 large, fully-serviced sites, on-site caretaker, wheelchair accessible." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<style>
-    :root{--paper:#F3EEDF;--paper-soft:#E9E0C9;--paper-deep:#D8C9A4;--ink:#241F16;--ink-2:#494030;--ink-3:#7C7155;--field:#5C7A3A;--field-deep:#28341A;--wheat:#C99A2E;--wheat-soft:#E0B751;--sky:#5B7E8C;--rule:#CABB95;--rule-soft:#DACDAB;--white:#FCF8EC;--shadow:0 26px 60px -30px rgba(36,31,22,.44);--shadow-soft:0 15px 36px -22px rgba(36,31,22,.32);}
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:92px}
-    body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-    em{font-style:italic}
-    .wrap{width:min(1240px,92vw);margin:0 auto}
-    a{color:inherit;text-decoration:none}
-    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--wheat);display:inline-flex;align-items:center;gap:12px}
-    .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--wheat);display:inline-block}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:background .36s ease,box-shadow .36s ease,padding .36s ease}
-    .nav.scrolled{background:rgba(243,238,223,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:16px 0}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .brand{display:flex;align-items:center;gap:13px}
-    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .brand-mark{color:var(--field)}
-    .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.06)}
-    .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.26rem;line-height:1;color:var(--white)}
-    .nav.scrolled .brand-name{color:var(--ink)}
-    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(252,248,236,.66);margin-top:5px}
-    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
-    .nav-links{display:flex;align-items:center;gap:28px}
-    .nav-link{font-size:.85rem;font-weight:500;position:relative;color:rgba(252,248,236,.9);white-space:nowrap;transition:color .24s ease}
-    .nav.scrolled .nav-link{color:var(--ink-2)}
-    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--wheat);transform:scaleX(0);transform-origin:right;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
-    .nav-link:hover,.nav-link.active{color:var(--wheat-soft)}
-    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--wheat)}
-    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
-    .nav-cta{font-size:.84rem;font-weight:600;background:var(--wheat);color:var(--ink);padding:12px 22px;border-radius:100px;white-space:nowrap;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s ease,background .24s ease;box-shadow:0 10px 22px -12px rgba(201,154,46,.7)}
-    .nav-cta:hover{transform:translateY(-2px);background:var(--wheat-soft);box-shadow:0 16px 28px -12px rgba(201,154,46,.85)}
-    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
-    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .nav-toggle span{background:var(--ink)}
-    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
-    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
-    .nav-toggle.open span:nth-child(2){opacity:0}
-    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 160px;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
-    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,26,16,.56) 0%,rgba(28,26,16,.38) 40%,rgba(28,26,16,.74) 100%)}
-    .hero-inner{position:relative;z-index:2;color:var(--white);max-width:880px}
-    .hero .eyebrow{color:var(--wheat-soft)}.hero .eyebrow::before{background:var(--wheat-soft)}
-    .hero h1{font-size:clamp(2.9rem,7vw,5.6rem);font-weight:600;color:var(--white);margin:26px 0 22px;letter-spacing:-.02em}
-    .hero h1 em{color:var(--wheat-soft);font-weight:500}
-    .hero-lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(252,248,236,.92);max-width:620px;margin-bottom:38px}
-    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    .btn-primary{font-size:.95rem;font-weight:600;background:var(--wheat);color:var(--ink);padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:11px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s ease,background .24s ease;box-shadow:0 16px 34px -16px rgba(201,154,46,.8)}
-    .btn-primary:hover{transform:translateY(-3px);background:var(--wheat-soft);box-shadow:0 22px 42px -16px rgba(201,154,46,.9)}
-    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-primary:hover .ar{transform:translateX(5px)}
-    .btn-ghost{font-size:.95rem;font-weight:600;color:var(--white);padding:17px 30px;border-radius:100px;border:1.5px solid rgba(252,248,236,.45);display:inline-flex;align-items:center;gap:10px;transition:background .24s ease,border-color .24s ease,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-ghost:hover{background:rgba(252,248,236,.12);border-color:var(--white);transform:translateY(-3px)}
-    .hero-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
-    .hero-pill{font-size:.78rem;font-weight:600;color:var(--white);background:rgba(252,248,236,.12);border:1px solid rgba(252,248,236,.24);padding:9px 17px;border-radius:100px;backdrop-filter:blur(4px);display:inline-flex;align-items:center;gap:8px}
-    .hero-pill svg{width:14px;height:14px;color:var(--wheat-soft)}
-    .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:1;pointer-events:none;color:rgba(252,248,236,.65);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
-    .scroll-cue .line{width:1px;height:30px;background:rgba(252,248,236,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
-    @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
-    @media(max-height:820px){.scroll-cue{display:none}}
-    .facts{background:var(--field-deep);color:var(--white)}
-    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .fact{padding:46px 30px;text-align:center;border-right:1px solid rgba(252,248,236,.12)}
-    .fact:last-child{border-right:0}
-    .fact-n{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:600;color:var(--wheat-soft);line-height:1.05}
-    .fact-label{font-size:.8rem;font-weight:500;color:rgba(252,248,236,.76);margin-top:12px}
-    .section{padding:130px 0}
-    .section-head{max-width:730px;margin-bottom:60px}
-    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:22px 0 20px}
-    .section-head h2 em{color:var(--wheat);font-weight:500}
-    .section-head p{font-size:1.08rem;color:var(--ink-2)}
-    .about{background:var(--paper)}
-    .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:78px;align-items:center}
-    .about-copy h2{font-size:clamp(2rem,4vw,3.3rem);margin:22px 0 24px}
-    .about-copy h2 em{color:var(--wheat);font-weight:500}
-    .about-copy p{font-size:1.07rem;color:var(--ink-2);margin-bottom:20px}
-    .about-copy p strong{color:var(--ink);font-weight:600}
-    .about-sig{margin-top:34px;display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid var(--rule-soft)}
-    .about-sig-mark{width:46px;height:46px;color:var(--field);flex:none}
-    .about-sig-txt{font-size:.92rem;color:var(--ink-2)}
-    .about-sig-txt b{display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:600}
-    .about-fig{position:relative}
-    .about-fig img{width:100%;height:580px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
-    .about-fig-badge{position:absolute;bottom:-28px;left:-28px;background:var(--field);color:var(--white);padding:24px 30px;border-radius:6px;box-shadow:var(--shadow-soft);max-width:230px}
-    .about-fig-badge .b-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1;color:var(--wheat-soft)}
-    .about-fig-badge .b-l{font-size:.8rem;margin-top:7px;color:rgba(252,248,236,.85)}
-    .feat{background:var(--paper-soft)}
-    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:8px;overflow:hidden;margin-top:56px}
-    .feat-cell{background:var(--paper);padding:44px 36px;transition:background .36s ease}
-    .feat-cell:hover{background:var(--white)}
-    .feat-ico{width:52px;height:52px;border-radius:12px;background:rgba(92,122,58,.12);color:var(--field);display:grid;place-items:center;margin-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .36s ease,color .36s ease}
-    .feat-cell:hover .feat-ico{transform:translateY(-4px) rotate(-6deg);background:var(--wheat);color:var(--ink)}
-    .feat-ico svg{width:26px;height:26px}
-    .feat-cell h4{font-size:1.16rem;margin-bottom:9px}
-    .feat-cell p{font-size:.93rem;color:var(--ink-2)}
-    .gtk{background:var(--field-deep);color:var(--white);position:relative;overflow:hidden}
-    .gtk-bg{position:absolute;inset:0;z-index:0;opacity:.15}
-    .gtk-bg img{width:100%;height:100%;object-fit:cover}
-    .gtk::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--field-deep) 0%,rgba(40,52,26,.86) 100%);z-index:1}
-    .gtk .wrap{position:relative;z-index:2}
-    .gtk .section-head h2{color:var(--white)}.gtk .section-head h2 em{color:var(--wheat-soft)}
-    .gtk .section-head p{color:rgba(252,248,236,.82)}
-    .gtk .eyebrow{color:var(--wheat-soft)}.gtk .eyebrow::before{background:var(--wheat-soft)}
-    .gtk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
-    .gtk-item{border:1px solid rgba(252,248,236,.16);border-radius:8px;padding:32px 30px;background:rgba(252,248,236,.04);transition:transform .38s cubic-bezier(.2,.7,.2,1),border-color .38s ease}
-    .gtk-item:hover{transform:translateY(-6px);border-color:rgba(224,183,81,.55)}
-    .gtk-medallion{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--wheat-soft);color:var(--wheat-soft);display:grid;place-items:center;margin-bottom:18px;font-family:'Fraunces',serif;font-weight:700}
-    .gtk-item h4{font-size:1.15rem;color:var(--white);margin-bottom:9px}
-    .gtk-item p{font-size:.92rem;color:rgba(252,248,236,.78)}
-    .cta{background:var(--wheat);color:var(--ink);padding:110px 0;text-align:center;position:relative;overflow:hidden}
-    .cta::before{content:"";position:absolute;top:-60%;right:-10%;width:540px;height:540px;border-radius:50%;background:rgba(255,255,255,.16)}
-    .cta .wrap{position:relative;z-index:1}
-    .cta h2{font-size:clamp(2.2rem,4.6vw,3.7rem);margin-bottom:18px}
-    .cta p{font-size:1.12rem;color:rgba(36,31,22,.78);max-width:580px;margin:0 auto 38px}
-    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn-light{background:var(--ink);color:var(--white);font-size:1rem;font-weight:600;padding:18px 38px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s ease;box-shadow:0 18px 38px -18px rgba(36,31,22,.55)}
-    .btn-light:hover{transform:translateY(-3px);box-shadow:0 26px 46px -18px rgba(36,31,22,.65)}
-    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-light:hover .ar{transform:translateX(5px)}
-    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--ink);padding:18px 32px;border-radius:100px;border:1.6px solid rgba(36,31,22,.4);transition:background .24s ease,border-color .24s ease,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-line:hover{background:rgba(36,31,22,.08);border-color:var(--ink);transform:translateY(-3px)}
-    .footer{background:var(--ink);color:rgba(252,248,236,.74);padding:92px 0 38px}
-    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(252,248,236,.13)}
-    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--wheat-soft)}
-    .footer .brand-name .brand-sub{color:rgba(252,248,236,.55)}
-    .footer-intro{margin-top:22px;font-size:.96rem;max-width:350px;line-height:1.7}
-    .footer-social{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:.9rem;font-weight:600;color:rgba(252,248,236,.86);border:1px solid rgba(252,248,236,.22);padding:11px 20px;border-radius:100px;transition:all .22s ease}
-    .footer-social:hover{color:var(--white);border-color:var(--wheat-soft);background:rgba(201,154,46,.16);transform:translateY(-2px)}
-    .footer-social svg{color:var(--wheat-soft)}
-    .footer-col h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
-    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(252,248,236,.74);margin-bottom:13px;transition:color .22s ease}
-    .footer-col a:hover{color:var(--wheat-soft)}
-    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
-    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
-    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--ink);background:var(--wheat-soft);padding:10px 19px;border-radius:100px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s ease}
-    .footer-dir:hover{transform:translateY(-2px);background:var(--white)}
-    .footer-map{margin:0 0 38px;border-radius:8px;overflow:hidden;border:1px solid rgba(252,248,236,.14);height:300px}
-    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
-    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.83rem;color:rgba(252,248,236,.55)}
-    .footer-bottom a{color:rgba(252,248,236,.7)}
-    .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-    .reveal.left{transform:translateX(-48px)}.reveal.right{transform:translateX(48px)}
-    .reveal.in{opacity:1;transform:none}
-    @media(max-width:1100px){
-        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .46s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(36,31,22,.4)}
-        .nav-links.open{transform:translateX(0)}
-        .nav-link,.nav .nav-link{color:var(--ink-2);font-size:1.05rem}
-        .nav-toggle{display:block;z-index:101}
-        .nav-toggle.open span{background:var(--ink)!important}
-        .about-grid,.feat-grid,.gtk-grid,.footer-top{grid-template-columns:1fr}
-        .facts-grid{grid-template-columns:1fr 1fr}
-        .about-fig img{height:380px}.about-fig-badge{left:0}
-    }
-    @media(max-width:620px){
-        .facts-grid{grid-template-columns:1fr}
-        .fact{border-right:0;border-bottom:1px solid rgba(252,248,236,.12)}
-        .section{padding:86px 0}
-        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
-        .btn-primary,.btn-ghost{justify-content:center}
-    }
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/webp" href="memlanefavicon.webp" />
+<link rel="shortcut icon" type="image/webp" href="memlanefavicon.webp" />
+<link rel="apple-touch-icon" href="memlanefavicon.webp" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
 <nav class="nav" id="nav">
     <div class="wrap nav-inner">
-        <a href="#top" class="brand" aria-label="Memory Lane Campground home">
-            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M6 36 C14 30 16 18 24 18 C32 18 34 30 42 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 18 V8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M8 40 H40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+        <a href="index.html" class="brand" aria-label="Memory Lane Campground home">
+            <span class="brand-mark" aria-hidden="true">
+                <img src="memlanelogo.webp" alt="" width="96" height="96" />
+            </span>
             <span class="brand-name">Memory Lane<span class="brand-sub">Campground &amp; RV Park · Onoway, AB</span></span>
         </a>
         <div class="nav-links" id="navLinks">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#sites" class="nav-link">The Sites</a>
-            <a href="#area" class="nav-link">The Area</a>
-            <a href="#know" class="nav-link">Good to Know</a>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rates.html" class="nav-link">Rates</a>
+            <a href="photos.html" class="nav-link">Photos</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="contact.html" class="nav-link">Contact</a>
             <a href="tel:+17809955555" class="nav-cta">Call 780-995-5555</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
 </nav>
+
 <header class="hero" id="top">
-    <div class="hero-bg"><img src="img/hero.jpg" alt="RV sites on green grounds with a pond at Memory Lane Campground near Edmonton" /></div>
+    <div class="hero-bg"><img src="img/hero.jpg" alt="Wide pastoral view of RVs along a pond with trees behind at Memory Lane Campground near Edmonton" /></div>
     <div class="wrap hero-inner">
-        <span class="eyebrow">Onoway, Alberta · Camping near Edmonton</span>
+        <span class="eyebrow">Onoway, Alberta · Country camping near Edmonton</span>
         <h1>Country camping,<br />close to <em>the city.</em></h1>
-        <p class="hero-lede">Memory Lane Campground &amp; RV Park is a quiet, gated country campground near Edmonton — 45 large, fully-serviced sites with a fire pit and picnic table at each, an on-site caretaker, and full wheelchair accessibility.</p>
+        <p class="hero-lede">Memory Lane Campground &amp; RV Park is a quiet, gated country campground thirty minutes northwest of Edmonton — forty-five large, fully-serviced sites with a fire pit and picnic table at each, an on-site caretaker, and full wheelchair accessibility.</p>
         <div class="hero-ctas">
             <a href="tel:+17809955555" class="btn-primary">Call to reserve <span class="ar" aria-hidden="true">→</span></a>
-            <a href="#sites" class="btn-ghost">See the sites</a>
-        </div>
-        <div class="hero-pills">
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>45 large fully-serviced sites</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>Safe, gated · on-site caretaker</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="4" r="2"/><path d="M12 6v8m-4 6 4-6 4 6M6 10h12"/></svg>Wheelchair accessible</span>
+            <a href="rates.html" class="btn-ghost">See rates</a>
         </div>
     </div>
     <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
 </header>
+
 <section class="facts">
     <div class="wrap"><div class="facts-grid">
         <div class="fact"><div class="fact-n">45</div><div class="fact-label">Large fully-serviced sites</div></div>
         <div class="fact"><div class="fact-n">30/50</div><div class="fact-label">Amp · power, water &amp; sewer</div></div>
         <div class="fact"><div class="fact-n">Gated</div><div class="fact-label">Safe site, on-site caretaker</div></div>
-        <div class="fact"><div class="fact-n">Near&nbsp;YEG</div><div class="fact-label">Quiet countryside by Edmonton</div></div>
+        <div class="fact"><div class="fact-n">30&nbsp;min</div><div class="fact-label">Northwest of Edmonton</div></div>
     </div></div>
 </section>
-<section class="section about" id="about">
+
+<section class="section about">
     <div class="wrap about-grid">
         <div class="about-copy reveal left">
             <span class="eyebrow">About the campground</span>
             <h2>Enjoy camping in the <em>countryside.</em></h2>
-            <p>Memory Lane Campground &amp; RV Park provides <strong>large sites with full services in a safe, gated location close to Edmonton</strong> — power, water and sewer, with a fire pit and picnic table at every site.</p>
-            <p>It's a quiet country retreat just a short drive from Edmonton, St. Albert, Spruce Grove and Stony Plain, with an on-site caretaker and full wheelchair accessibility. Daily, weekly, monthly and seasonal campers are all welcome.</p>
+            <p>Memory Lane Campground &amp; RV Park offers <strong>large sites with full services in a safe, gated location close to Edmonton</strong> — power, water and sewer, with a fire pit and picnic table at every site.</p>
+            <p>It's a quiet country retreat just a short drive from Edmonton, St.&nbsp;Albert, Spruce&nbsp;Grove and Stony&nbsp;Plain, with an on-site caretaker and full wheelchair accessibility. Daily, weekly, monthly and seasonal campers are all welcome.</p>
             <div class="about-sig">
                 <span class="about-sig-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="about-sig-txt"><b>Big-rig friendly</b>Sites are 30, 35 or 40 ft wide and 65 ft long, with Edmonton city water.</span>
+                <span class="about-sig-txt"><b>Big-rig friendly</b>Sites are 30, 35 or 40&nbsp;ft wide and 65&nbsp;ft long, served with Edmonton city water.</span>
             </div>
         </div>
         <div class="about-fig reveal right">
-            <img src="img/about.jpg" alt="The grounds and RV sites at Memory Lane Campground, Onoway" style="object-position:center 30%" />
+            <img src="img/gphoto-1.jpg" alt="RVs settled by the pond at Memory Lane, with a windmill in the background" style="object-position:center 35%" />
             <div class="about-fig-badge"><div class="b-n">45 sites</div><div class="b-l">Daily · weekly · monthly · seasonal</div></div>
         </div>
     </div>
 </section>
-<section class="section feat" id="sites">
+
+<section class="section gtk">
+    <div class="gtk-bg"><img src="img/gphoto-16.jpg" alt="" aria-hidden="true" /></div>
     <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">The sites</span>
-            <h2>Room for the <em>big rigs.</em></h2>
-            <p>Forty-five large, fully-serviced sites — built to make a comfortable, accessible stay easy.</p>
-        </div>
-        <div class="feat-grid">
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg></div><h4>Large, full-service sites</h4><p>30, 35 or 40 ft wide and 65 ft long — power, water and sewer, with 30 and 50 amp service.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 20l3-9 4-4 4 4 3 9M9 11l3 3 3-3"/></svg></div><h4>Fire pit &amp; picnic table</h4><p>Every site has its own fire pit and picnic table for proper country evenings.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg></div><h4>Edmonton city water</h4><p>The campground is served with Edmonton city water.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Safe &amp; gated</h4><p>A safe, gated facility with an on-site caretaker for peace of mind.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="M12 6v8m-4 6 4-6 4 6M6 10h12"/></svg></div><h4>Wheelchair accessible</h4><p>The campground is fully wheelchair accessible.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></div><h4>Stay your way</h4><p>Daily, weekly, monthly and seasonal campers are all welcome.</p></div>
-        </div>
-    </div>
-</section>
-<section class="section gtk" id="area">
-    <div class="gtk-bg"><img src="img/approach-bg.jpg" alt="" aria-hidden="true" /></div>
-    <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">The area</span>
-            <h2>Quiet countryside, <em>city close by.</em></h2>
-            <p>Memory Lane sits in the peaceful Alberta countryside at Onoway — close to Edmonton and the towns around it.</p>
+        <div class="section-head reveal" style="max-width:780px;margin-left:auto;margin-right:auto;text-align:center">
+            <span class="eyebrow" style="justify-content:center">A day at Memory Lane</span>
+            <h2>The kind of place that <em>earns its name.</em></h2>
+            <p style="margin-left:auto;margin-right:auto">Big country skies, a fire pit at every site, and the kind of quiet you remember.</p>
         </div>
         <div class="gtk-grid">
-            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Near Edmonton</h4><p>An easy drive from Edmonton — country quiet without going far.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>St. Albert &amp; Spruce Grove</h4><p>Close to St. Albert, Spruce Grove and Stony Plain for shopping and services.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Onoway</h4><p>Set in the quiet countryside near Onoway, Alberta — a true country retreat.</p></div>
-        </div>
-    </div>
-</section>
-<section class="section about" id="know" style="background:var(--paper-soft)">
-    <div class="wrap about-grid">
-        <div class="about-copy reveal left">
-            <span class="eyebrow">Good to know</span>
-            <h2>Planning your <em>stay.</em></h2>
-            <p>Reservations are taken by phone — call the campground to check availability and current rates for daily, weekly, monthly or seasonal stays.</p>
-            <p>The campground is gated with an on-site caretaker, fully wheelchair accessible, and built for big rigs with large fully-serviced sites.</p>
-        </div>
-        <div class="about-fig reveal right" style="background:var(--field-deep);border-radius:8px;box-shadow:var(--shadow)">
-            <div style="padding:46px 42px;color:var(--white)">
-                <h3 style="font-size:1.5rem;color:var(--white);margin-bottom:18px">Reach the campground</h3>
-                <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
-                    <li style="display:flex;gap:12px;align-items:flex-start;color:rgba(252,248,236,.9)"><svg viewBox="0 0 20 20" fill="none" stroke="var(--wheat-soft)" stroke-width="2.2" width="19" height="19" style="flex:none;margin-top:2px"><path d="M4 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg>780-995-5555</li>
-                    <li style="display:flex;gap:12px;align-items:flex-start;color:rgba(252,248,236,.9)"><svg viewBox="0 0 20 20" fill="none" stroke="var(--wheat-soft)" stroke-width="2.2" width="19" height="19" style="flex:none;margin-top:2px"><path d="M17 8c0 5-7 9-7 9s-7-4-7-9a7 7 0 0114 0z"/><circle cx="10" cy="8" r="2.3"/></svg>56309 Range Road 13, Onoway, Alberta</li>
-                    <li style="display:flex;gap:12px;align-items:flex-start;color:rgba(252,248,236,.9)"><svg viewBox="0 0 20 20" fill="none" stroke="var(--wheat-soft)" stroke-width="2.2" width="19" height="19" style="flex:none;margin-top:2px"><rect x="3" y="5" width="14" height="11" rx="2"/><path d="M3 5l7 6 7-6"/></svg>Daily · weekly · monthly · seasonal</li>
-                </ul>
+            <div class="gtk-item reveal">
+                <div class="gtk-medallion">1</div>
+                <h4>Country mornings</h4>
+                <p>Coffee on your own deck, the walking trail through wildflowers, and a line in the water at the stocked rainbow trout pond.</p>
+            </div>
+            <div class="gtk-item reveal">
+                <div class="gtk-medallion">2</div>
+                <h4>Easy afternoons</h4>
+                <p>Croquet and lawn games in the playground, the kids on a kite-string, and birdwatching for Great Gray owls in the aspens.</p>
+            </div>
+            <div class="gtk-item reveal">
+                <div class="gtk-medallion">3</div>
+                <h4>Big sky evenings</h4>
+                <p>Light the fire pit on your site — firewood and propane sold at the office — then watch a wide-open prairie sky go from sunset to stars.</p>
             </div>
         </div>
     </div>
 </section>
-<section class="cta">
+
+<section class="section scenes">
     <div class="wrap">
-        <h2>Come make some memories.</h2>
-        <p>Call the campground to check availability and book your country site near Edmonton.</p>
-        <div class="cta-actions">
-            <a href="tel:+17809955555" class="btn-light">Call 780-995-5555 <span class="ar" aria-hidden="true">→</span></a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=56309+Range+Road+13%2C+Onoway%2C+Alberta" target="_blank" rel="noopener" class="btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+        <div class="scenes-head reveal">
+            <span class="eyebrow">Scenes from the season</span>
+            <h2>A look around <em>Memory Lane.</em></h2>
+            <p>Real photos from around the grounds — the pond, the gate, the walking trail, the sky and the small things that come with country camping.</p>
+        </div>
+        <div class="scenes-grid reveal">
+            <a href="img/fishing.jpg" class="scene"><img src="img/fishing.jpg" alt="A guest reeling in a rainbow trout on the dock at the Memory Lane trout pond" /><span class="scene-cap">Fishing at the trout pond</span></a>
+            <a href="img/great-grey-owls.jpg" class="scene"><img src="img/great-grey-owls.jpg" alt="A Great Gray owl perched in the trees at Memory Lane" /><span class="scene-cap">Great Gray owls overhead</span></a>
+            <a href="img/croquet.jpg" class="scene"><img src="img/croquet.jpg" alt="Croquet on the lawn in the playground at Memory Lane" /><span class="scene-cap">Croquet in the playground</span></a>
+            <a href="img/baby-rabbits.jpg" class="scene"><img src="img/baby-rabbits.jpg" alt="Baby rabbits on the grass in spring at Memory Lane" /><span class="scene-cap">Spring &amp; baby rabbits</span></a>
+            <a href="img/windmill.jpg" class="scene wide"><img src="img/windmill.jpg" alt="The trout pond windmill at Memory Lane against a dramatic prairie sky" /><span class="scene-cap">Windmill at the trout pond</span></a>
+            <a href="img/gphoto-4.jpg" class="scene"><img src="img/gphoto-4.jpg" alt="A pink and orange Alberta sunset over a picnic table at a campsite" /><span class="scene-cap">Sunset on the prairie</span></a>
+            <a href="img/trail-flowers.jpg" class="scene"><img src="img/trail-flowers.jpg" alt="Wildflowers along the walking trail at Memory Lane" /><span class="scene-cap">Flowers along the trail</span></a>
+        </div>
+        <p style="margin-top:30px;text-align:center;font-size:.92rem;color:var(--ink-3)">Want to see more? <a href="photos.html" style="color:var(--wheat);font-weight:600">View the full photo gallery →</a></p>
+    </div>
+</section>
+
+<section class="section tiles">
+    <div class="wrap">
+        <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+            <span class="eyebrow" style="justify-content:center">Explore</span>
+            <h2>Plan your stay at <em>Memory Lane.</em></h2>
+            <p style="margin-left:auto;margin-right:auto">Take a closer look at the campground, the rates, the directions — or get in touch to ask about availability.</p>
+        </div>
+        <div class="tiles-grid">
+            <a href="about.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
+                <h3>About</h3>
+                <p>The story of the campground, the sites, the on-site caretaker, full wheelchair accessibility, and the small touches that come with country camping.</p>
+                <span class="tile-cta">Read more <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="rates.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M5 9h1M18 15h1"/></svg></div>
+                <h3>Rates</h3>
+                <p>2026 rates for 30-amp, 50-amp, pull-through and seasonal sites — daily, weekly, monthly. Plus payment methods, check-in/out and policies.</p>
+                <span class="tile-cta">See rates <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="photos.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 18l6-6 4 4 3-3 5 5"/></svg></div>
+                <h3>Photos</h3>
+                <p>A full look around the grounds — the pond, the sites, sunsets, wildlife and the small everyday details of country camping.</p>
+                <span class="tile-cta">View photos <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="location.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <h3>Location</h3>
+                <p>56309 Range Road 13, Onoway — between Morinville and Onoway, 5&nbsp;km north of Highway 642. Directions from Edmonton, from south of the city, and from Highway 43.</p>
+                <span class="tile-cta">Find us <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="contact.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+                <h3>Contact</h3>
+                <p>Call 780-995-5555 to reserve — or send a message with your dates and rig details. The on-site caretaker will help you with the rest.</p>
+                <span class="tile-cta">Get in touch <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://www.facebook.com/p/Memory-Lane-Campground-and-RV-Park-100063530443908/" target="_blank" rel="noopener" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></div>
+                <h3>Follow on Facebook</h3>
+                <p>News from the campground — events, photos and seasonal updates from Memory Lane.</p>
+                <span class="tile-cta">Open Facebook <span aria-hidden="true">→</span></span>
+            </a>
         </div>
     </div>
 </section>
+
+<section class="cta">
+    <div class="wrap">
+        <h2>Come make some <em>memories.</em></h2>
+        <p>Call the campground to check availability and book your country site near Edmonton.</p>
+        <div class="cta-actions">
+            <a href="tel:+17809955555" class="btn-light">Call 780-995-5555 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="location.html" class="btn-line">See location &amp; directions</a>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
     <div class="wrap">
         <div class="footer-top">
             <div>
-                <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M6 36 C14 30 16 18 24 18 C32 18 34 30 42 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M24 18 V8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M8 40 H40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="brand-name">Memory Lane<span class="brand-sub">Campground &amp; RV Park · Onoway, AB</span></span></div>
-                <p class="footer-intro">A quiet, gated country campground near Edmonton — large fully-serviced sites, on-site caretaker, wheelchair accessible.</p>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><img src="memlanelogo.webp" alt="" width="80" height="80" /></span>
+                    <span class="brand-name">Memory Lane<span class="brand-sub">Campground &amp; RV Park · Onoway, AB</span></span>
+                </div>
+                <p class="footer-intro">A quiet, gated country campground 30 minutes northwest of Edmonton — large fully-serviced sites with fire pit &amp; picnic table at each, on-site caretaker, wheelchair accessible.</p>
                 <a href="https://www.facebook.com/p/Memory-Lane-Campground-and-RV-Park-100063530443908/" target="_blank" rel="noopener" class="footer-social" aria-label="Memory Lane on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>Follow on Facebook</a>
             </div>
-            <div class="footer-col"><h5>Contact</h5><a href="tel:+17809955555">780-995-5555</a><p>56309 Range Road 13<br />Onoway, Alberta</p></div>
-            <div class="footer-col"><h5>Camping</h5><p>Daily, weekly, monthly &amp; seasonal</p><a href="#sites">The sites</a><a href="#know">Good to know</a></div>
+            <div class="footer-col">
+                <h5>Visit</h5>
+                <a href="about.html">About</a>
+                <a href="rates.html">Rates</a>
+                <a href="photos.html">Photos</a>
+                <a href="location.html">Location</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17809955555">780-995-5555 (call)</a>
+                <p>56309 Range Road 13<br />Onoway, Alberta</p>
+                <p>Hours: 8 AM – 8 PM daily</p>
+            </div>
         </div>
         <div class="footer-map-head">
             <h5>Find us — 56309 Range Road 13, Onoway</h5>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=56309+Range+Road+13%2C+Onoway%2C+Alberta" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=56309+Range+Road+13%2C+Onoway%2C+Alberta" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
         </div>
-        <div class="footer-map"><iframe title="Map to Memory Lane Campground, Onoway, Alberta" src="https://www.google.com/maps?q=56309+Range+Road+13,+Onoway,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="footer-bottom"><span>© 2026 Memory Lane Campground &amp; RV Park · Onoway, Alberta</span><span><a href="tel:+17809955555">780-995-5555</a></span></div>
+        <div class="footer-map"><iframe title="Map to Memory Lane Campground, Onoway, Alberta" src="https://www.google.com/maps?q=56309+Range+Road+13,+Onoway,+Alberta&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Memory Lane Campground &amp; RV Park · Onoway, Alberta</span>
+            <span><a href="tel:+17809955555">780-995-5555</a></span>
+        </div>
     </div>
 </footer>
-<script>
-    var nav=document.getElementById('nav');
-    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
-    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
-    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-    var secs=['about','sites','area','know'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
-</script>
+
+<script src="app.js"></script>
 </body>
 </html>
