@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Request a spot — Bluebird RV Park</title>
+<meta name="description" content="Ask about a spot at Bluebird RV Park — call or text Mike and Dawn, or send a message. Personal tours by prior arrangement." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/webp" href="favicon.webp" />
+<link rel="shortcut icon" type="image/webp" href="favicon.webp" />
+<link rel="apple-touch-icon" href="favicon.webp" />
+<link rel="stylesheet" href="style.css" />
+<style>
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .form-row{display:flex;flex-direction:column;gap:6px}
+    .form-row.full{grid-column:1 / -1}
+    .form-row label{font-size:.84rem;font-weight:600;color:var(--ink-2);letter-spacing:.02em}
+    .form-row input,.form-row select,.form-row textarea{font:inherit;font-size:.96rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule-soft);border-radius:10px;padding:12px 14px;transition:border-color .2s,background .2s}
+    .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:0;border-color:var(--amber);background:var(--white)}
+    .form-row textarea{resize:vertical;min-height:120px;font-family:'Inter',sans-serif}
+    .form-submit{margin-top:8px;background:var(--amber);color:var(--ink);font-size:1rem;font-weight:600;padding:16px 28px;border-radius:12px;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .24s;box-shadow:0 14px 28px -12px rgba(208,138,60,.6)}
+    .form-submit:hover{transform:translateY(-2px);background:var(--amber-soft)}
+    .form-note{margin-top:14px;font-size:.86rem;color:var(--ink-3);line-height:1.55}
+    @media(max-width:680px){.form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="brand" aria-label="Bluebird RV Park home">
+            <span class="brand-mark" aria-hidden="true">
+                <img src="logo.webp" alt="" width="44" height="44" />
+            </span>
+            <span class="brand-name">Bluebird RV Park<span class="brand-sub">A 50+ Community · Camrose County</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="amenities.html" class="nav-link">Amenities</a>
+            <a href="rates.html" class="nav-link">Rates</a>
+            <a href="photos.html" class="nav-link">Photos</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="request.html" class="nav-link active">Contact</a>
+            <a href="request.html" class="nav-cta">Request a spot</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="page-hero-bg"><img src="img/gphoto-5.jpg" alt="" aria-hidden="true" /></div>
+    <div class="wrap">
+        <span class="eyebrow">Request a spot</span>
+        <h1>Get in touch with <em>Mike &amp; Dawn.</em></h1>
+        <p class="page-hero-lede">Tell us what you're looking for and the owners will get back to you. Phone and text are the fastest — and personal tours are by prior arrangement.</p>
+    </div>
+</header>
+
+<section class="section contact">
+    <div class="wrap">
+        <div class="contact-grid">
+            <div class="contact-card reveal left">
+                <h3>Reservation <em>request.</em></h3>
+                <p style="font-size:.98rem;color:var(--ink-2);margin-bottom:24px;line-height:1.7">Tell us your dates and a bit about your rig — Mike &amp; Dawn will get back to you with availability and next steps.</p>
+                <!-- Form submits to a Resend-backed endpoint that routes the request to the owner's inbox. -->
+                <form action="/api/contact" method="POST">
+                    <div class="form-grid">
+                        <div class="form-row full">
+                            <label for="f-name">Name <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-name" name="name" type="text" required autocomplete="name" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-email">Email <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-email" name="email" type="email" required autocomplete="email" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-phone">Phone <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" />
+                        </div>
+                        <div class="form-row full">
+                            <label for="f-dates">Dates <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-dates" name="dates" type="text" required placeholder="e.g. May 15 – September 30, or Aug 10–17" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-rv">Length &amp; Year of RV <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-rv" name="rv" type="text" required placeholder="e.g. 32 ft, 2021 Coachmen" />
+                        </div>
+                        <div class="form-row">
+                            <label for="f-guests">Number of Guests <span aria-hidden="true" style="color:var(--amber-deep)">*</span></label>
+                            <input id="f-guests" name="guests" type="text" required placeholder="e.g. 2 adults, 1 dog" />
+                        </div>
+                        <div class="form-row full">
+                            <button type="submit" class="form-submit">Send request <span aria-hidden="true">→</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="inquire reveal right">
+                <span class="eyebrow">Or talk to a person</span>
+                <h3>Faster, <em>simpler.</em></h3>
+                <p>Phone and text are the easiest way to reach Mike or Dawn — especially during the season when they're on site every day.</p>
+                <div class="contact-direct" style="display:flex;flex-direction:column;gap:14px;margin:18px 0 22px">
+                    <a href="tel:+17804469842" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(251,248,238,.07);border:1px solid rgba(251,248,238,.16);border-radius:12px;transition:background .22s,border-color .22s">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:var(--amber-soft);flex:none"><path d="M4 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg>
+                        <span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(251,248,238,.6);margin-bottom:4px">Call or text</span><strong style="color:var(--white);font-size:1.05rem;font-weight:600">780-446-9842</strong></span>
+                    </a>
+                    <a href="mailto:info@bluebirdrvpark.ca" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(251,248,238,.07);border:1px solid rgba(251,248,238,.16);border-radius:12px;transition:background .22s,border-color .22s">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:var(--amber-soft);flex:none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        <span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(251,248,238,.6);margin-bottom:4px">Email</span><strong style="color:var(--white);font-size:1.05rem;font-weight:600;word-break:break-all">info@bluebirdrvpark.ca</strong></span>
+                    </a>
+                </div>
+                <ul>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Personal tours by prior arrangement</li>
+                    <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="4 10 9 14 16 6"/></svg>Drop in for a look — but please call ahead so we can open the gate</li>
+                </ul>
+                <a href="tel:+17804469842" class="btn-primary" style="background:var(--amber);color:var(--ink)">Call or text now <span class="ar" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section scenes">
+    <div class="wrap">
+        <div class="scenes-head reveal">
+            <span class="eyebrow">While you're deciding</span>
+            <h2>A glimpse of what you're <em>booking.</em></h2>
+            <p>Real photos from around Bluebird — the kind of season you'd be settling into when you book a spot.</p>
+        </div>
+        <div class="scenes-grid reveal">
+            <a href="img/gphoto-1.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-1.jpg" alt="A Coachmen fifth-wheel on a treed lot with patio chairs and a deck at Bluebird" /><span class="scene-cap">A summer spot, settled in</span></a>
+            <a href="img/gphoto-6.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-6.jpg" alt="The autumn pond with reflected gold and orange trees at Bluebird" /><span class="scene-cap">Autumn at the pond</span></a>
+            <a href="img/gphoto-23.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-23.jpg" alt="The Birdsnest clubhouse lit up at night with colourful string lights" /><span class="scene-cap">The Birdsnest at night</span></a>
+            <a href="img/gphoto-7.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-7.jpg" alt="The walking trail through mature aspens beside the pond" /><span class="scene-cap">The trail through the aspens</span></a>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="wrap">
+        <h2>Looking forward to <em>meeting you.</em></h2>
+        <p>Whether you're just curious or ready to book, the easiest first step is a quick call or text.</p>
+        <div class="cta-actions">
+            <a href="tel:+17804469842" class="btn-light">Call or text 780-446-9842 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="location.html" class="btn-line">See location &amp; directions</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><img src="logo.webp" alt="" width="42" height="42" /></span>
+                    <span class="brand-name">Bluebird RV Park<span class="brand-sub">A 50+ Community · Camrose County</span></span>
+                </div>
+                <p class="footer-intro">A quiet, gated 50+ seasonal RV community on 15 private acres in Camrose County, Alberta — 40 minutes southeast of Edmonton.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Visit</h5>
+                <a href="amenities.html">Amenities</a>
+                <a href="rates.html">Rates</a>
+                <a href="photos.html">Photos</a>
+                <a href="location.html">Location</a>
+                <a href="request.html">Request a spot</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17804469842">780-446-9842 (call or text)</a>
+                <p>20131 Township Road 500<br />Camrose County, AB T0B 2M1</p>
+                <p>Ask for Mike or Dawn</p>
+            </div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — Camrose County, Alberta</h5>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=20131+Township+Road+500%2C+Camrose+County%2C+Alberta+T0B+2M1" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Bluebird RV Park, Camrose County, Alberta" src="https://www.google.com/maps?q=20131+Township+Road+500,+Camrose+County,+Alberta+T0B+2M1&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Bluebird RV Park · A 50+ Community · Camrose County, Alberta</span>
+            <span><a href="tel:+17804469842">780-446-9842</a></span>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

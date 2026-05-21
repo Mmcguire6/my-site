@@ -3,335 +3,269 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bluebird RV Park — A quiet 50+ RV community near Edmonton</title>
-<meta name="description" content="Bluebird RV Park is a quiet 50+ seasonal RV community in Camrose County, Alberta — 35 large fully-serviced sites on 15 private acres, the Birds Nest clubhouse, 40 minutes southeast of Edmonton near the Beaver Hills Dark Sky area." />
+<title>Bluebird RV Park — A 50+ Snowbird community in Camrose County, Alberta</title>
+<meta name="description" content="Bluebird RV Park is a private, gated 50+ Snowbird community on 15 acres in Camrose County, Alberta — 35 fully-serviced sites and an extended six-month Snowbird Season (April 15 – October 15). Forty minutes southeast of Edmonton, near the Beaver Hills Dark Sky area." />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Bluebird RV Park — a quiet 50+ community" />
-<meta property="og:description" content="A peaceful 50+ seasonal RV community on 15 private acres in Camrose County — 35 large serviced sites, the Birds Nest clubhouse, 40 min SE of Edmonton." />
+<meta property="og:title" content="Bluebird RV Park — a 50+ Snowbird community" />
+<meta property="og:description" content="A private 50+ Snowbird community in Camrose County, Alberta — extended six-month Snowbird Season, 35 fully-serviced sites, the Birdsnest clubhouse." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<style>
-    :root{--paper:#EFF1ED;--paper-soft:#E0E6E2;--paper-deep:#C8D3CE;--ink:#1B2430;--ink-2:#3B4654;--ink-3:#6C7884;--blue:#3E6E8E;--blue-deep:#16242F;--sky:#7FA8BE;--amber:#D08C3A;--amber-soft:#E6AC5C;--rule:#C3CFCB;--rule-soft:#D4DDD9;--white:#FBFCF8;--shadow:0 26px 60px -30px rgba(22,36,47,.42);--shadow-soft:0 15px 36px -22px rgba(22,36,47,.30);}
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:92px}
-    body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-    em{font-style:italic}
-    .wrap{width:min(1240px,92vw);margin:0 auto}
-    a{color:inherit;text-decoration:none}
-    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:inline-flex;align-items:center;gap:12px}
-    .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--amber);display:inline-block}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:background .36s,box-shadow .36s,padding .36s}
-    .nav.scrolled{background:rgba(239,241,237,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:16px 0}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .brand{display:flex;align-items:center;gap:13px}
-    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .brand-mark{color:var(--blue)}
-    .brand:hover .brand-mark{transform:translateY(-3px) rotate(-10deg)}
-    .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.26rem;line-height:1;color:var(--white)}
-    .nav.scrolled .brand-name{color:var(--ink)}
-    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(251,252,248,.66);margin-top:5px}
-    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
-    .nav-links{display:flex;align-items:center;gap:28px}
-    .nav-link{font-size:.85rem;font-weight:500;position:relative;color:rgba(251,252,248,.9);white-space:nowrap;transition:color .24s}
-    .nav.scrolled .nav-link{color:var(--ink-2)}
-    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:right;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
-    .nav-link:hover,.nav-link.active{color:var(--amber-soft)}
-    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--amber)}
-    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
-    .nav-cta{font-size:.84rem;font-weight:600;background:var(--amber);color:var(--ink);padding:12px 22px;border-radius:100px;white-space:nowrap;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s,background .24s;box-shadow:0 10px 22px -12px rgba(208,140,58,.7)}
-    .nav-cta:hover{transform:translateY(-2px);background:var(--amber-soft)}
-    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
-    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .nav-toggle span{background:var(--ink)}
-    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
-    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
-    .nav-toggle.open span:nth-child(2){opacity:0}
-    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 160px;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
-    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,40,.58) 0%,rgba(18,30,40,.40) 40%,rgba(18,30,40,.74) 100%)}
-    .hero-inner{position:relative;z-index:2;color:var(--white);max-width:880px}
-    .hero .eyebrow{color:var(--amber-soft)}.hero .eyebrow::before{background:var(--amber-soft)}
-    .hero h1{font-size:clamp(2.9rem,7vw,5.6rem);font-weight:600;color:var(--white);margin:26px 0 22px;letter-spacing:-.02em}
-    .hero h1 em{color:var(--amber-soft);font-weight:500}
-    .hero-lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(251,252,248,.92);max-width:620px;margin-bottom:38px}
-    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    .btn-primary{font-size:.95rem;font-weight:600;background:var(--amber);color:var(--ink);padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:11px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s,background .24s;box-shadow:0 16px 34px -16px rgba(208,140,58,.8)}
-    .btn-primary:hover{transform:translateY(-3px);background:var(--amber-soft)}
-    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-primary:hover .ar{transform:translateX(5px)}
-    .btn-ghost{font-size:.95rem;font-weight:600;color:var(--white);padding:17px 30px;border-radius:100px;border:1.5px solid rgba(251,252,248,.45);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-ghost:hover{background:rgba(251,252,248,.12);border-color:var(--white);transform:translateY(-3px)}
-    .hero-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
-    .hero-pill{font-size:.78rem;font-weight:600;color:var(--white);background:rgba(251,252,248,.12);border:1px solid rgba(251,252,248,.24);padding:9px 17px;border-radius:100px;backdrop-filter:blur(4px);display:inline-flex;align-items:center;gap:8px}
-    .hero-pill svg{width:14px;height:14px;color:var(--amber-soft)}
-    .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:1;pointer-events:none;color:rgba(251,252,248,.65);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
-    .scroll-cue .line{width:1px;height:30px;background:rgba(251,252,248,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
-    @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
-    @media(max-height:820px){.scroll-cue{display:none}}
-    .facts{background:var(--blue-deep);color:var(--white)}
-    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .fact{padding:46px 30px;text-align:center;border-right:1px solid rgba(251,252,248,.12)}
-    .fact:last-child{border-right:0}
-    .fact-n{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:600;color:var(--amber-soft);line-height:1.05}
-    .fact-label{font-size:.8rem;font-weight:500;color:rgba(251,252,248,.76);margin-top:12px}
-    .section{padding:130px 0}
-    .section-head{max-width:730px;margin-bottom:60px}
-    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:22px 0 20px}
-    .section-head h2 em{color:var(--blue);font-weight:500}
-    .section-head p{font-size:1.08rem;color:var(--ink-2)}
-    .about{background:var(--paper)}
-    .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:78px;align-items:center}
-    .about-copy h2{font-size:clamp(2rem,4vw,3.3rem);margin:22px 0 24px}
-    .about-copy h2 em{color:var(--blue);font-weight:500}
-    .about-copy p{font-size:1.07rem;color:var(--ink-2);margin-bottom:20px}
-    .about-copy p strong{color:var(--ink);font-weight:600}
-    .about-sig{margin-top:34px;display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid var(--rule-soft)}
-    .about-sig-mark{width:46px;height:46px;color:var(--blue);flex:none}
-    .about-sig-txt{font-size:.92rem;color:var(--ink-2)}
-    .about-sig-txt b{display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:600}
-    .about-fig{position:relative}
-    .about-fig img{width:100%;height:560px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
-    .about-fig-badge{position:absolute;bottom:-28px;left:-28px;background:var(--blue);color:var(--white);padding:24px 30px;border-radius:6px;box-shadow:var(--shadow-soft);max-width:230px}
-    .about-fig-badge .b-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1;color:var(--amber-soft)}
-    .about-fig-badge .b-l{font-size:.8rem;margin-top:7px;color:rgba(251,252,248,.85)}
-    .rates{background:var(--paper-soft)}
-    .rate-table{background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft);margin-top:56px}
-    .rate-row{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:17px 30px;border-bottom:1px solid var(--rule-soft);font-size:.97rem;color:var(--ink-2)}
-    .rate-row:last-child{border-bottom:0}
-    .rate-row.head{background:var(--blue);color:var(--white);font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600}
-    .rate-row .rate-n{font-family:'Fraunces',serif;font-weight:700;color:var(--blue);font-size:1.08rem;white-space:nowrap;text-align:right}
-    .rate-row.head .rate-n{color:var(--amber-soft)}
-    .rates-note{margin-top:30px;font-size:.95rem;color:var(--ink-2);padding-left:18px;border-left:3px solid var(--amber);max-width:860px}
-    .feat{background:var(--paper)}
-    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:8px;overflow:hidden;margin-top:56px}
-    .feat-cell{background:var(--paper);padding:44px 36px;transition:background .36s}
-    .feat-cell:hover{background:var(--white)}
-    .feat-ico{width:52px;height:52px;border-radius:12px;background:rgba(62,110,142,.12);color:var(--blue);display:grid;place-items:center;margin-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .36s,color .36s}
-    .feat-cell:hover .feat-ico{transform:translateY(-4px) rotate(-6deg);background:var(--amber);color:var(--ink)}
-    .feat-ico svg{width:26px;height:26px}
-    .feat-cell h4{font-size:1.16rem;margin-bottom:9px}
-    .feat-cell p{font-size:.93rem;color:var(--ink-2)}
-    .gtk{background:var(--blue-deep);color:var(--white);position:relative;overflow:hidden}
-    .gtk-bg{position:absolute;inset:0;z-index:0;opacity:.15}
-    .gtk-bg img{width:100%;height:100%;object-fit:cover}
-    .gtk::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--blue-deep) 0%,rgba(22,36,47,.86) 100%);z-index:1}
-    .gtk .wrap{position:relative;z-index:2}
-    .gtk .section-head h2{color:var(--white)}.gtk .section-head h2 em{color:var(--amber-soft)}
-    .gtk .section-head p{color:rgba(251,252,248,.82)}
-    .gtk .eyebrow{color:var(--amber-soft)}.gtk .eyebrow::before{background:var(--amber-soft)}
-    .gtk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
-    .gtk-item{border:1px solid rgba(251,252,248,.16);border-radius:8px;padding:32px 30px;background:rgba(251,252,248,.04);transition:transform .38s cubic-bezier(.2,.7,.2,1),border-color .38s}
-    .gtk-item:hover{transform:translateY(-6px);border-color:rgba(230,172,92,.55)}
-    .gtk-medallion{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--amber-soft);color:var(--amber-soft);display:grid;place-items:center;margin-bottom:18px;font-family:'Fraunces',serif;font-weight:700}
-    .gtk-item h4{font-size:1.15rem;color:var(--white);margin-bottom:9px}
-    .gtk-item p{font-size:.92rem;color:rgba(251,252,248,.78)}
-    .cta{background:var(--amber);color:var(--ink);padding:110px 0;text-align:center;position:relative;overflow:hidden}
-    .cta::before{content:"";position:absolute;top:-60%;right:-10%;width:540px;height:540px;border-radius:50%;background:rgba(255,255,255,.18)}
-    .cta .wrap{position:relative;z-index:1}
-    .cta h2{font-size:clamp(2.2rem,4.6vw,3.7rem);margin-bottom:18px}
-    .cta p{font-size:1.12rem;color:rgba(27,36,48,.78);max-width:580px;margin:0 auto 38px}
-    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn-light{background:var(--ink);color:var(--white);font-size:1rem;font-weight:600;padding:18px 38px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s;box-shadow:0 18px 38px -18px rgba(22,36,47,.55)}
-    .btn-light:hover{transform:translateY(-3px)}
-    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-light:hover .ar{transform:translateX(5px)}
-    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--ink);padding:18px 32px;border-radius:100px;border:1.6px solid rgba(27,36,48,.4);transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-line:hover{background:rgba(27,36,48,.08);border-color:var(--ink);transform:translateY(-3px)}
-    .footer{background:var(--ink);color:rgba(251,252,248,.74);padding:92px 0 38px}
-    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(251,252,248,.13)}
-    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--amber-soft)}
-    .footer .brand-name .brand-sub{color:rgba(251,252,248,.55)}
-    .footer-intro{margin-top:22px;font-size:.96rem;max-width:350px;line-height:1.7}
-    .footer-col h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
-    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(251,252,248,.74);margin-bottom:13px;transition:color .22s}
-    .footer-col a:hover{color:var(--amber-soft)}
-    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
-    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
-    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--ink);background:var(--amber-soft);padding:10px 19px;border-radius:100px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
-    .footer-dir:hover{transform:translateY(-2px);background:var(--white)}
-    .footer-map{margin:0 0 38px;border-radius:8px;overflow:hidden;border:1px solid rgba(251,252,248,.14);height:300px}
-    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
-    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.83rem;color:rgba(251,252,248,.55)}
-    .footer-bottom a{color:rgba(251,252,248,.7)}
-    .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-    .reveal.left{transform:translateX(-48px)}.reveal.right{transform:translateX(48px)}
-    .reveal.in{opacity:1;transform:none}
-    @media(max-width:1100px){
-        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .46s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(22,36,47,.4)}
-        .nav-links.open{transform:translateX(0)}
-        .nav-link,.nav .nav-link{color:var(--ink-2);font-size:1.05rem}
-        .nav-toggle{display:block;z-index:101}
-        .nav-toggle.open span{background:var(--ink)!important}
-        .about-grid,.feat-grid,.gtk-grid,.footer-top{grid-template-columns:1fr}
-        .facts-grid{grid-template-columns:1fr 1fr}
-        .about-fig img{height:380px}.about-fig-badge{left:0}
-    }
-    @media(max-width:620px){
-        .facts-grid{grid-template-columns:1fr}
-        .fact{border-right:0;border-bottom:1px solid rgba(251,252,248,.12)}
-        .section{padding:86px 0}
-        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
-        .btn-primary,.btn-ghost{justify-content:center}
-    }
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/webp" href="favicon.webp" />
+<link rel="shortcut icon" type="image/webp" href="favicon.webp" />
+<link rel="apple-touch-icon" href="favicon.webp" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
 <nav class="nav" id="nav">
     <div class="wrap nav-inner">
-        <a href="#top" class="brand" aria-label="Bluebird RV Park home">
-            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M10 28 C10 20 18 16 24 18 C30 12 40 14 40 22 C40 30 32 34 24 32 C18 36 10 34 10 28 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="33" cy="22" r="1.6" fill="currentColor"/></svg></span>
+        <a href="index.html" class="brand" aria-label="Bluebird RV Park home">
+            <span class="brand-mark" aria-hidden="true">
+                <img src="logo.webp" alt="" width="44" height="44" />
+            </span>
             <span class="brand-name">Bluebird RV Park<span class="brand-sub">A 50+ Community · Camrose County</span></span>
         </a>
         <div class="nav-links" id="navLinks">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#sites" class="nav-link">Sites &amp; Rates</a>
-            <a href="#nest" class="nav-link">The Birds Nest</a>
-            <a href="#know" class="nav-link">Good to Know</a>
-            <a href="tel:+17804469842" class="nav-cta">Call 780-446-9842</a>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="amenities.html" class="nav-link">Amenities</a>
+            <a href="rates.html" class="nav-link">Rates</a>
+            <a href="photos.html" class="nav-link">Photos</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="request.html" class="nav-link">Contact</a>
+            <a href="request.html" class="nav-cta">Request a spot</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
 </nav>
+
 <header class="hero" id="top">
-    <div class="hero-bg"><img src="img/hero.jpg" alt="The grounds and clubhouse at Bluebird RV Park, Camrose County, Alberta" /></div>
+    <div class="hero-bg"><img src="img/gphoto-13.jpg" alt="Aerial view of a fifth-wheel tucked into mature aspens at Bluebird RV Park" /></div>
     <div class="wrap hero-inner">
-        <span class="eyebrow">Camrose County, Alberta · A 50+ Community</span>
-        <h1>A quieter way<br />to <em>spend the season.</em></h1>
-        <p class="hero-lede">Bluebird RV Park is a peaceful 50+ seasonal RV community on 15 private acres — 35 large, fully-serviced sites and the Birds Nest clubhouse, just 40 minutes southeast of Edmonton.</p>
+        <span class="eyebrow">Camrose County, Alberta · A 50+ community</span>
+        <h1>Pull up a chair,<br />settle in for the <em>season.</em></h1>
+        <p class="hero-lede">Bluebird RV Park is a private, gated 50+ community on 15 quiet acres in Camrose County — 35 fully-serviced sites, the Birdsnest clubhouse, and neighbours who come back year after year. Seasonal, monthly and weekly rates, plus an extended six-month Snowbird Season for guests who want the full Alberta summer at their lot.</p>
         <div class="hero-ctas">
-            <a href="tel:+17804469842" class="btn-primary">Call about a site <span class="ar" aria-hidden="true">→</span></a>
-            <a href="#sites" class="btn-ghost">Sites &amp; rates</a>
-        </div>
-        <div class="hero-pills">
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>35 large serviced sites</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg>50+ adult community</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 0118 0M3 12a9 9 0 0018 0M12 3v18"/></svg>15 private acres · seasonal</span>
+            <a href="request.html" class="btn-primary">Request a spot <span class="ar" aria-hidden="true">→</span></a>
+            <a href="rates.html" class="btn-white">See rates</a>
         </div>
     </div>
-    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
 </header>
+
+<!-- Pine treeline divider (silhouette) -->
+<div class="treeline" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,60 L0,42 L40,28 L60,40 L90,18 L120,38 L150,24 L185,42 L220,16 L255,40 L290,28 L325,46 L360,22 L395,40 L430,14 L465,38 L500,28 L535,44 L575,18 L610,40 L645,26 L680,46 L715,20 L750,40 L790,16 L825,38 L860,30 L895,44 L930,22 L965,42 L1000,18 L1035,40 L1070,28 L1105,46 L1140,22 L1175,40 L1210,16 L1245,38 L1280,28 L1315,44 L1350,20 L1390,40 L1440,30 L1440,60 Z"/>
+    </svg>
+</div>
+
 <section class="facts">
     <div class="wrap"><div class="facts-grid">
-        <div class="fact"><div class="fact-n">35</div><div class="fact-label">Large fully-serviced sites</div></div>
         <div class="fact"><div class="fact-n">50+</div><div class="fact-label">A quiet adult community</div></div>
-        <div class="fact"><div class="fact-n">15&nbsp;ac</div><div class="fact-label">Private acres of grounds</div></div>
+        <div class="fact"><div class="fact-n">6&nbsp;mo</div><div class="fact-label">Extended Snowbird Season</div></div>
+        <div class="fact"><div class="fact-n">35</div><div class="fact-label">Large fully-serviced sites</div></div>
         <div class="fact"><div class="fact-n">40&nbsp;min</div><div class="fact-label">Southeast of Edmonton</div></div>
     </div></div>
 </section>
-<section class="section about" id="about">
-    <div class="wrap about-grid">
-        <div class="about-copy reveal left">
-            <span class="eyebrow">About Bluebird</span>
-            <h2>An RV enthusiast's <em>paradise.</em></h2>
-            <p>Bluebird RV Park is <strong>a 50+ community</strong> set on 15 private acres in Camrose County — 35 large, fully-serviced gravel sites with dedicated water and 30/15 or 50/15 amp metered power.</p>
-            <p>Sites are separated by ornamental shrubs and trees or privacy screens, and guests can add decks, sheds and gazebos. It's a seasonal community — no nightly or weekend campers, just neighbours who settle in for the season.</p>
-            <div class="about-sig">
-                <span class="about-sig-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="about-sig-txt"><b>Run by Mike &amp; Dawn</b>Personal tours by prior arrangement — get in touch any time.</span>
+
+<section class="section intro">
+    <div class="wrap intro-grid">
+        <div class="intro-fig reveal left">
+            <div class="polaroid">
+                <img src="img/gphoto-1.jpg" alt="A Coachmen fifth-wheel on a treed lot at Bluebird RV Park, deck and patio chairs set up" />
+                <span class="polaroid-cap">A summer spot at Bluebird</span>
             </div>
         </div>
-        <div class="about-fig reveal right">
-            <img src="img/about.jpg" alt="The Birds Nest clubhouse and serviced sites at Bluebird RV Park" />
-            <div class="about-fig-badge"><div class="b-n">A 50+ Community</div><div class="b-l">Seasonal living, not nightly camping</div></div>
+        <div class="intro-copy reveal right">
+            <span class="eyebrow">About Bluebird</span>
+            <h2>An RV enthusiast's <em>paradise.</em></h2>
+            <p>Bluebird is built around <strong>quiet, long stays</strong> — not a weekend campground. Thirty-five large fully-serviced sites with dedicated water and 30/15 or 50/15 amp metered power, separated by ornamental shrubs and privacy screens, with permission to add a deck, shed or gazebo.</p>
+            <p>Seasonal, monthly and weekly rates available — including an extended six-month Snowbird Season for guests who want a full Alberta summer at their lot. No nightly or weekend campers; just neighbours who come back year after year.</p>
+            <div style="margin-top:28px;display:flex;align-items:center;gap:14px;padding-top:24px;border-top:1px solid var(--rule-soft)">
+                <span class="bluebird-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="currentColor"><path d="M10 30 C10 22 18 18 24 20 C30 14 40 16 40 24 C40 32 32 36 24 34 C18 38 10 36 10 30 Z" opacity=".2"/><path d="M10 30 C10 22 18 18 24 20 C30 14 40 16 40 24 C40 32 32 36 24 34 C18 38 10 36 10 30 Z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="33" cy="24" r="1.5"/></svg>
+                </span>
+                <div style="font-size:.94rem;color:var(--ink-2);line-height:1.5"><strong style="color:var(--ink);font-weight:600;display:block">Run by Mike &amp; Dawn</strong>Family owners, on site through the season.</div>
+            </div>
         </div>
     </div>
 </section>
-<section class="section rates" id="sites">
+
+<!-- Evening at Bluebird (themed dark band with starfield) -->
+<section class="evening">
+    <div class="evening-bg"><img src="img/gphoto-3.jpg" alt="" aria-hidden="true" /></div>
     <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">Sites &amp; rates</span>
-            <h2>Settle in for <em>the season.</em></h2>
-            <p>Seasonal, monthly and weekly rates for 30 and 50 amp sites. Regular season runs May 1 – October 1.</p>
+        <div class="evening-head">
+            <span class="eyebrow">An evening at Bluebird</span>
+            <h2>The kind of day you <em>circle on the calendar.</em></h2>
+            <p>Slow mornings, easy afternoons, and big skies after sundown — there's a reason guests come back year after year.</p>
         </div>
-        <div class="rate-table reveal">
-            <div class="rate-row head"><span>Site / term</span><span class="rate-n">Rate</span></div>
-            <div class="rate-row"><span>Seasonal · 30 amp (May 1–Oct 1)</span><span class="rate-n">$3,000 – $3,300</span></div>
-            <div class="rate-row"><span>Seasonal · 50 amp (May 1–Oct 1)</span><span class="rate-n">$3,050 – $3,500</span></div>
-            <div class="rate-row"><span>Extended season (Apr 15–Oct 15)</span><span class="rate-n">+ $800</span></div>
-            <div class="rate-row"><span>Monthly</span><span class="rate-n">$850 / $900 / $950 + power</span></div>
-            <div class="rate-row"><span>Weekly · 30 amp / 50 amp</span><span class="rate-n">$350 / $375</span></div>
+        <div class="evening-grid">
+            <div class="evening-card">
+                <div class="evening-card-photo"><img src="img/gphoto-12.jpg" alt="A trailer with a built-in deck and summer flowers at Bluebird" /></div>
+                <div class="evening-card-time">Morning</div>
+                <h4>Coffee on the deck</h4>
+                <p>Fresh coffee on your own deck, the prairie waking up around you, and a wave to a neighbour walking past with the dog.</p>
+            </div>
+            <div class="evening-card">
+                <div class="evening-card-photo"><img src="img/gphoto-6.jpg" alt="The autumn pond at Bluebird with gold and orange trees reflected" /></div>
+                <div class="evening-card-time">Afternoon</div>
+                <h4>Walk the trails, watch the birds</h4>
+                <p>Short walking trails through the grounds, the water-fowl viewing benches by the pond — quiet places to read a chapter or just sit.</p>
+            </div>
+            <div class="evening-card">
+                <div class="evening-card-photo"><img src="img/evening-fire.jpg" alt="A lakeside campfire at dusk with chairs around the fire and a low moon on the horizon" /></div>
+                <div class="evening-card-time">Evening</div>
+                <h4>Fire pit, friends, fireflies</h4>
+                <p>Light the fire pit, pour a cold one, drift over to the Birdsnest for Sociable Saturday — then look up at one of the darkest skies in the area.</p>
+            </div>
         </div>
-        <p class="rates-note reveal">Extended season can also be split: $450 (Apr 15–30) and $350 (Oct 1–15). Deposits: $400 new guests, $300 existing, plus a $350 power deposit the first season. Winter and summer RV storage $50/month. One RV and two registered-guest vehicles per site; sites are non-transferable. Visitors are welcome while you're on site.</p>
     </div>
 </section>
-<section class="section feat" id="nest">
+
+<!-- Pine treeline divider (flipped, transitions back from dark to cream) -->
+<div class="treeline flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,60 L0,42 L40,28 L60,40 L90,18 L120,38 L150,24 L185,42 L220,16 L255,40 L290,28 L325,46 L360,22 L395,40 L430,14 L465,38 L500,28 L535,44 L575,18 L610,40 L645,26 L680,46 L715,20 L750,40 L790,16 L825,38 L860,30 L895,44 L930,22 L965,42 L1000,18 L1035,40 L1070,28 L1105,46 L1140,22 L1175,40 L1210,16 L1245,38 L1280,28 L1315,44 L1350,20 L1390,40 L1440,30 L1440,60 Z"/>
+    </svg>
+</div>
+
+<!-- Scenes from the season -->
+<section class="section scenes">
     <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">The Birds Nest</span>
-            <h2>A clubhouse, and a <em>community.</em></h2>
-            <p>The heart of Bluebird is the Birds Nest Clubhouse &amp; Patio — and the people who gather there.</p>
+        <div class="scenes-head reveal">
+            <span class="eyebrow">Scenes from the season</span>
+            <h2>The Bluebird <em>look.</em></h2>
+            <p>Just a handful of moments from around the park — real photos from real seasons.</p>
         </div>
-        <div class="feat-grid">
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/><path d="M9 20v-5h6v5"/></svg></div><h4>Birds Nest Clubhouse</h4><p>A clubhouse and patio at the centre of the park — the place everyone meets.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v6M12 3v6M17 3v6M5 9h14l-1 12H6L5 9z"/></svg></div><h4>Washrooms &amp; showers</h4><p>A large heated half-bath, plus a three-quarter bath with a coin shower.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="16" cy="7" r="1"/></svg></div><h4>Laundry &amp; games</h4><p>On-site laundry, plus books, games, DVDs and puzzles in the clubhouse.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4-7-10a4 4 0 017-2 4 4 0 017 2c0 6-7 10-7 10z"/></svg></div><h4>Sociable Saturdays</h4><p>Potluck dinners, Sociable Saturdays, crafts, cards and friendly fires.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 20l3-9 4-4 4 4 3 9M9 11l3 3 3-3"/></svg></div><h4>Family gatherings</h4><p>Room for family gatherings — the season is better with company.</p></div>
-            <div class="feat-cell reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="9" width="16" height="9" rx="1"/><path d="M8 9V6h8v3"/></svg></div><h4>Make it yours</h4><p>Add a deck, shed or gazebo to your site. Winter RV storage is available.</p></div>
+        <div class="scenes-grid">
+            <a href="img/gphoto-1.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-1.jpg" alt="A Coachmen fifth-wheel on a treed deck at Bluebird" /><span class="scene-cap">Settled in for the summer</span></a>
+            <a href="img/gphoto-7.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-7.jpg" alt="A green walking trail through aspens by the pond" /><span class="scene-cap">The trail through the aspens</span></a>
+            <a href="img/gphoto-6.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-6.jpg" alt="Autumn pond with reflected gold trees" /><span class="scene-cap">Autumn pond &amp; water-fowl</span></a>
+            <a href="img/gphoto-17.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-17.jpg" alt="A Rockwood trailer with a screened gazebo in evening light" /><span class="scene-cap">Evening on the lawn</span></a>
+            <a href="img/gphoto-9.jpg" target="_blank" rel="noopener" class="scene wide"><img src="img/gphoto-9.jpg" alt="Overview of the grounds — gravel laneway curving past serviced RV sites" /><span class="scene-cap">A look down the laneway</span></a>
+            <a href="img/gphoto-12.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-12.jpg" alt="A trailer with a built-in red wood deck and summer flowers" /><span class="scene-cap">Built-in decks &amp; flower beds</span></a>
+            <a href="img/gphoto-13.jpg" target="_blank" rel="noopener" class="scene"><img src="img/gphoto-13.jpg" alt="Aerial view of a trailer tucked into mature aspens" /><span class="scene-cap">Tucked in the trees</span></a>
         </div>
+        <p style="margin-top:30px;text-align:center;font-size:.92rem;color:var(--ink-3)">Want to see more? <a href="photos.html" style="color:var(--amber-deep);font-weight:600">View the full photo gallery →</a></p>
     </div>
 </section>
-<section class="section gtk" id="know">
-    <div class="gtk-bg"><img src="img/approach-bg.jpg" alt="" aria-hidden="true" /></div>
+
+<section class="section tiles">
     <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">Good to know</span>
-            <h2>How Bluebird <em>works.</em></h2>
-            <p>A few things that make this a community rather than a campground.</p>
+        <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+            <div class="flourish"><span class="flourish-line"></span><svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M10 30 C10 22 18 18 24 20 C30 14 40 16 40 24 C40 32 32 36 24 34 C18 38 10 36 10 30 Z" opacity=".18"/><path d="M10 30 C10 22 18 18 24 20 C30 14 40 16 40 24 C40 32 32 36 24 34 C18 38 10 36 10 30 Z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="33" cy="24" r="1.5"/></svg><span class="flourish-line"></span></div>
+            <span class="eyebrow" style="justify-content:center">Explore</span>
+            <h2>Everything you'd want <em>to know.</em></h2>
+            <p style="margin-left:auto;margin-right:auto">Take a closer look at the park, the rates, the directions, or get in touch to ask about a spot.</p>
         </div>
-        <div class="gtk-grid">
-            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Seasonal only</h4><p>No nightly or weekend campers — other than occasional friends of existing guests.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>A 50+ community</h4><p>Bluebird is an adult 50+ community. There is no playground on site.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>One RV per site</h4><p>One RV and up to two registered-guest vehicles per site. Sites are non-transferable.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">4</div><h4>Visitors</h4><p>Visitors are permitted while you're on site.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Tours by arrangement</h4><p>Mike or Dawn are happy to give a personal tour by prior arrangement.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Dark skies nearby</h4><p>Close to the Beaver Hills Biosphere and the Beaver Hills Dark Sky area.</p></div>
+        <div class="tiles-grid">
+            <a href="amenities.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/><path d="M9 20v-5h6v5"/></svg></div>
+                <h3>Amenities</h3>
+                <p>The Birdsnest clubhouse, laundry, showers, fire pits, walking trails, water-fowl viewing — what's on the grounds.</p>
+                <span class="tile-cta">See amenities <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="rates.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M5 9h1M18 15h1"/></svg></div>
+                <h3>Rates</h3>
+                <p>Seasonal, monthly and weekly rates for 30-amp and 50-amp sites — plus deposits, extended season, and storage.</p>
+                <span class="tile-cta">See rates <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="photos.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 18l6-6 4 4 3-3 5 5"/></svg></div>
+                <h3>Photos</h3>
+                <p>A look at the clubhouse, the grounds and the area around the park.</p>
+                <span class="tile-cta">View photos <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="location.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <h3>Location</h3>
+                <p>20131 Township Road 500, Camrose County — directions from Edmonton and Camrose, plus a map.</p>
+                <span class="tile-cta">Find us <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="request.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg></div>
+                <h3>Request a spot</h3>
+                <p>Call or text Mike or Dawn, or send an email — happy to walk you through availability and a tour.</p>
+                <span class="tile-cta">Get in touch <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://www.ualberta.ca/en/augustana/research/amlrs/observatory/index.html" target="_blank" rel="noopener" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="10"/></svg></div>
+                <h3>Beaver Hills Dark Sky</h3>
+                <p>The University of Alberta Augustana Observatory — close to Bluebird, in the Beaver Hills Dark Sky area.</p>
+                <span class="tile-cta">Visit observatory site <span aria-hidden="true">↗</span></span>
+            </a>
         </div>
     </div>
 </section>
+
+<!-- Signed letter from Mike & Dawn -->
+<section class="section letter">
+    <div class="wrap">
+        <div class="letter-wrap reveal">
+            <div class="letter-mark" aria-hidden="true">B</div>
+            <span class="letter-eyebrow">A note from the owners</span>
+            <div class="letter-body">
+                <p>We built Bluebird because we wanted somewhere quiet, friendly and easy &mdash; somewhere a season feels long, and the neighbours feel like family. Come down for a tour, walk the grounds, sit a while at the Birdsnest. We'd love to meet you.</p>
+            </div>
+            <div class="letter-signed">— Mike &amp; Dawn<span class="letter-signed-line">Owners · Bluebird RV Park</span></div>
+        </div>
+    </div>
+</section>
+
 <section class="cta">
+    <div class="stars" data-n="35" aria-hidden="true"></div>
     <div class="wrap">
-        <h2>Find your spot at Bluebird.</h2>
-        <p>Call Mike or Dawn to ask about availability, rates, or a personal tour of the park.</p>
+        <h2>Find your spot at <em>Bluebird.</em></h2>
+        <p>Call or text Mike &amp; Dawn to ask about availability, rates, or a personal tour of the park.</p>
         <div class="cta-actions">
-            <a href="tel:+17804469842" class="btn-light">Call 780-446-9842 <span class="ar" aria-hidden="true">→</span></a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=20131+Township+Road+500%2C+Camrose+County%2C+Alberta+T0B+2M1" target="_blank" rel="noopener" class="btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+            <a href="tel:+17804469842" class="btn-light">Call or text 780-446-9842 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="request.html" class="btn-line">Request form</a>
         </div>
     </div>
 </section>
+
 <footer class="footer">
     <div class="wrap">
         <div class="footer-top">
             <div>
-                <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M10 28 C10 20 18 16 24 18 C30 12 40 14 40 22 C40 30 32 34 24 32 C18 36 10 34 10 28 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="33" cy="22" r="1.6" fill="currentColor"/></svg></span><span class="brand-name">Bluebird RV Park<span class="brand-sub">A 50+ Community · Camrose County</span></span></div>
-                <p class="footer-intro">A quiet 50+ seasonal RV community on 15 private acres in Camrose County — 40 minutes southeast of Edmonton.</p>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><img src="logo.webp" alt="" width="42" height="42" /></span>
+                    <span class="brand-name">Bluebird RV Park<span class="brand-sub">A 50+ Community · Camrose County</span></span>
+                </div>
+                <p class="footer-intro">A quiet, gated 50+ seasonal RV community on 15 private acres in Camrose County, Alberta — 40 minutes southeast of Edmonton.</p>
             </div>
-            <div class="footer-col"><h5>Contact</h5><a href="tel:+17804469842">780-446-9842</a><p>20131 Township Road 500<br />Camrose County, Alberta T0B 2M1</p><p>Ask for Mike or Dawn</p></div>
-            <div class="footer-col"><h5>Season</h5><p>Regular: May 1 – October 1</p><p>Extended: April 15 – October 15</p><a href="#sites">Sites &amp; rates</a><a href="#nest">The Birds Nest</a></div>
+            <div class="footer-col">
+                <h5>Visit</h5>
+                <a href="amenities.html">Amenities</a>
+                <a href="rates.html">Rates</a>
+                <a href="photos.html">Photos</a>
+                <a href="location.html">Location</a>
+                <a href="request.html">Request a spot</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17804469842">780-446-9842 (call or text)</a>
+                <p>20131 Township Road 500<br />Camrose County, AB T0B 2M1</p>
+                <p>Ask for Mike or Dawn</p>
+            </div>
         </div>
         <div class="footer-map-head">
             <h5>Find us — Camrose County, Alberta</h5>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=20131+Township+Road+500%2C+Camrose+County%2C+Alberta+T0B+2M1" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=20131+Township+Road+500%2C+Camrose+County%2C+Alberta+T0B+2M1" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
         </div>
-        <div class="footer-map"><iframe title="Map to Bluebird RV Park, Camrose County, Alberta" src="https://www.google.com/maps?q=20131+Township+Road+500,+Camrose+County,+Alberta+T0B+2M1&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="footer-bottom"><span>© 2026 Bluebird RV Park · A 50+ Community · Camrose County, Alberta</span><span><a href="tel:+17804469842">780-446-9842</a></span></div>
+        <div class="footer-map"><iframe title="Map to Bluebird RV Park, Camrose County, Alberta" src="https://www.google.com/maps?q=20131+Township+Road+500,+Camrose+County,+Alberta+T0B+2M1&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Bluebird RV Park · A 50+ Community · Camrose County, Alberta</span>
+            <span><a href="tel:+17804469842">780-446-9842</a></span>
+        </div>
     </div>
 </footer>
-<script>
-    var nav=document.getElementById('nav');
-    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
-    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
-    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-    var secs=['about','sites','nest','know'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
-</script>
+
+<script src="app.js"></script>
 </body>
 </html>
