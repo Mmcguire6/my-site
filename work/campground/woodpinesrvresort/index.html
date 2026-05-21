@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wood Pines RV Resort — A family-owned, gated RV resort near Pigeon Lake</title>
+<meta name="description" content="Wood Pines RV Resort is a family-owned, gated RV resort on 160 acres of pines near Pigeon Lake, Alberta. Fully serviced lots available for seasonal stays and 35-year leases — heated saltwater pool, 8 km of private forest trails, and your own little piece of heaven." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Wood Pines RV Resort — Pigeon Lake, Alberta" />
+<meta property="og:description" content="Rooted in nature, built for belonging. A family-owned, gated RV resort on 160 acres of pines — fully serviced lots, seasonal &amp; 35-year leases, near Pigeon Lake." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+    :root{
+        --paper:#F2EEDF;
+        --paper-soft:#E5DEC7;
+        --paper-deep:#D2C8A8;
+        --ink:#1B2519;
+        --ink-2:#3C4A33;
+        --ink-3:#6E7960;
+        --pine:#2D5238;
+        --pine-deep:#0F1F16;
+        --moss:#7A9171;
+        --cedar:#B9742F;
+        --cedar-soft:#D69254;
+        --cedar-deep:#7D4912;
+        --rule:#C7BD9F;
+        --rule-soft:#D7CDAE;
+        --white:#FBF9EF;
+        --shadow:0 26px 60px -28px rgba(15,31,22,.40);
+        --shadow-soft:0 14px 32px -18px rgba(15,31,22,.30);
+        --shadow-card:0 1px 0 rgba(15,31,22,.04), 0 16px 36px -20px rgba(15,31,22,.24);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.015em;color:var(--ink)}
+    em{font-style:italic;color:var(--cedar-deep);font-weight:500}
+    .wrap{width:min(1240px,92vw);margin:0 auto}
+    a{color:inherit;text-decoration:none}
+    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cedar);display:inline-flex;align-items:center;gap:12px}
+    .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--cedar);display:inline-block}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;transition:background .3s,box-shadow .3s,padding .3s}
+    .nav.scrolled{background:rgba(242,238,223,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:14px 0}
+    .nav.scrolled .brand-mark{color:var(--pine)}
+    .nav.scrolled .brand-name{color:var(--ink)}
+    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
+    .nav.scrolled .nav-link{color:var(--ink-2)}
+    .nav.scrolled .nav-toggle span{background:var(--ink)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-mark{width:44px;height:44px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+    .brand:hover .brand-mark{transform:translateY(-2px)}
+    .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.26rem;line-height:1;color:var(--white);letter-spacing:-.01em}
+    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(251,249,239,.7);margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-link{font-size:.88rem;font-weight:500;color:rgba(251,249,239,.9);white-space:nowrap;position:relative;transition:color .24s}
+    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:1.5px;background:var(--cedar-soft);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+    .nav-link:hover,.nav-link.active{color:var(--cedar-soft)}
+    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--cedar)}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
+    .nav-cta{font-size:.86rem;font-weight:600;background:var(--cedar);color:var(--white);padding:13px 22px;border-radius:12px;white-space:nowrap;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .24s;box-shadow:0 10px 22px -10px rgba(185,116,47,.6)}
+    .nav-cta:hover{transform:translateY(-2px);background:#a0631e}
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
+    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
+    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
+    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
+
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 0 160px;overflow:hidden;background:var(--pine-deep)}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(15,31,22,.75) 0%,rgba(15,31,22,.50) 38%,rgba(15,31,22,.30) 70%,rgba(15,31,22,.15) 100%)}
+    .hero-inner{position:relative;z-index:2;max-width:780px;color:var(--white)}
+    .hero .eyebrow{color:var(--cedar-soft)}.hero .eyebrow::before{background:var(--cedar-soft)}
+    .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);font-weight:500;color:var(--white);margin:24px 0 26px;letter-spacing:-.025em;line-height:1.08;font-family:'Fraunces',serif}
+    .hero h1 em{color:var(--cedar-soft);font-weight:500}
+    .hero-lede{font-size:clamp(1.06rem,1.4vw,1.22rem);color:rgba(251,249,239,.92);max-width:600px;margin-bottom:38px;line-height:1.75}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .btn-primary{font-size:.98rem;font-weight:600;background:var(--cedar);color:var(--white);padding:18px 32px;border-radius:12px;display:inline-flex;align-items:center;gap:11px;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .24s;box-shadow:0 14px 28px -12px rgba(185,116,47,.65)}
+    .btn-primary:hover{transform:translateY(-3px);background:#a0631e;box-shadow:0 20px 36px -12px rgba(185,116,47,.75)}
+    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-primary:hover .ar{transform:translateX(5px)}
+    .btn-white{font-size:.98rem;font-weight:500;color:var(--white);padding:18px 28px;border-radius:12px;background:rgba(251,249,239,.10);border:1.5px solid rgba(251,249,239,.4);backdrop-filter:blur(6px);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .25s cubic-bezier(.2,.7,.2,1)}
+    .btn-white:hover{background:rgba(251,249,239,.18);border-color:var(--white);transform:translateY(-3px)}
+    .hero-tagline{margin-top:42px;font-family:'Fraunces',serif;font-style:italic;font-size:1.04rem;color:rgba(251,249,239,.82);max-width:540px;line-height:1.5;padding-left:20px;border-left:2px solid var(--cedar)}
+
+    .facts{background:var(--paper);border-bottom:1px solid var(--rule-soft)}
+    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .fact{padding:52px 30px;text-align:center;border-right:1px solid var(--rule-soft)}
+    .fact:last-child{border-right:0}
+    .fact-n{font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;color:var(--pine);line-height:1.05;letter-spacing:-.01em}
+    .fact-label{font-size:.84rem;font-weight:500;color:var(--ink-3);margin-top:12px}
+
+    .section{padding:130px 0}
+    .section-head{max-width:740px;margin-bottom:60px}
+    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.4rem);margin:18px 0 18px;font-weight:500;letter-spacing:-.02em}
+    .section-head p{font-size:1.08rem;color:var(--ink-2);max-width:640px;line-height:1.75}
+
+    .about{background:var(--paper-soft)}
+    .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:78px;align-items:center}
+    .about-fig{position:relative}
+    .about-fig-frame{aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
+    .about-fig-frame img{width:100%;height:100%;object-fit:cover}
+    .about-fig-badge{position:absolute;right:-22px;bottom:-22px;background:var(--pine);color:var(--white);padding:22px 26px;border-radius:12px;box-shadow:var(--shadow-soft);max-width:240px}
+    .about-fig-badge .b-n{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;line-height:1.1;color:var(--cedar-soft)}
+    .about-fig-badge .b-l{font-size:.82rem;margin-top:6px;color:rgba(251,249,239,.85);line-height:1.5}
+    .about-copy h2{font-size:clamp(2rem,4vw,3.1rem);margin:18px 0 22px;font-weight:500;letter-spacing:-.02em}
+    .about-copy p{font-size:1.06rem;color:var(--ink-2);margin-bottom:18px;line-height:1.8}
+    .about-copy p strong{color:var(--ink);font-weight:600}
+    .about-family{margin-top:32px;padding:22px 26px;background:var(--white);border:1px solid var(--rule-soft);border-radius:12px;display:flex;align-items:center;gap:18px}
+    .about-family svg{flex:none;width:42px;height:42px;color:var(--cedar);background:var(--paper);padding:9px;border-radius:10px;box-sizing:content-box}
+    .about-family-txt{font-size:.95rem;color:var(--ink-2);line-height:1.55}
+    .about-family-txt b{display:block;font-family:'Fraunces',serif;font-size:1.04rem;color:var(--ink);font-weight:600;margin-bottom:2px}
+
+    .lots{background:var(--paper)}
+    .lots-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:56px}
+    .lot-card{background:var(--white);border:1px solid var(--rule-soft);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-soft);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .25s;display:flex;flex-direction:column}
+    .lot-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--cedar-soft)}
+    .lot-img{aspect-ratio:5/3;overflow:hidden}
+    .lot-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+    .lot-card:hover .lot-img img{transform:scale(1.05)}
+    .lot-body{padding:32px 32px 34px;flex:1;display:flex;flex-direction:column}
+    .lot-tag{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cedar);margin-bottom:6px}
+    .lot-card h3{font-size:1.5rem;margin-bottom:12px;font-weight:500}
+    .lot-card h3 em{color:var(--cedar);font-weight:500}
+    .lot-card p{font-size:.98rem;color:var(--ink-2);line-height:1.65;margin-bottom:16px;flex:1}
+    .lot-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px}
+    .lot-card li{font-size:.92rem;color:var(--ink-2);display:flex;align-items:flex-start;gap:10px}
+    .lot-card li svg{width:18px;height:18px;color:var(--cedar);flex:none;margin-top:3px}
+    .lots-note{margin-top:30px;font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--ink-2);padding-left:18px;border-left:3px solid var(--cedar);max-width:780px;line-height:1.6}
+
+    .amen{background:var(--paper-soft)}
+    .amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);border-radius:12px;overflow:hidden;margin-top:56px}
+    .amen-cell{background:var(--paper);padding:42px 36px;transition:background .36s}
+    .amen-cell:hover{background:var(--white)}
+    .amen-ico{width:52px;height:52px;border-radius:12px;background:rgba(45,82,56,.10);color:var(--pine);display:grid;place-items:center;margin-bottom:20px;transition:transform .4s cubic-bezier(.2,.7,.2,1),background .36s,color .36s}
+    .amen-cell:hover .amen-ico{transform:translateY(-3px) rotate(-4deg);background:var(--cedar);color:var(--white)}
+    .amen-ico svg{width:26px;height:26px}
+    .amen-cell h4{font-size:1.14rem;margin-bottom:8px;font-family:'Fraunces',serif;font-weight:500;color:var(--ink)}
+    .amen-cell .coming{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cedar);background:rgba(185,116,47,.12);padding:3px 9px;border-radius:6px;margin-left:8px;vertical-align:middle;transform:translateY(-3px)}
+    .amen-cell p{font-size:.94rem;color:var(--ink-2);line-height:1.6}
+
+    .pool{background:var(--white)}
+    .pool-wrap{position:relative;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow);background:var(--pine-deep)}
+    .pool-photo{position:relative;overflow:hidden;min-height:480px}
+    .pool-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+    .pool-wrap:hover .pool-photo img{transform:scale(1.05)}
+    .pool-copy{color:var(--white);padding:72px 64px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;background:var(--pine-deep)}
+    .pool-copy::before{content:"";position:absolute;top:-40%;right:-30%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(214,146,84,.18) 0%,transparent 70%)}
+    .pool-copy *{position:relative;z-index:1}
+    .pool-copy .eyebrow{color:var(--cedar-soft)}.pool-copy .eyebrow::before{background:var(--cedar-soft)}
+    .pool-copy h3{font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--white);margin:18px 0 18px;font-weight:500;letter-spacing:-.02em}
+    .pool-copy h3 em{color:var(--cedar-soft);font-weight:500}
+    .pool-copy p{font-size:1.05rem;color:rgba(251,249,239,.86);line-height:1.7;margin-bottom:14px}
+
+    .area{background:var(--paper)}
+    .area-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:76px;align-items:center}
+    .area-fig{aspect-ratio:4/3;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);position:relative;order:2}
+    .area-fig img{width:100%;height:100%;object-fit:cover}
+    .area-fig-cap{position:absolute;bottom:18px;left:18px;background:rgba(15,31,22,.78);color:var(--white);padding:10px 16px;border-radius:8px;font-size:.82rem;font-weight:500;backdrop-filter:blur(4px)}
+    .area-copy h3{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:500;margin-bottom:16px;letter-spacing:-.02em}
+    .area-copy h3 em{color:var(--cedar);font-weight:500}
+    .area-copy p{font-size:1.06rem;color:var(--ink-2);margin-bottom:14px;line-height:1.75}
+    .area-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:24px}
+    .area-list li{display:flex;align-items:flex-start;gap:12px;font-size:.98rem;color:var(--ink-2)}
+    .area-list li svg{width:20px;height:20px;color:var(--cedar);flex:none;margin-top:2px}
+
+    .map-sec{background:var(--paper-soft)}
+    .map-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;margin-top:56px}
+    .map-frame{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--rule-soft);background:var(--white)}
+    .map-frame img{width:100%;display:block}
+    .map-copy h3{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:500;margin-bottom:14px;letter-spacing:-.015em}
+    .map-copy h3 em{color:var(--cedar);font-weight:500}
+    .map-copy p{font-size:1.04rem;color:var(--ink-2);margin-bottom:18px;line-height:1.75}
+    .map-dl{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600;color:var(--white);background:var(--pine);padding:14px 24px;border-radius:12px;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .22s}
+    .map-dl:hover{transform:translateY(-2px);background:#1f3a27}
+
+    .cta{background:linear-gradient(135deg,var(--pine-deep) 0%,var(--pine) 50%,#3d6a47 100%);color:var(--white);padding:120px 0;text-align:center;position:relative;overflow:hidden}
+    .cta::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(214,146,84,.20) 0%,transparent 70%);filter:blur(40px);top:-200px;right:-160px}
+    .cta::after{content:"";position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(122,145,113,.22) 0%,transparent 70%);filter:blur(40px);bottom:-160px;left:-120px}
+    .cta .wrap{position:relative;z-index:1}
+    .cta h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin-bottom:18px;color:var(--white);font-weight:500;letter-spacing:-.02em;font-family:'Fraunces',serif}
+    .cta h2 em{color:var(--cedar-soft);font-weight:500}
+    .cta p{font-size:1.1rem;color:rgba(251,249,239,.88);max-width:560px;margin:0 auto 36px;line-height:1.7}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-light{background:var(--cedar);color:var(--white);font-size:1rem;font-weight:600;padding:18px 32px;border-radius:12px;display:inline-flex;align-items:center;gap:11px;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .24s;box-shadow:0 18px 36px -16px rgba(185,116,47,.7)}
+    .btn-light:hover{transform:translateY(-3px);background:#a0631e}
+    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+    .btn-light:hover .ar{transform:translateX(5px)}
+    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:500;color:var(--white);padding:18px 28px;border-radius:12px;border:1.5px solid rgba(251,249,239,.45);transition:background .24s,border-color .24s,transform .25s cubic-bezier(.2,.7,.2,1)}
+    .btn-line:hover{background:rgba(251,249,239,.12);border-color:var(--white);transform:translateY(-3px)}
+
+    .footer{background:var(--ink);color:rgba(251,249,239,.72);padding:96px 0 36px}
+    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:48px;border-bottom:1px solid rgba(251,249,239,.1)}
+    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--cedar-soft)}
+    .footer .brand-name .brand-sub{color:rgba(251,249,239,.5)}
+    .footer-intro{margin-top:22px;font-size:.96rem;max-width:360px;line-height:1.75}
+    .footer-social{display:flex;gap:10px;margin-top:22px}
+    .footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600;color:rgba(251,249,239,.86);border:1px solid rgba(251,249,239,.22);padding:10px 16px;border-radius:12px;transition:all .22s ease}
+    .footer-social a:hover{color:var(--white);border-color:var(--cedar-soft);background:rgba(214,146,84,.14);transform:translateY(-2px)}
+    .footer-social svg{color:var(--cedar-soft);width:16px;height:16px}
+    .footer-col h5{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
+    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(251,249,239,.72);margin-bottom:13px;transition:color .22s}
+    .footer-col a:hover{color:var(--cedar-soft)}
+    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
+    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--white)}
+    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--ink);background:var(--cedar-soft);padding:11px 20px;border-radius:12px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
+    .footer-dir:hover{transform:translateY(-2px);background:var(--white)}
+    .footer-map{margin:0 0 36px;border-radius:12px;overflow:hidden;border:1px solid rgba(251,249,239,.12);height:300px}
+    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.4) contrast(.95)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.82rem;color:rgba(251,249,239,.5);padding-top:18px}
+    .footer-bottom a{color:rgba(251,249,239,.66)}
+
+    .reveal{opacity:0;transform:translateY(34px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+    .reveal.left{transform:translateX(-40px)}.reveal.right{transform:translateX(40px)}
+    .reveal.in{opacity:1;transform:none}
+
+    @media(max-width:1100px){
+        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(15,31,22,.4)}
+        .nav-links.open{transform:translateX(0)}
+        .nav-link{font-size:1.05rem;color:var(--ink-2)}
+        .nav-toggle{display:block;z-index:101}
+        .nav-toggle.open span{background:var(--ink) !important}
+        .about-grid,.lots-grid,.pool-wrap,.area-grid,.map-layout,.footer-top{grid-template-columns:1fr}
+        .area-fig{order:0}
+        .facts-grid{grid-template-columns:1fr 1fr}
+        .amen-grid{grid-template-columns:1fr 1fr}
+        .pool-photo{min-height:340px}
+        .pool-copy{padding:52px 44px}
+        .about-fig-badge{right:0}
+    }
+    @media(max-width:620px){
+        .facts-grid,.amen-grid{grid-template-columns:1fr}
+        .fact{border-right:0;border-bottom:1px solid var(--rule-soft)}
+        .section{padding:88px 0}
+        .hero{padding:140px 0 100px}
+        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
+        .btn-primary,.btn-white{justify-content:center}
+        .pool-copy{padding:42px 30px}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a href="#top" class="brand" aria-label="Wood Pines RV Resort home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" width="44" height="44">
+                    <path d="M24 5 L31 18 L26 18 L33 30 L28 30 L36 42 H12 L20 30 L15 30 L22 18 L17 18 Z" fill="currentColor" opacity=".25"/>
+                    <path d="M24 5 L31 18 L26 18 L33 30 L28 30 L36 42 H12 L20 30 L15 30 L22 18 L17 18 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="brand-name">Wood Pines<span class="brand-sub">RV Resort · Pigeon Lake</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#lots" class="nav-link">Lots &amp; Leases</a>
+            <a href="#amen" class="nav-link">Amenities</a>
+            <a href="#area" class="nav-link">The Area</a>
+            <a href="#map" class="nav-link">Park Map</a>
+            <a href="tel:+17809754401" class="nav-cta">Book a tour</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <div class="hero-bg"><img src="img/hero.jpg" alt="An RV on a treed lot among mature aspens at Wood Pines RV Resort" /></div>
+    <div class="wrap hero-inner">
+        <span class="eyebrow">Near Pigeon Lake, Alberta · 160 acres of pines</span>
+        <h1>Rooted in nature,<br />built for <em>belonging.</em></h1>
+        <p class="hero-lede">Wood Pines is a family-owned, gated RV resort on 160 acres of mature pines near Pigeon Lake. Fully serviced lots, a heated saltwater pool and 8 km of private forest trails — available for seasonal stays and 35-year leases.</p>
+        <div class="hero-ctas">
+            <a href="tel:+17809754401" class="btn-primary">Book a tour <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#lots" class="btn-white">Lots &amp; leases</a>
+        </div>
+        <p class="hero-tagline">Your own little piece of heaven — no more storage fees or weekend searching for a spot.</p>
+    </div>
+</header>
+
+<section class="facts">
+    <div class="wrap"><div class="facts-grid">
+        <div class="fact"><div class="fact-n">160&nbsp;ac</div><div class="fact-label">Of mature pines, gated</div></div>
+        <div class="fact"><div class="fact-n">35&nbsp;yr</div><div class="fact-label">Lease terms available</div></div>
+        <div class="fact"><div class="fact-n">8&nbsp;km</div><div class="fact-label">Private forest trails</div></div>
+        <div class="fact"><div class="fact-n">20&nbsp;min</div><div class="fact-label">To Pigeon Lake Village</div></div>
+    </div></div>
+</section>
+
+<section class="section about" id="about">
+    <div class="wrap about-grid">
+        <div class="about-fig reveal left">
+            <div class="about-fig-frame"><img src="img/about.jpg" alt="The Wood Pines clubhouse and grounds in summer" /></div>
+            <div class="about-fig-badge"><div class="b-n">Family owned &amp; operated</div><div class="b-l">A gated resort, run by the family.</div></div>
+        </div>
+        <div class="about-copy reveal right">
+            <span class="eyebrow">About Wood Pines</span>
+            <h2>A family-owned resort on <em>160 acres of pines.</em></h2>
+            <p>Wood Pines is a <strong>family-owned and operated, gated RV resort</strong> set on 160 acres of mature pine trees near Pigeon Lake. We built it as a solution to affordable vacationing right here close to home — your own little piece of heaven, with no more storage fees or driving around looking for a spot.</p>
+            <p>Large, fully serviced lots are available for seasonal stays and 35-year leases. The community is family-oriented and pet-friendly, with everything you need on site and the lake village just twenty minutes away.</p>
+            <div class="about-family">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4-7-10a4 4 0 017-2 4 4 0 017 2c0 6-7 10-7 10z"/></svg>
+                <span class="about-family-txt"><b>Denise, Woodrow, Neil &amp; Crystal</b>The Wood Pines family — running the resort, year after year.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section lots" id="lots">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Lots &amp; leases</span>
+            <h2>Two ways to make it <em>your spot.</em></h2>
+            <p>Large, fully serviced sites among the pines — for the season, or for the long run.</p>
+        </div>
+        <div class="lots-grid">
+            <article class="lot-card reveal left">
+                <div class="lot-img"><img src="img/sites-1.jpg" alt="A treed lot with a fifth-wheel and outdoor lounge at Wood Pines RV Resort" /></div>
+                <div class="lot-body">
+                    <span class="lot-tag">Seasonal</span>
+                    <h3>Seasonal <em>stays.</em></h3>
+                    <p>Fully serviced lots available for the season — settle in for the summer with everything you need right here.</p>
+                    <ul>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Fully serviced — power, water, sewer</li>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Large lots in mature pine forest</li>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Full access to pool, trails &amp; amenities</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="lot-card reveal right">
+                <div class="lot-img"><img src="img/sites-2.jpg" alt="A forest road winding past RV lots at Wood Pines RV Resort" /></div>
+                <div class="lot-body">
+                    <span class="lot-tag">35-year lease</span>
+                    <h3>Long-term <em>leases.</em></h3>
+                    <p>Your own little piece of heaven for the long run — affordable vacationing, close to home, no more storage fees or weekend searching.</p>
+                    <ul>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>35-year lease terms</li>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Large, fully serviced lots</li>
+                        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="4 10 9 14 16 6"/></svg>Family-oriented, pet-friendly community</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <p class="lots-note">Pricing depends on lot and lease term. Call (780) 975-4401 or email sales@woodpinesrvresort.com to ask about availability and to book a tour of the resort.</p>
+    </div>
+</section>
+
+<section class="section amen" id="amen">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Amenities</span>
+            <h2>What's <em>on site.</em></h2>
+            <p>A gated resort built for spending time outside — pool to forest trails, with a few more things on the way.</p>
+        </div>
+        <div class="amen-grid">
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16s2-2 4-2 4 2 8 2 4-2 4-2M4 11s2-2 4-2 4 2 8 2 4-2 4-2"/><circle cx="12" cy="5" r="2"/></svg></div><h4>Heated saltwater pool</h4><p>A heated, in-ground saltwater pool right on the resort grounds.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18s3-8 8-8 8 8 8 8"/><path d="M8 14l2-4 4 1"/></svg></div><h4>8 km of forest trails</h4><p>Eight kilometres of private forest trails to walk, ride and explore.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/><path d="M3 11h2M19 11h2M9 21v-7h6v7"/></svg></div><h4>Gated community</h4><p>A gated resort — private, quiet, and watched after by the family.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v6M12 3v6M17 3v6M5 9h14l-1 12H6L5 9z"/></svg></div><h4>Restrooms with showers</h4><p>Clean restroom and shower facilities on the grounds.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="16" cy="7" r="1"/></svg></div><h4>Laundromat</h4><p>On-site laundromat so you can pack lighter and stay longer.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 20v-6M5 14c4-3 10-3 14 0M5 14V8c4-3 10-3 14 0v6M19 20v-6"/></svg></div><h4>Kids playground</h4><p>A playground for the kids — built right into a family-oriented, pet-friendly community.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h16l-1 11H5L4 9z"/><path d="M9 9V6a3 3 0 016 0v3"/></svg></div><h4>Convenience store <span class="coming">Coming</span></h4><p>An on-site convenience store is under development for everyday essentials.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 21c4-3 10-3 14 0M12 5v12"/><circle cx="12" cy="5" r="2"/></svg></div><h4>Mini golf <span class="coming">Coming soon</span></h4><p>A mini-golf course is on the way — another reason for the kids to come back.</p></div>
+            <div class="amen-cell reveal"><div class="amen-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div><h4>Family-oriented &amp; pet-friendly</h4><p>Quiet, family-oriented, pet-friendly — the kind of community where neighbours wave.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="pool">
+    <div class="wrap">
+        <div class="pool-wrap reveal">
+            <div class="pool-photo"><img src="img/pool.jpg" alt="The heated saltwater pool and clubhouse at Wood Pines RV Resort" /></div>
+            <div class="pool-copy">
+                <span class="eyebrow">Heated saltwater pool</span>
+                <h3>The grown-ups' favourite <em>amenity.</em></h3>
+                <p>A heated, in-ground saltwater pool, right in front of the clubhouse — for after-supper laps, lazy afternoons, and the kind of summer evenings you remember years later.</p>
+                <p>Set into manicured lawn surrounded by mature pines: quiet, sun-warmed, and a short walk from any lot in the resort.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section area" id="area">
+    <div class="wrap area-grid">
+        <div class="area-copy reveal left">
+            <span class="eyebrow">The area</span>
+            <h3>Twenty minutes from <em>Pigeon Lake.</em></h3>
+            <p>Wood Pines sits in Wetaskiwin County, less than half an hour from Pigeon Lake Village and the lake itself — close enough for a morning at the water, back for an afternoon at the pool.</p>
+            <ul class="area-list">
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 16s2-2 4-2 4 2 8 2 4-2 4-2"/></svg>Pigeon Lake Village &amp; the lake — 20 minutes</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="10" cy="10" r="6"/><path d="M10 4v3M10 13v3M4 10h3M13 10h3"/></svg>Four golf courses within 20 km</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/></svg>Local shooting range</li>
+                <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 3h8l-1 6h-6z"/><path d="M6 9c-2 2-3 5-3 8a4 4 0 008 0c0-3-1-6-3-8"/></svg>Nearby whiskey brewery &amp; other local businesses</li>
+            </ul>
+        </div>
+        <div class="area-fig reveal right"><img src="img/gate.jpg" alt="The gated entrance at Wood Pines RV Resort, surrounded by pines and farmland" /><span class="area-fig-cap">The Wood Pines gate</span></div>
+    </div>
+</section>
+
+<section class="section map-sec" id="map">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Park map</span>
+            <h2>Find your <em>spot in the pines.</em></h2>
+        </div>
+        <div class="map-layout">
+            <div class="map-frame reveal left"><img src="img/park-map.jpg" alt="The Wood Pines RV Resort site map showing lots and amenities" /></div>
+            <div class="map-copy reveal right">
+                <h3>Plan your <em>tour.</em></h3>
+                <p>The current resort map shows lot numbers, the pool and clubhouse, the trail system and the gated entrance. Use it to picture where you'd like to be — then call us and we'll walk you through what's available.</p>
+                <a href="img/park-map.jpg" target="_blank" rel="noopener" class="map-dl">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="17" height="17"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+                    Open the full park map
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="wrap">
+        <h2>Come walk it with <em>the family.</em></h2>
+        <p>Book a tour to see the lots and the amenities in person — the family will show you around. There's no obligation, just a good walk through the pines.</p>
+        <div class="cta-actions">
+            <a href="tel:+17809754401" class="btn-light">Call (780) 975-4401 <span class="ar" aria-hidden="true">→</span></a>
+            <a href="mailto:sales@woodpinesrvresort.com" class="btn-line">Email sales@woodpinesrvresort.com</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="42" height="42"><path d="M24 5 L31 18 L26 18 L33 30 L28 30 L36 42 H12 L20 30 L15 30 L22 18 L17 18 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+                    <span class="brand-name">Wood Pines<span class="brand-sub">RV Resort · Pigeon Lake</span></span>
+                </div>
+                <p class="footer-intro">A family-owned, gated RV resort on 160 acres of mature pines near Pigeon Lake, Alberta — seasonal and 35-year lease lots, heated saltwater pool, 8 km of forest trails.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/woodpinesrvresort" target="_blank" rel="noopener" aria-label="Wood Pines on Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/woodpinesrvresort/" target="_blank" rel="noopener" aria-label="Wood Pines on Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+17809754401">(780) 975-4401</a>
+                <a href="mailto:sales@woodpinesrvresort.com">sales@woodpinesrvresort.com</a>
+                <p>472044A Range Road 23<br />Wetaskiwin County, Alberta</p>
+            </div>
+            <div class="footer-col">
+                <h5>The resort</h5>
+                <a href="#about">About Wood Pines</a>
+                <a href="#lots">Lots &amp; leases</a>
+                <a href="#amen">Amenities</a>
+                <a href="#area">The area</a>
+                <a href="#map">Park map</a>
+            </div>
+        </div>
+        <div class="footer-map-head">
+            <h5>Find us — Wetaskiwin County, near Pigeon Lake</h5>
+            <a href="https://g.page/WoodPinesRVResort?share" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get directions
+            </a>
+        </div>
+        <div class="footer-map"><iframe title="Map to Wood Pines RV Resort, Wetaskiwin County, Alberta" src="https://www.google.com/maps?q=Wood+Pines+RV+Resort,+Wetaskiwin+County,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footer-bottom">
+            <span>© 2026 Wood Pines RV Resort · Wetaskiwin County, Alberta · Proudly Canadian</span>
+            <span><a href="tel:+17809754401">(780) 975-4401</a></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var secs=['about','lots','amen','area','map'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
+</script>
+
+</body>
+</html>
