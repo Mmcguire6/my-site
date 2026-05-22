@@ -3,419 +3,396 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>St. Albert Kinsmen RV Park — A full-service premier RV park</title>
-<meta name="description" content="St. Albert Kinsmen RV Park is a 93-stall, full-service premier RV park run by the Kinsmen Club of St. Albert — large 50-amp sites, manicured grounds, trails and nature viewing, minutes from Edmonton." />
-
+<title>St. Albert Kinsmen RV Park — A full-service premier RV park in the Capital Region</title>
+<meta name="description" content="St. Albert Kinsmen RV Park is a 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert — large 50 amp sites, manicured grounds, scenic trails and nature viewing, minutes from Edmonton." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="St. Albert Kinsmen RV Park" />
-<meta property="og:description" content="A 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert — large 50-amp sites, trails and quiet green space, minutes from Edmonton." />
-
+<meta property="og:description" content="A 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert. Large 50 amp sites, quiet green space, 15 minutes south to West Edmonton Mall." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-<style>
-    :root {
-        --paper:       #F2F0E6;
-        --paper-soft:  #E7E3D2;
-        --paper-deep:  #D7D1B9;
-        --ink:         #20271F;
-        --ink-2:       #404A3C;
-        --ink-3:       #717A6A;
-        --forest:      #2B4B33;
-        --forest-deep: #16271A;
-        --sage:        #88997C;
-        --clay:        #B0653C;
-        --clay-soft:   #CC8254;
-        --rule:        #C8C0A4;
-        --rule-soft:   #D8D0B6;
-        --white:       #FBFAF1;
-        --shadow:      0 26px 60px -30px rgba(22,30,20,.42);
-        --shadow-soft: 0 15px 36px -22px rgba(22,30,20,.32);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
-    em { font-style: italic; }
-    .wrap { width: min(1240px, 92vw); margin: 0 auto; }
-    a { color: inherit; text-decoration: none; }
-    .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--clay); display: inline-flex; align-items: center; gap: 12px; }
-    .eyebrow::before { content: ""; width: 30px; height: 1.5px; background: var(--clay); display: inline-block; }
-
-    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 26px 0; transition: background 360ms ease, box-shadow 360ms ease, padding 360ms ease; }
-    .nav.scrolled { background: rgba(242,240,230,.94); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--rule-soft); padding: 16px 0; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-    .brand { display: flex; align-items: center; gap: 13px; }
-    .brand-mark { width: 40px; height: 40px; flex: none; display: grid; place-items: center; color: var(--white); transition: transform 400ms cubic-bezier(.2,.7,.2,1); }
-    .nav.scrolled .brand-mark { color: var(--forest); }
-    .brand:hover .brand-mark { transform: scale(1.08); }
-    .brand-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.28rem; line-height: 1; color: var(--white); }
-    .nav.scrolled .brand-name { color: var(--ink); }
-    .brand-name .brand-sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(251,250,241,.66); margin-top: 5px; }
-    .nav.scrolled .brand-name .brand-sub { color: var(--ink-3); }
-    .nav-links { display: flex; align-items: center; gap: 30px; }
-    .nav-link { font-size: 0.86rem; font-weight: 500; position: relative; color: rgba(251,250,241,.88); white-space: nowrap; transition: color 240ms ease; }
-    .nav.scrolled .nav-link { color: var(--ink-2); }
-    .nav-link::after { content: ""; position: absolute; left: 0; bottom: -7px; width: 100%; height: 2px; background: var(--clay); transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
-    .nav-link:hover, .nav-link.active { color: var(--clay-soft); }
-    .nav.scrolled .nav-link:hover, .nav.scrolled .nav-link.active { color: var(--clay); }
-    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
-    .nav-cta { font-size: 0.84rem; font-weight: 600; background: var(--clay); color: var(--white); padding: 12px 22px; border-radius: 100px; white-space: nowrap; transition: transform 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms ease, background 240ms ease; box-shadow: 0 10px 22px -12px rgba(176,101,60,.7); }
-    .nav-cta:hover { transform: translateY(-2px); background: #9c5734; box-shadow: 0 16px 28px -12px rgba(176,101,60,.8); }
-    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 30px; height: 22px; position: relative; }
-    .nav-toggle span { position: absolute; left: 0; width: 100%; height: 2.5px; background: var(--white); border-radius: 2px; transition: all 280ms cubic-bezier(.2,.7,.2,1); }
-    .nav.scrolled .nav-toggle span { background: var(--ink); }
-    .nav-toggle span:nth-child(1) { top: 0; } .nav-toggle span:nth-child(2) { top: 9.5px; } .nav-toggle span:nth-child(3) { top: 19px; }
-    .nav-toggle.open span:nth-child(1) { top: 9.5px; transform: rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { top: 9.5px; transform: rotate(-45deg); }
-
-    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 150px 0 160px; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; z-index: 0; }
-    .hero-bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); }
-    .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,30,18,.58) 0%, rgba(20,30,18,.40) 40%, rgba(20,30,18,.74) 100%); }
-    .hero-inner { position: relative; z-index: 2; color: var(--white); max-width: 880px; }
-    .hero .eyebrow { color: var(--clay-soft); } .hero .eyebrow::before { background: var(--clay-soft); }
-    .hero h1 { font-size: clamp(2.8rem, 6.6vw, 5.4rem); font-weight: 600; color: var(--white); margin: 26px 0 22px; letter-spacing: -0.02em; }
-    .hero h1 em { color: var(--clay-soft); font-weight: 500; }
-    .hero-lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: rgba(251,250,241,.92); max-width: 620px; margin-bottom: 38px; }
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-    .btn-primary { font-size: 0.95rem; font-weight: 600; background: var(--clay); color: var(--white); padding: 17px 34px; border-radius: 100px; display: inline-flex; align-items: center; gap: 11px; transition: transform 260ms cubic-bezier(.2,.7,.2,1), box-shadow 260ms ease, background 240ms ease; box-shadow: 0 16px 34px -16px rgba(176,101,60,.8); }
-    .btn-primary:hover { transform: translateY(-3px); background: #9c5734; box-shadow: 0 22px 42px -16px rgba(176,101,60,.9); }
-    .btn-primary .ar { transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
-    .btn-primary:hover .ar { transform: translateX(5px); }
-    .btn-ghost { font-size: 0.95rem; font-weight: 600; color: var(--white); padding: 17px 30px; border-radius: 100px; border: 1.5px solid rgba(251,250,241,.45); display: inline-flex; align-items: center; gap: 10px; transition: background 240ms ease, border-color 240ms ease, transform 260ms cubic-bezier(.2,.7,.2,1); }
-    .btn-ghost:hover { background: rgba(251,250,241,.12); border-color: var(--white); transform: translateY(-3px); }
-    .hero-pills { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 42px; }
-    .hero-pill { font-size: 0.78rem; font-weight: 600; color: var(--white); background: rgba(251,250,241,.12); border: 1px solid rgba(251,250,241,.24); padding: 9px 17px; border-radius: 100px; backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 8px; }
-    .hero-pill svg { width: 14px; height: 14px; color: var(--clay-soft); }
-    .scroll-cue { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1; pointer-events: none; color: rgba(251,250,241,.65); font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 9px; }
-    .scroll-cue .line { width: 1px; height: 30px; background: rgba(251,250,241,.5); animation: cue 2.4s ease-in-out infinite; transform-origin: top; }
-    @keyframes cue { 0%,100% { transform: scaleY(.3); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
-    @media (max-height: 820px) { .scroll-cue { display: none; } }
-
-    .facts { background: var(--forest-deep); color: var(--white); }
-    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-    .fact { padding: 46px 30px; text-align: center; border-right: 1px solid rgba(251,250,241,.12); }
-    .fact:last-child { border-right: 0; }
-    .fact-n { font-family: 'Fraunces', serif; font-size: clamp(1.9rem, 3.2vw, 2.8rem); font-weight: 600; color: var(--clay-soft); line-height: 1.05; }
-    .fact-label { font-size: 0.8rem; font-weight: 500; color: rgba(251,250,241,.76); margin-top: 12px; }
-
-    .section { padding: 130px 0; }
-    .section-head { max-width: 730px; margin-bottom: 60px; }
-    .section-head h2 { font-size: clamp(2.1rem, 4.2vw, 3.5rem); margin: 22px 0 20px; }
-    .section-head h2 em { color: var(--clay); font-weight: 500; }
-    .section-head p { font-size: 1.08rem; color: var(--ink-2); }
-
-    .about { background: var(--paper); }
-    .about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 78px; align-items: center; }
-    .about-copy h2 { font-size: clamp(2rem, 4vw, 3.3rem); margin: 22px 0 24px; }
-    .about-copy h2 em { color: var(--clay); font-weight: 500; }
-    .about-copy p { font-size: 1.07rem; color: var(--ink-2); margin-bottom: 20px; }
-    .about-copy p strong { color: var(--ink); font-weight: 600; }
-    .about-sig { margin-top: 34px; display: flex; align-items: center; gap: 16px; padding-top: 28px; border-top: 1px solid var(--rule-soft); }
-    .about-sig-mark { width: 46px; height: 46px; color: var(--forest); flex: none; }
-    .about-sig-txt { font-size: 0.92rem; color: var(--ink-2); }
-    .about-sig-txt b { display: block; font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--ink); font-weight: 600; }
-    .about-fig { position: relative; }
-    .about-fig img { width: 100%; height: 600px; object-fit: cover; border-radius: 6px; box-shadow: var(--shadow); }
-    .about-fig-badge { position: absolute; bottom: -28px; left: -28px; background: var(--forest); color: var(--white); padding: 24px 30px; border-radius: 6px; box-shadow: var(--shadow-soft); max-width: 240px; }
-    .about-fig-badge .b-n { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; line-height: 1; color: var(--clay-soft); }
-    .about-fig-badge .b-l { font-size: 0.8rem; margin-top: 7px; color: rgba(251,250,241,.82); }
-
-    .quote { background: var(--forest); color: var(--white); text-align: center; padding: 130px 0; }
-    .quote .wrap { max-width: 920px; }
-    .quote-mark { font-family: 'Fraunces', serif; font-size: 5rem; line-height: .4; color: var(--clay-soft); display: block; margin-bottom: 26px; }
-    .quote blockquote { font-family: 'Fraunces', serif; font-size: clamp(1.7rem, 3.6vw, 2.8rem); font-weight: 500; font-style: italic; line-height: 1.3; }
-    .quote cite { display: block; margin-top: 30px; font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay-soft); }
-
-    .feat { background: var(--paper); }
-    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 56px; }
-    .feat-card { background: var(--white); border: 1px solid var(--rule-soft); border-radius: 8px; padding: 40px 34px; transition: transform 380ms cubic-bezier(.2,.7,.2,1), box-shadow 380ms ease; }
-    .feat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
-    .feat-ico { width: 54px; height: 54px; border-radius: 13px; background: rgba(43,75,51,.10); color: var(--forest); display: grid; place-items: center; margin-bottom: 22px; transition: transform 400ms cubic-bezier(.2,.7,.2,1), background 360ms ease, color 360ms ease; }
-    .feat-card:hover .feat-ico { transform: translateY(-4px) rotate(-6deg); background: var(--clay); color: var(--white); }
-    .feat-ico svg { width: 27px; height: 27px; }
-    .feat-card h4 { font-size: 1.22rem; margin-bottom: 9px; }
-    .feat-card p { font-size: 0.95rem; color: var(--ink-2); }
-
-    .band-wrap { background: var(--paper-soft); }
-    .band { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: center; }
-    .band-fig { position: relative; }
-    .band-fig img { width: 100%; height: 470px; object-fit: cover; border-radius: 6px; box-shadow: var(--shadow); }
-    .band-num { position: absolute; top: -34px; left: -10px; font-family: 'Fraunces', serif; font-style: italic; font-size: 6rem; color: var(--paper-deep); line-height: 1; z-index: -1; }
-    .band-copy .eyebrow { margin-bottom: 18px; }
-    .band-copy h3 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); margin-bottom: 18px; }
-    .band-copy h3 em { color: var(--clay); font-weight: 500; }
-    .band-copy p { font-size: 1.05rem; color: var(--ink-2); margin-bottom: 16px; }
-
-    .gtk { background: var(--forest-deep); color: var(--white); position: relative; overflow: hidden; }
-    .gtk-bg { position: absolute; inset: 0; z-index: 0; opacity: .15; }
-    .gtk-bg img { width: 100%; height: 100%; object-fit: cover; }
-    .gtk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--forest-deep) 0%, rgba(22,39,26,.86) 100%); z-index: 1; }
-    .gtk .wrap { position: relative; z-index: 2; }
-    .gtk .section-head h2 { color: var(--white); } .gtk .section-head h2 em { color: var(--clay-soft); }
-    .gtk .section-head p { color: rgba(251,250,241,.82); }
-    .gtk .eyebrow { color: var(--clay-soft); } .gtk .eyebrow::before { background: var(--clay-soft); }
-    .gtk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 54px; }
-    .gtk-item { border: 1px solid rgba(251,250,241,.16); border-radius: 8px; padding: 32px 30px; background: rgba(251,250,241,.04); transition: transform 380ms cubic-bezier(.2,.7,.2,1), border-color 380ms ease; }
-    .gtk-item:hover { transform: translateY(-6px); border-color: rgba(204,130,84,.55); }
-    .gtk-medallion { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--clay-soft); color: var(--clay-soft); display: grid; place-items: center; margin-bottom: 18px; font-family: 'Fraunces', serif; font-weight: 700; }
-    .gtk-item h4 { font-size: 1.16rem; color: var(--white); margin-bottom: 9px; }
-    .gtk-item p { font-size: 0.92rem; color: rgba(251,250,241,.78); }
-
-    .cta { background: var(--clay); color: var(--white); padding: 110px 0; text-align: center; position: relative; overflow: hidden; }
-    .cta::before { content: ""; position: absolute; top: -60%; right: -10%; width: 540px; height: 540px; border-radius: 50%; background: rgba(251,250,241,.12); }
-    .cta .wrap { position: relative; z-index: 1; }
-    .cta h2 { font-size: clamp(2.2rem, 4.6vw, 3.7rem); margin-bottom: 18px; }
-    .cta p { font-size: 1.12rem; color: rgba(251,250,241,.92); max-width: 580px; margin: 0 auto 38px; }
-    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-light { background: var(--white); color: var(--ink); font-size: 1rem; font-weight: 600; padding: 18px 38px; border-radius: 100px; display: inline-flex; align-items: center; gap: 12px; transition: transform 260ms cubic-bezier(.2,.7,.2,1), box-shadow 260ms ease; box-shadow: 0 18px 38px -18px rgba(22,30,20,.5); }
-    .btn-light:hover { transform: translateY(-3px); box-shadow: 0 26px 46px -18px rgba(22,30,20,.6); }
-    .btn-light .ar { transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
-    .btn-light:hover .ar { transform: translateX(5px); }
-    .btn-line { display: inline-flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 600; color: var(--white); padding: 18px 32px; border-radius: 100px; border: 1.6px solid rgba(251,250,241,.5); transition: background 240ms ease, border-color 240ms ease, transform 260ms cubic-bezier(.2,.7,.2,1); }
-    .btn-line:hover { background: rgba(251,250,241,.12); border-color: var(--white); transform: translateY(-3px); }
-
-    .footer { background: var(--ink); color: rgba(251,250,241,.74); padding: 92px 0 38px; }
-    .footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(251,250,241,.13); }
-    .footer .brand-name { color: var(--white); } .footer .brand-mark { color: var(--clay-soft); }
-    .footer .brand-name .brand-sub { color: rgba(251,250,241,.55); }
-    .footer-intro { margin-top: 22px; font-size: 0.96rem; max-width: 350px; line-height: 1.7; }
-    .footer-col h5 { font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); margin-bottom: 22px; }
-    .footer-col a, .footer-col p { display: block; font-size: 0.95rem; color: rgba(251,250,241,.74); margin-bottom: 13px; transition: color 220ms ease; }
-    .footer-col a:hover { color: var(--clay-soft); }
-    .footer-map-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin: 50px 0 18px; }
-    .footer-map-head h5 { font-family: 'Inter', sans-serif; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
-    .footer-dir { display: inline-flex; align-items: center; gap: 9px; font-size: 0.86rem; font-weight: 600; color: var(--white); background: var(--clay); padding: 10px 19px; border-radius: 100px; transition: transform 240ms cubic-bezier(.2,.7,.2,1), background 220ms ease; }
-    .footer-dir:hover { transform: translateY(-2px); background: #9c5734; }
-    .footer-map { margin: 0 0 38px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(251,250,241,.14); height: 300px; }
-    .footer-map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.3) contrast(1.05); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 0.84rem; color: rgba(251,250,241,.55); }
-    .footer-bottom a { color: rgba(251,250,241,.7); }
-
-    .reveal { opacity: 0; transform: translateY(38px); transition: opacity 900ms cubic-bezier(.2,.7,.2,1), transform 900ms cubic-bezier(.2,.7,.2,1); }
-    .reveal.left { transform: translateX(-48px); } .reveal.right { transform: translateX(48px); }
-    .reveal.in { opacity: 1; transform: none; }
-
-    @media (max-width: 1100px) {
-        .nav-links { position: fixed; inset: 0 0 0 auto; width: min(360px, 84vw); background: var(--paper); flex-direction: column; align-items: flex-start; justify-content: center; gap: 30px; padding: 60px; transform: translateX(100%); transition: transform 460ms cubic-bezier(.2,.7,.2,1); box-shadow: -30px 0 60px -30px rgba(22,30,20,.4); }
-        .nav-links.open { transform: translateX(0); }
-        .nav-link, .nav .nav-link { color: var(--ink-2); font-size: 1.05rem; }
-        .nav-toggle { display: block; z-index: 101; }
-        .nav-toggle.open span { background: var(--ink) !important; }
-        .about-grid, .band, .feat-grid, .gtk-grid, .footer-top { grid-template-columns: 1fr; }
-        .facts-grid { grid-template-columns: 1fr 1fr; }
-        .about-fig img, .band-fig img { height: 380px; }
-        .about-fig-badge { left: 0; }
-    }
-    @media (max-width: 620px) {
-        .facts-grid { grid-template-columns: 1fr; }
-        .fact { border-right: 0; border-bottom: 1px solid rgba(251,250,241,.12); }
-        .section, .quote { padding: 86px 0; }
-        .hero-ctas, .cta-actions { flex-direction: column; align-items: stretch; }
-        .btn-primary, .btn-ghost { justify-content: center; }
-    }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } html { scroll-behavior: auto; } }
-</style>
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
 </head>
 <body>
 
 <nav class="nav" id="nav">
     <div class="wrap nav-inner">
-        <a href="#top" class="brand" aria-label="St. Albert Kinsmen RV Park home">
-            <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
-                    <path d="M7 30 L24 9 L41 30 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
-                    <path d="M24 9 C20 16 19 21 14 22 M24 9 C28 16 29 21 34 22" stroke="currentColor" stroke-width="2"/>
-                    <path d="M14 38 H34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                </svg>
-            </span>
-            <span class="brand-name">St.&nbsp;Albert Kinsmen<span class="brand-sub">RV Park · St. Albert, AB</span></span>
-        </a>
-        <div class="nav-links" id="navLinks">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#park" class="nav-link">The Park</a>
-            <a href="#setting" class="nav-link">The Setting</a>
-            <a href="#know" class="nav-link">Good to Know</a>
-            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" target="_blank" rel="noopener" class="nav-cta">Book Now</a>
+        <div class="nav-side left">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about-us.html" class="nav-link">About Us</a>
         </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="brand" aria-label="St. Albert Kinsmen RV Park — Home">
+            <span class="brand-mark"><img src="stalbertrvlogo.png" alt="St. Albert RV Park"/></span>
+        </a>
+        <div class="nav-side right">
+            <a href="special-events.html" class="nav-link">Special Events</a>
+            <a href="contact-us.html" class="nav-link">Contact Us</a>
+        </div>
+        <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about-us.html" class="nav-link">About Us</a>
+            <a href="special-events.html" class="nav-link">Special Events</a>
+            <a href="contact-us.html" class="nav-link">Contact Us</a>
+            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+        </div>
     </div>
 </nav>
 
-<header class="hero" id="top">
-    <div class="hero-bg"><img src="img/hero.jpg" alt="RVs on full-service sites with open green space at St. Albert Kinsmen RV Park" /></div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"><img src="img/wix-18.jpg" alt="Fifth-wheel parked at St. Albert Kinsmen RV Park beside the Kinsmen Banquet Centre" /></div>
     <div class="wrap hero-inner">
-        <span class="eyebrow">St. Albert, Alberta · Run by the Kinsmen Club</span>
-        <h1>A full-service<br />premier <em>RV park.</em></h1>
-        <p class="hero-lede">St. Albert Kinsmen RV Park is a 93-stall, full-service premier RV park — large 50-amp sites, manicured grounds, walking trails and quiet nature, just minutes from Edmonton.</p>
+        <span class="eyebrow">St. Albert, Alberta</span>
+        <h1>This Is <em>Our Story.</em></h1>
+        <p class="hero-lede">A 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert — large 50 amp sites, manicured grounds, and quiet green space minutes from Edmonton and the Capital Region.</p>
         <div class="hero-ctas">
-            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" target="_blank" rel="noopener" class="btn-primary">Book your site <span class="ar" aria-hidden="true">→</span></a>
-            <a href="#park" class="btn-ghost">About the park</a>
-        </div>
-        <div class="hero-pills">
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>93 full-service stalls</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 L4 14h6l-1 8 9-12h-6z"/></svg>50-amp power</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>15 minutes to West Edmonton Mall</span>
+            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" class="btn-primary" target="_blank" rel="noopener">Book your reservation <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="about-us.html" class="btn-ghost">Read our story</a>
         </div>
     </div>
-    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
-</header>
+</section>
 
+<!-- FACTS -->
 <section class="facts">
     <div class="wrap">
         <div class="facts-grid">
-            <div class="fact"><div class="fact-n">93</div><div class="fact-label">Full-service stalls</div></div>
-            <div class="fact"><div class="fact-n">50&nbsp;amp</div><div class="fact-label">Large, fully serviced sites</div></div>
-            <div class="fact"><div class="fact-n">Non-profit</div><div class="fact-label">Run by the Kinsmen Club of St. Albert</div></div>
-            <div class="fact"><div class="fact-n">15&nbsp;min</div><div class="fact-label">To West Edmonton Mall</div></div>
+            <div class="fact reveal"><div class="fact-n">93</div><div class="fact-label">Full-service stalls</div></div>
+            <div class="fact reveal"><div class="fact-n">50 amp</div><div class="fact-label">Power at every site</div></div>
+            <div class="fact reveal"><div class="fact-n">2010</div><div class="fact-label">First season of operation</div></div>
+            <div class="fact reveal"><div class="fact-n">15 min</div><div class="fact-label">South to West Edmonton Mall</div></div>
         </div>
     </div>
 </section>
 
-<section class="section about" id="about">
-    <div class="wrap about-grid">
-        <div class="about-copy reveal left">
-            <span class="eyebrow">About the park</span>
-            <h2>A community park, <em>run by the Kinsmen.</em></h2>
-            <p>St. Albert Kinsmen RV Park is a <strong>93-stall, full-service premier RV park</strong> operated by the Kinsmen Club of St. Albert — a registered non-profit and member of Kin Canada.</p>
-            <p>Open since its first full season in the summer of 2010, the park was built with community funding from the Kinsmen Club and a CAMRIF grant from the governments of Canada, Alberta and the City of St. Albert. It's part of the St. Albert Kinsmen Banquet Centre, RV &amp; Community Park.</p>
-            <div class="about-sig">
-                <span class="about-sig-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="about-sig-txt"><b>A registered non-profit</b>Every stay supports the Kinsmen Club's community work in St. Albert.</span>
-            </div>
-        </div>
-        <div class="about-fig reveal right">
-            <img src="img/about.jpg" alt="The welcome sign at the entrance to St. Albert Kinsmen RV Park" />
-            <div class="about-fig-badge">
-                <div class="b-n">Since 2010</div>
-                <div class="b-l">A St. Albert Kinsmen community project</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="quote">
+<!-- ABOUT -->
+<section class="section about">
     <div class="wrap">
-        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-        <blockquote>My wish is to stay always like this, living quietly in a corner of nature.</blockquote>
+        <div class="about-grid">
+            <div class="about-copy reveal left">
+                <span class="eyebrow">An RV'er Welcome</span>
+                <h2>A community gathering point for an <em>RV'ing</em> culture.</h2>
+                <p>Early on, we at the Kinsmen Club of St. Albert, Alberta, recognized RV'ers as a distinct culture. So, to us, nothing is more heart-warming than the spontaneous gatherings, handshakes and pitch-in attitudes marking the arrival of any unit.</p>
+                <p>You'll appreciate our location: so close to any part of nearby Edmonton &amp; the Capital Region; so close to nature-based recreation. <strong>St. Albert is a thoroughly modern city in its own right</strong>, proclaiming convenient shopping, services, culture, and sports attractions.</p>
+                <p>And when you're ready to gather, the Kinsmen Banquet Centre — a short walk east of the RV park — caters every imaginable gathering, from family socials and reunions to mid-sized conventions.</p>
+                <div class="about-sig">
+                    <svg class="about-sig-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M24 4l5.5 11.5 12.5 1.8-9 8.8 2 12.4L24 32.7l-11 5.8 2-12.4-9-8.8 12.5-1.8z" />
+                    </svg>
+                    <div class="about-sig-txt"><b>Kinsmen Club of St. Albert</b>A non-profit, chartered member of KIN Canada</div>
+                </div>
+            </div>
+            <figure class="about-fig reveal right">
+                <img src="img/gphoto-17.jpg" alt="St. Albert Kinsmen RV Park welcome sign and flagpoles at the entrance, with motorhomes lined up behind" />
+                <div class="about-fig-badge"><div class="b-n">A non-profit story</div><div class="b-l">Funded by CAMRIF — a joint program of Canada, Alberta &amp; the City of St. Albert — together with community funding from the Kinsmen Club.</div></div>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section feat">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">What's on the grounds</span>
+            <h2>A premier park built for <em>full-service stays.</em></h2>
+            <p>Large pull-through and back-in sites with 50 amp power and full hook-ups, paired with manicured green space, walking trails and a fully-equipped banquet centre right next door.</p>
+        </div>
+        <div class="feat-grid">
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+                <h4>50 amp power</h4>
+                <p>Every one of our 93 stalls is wired for 50 amp service — comfortable headroom for the biggest rigs.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+                <h4>Full hook-ups</h4>
+                <p>Water, sewer and power at every site — no juggling fresh tanks or hauling waste mid-stay.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l3-3 4 2 7-7-4-4-7 7 2 4-3 3z"/><circle cx="17" cy="7" r="2"/></svg></div>
+                <h4>Manicured grounds</h4>
+                <p>Wide-open lawns, gravel pads and landscaped edges — clean, level sites with room to set up camp.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18l4-4 4 4 6-6 4 4"/><path d="M3 8h18"/></svg></div>
+                <h4>Walking &amp; cycling trails</h4>
+                <p>Scenic trails alongside Red Willow Park — bird and nature-viewing minutes from your site.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21V12h6v9"/></svg></div>
+                <h4>Kinsmen Banquet Centre</h4>
+                <p>A short walk east of the park — host family socials, reunions, weddings or mid-sized conventions.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+                <h4>15 min from Edmonton</h4>
+                <p>South to West Edmonton Mall in fifteen minutes; minutes more to anything in the Capital Region.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPOTLIGHT — wide landscape band between Features and GTK -->
+<section class="spotlight reveal">
+    <img class="spotlight-img" src="img/gphoto-25.jpg" alt="A long view down a row of fully-serviced sites at St. Albert Kinsmen RV Park, under a wide Alberta sky" />
+    <div class="spotlight-cap">
+        <b>On the grounds</b>
+        <h3>Wide, level, full-service stalls — room for the biggest rigs and quiet enough for an evening on the deck.</h3>
+    </div>
+</section>
+
+<!-- GTK BAND with backdrop -->
+<section class="section gtk">
+    <div class="gtk-bg"><img src="img/gphoto-2.jpg" alt="" /></div>
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Right out our front gate</span>
+            <h2>St. Albert &amp; the Capital Region — <em>convenience and nature in one trip.</em></h2>
+            <p>You're settled at the park, but never far from the rest of the city or the country. Here's the lay of the land.</p>
+        </div>
+        <div class="gtk-grid">
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">1</div>
+                <h4>Red Willow Park</h4>
+                <p>Scenic cycling and walking trails plus dedicated bird and nature-viewing areas, just outside the gate.</p>
+            </article>
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">2</div>
+                <h4>Lois Hole Centennial Provincial Park</h4>
+                <p>Big Lake's protected wetland — a major staging area for migratory birds, with viewing platforms and trails.</p>
+            </article>
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">3</div>
+                <h4>Downtown St. Albert</h4>
+                <p>A modern, walkable city with shopping, services, culture and sports — minutes from the park.</p>
+            </article>
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">4</div>
+                <h4>West Edmonton Mall</h4>
+                <p>One of North America's largest malls — fifteen minutes south of the park.</p>
+            </article>
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">5</div>
+                <h4>The Kinsmen Banquet Centre</h4>
+                <p>Right next door — a full banquet hall available for socials, reunions, weddings and conventions.</p>
+            </article>
+            <article class="gtk-item reveal">
+                <div class="gtk-medallion">6</div>
+                <h4>Edmonton International Airport</h4>
+                <p>A straightforward drive south makes the park a comfortable first or last stop on a longer Alberta trip.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- SCENES -->
+<section class="section scenes">
+    <div class="wrap">
+        <div class="scenes-head reveal">
+            <span class="eyebrow">A few scenes from the park</span>
+            <h2>Manicured sites, quiet evenings, <em>open prairie sky.</em></h2>
+            <p>A working set of photos from the grounds and the surrounding community.</p>
+        </div>
+        <div class="scenes-grid">
+            <a href="img/wix-15.jpg" class="scene wide reveal">
+                <img src="img/wix-15.jpg" alt="Class A motorhome parked beside a gazebo on a landscaped site" />
+                <span class="scene-cap">Set up under the gazebo</span>
+            </a>
+            <a href="img/gphoto-30.jpg" class="scene reveal">
+                <img src="img/gphoto-30.jpg" alt="Rows of RVs and trailers parked under a wide Alberta sky" />
+                <span class="scene-cap">Room to breathe</span>
+            </a>
+            <a href="img/gphoto-1.jpg" class="scene reveal">
+                <img src="img/gphoto-1.jpg" alt="On-site playground with swings and a slide structure under blue sky" />
+                <span class="scene-cap">A spot for the kids</span>
+            </a>
+            <a href="img/wix-16.jpg" class="scene reveal">
+                <img src="img/wix-16.jpg" alt="Tuscany luxury Class A coach parked on a manicured pull-through site" />
+                <span class="scene-cap">Room for the big rigs</span>
+            </a>
+            <a href="img/gphoto-2.jpg" class="scene reveal">
+                <img src="img/gphoto-2.jpg" alt="Drive-through Christmas light tunnel at the grounds in winter" />
+                <span class="scene-cap">Lights through winter</span>
+            </a>
+            <a href="img/gphoto-31.jpg" class="scene tall reveal">
+                <img src="img/gphoto-31.jpg" alt="Single motorhome parked on a quiet grass-edged site" />
+                <span class="scene-cap">A quiet evening site</span>
+            </a>
+            <a href="img/gphoto-29.jpg" class="scene reveal">
+                <img src="img/gphoto-29.jpg" alt="Wide entrance view with Canadian flag and RVs lined up" />
+                <span class="scene-cap">At the front gate</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="quote-band reveal">
+    <div class="wrap">
+        <blockquote>"My wish is to stay always like this, living quietly in a corner of nature."</blockquote>
         <cite>— Claude Monet</cite>
     </div>
 </section>
 
-<section class="section feat" id="park">
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+    <div class="wrap">
+        <div class="section-head reveal" style="margin:0 auto 0;text-align:center">
+            <span class="eyebrow" style="justify-content:center">Out of the guest book</span>
+            <h2>What people say about <em>their stays.</em></h2>
+        </div>
+        <div class="testimonials-grid">
+            <article class="testimonial reveal">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                </div>
+                <p class="testimonial-quote">"Awesome place. Very well managed with friendly staff. Large sites. Full services with 50 Amp power."</p>
+                <div class="testimonial-by">— Donna Roche</div>
+            </article>
+            <article class="testimonial reveal">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                </div>
+                <p class="testimonial-quote">"Freeda and George run this beautiful campground and do a great job of it."</p>
+                <div class="testimonial-by">— Kevin Muller</div>
+            </article>
+            <article class="testimonial reveal">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                </div>
+                <p class="testimonial-quote">"Great RV park. Very well taken care of. The spots were a good size."</p>
+                <div class="testimonial-by">— Dawn McLean</div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PHOTO STRIP between testimonials and tiles -->
+<section class="photo-strip reveal">
+    <div class="wrap">
+        <div class="photo-strip-grid">
+            <a href="img/gphoto-3.jpg"><img src="img/gphoto-3.jpg" alt="A Stoneridge fifth-wheel parked at the park alongside other rigs" /><span class="cap">Stalls for every size</span></a>
+            <a href="img/gphoto-7.jpg"><img src="img/gphoto-7.jpg" alt="A travel trailer parked on the open grounds under bright Alberta sky" /><span class="cap">Open sky</span></a>
+            <a href="img/gphoto-9.jpg"><img src="img/gphoto-9.jpg" alt="A view across the entrance of the park looking out to the highway" /><span class="cap">Quiet edges</span></a>
+            <a href="img/gphoto-22.jpg"><img src="img/gphoto-22.jpg" alt="A winter light display at the grounds — the Wrap-O-Matic illuminated display" /><span class="cap">Light displays in winter</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- TILES -->
+<section class="section tiles">
     <div class="wrap">
         <div class="section-head reveal">
-            <span class="eyebrow">The park</span>
-            <h2>Built for a <em>comfortable stay.</em></h2>
-            <p>Large, fully serviced sites and managed green space — the things that make a longer stay easy.</p>
+            <span class="eyebrow">Plan your visit</span>
+            <h2>The rest of the <em>park's story</em>.</h2>
+            <p>A quick map of what you'll find on the other pages of this site.</p>
         </div>
-        <div class="feat-grid">
-            <div class="feat-card reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 13h13v5H3z"/><path d="M16 14h3l2 3v1h-5z"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg></div><h4>Large full-service sites</h4><p>93 stalls with full services and 50-amp power — room for big rigs and easy setup.</p></div>
-            <div class="feat-card reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3c5 5 7 8 7 12a7 7 0 01-14 0c0-4 2-7 7-12z"/></svg></div><h4>Manicured grounds</h4><p>Tidy green spaces, scenic vistas and a calm, well-kept setting throughout the park.</p></div>
-            <div class="feat-card reveal"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="9" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div><h4>Dog-friendly</h4><p>Bring the dog — the park is dog-friendly, with trails and open space close by.</p></div>
-        </div>
-    </div>
-</section>
-
-<section class="section band-wrap" id="setting">
-    <div class="wrap band">
-        <div class="band-fig reveal left"><span class="band-num">01</span><img src="img/about.jpg" alt="Entrance and grounds at St. Albert Kinsmen RV Park" /></div>
-        <div class="band-copy reveal right">
-            <span class="eyebrow">The setting</span>
-            <h3>Quiet nature, <em>minutes from the city.</em></h3>
-            <p>The park sits among walking and cycling trails with bird- and nature-viewing areas nearby, with access to Red Willow Park and Lois Hole Centennial Provincial Park.</p>
-            <p>It's about 15 minutes to West Edmonton Mall and close to Edmonton and the wider Capital Region — quiet when you want it, the city when you need it. The Kinsmen Banquet Centre is a short walk to the east.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section gtk" id="know">
-    <div class="gtk-bg"><img src="img/approach-bg.jpg" alt="" aria-hidden="true" /></div>
-    <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">Good to know</span>
-            <h2>Planning your <em>stay.</em></h2>
-            <p>A few details before you book — and how to reach the park.</p>
-        </div>
-        <div class="gtk-grid">
-            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Booking</h4><p>Reservations are made through the park's online booking system — reserve any time.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>Sites</h4><p>93 full-service stalls with 50-amp power. For current rates and availability, book online or contact the manager.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Non-profit</h4><p>Operated by the Kinsmen Club of St. Albert — proceeds support community work.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">4</div><h4>Location</h4><p>30, 47 Riel Drive, St. Albert, AB T8N 3Z2 — minutes from Edmonton.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Events</h4><p>The park also hosts and shares St. Albert community events through the season.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Questions</h4><p>Email the manager at manager@stalbertrvpark.ca or call 888-459-1724.</p></div>
-        </div>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="wrap">
-        <h2>Reserve your stay</h2>
-        <p>Book a full-service site online, or get in touch with the park manager with any questions.</p>
-        <div class="cta-actions">
-            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" target="_blank" rel="noopener" class="btn-light">Book online <span class="ar" aria-hidden="true">→</span></a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=30%2C+47+Riel+Drive%2C+St.+Albert%2C+Alberta+T8N+3Z2" target="_blank" rel="noopener" class="btn-line">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Get directions
+        <div class="tiles-grid">
+            <a href="about-us.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-11a7 7 0 0114 0c0 6.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+                <h3>About Us</h3>
+                <p>How a non-profit Kinsmen club built a 93-stall premier RV park — and the city you'll wake up next to.</p>
+                <span class="tile-cta">Read our story →</span>
+            </a>
+            <a href="special-events.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div>
+                <h3>Special Events</h3>
+                <p>The First Responders Rodeo, the annual Rainmaker — events the Kinsmen of St. Albert have been hosting for decades.</p>
+                <span class="tile-cta">See what's on →</span>
+            </a>
+            <a href="contact-us.html" class="tile reveal">
+                <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h2.5l2 5-3 1.5a11 11 0 005 5l1.5-3 5 2V18a2 2 0 01-2 2A17 17 0 013 5z"/></svg></div>
+                <h3>Contact Us</h3>
+                <p>Address, phone, email, opening hours and a contact form. We're happy to take a question by phone.</p>
+                <span class="tile-cta">Get in touch →</span>
             </a>
         </div>
     </div>
 </section>
 
+<!-- CTA -->
+<section class="cta">
+    <div class="wrap">
+        <h2>Take advantage of our online booking system.</h2>
+        <p>Check availability and book your next stay in just a few clicks.</p>
+        <div class="cta-actions">
+            <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" class="btn-light" target="_blank" rel="noopener">Book your reservation <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="contact-us.html" class="btn-line">Call or message us</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
     <div class="wrap">
         <div class="footer-top">
             <div>
-                <div class="brand">
-                    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M7 30 L24 9 L41 30 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 9 C20 16 19 21 14 22 M24 9 C28 16 29 21 34 22" stroke="currentColor" stroke-width="2"/><path d="M14 38 H34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-                    <span class="brand-name">St.&nbsp;Albert Kinsmen<span class="brand-sub">RV Park · St. Albert, AB</span></span>
+                <a href="index.html" class="brand">
+                    <span class="brand-mark"><img src="stalbertrvlogo.png" alt="St. Albert RV Park"/></span>
+                </a>
+                <p class="footer-intro">A 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert — large 50 amp sites and quiet green space minutes from Edmonton.</p>
+                <div class="footer-socials">
+                    <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" class="footer-social" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+                        Book Now
+                    </a>
+                    <a href="mailto:manager@stalbertrvpark.ca" class="footer-social">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        Email
+                    </a>
                 </div>
-                <p class="footer-intro">A 93-stall, full-service premier RV park run by the non-profit Kinsmen Club of St. Albert — quiet nature, minutes from Edmonton.</p>
             </div>
             <div class="footer-col">
-                <h5>Contact</h5>
-                <a href="tel:+18884591724">888-459-1724</a>
+                <h5>Explore</h5>
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="special-events.html">Special Events</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" target="_blank" rel="noopener">Book Now</a>
+            </div>
+            <div class="footer-col">
+                <h5>Find Us</h5>
+                <p>30, 47 Riel Drive<br/>St. Albert, AB T8N 3Z2</p>
+                <a href="tel:18884591724">888-459-1724</a>
                 <a href="mailto:manager@stalbertrvpark.ca">manager@stalbertrvpark.ca</a>
-                <p>30, 47 Riel Drive<br />St. Albert, Alberta T8N 3Z2</p>
-            </div>
-            <div class="footer-col">
-                <h5>Reserve</h5>
-                <a href="https://resnexus.com/resnexus/reservations/book/93C790F9-4251-4C91-9175-D14F7BB8D31C" target="_blank" rel="noopener">Book online →</a>
-                <a href="#park">The park</a>
-                <a href="#setting">The setting</a>
             </div>
         </div>
         <div class="footer-map-head">
-            <h5>Find us — 47 Riel Drive, St. Albert</h5>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=30%2C+47+Riel+Drive%2C+St.+Albert%2C+Alberta+T8N+3Z2" target="_blank" rel="noopener" class="footer-dir">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h5>The Park on the Map</h5>
+            <a href="https://www.google.com/maps?q=47+Riel+Drive+St.+Albert+AB" target="_blank" rel="noopener" class="footer-dir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Get directions
             </a>
         </div>
         <div class="footer-map">
-            <iframe title="Map to St. Albert Kinsmen RV Park" src="https://www.google.com/maps?q=47+Riel+Drive,+St.+Albert,+Alberta+T8N+3Z2&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps?q=47+Riel+Drive+St.+Albert+AB&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="St. Albert Kinsmen RV Park location"></iframe>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 St. Albert Kinsmen RV Park · A Kinsmen Club of St. Albert community park</span>
-            <span><a href="tel:+18884591724">888-459-1724</a></span>
+            <span>© 2026 St. Albert Kinsmen Club. All rights reserved.</span>
+            <span><a href="https://www.stalbertrvpark.ca/" target="_blank" rel="noopener">Visit the original site</a></span>
         </div>
     </div>
 </footer>
 
-<script>
-    var nav = document.getElementById('nav');
-    window.addEventListener('scroll', function () { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-    var toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
-    toggle.addEventListener('click', function () { toggle.classList.toggle('open'); links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { toggle.classList.remove('open'); links.classList.remove('open'); }); });
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    var secs = ['about','park','setting','know'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
-    var nls = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', function () { var p = window.scrollY + 120, c = ''; secs.forEach(function (s) { if (s.offsetTop <= p) c = s.id; }); nls.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + c); }); }, { passive: true });
-</script>
+<script src="app.js"></script>
 </body>
 </html>
