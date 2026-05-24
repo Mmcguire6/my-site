@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 .DS_Store
+node_modules/
+**/img/_orig/
+**/img/src/
+campground/*/optimize-images.js
+campground/*/restore-logos.js
+campground/*/package.json
+campground/*/package-lock.json
