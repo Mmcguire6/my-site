@@ -3,357 +3,314 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Outwest Camping &amp; RV Park — Wild views, real escape</title>
-<meta name="description" content="Outwest Camping & RV Park is a family-owned, year-round campground in the Prairie Creek Valley — the last privately owned land before Banff National Park. RV, tent and cabin sites between the Ram and Clearwater rivers." />
+<link rel="icon" type="image/webp" href="img/outwestcamping-logo.webp" />
+<link rel="apple-touch-icon" href="img/outwestcamping-logo.webp" />
+<title>Outwest Camping &amp; RV Park — Prairie Creek Valley, Alberta</title>
+<meta name="description" content="Outwest Camping &amp; RV Park sits at 3,900 feet overlooking Prairie Creek Valley between the Ram and Clearwater rivers — only 300 meters off pavement, 15 minutes to fishing lakes, 30 minutes to Rocky Mountain House. Open year round." />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Outwest Camping & RV Park — Wild Views. Real Escape." />
-<meta property="og:description" content="A family-owned, year-round campground in the Prairie Creek Valley — the last private land before Banff. RV, tent and cabin sites in the foothills." />
+<meta property="og:title" content="Outwest Camping &amp; RV Park" />
+<meta property="og:description" content="Family Owned &amp; Operated. ATV-friendly, year-round RV park overlooking Prairie Creek Valley at 3,900 feet — the last privately owned land between us and Banff National Park." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<style>
-    :root{--paper:#EEF0E9;--paper-soft:#DEE4D8;--paper-deep:#C5D0BE;--ink:#15201A;--ink-2:#33402F;--ink-3:#64715C;--spruce:#234C36;--spruce-deep:#0E2017;--sky:#3E7C97;--ember:#C9591F;--ember-soft:#E07A3A;--rule:#BECCB6;--rule-soft:#D1DBC9;--white:#FAFBF5;--shadow:0 26px 60px -30px rgba(14,32,23,.46);--shadow-soft:0 15px 36px -22px rgba(14,32,23,.34);}
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:92px}
-    body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-    em{font-style:italic}
-    .wrap{width:min(1240px,92vw);margin:0 auto}
-    a{color:inherit;text-decoration:none}
-    .eyebrow{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:inline-flex;align-items:center;gap:12px}
-    .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--ember);display:inline-block}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:background .36s,box-shadow .36s,padding .36s}
-    .nav.scrolled{background:rgba(238,240,233,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule-soft);padding:16px 0}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .brand{display:flex;align-items:center;gap:13px}
-    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;color:var(--white);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .brand-mark{color:var(--spruce)}
-    .brand:hover .brand-mark{transform:scale(1.08)}
-    .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.24rem;line-height:1;color:var(--white)}
-    .nav.scrolled .brand-name{color:var(--ink)}
-    .brand-name .brand-sub{display:block;font-family:'Inter',sans-serif;font-size:.59rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,251,245,.66);margin-top:5px}
-    .nav.scrolled .brand-name .brand-sub{color:var(--ink-3)}
-    .nav-links{display:flex;align-items:center;gap:28px}
-    .nav-link{font-size:.85rem;font-weight:500;position:relative;color:rgba(250,251,245,.9);white-space:nowrap;transition:color .24s}
-    .nav.scrolled .nav-link{color:var(--ink-2)}
-    .nav-link::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:2px;background:var(--ember);transform:scaleX(0);transform-origin:right;transition:transform .36s cubic-bezier(.2,.7,.2,1)}
-    .nav-link:hover,.nav-link.active{color:var(--ember-soft)}
-    .nav.scrolled .nav-link:hover,.nav.scrolled .nav-link.active{color:var(--ember)}
-    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
-    .nav-cta{font-size:.84rem;font-weight:600;background:var(--ember);color:var(--white);padding:12px 22px;border-radius:100px;white-space:nowrap;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s,background .24s;box-shadow:0 10px 22px -12px rgba(201,89,31,.7)}
-    .nav-cta:hover{transform:translateY(-2px);background:#b34d18}
-    .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:30px;height:22px;position:relative}
-    .nav-toggle span{position:absolute;left:0;width:100%;height:2.5px;background:var(--white);border-radius:2px;transition:all .28s cubic-bezier(.2,.7,.2,1)}
-    .nav.scrolled .nav-toggle span{background:var(--ink)}
-    .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:9.5px}.nav-toggle span:nth-child(3){top:19px}
-    .nav-toggle.open span:nth-child(1){top:9.5px;transform:rotate(45deg)}
-    .nav-toggle.open span:nth-child(2){opacity:0}
-    .nav-toggle.open span:nth-child(3){top:9.5px;transform:rotate(-45deg)}
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 160px;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
-    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,18,.58) 0%,rgba(12,26,18,.40) 40%,rgba(12,26,18,.76) 100%)}
-    .hero-inner{position:relative;z-index:2;color:var(--white);max-width:880px}
-    .hero .eyebrow{color:var(--ember-soft)}.hero .eyebrow::before{background:var(--ember-soft)}
-    .hero h1{font-size:clamp(2.9rem,7vw,5.7rem);font-weight:600;color:var(--white);margin:26px 0 22px;letter-spacing:-.02em}
-    .hero h1 em{color:var(--ember-soft);font-weight:500}
-    .hero-lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(250,251,245,.92);max-width:640px;margin-bottom:38px}
-    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    .btn-primary{font-size:.95rem;font-weight:600;background:var(--ember);color:var(--white);padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:11px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s,background .24s;box-shadow:0 16px 34px -16px rgba(201,89,31,.8)}
-    .btn-primary:hover{transform:translateY(-3px);background:#b34d18}
-    .btn-primary .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-primary:hover .ar{transform:translateX(5px)}
-    .btn-ghost{font-size:.95rem;font-weight:600;color:var(--white);padding:17px 30px;border-radius:100px;border:1.5px solid rgba(250,251,245,.45);display:inline-flex;align-items:center;gap:10px;transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-ghost:hover{background:rgba(250,251,245,.12);border-color:var(--white);transform:translateY(-3px)}
-    .hero-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
-    .hero-pill{font-size:.78rem;font-weight:600;color:var(--white);background:rgba(250,251,245,.12);border:1px solid rgba(250,251,245,.24);padding:9px 17px;border-radius:100px;backdrop-filter:blur(4px);display:inline-flex;align-items:center;gap:8px}
-    .hero-pill svg{width:14px;height:14px;color:var(--ember-soft)}
-    .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:1;pointer-events:none;color:rgba(250,251,245,.65);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
-    .scroll-cue .line{width:1px;height:30px;background:rgba(250,251,245,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
-    @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
-    @media(max-height:820px){.scroll-cue{display:none}}
-    .facts{background:var(--spruce-deep);color:var(--white)}
-    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .fact{padding:46px 30px;text-align:center;border-right:1px solid rgba(250,251,245,.12)}
-    .fact:last-child{border-right:0}
-    .fact-n{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:600;color:var(--ember-soft);line-height:1.05}
-    .fact-label{font-size:.8rem;font-weight:500;color:rgba(250,251,245,.76);margin-top:12px}
-    .section{padding:130px 0}
-    .section-head{max-width:730px;margin-bottom:60px}
-    .section-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:22px 0 20px}
-    .section-head h2 em{color:var(--ember);font-weight:500}
-    .section-head p{font-size:1.08rem;color:var(--ink-2)}
-    .about{background:var(--paper)}
-    .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:78px;align-items:center}
-    .about-copy h2{font-size:clamp(2rem,4vw,3.3rem);margin:22px 0 24px}
-    .about-copy h2 em{color:var(--ember);font-weight:500}
-    .about-copy p{font-size:1.07rem;color:var(--ink-2);margin-bottom:20px}
-    .about-copy p strong{color:var(--ink);font-weight:600}
-    .about-sig{margin-top:34px;display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid var(--rule-soft)}
-    .about-sig-mark{width:46px;height:46px;color:var(--spruce);flex:none}
-    .about-sig-txt{font-size:.92rem;color:var(--ink-2)}
-    .about-sig-txt b{display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);font-weight:600}
-    .about-fig{position:relative}
-    .about-fig img{width:100%;height:580px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
-    .about-fig-badge{position:absolute;bottom:-28px;left:-28px;background:var(--spruce);color:var(--white);padding:24px 30px;border-radius:6px;box-shadow:var(--shadow-soft);max-width:240px}
-    .about-fig-badge .b-n{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:700;line-height:1.1;color:var(--ember-soft)}
-    .about-fig-badge .b-l{font-size:.8rem;margin-top:7px;color:rgba(250,251,245,.85)}
-    .rates{background:var(--paper-soft)}
-    .rate-table{background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft);margin-top:56px}
-    .rate-row{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:17px 30px;border-bottom:1px solid var(--rule-soft);font-size:.97rem;color:var(--ink-2)}
-    .rate-row:last-child{border-bottom:0}
-    .rate-row.head{background:var(--spruce);color:var(--white);font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600}
-    .rate-row .rate-n{font-family:'Fraunces',serif;font-weight:700;color:var(--spruce);font-size:1.05rem;white-space:nowrap;text-align:right}
-    .rate-row.head .rate-n{color:var(--ember-soft)}
-    .rates-note{margin-top:30px;font-size:.95rem;color:var(--ink-2);padding-left:18px;border-left:3px solid var(--ember);max-width:880px}
-    .band-wrap{background:var(--paper)}
-    .band{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;padding:70px 0}
-    .band+.band{border-top:1px solid var(--rule-soft)}
-    .band.flip .band-fig{order:2}
-    .band-fig{position:relative}
-    .band-fig img{width:100%;height:470px;object-fit:cover;border-radius:6px;box-shadow:var(--shadow)}
-    .band-num{position:absolute;top:-34px;right:-10px;font-family:'Fraunces',serif;font-style:italic;font-size:6.5rem;color:var(--paper-deep);line-height:1;z-index:-1}
-    .band.flip .band-num{right:auto;left:-10px}
-    .band-copy .eyebrow{margin-bottom:18px}
-    .band-copy h3{font-size:clamp(1.8rem,3.4vw,2.7rem);margin-bottom:18px}
-    .band-copy h3 em{color:var(--ember);font-weight:500}
-    .band-copy p{font-size:1.05rem;color:var(--ink-2);margin-bottom:16px}
-    .gtk{background:var(--spruce-deep);color:var(--white);position:relative;overflow:hidden}
-    .gtk-bg{position:absolute;inset:0;z-index:0;opacity:.16}
-    .gtk-bg img{width:100%;height:100%;object-fit:cover}
-    .gtk::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--spruce-deep) 0%,rgba(14,32,23,.86) 100%);z-index:1}
-    .gtk .wrap{position:relative;z-index:2}
-    .gtk .section-head h2{color:var(--white)}.gtk .section-head h2 em{color:var(--ember-soft)}
-    .gtk .section-head p{color:rgba(250,251,245,.82)}
-    .gtk .eyebrow{color:var(--ember-soft)}.gtk .eyebrow::before{background:var(--ember-soft)}
-    .gtk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
-    .gtk-item{border:1px solid rgba(250,251,245,.16);border-radius:8px;padding:32px 30px;background:rgba(250,251,245,.04);transition:transform .38s cubic-bezier(.2,.7,.2,1),border-color .38s}
-    .gtk-item:hover{transform:translateY(-6px);border-color:rgba(224,122,58,.55)}
-    .gtk-medallion{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ember-soft);color:var(--ember-soft);display:grid;place-items:center;margin-bottom:18px;font-family:'Fraunces',serif;font-weight:700}
-    .gtk-item h4{font-size:1.15rem;color:var(--white);margin-bottom:9px}
-    .gtk-item p{font-size:.92rem;color:rgba(250,251,245,.78)}
-    .cta{background:var(--ember);color:var(--white);padding:110px 0;text-align:center;position:relative;overflow:hidden}
-    .cta::before{content:"";position:absolute;top:-60%;right:-10%;width:540px;height:540px;border-radius:50%;background:rgba(255,255,255,.14)}
-    .cta .wrap{position:relative;z-index:1}
-    .cta h2{font-size:clamp(2.2rem,4.6vw,3.7rem);margin-bottom:18px}
-    .cta p{font-size:1.12rem;color:rgba(250,251,245,.92);max-width:580px;margin:0 auto 38px}
-    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn-light{background:var(--ink);color:var(--white);font-size:1rem;font-weight:600;padding:18px 38px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s;box-shadow:0 18px 38px -18px rgba(14,32,23,.55)}
-    .btn-light:hover{transform:translateY(-3px)}
-    .btn-light .ar{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-    .btn-light:hover .ar{transform:translateX(5px)}
-    .btn-line{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:600;color:var(--white);padding:18px 32px;border-radius:100px;border:1.6px solid rgba(250,251,245,.5);transition:background .24s,border-color .24s,transform .26s cubic-bezier(.2,.7,.2,1)}
-    .btn-line:hover{background:rgba(250,251,245,.12);border-color:var(--white);transform:translateY(-3px)}
-    .footer{background:var(--ink);color:rgba(250,251,245,.74);padding:92px 0 38px}
-    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(250,251,245,.13)}
-    .footer .brand-name{color:var(--white)}.footer .brand-mark{color:var(--ember-soft)}
-    .footer .brand-name .brand-sub{color:rgba(250,251,245,.55)}
-    .footer-intro{margin-top:22px;font-size:.96rem;max-width:350px;line-height:1.7}
-    .footer-social{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:.9rem;font-weight:600;color:rgba(250,251,245,.86);border:1px solid rgba(250,251,245,.22);padding:11px 20px;border-radius:100px;transition:all .22s ease}
-    .footer-social:hover{color:var(--white);border-color:var(--ember-soft);background:rgba(201,89,31,.16);transform:translateY(-2px)}
-    .footer-social svg{color:var(--ember-soft)}
-    .footer-col h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:22px}
-    .footer-col a,.footer-col p{display:block;font-size:.95rem;color:rgba(250,251,245,.74);margin-bottom:13px;transition:color .22s}
-    .footer-col a:hover{color:var(--ember-soft)}
-    .footer-map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:50px 0 18px}
-    .footer-map-head h5{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
-    .footer-dir{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--white);background:var(--ember);padding:10px 19px;border-radius:100px;transition:transform .24s cubic-bezier(.2,.7,.2,1),background .22s}
-    .footer-dir:hover{transform:translateY(-2px);background:#b34d18}
-    .footer-map{margin:0 0 38px;border-radius:8px;overflow:hidden;border:1px solid rgba(250,251,245,.14);height:300px}
-    .footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
-    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.83rem;color:rgba(250,251,245,.55)}
-    .footer-bottom a{color:rgba(250,251,245,.7)}
-    .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-    .reveal.left{transform:translateX(-48px)}.reveal.right{transform:translateX(48px)}
-    .reveal.in{opacity:1;transform:none}
-    @media(max-width:1100px){
-        .nav-links{position:fixed;inset:0 0 0 auto;width:min(360px,84vw);background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:center;gap:30px;padding:60px;transform:translateX(100%);transition:transform .46s cubic-bezier(.2,.7,.2,1);box-shadow:-30px 0 60px -30px rgba(14,32,23,.4)}
-        .nav-links.open{transform:translateX(0)}
-        .nav-link,.nav .nav-link{color:var(--ink-2);font-size:1.05rem}
-        .nav-toggle{display:block;z-index:101}
-        .nav-toggle.open span{background:var(--ink)!important}
-        .about-grid,.band,.band.flip .band-fig,.gtk-grid,.footer-top{grid-template-columns:1fr}
-        .band.flip .band-fig{order:0}
-        .facts-grid{grid-template-columns:1fr 1fr}
-        .about-fig img,.band-fig img{height:380px}.about-fig-badge{left:0}
-    }
-    @media(max-width:620px){
-        .facts-grid{grid-template-columns:1fr}
-        .fact{border-right:0;border-bottom:1px solid rgba(250,251,245,.12)}
-        .section{padding:86px 0}
-        .hero-ctas,.cta-actions{flex-direction:column;align-items:stretch}
-        .btn-primary,.btn-ghost{justify-content:center}
-    }
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="img/fb-photo6.jpg" fetchpriority="high" />
+<link rel="stylesheet" href="style.css?v=18" />
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
 </head>
 <body>
+
 <nav class="nav" id="nav">
     <div class="wrap nav-inner">
-        <a href="#top" class="brand" aria-label="Outwest Camping & RV Park home">
-            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M4 38 L16 16 L24 30 L30 20 L44 38 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="34" cy="13" r="3.4" stroke="currentColor" stroke-width="2.2"/></svg></span>
-            <span class="brand-name">Outwest<span class="brand-sub">Camping &amp; RV Park · Prairie Creek</span></span>
-        </a>
-        <div class="nav-links" id="navLinks">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#stay" class="nav-link">Ways to Stay</a>
-            <a href="#rates" class="nav-link">Rates</a>
-            <a href="#know" class="nav-link">Good to Know</a>
-            <a href="mailto:outwestrv@telus.net" class="nav-cta">Email to book</a>
-        </div>
+        <div class="nav-side left"><a href="index.html" class="nav-link active">Home</a><a href="amenities-maps.html" class="nav-link">Amenities &amp; Maps</a><a href="rates-regulations.html" class="nav-link">Rates &amp; Regulations</a></div>
+        <a href="index.html" class="brand" aria-label="Outwest Camping &amp; RV Park — Home"><span class="brand-mark has-logo"><img src="img/outwestcamping-logo.webp" alt="Outwest Camping &amp; RV Park" /></span></a>
+        <div class="nav-side right"><a href="contact.html" class="nav-link">Contact</a><a href="events.html" class="nav-link">Events</a><a href="links.html" class="nav-link">Links</a></div>
+        <a href="tel:14038443083" class="nav-cta">Call to Book</a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="amenities-maps.html" class="nav-link">Amenities &amp; Maps</a>
+            <a href="rates-regulations.html" class="nav-link">Rates &amp; Regulations</a>
+            <a href="contact.html" class="nav-link">Contact Outwest</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="links.html" class="nav-link">Links</a>
+            <a href="tel:14038443083" class="nav-cta">Call to Book</a>
+        </div>
     </div>
 </nav>
-<header class="hero" id="top">
-    <div class="hero-bg"><img src="img/hero.jpg" alt="Aerial view of Outwest Camping &amp; RV Park in the forested Prairie Creek Valley" /></div>
+
+<section class="hero">
+    <div class="hero-bg"><img fetchpriority="high" decoding="async" src="img/fb-photo6.jpg" alt="A log cabin at Outwest with a green metal roof, covered front porch and tall spruce trees behind" /></div>
     <div class="wrap hero-inner">
-        <span class="eyebrow">Prairie Creek Valley · West-Central Alberta</span>
-        <h1>Wild views.<br />Real <em>escape.</em></h1>
-        <p class="hero-lede">Outwest Camping &amp; RV Park is family-owned and open year-round — the last privately owned land between you and Banff National Park, tucked into the Prairie Creek Valley between the Ram and Clearwater rivers.</p>
+        <span class="eyebrow">An ATV Park, an RV Park &amp; Cabins · Open Year Round</span>
+        <h1>Stay. Ride. <em>Repeat.</em></h1>
+        <p class="hero-lede">An ATV-friendly RV park at 3,900 feet in the foothills. Idle your quad straight from your site to the trails — only 300 meters off pavement, between the Ram and Clearwater rivers, 30 minutes from Rocky Mountain House.</p>
         <div class="hero-ctas">
-            <a href="mailto:outwestrv@telus.net" class="btn-primary">Email to book <span class="ar" aria-hidden="true">→</span></a>
-            <a href="#stay" class="btn-ghost">Ways to stay</a>
-        </div>
-        <div class="hero-pills">
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Open year round</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 38 L16 16 L24 30 L30 20 L44 38" transform="scale(.5) translate(0 2)"/><path d="M3 19 L9 8 L13 15 L16 10 L21 19 Z"/></svg>Last private land before Banff</span>
-            <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2c3 4 5 7 5 10a5 5 0 01-10 0c0-3 2-6 5-10z"/></svg>30 min to Rocky Mountain House</span>
+            <a href="tel:14038443083" class="btn-primary">Phone to book — (403) 844-3083 <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="amenities-maps.html" class="btn-ghost">See what's on the grounds</a>
         </div>
     </div>
-    <div class="scroll-cue"><span>Explore</span><span class="line"></span></div>
-</header>
+</section>
+
+<section class="fire-alert">
+    <div class="wrap">
+        <a href="https://www.alberta.ca/wildfire-update-rocky-mountain-house-forest-area" target="_blank" rel="noopener" class="fire-alert-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fire-icon"><path d="M12 2c0 4-4 5-4 9a4 4 0 008 0c0-2-1-3-1-5 0 0 3 2 3 6a6 6 0 11-12 0c0-5 6-6 6-10z"/></svg>
+            <span><b>Check current fire restrictions</b> — Rocky Mountain House Forest Area, before lighting your fire pit.</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fire-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
 <section class="facts">
-    <div class="wrap"><div class="facts-grid">
-        <div class="fact"><div class="fact-n">Year&nbsp;round</div><div class="fact-label">Open every season</div></div>
-        <div class="fact"><div class="fact-n">3,900&nbsp;ft</div><div class="fact-label">Foothills elevation</div></div>
-        <div class="fact"><div class="fact-n">300&nbsp;m</div><div class="fact-label">Off the pavement</div></div>
-        <div class="fact"><div class="fact-n">15&nbsp;min</div><div class="fact-label">To the fishing lakes</div></div>
-    </div></div>
-</section>
-<section class="section about" id="about">
-    <div class="wrap about-grid">
-        <div class="about-copy reveal left">
-            <span class="eyebrow">About Outwest</span>
-            <h2>The last private land <em>before Banff.</em></h2>
-            <p>Outwest Camping &amp; RV Park Ltd. is a <strong>family owned and operated</strong> campground in the Prairie Creek Valley, between the Ram and Clearwater rivers — 300 metres off the pavement at 3,900 feet of foothills elevation.</p>
-            <p>It's open year round: a real escape in the warm months, and a quiet winter base in the off-season. High season runs May through September; low season October through April.</p>
-            <div class="about-sig">
-                <span class="about-sig-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M16 24l6 6 12-12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="about-sig-txt"><b>Family owned &amp; operated</b>15 minutes to fishing lakes, 30 minutes to Rocky Mountain House.</span>
-            </div>
-        </div>
-        <div class="about-fig reveal right">
-            <img src="img/about.jpg" alt="Treed RV sites under tall pines at Outwest Camping &amp; RV Park" />
-            <div class="about-fig-badge"><div class="b-n">Wild Views.<br />Real Escape.</div><div class="b-l">Open year round, family run</div></div>
+    <div class="wrap">
+        <div class="facts-grid">
+            <div class="fact reveal"><div class="fact-n">3,900 ft</div><div class="fact-label">Elevation</div></div>
+            <div class="fact reveal"><div class="fact-n">Year Round</div><div class="fact-label">Open every season</div></div>
+            <div class="fact reveal"><div class="fact-n">15 min</div><div class="fact-label">To fishing lakes</div></div>
+            <div class="fact reveal"><div class="fact-n">30 min</div><div class="fact-label">To Rocky Mountain House</div></div>
         </div>
     </div>
 </section>
-<section class="section band-wrap" id="stay">
+
+<section class="section gtk">
+    <div class="gtk-bg"><img loading="lazy" decoding="async" src="img/gphoto-2.jpg" alt="" /></div>
     <div class="wrap">
         <div class="section-head reveal">
-            <span class="eyebrow">Ways to stay</span>
-            <h2>RV, tent, or <em>cabin.</em></h2>
-            <p>However you like to get out here — there's a spot for it.</p>
-        </div>
-        <div class="band reveal">
-            <div class="band-fig"><span class="band-num">01</span><img src="img/known-1.jpg" alt="Fully-equipped cabins at Outwest Camping &amp; RV Park" /></div>
-            <div class="band-copy">
-                <span class="eyebrow">Cabins</span>
-                <h3>Fully equipped <em>cabins.</em></h3>
-                <p>Prefer four walls? Outwest has fully-equipped cabins for a comfortable basecamp with the wilderness right outside.</p>
-            </div>
-        </div>
-        <div class="band flip reveal">
-            <div class="band-fig"><span class="band-num">02</span><img src="img/known-2.jpg" alt="A tent site among the pines at Outwest Camping &amp; RV Park" /></div>
-            <div class="band-copy">
-                <span class="eyebrow">Tent sites</span>
-                <h3>Tent sites <em>in the trees.</em></h3>
-                <p>Tent sites come with 15-amp power — keep it simple, with just enough to stay charged under the pines.</p>
-            </div>
-        </div>
-        <div class="band reveal">
-            <div class="band-fig"><span class="band-num">03</span><img src="img/known-3.jpg" alt="An RV site with power and water at Outwest Camping &amp; RV Park" /></div>
-            <div class="band-copy">
-                <span class="eyebrow">RV sites</span>
-                <h3>RV sites with <em>power &amp; water.</em></h3>
-                <p>RV sites are available with 30 or 50 amp power and water — room for the rig, with the views to match.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="section rates" id="rates">
-    <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">Rates</span>
-            <h2>Simple <em>rates.</em></h2>
-            <p>By the night, week or month. Power is billed separately on monthly rentals.</p>
-        </div>
-        <div class="rate-table reveal">
-            <div class="rate-row head"><span>Site type</span><span class="rate-n">Night / Week / Month</span></div>
-            <div class="rate-row"><span>Tent · 15 amp</span><span class="rate-n">$30 / $180 / —</span></div>
-            <div class="rate-row"><span>30 amp · power &amp; water</span><span class="rate-n">$45 / $270 / $810</span></div>
-            <div class="rate-row"><span>50 amp · power &amp; water</span><span class="rate-n">$50 / $300 / $850</span></div>
-        </div>
-        <p class="rates-note reveal">Power is billed separately on monthly rentals. 2026 seasonal sites are currently fully booked. All guests review and sign the campground rules and regulations at check-in; failure to follow them may result in immediate removal. Cancellations: long weekends require a minimum fee equal to three nights unless cancelled within seven days of booking; other reservations need three days' notice, and cancellations within three days of arrival incur a fee equal to a three-night stay.</p>
-    </div>
-</section>
-<section class="section gtk" id="know">
-    <div class="gtk-bg"><img src="img/approach-bg.jpg" alt="" aria-hidden="true" /></div>
-    <div class="wrap">
-        <div class="section-head reveal">
-            <span class="eyebrow">Good to know</span>
-            <h2>Before you <em>head out.</em></h2>
-            <p>A remote escape rewards a little planning.</p>
+            <span class="eyebrow">Just a ride away</span>
+            <h2>Made for <em>adventurers.</em></h2>
+            <p>The luxury of idling your quad from your site right to the trails. Outwest is an ATV destination first, base camp second — quad wash on site, idle-only travel from your pad to the gate, and the back country waiting where the gravel ends.</p>
         </div>
         <div class="gtk-grid">
-            <div class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Open year round</h4><p>High season May–September; low season October–April. It's open all year.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>Getting here</h4><p>In the Prairie Creek Valley, 300 m off pavement, 30 minutes from Rocky Mountain House.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Booking</h4><p>Email outwestrv@telus.net to reserve. 2026 seasonal sites are fully booked.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">4</div><h4>Rules at check-in</h4><p>All guests review and sign the campground rules at check-in; not following them can mean removal.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">5</div><h4>Cancellations</h4><p>Three days' notice on most stays; long weekends a three-night minimum unless cancelled within 7 days of booking.</p></div>
-            <div class="gtk-item reveal"><div class="gtk-medallion">6</div><h4>Fire bans</h4><p>Check current Alberta fire restrictions before you travel.</p></div>
+            <article class="gtk-item reveal"><div class="gtk-medallion">1</div><h4>Coin-op quad wash</h4><p>Dual-sided quad wash bays on the grounds — rinse off the day before you sit down by the fire.</p></article>
+            <article class="gtk-item reveal"><div class="gtk-medallion">2</div><h4>Idle to the trails</h4><p>ATVs may be driven at idle speed only from your site to the entrance. From there, the trail system is yours.</p></article>
+            <article class="gtk-item reveal"><div class="gtk-medallion">3</div><h4>Ram &amp; Clearwater rivers</h4><p>You're sandwiched between two of central Alberta's classic trout rivers. Bring rod and reel.</p></article>
         </div>
     </div>
 </section>
+
+<section class="section aerial-band">
+    <div class="wrap">
+        <div class="section-head reveal" style="text-align:center;margin:0 auto 36px;max-width:740px">
+            <span class="eyebrow" style="justify-content:center">From above</span>
+            <h2>The whole place, <em>at a glance.</em></h2>
+            <p>Treed sites, gravel roads, RV bays and tent spots — sprawling across the foothills under the spruce.</p>
+        </div>
+        <figure class="aerial-fig reveal">
+            <a href="img/fb-photo10.jpg"><img loading="lazy" decoding="async" src="img/fb-photo10.jpg" alt="Aerial view of the Outwest grounds — gravel roads weaving through the spruce, RV pads scattered through the trees, fall colors at the edges" /></a>
+            <figcaption>Outwest Camping &amp; RV Park, looking down from above the spruce.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section about">
+    <div class="wrap">
+        <div class="about-grid">
+            <div class="about-copy reveal left">
+                <span class="eyebrow">The last privately owned land before Banff</span>
+                <h2>Easy access. <em>Wild country.</em></h2>
+                <p>Overlooking Prairie Creek Valley at 3,900 feet, Outwest Camping &amp; RV Park sits between the Ram and Clearwater rivers. Just 15 minutes to great fishing lakes and 30 minutes to Rocky Mountain House.</p>
+                <p>Easy access — <strong>only 300 meters off pavement</strong> — but far enough out to feel like your own piece of the wild.</p>
+                <p>Open year round: <strong>High Season May through September, Low Season October through April</strong>. RV sites, tent sites and fully-equipped cabins.</p>
+            </div>
+            <figure class="about-fig reveal right">
+                <img loading="lazy" decoding="async" src="img/fb-photo5.jpg" alt="View from an Outwest cabin deck over golden fall aspens and the foothills below, with blue mountains in the distance" />
+                <div class="about-fig-badge"><div class="b-n">Wild Views</div><div class="b-l">Off the deck of a cabin in fall — aspens going gold, the foothills going on for miles.</div></div>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section feat">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Three ways to stay</span>
+            <h2>RV, tent or <em>cabin.</em></h2>
+            <p>Outwest takes all sizes of rigs and all kinds of campers — pick the one that fits the trip.</p>
+        </div>
+        <div class="feat-grid">
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="10" width="14" height="8" rx="1"/><rect x="17" y="12" width="4" height="6" rx="1"/><circle cx="7" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg></div>
+                <h4>RV Sites — 30 or 50 amp</h4>
+                <p>Choose from 30 amp or 50 amp sites — all include power and water. <strong>$45/night</strong> (30A) or <strong>$50/night</strong> (50A).</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20l9-16 9 16M8 20l4-8 4 8"/></svg></div>
+                <h4>Tent Sites — 15 amp</h4>
+                <p>15 amp power only — for the tents, the small trailers and the simpler set-ups. <strong>$30/night</strong>.</p>
+            </div>
+            <div class="feat-cell reveal">
+                <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div>
+                <h4>Fully-equipped cabins</h4>
+                <p>Nestled in the far end of the campground are the fully equipped cabins. Phone the office for nightly rates and availability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section cabin-show">
+    <div class="wrap">
+        <div class="cabin-grid">
+            <div class="cabin-copy reveal left">
+                <span class="eyebrow">Fully equipped cabins</span>
+                <h2>Heat, kitchen, bath. <em>Outside your door.</em></h2>
+                <p>Nestled in the far end of the campground are the fully equipped cabins — log walls, vaulted wood ceilings, a real kitchen, a real bathroom, real heat. For when the tent isn't the answer.</p>
+                <p>Open year-round, including the cold months when nothing else around here is.</p>
+                <a href="tel:14038443083" class="btn-line" style="border-color:rgba(19,26,34,.4);color:var(--ink);margin-top:8px">Phone for cabin availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <figure class="cabin-feature reveal right">
+                <a href="img/gphoto-6.jpg"><img loading="lazy" decoding="async" src="img/gphoto-6.jpg" alt="A log cabin with green roof at Outwest, picnic table on the gravel pad and fire pit out front under the spruce" /></a>
+            </figure>
+        </div>
+        <div class="cabin-interiors">
+            <a href="img/fb-photo7.jpg" class="cabin-int reveal"><img loading="lazy" decoding="async" src="img/fb-photo7.jpg" alt="Inside an Outwest cabin bedroom — wood log walls, vaulted wood ceiling, queen bed, lit Christmas tree by the window" /><span class="cabin-int-cap">Bedroom</span></a>
+            <a href="img/fb-photo8.jpg" class="cabin-int reveal"><img loading="lazy" decoding="async" src="img/fb-photo8.jpg" alt="The kitchen and dining nook inside an Outwest cabin — modern kitchen, log walls, dining table with checkered table runner" /><span class="cabin-int-cap">Kitchen &amp; dining</span></a>
+            <a href="img/fb-photo11.jpg" class="cabin-int reveal"><img loading="lazy" decoding="async" src="img/fb-photo11.jpg" alt="The bathroom inside an Outwest cabin — glass-door shower stall, vanity with sink, log walls" /><span class="cabin-int-cap">Bath &amp; shower</span></a>
+        </div>
+    </div>
+</section>
+
+<section class="section scenes">
+    <div class="wrap">
+        <div class="section-head reveal" style="text-align:center;margin:0 auto 44px">
+            <span class="eyebrow" style="justify-content:center">From the property</span>
+            <h2>A few <em>scenes</em>.</h2>
+        </div>
+        <div class="scenes-grid">
+            <a href="img/fb-photo9.jpg" class="scene wide reveal"><img loading="lazy" decoding="async" src="img/fb-photo9.jpg" alt="A long lineup of Polaris side-by-sides parked beside a Polaris Ranger trailer at Outwest — rally day on the grounds" /><span class="scene-cap">Polaris rally day</span></a>
+            <a href="img/gphoto-4.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/gphoto-4.jpg" alt="Close-up of the branded OUTWEST CAMPING fire pit glowing with flames inside, bear silhouettes cut into the steel" /><span class="scene-cap">The branded fire pit</span></a>
+            <a href="img/gphoto-5.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/gphoto-5.jpg" alt="A red mud-splattered quad parked at an Outwest site with helmet on the front rack" /><span class="scene-cap">Post-ride at the site</span></a>
+            <a href="img/gphoto-37.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/gphoto-37.jpg" alt="Two kids in helmets on a muddy quad with a red gas can, riverbank behind" /><span class="scene-cap">Family quad day</span></a>
+            <a href="img/gphoto-1.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/gphoto-1.jpg" alt="Northern lights glowing pink and green over spruce trees at Outwest, with the branded OUTWEST fire pit blazing in the foreground" /><span class="scene-cap">Aurora over the pit</span></a>
+            <a href="img/gphoto-33.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/gphoto-33.jpg" alt="Two kids in helmets riding a mud-covered quad through a creek crossing in the foothills" /><span class="scene-cap">Creek crossing</span></a>
+            <a href="img/fb-photo13.jpg" class="scene reveal"><img loading="lazy" decoding="async" src="img/fb-photo13.jpg" alt="A Fuzion toy-hauler fifth-wheel parked at an Outwest site with snow on the ground — winter set-up, year-round access" /><span class="scene-cap">Toy hauler, year-round</span></a>
+        </div>
+    </div>
+</section>
+
+<section class="section gallery-band">
+    <div class="wrap">
+        <div class="section-head reveal" style="text-align:center;margin:0 auto 14px;max-width:760px">
+            <span class="eyebrow" style="justify-content:center">More from the grounds</span>
+            <h2>Ten more <em>from the camera roll.</em></h2>
+            <p>Branded fire pits, family quad days, the cabin, a moose at the picnic table — what an actual weekend at Outwest looks like.</p>
+        </div>
+        <div class="gallery">
+            <a href="img/gphoto-7.jpg" class="x6-3"><img loading="lazy" decoding="async" src="img/gphoto-7.jpg" alt="The branded OUTWEST CAMPING fire pit at night, big flames licking up through the cut-out letters" /></a>
+            <a href="img/gphoto-13.jpg" class="x6-3"><img loading="lazy" decoding="async" src="img/gphoto-13.jpg" alt="A muddy track heading down toward the wide forested valley below, big Alberta sky overhead" /></a>
+            <a href="img/gphoto-40.jpg" class="x4-3"><img loading="lazy" decoding="async" src="img/gphoto-40.jpg" alt="A kid in a helmet on a pink quad parked on the gravel road inside Outwest" /></a>
+            <a href="img/gphoto-22.jpg" class="x4-3"><img loading="lazy" decoding="async" src="img/gphoto-22.jpg" alt="The branded OUTWEST fire pit lit beside a wagon cart, parked truck behind" /></a>
+            <a href="img/fb-photo12.jpg" class="x4-3"><img loading="lazy" decoding="async" src="img/fb-photo12.jpg" alt="Tall spruce trees stretching up to the sky on a quiet path through the Outwest grounds" /></a>
+            <a href="img/gphoto-17.jpg" class="x4-3"><img loading="lazy" decoding="async" src="img/gphoto-17.jpg" alt="A moose walking through the trees at the edge of a campsite, red checkered tablecloth in the foreground" /></a>
+            <a href="img/gphoto-12.jpg" class="x4-2"><img loading="lazy" decoding="async" src="img/gphoto-12.jpg" alt="A travel trailer set up on a wooded gravel site at Outwest" /></a>
+            <a href="img/fb-photo4.jpg" class="x4-2"><img loading="lazy" decoding="async" src="img/fb-photo4.jpg" alt="A quiet treed campsite at Outwest with a picnic table, big spruce all around" /></a>
+            <a href="img/gphoto-32.jpg" class="x4-2"><img loading="lazy" decoding="async" src="img/gphoto-32.jpg" alt="Late-day sun streaming through the spruce trees at Outwest" /></a>
+            <a href="img/fb-photo3.jpg" class="x6-3"><img loading="lazy" decoding="async" src="img/fb-photo3.jpg" alt="The Outwest clubhouse with carved bear posts, picnic tables out front and the valley opening out behind" /></a>
+            <a href="img/fb-photo1.jpg" class="x6-3"><img loading="lazy" decoding="async" src="img/fb-photo1.jpg" alt="The open gravel clearing at the front of Outwest with the treeline beyond" /></a>
+        </div>
+    </div>
+</section>
+
+<section class="section social-band">
+    <div class="wrap">
+        <div class="social-grid">
+            <div class="social-copy reveal left">
+                <span class="eyebrow">Latest from the grounds</span>
+                <h2>What's happening on <em>Facebook.</em></h2>
+                <p>Outwest posts when there's news — fire bans, event weekends, openings, ATV trail conditions, the occasional sunset over the valley. The live feed is on the right.</p>
+                <p>Follow the page for the day-to-day pulse of the campground.</p>
+                <a href="https://www.facebook.com/OutwestCampingRvPark/" target="_blank" rel="noopener" class="btn-primary" style="margin-top:14px">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12a10 10 0 10-11.6 9.88v-6.99h-2.5V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.2.2 2.2.2v2.43h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.72l-.43 2.89h-2.29v6.99A10 10 0 0022 12z"/></svg>
+                    Open Facebook page
+                    <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="social-fb reveal right">
+                <div id="fb-root"></div>
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/OutwestCampingRvPark/"
+                     data-tabs="timeline"
+                     data-width="500"
+                     data-height="640"
+                     data-small-header="false"
+                     data-adapt-container-width="true"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/OutwestCampingRvPark/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/OutwestCampingRvPark/">Outwest Camping &amp; RV Park</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section tiles">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="eyebrow">Plan your visit</span>
+            <h2>The rest of <em>the site.</em></h2>
+        </div>
+        <div class="tiles-grid">
+            <a href="amenities-maps.html" class="tile reveal"><div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 12h18M9 5v14"/></svg></div><h3>Amenities &amp; Maps</h3><p>Quad wash, camp store, three shower houses, idle-access trails — and the official campground map PDF.</p><span class="tile-cta">See what's here →</span></a>
+            <a href="rates-regulations.html" class="tile reveal"><div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 7h10a3 3 0 010 6H8a3 3 0 000 6h11"/></svg></div><h3>Rates &amp; Regulations</h3><p>Tent / 30A / 50A nightly, weekly and monthly rates. Cancellation policy. Full rules guests sign at check-in.</p><span class="tile-cta">View rates →</span></a>
+            <a href="events.html" class="tile reveal"><div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div><h3>Events</h3><p>The Canada Day Fireworks and the Search for Bigfoot Charity Poker Rally — July 18, 2026.</p><span class="tile-cta">See what's on →</span></a>
+        </div>
+    </div>
+</section>
+
 <section class="cta">
     <div class="wrap">
-        <h2>Get out here.</h2>
-        <p>Email Outwest to check availability and book your RV site, tent site or cabin.</p>
+        <h2>Phone now to book your reservation.</h2>
+        <p>The fastest way to reserve a site is straight from the source — give us a call.</p>
         <div class="cta-actions">
-            <a href="mailto:outwestrv@telus.net" class="btn-light">Email outwestrv@telus.net <span class="ar" aria-hidden="true">→</span></a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Outwest+Camping+RV+Park%2C+Prairie+Creek%2C+Alberta" target="_blank" rel="noopener" class="btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+            <a href="tel:14038443083" class="btn-light">Call (403) 844-3083 <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="contact.html" class="btn-line" style="border-color:rgba(255,255,255,.5);color:#fff">Or send us a message</a>
         </div>
     </div>
 </section>
+
 <footer class="footer">
     <div class="wrap">
         <div class="footer-top">
             <div>
-                <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" width="40" height="40"><path d="M4 38 L16 16 L24 30 L30 20 L44 38 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="34" cy="13" r="3.4" stroke="currentColor" stroke-width="2.2"/></svg></span><span class="brand-name">Outwest<span class="brand-sub">Camping &amp; RV Park · Prairie Creek</span></span></div>
-                <p class="footer-intro">A family-owned, year-round campground in the Prairie Creek Valley — the last private land between you and Banff National Park.</p>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Outwest Camping RV Park on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>Outwest on Facebook</a>
+                <a href="index.html" class="brand"><span class="brand-mark has-logo"><img src="img/outwestcamping-logo.webp" alt="Outwest Camping &amp; RV Park" /></span></a>
+                <p class="footer-intro">Family Owned &amp; Operated. Overlooking Prairie Creek Valley at 3,900 feet, between the Ram and Clearwater rivers — 30 minutes from Rocky Mountain House. Open year round.</p>
+                <div class="footer-socials">
+                    <a href="tel:14038443083" class="footer-social"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 5a2 2 0 012-2h2.5l2 5-3 1.5a11 11 0 005 5l1.5-3 5 2V18a2 2 0 01-2 2A17 17 0 013 5z"/></svg>Call us</a>
+                    <a href="mailto:outwestrv@telus.net" class="footer-social"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+                    <a href="https://www.facebook.com/OutwestCampingRvPark/" target="_blank" rel="noopener" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22 12a10 10 0 10-11.6 9.88v-6.99h-2.5V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.2.2 2.2.2v2.43h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.72l-.43 2.89h-2.29v6.99A10 10 0 0022 12z"/></svg>Facebook</a>
+                </div>
             </div>
-            <div class="footer-col"><h5>Contact</h5><a href="mailto:outwestrv@telus.net">outwestrv@telus.net</a><p>Prairie Creek Valley<br />West-central Alberta</p></div>
-            <div class="footer-col"><h5>Stay</h5><a href="#stay">Ways to stay</a><a href="#rates">Rates</a><a href="#know">Good to know</a></div>
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <a href="index.html">Home</a><a href="amenities-maps.html">Amenities &amp; Maps</a><a href="rates-regulations.html">Rates &amp; Regulations</a><a href="contact.html">Contact Outwest</a><a href="events.html">Events</a><a href="links.html">Links</a>
+            </div>
+            <div class="footer-col">
+                <h5>Find Us</h5>
+                <p>RR2 Site 1 Box 24<br/>Rocky Mountain House, AB T4T 1B2</p>
+                <p>381071 Range Road 10-0</p>
+                <a href="tel:14038443083">(403) 844-3083</a>
+                <a href="mailto:outwestrv@telus.net">outwestrv@telus.net</a>
+                <a href="https://www.alberta.ca/wildfire-update-rocky-mountain-house-forest-area" target="_blank" rel="noopener" style="margin-top:8px;color:var(--rust-soft)">Current fire restrictions →</a>
+            </div>
         </div>
         <div class="footer-map-head">
-            <h5>Find us — Prairie Creek, Alberta</h5>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Outwest+Camping+RV+Park%2C+Prairie+Creek%2C+Alberta" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
+            <h5>The Park on the Map</h5>
+            <a href="https://www.google.com/maps?q=Outwest+Camping+RV+Park+Rocky+Mountain+House+AB" target="_blank" rel="noopener" class="footer-dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</a>
         </div>
-        <div class="footer-map"><iframe title="Map to Outwest Camping &amp; RV Park, Prairie Creek, Alberta" src="https://www.google.com/maps?q=Outwest+Camping+RV+Park,+Prairie+Creek,+Alberta&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="footer-bottom"><span>© 2026 Outwest Camping &amp; RV Park Ltd. · Prairie Creek Valley, Alberta</span><span><a href="mailto:outwestrv@telus.net">outwestrv@telus.net</a></span></div>
+        <div class="footer-map">
+            <iframe src="https://www.google.com/maps?q=Outwest+Camping+RV+Park+Rocky+Mountain+House+AB&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Outwest Camping &amp; RV Park location"></iframe>
+        </div>
+        <div class="footer-bottom">
+            <span>© Outwest Camping &amp; RV Park Ltd.</span>
+            <span><a href="https://outwestcamping.com/" target="_blank" rel="noopener">Visit the original site</a></span>
+        </div>
     </div>
 </footer>
-<script>
-    var nav=document.getElementById('nav');
-    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
-    var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-    t.addEventListener('click',function(){t.classList.toggle('open');l.classList.toggle('open')});
-    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('open');l.classList.remove('open')})});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-    var secs=['about','stay','rates','know'].map(function(id){return document.getElementById(id)}).filter(Boolean),nls=document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll',function(){var p=window.scrollY+120,c='';secs.forEach(function(s){if(s.offsetTop<=p)c=s.id});nls.forEach(function(x){x.classList.toggle('active',x.getAttribute('href')==='#'+c)})},{passive:true});
-</script>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+<script src="app.js"></script>
 </body>
 </html>
