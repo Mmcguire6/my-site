@@ -18,9 +18,10 @@
 <meta property="og:description" content="A custom website that finally matches the work your firm does. Hand-coded for Canadian law firms, accountants, and clinics — $0 down, $199/mo all-inclusive, live in three weeks." />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preload" as="image" href="img/hero-pnw-5-1920.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -631,17 +632,37 @@
     .hero {
         position: relative;
         padding: clamp(48px, 6vw, 88px) 0 clamp(56px, 6vw, 96px);
-        background:
-            linear-gradient(
-                100deg,
-                var(--paper) 0%,
-                var(--paper) 32%,
-                color-mix(in oklch, var(--paper) 65%, transparent) 48%,
-                color-mix(in oklch, var(--paper) 12%, transparent) 72%,
-                transparent 100%
-            ),
-            url('img/hero-pnw-5.jpg') right center / cover no-repeat,
-            var(--paper);
+        background: var(--paper);
+        overflow: hidden;
+        isolation: isolate;
+    }
+    .hero > picture {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        display: block;
+    }
+    .hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        display: block;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+            100deg,
+            var(--paper) 0%,
+            var(--paper) 32%,
+            color-mix(in oklch, var(--paper) 65%, transparent) 48%,
+            color-mix(in oklch, var(--paper) 12%, transparent) 72%,
+            transparent 100%
+        );
     }
     .hero::after {
         content: "";
@@ -652,7 +673,7 @@
         height: 1px;
         background: var(--rule);
     }
-    .hero .wrap { position: relative; z-index: 1; }
+    .hero .wrap { position: relative; z-index: 2; }
     .hero-grid {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
@@ -663,16 +684,14 @@
         padding-top: 4px;
     }
     @media (max-width: 980px) {
-        .hero {
-            background:
-                linear-gradient(
-                    180deg,
-                    var(--paper) 0%,
-                    var(--paper) 60%,
-                    color-mix(in oklch, var(--paper) 30%, transparent) 100%
-                ),
-                url('img/hero-pnw-5.jpg') center 40% / cover no-repeat,
-                var(--paper);
+        .hero-bg-img { object-position: center 40%; }
+        .hero::before {
+            background: linear-gradient(
+                180deg,
+                var(--paper) 0%,
+                var(--paper) 60%,
+                color-mix(in oklch, var(--paper) 30%, transparent) 100%
+            );
         }
     }
     .hero-availability {
@@ -1855,6 +1874,11 @@
 
 <!-- HERO -->
 <section id="top" class="hero">
+    <picture>
+        <source type="image/webp" srcset="img/hero-pnw-5-960.webp 960w, img/hero-pnw-5-1920.webp 1920w" sizes="100vw" />
+        <source type="image/jpeg" srcset="img/hero-pnw-5-960.jpg 960w, img/hero-pnw-5-1920.jpg 1920w" sizes="100vw" />
+        <img class="hero-bg-img" src="img/hero-pnw-5-1920.jpg" alt="" fetchpriority="high" decoding="async" width="1920" height="1280" />
+    </picture>
     <div class="wrap">
         <div class="hero-grid">
             <div class="hero-text">
