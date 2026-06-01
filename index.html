@@ -255,7 +255,7 @@ Includes only latin + latin-ext subsets (covers EN/FR + smart punctuation).
         --paper-deeper: #D6C8A8;
         --ink:          #1A1813;
         --ink-2:        #4A4339;
-        --ink-3:        #847B6B;
+        --ink-3:        #635A49;
         --rule:         #CFC2A6;
         --rule-soft:    #DDD2BA;
         --accent:       #2C3D24;
@@ -2088,7 +2088,7 @@ img { max-width: 100%; display: block; }
     <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
 </aside>
 
-<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true" inert>
     <button type="button" class="nm-loc-back" aria-label="Back to main menu">
         <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
         <span class="nm-loc-back-label">Back</span>
@@ -2507,7 +2507,7 @@ img { max-width: 100%; display: block; }
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Site</h5>
+                <h2 class="footer-h5">Site</h2>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
@@ -2519,13 +2519,13 @@ img { max-width: 100%; display: block; }
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Reach</h5>
+                <h2 class="footer-h5">Reach</h2>
                 <ul>
                     <li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Based</h5>
+                <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
                     <li>Working with businesses across Canada</li>
@@ -2575,7 +2575,7 @@ img { max-width: 100%; display: block; }
     var navMobileLoc = document.querySelector('.nav-mobile-locations');
     function setLoc(open) {
         document.body.classList.toggle('nav-loc-open', open);
-        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (navMobileLoc) { navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true'); navMobileLoc.toggleAttribute('inert', !open); }
         var trig = document.querySelector('.nm-loc-trigger');
         if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
     }

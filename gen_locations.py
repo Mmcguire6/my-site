@@ -166,7 +166,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <a href="../contact.html" class="nav-mobile-cta">Start a project →</a>
 </aside>
 
-<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true" inert>
     <button type="button" class="nm-loc-back" aria-label="Back to main menu">
         <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
         <span class="nm-loc-back-label">Back</span>
@@ -373,7 +373,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Site</h5>
+                <h2 class="footer-h5">Site</h2>
                 <ul>
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../work.html">Selected work</a></li>
@@ -385,13 +385,13 @@ CITY_PAGE = """<!DOCTYPE html>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Reach</h5>
+                <h2 class="footer-h5">Reach</h2>
                 <ul>
                     <li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Based</h5>
+                <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
                     <li>Working with businesses across Canada</li>
@@ -426,7 +426,7 @@ CITY_PAGE = """<!DOCTYPE html>
     var navMobileLoc = document.querySelector('.nav-mobile-locations');
     function setLoc(open) {{
         document.body.classList.toggle('nav-loc-open', open);
-        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (navMobileLoc) {{ navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true'); navMobileLoc.toggleAttribute('inert', !open); }}
         var trig = document.querySelector('.nm-loc-trigger');
         if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
     }}
@@ -460,26 +460,6 @@ CITY_PAGE = """<!DOCTYPE html>
         a.addEventListener('click', function () {{ setLoc(false); setNav(false); }});
     }});
 
-    document.addEventListener('click', function (e) {{
-        var a = e.target.closest('a');
-        if (!a) return;
-        var href = a.getAttribute('href');
-        if (!href) return;
-        if (
-            a.target === '_blank' ||
-            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
-            href.charAt(0) === '#' ||
-            href.indexOf('mailto:') === 0 ||
-            href.indexOf('tel:') === 0 ||
-            a.hasAttribute('download')
-        ) return;
-        var url = new URL(a.href, window.location.href);
-        if (url.origin !== window.location.origin) return;
-        if (url.pathname === window.location.pathname) return;
-        e.preventDefault();
-        document.body.classList.add('is-leaving');
-        setTimeout(function () {{ window.location.href = a.href; }}, 220);
-    }});
 </script>
 
 </body>
@@ -497,7 +477,7 @@ CITY_STYLES = """
     --paper-deeper: #D6C8A8;
     --ink:          #1A1813;
     --ink-2:        #4A4339;
-    --ink-3:        #847B6B;
+    --ink-3:        #635A49;
     --rule:         #CFC2A6;
     --rule-soft:    #DDD2BA;
     --accent:       #2C3D24;
@@ -521,13 +501,6 @@ body {
     font-family: var(--sans); font-size: 16px; line-height: 1.55;
     color: var(--ink); background: var(--paper);
     -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-    animation: pageEnter 380ms cubic-bezier(.2,.7,.2,1) both;
-}
-@keyframes pageEnter { from { opacity: 0; } to { opacity: 1; } }
-@keyframes pageLeave { from { opacity: 1; } to { opacity: 0; } }
-body.is-leaving { animation: pageLeave 260ms cubic-bezier(.4,.1,.3,1) forwards; }
-@media (prefers-reduced-motion: reduce) {
-    body, body.is-leaving { animation: none !important; }
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -1073,7 +1046,7 @@ ul, ol { list-style: none; }
 .footer-blurb { font-size: 14px; line-height: 1.6; color: color-mix(in oklch, var(--paper) 60%, transparent); max-width: 36ch; margin-bottom: 22px; }
 .footer-credit { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 10px; }
 .footer-credit-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--rust); }
-.footer-h5 { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: color-mix(in oklch, var(--paper) 50%, transparent); margin-bottom: 18px; }
+.footer-h5 { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: color-mix(in oklch, var(--paper) 68%, transparent); margin-bottom: 18px; }
 .footer-col ul { display: flex; flex-direction: column; gap: 9px; }
 .footer-col a, .footer-col li { font-size: 13.5px; color: color-mix(in oklch, var(--paper) 78%, transparent); transition: color 200ms ease; }
 .footer-col a:hover { color: var(--paper); }
@@ -1082,7 +1055,7 @@ ul, ol { list-style: none; }
     flex-wrap: wrap; gap: 16px; padding-top: 28px;
     border-top: 1px solid color-mix(in oklch, var(--paper) 14%, transparent);
     font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: color-mix(in oklch, var(--paper) 50%, transparent);
+    text-transform: uppercase; color: color-mix(in oklch, var(--paper) 68%, transparent);
 }
 .footer-bottom-links a { transition: color 200ms ease; }
 .footer-bottom-links a:hover { color: var(--paper); }
@@ -1442,7 +1415,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <a href="contact.html" class="nav-mobile-cta">Start a project →</a>
 </aside>
 
-<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true">
+<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true" inert>
     <button type="button" class="nm-loc-back" aria-label="Back to main menu">
         <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
         <span class="nm-loc-back-label">Back</span>
@@ -1494,7 +1467,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Site</h5>
+                <h2 class="footer-h5">Site</h2>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
@@ -1506,13 +1479,13 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Reach</h5>
+                <h2 class="footer-h5">Reach</h2>
                 <ul>
                     <li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h5 class="footer-h5">Based</h5>
+                <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
                     <li>Working with businesses across Canada</li>
@@ -1547,7 +1520,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     var navMobileLoc = document.querySelector('.nav-mobile-locations');
     function setLoc(open) {{
         document.body.classList.toggle('nav-loc-open', open);
-        if (navMobileLoc) navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (navMobileLoc) {{ navMobileLoc.setAttribute('aria-hidden', open ? 'false' : 'true'); navMobileLoc.toggleAttribute('inert', !open); }}
         var trig = document.querySelector('.nm-loc-trigger');
         if (trig) trig.setAttribute('aria-expanded', open ? 'true' : 'false');
     }}
@@ -1581,26 +1554,6 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         a.addEventListener('click', function () {{ setLoc(false); setNav(false); }});
     }});
 
-    document.addEventListener('click', function (e) {{
-        var a = e.target.closest('a');
-        if (!a) return;
-        var href = a.getAttribute('href');
-        if (!href) return;
-        if (
-            a.target === '_blank' ||
-            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
-            href.charAt(0) === '#' ||
-            href.indexOf('mailto:') === 0 ||
-            href.indexOf('tel:') === 0 ||
-            a.hasAttribute('download')
-        ) return;
-        var url = new URL(a.href, window.location.href);
-        if (url.origin !== window.location.origin) return;
-        if (url.pathname === window.location.pathname) return;
-        e.preventDefault();
-        document.body.classList.add('is-leaving');
-        setTimeout(function () {{ window.location.href = a.href; }}, 220);
-    }});
 </script>
 
 </body>
