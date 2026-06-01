@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.clarity.ms" />
+<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
 <title>About | Matthew McGuire · Web Design Studio · Edmonton</title>
 <meta name="description" content="A one-person web studio out of Edmonton, Alberta. Designing and building modern, brand-coherent websites for small businesses across Canada." />
@@ -17,24 +20,224 @@
 <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-500-normal.woff2" crossorigin />
-    <link rel="stylesheet" href="css/fonts.css" />
+    <style>/* self-hosted fonts (inlined, /fonts/ absolute paths) */
+Includes only latin + latin-ext subsets (covers EN/FR + smart punctuation).
+   No external requests; all .woff2 files in /fonts. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/inter-400-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/inter-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/inter-500-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/inter-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/inter-600-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/inter-600-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/inter-700-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/inter-700-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-400-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-500-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-600-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/jetbrains-mono-600-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/playfair-display-500-italic-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/playfair-display-500-italic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/playfair-display-700-italic-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/playfair-display-700-italic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/playfair-display-400-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/playfair-display-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/playfair-display-500-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/playfair-display-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/playfair-display-700-normal-latext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/playfair-display-700-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
+<!-- Analytics (GA + Clarity) loaded off the critical path to protect LCP/TBT -->
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-CR8009ZP6T');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "wh3e6pv2u4");
+    function loadAnalytics() {
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T';
+        document.head.appendChild(ga);
+        gtag('js', new Date());
+        gtag('config', 'G-CR8009ZP6T');
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    }
+    if (document.readyState === 'complete') { setTimeout(loadAnalytics, 1); }
+    else { window.addEventListener('load', function () {
+        ('requestIdleCallback' in window) ? requestIdleCallback(loadAnalytics, { timeout: 3000 }) : setTimeout(loadAnalytics, 1200);
+    }); }
 </script>
 
 <style>
@@ -1244,7 +1447,179 @@ img { max-width: 100%; display: block; }
     .nav-mobile-locations { display: none !important; }
 }
 </style>
-<link rel="stylesheet" href="css/mobile-polish.css?v=2" />
+<style>/* mobile-polish (inlined to avoid render-blocking) */
+/* ============================================================
+   MOBILE POLISH — shared across all root pages
+   Loaded after each page's inline styles so these rules win.
+   Target: 600px / 480px / 380px breakpoints.
+   ============================================================ */
+
+/* ── 600px and under: tablet portrait / large phones ── */
+@media (max-width: 600px) {
+
+  /* Gutter — current 20px feels cramped at 375px. Drop to 18px and let
+     content breathe a bit closer to the edge without hugging. */
+  :root { --gutter: 18px; }
+  .wrap { padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  /* Section vertical rhythm — most pages use clamp(80px, 10vw, 144px)
+     which resolves to ~117px on a 375px viewport. Compress to a tighter
+     mobile rhythm so users aren't scrolling through dead space. */
+  .section,
+  .about-section,
+  .about,
+  .work-featured,
+  .work-section,
+  .work-grid-section,
+  .tiers,
+  .how-section,
+  .contact-hero,
+  .contact-body,
+  .faq-hero,
+  .faq-section,
+  .legal-hero,
+  .legal-body,
+  .locations-hero,
+  .locations-list,
+  .cta-band,
+  .next-section,
+  .about-bio-section,
+  .about-philosophy,
+  .about-callout,
+  .skills-hero,
+  .skills-grid-section { padding-top: 56px; padding-bottom: 56px; }
+
+  /* Hero sections deserve a touch more breathing room than mid-page bands */
+  .hero, .work-hero, .pricing-hero, .about-hero, .how-hero,
+  .contact-hero, .faq-hero, .legal-hero, .locations-hero, .skills-hero,
+  .err-hero, .loc-hero, .nf-hero { padding-top: 80px; padding-bottom: 64px; }
+
+  /* Button rows — tighten gap, allow stacking with cleaner spacing */
+  .hero-actions, .cta-band-actions, .cta-actions, .work-cta-row,
+  .contact-cta-actions, .pricing-cta-actions, .about-cta-row {
+    gap: 12px;
+  }
+
+  /* Buttons — bump to comfortable 44px+ tap target */
+  .btn, .text-link { padding-top: 13px; padding-bottom: 13px; }
+  .text-link { padding-block: 6px; }
+
+  /* Mobile nav drawer — display sizing softer at 375px */
+  .nav-mobile-links a,
+  .nav-drawer a,
+  .mobile-nav a { font-size: clamp(28px, 7vw, 42px); padding: 10px 0; }
+
+  /* Prose links — give tap area without changing visual look */
+  .legal-prose a,
+  .faq-list a,
+  .about-body a,
+  .how-body a { padding-block: 2px; }
+
+  /* Form fields — keep tap targets ≥ 44px tall */
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="url"], textarea, select {
+    font-size: 16px; /* prevents iOS zoom-on-focus */
+    padding: 14px 14px;
+  }
+
+  /* Make sure long URLs / emails wrap rather than overflow */
+  .legal-prose, .faq-list, .contact-body { overflow-wrap: anywhere; }
+
+  /* Tighten footer */
+  .footer { padding-top: 56px; padding-bottom: 36px; }
+
+  /* Contact "Other ways to reach" list — old 3-col grid pushes the email
+     value into the arrow on narrow screens. Stack key/val in one column
+     with arrow vertically centred in the second column, and let long URLs
+     wrap instead of overflowing. */
+  .direct-list a {
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
+    row-gap: 4px;
+    padding: 18px 0;
+  }
+  .direct-list .direct-key { grid-column: 1; grid-row: 1; }
+  .direct-list .direct-val {
+    grid-column: 1; grid-row: 2;
+    font-size: clamp(15px, 4.5vw, 20px);
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .direct-list .direct-arrow { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+}
+
+/* ── 480px and under: phones (most common modern phone width) ── */
+@media (max-width: 480px) {
+
+  /* Hero headings — anything using clamp(40-50px, 6-8vw, 80-116px)
+     resolves to the lower bound here. Tighten further so they don't
+     overpower the small viewport. */
+  .hero-h1, .work-hero-h1, .pricing-h1, .about-h, .about-h1,
+  .contact-hero-h1, .faq-h1, .how-hero-h1, .locations-h1,
+  .legal-h1, .skills-hero-h1, .err-h1, .nf-h1,
+  .loc-hero h1, .pricing-hero h1, .contact-hero h1,
+  .faq-hero h1, .legal-hero h1, .about-hero h1, .work-hero h1 {
+    font-size: clamp(32px, 8.5vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+  }
+
+  /* Mid-page section headings */
+  .about-h, .work-section-h, .tiers-h2, .faq-section-h,
+  .how-section-h, .contact-section-h, .locations-section-h,
+  .skills-section-h, .nm-loc-h, .tiers-compare-h,
+  .cta-band-h2, .contact-form-title {
+    font-size: clamp(26px, 6.5vw, 36px);
+    line-height: 1.12;
+  }
+
+  /* Section padding gets one more compression step */
+  .section, .about-section, .about, .work-featured, .work-section,
+  .tiers, .how-section, .contact-body, .faq-section, .legal-body,
+  .locations-list, .cta-band, .next-section, .skills-grid-section {
+    padding-top: 48px; padding-bottom: 48px;
+  }
+
+  /* Eyebrow / label letter-spacing — too wide at small widths */
+  .eyebrow, .pre-title, .kicker, .section-eyebrow,
+  .work-eyebrow, .tier-eyebrow { letter-spacing: 0.12em; }
+
+  /* Body copy — drop to 15px for denser pages */
+  .legal-prose, .legal-prose p, .legal-prose li,
+  .faq-list, .faq-list p,
+  .how-body p { font-size: 15px; line-height: 1.7; }
+
+  /* Buttons full-width when they stack — cleaner than half-width oddities */
+  .hero-actions .btn,
+  .cta-band-actions .btn,
+  .cta-actions .btn,
+  .pricing-cta-actions .btn { width: 100%; justify-content: center; }
+
+  /* Cards: tighten internal padding */
+  .work-card-body, .tier-card, .faq-card, .about-card,
+  .contact-form-card, .how-card { padding: 24px 20px; }
+
+  /* Tier price — was 56-80px clamp, soften to fit small screen */
+  .tier-price { font-size: clamp(42px, 11vw, 60px); }
+}
+
+/* ── 380px and under: tiny phones (iPhone SE 1st gen, older Android) ── */
+@media (max-width: 380px) {
+
+  :root { --gutter: 14px; }
+
+  .hero-h1, .work-hero-h1, .pricing-h1, .about-h1, .contact-hero-h1,
+  .faq-h1, .how-hero-h1, .locations-h1, .legal-h1, .skills-hero-h1,
+  .err-h1 { font-size: clamp(28px, 9vw, 36px); }
+
+  .section, .about-section, .about, .work-featured, .work-section,
+  .tiers, .how-section, .contact-body, .faq-section, .legal-body,
+  .locations-list, .cta-band, .next-section, .skills-grid-section {
+    padding-top: 40px; padding-bottom: 40px;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
