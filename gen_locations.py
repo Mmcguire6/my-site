@@ -38,21 +38,21 @@ OUT.mkdir(exist_ok=True)
 CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
     ("Alberta", "AB", [
         ("edmonton", "Edmonton",
-         "Edmonton is home base — the studio works out of here, and most of my clients are firms within an hour's drive of downtown. From Whyte Avenue lawyers to clinics in Sherwood Park to CPAs in St. Albert, I build websites for the kinds of small Edmonton-area practices that can't justify a $15,000 agency build but still need a presence that does justice to their work."),
+         "Edmonton is home base. The studio works out of here, and most of my clients are businesses within an hour's drive of downtown. From Whyte Avenue storefronts to clinics in Sherwood Park to trades in St. Albert, I build websites for the kinds of small Edmonton-area businesses that can't justify a $15,000 agency build but still need a presence that does justice to their work."),
         ("calgary", "Calgary",
-         "Calgary's professional-services market moves fast. A modern, hand-coded site sets the right tone with clients researching counsel from Mission, Beltline, or one of the suburban office parks. I work with Calgary law firms, accounting practices, and consultancies remotely — every build, edit round, and hosting handover happens online, with no in-person discovery call required."),
+         "Calgary's small-business market moves fast. A modern, hand-coded site sets the right tone with customers researching you from Mission, Beltline, or one of the suburban office parks. I work with Calgary shops, clinics, trades, and consultancies remotely. Every build, edit round, and hosting handover happens online, with no in-person discovery call required."),
         ("st-albert", "St. Albert",
-         "St. Albert is a quiet, prosperous suburb full of two- and three-person professional practices — family lawyers, dental clinics, financial planners. Most of these firms are too small to bother with a Toronto agency, but their clients still expect a website that looks like 2026. That's the gap I'm built for."),
+         "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website that looks like 2026. That's the gap I'm built for."),
         ("sherwood-park", "Sherwood Park",
-         "Sherwood Park has one of the densest concentrations of small professional firms in Alberta. Strathcona County clinics, Baseline Road lawyers, and accountants serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $199 a month, everything included."),
+         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $199 a month, everything included."),
         ("leduc", "Leduc",
-         "Leduc firms serve a corridor that's exploded in the last decade — international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
+         "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
         ("spruce-grove", "Spruce Grove",
-         "Spruce Grove and Stony Plain together form one of the fastest-growing professional markets in the Edmonton region. I build for the small firms that are growing into that market — family lawyers expanding to two associates, CPAs adding a junior, clinics opening a second location. The $199/month plan grows with the practice."),
+         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. I build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The $199/month plan grows with the business."),
         ("airdrie", "Airdrie",
-         "Airdrie has tripled in population in twenty years, and the professional-services market is still catching up. Most Airdrie firms are bootstrapping — solo lawyers, single-CPA practices, two-doctor clinics. A custom website without an enterprise budget is exactly the gap the studio fills."),
+         "Airdrie has tripled in population in twenty years, and the small-business market is still catching up. Most Airdrie businesses are bootstrapping: solo trades, single-owner shops, two-person clinics. A custom website without an enterprise budget is exactly the gap the studio fills."),
         ("red-deer", "Red Deer",
-         "Red Deer firms serve a regional client base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the practice does. I build for central Alberta lawyers, CPAs, and clinics remotely — discovery happens over email, design happens in the browser, and your firm's site goes live without anyone having to drive Highway 2."),
+         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the business does. I build for central Alberta trades, shops, and clinics remotely. Discovery happens over email, design happens in the browser, and your site goes live without anyone having to drive Highway 2."),
     ]),
 ]
 
@@ -133,7 +133,7 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire home">
             <span class="nav-mark-letters">Matthew McGuire</span>
             <span class="nav-mark-name">Designer · developer</span>
         </a>
@@ -185,7 +185,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <p class="hero-availability">{name}, {province} &middot; Now accepting new projects</p>
         <h1 class="hero-name">{name} <span class="last">Web Designer</span></h1>
-        <p class="hero-tag">Custom website design and development for {name} firms — built by hand, hosted, and supported.</p>
+        <p class="hero-tag">Custom website design and development for {name} businesses. Built by hand, hosted, and supported.</p>
         <p class="hero-price">
             <strong>$0 down</strong> &middot; <strong>$199 / month</strong> all-inclusive
             <span class="hero-price-term">12-month minimum &middot; or $3,800 lump sum</span>
@@ -205,10 +205,10 @@ CITY_PAGE = """<!DOCTYPE html>
         <p class="eyebrow">Areas served</p>
         <h2 class="display section-h">Web design and development across {name}.</h2>
         <p class="section-body">
-            The studio works with professional-services firms in {areas}. Most of my {name} clients are solo or small-team practices &mdash; lawyers, accountants, dentists, medical clinics, consultancies &mdash; that need a credible web presence without spending the kind of money downtown agencies charge.
+            The studio works with small businesses in {areas}. Most of my {name} clients are solo or small-team operations (trades, shops, clinics, studios, consultancies) that need a credible web presence without spending the kind of money downtown agencies charge.
         </p>
         <p class="section-body">
-            The work is the same whether your firm is headquartered in {name} or in a community an hour's drive away. Discovery happens over email, design happens in the browser as a working preview, and the finished site is hosted, supported, and edited by the same person who built it. There's no account-management layer, no offshore dev team, no hidden hand-offs. Just one designer-developer, one codebase, and a website that does the work it's supposed to do.
+            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. Discovery happens over email, design happens in the browser as a working preview, and the finished site is hosted, supported, and edited by the same person who built it. There's no account-management layer, no offshore dev team, no hidden hand-offs. Just one designer-developer, one codebase, and a website that does the work it's supposed to do.
         </p>
     </div>
 </section>
@@ -221,11 +221,11 @@ CITY_PAGE = """<!DOCTYPE html>
         <ul class="svc-list">
             <li>
                 <h3>Custom website design in {name}</h3>
-                <p>Designed for your firm specifically &mdash; not picked from a template gallery. Every {name} project is wireframed, styled, and refined for your practice's voice, clients, and competitive position.</p>
+                <p>Designed for your business specifically, not picked from a template gallery. Every {name} project is wireframed, styled, and refined for your brand's voice, customers, and competitive position.</p>
             </li>
             <li>
                 <h3>Hand-coded website development</h3>
-                <p>No WordPress bloat, no page-builder slop, no plugin sprawl. Clean semantic HTML and CSS that loads instantly on any device and ages gracefully &mdash; the way a {name} firm's website should.</p>
+                <p>No WordPress bloat, no page-builder slop, no plugin sprawl. Clean semantic HTML and CSS that loads instantly on any device and ages gracefully, the way a {name} business's website should.</p>
             </li>
             <li>
                 <h3>{name} website hosting &amp; security</h3>
@@ -233,15 +233,15 @@ CITY_PAGE = """<!DOCTYPE html>
             </li>
             <li>
                 <h3>Unlimited edits</h3>
-                <p>Send a message; the change goes live within one to two business days. New staff bio, updated services, fresh photo, revised hours &mdash; no per-hour billing, no ticket queues, no waiting on a copy-paste agency.</p>
+                <p>Send a message; the change goes live within one to two business days. New staff bio, updated services, fresh photo, revised hours: no per-hour billing, no ticket queues, no waiting on a copy-paste agency.</p>
             </li>
             <li>
                 <h3>SEO foundation for {name} search visibility</h3>
-                <p>Schema markup, sitemap, semantic HTML, fast Core Web Vitals, and clean metadata. The technical groundwork search engines reward, built into every {name} website from day one &mdash; not a $500 SEO upsell.</p>
+                <p>Schema markup, sitemap, semantic HTML, fast Core Web Vitals, and clean metadata. The technical groundwork search engines reward, built into every {name} website from day one, not a $500 SEO upsell.</p>
             </li>
             <li>
                 <h3>Direct one-on-one support</h3>
-                <p>You email me directly &mdash; not a help-desk queue. The same person who designed and built your {name} website is the same person who answers when something needs to change. That doesn't scale to thousands of clients, which is the point.</p>
+                <p>You email me directly, not a help-desk queue. The same person who designed and built your {name} website is the same person who answers when something needs to change. That doesn't scale to thousands of clients, which is the point.</p>
             </li>
         </ul>
     </div>
@@ -250,12 +250,12 @@ CITY_PAGE = """<!DOCTYPE html>
 <section class="section section-why">
     <div class="wrap">
         <p class="eyebrow">Why custom</p>
-        <h2 class="display section-h">Why {name} firms choose custom over templates.</h2>
+        <h2 class="display section-h">Why {name} businesses choose custom over templates.</h2>
         <p class="section-body">
-            A template is faster and cheaper up front. It's also why most professional-services websites in {name} look like every other professional-services website in {name}. The hero photo is from the same stock library; the colour palette is two clicks deep in a Squarespace settings panel; the typography is whatever Wix shipped that quarter. Clients notice. Younger clients especially notice. And firms that compete on credibility cannot afford to be visually indistinguishable from the firm down the street.
+            A template is faster and cheaper up front. It's also why most small-business websites in {name} look like every other small-business website in {name}. The hero photo is from the same stock library; the colour palette is two clicks deep in a Squarespace settings panel; the typography is whatever Wix shipped that quarter. Clients notice. Younger clients especially notice. And businesses that compete on credibility cannot afford to be visually indistinguishable from the business down the street.
         </p>
         <p class="section-body">
-            Hand-coded, custom-designed websites take longer to build but pay back in three places: clients trust them more, search engines rank them better (because clean code loads faster and structures content more clearly), and the firm doesn't end up locked into a platform's roadmap. When the time comes to update the site, expand it, or move it, your {name} website is just files &mdash; not someone else's hostage. That's the deal the studio offers, and it's the same deal whether you're a solo practitioner or a fifteen-lawyer regional firm.
+            Hand-coded, custom-designed websites take longer to build but pay back in three places: clients trust them more, search engines rank them better (because clean code loads faster and structures content more clearly), and the business doesn't end up locked into a platform's roadmap. When the time comes to update the site, expand it, or move it, your {name} website is just files, not someone else's hostage. That's the deal the studio offers, and it's the same deal whether you're a solo operator or a fifteen-person regional company.
         </p>
     </div>
 </section>
@@ -268,12 +268,12 @@ CITY_PAGE = """<!DOCTYPE html>
             <li>
                 <span class="process-n">01</span>
                 <h3>Discovery</h3>
-                <p>You send a few sentences about your {name} firm: what you do, who you serve, and what's not working with the current site (or the absence of one). I come back with thoughts, a rough scope, and a fixed-fee or subscription quote within one business day.</p>
+                <p>You send a few sentences about your {name} business: what you do, who you serve, and what's not working with the current site (or the absence of one). I come back with thoughts, a rough scope, and a fixed-fee or subscription quote within one business day.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
                 <h3>Working preview</h3>
-                <p>Within a week or two, you have a live URL with your actual content in a real design &mdash; not a mockup, not a Figma file, the real thing. We iterate on it together over email until it feels right for your {name} practice.</p>
+                <p>Within a week or two, you have a live URL with your actual content in a real design, not a mockup, not a Figma file, the real thing. We iterate on it together over email until it feels right for your {name} business.</p>
             </li>
             <li>
                 <span class="process-n">03</span>
@@ -283,7 +283,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <li>
                 <span class="process-n">04</span>
                 <h3>Ongoing edits &amp; support</h3>
-                <p>You email me when something needs to change &mdash; new partner, new service line, new photo, new copy. Edits go live within one to two business days, included in the monthly fee. No tickets, no agency middlemen, no surprise invoices.</p>
+                <p>You email me when something needs to change: a new hire, a new service line, a new photo, new copy. Edits go live within one to two business days, included in the monthly fee. No tickets, no agency middlemen, no surprise invoices.</p>
             </li>
         </ol>
     </div>
@@ -298,13 +298,13 @@ CITY_PAGE = """<!DOCTYPE html>
                 <p class="pricing-card-name">Monthly subscription</p>
                 <p class="pricing-card-price"><strong>$0</strong> down</p>
                 <p class="pricing-card-sub">$199 / month all-inclusive &middot; 12-month minimum</p>
-                <p class="pricing-card-body">Design, development, hosting, edits, security, and direct support &mdash; one monthly fee for as long as you stay. Site stays live as long as the subscription is active.</p>
+                <p class="pricing-card-body">Design, development, hosting, edits, security, and direct support, all for one monthly fee for as long as you stay. Site stays live as long as the subscription is active.</p>
             </div>
             <div class="pricing-card">
                 <p class="pricing-card-name">Lump sum</p>
                 <p class="pricing-card-price"><strong>$3,800</strong> one-time</p>
                 <p class="pricing-card-sub">+ $25 / month hosting (optional)</p>
-                <p class="pricing-card-body">Pay once, own the site outright. Hosting is an optional $25-a-month service if you'd like me to handle it &mdash; or take the code and host it elsewhere. Same design quality, same hand-coded build, same {name} support.</p>
+                <p class="pricing-card-body">Pay once, own the site outright. Hosting is an optional $25-a-month service if you'd like me to handle it, or take the code and host it elsewhere. Same design quality, same hand-coded build, same {name} support.</p>
             </div>
         </div>
         <p class="pricing-foot"><a href="../pricing.html" class="link-arrow">See full pricing details <span class="arrow">→</span></a></p>
@@ -317,20 +317,20 @@ CITY_PAGE = """<!DOCTYPE html>
         <h2 class="display section-h">{name} web design FAQ.</h2>
         <dl class="faq-list">
             <div class="faq-item">
-                <dt>Do you only work with firms in {name}?</dt>
-                <dd>Most of my clients are in {name} and the surrounding region, but the studio's remote workflow handles firms anywhere in {province} &mdash; and across Canada generally. Whether your practice is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
+                <dt>Do you only work with businesses in {name}?</dt>
+                <dd>Most of my clients are in {name} and the surrounding region, but the studio's remote workflow handles businesses anywhere in {province}, and across Canada generally. Whether your business is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
             </div>
             <div class="faq-item">
                 <dt>How long does a website build take in {name}?</dt>
-                <dd>From the first email to a live site is usually three to five weeks for most {name} firms. Discovery happens over email, the working preview goes up within a week or two, we iterate, the site polishes, and it goes live on your domain. There's no in-person meeting required at any step &mdash; though you're welcome to schedule a call if you'd rather talk things through.</dd>
+                <dd>From the first email to a live site is usually three to five weeks for most {name} businesses. Discovery happens over email, the working preview goes up within a week or two, we iterate, the site polishes, and it goes live on your domain. There's no in-person meeting required at any step, though you're welcome to schedule a call if you'd rather talk things through.</dd>
             </div>
             <div class="faq-item">
-                <dt>What kinds of {name} firms do you build for?</dt>
-                <dd>The studio specializes in professional-services firms &mdash; {name} law practices, accounting and bookkeeping firms, medical and dental clinics, consultancies, and other practices where the website needs to communicate trust, credibility, and clarity to a serious clientele. If your {name} firm sells expertise rather than products, the design language fits.</dd>
+                <dt>What kinds of {name} businesses do you build for?</dt>
+                <dd>The studio specializes in small businesses: {name} trades and contractors, shops and studios, clinics, consultancies, and other businesses where the website needs to communicate trust, credibility, and clarity. If your {name} business sells expertise or service rather than mass-market products, the design language fits.</dd>
             </div>
             <div class="faq-item">
                 <dt>Do I own my {name} website?</dt>
-                <dd>On the $3,800 lump-sum plan, yes &mdash; you own the site outright, and hosting becomes an optional $25-a-month standalone service. On the $0-down, $199-a-month subscription, the site is hosted and supported as long as you stay on the plan; the monthly is a service relationship, not a buyout, so if the subscription ends, the built site goes offline. You always keep your domain (registered in your firm's name from day one) and any content or assets you provided. Cancel before the 12-month minimum and the remaining months &times; $199 are due (e.g., cancel at month 6, owe 6 &times; $199 = $1,194). After 12 months, cancel any time with 30 days' notice, no exit fee.</dd>
+                <dd>On the $3,800 lump-sum plan, yes: you own the site outright, and hosting becomes an optional $25-a-month standalone service. On the $0-down, $199-a-month subscription, the site is hosted and supported as long as you stay on the plan; the monthly is a service relationship, not a buyout, so if the subscription ends, the built site goes offline. You always keep your domain (registered in your business's name from day one) and any content or assets you provided. Cancel before the 12-month minimum and the remaining months &times; $199 are due (e.g., cancel at month 6, owe 6 &times; $199 = $1,194). After 12 months, cancel any time with 30 days' notice, no exit fee.</dd>
             </div>
         </dl>
     </div>
@@ -341,7 +341,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <p class="eyebrow">Also serving</p>
         <h2 class="display section-h">Web design services near {name}.</h2>
         <p class="section-body">
-            The studio works with professional-services firms across {province} and beyond. If your firm is outside {name} proper, the same hand-coded design, all-inclusive pricing, and remote workflow apply.
+            The studio works with small businesses across {province} and beyond. If your business is outside {name} proper, the same hand-coded design, all-inclusive pricing, and remote workflow apply.
         </p>
         <ul class="nearby-list">
 {nearby_links}
@@ -354,7 +354,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap cta-band">
         <p class="eyebrow">Start a project</p>
         <h2 class="display cta-band-h">A modern {name} website that finally matches the work behind it.</h2>
-        <p class="cta-band-sub">Send a few sentences about your {name} firm. I'll come back with thoughts, a rough scope, and &mdash; often &mdash; a working preview within a few days.</p>
+        <p class="cta-band-sub">Send a few sentences about your {name} business. I'll come back with thoughts, a rough scope, and often a working preview within a few days.</p>
         <div class="cta-band-actions">
             <a href="../contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
             <a href="../pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
@@ -369,7 +369,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <div class="footer-grid">
             <div>
                 <p class="footer-brand">Matthew McGuire</p>
-                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That's what the studio is for.</p>
+                <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
@@ -394,7 +394,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <h5 class="footer-h5">Based</h5>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with firms across Canada</li>
+                    <li>Working with businesses across Canada</li>
                 </ul>
             </div>
         </div>
@@ -621,7 +621,7 @@ ul, ol { list-style: none; }
 }
 .nav-links > a::after, .nav-links > .nav-dd > .nav-dd-trigger::after {
     content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px;
-    height: 9px; background-image: url("../img/brush-underline.png");
+    height: 9px; background-image: url("../img/brush-underline.webp");
     background-repeat: no-repeat; background-position: center; background-size: 100% 100%;
     transform: scaleX(0); transform-origin: right;
     transition: transform 360ms cubic-bezier(.2,.7,.2,1);
@@ -773,7 +773,7 @@ ul, ol { list-style: none; }
         padding: 10px 22px; border-radius: 8px;
     }
 
-    /* MOBILE LOCATIONS PANEL — slides in from right when triggered */
+    /* MOBILE LOCATIONS PANEL: slides in from right when triggered */
     .nav-mobile-locations {
         display: flex; flex-direction: column;
         position: fixed; inset: 0; background: var(--paper);
@@ -900,7 +900,7 @@ ul, ol { list-style: none; }
 }
 .hero-price strong {
     font-weight: 700; font-style: italic; color: var(--rust-deep);
-    background-image: url("../img/brush-underline.png");
+    background-image: url("../img/brush-underline.webp");
     background-repeat: no-repeat; background-position: 0 100%;
     background-size: 100% 0.55em; padding-bottom: 0.05em;
 }
@@ -1156,18 +1156,18 @@ def desktop_dropdown_for_root(active: bool = False) -> str:
 
 def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
     studio_id = "https://matthewmcguire.ca/#studio"
-    desc = (f"Custom-coded websites for {name} law firms, accounting practices, "
-            f"medical and dental clinics, consultancies, and other professional-services "
-            f"firms. $0 down, $199 a month all-inclusive — design, hosting, edits, "
-            f"and security included — 12-month minimum, or $3,800 lump sum.")
+    desc = (f"Custom-coded websites for {name} small businesses: trades, shops, "
+            f"clinics, studios, consultancies, and professional services. "
+            f"$0 down, $199 a month all-inclusive, with design, hosting, edits, "
+            f"and security included. 12-month minimum, or $3,800 lump sum.")
 
     graph = [
         {
             "@type": ["ProfessionalService", "LocalBusiness"],
             "@id": studio_id,
-            "name": "Matthew McGuire — Web Design Studio",
+            "name": "Matthew McGuire Web Design Studio",
             "url": "https://matthewmcguire.ca/",
-            "image": "https://matthewmcguire.ca/img/headshot/matt-headshot.png",
+            "image": "https://matthewmcguire.ca/img/headshot/matt-headshot.jpg",
             "telephone": "",
             "priceRange": "$$",
             "address": {
@@ -1217,11 +1217,11 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": f"Do you only work with firms in {name}?",
+                    "name": f"Do you only work with businesses in {name}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": (f"Most of my clients are in {name} and the surrounding region, "
-                                 f"but the studio's remote workflow handles firms anywhere in {province} "
+                                 f"but the studio's remote workflow handles businesses anywhere in {province} "
                                  f"and across Canada. The build, edit, and support process is identical "
                                  f"whether you're in {name} proper or a nearby community."),
                     },
@@ -1232,18 +1232,18 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": (f"From the first email to a live site is usually three to five weeks "
-                                 f"for most {name} firms. Discovery is over email; the working preview goes "
+                                 f"for most {name} businesses. Discovery is over email; the working preview goes "
                                  f"up within a week or two; we iterate; the site polishes; it goes live."),
                     },
                 },
                 {
                     "@type": "Question",
-                    "name": f"What kinds of {name} firms do you build for?",
+                    "name": f"What kinds of {name} businesses do you build for?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": (f"Professional-services firms — {name} law practices, accounting and "
-                                 f"bookkeeping firms, medical and dental clinics, consultancies, and "
-                                 f"other practices where the website needs to communicate trust, "
+                        "text": (f"Small businesses: {name} trades and contractors, shops and studios, "
+                                 f"clinics, consultancies, and "
+                                 f"other businesses where the website needs to communicate trust, "
                                  f"credibility, and clarity."),
                     },
                 },
@@ -1285,10 +1285,10 @@ def nearby_links_html(nearby_slugs: list[str]) -> str:
 def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     extras = EXTRAS.get(slug, {"areas": "the surrounding region", "nearby": []})
     title = (f"{name} Web Designer | Custom Website Design & Development "
-             f"— Matthew McGuire")
-    meta_desc = (f"{name} web designer building custom-coded websites for law firms, "
-                 f"accounting practices, and clinics. $0 down, $199/month all-inclusive "
-                 f"— design, hosting, edits, security included. 12-month minimum or "
+             f"| Matthew McGuire")
+    meta_desc = (f"{name} web designer building custom-coded websites for small businesses: "
+                 f"trades, shops, clinics, and professional services. $0 down, $199/month all-inclusive, "
+                 f"with design, hosting, edits, security included. 12-month minimum or "
                  f"$3,800 lump sum.")
 
     html = CITY_PAGE.format(
@@ -1319,15 +1319,15 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alberta Web Designer — Custom Websites for Edmonton, Calgary &amp; Area Firms — Matthew McGuire</title>
-<meta name="description" content="Alberta web designer serving professional-services firms in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with firms anywhere in Canada." />
+<title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire</title>
+<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with businesses anywhere in Canada." />
 <link rel="canonical" href="https://matthewmcguire.ca/locations.html" />
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="mm-favicon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://matthewmcguire.ca/locations.html" />
-<meta property="og:title" content="Alberta Web Designer — Matthew McGuire" />
-<meta property="og:description" content="Custom-coded websites for Alberta firms — Edmonton, Calgary, and the surrounding region. Remote work with firms anywhere in Canada." />
+<meta property="og:title" content="Alberta Web Designer | Matthew McGuire" />
+<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1409,7 +1409,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire home">
             <span class="nav-mark-letters">Matthew McGuire</span>
             <span class="nav-mark-name">Designer · developer</span>
         </a>
@@ -1460,8 +1460,8 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <section class="loc-hero">
     <div class="wrap">
         <p class="eyebrow">Locations</p>
-        <h1>Web designer serving firms <em>across Alberta.</em></h1>
-        <p class="lede">The studio is based in Edmonton and works with professional-services firms across Alberta — Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles firms anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum) — or $3,800 lump sum if you'd rather own the site outright.</p>
+        <h1>Web designer serving businesses <em>across Alberta.</em></h1>
+        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum), or $3,800 lump sum if you'd rather own the site outright.</p>
     </div>
 </section>
 
@@ -1474,8 +1474,8 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <section class="section section-cta">
     <div class="wrap cta-band">
         <p class="eyebrow">Start a project</p>
-        <h2 class="display cta-band-h">Don't see your city? The studio works everywhere there's a firm worth building for.</h2>
-        <p class="cta-band-sub">If your practice is anywhere in Canada, send a few sentences about your firm. The remote workflow handles the rest.</p>
+        <h2 class="display cta-band-h">Don't see your city? The studio works everywhere there's a business worth building for.</h2>
+        <p class="cta-band-sub">If your business is anywhere in Canada, send a few sentences about your business. The remote workflow handles the rest.</p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
             <a href="pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
@@ -1490,7 +1490,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <div class="footer-grid">
             <div>
                 <p class="footer-brand">Matthew McGuire</p>
-                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That's what the studio is for.</p>
+                <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
@@ -1515,7 +1515,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 <h5 class="footer-h5">Based</h5>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with firms across Canada</li>
+                    <li>Working with businesses across Canada</li>
                 </ul>
             </div>
         </div>

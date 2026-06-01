@@ -3,20 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alberta Web Designer — Custom Websites for Edmonton, Calgary &amp; Area Firms — Matthew McGuire</title>
-<meta name="description" content="Alberta web designer serving professional-services firms in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with firms anywhere in Canada." />
+<title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire</title>
+<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with businesses anywhere in Canada." />
 <link rel="canonical" href="https://matthewmcguire.ca/locations.html" />
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="mm-favicon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://matthewmcguire.ca/locations.html" />
-<meta property="og:title" content="Alberta Web Designer — Matthew McGuire" />
-<meta property="og:description" content="Custom-coded websites for Alberta firms — Edmonton, Calgary, and the surrounding region. Remote work with firms anywhere in Canada." />
+<meta property="og:title" content="Alberta Web Designer | Matthew McGuire" />
+<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada." />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="fonts/inter-500-normal.woff2" crossorigin />
-    <link rel="stylesheet" href="css/fonts.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>
@@ -58,6 +57,13 @@ body {
     font-family: var(--sans); font-size: 16px; line-height: 1.55;
     color: var(--ink); background: var(--paper);
     -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    animation: pageEnter 380ms cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes pageEnter { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pageLeave { from { opacity: 1; } to { opacity: 0; } }
+body.is-leaving { animation: pageLeave 260ms cubic-bezier(.4,.1,.3,1) forwards; }
+@media (prefers-reduced-motion: reduce) {
+    body, body.is-leaving { animation: none !important; }
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -303,7 +309,7 @@ ul, ol { list-style: none; }
         padding: 10px 22px; border-radius: 8px;
     }
 
-    /* MOBILE LOCATIONS PANEL — slides in from right when triggered */
+    /* MOBILE LOCATIONS PANEL: slides in from right when triggered */
     .nav-mobile-locations {
         display: flex; flex-direction: column;
         position: fixed; inset: 0; background: var(--paper);
@@ -620,6 +626,7 @@ ul, ol { list-style: none; }
 @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
 
+
 .loc-hero {
     padding: clamp(80px, 9vw, 140px) 0 clamp(40px, 5vw, 72px);
     background:
@@ -671,7 +678,6 @@ ul, ol { list-style: none; }
     .prov-cities { grid-template-columns: 1fr; }
 }
 </style>
-<link rel="stylesheet" href="css/mobile-polish.css?v=2" />
 </head>
 <body>
 
@@ -686,7 +692,7 @@ ul, ol { list-style: none; }
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire — home">
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire home">
             <span class="nav-mark-letters">Matthew McGuire</span>
             <span class="nav-mark-name">Designer · developer</span>
         </a>
@@ -766,8 +772,8 @@ ul, ol { list-style: none; }
 <section class="loc-hero">
     <div class="wrap">
         <p class="eyebrow">Locations</p>
-        <h1>Web designer serving firms <em>across Alberta.</em></h1>
-        <p class="lede">The studio is based in Edmonton and works with professional-services firms across Alberta — Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles firms anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum) — or $3,800 lump sum if you'd rather own the site outright.</p>
+        <h1>Web designer serving businesses <em>across Alberta.</em></h1>
+        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum), or $3,800 lump sum if you'd rather own the site outright.</p>
     </div>
 </section>
 
@@ -796,8 +802,8 @@ ul, ol { list-style: none; }
 <section class="section section-cta">
     <div class="wrap cta-band">
         <p class="eyebrow">Start a project</p>
-        <h2 class="display cta-band-h">Don't see your city? The studio works everywhere there's a firm worth building for.</h2>
-        <p class="cta-band-sub">If your practice is anywhere in Canada, send a few sentences about your firm. The remote workflow handles the rest.</p>
+        <h2 class="display cta-band-h">Don't see your city? The studio works everywhere there's a business worth building for.</h2>
+        <p class="cta-band-sub">If your business is anywhere in Canada, send a few sentences about your business. The remote workflow handles the rest.</p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
             <a href="pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
@@ -812,7 +818,7 @@ ul, ol { list-style: none; }
         <div class="footer-grid">
             <div>
                 <p class="footer-brand">Matthew McGuire</p>
-                <p class="footer-blurb">Small firms deserve websites that feel like the work behind them. That's what the studio is for.</p>
+                <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
             <div class="footer-col">
@@ -837,7 +843,7 @@ ul, ol { list-style: none; }
                 <h5 class="footer-h5">Based</h5>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with firms across Canada</li>
+                    <li>Working with businesses across Canada</li>
                 </ul>
             </div>
         </div>
@@ -901,6 +907,27 @@ ul, ol { list-style: none; }
     });
     if (navMobileLoc) navMobileLoc.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () { setLoc(false); setNav(false); });
+    });
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (!href) return;
+        if (
+            a.target === '_blank' ||
+            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+            href.charAt(0) === '#' ||
+            href.indexOf('mailto:') === 0 ||
+            href.indexOf('tel:') === 0 ||
+            a.hasAttribute('download')
+        ) return;
+        var url = new URL(a.href, window.location.href);
+        if (url.origin !== window.location.origin) return;
+        if (url.pathname === window.location.pathname) return;
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(function () { window.location.href = a.href; }, 220);
     });
 </script>
 
