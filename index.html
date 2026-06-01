@@ -231,7 +231,7 @@ img { max-width: 100%; display: block; }
         position: absolute;
         left: -4px; right: -4px; bottom: -8px;
         height: 9px;
-        background-image: url("img/brush-underline.png");
+        background-image: url("img/brush-underline.webp");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
@@ -269,7 +269,7 @@ img { max-width: 100%; display: block; }
         position: absolute;
         left: -4px; right: -4px; bottom: -8px;
         height: 9px;
-        background-image: url("img/brush-underline.png");
+        background-image: url("img/brush-underline.webp");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
@@ -763,7 +763,7 @@ img { max-width: 100%; display: block; }
         font-style: italic;
         color: var(--rust-deep);
         text-decoration: none;
-        background-image: url("img/brush-underline.png");
+        background-image: url("img/brush-underline.webp");
         background-repeat: no-repeat;
         background-position: 0 100%;
         background-size: 100% 0.55em;
@@ -1221,7 +1221,7 @@ img { max-width: 100%; display: block; }
         background:
             radial-gradient(ellipse 80% 60% at 30% 0%, color-mix(in oklch, var(--accent) 50%, transparent) 0%, transparent 65%),
             linear-gradient(180deg, rgba(15, 34, 24, 0.86) 0%, rgba(15, 34, 24, 0.94) 100%),
-            url('img/hero-pnw-4.jpg') center/cover no-repeat;
+            url('img/hero-pnw-4.webp') center/cover no-repeat;
         background-color: #0F2218;
         color: var(--paper);
     }
@@ -2045,7 +2045,10 @@ img { max-width: 100%; display: block; }
     <div class="wrap">
         <div class="about-grid">
             <figure class="about-photo">
-                <img src="img/headshot/matt-headshot.png" alt="Matthew McGuire — owner and developer of the studio" />
+                <picture>
+                    <source type="image/webp" srcset="img/headshot/matt-headshot.webp" />
+                    <img src="img/headshot/matt-headshot.jpg" alt="Matthew McGuire — owner and developer of the studio" width="1000" height="1500" loading="lazy" decoding="async" />
+                </picture>
             </figure>
 
             <div class="about-text">
