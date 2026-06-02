@@ -1,0 +1,3020 @@
+Looking at this request, I need to:
+1. Load several deferred tools per the system reminder (but none are needed for this HTML generation task)
+2. Build a complete single-file HTML for Domingue Law Firm following the 11-section structural recipe
+
+The task is HTML generation only — no tools needed. Let me build the file directly.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Domingue Law Firm | Lafayette, Louisiana Criminal Defense &amp; Personal Injury Attorneys</title>
+    <meta name="description" content="Lafayette, LA attorneys fighting for you in criminal defense, personal injury &amp; family law. Available any hour, any day. Call (337) 484-1001.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Domingue Law — Louisiana courthouse navy + crimson on parchment */
+            --ink:           #111111;
+            --ink-deep:      #0A0A0A;
+            --char:          #1F1F1F;
+            --char-mid:      #2E2E2E;
+            --char-light:    #545454;
+
+            --navy:          #0D1F3C;
+            --navy-bright:   #173564;
+            --navy-deep:     #07142A;
+            --navy-darker:   #040A18;
+            --navy-pale:     #B8C2D4;
+            --navy-tint:     #D9DFE8;
+            --navy-soft:     #ECEFF5;
+
+            --crimson:        #C41230;
+            --crimson-bright: #DC2244;
+            --crimson-deep:   #8E0820;
+            --crimson-darker: #5C0414;
+            --crimson-pale:   #E8B4BE;
+            --crimson-tint:   #F2D6DC;
+            --crimson-soft:   #FAEEF1;
+
+            --brass:        #B3893C;
+            --brass-bright: #D4A658;
+            --brass-deep:   #8C6A24;
+            --brass-pale:   #E8D29E;
+            --brass-soft:   #F5EAD0;
+
+            --bone:         #F4EFE2;
+            --parch:        #F9F5EE;
+            --parch-deep:   #EDE5D2;
+            --paper:        #FFFFFF;
+            --bg:           #FBF7EE;
+            --bg-soft:      #FDFAF3;
+
+            --text:         #1B1B1B;
+            --text-mid:     #46464A;
+            --text-soft:    #6A6A6F;
+            --text-faint:   #9494A0;
+
+            --border:       #E2DCCC;
+            --border-soft:  #ECE6D6;
+
+            --topbar-h:     42px;
+            --nav-h:        82px;
+            --total-nav:    124px;
+
+            --shadow-sm:    0 1px 3px rgba(13,31,60,0.07);
+            --shadow-md:    0 8px 24px -8px rgba(13,31,60,0.24), 0 2px 6px -2px rgba(13,31,60,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(13,31,60,0.36), 0 8px 16px -8px rgba(13,31,60,0.14);
+            --shadow-crimson: 0 12px 28px -8px rgba(196,18,48,0.50);
+            --shadow-navy:  0 12px 28px -8px rgba(13,31,60,0.55);
+            --shadow-brass: 0 12px 28px -8px rgba(179,137,60,0.45);
+
+            --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--parch);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+        }
+
+        /* Paper grain noise overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+            mix-blend-mode: multiply;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+            font-weight: 700;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+        /* Chapter mark — editorial whisper */
+        .chapter-mark {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 0.55rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: rgba(196,18,48,0.40);
+            z-index: 4;
+            font-variant-numeric: tabular-nums;
+        }
+        .section-dark .chapter-mark { color: rgba(179,137,60,0.45); }
+
+        /* ── BRAND WORDMARK ──────────────────────────────── */
+        .d-mark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+            position: relative;
+        }
+        .d-mark .d-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.58rem;
+            color: var(--crimson-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        .d-mark .d-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.45rem;
+            color: var(--ink);
+            letter-spacing: 0.03em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .d-mark .d-name em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 600;
+        }
+        .d-mark .d-rule {
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 8px 0 5px;
+        }
+        .d-mark .d-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--navy);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .d-mark.inverse .d-eyebrow { color: var(--brass-bright); }
+        .d-mark.inverse .d-name { color: var(--bone); }
+        .d-mark.inverse .d-name em { color: var(--crimson-pale); }
+        .d-mark.inverse .d-rule { background: var(--brass); }
+        .d-mark.inverse .d-tag { color: var(--brass-pale); }
+
+        /* ── TOP BAR ────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--navy-darker);
+            color: rgba(244,239,226,0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(244,239,226,0.92);
+            transition: color 0.18s var(--ease-out);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+        }
+        .top-bar a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -3px;
+            height: 1px;
+            background: var(--brass-bright);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.36s var(--ease-out);
+        }
+        .top-bar a:hover { color: var(--brass-bright); }
+        .top-bar a:hover::after { transform: scaleX(1); transform-origin: left center; }
+        .top-bar svg { width: 12px; height: 12px; color: var(--brass-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.20); }
+        .top-bar .available {
+            color: var(--brass-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN NAV ───────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(249,245,238,0.98);
+            backdrop-filter: blur(14px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links > li > a {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+            padding: 6px 0;
+        }
+        .nav-links > li > a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 2px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.36s var(--ease-out);
+        }
+        .nav-links > li > a:hover { color: var(--crimson); }
+        .nav-links > li > a:hover::after,
+        .nav-links > li > a.active::after { transform: scaleX(1); transform-origin: left center; }
+        .nav-links > li > a.active { color: var(--crimson); }
+
+        .nav-cta {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            background: var(--crimson);
+            color: var(--bone) !important;
+            padding: 12px 26px;
+            border-radius: 2px;
+            font-weight: 800 !important;
+            letter-spacing: 0.10em !important;
+            font-size: 0.72rem !important;
+            text-transform: uppercase;
+            border: 1.5px solid var(--crimson-deep);
+            box-shadow: 0 2px 0 rgba(92,4,20,0.30), 0 6px 14px -4px rgba(196,18,48,0.40);
+            transition: background 0.22s var(--ease-out), transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out);
+            line-height: 1.1;
+        }
+        .nav-cta::after { display: none; }
+        .nav-cta .cta-label {
+            font-size: 0.66rem;
+            letter-spacing: 0.18em;
+        }
+        .nav-cta .cta-phone {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            font-style: italic;
+            text-transform: none;
+            color: var(--brass-pale);
+        }
+        .nav-cta:hover {
+            background: var(--crimson-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 rgba(92,4,20,0.34), 0 12px 24px -6px rgba(196,18,48,0.55);
+        }
+
+        .nav-hamburger {
+            display: none;
+            width: 34px; height: 26px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.28s var(--ease-out), opacity 0.28s var(--ease-out);
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 12px; }
+        .nav-hamburger span:nth-child(3) { top: 20px; }
+        .nav-hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--parch);
+            border-bottom: 1px solid var(--border);
+            padding: 28px 32px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.34s var(--ease-out);
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--ink); font-size: 1.02rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; display: inline-block; }
+        .mobile-nav a.nav-cta { align-self: flex-start; }
+
+        /* ── HERO ──────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: calc(var(--total-nav) + 28px);
+            padding-bottom: 80px;
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--navy-darker);
+            scroll-margin-top: var(--total-nav);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                linear-gradient(120deg, rgba(7,20,42,0.94) 0%, rgba(13,31,60,0.82) 38%, rgba(196,18,48,0.42) 100%),
+                url('img/hero.jpg') center 32% / cover no-repeat;
+            transform: scale(1.04);
+            filter: contrast(1.06) saturate(0.92);
+            animation: hero-drift 24s ease-in-out infinite alternate;
+        }
+        @keyframes hero-drift {
+            0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+            100% { transform: scale(1.07) translate3d(-2%, -1%, 0); }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 82% 22%, rgba(179,137,60,0.18), transparent 56%),
+                radial-gradient(ellipse at 15% 88%, rgba(92,4,20,0.55), transparent 52%),
+                linear-gradient(180deg, rgba(4,10,24,0.20) 0%, transparent 30%, rgba(4,10,24,0.62) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--brass) 50%, transparent 100%);
+            opacity: 0.65;
+            z-index: 2;
+        }
+
+        .hero-corner {
+            position: absolute;
+            top: calc(var(--total-nav) + 22px);
+            right: 32px;
+            width: 92px;
+            height: 92px;
+            color: var(--brass);
+            opacity: 0.42;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .hero-corner svg { width: 100%; height: 100%; }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+        }
+        .hero-inner {
+            max-width: 920px;
+        }
+
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+        .hero-stamp-line {
+            width: 44px;
+            height: 2px;
+            background: var(--crimson-bright);
+        }
+        .hero-stamp-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.94rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.08em;
+        }
+        .hero-stamp-text strong {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 0.66rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--crimson-bright);
+            margin-right: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 7vw, 6rem);
+            font-weight: 900;
+            color: var(--bone);
+            line-height: 0.96;
+            letter-spacing: -0.025em;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+        .hero h1 .line-1 { display: block; color: var(--bone); }
+        .hero h1 .line-2 {
+            display: block;
+            color: var(--brass-bright);
+            margin-top: 4px;
+        }
+
+        .hero-rule {
+            width: 72px;
+            height: 4px;
+            background: var(--crimson);
+            margin-bottom: 22px;
+            border-radius: 1px;
+        }
+
+        .hero-accent {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.1rem, 1.9vw, 1.55rem);
+            color: var(--crimson-pale);
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 32px;
+            letter-spacing: 0.005em;
+            line-height: 1.2;
+        }
+
+        .hero-sub {
+            font-size: 1.08rem;
+            color: rgba(244,239,226,0.86);
+            line-height: 1.65;
+            max-width: 620px;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            background: rgba(244,239,226,0.06);
+            border: 1px solid rgba(179,137,60,0.40);
+            color: var(--brass-pale);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-pill svg { width: 12px; height: 12px; color: var(--crimson-bright); }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.24s var(--ease-out), background 0.22s var(--ease-out), color 0.22s var(--ease-out), border-color 0.22s var(--ease-out), box-shadow 0.24s var(--ease-out);
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-crimson {
+            background: var(--crimson);
+            color: var(--bone);
+            box-shadow: var(--shadow-crimson);
+        }
+        .btn-crimson:hover {
+            background: var(--crimson-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(220,34,68,0.65);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,226,0.40);
+        }
+        .btn-ghost:hover {
+            background: rgba(244,239,226,0.08);
+            border-color: var(--brass-bright);
+            color: var(--brass-bright);
+            transform: translateY(-2px);
+        }
+        .btn-ink {
+            background: var(--ink-deep);
+            color: var(--bone);
+        }
+        .btn-ink:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-navy);
+        }
+        .btn-bone {
+            background: var(--bone);
+            color: var(--navy-deep);
+        }
+        .btn-bone:hover {
+            background: var(--paper);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(0,0,0,0.30);
+        }
+        .btn-ghost-light {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,226,0.55);
+        }
+        .btn-ghost-light:hover {
+            background: rgba(244,239,226,0.12);
+            border-color: var(--bone);
+        }
+
+        .hero-foot {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(179,137,60,0.28);
+            font-size: 0.84rem;
+            color: rgba(244,239,226,0.78);
+            flex-wrap: wrap;
+        }
+        .hero-foot svg { width: 16px; height: 16px; color: var(--brass-bright); flex-shrink: 0; }
+        .hero-foot strong {
+            color: var(--brass-bright);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+        .hero-foot-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ── RECOGNITION STRIP ─────────────────────────── */
+        .recognition {
+            background: var(--ink-deep);
+            color: var(--bone);
+            padding: 38px 0;
+            border-bottom: 1px solid rgba(179,137,60,0.30);
+            position: relative;
+            scroll-margin-top: var(--total-nav);
+        }
+        .recognition::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(179,137,60,0.45) 50%, transparent 100%);
+        }
+        .recognition-inner {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            align-items: center;
+        }
+        .recognition-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: center;
+            padding: 6px 20px;
+            border-right: 1px solid rgba(244,239,226,0.10);
+        }
+        .recognition-item:last-child { border-right: none; }
+        .recognition-label {
+            font-size: 0.6rem;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .recognition-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.02rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.22;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            font-feature-settings: 'tnum' 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .recognition-value em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--crimson-pale);
+            text-transform: none;
+        }
+
+        /* ── PROMISE BAND ─────────────────────────────── */
+        .promise {
+            background: var(--bone);
+            padding: 110px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: var(--total-nav);
+        }
+        .promise::before,
+        .promise::after {
+            content: '\201C';
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--crimson);
+            opacity: 0.06;
+            line-height: 0.8;
+            pointer-events: none;
+        }
+        .promise::before {
+            font-size: 22rem;
+            top: -40px;
+            left: 5%;
+        }
+        .promise::after {
+            content: '\201D';
+            font-size: 22rem;
+            bottom: -120px;
+            right: 5%;
+        }
+        .promise-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 24px;
+        }
+        .promise-rule {
+            width: 64px;
+            height: 3px;
+            background: var(--crimson);
+            margin: 0 auto 28px;
+            border-radius: 1px;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.55rem, 3.1vw, 2.4rem);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.28;
+            letter-spacing: -0.012em;
+            margin-bottom: 24px;
+            hanging-punctuation: first last;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            font-weight: 800;
+            color: var(--crimson);
+        }
+        .promise-cite {
+            font-size: 0.74rem;
+            color: var(--text-soft);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────── */
+        .section {
+            padding: 130px 0;
+            position: relative;
+            scroll-margin-top: var(--total-nav);
+        }
+        .section-head {
+            max-width: 780px;
+            margin: 0 auto 76px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 22px;
+            letter-spacing: -0.022em;
+            line-height: 1.04;
+            text-transform: uppercase;
+        }
+        .section-h2 em { font-style: italic; color: var(--crimson); font-weight: 500; text-transform: none; letter-spacing: -0.005em; }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.78;
+            font-weight: 400;
+        }
+
+        /* ── FEATURED PRACTICE 2-UP ───────────────────── */
+        .featured {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 560px;
+            height: 560px;
+            background: radial-gradient(circle, rgba(196,18,48,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .featured-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.44s var(--ease-out), box-shadow 0.44s var(--ease-out), border-color 0.44s var(--ease-out);
+            position: relative;
+        }
+        .featured-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--crimson);
+            box-shadow: var(--shadow-lg);
+        }
+        .featured-photo {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: var(--navy-deep);
+        }
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s var(--ease-out);
+        }
+        .featured-card:hover .featured-photo img { transform: scale(1.05); }
+        .featured-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(13,31,60,0.20) 0%, transparent 40%, rgba(13,31,60,0.60) 100%);
+            pointer-events: none;
+        }
+        .featured-stamp {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(7,20,42,0.78);
+            backdrop-filter: blur(6px);
+            color: var(--brass-bright);
+            padding: 8px 14px;
+            border-radius: 2px;
+            border: 1px solid rgba(179,137,60,0.42);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+            z-index: 2;
+        }
+        .featured-stamp::before {
+            content: '';
+            width: 14px;
+            height: 1px;
+            background: var(--brass-bright);
+        }
+        .featured-body {
+            padding: 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .featured-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 800;
+            color: var(--crimson-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .featured-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.012em;
+            margin-bottom: 8px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+        .featured-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--crimson);
+            font-size: 1.08rem;
+            margin-bottom: 18px;
+            line-height: 1.3;
+        }
+        .featured-card p {
+            color: var(--text-mid);
+            font-size: 0.98rem;
+            line-height: 1.72;
+            margin-bottom: 22px;
+        }
+        .featured-list {
+            list-style: none;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .featured-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        .featured-list li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--crimson);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            align-self: flex-start;
+            position: relative;
+            padding-bottom: 6px;
+            margin-top: auto;
+            transition: color 0.22s var(--ease-out), gap 0.22s var(--ease-out);
+        }
+        .featured-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--crimson);
+            transition: width 0.4s var(--ease-out);
+        }
+        .featured-card:hover .featured-link { gap: 16px; color: var(--crimson-deep); }
+        .featured-card:hover .featured-link::after { width: 100%; }
+
+        /* ── KNOWN FOR EDITORIAL BANDS ────────────────── */
+        .known {
+            background: var(--parch);
+            position: relative;
+            overflow: hidden;
+        }
+        .known::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(13,31,60,0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .known-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 88px;
+        }
+        .known-row {
+            display: grid;
+            grid-template-columns: minmax(120px, 0.4fr) 1.5fr 1fr;
+            gap: 56px;
+            align-items: center;
+            position: relative;
+        }
+        .known-row:nth-child(2) {
+            grid-template-columns: 1fr 1.5fr minmax(120px, 0.4fr);
+        }
+        .known-numeral {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(7rem, 14vw, 12rem);
+            color: var(--crimson);
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            opacity: 0.92;
+            position: relative;
+            font-feature-settings: 'tnum' 1;
+        }
+        .known-numeral::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -16px;
+            width: 52px;
+            height: 3px;
+            background: var(--brass);
+        }
+        .known-row:nth-child(2) .known-numeral {
+            text-align: right;
+            order: 3;
+        }
+        .known-row:nth-child(2) .known-numeral::after {
+            left: auto;
+            right: 0;
+        }
+        .known-row:nth-child(2) .known-tile {
+            order: 1;
+        }
+        .known-row:nth-child(2) .known-content {
+            order: 2;
+        }
+        .known-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--crimson-deep);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .known-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            line-height: 1.12;
+            letter-spacing: -0.015em;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+        .known-headline em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--crimson);
+            text-transform: none;
+        }
+        .known-body {
+            color: var(--text-mid);
+            font-size: 1.02rem;
+            line-height: 1.78;
+            margin-bottom: 22px;
+        }
+        .known-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--crimson);
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            color: var(--ink);
+            letter-spacing: 0.04em;
+        }
+        .known-stat svg {
+            width: 16px;
+            height: 16px;
+            color: var(--crimson);
+        }
+        .known-tile {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            border: 6px solid var(--paper);
+            box-shadow: 0 0 0 1px var(--brass), var(--shadow-md);
+            overflow: hidden;
+            background: var(--navy-deep);
+        }
+        .known-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--ease-out);
+        }
+        .known-tile:hover img { transform: scale(1.05); }
+        .known-tile::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(13,31,60,0.40) 100%);
+            pointer-events: none;
+        }
+        .known-tile-cap {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            color: var(--bone);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+        }
+        .known-tile-roman {
+            font-weight: 700;
+            color: var(--brass-bright);
+            font-size: 0.92rem;
+        }
+
+        /* ── PRACTICE GRID ────────────────────────────── */
+        .practice {
+            background: var(--paper);
+            position: relative;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .practice-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 40px 32px 36px;
+            border-radius: 2px;
+            transition: transform 0.36s var(--ease-out), border-color 0.36s var(--ease-out), box-shadow 0.36s var(--ease-out), background 0.36s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.42s var(--ease-out);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--crimson);
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-roman {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--crimson-pale);
+            letter-spacing: 0.04em;
+            transition: color 0.36s var(--ease-out), transform 0.36s var(--ease-out);
+        }
+        .practice-card:hover .practice-roman {
+            color: var(--crimson);
+            transform: translateX(-3px);
+        }
+        .practice-roundel {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 22px;
+            border: 2px solid var(--brass);
+            box-shadow: 0 4px 12px -2px rgba(13,31,60,0.20);
+            position: relative;
+            background: var(--navy-deep);
+        }
+        .practice-roundel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .practice-roundel::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, transparent 50%, rgba(13,31,60,0.45) 100%);
+        }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            margin-bottom: 12px;
+            line-height: 1.18;
+            text-transform: uppercase;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.68;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 22px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .practice-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--crimson-deep);
+            background: var(--crimson-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--crimson-tint);
+            letter-spacing: 0.06em;
+        }
+        .practice-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            align-self: flex-start;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.22s var(--ease-out), gap 0.22s var(--ease-out);
+        }
+        .practice-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--crimson);
+            transition: width 0.4s var(--ease-out);
+        }
+        .practice-card:hover .practice-link { gap: 14px; }
+        .practice-card:hover .practice-link::after { width: 100%; }
+
+        /* ── ATTORNEYS 2-UP ───────────────────────────── */
+        .attorneys {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .attorneys::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            left: -180px;
+            width: 540px;
+            height: 540px;
+            background: radial-gradient(circle, rgba(196,18,48,0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .attorneys-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .attorney-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--crimson);
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+        }
+        .attorney-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .attorney-portrait {
+            position: relative;
+            aspect-ratio: 4 / 4.3;
+            overflow: hidden;
+            background: var(--navy-deep);
+        }
+        .attorney-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%;
+            transition: transform 0.7s var(--ease-out);
+        }
+        .attorney-card:hover .attorney-portrait img { transform: scale(1.04); }
+        .attorney-portrait::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(7,20,42,0.55) 100%);
+            pointer-events: none;
+        }
+        .attorney-portrait-tag {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            color: var(--bone);
+        }
+        .attorney-portrait-tag .role {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.58rem;
+            font-weight: 800;
+            color: var(--brass-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            background: rgba(7,20,42,0.78);
+            padding: 4px 10px;
+            border: 1px solid rgba(179,137,60,0.42);
+        }
+        .attorney-portrait-tag .name {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.50);
+        }
+        .attorney-info {
+            padding: 32px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .attorney-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.005em;
+            margin-bottom: 4px;
+        }
+        .attorney-creds {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--crimson);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .attorney-bio {
+            color: var(--text-mid);
+            font-size: 0.96rem;
+            line-height: 1.72;
+            margin-bottom: 24px;
+        }
+        .attorney-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .attorney-meta-block strong {
+            display: block;
+            font-size: 0.62rem;
+            color: var(--crimson);
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .attorney-meta-block ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .attorney-meta-block li {
+            font-size: 0.86rem;
+            color: var(--text);
+            font-weight: 500;
+            line-height: 1.42;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .attorney-meta-block li::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--brass-deep);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        /* ── APPROACH DARK BAND ───────────────────────── */
+        .approach {
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            padding: 140px 0 150px;
+            background:
+                linear-gradient(180deg, rgba(7,20,42,0.92) 0%, rgba(4,10,24,0.96) 100%),
+                url('img/approach-bg.jpg') center 40% / cover no-repeat;
+            background-blend-mode: multiply, normal;
+            border-top: 1px solid rgba(179,137,60,0.32);
+            border-bottom: 1px solid rgba(179,137,60,0.32);
+            scroll-margin-top: var(--total-nav);
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(179,137,60,0.08) 0%, transparent 30%, rgba(179,137,60,0.10) 100%),
+                radial-gradient(ellipse at 15% 15%, rgba(179,137,60,0.25), transparent 50%),
+                radial-gradient(ellipse at 85% 85%, rgba(196,18,48,0.18), transparent 55%);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+        .approach::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass-bright) 50%, transparent);
+            opacity: 0.65;
+            z-index: 2;
+        }
+        .approach-side-stamp {
+            position: absolute;
+            top: 50%;
+            left: 28px;
+            transform: rotate(-90deg) translateX(50%);
+            transform-origin: left center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 800;
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+            color: var(--brass-bright);
+            opacity: 0.65;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .approach-side-stamp::before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 1px;
+            background: var(--brass);
+            margin-right: 16px;
+            vertical-align: middle;
+        }
+        .approach .section-head { position: relative; z-index: 3; margin-bottom: 96px; }
+        .approach .section-eyebrow { color: var(--brass-bright); }
+        .approach .section-eyebrow::before,
+        .approach .section-eyebrow::after { background: var(--brass-bright); }
+        .approach .section-h2 { color: var(--bone); }
+        .approach .section-h2 em { color: var(--brass-bright); }
+        .approach .section-lead { color: rgba(244,239,226,0.78); }
+
+        .approach-grid {
+            position: relative;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+        .approach-grid::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 16%;
+            right: 16%;
+            height: 1px;
+            background-image: linear-gradient(90deg, var(--brass) 50%, transparent 50%);
+            background-size: 14px 1px;
+            background-repeat: repeat-x;
+            opacity: 0.48;
+            z-index: 0;
+        }
+        .approach-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-medallion {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--ink-deep);
+            border: 2px solid var(--brass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            position: relative;
+            box-shadow: 0 0 0 6px rgba(13,31,60,0.96), 0 0 0 7px rgba(179,137,60,0.32);
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+        }
+        .approach-medallion::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 1.5px dashed rgba(179,137,60,0.55);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        .approach-card:hover .approach-medallion {
+            transform: translateY(-4px);
+            box-shadow: 0 0 0 6px rgba(13,31,60,0.96), 0 0 0 7px var(--brass), 0 12px 28px -6px rgba(179,137,60,0.45);
+        }
+        .approach-medallion span {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--brass-bright);
+            line-height: 1;
+            font-feature-settings: 'tnum' 1;
+        }
+        .approach-eyebrow {
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: var(--brass-bright);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--bone);
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            margin-bottom: 6px;
+            line-height: 1.18;
+            text-transform: uppercase;
+        }
+        .approach-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 0.98rem;
+            color: var(--brass-bright);
+            margin-bottom: 16px;
+        }
+        .approach-card p {
+            color: rgba(244,239,226,0.80);
+            font-size: 0.96rem;
+            line-height: 1.72;
+            margin-bottom: 20px;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .approach-rule {
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--crimson-bright);
+            margin: 0 auto;
+        }
+
+        /* ── COVERAGE STRIP ───────────────────────────── */
+        .coverage {
+            background: var(--bone);
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border-soft);
+            scroll-margin-top: var(--total-nav);
+        }
+        .coverage-inner {
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .coverage-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .coverage-label::before,
+        .coverage-label::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .coverage-list {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.1rem, 1.9vw, 1.5rem);
+            color: var(--ink);
+            line-height: 1.6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 0;
+        }
+        .coverage-list .city {
+            padding: 0 14px;
+            position: relative;
+        }
+        .coverage-list .city:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--brass);
+            border-radius: 50%;
+        }
+
+        /* ── CTA BAND ───────────────────────────────────── */
+        .cta-band {
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 96px 0;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: var(--total-nav);
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 28% 50%, rgba(255,255,255,0.12), transparent 55%),
+                radial-gradient(ellipse at 82% 50%, rgba(0,0,0,0.22), transparent 52%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.1rem, 4.2vw, 3rem);
+            color: var(--bone);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            line-height: 1.06;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--brass-bright);
+            font-weight: 500;
+            text-transform: none;
+        }
+        .cta-inner p {
+            color: rgba(244,239,226,0.94);
+            font-size: 1.1rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* ── CONTACT ──────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 64px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--ink);
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: -0.012em;
+            text-transform: uppercase;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 46px;
+            height: 46px;
+            background: var(--navy-deep);
+            color: var(--brass-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.68rem;
+            color: var(--crimson);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+        }
+        .contact-list a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -2px;
+            height: 1px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.36s var(--ease-out);
+        }
+        .contact-list a:hover { color: var(--crimson); }
+        .contact-list a:hover::after { transform: scaleX(1); transform-origin: left center; }
+
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 42px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--crimson);
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            color: var(--ink);
+            margin-bottom: 6px;
+            font-weight: 800;
+            letter-spacing: -0.012em;
+            text-transform: uppercase;
+        }
+        .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.04rem;
+            color: var(--crimson);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+            line-height: 1.55;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-field {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .form-field label {
+            font-size: 0.66rem;
+            color: var(--ink);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bone);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 12px 14px;
+            font-size: 0.95rem;
+            color: var(--text);
+            transition: border-color 0.22s var(--ease-out), background 0.22s var(--ease-out);
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23C41230' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--crimson);
+            background: var(--paper);
+        }
+        .form-field select option { background: var(--paper); color: var(--text); }
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 16px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.22s var(--ease-out), transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out);
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .form-btn:hover {
+            background: var(--crimson-deep);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-note {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 60px;
+            box-shadow: var(--shadow-sm);
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        /* ── FOOTER ───────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(244,239,226,0.62);
+            padding: 72px 0 30px;
+            scroll-margin-top: var(--total-nav);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            gap: 52px;
+            margin-bottom: 52px;
+        }
+        .footer-brand .d-mark { margin-bottom: 22px; }
+        .footer-brand p {
+            color: rgba(244,239,226,0.62);
+            font-size: 0.92rem;
+            line-height: 1.72;
+            max-width: 400px;
+        }
+        .footer-brand .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--brass-bright);
+            font-size: 1.05rem;
+            margin-top: 18px;
+            display: block;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.86rem;
+            color: var(--brass-bright);
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(244,239,226,0.65);
+            transition: color 0.18s var(--ease-out);
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col a::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -2px;
+            height: 1px;
+            background: var(--brass-bright);
+            transform: scaleX(0);
+            transform-origin: right center;
+            transition: transform 0.36s var(--ease-out);
+        }
+        .footer-col a:hover { color: var(--brass-bright); }
+        .footer-col a:hover::after { transform: scaleX(1); transform-origin: left center; }
+        .footer-bottom {
+            border-top: 1px solid rgba(244,239,226,0.10);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 14px;
+            color: rgba(244,239,226,0.50);
+        }
+        .footer-bottom a { color: rgba(244,239,226,0.70); }
+        .footer-bottom a:hover { color: var(--brass-bright); }
+
+        /* ── DEMO BANNER ──────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(7,12,28,0.95);
+            backdrop-filter: blur(10px);
+            color: var(--bone);
+            padding: 12px 60px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--crimson);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.55);
+        }
+        .demo-banner p { display: inline-block; }
+        .demo-banner a { color: var(--brass-bright); text-decoration: underline; }
+        .demo-banner a:hover { color: var(--brass-pale); }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(244,239,226,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.18s var(--ease-out);
+            cursor: pointer;
+        }
+        .demo-banner-close:hover { color: var(--brass-bright); }
+
+        /* ── REVEAL ANIMATION ─────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+        }
+        .reveal.reveal-left { transform: translateX(-32px); }
+        .reveal.reveal-right { transform: translateX(32px); }
+        .reveal.reveal-scale { transform: scale(0.96); }
+        .reveal-fast { transition-duration: 0.4s; }
+        .reveal-slow { transition-duration: 0.85s; }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateX(0) translateY(0) scale(1);
+        }
+
+        /* Decelerating depth — sections later down get longer durations */
+        .section-hero .reveal,
+        .recognition .reveal { transition-duration: 0.4s; }
+        .promise .reveal,
+        .featured .reveal { transition-duration: 0.55s; }
+        .known .reveal,
+        .practice .reveal,
+        .attorneys .reveal { transition-duration: 0.65s; }
+        .approach .reveal,
+        .coverage .reveal,
+        .cta-band .reveal,
+        .contact .reveal { transition-duration: 0.8s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .hero-bg { animation: none; }
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────── */
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .nav-inner { gap: 16px; }
+        }
+        @media (max-width: 1024px) {
+            .recognition-inner { grid-template-columns: 1fr 1fr; }
+            .recognition-item { border-right: none; border-bottom: 1px solid rgba(244,239,226,0.10); padding-bottom: 18px; }
+            .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .known-row,
+            .known-row:nth-child(2) {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: left;
+            }
+            .known-row:nth-child(2) .known-numeral { order: 0; text-align: left; }
+            .known-row:nth-child(2) .known-numeral::after { left: 0; right: auto; }
+            .known-row:nth-child(2) .known-tile { order: 2; }
+            .known-row:nth-child(2) .known-content { order: 1; }
+            .known-numeral { font-size: 6rem; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .attorneys-grid { grid-template-columns: 1fr; max-width: 640px; }
+            .approach-grid { grid-template-columns: 1fr; gap: 44px; }
+            .approach-grid::before { display: none; }
+            .approach-side-stamp { display: none; }
+            .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 12px; }
+            .top-bar .available { display: none; }
+            .top-bar-inner { gap: 14px; padding: 0; }
+            .top-bar .divider { display: none; }
+            .container { padding: 0 20px; }
+            .section { padding: 80px 0; }
+            .section-head { margin-bottom: 56px; }
+            .hero { padding-bottom: 90px; }
+            .hero-corner { display: none; }
+            .hero-pills { gap: 8px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .featured-body { padding: 28px 24px; }
+            .attorney-info { padding: 28px 26px 30px; }
+            .attorney-meta { grid-template-columns: 1fr; gap: 18px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 28px 22px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .map-wrap { aspect-ratio: 4 / 3; margin-top: 36px; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; text-align: left; }
+            .chapter-mark { right: 20px; top: 18px; font-size: 0.5rem; }
+            .promise::before,
+            .promise::after { font-size: 14rem; }
+            .known-rows { gap: 64px; }
+            .known-numeral { font-size: 5rem; }
+            .approach-medallion { width: 100px; height: 100px; }
+            .approach-medallion span { font-size: 2.1rem; }
+            .coverage-list { font-size: 1rem; gap: 6px 0; }
+            .coverage-list .city { padding: 0 11px; }
+            .footer-bottom { flex-direction: column; align-items: flex-start; }
+        }
+
+        ::selection { background: var(--crimson); color: var(--bone); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="available">Available Any Hour, Any Day</span>
+        <span class="divider"></span>
+        <a href="tel:+13374841001">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (337) 484-1001
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:michael@dominguelawfirm.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            michael@dominguelawfirm.com
+        </a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="d-mark" aria-label="Domingue Law Firm, LLC">
+            <span class="d-eyebrow">The</span>
+            <span class="d-name">Domingue <em>Law</em> Firm</span>
+            <span class="d-rule"></span>
+            <span class="d-tag">Lafayette &middot; LA</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-target="hero">Home</a></li>
+            <li><a href="#known" data-target="known">Why Domingue</a></li>
+            <li><a href="#practice" data-target="practice">Practice Areas</a></li>
+            <li><a href="#attorneys" data-target="attorneys">The Attorneys</a></li>
+            <li><a href="#approach" data-target="approach">Approach</a></li>
+            <li><a href="#contact" class="nav-cta" data-target="contact">
+                <span class="cta-label">Contact Us</span>
+                <span class="cta-phone">(337) 484-1001</span>
+            </a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why Domingue</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#attorneys">The Attorneys</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact" class="nav-cta">
+            <span class="cta-label">Contact Us</span>
+            <span class="cta-phone">(337) 484-1001</span>
+        </a></li>
+    </ul>
+</div>
+
+<!-- ───────────────────────────────────────────────
+     01 — HERO
+     ─────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-corner" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="50" y1="14" x2="50" y2="78"/>
+            <line x1="38" y1="78" x2="62" y2="78"/>
+            <line x1="30" y1="86" x2="70" y2="86"/>
+            <path d="M20 36 L50 24 L80 36"/>
+            <ellipse cx="20" cy="48" rx="14" ry="3"/>
+            <line x1="20" y1="36" x2="20" y2="48"/>
+            <ellipse cx="80" cy="48" rx="14" ry="3"/>
+            <line x1="80" y1="36" x2="80" y2="48"/>
+        </svg>
+    </div>
+    <div class="container">
+        <span class="chapter-mark">01 / 11 &mdash; Hero</span>
+    </div>
+    <div class="hero-content">
+        <div class="hero-inner">
+            <p class="hero-stamp reveal reveal-fast">
+                <span class="hero-stamp-line"></span>
+                <span class="hero-stamp-text"><strong>EST. Lafayette, LA</strong>Criminal Defense &middot; Personal Injury &middot; Family Law</span>
+            </p>
+            <h1 class="reveal reveal-fast">
+                <span class="line-1">Tough Times</span>
+                <span class="line-2">Tough Lawyers</span>
+            </h1>
+            <div class="hero-rule reveal reveal-fast"></div>
+            <p class="hero-accent reveal reveal-fast"><em>Fighting for justice &mdash; any hour, any day.</em></p>
+            <p class="hero-sub reveal reveal-fast">
+                When your legal rights are on the line, you need a lawyer who will <strong>fight for justice for you.</strong> Before You Make A Move, Make A Call to Domingue Law Firm &mdash; Lafayette's fighter-lawyers, ready at any hour, any day.
+            </p>
+            <div class="hero-pills reveal reveal-fast">
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Downtown Lafayette
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    24/7 Availability
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg>
+                    Aggressive Defense
+                </span>
+                <span class="hero-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 Z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    LSU &middot; Southern U Law
+                </span>
+            </div>
+            <div class="hero-actions reveal reveal-fast">
+                <a href="tel:+13374841001" class="btn btn-crimson">
+                    Call (337) 484-1001
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#practice" class="btn btn-ghost">
+                    Our Practice Areas
+                </a>
+            </div>
+            <div class="hero-foot reveal reveal-fast">
+                <span class="hero-foot-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Before You Make A Move</strong>&nbsp;&mdash;&nbsp;Make A Call.
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     02 — RECOGNITION STRIP
+     ─────────────────────────────────────────────── -->
+<section class="recognition section-dark" id="recognition" aria-label="Firm credentials">
+    <div class="container">
+        <span class="chapter-mark">02 / 11 &mdash; Recognition</span>
+        <div class="recognition-inner">
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Founded</span>
+                <span class="recognition-value">Downtown <em>Lafayette</em></span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Attorneys</span>
+                <span class="recognition-value">Domingue <em>&amp;</em> Fouquier</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Coverage</span>
+                <span class="recognition-value">Acadiana <em>&amp; Beyond</em></span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Bar</span>
+                <span class="recognition-value">Louisiana <em>State</em> Bar</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Availability</span>
+                <span class="recognition-value"><em>Any</em> Hour, <em>Any</em> Day</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     03 — PROMISE BAND
+     ─────────────────────────────────────────────── -->
+<section class="promise" id="promise">
+    <div class="container">
+        <span class="chapter-mark">03 / 11 &mdash; Promise</span>
+    </div>
+    <div class="promise-inner reveal">
+        <div class="promise-rule"></div>
+        <blockquote>
+            When your legal rights are on the line, you need a lawyer who will <strong>fight for justice for you.</strong>
+        </blockquote>
+        <p class="promise-cite">&mdash; Domingue Law Firm &middot; Lafayette, Louisiana</p>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     04 — FEATURED PRACTICE 2-UP
+     ─────────────────────────────────────────────── -->
+<section class="section featured" id="featured">
+    <div class="container">
+        <span class="chapter-mark">04 / 11 &mdash; Featured</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Featured Practice</p>
+            <h2 class="section-h2">The work we are <em>known for.</em></h2>
+            <p class="section-lead">Two pillars define the Domingue Law Firm courtroom record &mdash; criminal defense and personal injury. Both are handled with the same tenacity, the same preparation, and the same conviction that every client deserves a fighter in their corner.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card reveal reveal-left">
+                <div class="featured-photo">
+                    <img src="img/featured-1.jpg" alt="Criminal defense at the courthouse">
+                    <span class="featured-stamp">OUR FLAGSHIP</span>
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Practice &mdash; Criminal Defense</p>
+                    <h3>Criminal Defense</h3>
+                    <p class="featured-italic">Dismissals and acquittals across DWI, Assault, Aggravated Robbery and more.</p>
+                    <p>Michael Domingue Jr. represents clients in all aspects of criminal litigation &mdash; from misdemeanors and felony trial cases to appeals, writs of Habeas Corpus, and Clearing Criminal Records. He has secured dismissals and acquittals in DWI, Assault, Aggravated Assault, Aggravated Robbery, Possession of a Controlled Substance, and more. When you are under investigation or have been arrested, every word and every move matters &mdash; make your first call to Domingue Law.</p>
+                    <ul class="featured-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>DWI, Drug Violations, Assault &amp; Weapons charges</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Felony trials, appeals &amp; Habeas Corpus writs</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Criminal record clearing &amp; post-conviction relief</li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Discuss Your Case
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card reveal reveal-right">
+                <div class="featured-photo">
+                    <img src="img/featured-2.jpg" alt="Louisiana courthouse exterior — Lafayette">
+                    <span class="featured-stamp">FIGHTING FOR YOU</span>
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Practice &mdash; Personal Injury</p>
+                    <h3>Personal Injury</h3>
+                    <p class="featured-italic">Maximum recovery for those injured through no fault of their own.</p>
+                    <p>If you have been injured through no fault of your own &mdash; whether in a car wreck, a big rig collision, a maritime accident, or an on-premise injury &mdash; the Domingue Law Firm will fight to ensure you receive the justice and compensation you deserve. We handle every stage from investigation through trial so you can focus on recovery while we focus on results.</p>
+                    <ul class="featured-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Car wrecks &amp; big rig trucking accidents</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Maritime &amp; offshore injury claims</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Premises liability &amp; on-site injury recovery</li>
+                    </ul>
+                    <a href="#contact" class="featured-link">
+                        Discuss Your Claim
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     05 — KNOWN FOR EDITORIAL BANDS
+     ─────────────────────────────────────────────── -->
+<section class="section known" id="known">
+    <div class="container">
+        <span class="chapter-mark">05 / 11 &mdash; Known For</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Why Domingue Law</p>
+            <h2 class="section-h2">Three commitments. <em>Every case.</em></h2>
+            <p class="section-lead">Being arrested, being injured, or facing the dissolution of your family is one of the toughest experiences life can throw your way. Here is how the Domingue Law Firm meets it &mdash; for every client, every matter, every time.</p>
+        </div>
+
+        <div class="known-rows">
+            <article class="known-row">
+                <div class="known-numeral">01</div>
+                <div class="known-content reveal reveal-left">
+                    <p class="known-eyebrow">Courtroom Record</p>
+                    <h3 class="known-headline">Dismissals, acquittals, and a relentless <em>fight for justice.</em></h3>
+                    <p class="known-body">Michael Domingue has won dismissals or acquittals for clients charged with DWI, Assault, Aggravated Assault, Aggravated Robbery, Possession of a Controlled Substance, and more. His practice spans all aspects of criminal litigation &mdash; from misdemeanors and felony trials to appeals and writs of Habeas Corpus. When your freedom is on the line, you need an attorney who has been in that courtroom before.</p>
+                    <span class="known-stat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg>
+                        Full-spectrum criminal litigation
+                    </span>
+                </div>
+                <div class="known-tile reveal reveal-right">
+                    <img src="img/known-1.jpg" alt="Courtroom interior — Louisiana">
+                    <div class="known-tile-cap">
+                        <span>Criminal Defense</span>
+                        <span class="known-tile-roman">I</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="known-row">
+                <div class="known-numeral">02</div>
+                <div class="known-content reveal reveal-right">
+                    <p class="known-eyebrow">Personal Injury</p>
+                    <h3 class="known-headline">Fighting for those injured <em>through no fault of their own.</em></h3>
+                    <p class="known-body">From car wrecks and big rig collisions to maritime accidents and premises liability, the Domingue Law Firm pursues maximum compensation for injured clients across Acadiana. We understand that an injury does not just hurt &mdash; it disrupts your family, your income, and your future. We fight to make it right.</p>
+                    <span class="known-stat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M5 9l7-7 7 7"/></svg>
+                        Car &middot; Big Rig &middot; Maritime &middot; Premises
+                    </span>
+                </div>
+                <div class="known-tile reveal reveal-left">
+                    <img src="img/known-2.jpg" alt="Highway and trucking accident scene">
+                    <div class="known-tile-cap">
+                        <span>Personal Injury</span>
+                        <span class="known-tile-roman">II</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="known-row">
+                <div class="known-numeral">03</div>
+                <div class="known-content reveal reveal-left">
+                    <p class="known-eyebrow">Family Advocacy</p>
+                    <h3 class="known-headline">Standing with Acadiana families <em>through every battle.</em></h3>
+                    <p class="known-body">Kevin Fouquier brings deeply personal insight to every family law matter &mdash; having navigated the courts as a father fighting for his own daughter. His approach combines the discipline of a D1 athlete with genuine compassion for clients facing divorce, custody, child support, and estate planning challenges in Acadiana.</p>
+                    <span class="known-stat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        Family Law &middot; Estates &middot; Custody
+                    </span>
+                </div>
+                <div class="known-tile reveal reveal-right">
+                    <img src="img/known-3.jpg" alt="Family on courthouse steps">
+                    <div class="known-tile-cap">
+                        <span>Family Law</span>
+                        <span class="known-tile-roman">III</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     06 — PRACTICE GRID
+     ─────────────────────────────────────────────── -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <span class="chapter-mark">06 / 11 &mdash; Practice Areas</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">Whatever the matter, <em>we fight for you.</em></h2>
+            <p class="section-lead">Five focused practice areas, each handled with the same tenacity that has defined Domingue Law Firm since day one. Tough times need a tough lawyer &mdash; and a firm that knows the Lafayette courthouse from the inside.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card" id="criminal-defense">
+                <span class="practice-roman">I</span>
+                <div class="practice-roundel">
+                    <img src="img/known-1.jpg" alt="Criminal defense">
+                </div>
+                <h3>Criminal Defense</h3>
+                <p>DWI, Drug Violations, Burglary, Larceny, Assault, Driving Violations, Weapons Charges &mdash; we fight aggressively to protect your rights and your future in every criminal matter.</p>
+                <div class="practice-tags">
+                    <span>DWI</span>
+                    <span>Drug Violations</span>
+                    <span>Assault</span>
+                    <span>Weapons</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card" id="personal-injury">
+                <span class="practice-roman">II</span>
+                <div class="practice-roundel">
+                    <img src="img/known-2.jpg" alt="Personal injury">
+                </div>
+                <h3>Personal Injury</h3>
+                <p>Car Wrecks, Big Rig Accidents, Maritime Accidents, On Premise Injuries &mdash; if you have been injured through no fault of your own, we fight to get you the compensation you deserve.</p>
+                <div class="practice-tags">
+                    <span>Car Wrecks</span>
+                    <span>Big Rig</span>
+                    <span>Maritime</span>
+                    <span>Premises</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card" id="family-law">
+                <span class="practice-roman">III</span>
+                <div class="practice-roundel">
+                    <img src="img/known-3.jpg" alt="Family law">
+                </div>
+                <h3>Family Law</h3>
+                <p>Divorce, Custody, Child Support &mdash; facing the dissolution of your family is one of the toughest experiences life can throw your way. We stand with you through every step.</p>
+                <div class="practice-tags">
+                    <span>Divorce</span>
+                    <span>Custody</span>
+                    <span>Child Support</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card" id="contract-disputes">
+                <span class="practice-roman">IV</span>
+                <div class="practice-roundel">
+                    <img src="img/featured-2.jpg" alt="Contract disputes">
+                </div>
+                <h3>Contract Disputes</h3>
+                <p>Debt Collection, Breach of Contract &mdash; when agreements are broken and your interests are at stake, we bring the same tenacious advocacy to your business and personal disputes.</p>
+                <div class="practice-tags">
+                    <span>Debt Collection</span>
+                    <span>Breach of Contract</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card" id="property-law">
+                <span class="practice-roman">V</span>
+                <div class="practice-roundel">
+                    <img src="img/featured-1.jpg" alt="Property law">
+                </div>
+                <h3>Property Law</h3>
+                <p>Commercial and Residential property matters handled with precision and local Louisiana legal knowledge by attorneys who know the Acadiana market.</p>
+                <div class="practice-tags">
+                    <span>Commercial</span>
+                    <span>Residential</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card">
+                <span class="practice-roman">VI</span>
+                <div class="practice-roundel">
+                    <img src="img/approach-bg.jpg" alt="Appeals and post-conviction">
+                </div>
+                <h3>Appeals &amp; Habeas</h3>
+                <p>Appeals, writs of Habeas Corpus, and post-conviction relief &mdash; when the first verdict is not the right one, we revisit it at the appellate level. Criminal record clearing handled in-house.</p>
+                <div class="practice-tags">
+                    <span>Appeals</span>
+                    <span>Habeas Corpus</span>
+                    <span>Record Clearing</span>
+                </div>
+                <a href="#contact" class="practice-link">
+                    Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     07 — THE ATTORNEYS
+     ─────────────────────────────────────────────── -->
+<section class="section attorneys" id="attorneys">
+    <div class="container">
+        <span class="chapter-mark">07 / 11 &mdash; The Attorneys</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">The Attorneys</p>
+            <h2 class="section-h2">Meet the lawyers <em>in your corner.</em></h2>
+            <p class="section-lead">A two-attorney firm purpose-built for Acadiana families and the matters that define their toughest chapters.</p>
+        </div>
+
+        <div class="attorneys-grid">
+            <article class="attorney-card reveal reveal-left" id="attorney-michael">
+                <div class="attorney-portrait">
+                    <img src="img/michael-domingue-jr.jpg" alt="Attorney Michael Domingue, Jr.">
+                    <div class="attorney-portrait-tag">
+                        <span class="role">Founding Attorney</span>
+                        <span class="name">Michael Domingue, Jr.</span>
+                    </div>
+                </div>
+                <div class="attorney-info">
+                    <h4>Michael Domingue, Jr.</h4>
+                    <p class="attorney-creds">J.D., Southern University School of Law &middot; State Bar of Louisiana</p>
+                    <p class="attorney-bio">I represent clients in all aspects of criminal litigation, from misdemeanors and felony trial cases to appeals, writs of Habeas Corpus and Clearing Criminal Records cases. I also represent clients who have been injured through no fault of their own, as well as clients who are involved in family matters. I have won dismissals or acquittals for clients charged with a variety of offenses including DWI, Assault, Assault family violence, Aggravated Assault, Aggravated Robbery, Possession of a Controlled Substance, and more.</p>
+                    <div class="attorney-meta">
+                        <div class="attorney-meta-block">
+                            <strong>Practice Focus</strong>
+                            <ul>
+                                <li>Criminal Defense</li>
+                                <li>Personal Injury</li>
+                                <li>Family Law</li>
+                                <li>Appeals &amp; Habeas Corpus</li>
+                            </ul>
+                        </div>
+                        <div class="attorney-meta-block">
+                            <strong>Education &amp; Bar</strong>
+                            <ul>
+                                <li>Southern U. School of Law (J.D.)</li>
+                                <li>U. of Louisiana at Lafayette</li>
+                                <li>Louisiana State Bar</li>
+                                <li>Lafayette Bar Association</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="attorney-card reveal reveal-right" id="attorney-kevin">
+                <div class="attorney-portrait">
+                    <img src="img/kevin-fouquier.jpg" alt="Attorney Kevin Fouquier">
+                    <div class="attorney-portrait-tag">
+                        <span class="role">Attorney</span>
+                        <span class="name">Kevin Fouquier</span>
+                    </div>
+                </div>
+                <div class="attorney-info">
+                    <h4>Kevin Fouquier</h4>
+                    <p class="attorney-creds">J.D., LSU &middot; Louisiana Bar Association</p>
+                    <p class="attorney-bio">Kevin Fouquier is a passionate and dedicated attorney, deeply committed to serving the families of Acadiana in the areas of Family Law, Estate Planning, and Personal Injury. Kevin carries the dedication and tenacity of a D1 college athlete into his legal practice, and understands the sensitive nature of family law as he too was once a father who had to fight to be in his daughter's life. Kevin earned his Juris Doctor from LSU and is a member of the Louisiana Bar Association.</p>
+                    <div class="attorney-meta">
+                        <div class="attorney-meta-block">
+                            <strong>Practice Focus</strong>
+                            <ul>
+                                <li>Family Law</li>
+                                <li>Estate Planning</li>
+                                <li>Personal Injury</li>
+                                <li>Custody &amp; Support</li>
+                            </ul>
+                        </div>
+                        <div class="attorney-meta-block">
+                            <strong>Education &amp; Bar</strong>
+                            <ul>
+                                <li>LSU (J.D.)</li>
+                                <li>U. of Louisiana (Ragin' Cajuns)</li>
+                                <li>Louisiana State Bar</li>
+                                <li>D1 Football &mdash; ULL Defense</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     08 — APPROACH (DARK BAND)
+     ─────────────────────────────────────────────── -->
+<section class="approach section-dark" id="approach">
+    <span class="approach-side-stamp">Our Approach &mdash; Domingue Law Firm</span>
+    <div class="container">
+        <span class="chapter-mark">08 / 11 &mdash; Approach</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Tough times demand <em>tough lawyers.</em></h2>
+            <p class="section-lead">Three commitments that have shaped how Domingue Law Firm responds to every client &mdash; from the call that comes at 11 p.m. on a Tuesday to the verdict that comes nine months later.</p>
+        </div>
+
+        <div class="approach-grid">
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>01</span></div>
+                <p class="approach-eyebrow">Availability</p>
+                <h3>Immediate Availability</h3>
+                <p class="approach-italic"><em>&mdash; any hour, any day.</em></p>
+                <p>We are ready to take your call at ANY Hour, ANY Day. When a legal crisis hits, waiting is not an option &mdash; and neither is being unreachable.</p>
+                <span class="approach-rule"></span>
+            </article>
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>02</span></div>
+                <p class="approach-eyebrow">Location</p>
+                <h3>Courthouse-Side Counsel</h3>
+                <p class="approach-italic"><em>&mdash; in the heart of Downtown Lafayette.</em></p>
+                <p>Strategically located in the heart of Downtown Lafayette, near the courthouse, we combine deep local knowledge with the proximity that matters when your case is moving fast.</p>
+                <span class="approach-rule"></span>
+            </article>
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>03</span></div>
+                <p class="approach-eyebrow">Counsel</p>
+                <h3>Every Word. Every Move.</h3>
+                <p class="approach-italic"><em>&mdash; before you make a move, make a call.</em></p>
+                <p>When you are faced with a legal situation, every word that you say and every move that you make requires expert guidance. Before You Make A Move, Make A Call.</p>
+                <span class="approach-rule"></span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     09 — COVERAGE STRIP
+     ─────────────────────────────────────────────── -->
+<section class="coverage" id="coverage">
+    <div class="container">
+        <span class="chapter-mark">09 / 11 &mdash; Coverage</span>
+        <div class="coverage-inner reveal">
+            <p class="coverage-label">Serving Acadiana &amp; Beyond</p>
+            <div class="coverage-list">
+                <span class="city">Lafayette</span>
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     10 — CTA BAND
+     ─────────────────────────────────────────────── -->
+<section class="cta-band" id="cta">
+    <div class="container">
+        <span class="chapter-mark">10 / 11 &mdash; Call Us</span>
+        <div class="cta-inner reveal">
+            <h2>Before You Make A Move, <em>Make A Call.</em></h2>
+            <p>Available any hour, any day. The first call is confidential, and exactly the move you need to make right now.</p>
+            <div class="cta-actions">
+                <a href="tel:+13374841001" class="btn btn-ink">
+                    Call (337) 484-1001
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────────────────────────────────────────
+     11 — CONTACT
+     ─────────────────────────────────────────────── -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <span class="chapter-mark">11 / 11 &mdash; Contact</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Contact Us</p>
+            <h2 class="section-h2">Downtown Lafayette &middot; <em>near the courthouse.</em></h2>
+            <p class="section-lead">Tell us briefly about your matter and we will be in touch &mdash; any hour, any day. All inquiries are treated as confidential.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal reveal-left">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Domingue Law Firm<br>109 Stewart Street<br>Lafayette, LA</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone &amp; Fax</strong>
+                            <a href="tel:+13374841001">(337) 484-1001</a><br>
+                            <span style="color:var(--text-mid);font-size:0.92rem;">Fax (337) 534-4462</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:michael@dominguelawfirm.com">michael@dominguelawfirm.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Available Any Hour, Any Day<br><span style="color:var(--text-soft);font-size:0.88rem;">Office: by appointment, walk-ins welcome</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form reveal reveal-right">
+                <h3>Send Us A Message</h3>
+                <p class="form-italic">Before you make a move, make a call.</p>
+                <p class="form-sub">Whatever the matter, we will listen first &mdash; then build the strategy. All inquiries are confidential.</p>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(337) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Criminal Defense &mdash; DWI</option>
+                            <option>Criminal Defense &mdash; Drug Violations</option>
+                            <option>Criminal Defense &mdash; Assault</option>
+                            <option>Criminal Defense &mdash; Weapons Charges</option>
+                            <option>Criminal Defense &mdash; Other</option>
+                            <option>Personal Injury &mdash; Car Wreck</option>
+                            <option>Personal Injury &mdash; Big Rig / Truck</option>
+                            <option>Personal Injury &mdash; Maritime / Offshore</option>
+                            <option>Personal Injury &mdash; Premises</option>
+                            <option>Family Law &mdash; Divorce</option>
+                            <option>Family Law &mdash; Custody &amp; Support</option>
+                            <option>Estate Planning</option>
+                            <option>Contract Dispute</option>
+                            <option>Property Law</option>
+                            <option>Appeal / Habeas / Record Clearing</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">Brief Description</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about the matter — that's plenty to start."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Send Confidential Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-note">All inquiries are treated as confidential.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap reveal">
+            <iframe src="https://www.google.com/maps?q=109+Stewart+St,+Lafayette,+LA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Domingue Law Firm location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="d-mark inverse" aria-label="Domingue Law Firm, LLC">
+                    <span class="d-eyebrow">The</span>
+                    <span class="d-name">Domingue <em>Law</em> Firm</span>
+                    <span class="d-rule"></span>
+                    <span class="d-tag">Lafayette &middot; LA</span>
+                </a>
+                <p>Lafayette's fighter-lawyers &mdash; available any hour, any day. When your freedom, family, or future is on the line, Domingue Law Firm fights for you.</p>
+                <span class="footer-tagline">Before You Make A Move, Make A Call.</span>
+            </div>
+            <div class="footer-col">
+                <h5>Practice Areas</h5>
+                <ul>
+                    <li><a href="#criminal-defense">Criminal Defense</a></li>
+                    <li><a href="#personal-injury">Personal Injury</a></li>
+                    <li><a href="#family-law">Family Law</a></li>
+                    <li><a href="#contract-disputes">Contract Disputes</a></li>
+                    <li><a href="#property-law">Property Law</a></li>
+                    <li><a href="#practice">Appeals &amp; Habeas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>The Firm</h5>
+                <ul>
+                    <li><a href="#known">Why Domingue Law</a></li>
+                    <li><a href="#attorney-michael">Michael Domingue, Jr.</a></li>
+                    <li><a href="#attorney-kevin">Kevin Fouquier</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li class="plain">109 Stewart Street</li>
+                    <li class="plain">Lafayette, LA</li>
+                    <li><a href="tel:+13374841001">(337) 484-1001</a></li>
+                    <li class="plain">Fax: (337) 534-4462</li>
+                    <li><a href="mailto:michael@dominguelawfirm.com">michael@dominguelawfirm.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Domingue Law Firm, LLC. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Domingue Law Firm, LLC.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // Smooth scroll for in-page anchors with hash update
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#' || href.length < 2) { e.preventDefault(); return; }
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            const yOffset = -120;
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            history.pushState(null, '', href);
+        }
+    });
+
+    // Mobile nav drawer
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    // Stagger reveal children in grids
+    document.querySelectorAll('.featured-grid, .practice-grid, .attorneys-grid, .approach-grid, .known-rows, .recognition-inner').forEach(group => {
+        const isLate = group.closest('.approach, .coverage, .cta-band, .contact') !== null;
+        const stagger = isLate ? 140 : 80;
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = (i * stagger) + 'ms';
+        });
+    });
+
+    // Active nav state — based on which section is in view
+    const navLinks = document.querySelectorAll('.nav-links > li > a[data-target]');
+    const sectionIds = ['hero', 'known', 'practice', 'attorneys', 'approach', 'contact'];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    function updateActiveNav() {
+        let activeId = sectionIds[0];
+        const scrollY = window.scrollY + 200;
+        for (const section of sections) {
+            if (section.offsetTop <= scrollY) {
+                activeId = section.id;
+            }
+        }
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-target') === activeId);
+        });
+    }
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                updateActiveNav();
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    }, { passive: true });
+    updateActiveNav();
+</script>
+
+</body>
+</html>

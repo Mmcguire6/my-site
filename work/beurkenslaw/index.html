@@ -1,0 +1,2910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Beurkens Law | Grand Rapids Criminal Defense & Personal Injury Attorneys</title>
+    <meta name="description" content="Beurkens Law — Grand Rapids criminal defense and personal injury attorneys with 45+ years of West Michigan experience. Call (616) 459-5344 for a free consultation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wh3e6pv2u4");
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Beurkens Law — crimson authority + Michigan gold + parchment */
+            --ink:          #1A1A1A;
+            --ink-deep:     #0E0E0E;
+            --char:         #262626;
+            --char-mid:     #3A3A3A;
+            --char-light:   #5A5A5A;
+
+            --crimson:        #7B1F1F;
+            --crimson-bright: #9B2828;
+            --crimson-deep:   #561010;
+            --crimson-darker: #380808;
+            --crimson-pale:   #D9B5B5;
+            --crimson-tint:   #EFD9D9;
+            --crimson-soft:   #F8EAEA;
+
+            --gold:         #C09040;
+            --gold-bright:  #D9AB5C;
+            --gold-deep:    #8E681E;
+            --gold-darker:  #5C4310;
+            --gold-pale:    #E8D4A0;
+            --gold-soft:    #F4E8C8;
+
+            --steel:        #5A5E66;
+            --steel-light:  #8A8E96;
+
+            --bone:         #F4EFE5;
+            --bone-deep:    #E8DFC8;
+            --paper:        #FFFFFF;
+            --bg:           #FBF7EE;
+            --bg-soft:      #FDFAF3;
+
+            --text:         #1A1A1A;
+            --text-mid:     #4A4A50;
+            --text-soft:    #6E6E76;
+            --text-faint:   #94949C;
+
+            --border:       #E2DCCC;
+            --border-soft:  #ECE6D6;
+
+            --topbar-h:     40px;
+            --nav-h:        86px;
+            --total-nav:    126px;
+
+            --shadow-sm:    0 1px 3px rgba(28,28,28,0.06);
+            --shadow-md:    0 8px 24px -8px rgba(28,28,28,0.22), 0 2px 6px -2px rgba(28,28,28,0.10);
+            --shadow-lg:    0 24px 56px -20px rgba(28,28,28,0.34), 0 8px 16px -8px rgba(28,28,28,0.14);
+            --shadow-crimson: 0 12px 28px -8px rgba(123,31,31,0.50);
+            --shadow-gold:    0 12px 28px -8px rgba(192,144,64,0.45);
+            --shadow-ink:     0 12px 28px -8px rgba(28,28,28,0.50);
+
+            --ease-out-expensive: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 400;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+            mix-blend-mode: multiply;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+            font-weight: 700;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, select, textarea { font-family: inherit; }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+        /* ── CHAPTER MARK ──────────────────────────────────── */
+        .chapter-mark {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 0.55rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            opacity: 0.40;
+            z-index: 4;
+            pointer-events: none;
+            font-variant-numeric: tabular-nums;
+        }
+        .chapter-mark.on-dark { color: var(--gold-bright); opacity: 0.55; }
+
+        /* ── BRAND MARK ─────────────────────────────────────── */
+        .h-mark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+            position: relative;
+        }
+        .h-mark .h-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.58rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        .h-mark .h-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--ink);
+            letter-spacing: 0.04em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .h-mark .h-name em {
+            font-style: normal;
+            color: var(--crimson);
+        }
+        .h-mark .h-rule {
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 8px 0 5px;
+        }
+        .h-mark .h-tag {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+            color: var(--crimson);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .h-mark.inverse .h-eyebrow { color: var(--gold-bright); }
+        .h-mark.inverse .h-name { color: var(--bone); }
+        .h-mark.inverse .h-name em { color: var(--crimson-pale); }
+        .h-mark.inverse .h-rule { background: var(--gold); }
+        .h-mark.inverse .h-tag { color: var(--gold-bright); }
+
+        /* ── TOP BAR ─────────────────────────────────────── */
+        .top-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--topbar-h);
+            background: var(--ink-deep);
+            color: rgba(244,239,229,0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            z-index: 901;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .top-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .top-bar a {
+            color: rgba(244,239,229,0.92);
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: var(--gold-bright); }
+        .top-bar svg { width: 12px; height: 12px; color: var(--gold-bright); }
+        .top-bar .divider { width: 1px; height: 14px; background: rgba(255,255,255,0.20); }
+        .top-bar .free {
+            color: var(--gold-bright);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN NAV ─────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: var(--topbar-h);
+            left: 0; right: 0;
+            height: var(--nav-h);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links > li > a {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition: color 0.18s;
+            position: relative;
+            padding: 6px 0;
+            display: inline-block;
+        }
+        .nav-links > li > a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.35s var(--ease-out-expensive);
+        }
+        .nav-links > li > a:hover { color: var(--crimson); }
+        .nav-links > li > a:hover::after,
+        .nav-links > li > a.is-active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .nav-cta-wrap {
+            display: flex;
+            align-items: center;
+        }
+        .nav-cta {
+            background: var(--crimson) !important;
+            color: var(--bone) !important;
+            padding: 12px 26px !important;
+            border-radius: 2px;
+            border: 1.5px solid var(--gold) !important;
+            font-weight: 800 !important;
+            letter-spacing: 0.10em !important;
+            font-size: 0.72rem !important;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px -4px rgba(123,31,31,0.40);
+            line-height: 1.15;
+            text-align: center;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            background: var(--crimson-deep) !important;
+            color: var(--bone) !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .nav-cta-stack {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            gap: 2px;
+        }
+        .nav-cta-stack .top {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+        }
+        .nav-cta-stack .bot {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--gold-bright);
+        }
+        .nav-hamburger {
+            display: none;
+            width: 32px; height: 24px;
+            position: relative;
+        }
+        .nav-hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-hamburger span:nth-child(1) { top: 4px; }
+        .nav-hamburger span:nth-child(2) { top: 11px; }
+        .nav-hamburger span:nth-child(3) { top: 18px; }
+
+        .mobile-nav {
+            position: fixed;
+            top: calc(var(--topbar-h) + var(--nav-h));
+            left: 0; right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 32px;
+            transform: translateY(-110%);
+            transition: transform 0.3s var(--ease-out-expensive);
+            z-index: 899;
+            box-shadow: var(--shadow-md);
+        }
+        .mobile-nav.open { transform: translateY(0); }
+        .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+        .mobile-nav a { color: var(--ink); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        section {
+            scroll-margin-top: calc(var(--total-nav) + 12px);
+        }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            padding-top: calc(var(--total-nav) + 24px);
+            padding-bottom: 60px;
+            position: relative;
+            color: var(--bone);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: var(--ink-deep);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(115deg, rgba(14,14,14,0.94) 0%, rgba(28,28,28,0.78) 40%, rgba(123,31,31,0.55) 100%),
+                url('img/hero.jpg') center 32% / cover no-repeat;
+            z-index: 0;
+            transform: scale(1.04);
+            filter: contrast(1.05) saturate(0.85);
+            animation: hero-drift 22s ease-in-out infinite alternate;
+        }
+        @keyframes hero-drift {
+            0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+            100% { transform: scale(1.06) translate3d(-1.5%, -1%, 0); }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 25%, rgba(192,144,64,0.22), transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(86,16,16,0.55), transparent 50%),
+                linear-gradient(180deg, rgba(14,14,14,0.20) 0%, transparent 30%, rgba(14,14,14,0.55) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.65;
+            z-index: 2;
+        }
+
+        .hero-scales {
+            position: absolute;
+            top: calc(var(--total-nav) + 36px);
+            right: 48px;
+            width: 96px;
+            height: 96px;
+            color: var(--gold-bright);
+            opacity: 0.55;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .hero-scales svg { width: 100%; height: 100%; }
+
+        .hero-grid {
+            position: relative;
+            z-index: 3;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+        .hero-content { display: flex; flex-direction: column; }
+        .hero-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--gold-bright);
+            font-weight: 500;
+            margin-bottom: 14px;
+            align-self: flex-start;
+            letter-spacing: 0.04em;
+        }
+        .hero-stamp::before {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            margin-bottom: 26px;
+            align-self: flex-start;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 5.8vw, 5rem);
+            font-weight: 800;
+            color: var(--bone);
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .hero h1 .line-1 { display: block; }
+        .hero h1 .line-2 {
+            display: block;
+            margin-top: 2px;
+        }
+        .hero h1 em {
+            display: block;
+            color: var(--gold-bright);
+            font-style: italic;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+            font-size: 0.7em;
+            margin-top: 10px;
+            line-height: 1.15;
+        }
+        .hero-underline {
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--crimson-bright);
+            margin: 20px 0 28px;
+        }
+        .hero-sub {
+            font-size: 1.06rem;
+            color: rgba(244,239,229,0.84);
+            line-height: 1.65;
+            max-width: 560px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .hero-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(244,239,229,0.06);
+            border: 1px solid rgba(192,144,64,0.32);
+            color: rgba(244,239,229,0.90);
+            padding: 7px 14px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+        .hero-pill svg { width: 12px; height: 12px; color: var(--gold-bright); }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: transform 0.25s var(--ease-out-expensive), background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.25s var(--ease-out-expensive);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .btn-crimson {
+            background: var(--crimson);
+            color: var(--bone);
+            box-shadow: var(--shadow-crimson);
+        }
+        .btn-crimson:hover {
+            background: var(--crimson-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(123,31,31,0.65);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--ink-deep);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px -8px rgba(192,144,64,0.55);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,229,0.40);
+        }
+        .btn-ghost:hover {
+            background: rgba(244,239,229,0.06);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateY(-2px);
+        }
+        .btn-ink {
+            background: var(--ink-deep);
+            color: var(--bone);
+        }
+        .btn-ink:hover {
+            background: var(--ink);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-ink);
+        }
+        .btn-ghost-light {
+            background: transparent;
+            color: var(--bone);
+            border: 1.5px solid rgba(244,239,229,0.55);
+        }
+        .btn-ghost-light:hover {
+            background: rgba(244,239,229,0.12);
+            border-color: var(--bone);
+        }
+
+        /* Hero lawyer portrait */
+        .hero-portrait-wrap {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            max-width: 460px;
+            margin-left: auto;
+            border: 1px solid rgba(192,144,64,0.40);
+            padding: 12px;
+            background: rgba(14,14,14,0.40);
+        }
+        .hero-portrait-wrap::before {
+            content: '';
+            position: absolute;
+            top: -8px; left: -8px;
+            width: 60px; height: 60px;
+            border-top: 2px solid var(--gold);
+            border-left: 2px solid var(--gold);
+            pointer-events: none;
+            z-index: 3;
+        }
+        .hero-portrait-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; right: -8px;
+            width: 60px; height: 60px;
+            border-bottom: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+            pointer-events: none;
+            z-index: 3;
+        }
+        .hero-portrait {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: var(--ink);
+        }
+        .hero-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            filter: contrast(1.04) saturate(0.95);
+        }
+        .hero-portrait-caption {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            z-index: 2;
+            color: var(--bone);
+        }
+        .hero-portrait::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(14,14,14,0.85) 100%);
+            pointer-events: none;
+        }
+        .hero-portrait-caption .role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .hero-portrait-caption .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .hero-portrait-caption .name em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--crimson-pale);
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* ── RECOGNITION STRIP ────────────────────────────── */
+        .recognition {
+            background: var(--ink-deep);
+            color: var(--bone);
+            padding: 36px 0;
+            border-bottom: 1px solid rgba(192,144,64,0.25);
+            position: relative;
+        }
+        .recognition::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(192,144,64,0.45) 50%, transparent 100%);
+        }
+        .recognition-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .recognition-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 0;
+            flex: 1;
+            text-align: center;
+            padding: 6px 18px;
+            border-right: 1px solid rgba(244,239,229,0.10);
+        }
+        .recognition-item:last-child { border-right: none; }
+        .recognition-label {
+            font-size: 0.6rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .recognition-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.04rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            font-variant-numeric: tabular-nums;
+        }
+        .recognition-value em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* ── PROMISE BAND ─────────────────────────────────── */
+        .promise {
+            background: var(--bone);
+            padding: 100px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .promise-inner {
+            max-width: 940px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .promise-mark {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 18rem;
+            line-height: 1;
+            color: var(--crimson);
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+            font-weight: 700;
+        }
+        .promise-rule {
+            width: 60px;
+            height: 2px;
+            background: var(--crimson);
+            margin: 0 auto 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .promise blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.32;
+            letter-spacing: -0.012em;
+            margin-bottom: 26px;
+            position: relative;
+            z-index: 1;
+            hanging-punctuation: first last;
+        }
+        .promise blockquote strong {
+            font-style: normal;
+            color: var(--crimson);
+            font-weight: 700;
+        }
+        .promise-cite {
+            font-size: 0.74rem;
+            color: var(--text-soft);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── SECTION DEFAULTS ─────────────────────────────── */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        .section-head {
+            max-width: 800px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 2px;
+            background: var(--crimson);
+        }
+        .section-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+        .section-h2 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: -0.005em;
+        }
+        .section-lead {
+            font-size: 1.06rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        /* ── FEATURED PRACTICE 2-UP ───────────────────────── */
+        .featured {
+            background: var(--paper);
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px;
+        }
+        .featured-card {
+            background: var(--bone);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.5s var(--ease-out-expensive), box-shadow 0.5s var(--ease-out-expensive), border-color 0.4s;
+        }
+        .featured-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--crimson);
+            box-shadow: var(--shadow-lg);
+        }
+        .featured-photo {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background: var(--ink);
+        }
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s var(--ease-out-expensive);
+        }
+        .featured-card:hover .featured-photo img { transform: scale(1.05); }
+        .featured-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(14,14,14,0.20) 0%, transparent 40%, rgba(14,14,14,0.55) 100%);
+            pointer-events: none;
+        }
+        .featured-stamp {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(14,14,14,0.78);
+            color: var(--gold-bright);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            letter-spacing: 0.10em;
+            border: 1px solid rgba(192,144,64,0.40);
+            z-index: 2;
+        }
+        .featured-body {
+            padding: 40px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .featured-eyebrow {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .featured-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+        .featured-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.06rem;
+            color: var(--crimson);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .featured-card p {
+            color: var(--text-mid);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .featured-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .featured-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .featured-highlights li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--crimson);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--crimson);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            align-self: flex-start;
+            margin-top: auto;
+            padding-bottom: 4px;
+            position: relative;
+            transition: gap 0.3s var(--ease-out-expensive), color 0.2s;
+        }
+        .learn-more::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--crimson);
+            transition: width 0.4s var(--ease-out-expensive);
+        }
+        .featured-card:hover .learn-more { gap: 16px; color: var(--crimson-deep); }
+        .featured-card:hover .learn-more::after { width: 100%; }
+        .learn-more svg { width: 14px; height: 14px; }
+
+        /* ── KNOWN FOR EDITORIAL BANDS ────────────────────── */
+        .known {
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .known::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 560px;
+            height: 560px;
+            background: radial-gradient(circle, rgba(123,31,31,0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .known-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 380px;
+            gap: 56px;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+        .known-row:last-child { border-bottom: none; }
+        .known-row.reverse {
+            grid-template-columns: 380px 1fr 80px;
+        }
+        .known-numeral {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 6rem;
+            font-weight: 300;
+            color: var(--crimson-tint);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            transition: color 0.5s var(--ease-out-expensive), transform 0.5s var(--ease-out-expensive);
+            font-variant-numeric: tabular-nums;
+        }
+        .known-row.reverse .known-numeral {
+            order: 3;
+            text-align: right;
+        }
+        .known-row.reverse .known-body { order: 2; }
+        .known-row.reverse .known-motif { order: 1; }
+        .known-row:hover .known-numeral {
+            color: var(--crimson);
+            transform: translateX(6px);
+        }
+        .known-row.reverse:hover .known-numeral { transform: translateX(-6px); }
+        .known-body { display: flex; flex-direction: column; }
+        .known-eyebrow {
+            font-size: 0.66rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+        .known-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+            color: var(--ink);
+            font-weight: 700;
+            line-height: 1.12;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+        }
+        .known-body h3 em {
+            font-style: italic;
+            color: var(--crimson);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            margin-top: 4px;
+        }
+        .known-body p {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+        .known-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 18px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--crimson);
+            border-radius: 2px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.08rem;
+            color: var(--ink);
+            font-weight: 600;
+            align-self: flex-start;
+            font-variant-numeric: tabular-nums;
+        }
+        .known-motif {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: var(--ink);
+            border: 1px solid var(--gold-pale);
+            padding: 10px;
+        }
+        .known-motif-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .known-motif-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s var(--ease-out-expensive);
+        }
+        .known-motif:hover .known-motif-inner img { transform: scale(1.05); }
+        .known-motif-roman {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.78rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.18em;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            z-index: 2;
+        }
+
+        /* ── PRACTICE GRID ────────────────────────────────── */
+        .practice {
+            background: var(--paper);
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .practice-card {
+            background: var(--bone);
+            border: 1px solid var(--border);
+            padding: 36px 32px 32px;
+            border-radius: 2px;
+            transition: transform 0.4s var(--ease-out-expensive), border-color 0.3s, box-shadow 0.4s var(--ease-out-expensive), background 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease-out-expensive);
+        }
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--crimson);
+            background: var(--paper);
+            box-shadow: var(--shadow-md);
+        }
+        .practice-card:hover::before { transform: scaleX(1); }
+        .practice-numeral {
+            position: absolute;
+            top: 20px;
+            right: 26px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: var(--crimson-tint);
+            line-height: 1;
+            font-weight: 500;
+            transition: color 0.4s var(--ease-out-expensive), transform 0.4s var(--ease-out-expensive);
+        }
+        .practice-card:hover .practice-numeral {
+            color: var(--crimson);
+            transform: translateX(-4px);
+        }
+        .practice-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 22px;
+            border: 2px solid var(--gold);
+            background: var(--ink);
+            position: relative;
+        }
+        .practice-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.36rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.005em;
+            line-height: 1.18;
+            text-transform: uppercase;
+        }
+        .practice-card p {
+            color: var(--text-mid);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-soft);
+            margin-bottom: 18px;
+        }
+        .practice-tags span {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--crimson-deep);
+            background: var(--crimson-soft);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--crimson-tint);
+            letter-spacing: 0.04em;
+        }
+        .practice-card .learn-more { margin-top: 0; }
+
+        /* ── APPROACH DARK BAND ───────────────────────────── */
+        .approach {
+            background-color: var(--ink-deep);
+            background-image:
+                linear-gradient(rgba(14,14,14,0.78), rgba(14,14,14,0.92)),
+                url('img/approach-bg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            color: var(--bone);
+            position: relative;
+            overflow: hidden;
+        }
+        .approach::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 20%, rgba(192,144,64,0.20), transparent 50%),
+                radial-gradient(ellipse at 85% 80%, rgba(123,31,31,0.32), transparent 55%),
+                linear-gradient(180deg, rgba(192,144,64,0.05) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .approach::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.55;
+            z-index: 2;
+        }
+        .approach .approach-bottom-rule {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.55;
+            z-index: 2;
+        }
+        .approach .container { position: relative; z-index: 2; }
+        .approach-side-stamp {
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: left center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.40em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            z-index: 2;
+            white-space: nowrap;
+        }
+        .approach .section-head { margin-bottom: 80px; }
+        .approach .section-eyebrow { color: var(--gold-bright); }
+        .approach .section-eyebrow::before,
+        .approach .section-eyebrow::after { background: var(--gold-bright); }
+        .approach .section-h2 { color: var(--bone); }
+        .approach .section-h2 em { color: var(--gold-bright); }
+        .approach .section-lead { color: rgba(244,239,229,0.84); }
+
+        .approach-medallions {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 36px;
+            position: relative;
+        }
+        .approach-medallions::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background-image: linear-gradient(90deg, var(--gold) 50%, transparent 50%);
+            background-size: 8px 1px;
+            opacity: 0.40;
+            z-index: 0;
+        }
+        .approach-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .approach-medallion {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--ink-deep);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            position: relative;
+            box-shadow: 0 8px 24px -8px rgba(192,144,64,0.32);
+        }
+        .approach-medallion::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 1px dashed rgba(192,144,64,0.50);
+        }
+        .approach-medallion span {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--gold-bright);
+            font-weight: 500;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .approach-card .a-eyebrow {
+            font-size: 0.62rem;
+            color: var(--gold-bright);
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--bone);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.005em;
+        }
+        .approach-card .a-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.96rem;
+            color: var(--crimson-pale);
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+        .approach-card p {
+            color: rgba(244,239,229,0.78);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+        .approach-card .a-rule {
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.5s var(--ease-out-expensive);
+        }
+        .approach-card:hover .a-rule { width: 56px; }
+
+        /* ── COVERAGE STRIP ───────────────────────────────── */
+        .coverage {
+            background: var(--paper);
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border-soft);
+            position: relative;
+        }
+        .coverage-inner {
+            text-align: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .coverage-label {
+            font-size: 0.7rem;
+            color: var(--gold-deep);
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+        .coverage-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            color: var(--ink);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .coverage-list span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .coverage-list span:not(:last-child)::after {
+            content: '•';
+            display: inline-block;
+            color: var(--gold);
+            margin: 0 18px;
+            font-style: normal;
+            opacity: 0.8;
+        }
+
+        /* ── TESTIMONIALS ─────────────────────────────────── */
+        .testimonials {
+            background: var(--bone);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+        .testimonial-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 44px 40px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s var(--ease-out-expensive), border-color 0.4s, box-shadow 0.5s var(--ease-out-expensive);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--crimson);
+            box-shadow: var(--shadow-md);
+        }
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: -36px;
+            left: 12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 12rem;
+            color: var(--gold);
+            opacity: 0.08;
+            line-height: 1;
+            font-weight: 700;
+            pointer-events: none;
+        }
+        .testimonial-card blockquote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.02rem;
+            color: var(--text);
+            line-height: 1.65;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+            hanging-punctuation: first last;
+        }
+        .testimonial-rule {
+            width: 44px;
+            height: 2px;
+            background: var(--crimson);
+            margin-bottom: 16px;
+        }
+        .testimonial-attrib {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .testimonial-attrib .name {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+        .testimonial-attrib .context {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.82rem;
+            color: var(--crimson);
+            font-weight: 500;
+        }
+        .testimonial-attrib .context::before {
+            content: '·';
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        /* ── CTA BAND ─────────────────────────────────────── */
+        .cta-band {
+            background: var(--crimson);
+            color: var(--bone);
+            padding: 96px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.10), transparent 55%),
+                radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.22), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--bone);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            line-height: 1.08;
+        }
+        .cta-inner h2 em {
+            font-style: italic;
+            color: var(--gold-bright);
+            font-weight: 500;
+            text-transform: none;
+            display: block;
+            margin-top: 6px;
+        }
+        .cta-inner p {
+            color: rgba(244,239,229,0.94);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        /* ── CONTACT ──────────────────────────────────────── */
+        .contact {
+            background: var(--bg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            margin-bottom: 28px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--ink);
+            color: var(--gold-bright);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-list strong {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--crimson);
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+        .contact-list a, .contact-list span {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.55;
+            transition: color 0.15s;
+            position: relative;
+            display: inline-block;
+        }
+        .contact-list a {
+            background-image: linear-gradient(to right, var(--crimson), var(--crimson));
+            background-position: 0 100%;
+            background-size: 0 1px;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s var(--ease-out-expensive), color 0.2s;
+        }
+        .contact-list a:hover {
+            color: var(--crimson);
+            background-size: 100% 1px;
+        }
+        .contact-form {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 800;
+            letter-spacing: -0.014em;
+            text-transform: uppercase;
+        }
+        .form-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.04rem;
+            color: var(--crimson);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .form-sub {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            margin-bottom: 28px;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-field {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-field label {
+            font-size: 0.68rem;
+            color: var(--ink);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 2px;
+            padding: 13px 16px;
+            font-size: 0.96rem;
+            color: var(--text);
+            transition: border-color 0.18s, background 0.18s;
+            outline: none;
+        }
+        .form-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%237B1F1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 12px;
+            padding-right: 46px;
+            cursor: pointer;
+        }
+        .form-field input:focus,
+        .form-field select:hover,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--crimson);
+            background: var(--paper);
+        }
+        .form-field select option { background: var(--paper); color: var(--text); }
+        .form-field textarea {
+            min-height: 130px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .form-btn {
+            width: 100%;
+            background: var(--ink);
+            color: var(--bone);
+            padding: 16px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.3s var(--ease-out-expensive);
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .form-btn:hover {
+            background: var(--crimson);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-crimson);
+        }
+        .form-btn svg { width: 14px; height: 14px; }
+        .form-note {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        .map-wrap {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            background: var(--paper);
+            aspect-ratio: 24 / 7;
+            margin-top: 56px;
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        footer {
+            background: var(--ink-deep);
+            color: rgba(244,239,229,0.62);
+            padding: 72px 0 28px;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 35%, var(--crimson) 65%, transparent 100%);
+            opacity: 0.5;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+        }
+        .footer-brand .h-mark { margin-bottom: 22px; }
+        .footer-brand p {
+            color: rgba(244,239,229,0.62);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            max-width: 380px;
+        }
+        .footer-tagline {
+            margin-top: 20px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.96rem;
+            color: var(--gold-bright);
+            font-weight: 500;
+        }
+        .footer-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.84rem;
+            color: var(--gold-bright);
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-col a, .footer-col li.plain {
+            font-size: 0.88rem;
+            color: rgba(244,239,229,0.65);
+            transition: color 0.18s;
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col a {
+            background-image: linear-gradient(to right, var(--gold-bright), var(--gold-bright));
+            background-position: 0 100%;
+            background-size: 0 1px;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s var(--ease-out-expensive), color 0.2s;
+        }
+        .footer-col a:hover {
+            color: var(--gold-bright);
+            background-size: 100% 1px;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(244,239,229,0.10);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: rgba(244,239,229,0.50);
+        }
+        .footer-bottom a { color: rgba(244,239,229,0.65); }
+        .footer-bottom a:hover { color: var(--gold-bright); }
+
+        /* ── DEMO BANNER ──────────────────────────────────── */
+        .demo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(14,14,14,0.92);
+            backdrop-filter: blur(8px);
+            color: var(--bone);
+            padding: 12px 56px 12px 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            border-top: 2px solid var(--crimson);
+            z-index: 999;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+        }
+        .demo-banner a { color: var(--gold-bright); text-decoration: underline; }
+        .demo-banner-close {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(244,239,229,0.7);
+            font-size: 1.05rem;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .demo-banner-close:hover { color: var(--gold-bright); }
+
+        /* ── REVEAL ANIMATIONS ────────────────────────────── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s var(--ease-out-expensive), transform 0.6s var(--ease-out-expensive); }
+        .reveal-left { opacity: 0; transform: translateX(-32px); transition: opacity 0.6s var(--ease-out-expensive), transform 0.6s var(--ease-out-expensive); }
+        .reveal-right { opacity: 0; transform: translateX(32px); transition: opacity 0.6s var(--ease-out-expensive), transform 0.6s var(--ease-out-expensive); }
+        .reveal-scale { opacity: 0; transform: scale(0.96); transition: opacity 0.6s var(--ease-out-expensive), transform 0.6s var(--ease-out-expensive); }
+        .reveal.visible, .reveal-left.visible, .reveal-right.visible, .reveal-scale.visible {
+            opacity: 1; transform: none;
+        }
+        .reveal-fast { transition-duration: 0.4s; }
+        .reveal-slow { transition-duration: 0.85s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal-left, .reveal-right, .reveal-scale {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .hero-bg { animation: none !important; }
+            * { transition-duration: 0.001s !important; animation-duration: 0.001s !important; }
+        }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 1180px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero-portrait-wrap { max-width: 460px; margin: 0 auto; }
+            .hero-scales { width: 72px; height: 72px; right: 24px; top: calc(var(--total-nav) + 14px); }
+        }
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+        }
+        @media (max-width: 1024px) {
+            .hero { min-height: auto; padding-top: calc(var(--total-nav) + 32px); padding-bottom: 80px; }
+            .featured-grid { grid-template-columns: 1fr; gap: 28px; }
+            .known-row,
+            .known-row.reverse {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 60px 0;
+            }
+            .known-row.reverse .known-numeral { order: 1; text-align: left; }
+            .known-row.reverse .known-body { order: 2; }
+            .known-row.reverse .known-motif { order: 3; }
+            .known-motif { aspect-ratio: 16 / 10; max-width: 480px; }
+            .known-numeral { font-size: 4.5rem; }
+            .practice-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .approach-medallions { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .approach-medallions::before { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+            .recognition-inner { gap: 18px; }
+            .recognition-item { flex: 1 1 calc(50% - 18px); border-right: none; border-bottom: 1px solid rgba(244,239,229,0.10); padding-bottom: 16px; }
+            .recognition-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 6px; }
+            .approach-side-stamp { display: none; }
+            .chapter-mark { right: 20px; }
+        }
+        @media (max-width: 720px) {
+            .top-bar { font-size: 0.7rem; padding: 0 10px; }
+            .top-bar .free { display: none; }
+            .top-bar .divider { display: none; }
+            .top-bar-inner { gap: 14px; padding: 0; }
+            .container { padding: 0 20px; }
+            .section { padding: 80px 0; }
+            .section-head { margin-bottom: 56px; }
+            .practice-grid { grid-template-columns: 1fr; }
+            .approach-medallions { grid-template-columns: 1fr; gap: 36px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-form { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .demo-banner { font-size: 0.74rem; padding: 10px 42px 10px 14px; }
+            .featured-body { padding: 32px 28px 28px; }
+            .featured-card h3 { font-size: 1.55rem; }
+            .recognition-item { flex: 1 1 100%; padding: 12px 0; border-right: none; border-bottom: 1px solid rgba(244,239,229,0.10); }
+            .recognition-item:last-child { border-bottom: none; }
+            .hero-portrait-wrap { max-width: 100%; }
+            .hero-pills { gap: 6px; }
+            .hero-pill { font-size: 0.62rem; padding: 6px 10px; }
+            .coverage-list { font-size: 1rem; }
+            .coverage-list span:not(:last-child)::after { margin: 0 10px; }
+            .known-numeral { font-size: 3.5rem; }
+            .testimonial-card { padding: 36px 28px 28px; }
+            .promise-mark { font-size: 10rem; top: -20px; }
+        }
+
+        ::selection { background: var(--crimson); color: var(--bone); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span class="free">FREE Consultation</span>
+        <span class="divider"></span>
+        <a href="tel:+16164595344" aria-label="Call Beurkens Law">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            (616) 459-5344
+        </a>
+        <span class="divider"></span>
+        <a href="mailto:info@beurkenslaw.com" aria-label="Email Beurkens Law">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@beurkenslaw.com
+        </a>
+    </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="h-mark" aria-label="Beurkens Law — Home">
+            <span class="h-eyebrow">The</span>
+            <span class="h-name">Beurkens <em>Law</em> Office</span>
+            <span class="h-rule"></span>
+            <span class="h-tag">Grand Rapids &middot; West Michigan</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" data-target="hero">Home</a></li>
+            <li><a href="#known" data-target="known">Why Beurkens</a></li>
+            <li><a href="#practice" data-target="practice">Practice Areas</a></li>
+            <li><a href="#team" data-target="team">Our Team</a></li>
+            <li><a href="#approach" data-target="approach">Approach</a></li>
+            <li class="nav-cta-wrap"><a href="#contact" class="nav-cta">
+                <span class="nav-cta-stack">
+                    <span class="top">Contact Us</span>
+                    <span class="bot">(616) 459-5344</span>
+                </span>
+            </a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#known">Why Beurkens</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact" class="nav-cta">Contact &middot; (616) 459-5344</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;">
+        <span class="chapter-mark on-dark">01 / 11 &mdash; HERO</span>
+    </div>
+    <div class="hero-scales" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="50" y1="14" x2="50" y2="84"/>
+            <line x1="32" y1="84" x2="68" y2="84"/>
+            <line x1="20" y1="22" x2="80" y2="22"/>
+            <path d="M20 22 L8 50 a14 14 0 0 0 24 0 Z"/>
+            <path d="M80 22 L68 50 a14 14 0 0 0 24 0 Z"/>
+            <circle cx="50" cy="14" r="2.2" fill="currentColor"/>
+        </svg>
+    </div>
+    <div class="hero-grid">
+        <div class="hero-content reveal reveal-slow">
+            <span class="hero-stamp">Established 1981</span>
+            <span class="hero-eyebrow">Grand Rapids, MI &middot; Criminal Defense &amp; Personal Injury</span>
+            <h1>
+                <span class="line-1">Aggressive</span>
+                <span class="line-2">Representation.</span>
+                <em>Effective &amp; personalized care.</em>
+            </h1>
+            <span class="hero-underline" aria-hidden="true"></span>
+            <p class="hero-sub">
+                For over 45 years, Beurkens Law has successfully defended hundreds of personal injury and criminal cases across West Michigan. Born and raised here &mdash; let our experience work for you.
+            </p>
+            <div class="hero-pills" aria-label="Firm credentials">
+                <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 L4 13 C4 17.5 7.5 21 12 22 C16.5 21 20 17.5 20 13 L20 6 Z"/></svg> 45+ Years</span>
+                <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> West Michigan</span>
+                <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Free Consult</span>
+                <span class="hero-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8a2 2 0 012-2h10a2 2 0 012 2v13M9 12h6M9 16h6"/></svg> Aggressive Defense</span>
+            </div>
+            <div class="hero-actions">
+                <a href="tel:+16164595344" class="btn btn-crimson">
+                    Call (616) 459-5344
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#practice" class="btn btn-ghost">
+                    Practice Areas
+                </a>
+            </div>
+        </div>
+
+        <figure class="hero-portrait-wrap reveal reveal-right reveal-slow">
+            <div class="hero-portrait">
+                <img src="img/jerry-beurkens.webp" alt="Jerry Beurkens, attorney at Beurkens Law in Grand Rapids, Michigan">
+                <figcaption class="hero-portrait-caption">
+                    <span class="role">Attorney</span>
+                    <span class="name">Jerry <em>Beurkens</em></span>
+                </figcaption>
+            </div>
+        </figure>
+    </div>
+</section>
+
+<!-- RECOGNITION STRIP -->
+<section class="recognition" aria-label="Firm credentials" id="recognition">
+    <div class="container">
+        <span class="chapter-mark on-dark">02 / 11 &mdash; RECOGNITION</span>
+        <div class="recognition-inner">
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Established</span>
+                <span class="recognition-value"><em>Since</em> 1981</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Headquarters</span>
+                <span class="recognition-value">Grand Rapids, MI</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Experience</span>
+                <span class="recognition-value">45<em>+</em> Years</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Practice Focus</span>
+                <span class="recognition-value">Defense &amp; Injury</span>
+            </div>
+            <div class="recognition-item reveal reveal-fast">
+                <span class="recognition-label">Attorney</span>
+                <span class="recognition-value">Jerry Beurkens</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE BAND -->
+<section class="promise" id="promise" aria-label="Firm promise">
+    <div class="container">
+        <span class="chapter-mark">03 / 11 &mdash; PROMISE</span>
+        <div class="promise-inner reveal">
+            <span class="promise-mark" aria-hidden="true">&ldquo;</span>
+            <div class="promise-rule"></div>
+            <blockquote>
+                When you are caught in the legal system, you need an experienced attorney who will <strong>aggressively protect your best interests at every step of the process.</strong>
+            </blockquote>
+            <p class="promise-cite">&mdash; Beurkens Law &middot; Grand Rapids, Michigan</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PRACTICE 2-UP -->
+<section class="section featured" id="featured">
+    <div class="container">
+        <span class="chapter-mark">04 / 11 &mdash; FEATURED</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Featured Practice</p>
+            <h2 class="section-h2">Two flagship areas, <em>handled by one experienced team.</em></h2>
+            <p class="section-lead">Beurkens Law is built around two core practices &mdash; the matters that have defined Jerry Beurkens' career across forty-five years of West Michigan courtrooms.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="featured-card reveal reveal-left">
+                <div class="featured-photo">
+                    <span class="featured-stamp">Our Core Practice</span>
+                    <img src="img/featured-1.jpg" alt="Criminal defense at Beurkens Law">
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Criminal Defense</p>
+                    <h3>Criminal Defense</h3>
+                    <p class="featured-italic">Aggressive representation when it counts most.</p>
+                    <p>When facing criminal charges, you need to understand what penalties you are facing and the steps you can take to avoid or minimize them. Our criminal defense attorneys help individuals who are worried about paying heavy fines, going to jail, or losing their jobs. Let our years of experience work for you.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Domestic assault, drug crimes, and OWI/DUI defense
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            License restoration for revoked Michigan drivers
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Aggressive representation built on 45+ years in West Michigan courts
+                        </li>
+                    </ul>
+                    <a href="#contact" class="learn-more">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="featured-card reveal reveal-right">
+                <div class="featured-photo">
+                    <span class="featured-stamp">Fighting for Victims</span>
+                    <img src="img/featured-2.jpg" alt="Personal injury representation at Beurkens Law">
+                </div>
+                <div class="featured-body">
+                    <p class="featured-eyebrow">Personal Injury</p>
+                    <h3>Personal Injury</h3>
+                    <p class="featured-italic">Full and fair compensation for the injured.</p>
+                    <p>When you are injured, you need to know what rights you have. You need to work with a personal injury lawyer who knows how to process your claim and ensure the best possible outcome. Our Grand Rapids personal injury attorneys can advise you of your rights, help make sure your medical bills get paid and work with you to help you receive compensation for lost wages.</p>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Car accidents, truck accidents, and pedestrian injuries
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Medical malpractice, birth injury, and wrongful death
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Expert-backed case building with doctors, economists, and reconstructionists
+                        </li>
+                    </ul>
+                    <a href="#contact" class="learn-more">
+                        Learn More
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- KNOWN FOR EDITORIAL BANDS -->
+<section class="section known" id="known">
+    <div class="container">
+        <span class="chapter-mark">05 / 11 &mdash; KNOWN FOR</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Why Beurkens</p>
+            <h2 class="section-h2">Three commitments, <em>every case.</em></h2>
+            <p class="section-lead">Born and raised here. Aggressive when it counts. Expert-backed at every stage. Here is how Beurkens Law shows up for clients across forty-five years of West Michigan courtrooms.</p>
+        </div>
+
+        <article class="known-row">
+            <span class="known-numeral reveal reveal-left">01</span>
+            <div class="known-body reveal">
+                <span class="known-eyebrow">Courtroom Experience</span>
+                <h3>Forty-Five Years <em>Winning for West Michigan</em></h3>
+                <p>Since 1981, Beurkens Law has defended hundreds of clients across West Michigan's criminal and civil courts. Jerry Beurkens' decades of practice in the same jurisdiction mean he has built genuine working relationships with the judges and prosecutors who will decide your case. That local knowledge is your advantage in the courtroom.</p>
+                <span class="known-stat">45+ Years &middot; Hundreds of Cases</span>
+            </div>
+            <div class="known-motif reveal reveal-right">
+                <div class="known-motif-inner">
+                    <img src="img/known-1.jpg" alt="Courtroom interior representing decades of trial experience">
+                </div>
+                <span class="known-motif-roman">i.</span>
+            </div>
+        </article>
+
+        <article class="known-row reverse">
+            <span class="known-numeral reveal reveal-right">02</span>
+            <div class="known-body reveal">
+                <span class="known-eyebrow">Personal Injury</span>
+                <h3>Fighting for <em>Full and Fair Compensation</em></h3>
+                <p>Whether you were injured in a car accident, truck collision, medical procedure, or dog attack, Beurkens Law works with doctors, economists, and accident reconstruction experts to build the strongest possible case. Our Grand Rapids personal injury attorneys ensure your medical bills get paid and your lost wages are recovered.</p>
+                <span class="known-stat">Hundreds of Cases Resolved</span>
+            </div>
+            <div class="known-motif reveal reveal-left">
+                <div class="known-motif-inner">
+                    <img src="img/known-2.jpg" alt="Grand Rapids skyline representing the firm's West Michigan home base">
+                </div>
+                <span class="known-motif-roman">ii.</span>
+            </div>
+        </article>
+
+        <article class="known-row">
+            <span class="known-numeral reveal reveal-left">03</span>
+            <div class="known-body reveal">
+                <span class="known-eyebrow">Criminal Defense</span>
+                <h3>Protecting Your Rights <em>Every Step of the Way</em></h3>
+                <p>From domestic assault and drug charges to OWI defense and license restoration, Beurkens Law defends individuals who are worried about paying heavy fines, going to jail, or losing their jobs. Jerry Beurkens' reputation for aggressive representation means prosecutors know they will face a prepared and experienced adversary.</p>
+                <span class="known-stat">OWI &middot; Drug &middot; Assault</span>
+            </div>
+            <div class="known-motif reveal reveal-right">
+                <div class="known-motif-inner">
+                    <img src="img/known-3.jpg" alt="Gavel representing legal practice">
+                </div>
+                <span class="known-motif-roman">iii.</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- PRACTICE GRID -->
+<section class="section practice" id="practice">
+    <div class="container">
+        <span class="chapter-mark">06 / 11 &mdash; PRACTICE</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Practice Areas</p>
+            <h2 class="section-h2">Whatever the matter, <em>we fight for you.</em></h2>
+            <p class="section-lead">From criminal defense to personal injury representation &mdash; the legal work West Michigan families and individuals actually need, handled by lawyers who have built their reputation on aggressive, prepared representation.</p>
+        </div>
+
+        <div class="practice-grid">
+            <article class="practice-card reveal reveal-left">
+                <span class="practice-numeral">I.</span>
+                <div class="practice-icon">
+                    <img src="img/case-car-accident.webp" alt="Car accident representation">
+                </div>
+                <h3>Car Accidents</h3>
+                <p>Have you or a loved one recently been in a car accident caused by negligence on the other driver's part? Not only are car accidents medically traumatic for those involved, but they can also result in significant financial loss.</p>
+                <div class="practice-tags">
+                    <span>Auto Accident</span>
+                    <span>Negligence</span>
+                    <span>Compensation</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">II.</span>
+                <div class="practice-icon">
+                    <img src="img/case-drunk-driving.webp" alt="OWI and DUI defense">
+                </div>
+                <h3>Drunk Driving (OWI/DUI)</h3>
+                <p>Have you recently been arrested for drunk driving or operating under the influence? Depending on your unique situation, you may be able to restore your license by working with a top OWI attorney like Jerry Beurkens, who has over 45 years of experience.</p>
+                <div class="practice-tags">
+                    <span>OWI</span>
+                    <span>DUI</span>
+                    <span>License</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal reveal-right">
+                <span class="practice-numeral">III.</span>
+                <div class="practice-icon">
+                    <img src="img/case-drug-crimes.webp" alt="Drug crimes defense">
+                </div>
+                <h3>Drug Crimes</h3>
+                <p>Attorney Jerry Beurkens has handled a wide variety of drug-related legal battles, from marijuana to cocaine. This makes him an experienced legal ally for your drug crime case.</p>
+                <div class="practice-tags">
+                    <span>Drug Charges</span>
+                    <span>Criminal Defense</span>
+                    <span>West Michigan</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal reveal-left">
+                <span class="practice-numeral">IV.</span>
+                <div class="practice-icon">
+                    <img src="img/case-domestic-assault.webp" alt="Domestic assault defense">
+                </div>
+                <h3>Domestic Assault</h3>
+                <p>Have you recently been arrested for domestic assault and need quality legal representation? Attorney Jerry Beurkens has over 45 years of experience in helping people just like you find legal resolutions.</p>
+                <div class="practice-tags">
+                    <span>Domestic Violence</span>
+                    <span>Criminal</span>
+                    <span>Defense</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">V.</span>
+                <div class="practice-icon">
+                    <img src="img/case-medical-malpractice.webp" alt="Medical malpractice representation">
+                </div>
+                <h3>Medical Malpractice</h3>
+                <p>Have you or a loved one suffered injury or death due to medical malpractice? When it comes to medical malpractice cases, you need a quality attorney with the appropriate legal experience.</p>
+                <div class="practice-tags">
+                    <span>Medical Negligence</span>
+                    <span>Injury</span>
+                    <span>Malpractice</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal reveal-right">
+                <span class="practice-numeral">VI.</span>
+                <div class="practice-icon">
+                    <img src="img/case-license-restoration.webp" alt="License restoration">
+                </div>
+                <h3>License Restoration</h3>
+                <p>Having your driving privileges revoked can be a major strain on your life. At Beurkens Law, our experienced local attorney understands the steps needed to help you drive again confidently.</p>
+                <div class="practice-tags">
+                    <span>Driver's License</span>
+                    <span>Restoration</span>
+                    <span>Michigan</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal reveal-left">
+                <span class="practice-numeral">VII.</span>
+                <div class="practice-icon">
+                    <img src="img/case-truck-accident.webp" alt="Truck accident representation">
+                </div>
+                <h3>Truck Accidents</h3>
+                <p>Have you or a loved one recently been in a truck accident? Our Grand Rapids personal injury attorneys can advise you of your rights and work with you to help you receive compensation for lost wages and medical bills.</p>
+                <div class="practice-tags">
+                    <span>Commercial Trucks</span>
+                    <span>Injury</span>
+                    <span>Negligence</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal">
+                <span class="practice-numeral">VIII.</span>
+                <div class="practice-icon">
+                    <img src="img/case-medical-malpractice.webp" alt="Birth injury representation">
+                </div>
+                <h3>Birth Injury</h3>
+                <p>When a child is born with a birth injury due to a doctor's negligence, it can alter a family's financial priorities. Instead of starting to save for your child's college education, you may be facing years of medical treatment.</p>
+                <div class="practice-tags">
+                    <span>Medical Negligence</span>
+                    <span>Birth Injury</span>
+                    <span>Family</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+
+            <article class="practice-card reveal reveal-right">
+                <span class="practice-numeral">IX.</span>
+                <div class="practice-icon">
+                    <img src="img/case-dog-bite.webp" alt="Dog bite representation">
+                </div>
+                <h3>Dog Bites &amp; Other Injuries</h3>
+                <p>If you or a loved one has recently suffered an unprovoked dog attack, you may be eligible for compensation for medical expenses, lost wages, and other damages. We also handle pedestrian accidents, traumatic brain injuries, and wrongful death.</p>
+                <div class="practice-tags">
+                    <span>Dog Bites</span>
+                    <span>TBI</span>
+                    <span>Wrongful Death</span>
+                </div>
+                <a href="#contact" class="learn-more">Learn More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM (built within practice section flow, lightweight inline) -->
+<section class="section" id="team" style="background: var(--bone); padding: 100px 0;">
+    <div class="container">
+        <span class="chapter-mark">— OUR TEAM</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Our Team</p>
+            <h2 class="section-h2">Born &amp; raised <em>in West Michigan.</em></h2>
+            <p class="section-lead">A family-rooted practice carrying forty-five years of trial experience &mdash; with the working relationships, local knowledge, and personal attention that a Grand Rapids firm can offer.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1080px;margin:0 auto;" class="team-cards-wrap">
+            <article class="reveal reveal-left" style="background:var(--paper);border:1px solid var(--border);border-top:4px solid var(--crimson);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.5s var(--ease-out-expensive),box-shadow 0.5s var(--ease-out-expensive);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <div style="aspect-ratio: 4 / 4.4; overflow: hidden; background: var(--ink); position:relative;">
+                    <img src="img/jerry-beurkens.webp" alt="Jerry Beurkens, attorney" style="width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;">
+                </div>
+                <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:8px;">
+                    <p style="font-size:0.66rem;color:var(--gold-deep);letter-spacing:0.28em;text-transform:uppercase;font-weight:800;margin-bottom:4px;">Attorney</p>
+                    <h4 style="font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--ink);font-weight:800;letter-spacing:-0.012em;line-height:1.18;margin-bottom:6px;text-transform:uppercase;">Jerry Beurkens</h4>
+                    <p style="color:var(--text-mid);font-size:0.94rem;line-height:1.7;">Born and raised in West Michigan with 45+ years of practice in the same area. Jerry has handled hundreds of personal injury and criminal cases, with a reputation for being aggressive when needed and for building expert-backed cases that win.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-soft);">
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">Criminal Defense</span>
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">Personal Injury</span>
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">License Restoration</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="reveal" style="background:var(--paper);border:1px solid var(--border);border-top:4px solid var(--crimson);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.5s var(--ease-out-expensive),box-shadow 0.5s var(--ease-out-expensive);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <div style="aspect-ratio: 4 / 4.4; overflow: hidden; background: var(--ink); display:flex;align-items:center;justify-content:center;position:relative;">
+                    <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:5rem;font-weight:500;color:var(--gold-bright);line-height:1;">KB</span>
+                </div>
+                <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:8px;">
+                    <p style="font-size:0.66rem;color:var(--gold-deep);letter-spacing:0.28em;text-transform:uppercase;font-weight:800;margin-bottom:4px;">Attorney</p>
+                    <h4 style="font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--ink);font-weight:800;letter-spacing:-0.012em;line-height:1.18;margin-bottom:6px;text-transform:uppercase;">Kara Beurkens</h4>
+                    <p style="color:var(--text-mid);font-size:0.94rem;line-height:1.7;">Born and raised in Grand Rapids. Kara knows what steps need to be taken at every step of the process and takes the time to meet with individuals, explain their rights, and help them understand the legal situations they are facing.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-soft);">
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">Criminal Defense</span>
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">Personal Injury</span>
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--crimson-deep);background:var(--crimson-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--crimson-tint);letter-spacing:0.04em;">License Restoration</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="reveal reveal-right" style="background:var(--paper);border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.5s var(--ease-out-expensive),box-shadow 0.5s var(--ease-out-expensive);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <div style="aspect-ratio: 4 / 4.4; overflow: hidden; background: var(--ink); display:flex;align-items:center;justify-content:center;position:relative;">
+                    <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:5rem;font-weight:500;color:var(--gold-bright);line-height:1;">ET</span>
+                </div>
+                <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:8px;">
+                    <p style="font-size:0.66rem;color:var(--gold-deep);letter-spacing:0.28em;text-transform:uppercase;font-weight:800;margin-bottom:4px;">Office Manager &middot; Notary</p>
+                    <h4 style="font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--ink);font-weight:800;letter-spacing:-0.012em;line-height:1.18;margin-bottom:6px;text-transform:uppercase;">Emily Terhune</h4>
+                    <p style="color:var(--text-mid);font-size:0.94rem;line-height:1.7;">Born and raised in Grand Rapids. Holds A.S. and B.S. degrees in Criminal Justice Studies from Baker College and is a certified Notary Public. After several years in corporate and big law firm settings, she now works closely with Jerry and his clients in a smaller, more personal setting.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-soft);">
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--gold-darker);background:var(--gold-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--gold-pale);letter-spacing:0.04em;">B.S. Criminal Justice</span>
+                        <span style="font-size:0.66rem;font-weight:700;color:var(--gold-darker);background:var(--gold-soft);padding:4px 10px;border-radius:2px;border:1px solid var(--gold-pale);letter-spacing:0.04em;">Notary Public</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+@media (max-width: 1024px) {
+    .team-cards-wrap { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 720px) {
+    .team-cards-wrap { grid-template-columns: 1fr !important; max-width: 460px; }
+}
+</style>
+
+<!-- APPROACH DARK BAND -->
+<section class="section approach" id="approach">
+    <span class="approach-side-stamp">OUR APPROACH &mdash; AGGRESSIVE. THOROUGH. EXPERIENCED.</span>
+    <div class="container">
+        <span class="chapter-mark on-dark">07 / 11 &mdash; APPROACH</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Our Approach</p>
+            <h2 class="section-h2">Four principles. <em>One handshake.</em></h2>
+            <p class="section-lead">The commitments that have shaped how Jerry Beurkens has practiced law across forty-five years of West Michigan courtrooms &mdash; and how every client of Beurkens Law gets treated, from the first call to the verdict.</p>
+        </div>
+
+        <div class="approach-medallions">
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>01</span></div>
+                <p class="a-eyebrow">Local Roots</p>
+                <h3>Born &amp; Raised Here</h3>
+                <p class="a-italic">Knowing the judges. Knowing the prosecutors.</p>
+                <p>Jerry Beurkens was born and raised in West Michigan and has practiced law in the same area for several decades. He is knowledgeable about local and state legislature and has good working relationships with the judges and prosecutors in West Michigan.</p>
+                <span class="a-rule"></span>
+            </article>
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>02</span></div>
+                <p class="a-eyebrow">Reputation</p>
+                <h3>Aggressive When It Counts</h3>
+                <p class="a-italic">Prosecutors know what's coming.</p>
+                <p>Attorney Jerry Beurkens has the reputation of being aggressive, if need be, to make sure his clients are well taken care of. He will fight aggressively for your case to ensure the best possible outcome.</p>
+                <span class="a-rule"></span>
+            </article>
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>03</span></div>
+                <p class="a-eyebrow">Methodology</p>
+                <h3>Expert-Backed Cases</h3>
+                <p class="a-italic">Doctors, economists, reconstructionists.</p>
+                <p>In personal injury matters, Jerry works with doctors, economists, and people who can reconstruct the accident. All of these expert sources help build a strong case so that the likelihood of winning drastically improves.</p>
+                <span class="a-rule"></span>
+            </article>
+            <article class="approach-card reveal">
+                <div class="approach-medallion"><span>04</span></div>
+                <p class="a-eyebrow">Client Care</p>
+                <h3>Personalized Attention</h3>
+                <p class="a-italic">Real conversation. Real explanations.</p>
+                <p>Our experienced Grand Rapids attorneys take the time to meet with individuals, explain their rights, and help them understand the legal situations they are facing. You should not attempt to navigate the legal system alone.</p>
+                <span class="a-rule"></span>
+            </article>
+        </div>
+    </div>
+    <div class="approach-bottom-rule" aria-hidden="true"></div>
+</section>
+
+<!-- COVERAGE STRIP -->
+<section class="coverage" id="coverage" aria-label="Service area">
+    <div class="container">
+        <span class="chapter-mark">08 / 11 &mdash; COVERAGE</span>
+        <div class="coverage-inner reveal">
+            <p class="coverage-label">Serving West Michigan Since 1981</p>
+            <p class="coverage-list">
+                <span>Grand Rapids</span>
+                <span>Muskegon</span>
+                <span>Kalamazoo</span>
+                <span>Kent County</span>
+                <span>Muskegon County</span>
+                <span>Ottawa County</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials" aria-label="Client testimonials">
+    <div class="container">
+        <span class="chapter-mark">09 / 11 &mdash; TESTIMONIALS</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">In Their Own Words</p>
+            <h2 class="section-h2">Our clients <em>say it best.</em></h2>
+            <p class="section-lead">Real conversations from the West Michigan families and individuals Jerry has represented across the years &mdash; in their own unedited words.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card reveal reveal-left">
+                <blockquote>
+                    I would absolutely 100% recommend Jerry M. Beurkens, P.C &amp; Company to anyone looking for an attorney to represent them in court! Jerry was excellent in both professionalism and experience. My experience was exceptionally great. A very well organized firm, experienced and professional. Customer service was excellent and the lawyer that handled my case, Jerry M. Beurkens, P.C was the best. He was very thorough and very experienced. His knowledge and intelligence was outstanding and impressive! He knows what he's talking about. All in all, I had a positive experience and I highly recommend Jerry M. Beurkens, P.C!!!
+                </blockquote>
+                <div class="testimonial-rule"></div>
+                <div class="testimonial-attrib">
+                    <span class="name">Brianna L.</span>
+                </div>
+            </article>
+
+            <article class="testimonial-card reveal reveal-right">
+                <blockquote>
+                    I had the pleasure of having both Jerry and Kara work on my case. They did a fantastic job handling my license restoration case for an extremely fair price. I currently live out of state and they got me approved for a full license up against the toughest hearing officer. So glad I decided to hire them and highly recommend them to anyone going through this difficult time.
+                </blockquote>
+                <div class="testimonial-rule"></div>
+                <div class="testimonial-attrib">
+                    <span class="name">Trey R.</span>
+                    <span class="context">License Restoration</span>
+                </div>
+            </article>
+
+            <article class="testimonial-card reveal reveal-left">
+                <blockquote>
+                    I am very grateful for the help I received from Attorney Jerry Beurkens. Right away he responded back to me letting me know what to do and that he would take care of everything. He was very nice to work with and his knowledge and experience put my mind at ease. He followed through exactly as he said he would do and kept me informed throughout the process until everything was taken care of and finished. I was very happy with the outcome and grateful to find a trustworthy and supportive attorney to represent me. I definitely recommend him.
+                </blockquote>
+                <div class="testimonial-rule"></div>
+                <div class="testimonial-attrib">
+                    <span class="name">Nichol</span>
+                </div>
+            </article>
+
+            <article class="testimonial-card reveal reveal-right">
+                <blockquote>
+                    A few years ago, I was in need of seeking legal representation for various legal matters. I went to Jerry Beurkens for help during this difficult time in my life. Jerry's ethics are of the highest standards. During this time, we formed a friendship, I gained his trust, while I was impressed by his knowledge of the law and admired his reputation and integrity of the court system. Jerry has a calming presence and a polite and respectful attitude inside the courtroom and outside of it. Jerry helped me personally to be positive and stay focused on the larger picture. I would highly recommend Jerry Beurkens to anyone seeking legal representation.
+                </blockquote>
+                <div class="testimonial-rule"></div>
+                <div class="testimonial-attrib">
+                    <span class="name">Miranda B.</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="cta">
+    <div class="container">
+        <span class="chapter-mark on-dark">10 / 11 &mdash; CTA</span>
+        <div class="cta-inner reveal reveal-scale">
+            <h2>If you've been charged, <em>or injured &mdash; the first call matters.</em></h2>
+            <p>FREE, confidential consultation by phone or message &mdash; serving Grand Rapids and West Michigan since 1981.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="tel:+16164595344" class="btn btn-ink">
+                    Call (616) 459-5344
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost-light">
+                    Send a Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <span class="chapter-mark">11 / 11 &mdash; CONTACT</span>
+        <div class="section-head reveal">
+            <p class="section-eyebrow">Contact Us</p>
+            <h2 class="section-h2">230 Fulton St E &middot; <em>Downtown Grand Rapids.</em></h2>
+            <p class="section-lead">Call or email anytime. Free consultations available by phone or message. Tell us briefly about your matter and we'll be in touch.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal reveal-left">
+                <h3>Office Details</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </span>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Beurkens Law<br>230 Fulton St E<br>Grand Rapids, MI&nbsp; 49503</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:+16164595344">(616) 459-5344</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@beurkenslaw.com">info@beurkenslaw.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Call or email anytime.<br><span style="color:var(--text-soft);font-size:0.88rem;">Free consultations by appointment.</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form reveal reveal-right">
+                <h3>Free &middot; Confidential Inquiry</h3>
+                <p class="form-italic">Tell us briefly about your matter.</p>
+                <p class="form-sub">Whatever the charge or injury, we'll listen first &mdash; then build the right approach.</p>
+                <form onsubmit="event.preventDefault();return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Your full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone</label>
+                            <input type="tel" id="cf-phone" placeholder="(616) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-area">Type of Matter</label>
+                        <select id="cf-area">
+                            <option value="">Select a category...</option>
+                            <option>Car Accident</option>
+                            <option>Truck Accident</option>
+                            <option>Dog Bite</option>
+                            <option>Medical Malpractice</option>
+                            <option>Birth Injury</option>
+                            <option>Wrongful Death</option>
+                            <option>Drunk Driving (OWI/DUI)</option>
+                            <option>Drug Crimes</option>
+                            <option>Domestic Assault</option>
+                            <option>License Restoration</option>
+                            <option>Traumatic Brain Injury</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-msg">How can we help you?</label>
+                        <textarea id="cf-msg" placeholder="A few sentences about the matter — that's plenty to start. We'll follow up promptly."></textarea>
+                    </div>
+                    <button class="form-btn" type="submit">
+                        Submit Inquiry
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                    <p class="form-note">All inquiries are treated as confidential. Contacting us does not create an attorney-client relationship.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrap reveal">
+            <iframe src="https://www.google.com/maps?q=230+Fulton+St+E,+Grand+Rapids,+MI+49503&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Beurkens Law office location"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="h-mark inverse" aria-label="Beurkens Law">
+                    <span class="h-eyebrow">The</span>
+                    <span class="h-name">Beurkens <em>Law</em> Office</span>
+                    <span class="h-rule"></span>
+                    <span class="h-tag">Grand Rapids &middot; West Michigan</span>
+                </a>
+                <p>A Grand Rapids law firm serving West Michigan in criminal defense and personal injury matters &mdash; built on forty-five years of trial experience, local roots, and aggressive representation when it matters most.</p>
+                <p class="footer-tagline">Aggressive. Thorough. Experienced. Serving West Michigan Since 1981.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Criminal Defense</h5>
+                <ul>
+                    <li><a href="#practice">Domestic Assault</a></li>
+                    <li><a href="#practice">Drug Crimes</a></li>
+                    <li><a href="#practice">Drunk Driving / OWI</a></li>
+                    <li><a href="#practice">License Restoration</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Personal Injury</h5>
+                <ul>
+                    <li><a href="#practice">Car Accidents</a></li>
+                    <li><a href="#practice">Truck Accidents</a></li>
+                    <li><a href="#practice">Medical Malpractice</a></li>
+                    <li><a href="#practice">Birth Injury</a></li>
+                    <li><a href="#practice">Dog Bites</a></li>
+                    <li><a href="#practice">Wrongful Death</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>The Firm</h5>
+                <ul>
+                    <li><a href="#known">About</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#coverage">Service Area</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <h5 style="margin-top:28px;">Contact</h5>
+                <ul>
+                    <li class="plain">230 Fulton St E</li>
+                    <li class="plain">Grand Rapids, MI&nbsp; 49503</li>
+                    <li><a href="tel:+16164595344">(616) 459-5344</a></li>
+                    <li><a href="mailto:info@beurkenslaw.com">info@beurkenslaw.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year"></span> Beurkens Law. All rights reserved.</span>
+            <span>Concept by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo-banner">
+    <p>Unsolicited concept redesign by <a href="https://matthewmcguire.ca" target="_blank" rel="noopener">Matthew McGuire</a> &mdash; not affiliated with Beurkens Law.</p>
+    <button class="demo-banner-close" onclick="document.getElementById('demo-banner').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+    // ── Smooth scroll on in-page anchor links ────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (history.pushState) history.pushState(null, '', href);
+        });
+    });
+
+    // ── Mobile drawer ────────────────────────────────────────
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // ── Year stamp ──────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Reveal on scroll ────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    // Staggered transition delays for sibling cards
+    document.querySelectorAll('.practice-grid, .testimonials-grid, .approach-medallions, .team-cards-wrap, .recognition-inner, .featured-grid').forEach(group => {
+        const children = [...group.children];
+        const stagger = children.length > 4 ? 80 : 100;
+        children.forEach((child, i) => {
+            child.style.transitionDelay = (i * stagger) + 'ms';
+        });
+    });
+
+    // ── Active-state nav underline tied to scroll position ──
+    const sections = ['hero','known','practice','team','approach'];
+    const navLinks = document.querySelectorAll('.nav-links > li > a[data-target]');
+    const setActive = () => {
+        const scrollY = window.scrollY + 180;
+        let activeId = sections[0];
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollY) activeId = id;
+        });
+        navLinks.forEach(link => {
+            if (link.dataset.target === activeId) link.classList.add('is-active');
+            else link.classList.remove('is-active');
+        });
+    };
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+</script>
+
+</body>
+</html>
