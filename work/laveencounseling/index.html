@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Phoenix Counseling — Therapy for Children, Teens &amp; Adults in Laveen &amp; Phoenix</title>
+<meta name="description" content="Phoenix Counseling — therapy for children, teens, and adults in Laveen & Phoenix, virtually available across Arizona. Support for anxiety, depression, trauma, and ADHD in a calm, compassionate environment." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* warm earthy palette — drawn from their "Meet our team" cards */
+    --cream:#faf5ea;--cream-2:#f4ecdb;--sand:#ece0c9;
+    --terra:#c2774b;--terra-deep:#a85f37;--terra-soft:#e7b48f;--terra-bg:#f6e4d4;
+    --rose:#c0938a;--rose-soft:#e4cbc3;--rose-bg:#f3e1da;
+    --sage:#828d5f;--sage-soft:#bcc69b;--sage-bg:#e6ebd5;
+    --forest:#3e4a30;--forest-2:#2d3720;
+    --cocoa:#564636;--ink:#3a3128;--ink-soft:#7c7163;--line:#e8dcc6;
+    --shadow:0 26px 60px -28px rgba(74,54,32,.45);--shadow-sm:0 14px 34px -20px rgba(74,54,32,.36);
+    --arch:48% 48% 14px 14px / 46% 46% 4% 4%;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--terra);display:inline-block}
+  .eyebrow.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.55em;background:var(--terra);color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:.97rem;padding:15px 30px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:var(--shadow-sm)}
+  .btn:hover{background:var(--terra-deep);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--cocoa);border:1.5px solid var(--sand)}
+  .btn-ghost:hover{background:#fff;border-color:var(--terra);color:var(--terra-deep)}
+  .btn-cream{background:var(--cream);color:var(--terra-deep)}
+  .btn-cream:hover{background:#fff}
+  .btn-sage{background:var(--sage)}.btn-sage:hover{background:#6c764e}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+
+  /* decorative botanical sprig */
+  .sprig{position:absolute;width:120px;height:auto;opacity:.5;pointer-events:none;color:var(--sage)}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,245,234,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.42rem;color:var(--cocoa);display:flex;align-items:center;gap:11px}
+  .brand .mark{width:34px;height:34px;border-radius:50% 50% 50% 6px;background:linear-gradient(140deg,var(--terra),var(--rose));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links>a,.drop-t{font-size:.93rem;font-weight:500;color:var(--cocoa);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--terra)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:5px}
+  .drop-t .car{font-size:.7em;transition:.3s}
+  .has-drop:hover .car,.has-drop:focus-within .car{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.22s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:10px;min-width:230px}
+  .dropdown .inner a{display:block;padding:10px 15px;border-radius:11px;font-size:.9rem;color:var(--cocoa);white-space:nowrap;font-weight:500}
+  .dropdown .inner a:hover{background:var(--cream-2);color:var(--terra)}
+  .nav-cta{font-size:.88rem;padding:11px 22px;color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--cocoa);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:linear-gradient(160deg,var(--forest),var(--forest-2));z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:88px 20px 40px;overflow-y:auto;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1)}
+  .overlay.open{transform:none}
+  .overlay a{color:#f3eede;font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem}
+  .overlay .ov-head{color:var(--terra-soft);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;margin-top:12px;font-weight:700;font-family:'Inter',sans-serif}
+  .overlay .close{position:absolute;top:26px;right:28px;font-size:2rem;color:#f3eede;background:none;border:0;cursor:pointer}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:72px 0 90px;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 0%,var(--terra-bg),transparent 55%),radial-gradient(90% 80% at 0% 100%,var(--sage-bg),transparent 55%),var(--cream)}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center;position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.6rem,5.2vw,4rem);font-weight:600}
+  .hero h1 em{font-style:italic;color:var(--terra)}
+  .hero .lead{font-size:1.18rem;color:var(--ink-soft);margin:24px 0 30px;max-width:38ch}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-art{position:relative}
+  .hero-art .arch{border-radius:var(--arch);overflow:hidden;box-shadow:var(--shadow);position:relative;z-index:2;border:10px solid #fff}
+  .hero-art .arch img{width:100%;height:520px;object-fit:cover}
+  .hero-art .ring{position:absolute;inset:-18px -18px auto auto;width:130px;height:130px;border:2px dashed var(--terra-soft);border-radius:50%;z-index:1}
+  .hero-art .leafblob{position:absolute;width:200px;height:200px;border-radius:60% 40% 55% 45%/50% 55% 45% 50%;background:var(--rose-bg);bottom:-30px;left:-40px;z-index:0}
+  .hero-art .tag{position:absolute;left:-22px;bottom:54px;z-index:3;background:#fff;border-radius:18px;padding:14px 20px;box-shadow:var(--shadow);border:1px solid var(--line);font-family:'Fraunces',serif;font-weight:600;color:var(--cocoa);font-size:1rem;display:flex;align-items:center;gap:12px}
+  .hero-art .tag .d{width:42px;height:42px;border-radius:50%;background:var(--sage-bg);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+  .hero-art .tag small{display:block;color:var(--ink-soft);font-size:.74rem;font-weight:500;font-family:'Inter',sans-serif}
+
+  /* ---------- TRUST STRIP ---------- */
+  .strip{background:var(--forest);color:#eee7d6}
+  .strip .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 46px;padding:24px 0;text-align:center}
+  .strip .row div{display:flex;align-items:center;gap:11px;font-size:.95rem;font-weight:500}
+  .strip .row .ic{color:var(--terra-soft);font-size:1.15rem}
+  .strip .row b{color:#fff;font-weight:600}
+
+  .sec{padding:104px 0;position:relative}
+  .sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-size:clamp(2.1rem,3.8vw,2.9rem)}
+  .sec-head p{color:var(--ink-soft);font-size:1.12rem;margin-top:16px}
+
+  /* ---------- APPROACH ---------- */
+  .approach-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
+  .approach .art{position:relative}
+  .approach .art .arch{border-radius:var(--arch);overflow:hidden;box-shadow:var(--shadow);border:10px solid #fff}
+  .approach .art .arch img{width:100%;height:500px;object-fit:cover}
+  .approach .art .seal{position:absolute;right:-20px;top:30px;width:118px;height:118px;border-radius:50%;background:var(--terra);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Fraunces',serif;font-size:.84rem;line-height:1.25;padding:14px;box-shadow:var(--shadow);transform:rotate(-6deg)}
+  .approach ul{list-style:none;margin:26px 0 30px}
+  .approach li{display:flex;gap:15px;align-items:flex-start;margin-bottom:17px;font-size:1.06rem}
+  .approach li .ck{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--sage-bg);color:var(--sage);display:flex;align-items:center;justify-content:center;font-weight:700;margin-top:2px}
+  .pullquote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--terra-deep);font-size:1.3rem;border-left:3px solid var(--terra-soft);padding-left:20px}
+
+  /* ---------- SPECIALTIES ---------- */
+  .specs{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+  .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .spec{background:#fff;border:1px solid var(--line);border-radius:26px 26px 26px 26px;padding:34px 28px;text-align:center;transition:.3s;position:relative;overflow:hidden}
+  .spec::before{content:"";position:absolute;top:0;left:0;right:0;height:6px}
+  .spec:nth-child(1)::before{background:var(--sage)}
+  .spec:nth-child(2)::before{background:var(--rose)}
+  .spec:nth-child(3)::before{background:var(--terra)}
+  .spec:nth-child(4)::before{background:var(--sage-soft)}
+  .spec:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+  .spec .ic{width:70px;height:70px;margin:0 auto 18px;border-radius:50% 50% 50% 14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+  .spec:nth-child(1) .ic{background:var(--sage-bg)}
+  .spec:nth-child(2) .ic{background:var(--rose-bg)}
+  .spec:nth-child(3) .ic{background:var(--terra-bg)}
+  .spec:nth-child(4) .ic{background:var(--sage-bg)}
+  .spec h3{font-size:1.25rem;margin-bottom:8px}
+  .spec p{color:var(--ink-soft);font-size:.93rem;line-height:1.6}
+
+  /* ---------- WHO WE SERVE ---------- */
+  .serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .scard{text-align:center}
+  .scard .arch{border-radius:var(--arch);overflow:hidden;position:relative;box-shadow:var(--shadow-sm);margin-bottom:22px;border:8px solid #fff;transition:.4s}
+  .scard:hover .arch{transform:translateY(-7px);box-shadow:var(--shadow)}
+  .scard .arch img{width:100%;height:330px;object-fit:cover;transition:.6s}
+  .scard:hover .arch img{transform:scale(1.05)}
+  .scard .arch::after{content:"";position:absolute;inset:0;mix-blend-mode:multiply}
+  .scard:nth-child(1) .arch::after{background:linear-gradient(180deg,transparent 40%,rgba(62,74,48,.4))}
+  .scard:nth-child(2) .arch::after{background:linear-gradient(180deg,transparent 40%,rgba(168,95,55,.4))}
+  .scard:nth-child(3) .arch::after{background:linear-gradient(180deg,transparent 40%,rgba(86,70,54,.42))}
+  .scard h3{font-size:1.35rem;margin-bottom:8px}
+  .scard p{color:var(--ink-soft);font-size:.96rem;max-width:30ch;margin:0 auto}
+
+  /* ---------- INTERLUDE QUOTE BAND ---------- */
+  .interlude{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;min-height:440px}
+  .interlude>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .interlude::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(62,74,48,.86),rgba(168,95,55,.78))}
+  .interlude .inner{position:relative;z-index:1;max-width:780px;padding:96px 28px}
+  .interlude .q{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.6rem,3.6vw,2.5rem);line-height:1.3;color:#fff}
+  .interlude .by{margin-top:20px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra-soft);font-weight:700}
+
+  /* ---------- THERAPISTS BAND ---------- */
+  .band-wrap{padding:30px 0 110px}
+  .therapists{background:linear-gradient(150deg,var(--forest),var(--forest-2));color:#f1ece0;border-radius:40px;padding:64px 60px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .therapists::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(231,180,143,.16);top:-130px;right:-90px}
+  .therapists::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(188,198,155,.16);bottom:-110px;left:-70px}
+  .therapists .t-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .therapists .eyebrow{color:var(--terra-soft)}
+  .therapists .eyebrow::before{background:var(--terra-soft)}
+  .therapists h2{color:#fff;font-size:clamp(2rem,3.6vw,2.7rem)}
+  .therapists p{color:#ddd6c5;margin:18px 0 26px;font-size:1.08rem}
+  .lpc-tags{display:flex;gap:12px;margin-bottom:30px;flex-wrap:wrap}
+  .lpc-tags span{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 18px;font-size:.86rem;font-weight:500}
+  .t-art{position:relative}
+  .t-art .arch{border-radius:var(--arch);overflow:hidden;border:8px solid rgba(255,255,255,.92);box-shadow:var(--shadow)}
+  .t-art .arch img{width:100%;height:420px;object-fit:cover}
+  .t-art .inset{position:absolute;bottom:18px;left:-30px;width:148px;height:148px;border-radius:22px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow);z-index:2}
+  .t-art .inset img{width:100%;height:100%;object-fit:cover}
+
+  /* ---------- HOW TO START ---------- */
+  .steps{background:var(--rose-bg)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s}
+  .step{background:#fff;border-radius:26px;padding:38px 32px;position:relative;box-shadow:var(--shadow-sm)}
+  .step .num{counter-increment:s;font-family:'Fraunces',serif;font-size:2.6rem;color:var(--terra);line-height:1;margin-bottom:14px}
+  .step .num::before{content:"0" counter(s)}
+  .step h3{font-size:1.22rem;margin-bottom:8px}
+  .step p{color:var(--ink-soft);font-size:.96rem}
+  .step .line{position:absolute;top:54px;right:-24px;width:24px;border-top:2px dashed var(--terra-soft);z-index:1}
+
+  /* ---------- FEES ---------- */
+  .fees{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+  .fee-panel{max-width:760px;margin:0 auto 28px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:8px 44px;box-shadow:var(--shadow-sm)}
+  .fee-row{display:flex;align-items:baseline;justify-content:space-between;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .fee-row:last-child{border-bottom:0}
+  .fee-row .svc h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.22rem;color:var(--ink);margin-bottom:4px}
+  .fee-row .svc span{color:var(--ink-soft);font-size:.9rem}
+  .fee-row .price{font-family:'Fraunces',serif;font-weight:600;font-size:1.7rem;color:var(--terra-deep);white-space:nowrap}
+  .fee-note{max-width:760px;margin:0 auto;color:var(--ink-soft);font-size:.94rem;line-height:1.7;padding:0 6px}
+  .fee-note strong{color:var(--ink);font-weight:600}
+
+  /* ---------- FREE TIPS BAND ---------- */
+  .tips-band{background:linear-gradient(120deg,var(--terra),var(--terra-deep));color:#fff;border-radius:40px;padding:64px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .tips-band::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.1);top:-120px;left:-60px}
+  .tips-band .inner{position:relative;z-index:1;max-width:580px;margin:0 auto}
+  .tips-band .eyebrow{color:#fbe3d2;justify-content:center}.tips-band .eyebrow::before{background:#fbe3d2}
+  .tips-band h2{color:#fff;font-size:clamp(1.9rem,3.3vw,2.5rem)}
+  .tips-band p{color:#fbe6d8;margin:16px 0 28px}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--sage-bg);position:relative;overflow:hidden}
+  .faq-shell{max-width:840px;margin:0 auto;background:var(--cream);border-radius:200px 200px 36px 36px;padding:70px 60px 56px;box-shadow:var(--shadow-sm)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:'Fraunces',serif;font-size:1.18rem;color:var(--ink);font-weight:600}
+  .faq-q .pl{color:var(--terra);font-size:1.5rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 24px;color:var(--ink-soft)}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:linear-gradient(155deg,var(--cocoa),#2f2619);color:#f1ebdd}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:stretch}
+  .contact .eyebrow{color:var(--terra-soft)}.contact .eyebrow::before{background:var(--terra-soft)}
+  .contact h2{color:#fff;font-size:clamp(2.1rem,3.6vw,2.7rem)}
+  .contact .lead{color:#d9cfbd;margin:18px 0 28px}
+  .cline{display:flex;gap:15px;align-items:flex-start;margin-bottom:18px}
+  .cline .ic{width:44px;height:44px;flex-shrink:0;border-radius:50%;background:rgba(231,180,143,.16);color:var(--terra-soft);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+  .cline b{color:#fff;display:block;font-weight:600}
+  .cline span{color:#d9cfbd;font-size:.94rem}
+  .storefront{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.16);margin:0;height:100%;min-height:320px}
+  .storefront img{width:100%;height:100%;object-fit:cover;display:block}
+  .storefront figcaption{position:absolute;left:16px;bottom:14px;background:rgba(42,34,24,.74);backdrop-filter:blur(5px);color:#f1ebdd;font-family:'Fraunces',serif;font-size:.92rem;padding:7px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.14)}
+  .map{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow);margin-top:42px}
+  .map iframe{width:100%;height:380px;border:0;display:block;filter:saturate(.9)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#2a2218;color:#b6ab97;padding:62px 0 32px}
+  .foot-top{display:grid;grid-template-columns:1.3fr 2fr;gap:48px;align-items:start}
+  footer .brand{color:#f3eede;font-size:1.5rem;margin-bottom:14px}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-soft);margin-bottom:15px;font-weight:700}
+  .foot-cols a{display:block;color:#b6ab97;font-size:.93rem;margin-bottom:10px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:24px;font-size:.82rem;color:#897f6c;text-align:center}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:#2a2218;color:#f1ebdd;font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4}
+  .demo b{color:var(--terra-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:#f1ebdd;font-size:1.2rem;cursor:pointer;line-height:1}
+
+  @media(max-width:980px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:860px){
+    .hero-grid,.approach-grid,.contact-grid{grid-template-columns:1fr;gap:46px}
+    .approach .art{order:-1}
+    .spec-grid{grid-template-columns:repeat(2,1fr)}
+    .serve-grid,.step-grid,.fee-grid,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .step .line{display:none}
+    .sec{padding:70px 0}.hero{padding:48px 0 64px}
+    .therapists,.tips-band{padding:48px 28px}
+    .therapists .t-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+    .therapists .eyebrow,.lpc-tags{justify-content:center}
+    .t-art{order:-1}.t-art .inset{display:none}.t-art .arch img{height:340px}
+    .interlude{min-height:auto}.interlude .inner{padding:66px 24px}
+    .faq-shell{padding:54px 28px 40px;border-radius:120px 120px 28px 28px}
+    .hero-art .arch img{height:420px}.approach .art .arch img{height:400px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}.spec-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2.4rem}
+    .hero-art .arch img{height:360px}
+    .hero-art .tag{left:0}
+    .strip .row{gap:12px 26px}
+    .fee-panel{padding:6px 24px}
+    .fee-row{padding:20px 0;gap:16px}
+    .fee-row .price{font-size:1.45rem}
+  }
+</style>
+<style>
+/* === injected mobile overflow safety-net v3 === */
+@media (max-width: 760px){
+  * { min-width: 0; }
+  h1,h2,h3,h4,h5,h6,p,li,span,a,em,strong,blockquote,figcaption,div { overflow-wrap: anywhere; }
+  .known-row.right, .known-row.left,
+  .featured-row.right, .featured-row.left,
+  .approach-row.right, .approach-row.left,
+  .split.right, .split.left { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mark">✦</span>Phoenix Counseling</a>
+    <nav class="nav-links">
+      <a href="#top">Welcome</a>
+      <a href="#fees">Fees &amp; Insurance</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Get Started <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#start">Hours and Location</a>
+          <a href="#start">Referrals</a>
+          <a href="#contact">Contact Us</a>
+        </div></div>
+      </div>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Resources <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#tips">Blog</a>
+          <a href="#tips">Free 7-Day Tips</a>
+          <a href="#tips">Resources</a>
+          <a href="#tips">Program List</a>
+        </div></div>
+      </div>
+      <a href="#contact" class="btn nav-cta">Start Therapy</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Welcome</a>
+  <a href="#fees">Fees &amp; Insurance</a>
+  <div class="ov-head">Get Started</div>
+  <a href="#start">Hours and Location</a>
+  <a href="#start">Referrals</a>
+  <a href="#contact">Contact Us</a>
+  <div class="ov-head">Resources</div>
+  <a href="#tips">Blog</a>
+  <a href="#tips">Free 7-Day Tips</a>
+  <a href="#tips">Resources</a>
+  <a href="#tips">Program List</a>
+  <a href="#contact">Start Therapy</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="sprig" style="top:90px;left:-30px;transform:rotate(20deg)" viewBox="0 0 80 160" fill="none" stroke="currentColor" stroke-width="2"><path d="M40 160V20"/><path d="M40 60c-18 0-26-14-26-30 16 0 26 12 26 30Z" fill="currentColor" fill-opacity=".25"/><path d="M40 95c18 0 26-14 26-30-16 0-26 12-26 30Z" fill="currentColor" fill-opacity=".25"/><path d="M40 120c-15 0-22-12-22-26 14 0 22 10 22 26Z" fill="currentColor" fill-opacity=".25"/></svg>
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Laveen &amp; Phoenix · Virtual across Arizona</p>
+        <h1>Therapy for children, teens &amp; adults — in a <em>calm, compassionate</em> space.</h1>
+        <p class="lead">Support for anxiety, depression, trauma, and ADHD, with licensed therapists who meet you exactly where you are.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">Start Therapy</a>
+          <a href="#therapists" class="btn btn-ghost">Find Your Therapist</a>
+        </div>
+      </div>
+      <div class="hero-art reveal delay-2">
+        <span class="leafblob"></span>
+        <span class="ring"></span>
+        <div class="arch"><img src="img/hero.jpg" alt="Embracing change and moving forward together" /></div>
+        <div class="tag"><span class="d">🌿</span><div>Now welcoming clients<small>In-person &amp; telehealth</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="strip">
+    <div class="wrap">
+      <div class="row">
+        <div><span class="ic">✦</span><b>Children, Teens &amp; Adults</b></div>
+        <div><span class="ic">✦</span>In-person in Phoenix &amp; <b>virtual across Arizona</b></div>
+        <div><span class="ic">✦</span>Anxiety · Depression · Trauma · ADHD</div>
+        <div><span class="ic">✦</span>Private-pay &amp; <b>select insurance</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="sec" id="approach">
+    <div class="wrap approach-grid">
+      <div class="art reveal">
+        <div class="arch"><img src="img/approach.jpg" alt="Two people in a warm, supportive conversation" /></div>
+      </div>
+      <div class="reveal delay-1">
+        <p class="eyebrow">We're here to support you</p>
+        <h2>Changes in life are something we can all count on</h2>
+        <p style="color:var(--ink-soft);margin-top:18px">You can live as a victim of change — or embrace it and thrive. Whether you're in the midst of unexpected change or crave a transformation but aren't sure where to begin, we are here to support you. In our work together, we will:</p>
+        <ul>
+          <li><span class="ck">✓</span> Guide and encourage you</li>
+          <li><span class="ck">✓</span> Hold you accountable</li>
+          <li><span class="ck">✓</span> Walk alongside you throughout your transformation journey</li>
+        </ul>
+        <p class="pullquote">"The best way to predict the future is to create it."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALTIES -->
+  <section class="sec specs" id="specialties">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">How we help</p>
+        <h2>Specialized support for what you're carrying</h2>
+        <p>Whatever you're facing, you don't have to navigate it alone.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec reveal"><div class="ic">🌧️</div><h3>Anxiety</h3><p>Tools to quiet worry, ease overwhelm, and feel grounded again.</p></div>
+        <div class="spec reveal delay-1"><div class="ic">🌥️</div><h3>Depression</h3><p>Compassionate support to lift the weight and reconnect with what matters.</p></div>
+        <div class="spec reveal delay-2"><div class="ic">🫶</div><h3>Trauma</h3><p>A safe, paced space to process the past and reclaim your sense of safety.</p></div>
+        <div class="spec reveal delay-3"><div class="ic">⚡</div><h3>ADHD</h3><p>Practical strategies for focus, organization, and everyday confidence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section class="sec" id="serve">
+    <svg class="sprig" style="top:60px;right:-20px;transform:scaleX(-1) rotate(12deg)" viewBox="0 0 80 160" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--rose)"><path d="M40 160V20"/><path d="M40 60c-18 0-26-14-26-30 16 0 26 12 26 30Z" fill="currentColor" fill-opacity=".22"/><path d="M40 95c18 0 26-14 26-30-16 0-26 12-26 30Z" fill="currentColor" fill-opacity=".22"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">Who we work with</p>
+        <h2>Care for the whole family</h2>
+        <p>Every age and stage deserves a space to feel heard.</p>
+      </div>
+      <div class="serve-grid">
+        <div class="scard reveal"><div class="arch"><img src="img/children.jpg" alt="" /></div><h3>Children</h3><p>Gentle, supportive care to help kids name big feelings and build resilience.</p></div>
+        <div class="scard reveal delay-1"><div class="arch"><img src="img/teen.jpg" alt="" /></div><h3>Teens</h3><p>A judgment-free space to navigate stress, identity, and the pressures of growing up.</p></div>
+        <div class="scard reveal delay-2"><div class="arch"><img src="img/adults.jpg" alt="" /></div><h3>Adults</h3><p>Support through life transitions, relationships, and the patterns you're ready to change.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERLUDE QUOTE BAND -->
+  <section class="interlude reveal">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="inner">
+      <p class="q">"Happiness is not to be pursued, but to be created."</p>
+      <p class="by">Phoenix Counseling · Laveen &amp; Phoenix, Arizona</p>
+    </div>
+  </section>
+
+  <!-- THERAPISTS BAND -->
+  <section class="band-wrap">
+    <div class="wrap">
+      <div class="therapists reveal" id="therapists">
+        <div class="t-grid">
+          <div>
+            <p class="eyebrow">Our team</p>
+            <h2>Find the therapist who's right for you</h2>
+            <p>Our licensed clinicians bring warmth, experience, and a range of specialties — in person in Phoenix and virtually across Arizona. We'll help match you with the right fit.</p>
+            <div class="lpc-tags"><span>Licensed Professional Counselors (LPC)</span><span>Licensed Associate Counselors (LAC)</span></div>
+            <a href="#contact" class="btn btn-cream">Find Your Therapist</a>
+          </div>
+          <div class="t-art">
+            <div class="arch"><img src="img/therapists.jpg" alt="A warm, welcoming therapy space" /></div>
+            <div class="inset"><img src="img/couple.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO GET STARTED -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">Getting started is simple</p>
+        <h2>Your first steps with us</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><span class="line"></span><div class="num"></div><h3>Reach out</h3><p>Call (602) 899-2534, email us, or send a message to let us know what you're looking for.</p></div>
+        <div class="step reveal delay-1"><span class="line"></span><div class="num"></div><h3>Get matched</h3><p>We'll help match you with the right therapist (LPC or LAC) for your needs and goals.</p></div>
+        <div class="step reveal delay-2"><div class="num"></div><h3>Begin therapy</h3><p>Start your sessions in person in Phoenix or virtually, anywhere across Arizona.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="sec fees" id="fees">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">Fees &amp; insurance</p>
+        <h2>Session fees</h2>
+      </div>
+      <div class="fee-panel reveal">
+        <div class="fee-row"><div class="svc"><h3>Initial Intake Session</h3><span>50–60 minutes</span></div><div class="price">$190</div></div>
+        <div class="fee-row"><div class="svc"><h3>Follow-Up Session — LPC</h3><span>50 minutes · Licensed Professional Counselor</span></div><div class="price">$170</div></div>
+        <div class="fee-row"><div class="svc"><h3>Follow-Up Session — LAC</h3><span>50 minutes · Licensed Associate Counselor</span></div><div class="price">$150</div></div>
+      </div>
+      <p class="fee-note reveal delay-1">We are <strong>primarily a private-pay practice</strong>. Some clinicians are in-network with select commercial plans (for example, Aetna); participation varies by provider. We do not accept Medicaid or Medicare. Cancellations or no-shows without 24 hours' notice incur a $150 fee.</p>
+    </div>
+  </section>
+
+  <!-- FREE TIPS BAND -->
+  <section class="band-wrap" id="tips">
+    <div class="wrap">
+      <div class="tips-band reveal">
+        <div class="inner">
+          <p class="eyebrow">Free resource</p>
+          <h2>Free 7-Day Emotional Wellness Series</h2>
+          <p>Simple, supportive tips delivered to your inbox — a gentle first step you can take today, no appointment required.</p>
+          <a href="#contact" class="btn btn-cream">Get the free series</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="faq-shell reveal">
+        <div class="sec-head" style="margin-bottom:30px">
+          <p class="eyebrow center">Good to know</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-item"><button class="faq-q">Do you accept insurance?<span class="pl">+</span></button><div class="faq-a"><p>We're primarily a private-pay practice. Some clinicians are in-network with select commercial plans (for example, Aetna) — participation varies by provider. We do not accept Medicaid or Medicare.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Who do you work with?<span class="pl">+</span></button><div class="faq-a"><p>Children, teens, and adults — with support for anxiety, depression, trauma, and ADHD, among other concerns.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer virtual sessions?<span class="pl">+</span></button><div class="faq-a"><p>Yes. We see clients in person in Phoenix and offer telehealth virtually across Arizona.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What are your hours?<span class="pl">+</span></button><div class="faq-a"><p>Daily appointments are available; availability varies by provider. Admin support (virtual) is Monday–Friday. There are no walk-ins.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I get started?<span class="pl">+</span></button><div class="faq-a"><p>Reach out by phone at (602) 899-2534, email contact@laveencounseling.com, or send us a message — we'll help match you with the right therapist.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Start therapy today</h2>
+          <p class="lead">Reach out and we'll help you take the first step — and match you with the right therapist for your needs.</p>
+          <div class="cline"><div class="ic">✆</div><div><b>(602) 899-2534</b><span>Call to get started</span></div></div>
+          <div class="cline"><div class="ic">✉</div><div><b>contact@laveencounseling.com</b><span>Email us anytime</span></div></div>
+          <div class="cline"><div class="ic">⌖</div><div><b>2610 W. Baseline Rd, Ste 116</b><span>Phoenix, AZ 85041 · No walk-ins</span></div></div>
+          <div class="cline"><div class="ic">🕑</div><div><b>Daily appointments available</b><span>Availability varies by provider · Admin support (virtual) Mon–Fri</span></div></div>
+          <p style="margin-top:26px"><a href="tel:6028992534" class="btn">Call (602) 899-2534</a></p>
+        </div>
+        <figure class="storefront reveal delay-1">
+          <img src="img/storefront.jpg" alt="Phoenix Counseling office exterior at Suite 116, Phoenix" />
+          <figcaption>Our office · Suite 116</figcaption>
+        </figure>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=2610+W+Baseline+Rd+Ste+116,+Phoenix,+AZ+85041&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">Phoenix Counseling</div>
+        <p style="font-size:.93rem;color:#9c917d;max-width:34ch">Therapy for children, teens &amp; adults in Laveen &amp; Phoenix — virtually across Arizona.</p>
+        <p style="font-size:.9rem;color:#9c917d;margin-top:16px">2610 W. Baseline Rd, Ste 116, Phoenix, AZ 85041<br/>(602) 899-2534 · contact@laveencounseling.com</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#top">Welcome</a>
+          <a href="#start">Hours and Location</a>
+          <a href="#start">Referrals</a>
+          <a href="#fees">Fees &amp; Insurance</a>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <a href="#tips">Blog</a>
+          <a href="#tips">Free 7-Day Tips</a>
+          <a href="#tips">Resources</a>
+          <a href="#tips">Program List</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#therapists">Find Your Therapist</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#contact">Start Therapy</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by Matthew McGuire</p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Phoenix Counseling.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  /* Concept demo: buttons are intentionally inert — keep hover, click goes nowhere */
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>
