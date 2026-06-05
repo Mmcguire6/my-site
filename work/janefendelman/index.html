@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Jane Fendelman, MC — Counseling &amp; Transformation in Phoenix</title>
+<meta name="description" content="Jane Fendelman, MC — Phoenix counselor, author and speaker with 30+ years' experience. Counseling that sees the person, not a diagnosis. Individuals, couples, families." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --plum:#6b2d5c;--plum-deep:#4a1f40;--gold:#bf9b30;--gold-soft:#d8b765;
+    --cream:#fbf7f1;--sand:#f3e8de;--mauve:#ecd8e2;--ink:#3a2433;--ink-soft:#6f5d68;
+    --line:#e7dccf;--white:#fffdfa;
+    --r-arch:50% 50% 6px 6px / 42% 42% 6px 6px;
+    --shadow:0 18px 50px -22px rgba(74,31,64,.35);--shadow-sm:0 8px 26px -16px rgba(74,31,64,.3);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;color:var(--plum-deep)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .serif-em{font-style:italic;color:var(--plum)}
+  .btn{display:inline-flex;align-items:center;gap:.55em;background:var(--plum);color:#fff;font-weight:600;font-size:.98rem;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:var(--shadow-sm)}
+  .btn:hover{background:var(--plum-deep);transform:translateY(-2px)}
+  .btn-gold{background:var(--gold)}.btn-gold:hover{background:#a9881f}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.32rem;letter-spacing:.01em;color:var(--plum-deep)}
+  .brand b{color:var(--gold);font-weight:600}
+  .brand span{display:block;font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-top:1px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links>a:not(.nav-cta),.drop-t{font-size:.92rem;font-weight:500;color:var(--ink);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--plum)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:5px}
+  .drop-t .car{font-size:.7em;transition:.3s}
+  .has-drop:hover .car,.has-drop:focus-within .car{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:.22s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:10px;min-width:250px}
+  .dropdown .inner a{display:block;padding:9px 14px;border-radius:9px;font-size:.85rem;color:var(--ink);white-space:nowrap}
+  .dropdown .inner a:hover{background:var(--sand);color:var(--plum)}
+  .nav-cta{font-size:.86rem;padding:11px 20px;color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--plum-deep);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--plum-deep);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:84px 20px 40px;overflow-y:auto;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1)}
+  .overlay.open{transform:none}
+  .overlay a{color:#f3e8de;font-family:'Fraunces',serif;font-size:1.18rem}
+  .overlay .ov-head{color:var(--gold-soft);font-family:'Inter';font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;margin-top:8px}
+  .overlay .close{position:absolute;top:24px;right:28px;font-size:2rem;color:#f3e8de;background:none;border:0;cursor:pointer}
+
+  .hero{padding:74px 0 86px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.4rem,4.8vw,3.7rem);font-weight:600}
+  .hero .lead{font-size:1.18rem;color:var(--ink-soft);margin:22px 0 14px;max-width:34ch}
+  .hero .tag{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--plum);margin:24px 0 8px;padding-left:18px;border-left:3px solid var(--gold);max-width:42ch}
+  .hero .tag cite{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);margin-top:8px;font-weight:600}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:26px}
+  .hero-call{font-weight:600;color:var(--plum-deep);font-size:1rem}
+  .hero-call small{display:block;font-weight:500;font-size:.74rem;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase}
+  .hero-photo{position:relative}
+  .arch{border-radius:var(--r-arch);overflow:hidden;box-shadow:var(--shadow);position:relative;z-index:2}
+  .arch img{width:100%;height:520px;object-fit:cover;object-position:center top}
+  .hero-photo .ring{position:absolute;inset:-18px -18px 26px 18px;border-radius:var(--r-arch);border:1.5px solid var(--gold-soft);z-index:1}
+  .hero-badge{position:absolute;left:-26px;bottom:30px;z-index:3;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);text-align:center;border:1px solid var(--line)}
+  .hero-badge b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--plum);display:block}
+  .hero-badge span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+
+  .trust{background:var(--plum-deep);color:#f3e8de;padding:30px 0}
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;align-items:center}
+  .trust-grid .t b{font-family:'Fraunces',serif;font-size:1.9rem;color:#fff;display:block;line-height:1}
+  .trust-grid .t span{font-size:.82rem;letter-spacing:.04em;color:#d8b9cb}
+  .seen{border-top:1px solid rgba(255,255,255,.16);margin-top:26px;padding-top:22px;text-align:center}
+  .seen p{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#c9a7bb;margin-bottom:12px}
+  .seen-logos{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;color:#f3e8de}
+
+  .sec{padding:92px 0}
+  .sec-head{max-width:680px;margin-bottom:52px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .sec-head p{color:var(--ink-soft);font-size:1.1rem;margin-top:16px}
+
+  .philo{background:var(--sand)}
+  .philo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .philo blockquote{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.6vw,2.05rem);line-height:1.3;color:var(--plum-deep);font-weight:500}
+  .philo blockquote b{color:var(--gold);font-style:italic;font-weight:600}
+  .philo .body p{margin-bottom:16px;color:var(--ink-soft)}
+  .philo .body p strong{color:var(--ink)}
+
+  .method{background:var(--plum);color:#f6ebe2;border-radius:30px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;box-shadow:var(--shadow)}
+  .method .text{padding:60px}
+  .method .eyebrow{color:var(--gold-soft)}
+  .method h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.5rem)}
+  .method p{color:#e8d3df;margin-top:18px}
+  .method .pic{height:100%;min-height:380px;background-image:linear-gradient(150deg,rgba(122,53,106,.78),rgba(74,31,40,.9)),url('img/metanoia.jpg');background-size:cover;background-position:center;position:relative}
+  .method .pic .deftxt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:40px;text-align:center}
+  .method .pic .deftxt p{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:#f3e1ec;line-height:1.4}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.3s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--plum),var(--gold))}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card .ic{width:52px;height:52px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--mauve);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.4rem}
+  .card h3{font-size:1.25rem;margin-bottom:10px}
+  .card p{color:var(--ink-soft);font-size:.97rem}
+  .card.featured{padding:0;overflow:hidden}
+  .card.featured::before{display:none}
+  .card.featured .ph{position:relative;height:190px;overflow:hidden}
+  .card.featured .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .card.featured:hover .ph img{transform:scale(1.06)}
+  .card.featured .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(107,45,92,.2),rgba(74,31,64,.5));mix-blend-mode:multiply}
+  .card.featured .cbody{padding:24px 28px 30px}
+
+  .interlude{background-image:url('img/interlude.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center;padding:104px 0;position:relative}
+  .interlude::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(58,24,48,.74),rgba(74,31,64,.8))}
+  .interlude .wrap{position:relative}
+  .interlude .eyebrow{color:var(--gold-soft)}
+  .interlude h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:780px;margin:14px auto 30px}
+
+  .steps{background:var(--plum-deep);color:#f3e8de}
+  .steps .sec-head h2{color:#fff}.steps .sec-head p{color:#d8b9cb}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .step{text-align:center;padding:0 10px}
+  .step .n{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold-soft)}
+  .step h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+  .step p{color:#d8b9cb;font-size:.96rem}
+
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .about .arch img{height:460px}
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .creds span{font-size:.82rem;background:var(--sand);border:1px solid var(--line);color:var(--plum-deep);padding:7px 14px;border-radius:999px;font-weight:500}
+  .about .body p{color:var(--ink-soft);margin-bottom:15px}
+
+  .testi{background:var(--sand)}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .quote{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow-sm)}
+  .quote p{font-size:1rem;color:var(--ink);margin-bottom:18px}
+  .quote .who{font-weight:600;color:var(--plum);font-size:.92rem}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:14px;font-size:.9rem}
+
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Fraunces',serif;font-size:1.2rem;color:var(--plum-deep);font-weight:600}
+  .faq-q .pl{color:var(--gold);font-size:1.5rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 24px;color:var(--ink-soft)}
+
+  .contact{background:var(--plum-deep);color:#f3e8de}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .contact h2{color:#fff;font-size:clamp(2rem,3.4vw,2.6rem)}
+  .contact .lead{color:#d8b9cb;margin:16px 0 28px}
+  .cline{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .cline .ic{color:var(--gold-soft);font-size:1.2rem;margin-top:2px}
+  .cline b{color:#fff;display:block;font-weight:600}
+  .cline span{color:#d8b9cb;font-size:.95rem}
+  .map{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:var(--shadow)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:saturate(.9)}
+
+  footer{background:#2c1626;color:#c9a7bb;padding:56px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.3fr 2fr;gap:40px;align-items:start}
+  footer .brand{color:#f3e8de;font-size:1.5rem;margin-bottom:10px}
+  footer .brand b{color:var(--gold-soft)}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .foot-cols h5{font-family:'Inter';font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:14px;font-weight:600}
+  .foot-cols a{display:block;color:#d8b9cb;font-size:.92rem;margin-bottom:9px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;font-size:.82rem;color:#9c7b8e;text-align:center}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--plum-deep);color:#f3e8de;font-size:.82rem;padding:11px 46px 11px 20px;text-align:center;line-height:1.4}
+  .demo b{color:var(--gold-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:#f3e8de;font-size:1.2rem;cursor:pointer;line-height:1}
+
+  @media(max-width:980px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid,.philo-grid,.method,.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .svc-grid,.testi-grid,.step-grid,.trust-grid,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .method .pic{min-height:280px}.method .text{padding:40px}
+    .nav-links{display:none}.burger{display:flex}
+    .hero{padding:48px 0 64px}.sec{padding:64px 0}.hero-badge{left:0}
+    .arch img{height:400px}.about .arch img{height:360px}
+    .hero h1{font-size:2.3rem}.sec-head{margin-bottom:36px}
+    .interlude{background-attachment:scroll}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    .arch img{height:340px}
+    .method .text{padding:30px}
+    .quote,.card,.philo blockquote{font-size:.96rem}
+    .hero-badge{padding:10px 14px}.hero-badge b{font-size:1.25rem}
+  }
+</style>
+<style>
+/* === injected mobile overflow safety-net v3 === */
+@media (max-width: 760px){
+  * { min-width: 0; }
+  h1,h2,h3,h4,h5,h6,p,li,span,a,em,strong,blockquote,figcaption,div { overflow-wrap: anywhere; }
+  .known-row.right, .known-row.left,
+  .featured-row.right, .featured-row.left,
+  .approach-row.right, .approach-row.left,
+  .split.right, .split.left { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">Jane <b>Fendelman</b><span>Counseling · Phoenix</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Services <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#services">Couples/Marriage Counseling</a>
+          <a href="#services">Individual Counseling</a>
+          <a href="#services">Family Counseling</a>
+          <a href="#services">Wedding Services</a>
+          <a href="#services">Hospice Work</a>
+          <a href="#services">Corporate Training &amp; Seminars</a>
+        </div></div>
+      </div>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Store &amp; Media <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#contact">Store</a>
+          <a href="#contact">Jane's Favorites</a>
+          <a href="https://www.youtube.com/channel/UCrFeImb4EHdqcmQ59Q2_QJA" target="_blank" rel="noopener">YouTube &amp; Media</a>
+        </div></div>
+      </div>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">Payment</a>
+      <a href="#contact" class="btn nav-cta">Contact Us</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#about">About Jane Fendelman</a>
+  <a href="#services">Couples/Marriage Counseling</a>
+  <div class="ov-head">Services</div>
+  <a href="#services">Individual Counseling</a>
+  <a href="#services">Family Counseling</a>
+  <a href="#services">Wedding Services</a>
+  <a href="#services">Hospice Work</a>
+  <a href="#services">Corporate Training &amp; Seminars</a>
+  <div class="ov-head">More</div>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Store</a>
+  <a href="#contact">Jane's Favorites</a>
+  <a href="https://www.youtube.com/channel/UCrFeImb4EHdqcmQ59Q2_QJA" target="_blank" rel="noopener">YouTube &amp; Media</a>
+  <a href="#faq">Payment Information</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Counselor · Author · Speaker</p>
+        <h1>Are you ready to become <span class="serif-em">the best version of yourself?</span></h1>
+        <p class="lead">For over 30 years, Jane Fendelman, MC, has guided individuals, couples, and families in Phoenix toward real, lasting transformation.</p>
+        <p class="tag">"What you say to yourself about yourself determines your place in the world."<cite>— Jane Fendelman</cite></p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">Text to Schedule a Session</a>
+          <div class="hero-call"><small>Text to schedule</small>(602) 881-1991</div>
+        </div>
+      </div>
+      <div class="hero-photo reveal delay-2">
+        <div class="ring"></div>
+        <div class="arch"><img src="img/jane.jpg" alt="Jane Fendelman, MC" /></div>
+        <div class="hero-badge"><b>40,000+</b><span>People served</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="t reveal"><b>30+ Years</b><span>Of counseling experience</span></div>
+        <div class="t reveal delay-1"><b>Top&nbsp;3</b><span>Marriage Counselor in Phoenix · 2019–2023</span></div>
+        <div class="t reveal delay-2"><b>LGBTQ+</b><span>Affirming &amp; all-denominational</span></div>
+      </div>
+      <div class="seen reveal delay-2">
+        <p>As seen on</p>
+        <div class="seen-logos">
+          <span>CBS 5</span><span>ABC 15</span><span>12 KPNX</span><span>Channel 3</span><span>AZTV 7</span><span>1100 KFNX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="sec philo" id="approach">
+    <div class="wrap philo-grid">
+      <div class="reveal">
+        <p class="eyebrow">A different kind of counseling</p>
+        <blockquote>No labels. No diagnoses. No pathology — just <b>you, and everything you already have to grow.</b></blockquote>
+      </div>
+      <div class="body reveal delay-1">
+        <p>Jane practices <strong>counseling — not psychotherapy or psychiatry.</strong> She will not assess, label, analyze, categorize, diagnose, or medicate you. There is nothing "wrong" with you to be fixed.</p>
+        <p>Instead, her work is rooted in the <strong>Fendelman Metanoia Counseling Method for Transformation</strong> — helping you break self-sabotaging patterns, repair relationships, and step fully into your own power.</p>
+        <p>The result is a warm, judgment-free space where real change becomes not just possible, but expected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METANOIA -->
+  <section class="sec" style="background:var(--cream)">
+    <div class="wrap">
+      <div class="method reveal">
+        <div class="text">
+          <p class="eyebrow">The signature method</p>
+          <h2>The Metanoia Method</h2>
+          <p>Metanoia is a total reversal in thinking — a genuine spiritual awakening. Rather than managing symptoms, Jane helps you transform the inner story quietly shaping your life, so the change holds long after the work is done.</p>
+          <p style="margin-top:24px"><a href="#contact" class="btn btn-gold">Text to Schedule</a></p>
+        </div>
+        <div class="pic"><div class="deftxt"><p>"A total reversal<br/>in thinking."</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec" id="services" style="background:var(--cream)">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Ways Jane can help</p>
+        <h2>Compassionate support for every season of life</h2>
+        <p>Individual, couple, and family work — plus weddings, grief support, and corporate training — all in one warm, trusted practice.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="card featured reveal"><div class="ph"><img src="img/svc-individual.jpg" alt="" /></div><div class="cbody"><h3>Individual Counseling</h3><p>Private sessions on topics from career, finances, and love all the way to severe childhood trauma — helping you realize your full potential and live from your passion.</p></div></div>
+        <div class="card featured reveal delay-1"><div class="ph"><img src="img/svc-couples.jpg" alt="" /></div><div class="cbody"><h3>Couples &amp; Marriage</h3><p>Communication, repairing old wounds, anger management, co-parenting, healthy boundaries, and intimacy — with conflict-resolution tools taught for over 30 years.</p></div></div>
+        <div class="card featured reveal delay-2"><div class="ph"><img src="img/svc-family.jpg" alt="" /></div><div class="cbody"><h3>Family &amp; Children</h3><p>Support with school, focus and behavior, healthy communication, family reunification, and rebuilding closeness, connection, and appreciation.</p></div></div>
+        <div class="card reveal"><div class="ic">🕊️</div><h3>Hospice &amp; Grief</h3><p>A twice-certified hospice worker, Jane brings deep compassion to individuals, families, and loved ones facing a difficult and emotional journey.</p></div>
+        <div class="card reveal delay-1"><div class="ic">🎤</div><h3>Corporate &amp; Speaking</h3><p>Trainings, workshops, lectures, and seminars that engage audiences and help teams and families communicate, connect, and grow.</p></div>
+        <div class="card reveal delay-2"><div class="ic">💍</div><h3>Wedding Services</h3><p>Heartfelt ceremonies — spiritual, traditional, or multi-denominational — officiated by Reverend Jane Fendelman, with premarital counseling available.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERLUDE -->
+  <section class="interlude">
+    <div class="wrap reveal">
+      <p class="eyebrow">You don't have to stay stuck</p>
+      <h2>Real, lasting change is possible — and it begins with a single conversation.</h2>
+      <a href="#contact" class="btn btn-gold">Text to Schedule</a>
+    </div>
+  </section>
+
+  <!-- HOW TO GET STARTED -->
+  <section class="sec steps">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow" style="color:var(--gold-soft)">Getting started is simple</p>
+        <h2>Your first step toward change</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="n">1</div><h3>Text Jane</h3><p>Send a text to (602) 881-1991 to talk through what's bringing you in — no labels, no pressure.</p></div>
+        <div class="step reveal delay-1"><div class="n">2</div><h3>Book your session</h3><p>We'll find a time that works — for yourself, your relationship, or your family — and confirm your appointment.</p></div>
+        <div class="step reveal delay-2"><div class="n">3</div><h3>Begin transforming</h3><p>Step into a warm, judgment-free space and start the work of lasting change.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about" style="background:var(--cream)">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="arch" style="box-shadow:var(--shadow)"><img src="img/jane.jpg" alt="Jane Fendelman" /></div>
+      </div>
+      <div class="reveal delay-1">
+        <p class="eyebrow">About Jane</p>
+        <h2>Three decades of helping people heal</h2>
+        <div class="body" style="margin-top:18px">
+          <p>Jane Fendelman, MC, is a counselor, author, and speaker who has served more than 40,000 people. She earned a Bachelor of Science in Education from Southwest Missouri State University in 1982 and a Master of Counseling degree from the University of Phoenix in 1994.</p>
+          <p>An individual, marriage/couples, and child-family counselor, Jane is also a twice-certified Hospice Worker, a Grief Counselor, holds a Critical Incidence Debriefing Certification, and is an Omni-Denominational Minister. She works with the LGBTQ+ community and welcomes people of every background and belief.</p>
+        </div>
+        <div class="creds">
+          <span>Master of Counseling</span>
+          <span>Twice-Certified Hospice Worker</span>
+          <span>Grief Counselor</span>
+          <span>Critical Incidence Debriefing</span>
+          <span>Omni-Denominational Minister</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec testi" id="testimonials">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">In their words</p>
+        <h2>Stories of real change</h2>
+        <p>Rated 4.9 ★ across dozens of reviews from clients across the Valley.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="quote reveal">
+          <div class="stars">★★★★★</div>
+          <p>"From our first visit with Jane, we were already getting some important tools to help us communicate better."</p>
+          <div class="who">— Cameron T.</div>
+        </div>
+        <div class="quote reveal delay-1">
+          <div class="stars">★★★★★</div>
+          <p>"Jane Fendelman is one of the most compassionate, loving and intelligent counselors I have ever worked with."</p>
+          <div class="who">— Rebecca C.</div>
+        </div>
+        <div class="quote reveal delay-2">
+          <div class="stars">★★★★★</div>
+          <p>"I cannot say enough amazing things about Jane. My daughter has been in counseling for about 3 years now."</p>
+          <div class="who">— Alyshea S.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq" style="background:var(--cream)">
+    <div class="wrap" style="max-width:820px">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Good to know</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="reveal delay-1">
+        <div class="faq-item"><button class="faq-q">Is this therapy or psychotherapy?<span class="pl">+</span></button><div class="faq-a"><p>Jane practices counseling — not psychotherapy or psychiatry. She will not assess, label, analyze, diagnose, or medicate you. The focus is on you as a whole person and on real, lasting transformation.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What does it cost, and do you take insurance?<span class="pl">+</span></button><div class="faq-a"><p>A single 55-minute session is $175, or five sessions for $775. Insurance billing is not available; payment is accepted by check, cash, Zelle, or Venmo.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I get started?<span class="pl">+</span></button><div class="faq-a"><p>Simply text Jane at (602) 881-1991 to talk through what's bringing you in and arrange your first appointment.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Who do you work with?<span class="pl">+</span></button><div class="faq-a"><p>Individuals, couples, and families on a wide range of topics — and Jane is proud to be LGBTQ+ affirming and welcoming of all backgrounds and beliefs.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Where is the office located?<span class="pl">+</span></button><div class="faq-a"><p>Jane's office is at 1328 E Clarendon Ave, Phoenix, AZ 85014.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--gold-soft)">Let's talk</p>
+        <h2>Text to schedule a session</h2>
+        <p class="lead">Change begins with a single conversation. Send a text today and take the first step.</p>
+        <div class="cline"><div class="ic">✆</div><div><b>(602) 881-1991</b><span>Text to arrange your appointment</span></div></div>
+        <div class="cline"><div class="ic">⌖</div><div><b>1328 E Clarendon Ave</b><span>Phoenix, AZ 85014</span></div></div>
+        <div class="cline"><div class="ic">✓</div><div><b>Payment</b><span>Check, cash, Zelle, or Venmo · no insurance billing</span></div></div>
+        <p style="margin-top:26px"><a href="sms:6028811991" class="btn btn-gold">Text (602) 881-1991</a></p>
+      </div>
+      <div class="map reveal delay-1">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=1328+E+Clarendon+Ave,+Phoenix,+AZ+85014&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">Jane <b>Fendelman</b>, MC</div>
+        <p style="font-size:.92rem;color:#b793a8;max-width:30ch">Counseling, transformation &amp; spiritual growth in Phoenix, Arizona.</p>
+        <p style="font-size:.9rem;color:#b793a8;margin-top:14px">1328 E Clarendon Ave, Phoenix, AZ 85014<br/>Text (602) 881-1991</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Counseling</h5>
+          <a href="#services">Individual Counseling</a>
+          <a href="#services">Couples / Marriage Counseling</a>
+          <a href="#services">Family Counseling</a>
+          <a href="#services">Hospice Work</a>
+        </div>
+        <div>
+          <h5>More from Jane</h5>
+          <a href="#services">Wedding Services</a>
+          <a href="#services">Corporate Training</a>
+          <a href="#contact">Store · Books &amp; Audio</a>
+          <a href="https://www.youtube.com/channel/UCrFeImb4EHdqcmQ59Q2_QJA" target="_blank" rel="noopener">YouTube &amp; Media</a>
+          <a href="#contact">Jane's Favorites</a>
+        </div>
+        <div>
+          <h5>Visit</h5>
+          <a href="#about">About Jane Fendelman</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">Payment Information</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by Matthew McGuire</p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Jane Fendelman, MC.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>
