@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>White Tiger Counseling — Empowering Holistic Mental Health · Phoenix, AZ</title>
+<meta name="description" content="White Tiger Counseling — strength-based, holistic mental health care in Phoenix, AZ. Expert care, transparent pricing, insured or private pay. Individual, couples, family & group therapy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* drawn from their real space: black desk + white tiger + icy blue + gold figurines */
+    --ink:#15181d;--ink-2:#1d222a;--slate:#28303b;--slate-2:#323c49;
+    --ice:#c4d8e2;--ice-soft:#dde9ee;--ice-deep:#6f9bb3;
+    --cream:#f6f4ef;--paper:#fbfaf6;--line:#e6e2d8;--line-dk:rgba(255,255,255,.12);
+    --gold:#c39a4f;--gold-deep:#a87f33;--gold-soft:#e6cf9f;
+    --body:#3a3f47;--body-soft:#6b7079;--on-dark:#e9ecf0;--on-dark-soft:#aeb6c0;
+    --shadow:0 30px 70px -34px rgba(10,14,20,.6);--shadow-sm:0 16px 38px -22px rgba(10,14,20,.5);
+    --arch:200px 200px 10px 10px;--arch-sm:150px 150px 8px 8px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--body);background:var(--cream);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.16;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--gold);display:inline-block}
+  .eyebrow.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.55em;background:var(--gold);color:#1a1408;font-family:'Inter',sans-serif;font-weight:700;font-size:.95rem;padding:15px 30px;border-radius:4px;border:0;cursor:pointer;transition:.25s;letter-spacing:.01em}
+  .btn:hover{background:var(--gold-deep);color:#fff;transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--on-dark);border:1.5px solid rgba(255,255,255,.32)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--gold);color:#fff;transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--slate);color:#fff}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+  .stripe{display:flex;gap:4px}.stripe i{width:3px;height:20px;background:var(--gold);display:block;border-radius:2px}
+  .stripe i:nth-child(2){height:14px;opacity:.7}.stripe i:nth-child(3){height:18px;opacity:.85}.stripe i:nth-child(4){height:11px;opacity:.55}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(21,24,29,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dk)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.32rem;color:#fff;display:flex;align-items:center;gap:12px;letter-spacing:.01em}
+  .brand .mk{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.1rem;flex-shrink:0}
+  .brand b{font-weight:700}.brand span{color:var(--ice)}
+  .nav-links{display:flex;align-items:center;gap:24px}
+  .nav-links>a,.drop-t{font-size:.9rem;font-weight:500;color:var(--on-dark);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--gold)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:5px}
+  .drop-t .car{font-size:.7em;transition:.3s}
+  .has-drop:hover .car,.has-drop:focus-within .car{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.22s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:var(--ink-2);border:1px solid var(--line-dk);border-radius:10px;box-shadow:var(--shadow);padding:9px;min-width:236px}
+  .dropdown .inner a{display:block;padding:10px 15px;border-radius:7px;font-size:.88rem;color:var(--on-dark);white-space:nowrap;font-weight:500}
+  .dropdown .inner a:hover{background:var(--slate);color:var(--gold)}
+  .nav-cta{font-size:.86rem;padding:11px 22px;color:#1a1408}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--ice);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:linear-gradient(160deg,var(--ink),#0c0f13);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:11px;padding:88px 20px 40px;overflow-y:auto;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1)}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Playfair Display',serif;font-weight:500;font-size:1.22rem}
+  .overlay .ov-head{color:var(--gold);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;margin-top:12px;font-weight:700;font-family:'Inter',sans-serif}
+  .overlay .close{position:absolute;top:26px;right:28px;font-size:2rem;color:var(--ice);background:none;border:0;cursor:pointer}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--ink);overflow:hidden;min-height:640px;display:flex;align-items:center}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 38%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,18,23,.9) 20%,rgba(15,18,23,.5) 56%,rgba(15,18,23,.08) 100%)}
+  .hero .wrap{position:relative;z-index:1;padding-top:84px;padding-bottom:90px}
+  .hero-inner{max-width:620px}
+  .hero h1{color:#fff;font-size:clamp(2.7rem,5.6vw,4.3rem);font-weight:600}
+  .hero h1 em{font-style:italic;color:var(--ice)}
+  .hero .lead{color:var(--on-dark);font-size:1.18rem;margin:24px 0 32px;max-width:44ch}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---------- TRUST STRIP ---------- */
+  .strip{background:var(--paper);border-bottom:1px solid var(--line);color:var(--body)}
+  .strip .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;padding:22px 0;text-align:center}
+  .strip .row div{display:flex;align-items:center;gap:10px;font-size:.93rem;font-weight:500}
+  .strip .row .ic{color:var(--gold-deep);font-size:.7rem}
+  .strip .row b{color:var(--ink);font-weight:600}
+
+  .sec{padding:104px 0;position:relative}
+  .sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-size:clamp(2.1rem,3.9vw,3rem)}
+  .sec-head p{color:var(--body-soft);font-size:1.12rem;margin-top:16px}
+  .dark{background:var(--ink);color:var(--on-dark)}
+  .dark h1,.dark h2,.dark h3,.dark h4{color:#fff}
+  .dark .sec-head p{color:var(--on-dark-soft)}
+
+  /* ---------- APPROACH ---------- */
+  .appro-top{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;margin-bottom:62px}
+  .appro-top .figure{position:relative;border-radius:var(--arch);overflow:hidden;box-shadow:var(--shadow);border:9px solid #fff}
+  .appro-top .figure img{width:100%;height:500px;object-fit:cover}
+  .appro-top h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .appro-top p{color:var(--body-soft);margin-top:18px;font-size:1.06rem}
+  .appro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pt{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:34px 30px;transition:.3s}
+  .pt:hover{transform:translateY(-6px);box-shadow:var(--shadow-sm);border-color:var(--gold-soft)}
+  .pt .n{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .pt .n::after{content:"";flex:1;height:1px;background:var(--line)}
+  .pt h3{font-size:1.18rem;margin-bottom:10px;line-height:1.3}
+  .pt p{color:var(--body-soft);font-size:.94rem}
+  .pt:nth-child(4),.pt:nth-child(5){grid-column:span 1}
+
+  /* ---------- SYMBOL (dark feature) ---------- */
+  .symbol-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
+  .symbol .figure{position:relative;border-radius:var(--arch);overflow:hidden;box-shadow:var(--shadow);border:9px solid rgba(255,255,255,.9)}
+  .symbol .figure img{width:100%;height:540px;object-fit:cover}
+  .symbol h2{font-size:clamp(2.1rem,3.8vw,2.9rem)}
+  .symbol .big{font-family:'Playfair Display',serif;font-style:italic;color:var(--ice);font-size:1.5rem;margin:6px 0 22px}
+  .symbol p{color:var(--on-dark-soft);margin-bottom:16px}
+  .symbol .duo{display:flex;gap:14px;margin-top:26px}
+  .symbol .duo div{flex:1;border:1px solid var(--line-dk);border-radius:8px;padding:18px 20px}
+  .symbol .duo .k{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+  .symbol .duo .dot{width:12px;height:12px;border-radius:50%}
+  .symbol .duo span{font-size:.88rem;color:var(--on-dark-soft)}
+
+  /* ---------- SERVICES ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:34px}
+  .svc{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:26px 24px;transition:.3s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--gold);transition:.3s}
+  .svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
+  .svc:hover::before{width:5px}
+  .svc .ic{font-size:1.5rem;margin-bottom:12px;display:block}
+  .svc h3{font-size:1.06rem}
+  .svc-extra{text-align:center;color:var(--body-soft);font-size:1rem}
+  .svc-extra b{color:var(--ink);font-weight:600}
+  .modes{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+  .modes span{font-size:.85rem;font-weight:600;color:var(--slate);border:1px solid var(--line);background:#fff;padding:8px 18px;border-radius:999px}
+
+  /* ---------- MISSION INTERLUDE ---------- */
+  .mission{position:relative;overflow:hidden;color:#fff;text-align:center;display:flex;align-items:center;justify-content:center;min-height:460px}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mission::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,18,23,.9),rgba(40,48,59,.82))}
+  .mission .inner{position:relative;z-index:1;max-width:820px;padding:96px 28px}
+  .mission .eyebrow{justify-content:center;color:var(--gold-soft)}.mission .eyebrow::before{background:var(--gold-soft)}
+  .mission .q{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.6rem,3.3vw,2.4rem);line-height:1.34;color:#fff}
+  .mission .vis{margin-top:24px;color:var(--ice);font-size:1.05rem}
+
+  /* ---------- FEES & INSURANCE (unified card) ---------- */
+  .fees{background:linear-gradient(180deg,var(--paper),var(--cream))}
+  .pay-card{max-width:1000px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+  .pay-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));z-index:2}
+  .pay-top{display:grid;grid-template-columns:1.02fr .98fr}
+  .pay-col{padding:44px 48px}
+  .pay-col.rates{border-right:1px solid var(--line);background:linear-gradient(180deg,#fff,var(--paper))}
+  .pay-col .lbl{font-family:'Inter',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .pay-col .lbl .stripe i{height:16px}
+  .fee-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:19px 0;border-bottom:1px solid var(--line)}
+  .fee-row:last-child{border-bottom:0;padding-bottom:0}
+  .fee-row .svc-n h3{font-family:'Playfair Display',serif;font-weight:600;font-size:1.18rem;color:var(--ink);margin-bottom:2px}
+  .fee-row .svc-n span{color:var(--body-soft);font-size:.88rem}
+  .fee-row .price{font-family:'Playfair Display',serif;font-weight:600;font-size:1.72rem;color:var(--gold-deep);white-space:nowrap}
+  .ins-list{list-style:none;margin:0}
+  .ins-list li{display:flex;align-items:flex-start;gap:11px;padding:7px 0;font-size:.94rem;color:var(--body)}
+  .ins-list li .ck{color:var(--gold);flex-shrink:0;font-weight:800;margin-top:1px}
+  .ins-eap{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--body-soft);line-height:1.6}
+  .ins-eap b{color:var(--ink);font-weight:700;display:block;margin-bottom:5px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+  .pay-note{padding:22px 48px;background:var(--ink);color:var(--on-dark-soft);font-size:.9rem;line-height:1.6}
+  .pay-note strong{color:#fff;font-weight:600}
+
+  /* ---------- FOUNDER ---------- */
+  .founder{background:linear-gradient(180deg,var(--cream),var(--paper))}
+  .founder .sec-head h2{color:var(--ink)}
+  .founder-card{max-width:640px;margin:0 auto;text-align:center;background:linear-gradient(155deg,var(--slate),var(--ink));border:1px solid var(--line-dk);border-radius:18px;padding:48px 40px;box-shadow:var(--shadow)}
+  .founder .mono{width:96px;height:96px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:'Playfair Display',serif;font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+  .founder h3{color:#fff;font-size:1.6rem}
+  .founder .cred{color:var(--gold-soft);font-weight:600;letter-spacing:.04em;margin:8px 0 18px;font-size:.92rem;text-transform:uppercase}
+  .founder p{color:var(--on-dark-soft);max-width:46ch;margin:0 auto}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:stretch}
+  .contact .eyebrow{color:var(--gold-soft)}.contact .eyebrow::before{background:var(--gold-soft)}
+  .contact h2{color:#fff;font-size:clamp(2.1rem,3.6vw,2.7rem)}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 26px}
+  .cline{display:flex;gap:15px;align-items:flex-start;margin-bottom:16px}
+  .cline .ic{width:44px;height:44px;flex-shrink:0;border-radius:8px;background:rgba(195,154,79,.14);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .cline b{color:#fff;display:block;font-weight:600}
+  .cline span{color:var(--on-dark-soft);font-size:.93rem}
+  .sched{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .storefront{position:relative;border-radius:var(--arch-sm);overflow:hidden;box-shadow:var(--shadow);border:7px solid rgba(255,255,255,.92);margin:0;height:100%;min-height:360px}
+  .storefront img{width:100%;height:100%;object-fit:cover;display:block}
+  .storefront figcaption{position:absolute;left:16px;bottom:14px;background:rgba(15,18,23,.78);backdrop-filter:blur(5px);color:var(--on-dark);font-family:'Playfair Display',serif;font-size:.92rem;padding:7px 15px;border-radius:6px;border:1px solid var(--line-dk)}
+  .map{border-radius:12px;overflow:hidden;border:1px solid var(--line-dk);box-shadow:var(--shadow);margin-top:42px}
+  .map iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(.3) saturate(.9)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0e1115;color:var(--on-dark-soft);padding:62px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.3fr 2fr;gap:48px;align-items:start}
+  footer .brand{font-size:1.4rem;margin-bottom:14px}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:15px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.92rem;margin-bottom:10px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--line-dk);margin-top:40px;padding-top:22px;font-size:.82rem;color:#6b7079;text-align:center}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:#0e1115;color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--line-dk)}
+  .demo b{color:var(--gold)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer;line-height:1}
+
+  /* ---------- SERVICES (photo modality cards + conditions) ---------- */
+  .svc-intro{max-width:680px;margin:0 auto 52px;text-align:center}
+  .svc-intro .eyebrow{justify-content:center}
+  .svc-intro p{color:var(--body-soft);font-size:1.12rem;margin-top:14px}
+  .mod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:64px}
+  .mod{position:relative;border-radius:var(--arch-sm);overflow:hidden;box-shadow:var(--shadow-sm);transition:.35s;background:var(--ink);border:7px solid #fff}
+  .mod:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+  .mod .ph{position:relative;height:368px;overflow:hidden}
+  .mod .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.32) contrast(1.03) brightness(.9);transition:.5s}
+  .mod:hover .ph img{transform:scale(1.06);filter:grayscale(.12) contrast(1.03) brightness(.95)}
+  .mod .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,48,62,.2) 25%,rgba(15,18,23,.92))}
+  .mod .cap{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:1}
+  .mod .cap .st{display:flex;gap:3px;margin-bottom:11px}
+  .mod .cap .st i{width:3px;height:15px;background:var(--gold);border-radius:2px}
+  .mod .cap .st i:nth-child(2){height:10px;opacity:.7}.mod .cap .st i:nth-child(3){height:12px;opacity:.85}
+  .mod h3{color:#fff;font-size:1.28rem;margin-bottom:3px}
+  .mod p{color:var(--ice);font-size:.86rem}
+  .cond-wrap{max-width:920px;margin:0 auto;text-align:center}
+  .cond-wrap .lbl{font-family:'Inter',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px}
+  .cond{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .cond span{font-size:.95rem;font-weight:600;color:var(--slate);background:#fff;border:1px solid var(--line);padding:12px 22px;border-radius:8px;display:inline-flex;align-items:center;gap:9px;transition:.25s}
+  .cond span:hover{border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+  .cond span .d{color:var(--gold);font-size:.7rem}
+
+  /* ---------- HOW TO GET STARTED ---------- */
+  .steps{background:var(--paper)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .step{position:relative;padding-left:26px}
+  .step::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;background:var(--gold);border-radius:2px}
+  .step .n{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--ice-deep);line-height:1;margin-bottom:8px}
+  .step h3{font-size:1.3rem;margin-bottom:8px}
+  .step p{color:var(--body-soft);font-size:.97rem}
+
+  /* ---------- FAQ ---------- */
+  .faq-wrap{max-width:820px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--ink);font-weight:600}
+  .faq-q .pl{color:var(--gold-deep);font-size:1.5rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 24px;color:var(--body-soft)}
+  .faq-a .ins-mini{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+  .faq-a .ins-mini span{font-size:.82rem;font-weight:600;color:var(--slate);border:1px solid var(--line);background:var(--paper);padding:6px 13px;border-radius:6px}
+
+  /* ---------- DECORATIVE TIGER-STRIPE MOTIF ---------- */
+  .deco{position:absolute;display:flex;gap:5px;pointer-events:none;z-index:0;align-items:flex-start}
+  .deco i{width:4px;border-radius:3px;background:var(--gold);display:block}
+  .deco i:nth-child(1){height:48px}.deco i:nth-child(2){height:30px;opacity:.6}.deco i:nth-child(3){height:40px;opacity:.85}.deco i:nth-child(4){height:22px;opacity:.5}.deco i:nth-child(5){height:34px;opacity:.7}
+  .deco.lg i{width:6px;gap:7px}.deco.lg i:nth-child(1){height:78px}.deco.lg i:nth-child(2){height:48px}.deco.lg i:nth-child(3){height:64px}.deco.lg i:nth-child(4){height:34px}.deco.lg i:nth-child(5){height:54px}
+
+  /* approach cards — gold top accent for richness */
+  .pt{position:relative}
+  .pt::before{content:"";position:absolute;top:0;left:30px;right:30px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px}
+
+  /* ---------- SERVICES DARK BAND (Savi-style color block) ---------- */
+  .svc-band{background:linear-gradient(168deg,var(--ink),var(--slate));overflow:hidden}
+  .svc-band .svc-intro h2{color:#fff}
+  .svc-band .svc-intro p{color:var(--on-dark-soft)}
+  .svc-band .cond-wrap .lbl{color:var(--gold-soft)}
+  .svc-band .cond span{background:rgba(255,255,255,.05);border-color:var(--line-dk);color:var(--on-dark)}
+  .svc-band .cond span:hover{background:rgba(255,255,255,.12);border-color:var(--gold);color:#fff}
+
+  /* ---------- EDITORIAL STATEMENT TRIPTYCH ---------- */
+  .statement{background:var(--ice-soft);position:relative;overflow:hidden}
+  .st-lead{text-align:center;max-width:640px;margin:0 auto 48px}
+  .st-lead .eyebrow{justify-content:center}
+  .st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto}
+  .st-grid .it{position:relative;text-align:center;padding:16px 14px}
+  .st-grid .it .stripe{justify-content:center;margin-bottom:18px}
+  .st-grid .it p{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.3rem,2.3vw,1.78rem);color:var(--ink);line-height:1.32}
+  .st-grid .it+.it::before{content:"";position:absolute;left:-12px;top:20%;bottom:20%;width:1px;background:rgba(40,48,59,.16)}
+
+  /* ---------- FAQ ARCH PANEL (Whole-Family-style) ---------- */
+  .faq-shell{max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:230px 230px 16px 16px;padding:74px 64px 54px;box-shadow:var(--shadow-sm);position:relative}
+  .faq-shell .sec-head{margin-bottom:28px}
+  .faq-shell .deco{top:34px;left:50%;transform:translateX(-50%)}
+
+  /* ---------- BIG DECORATIVE BACKGROUND SHAPES (depth, Savi/RM-style) ---------- */
+  .blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+  .arch-outline{position:absolute;border:2px solid var(--gold);border-bottom:0;border-radius:240px 240px 0 0;pointer-events:none;z-index:0;opacity:.22}
+  .sec>.wrap,.statement>.wrap{position:relative;z-index:1}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .appro-top,.symbol-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .symbol .figure{order:-1}
+    .appro-grid{grid-template-columns:repeat(2,1fr)}
+    .mod-grid{grid-template-columns:repeat(2,1fr)}
+    .step-grid{grid-template-columns:1fr;gap:26px}
+    .st-grid{grid-template-columns:1fr;gap:30px}
+    .st-grid .it+.it::before{display:none}
+    .pay-top{grid-template-columns:1fr}
+    .pay-col.rates{border-right:0;border-bottom:1px solid var(--line)}
+    .faq-shell{padding:54px 28px 40px;border-radius:130px 130px 14px 14px}
+    .foot-top,.foot-cols{grid-template-columns:1fr}
+    .sec{padding:68px 0}
+    .hero{min-height:540px}.hero>img{object-position:30% 42%}
+    .appro-top .figure img{height:360px}.symbol .figure img{height:400px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    .appro-grid,.mod-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2.5rem}
+    .hero::after{background:linear-gradient(180deg,rgba(15,18,23,.78),rgba(15,18,23,.92))}
+    .pay-col{padding:30px 26px}.pay-note{padding:20px 26px}.fee-row .price{font-size:1.5rem}
+    .ins{padding:24px 22px}
+    .strip .row{gap:12px 24px}
+    .symbol .duo{flex-direction:column}
+  }
+</style>
+<style>
+/* === injected mobile overflow safety-net v3 === */
+@media (max-width: 760px){
+  * { min-width: 0; }
+  h1,h2,h3,h4,h5,h6,p,li,span,a,em,strong,blockquote,figcaption,div { overflow-wrap: anywhere; }
+  .known-row.right, .known-row.left,
+  .featured-row.right, .featured-row.left,
+  .approach-row.right, .approach-row.left,
+  .split.right, .split.left { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">🐅</span><b>White&nbsp;Tiger</b>&nbsp;<span>Counseling</span></a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">About <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#mission">Our Mission, Vision &amp; Plan</a>
+          <a href="#approach">Our Work</a>
+          <a href="#founder">Staff</a>
+        </div></div>
+      </div>
+      <a href="#services">Services</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">More <i class="car">▾</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#faq">FAQ's</a>
+          <a href="#symbol">Featured In</a>
+          <a href="#symbol">Inspired By White Tiger</a>
+          <a href="#contact">Patient Portal</a>
+        </div></div>
+      </div>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn nav-cta">Schedule</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Home</a>
+  <div class="ov-head">About</div>
+  <a href="#mission">Our Mission, Vision &amp; Plan</a>
+  <a href="#approach">Our Work</a>
+  <a href="#founder">Staff</a>
+  <a href="#services">Services</a>
+  <div class="ov-head">More</div>
+  <a href="#faq">FAQ's</a>
+  <a href="#symbol">Featured In</a>
+  <a href="#symbol">Inspired By White Tiger</a>
+  <a href="#contact">Patient Portal</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact">Schedule</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/tiger.jpg" alt="White tiger resting in a snow-covered forest" />
+    <div class="wrap">
+      <div class="hero-inner reveal">
+        <p class="eyebrow">Phoenix, AZ · Insured or private pay</p>
+        <h1>Empowering <em>Holistic</em> Mental Health</h1>
+        <p class="lead">Expert care. Transparent pricing. Therapy that meets you where you are — insured or private pay.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">Schedule your first session</a>
+          <a href="#services" class="btn btn-ghost">Explore our services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="strip">
+    <div class="wrap">
+      <div class="row">
+        <div><span class="ic">◆</span>Led by <b>Dr. Dace Tapley, DBH · LPC · NCC</b></div>
+        <div><span class="ic">◆</span><b>In-network</b> &amp; private pay</div>
+        <div><span class="ic">◆</span>In-person in <b>Phoenix, AZ</b></div>
+        <div><span class="ic">◆</span>Individual · Couples · Family · Group</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH / OUR WORK -->
+  <section class="sec" id="approach" style="overflow:hidden">
+    <span class="blob" style="width:440px;height:440px;background:radial-gradient(circle,var(--ice-soft),transparent 70%);top:-170px;right:-130px"></span>
+    <div class="wrap">
+      <div class="appro-top">
+        <div class="figure reveal"><img src="img/session.jpg" alt="A reflective moment of personal growth" /></div>
+        <div class="reveal delay-1">
+          <p class="eyebrow">Our work</p>
+          <h2>How we approach mental health</h2>
+          <p>We help you uncover the strengths already within you — building resilience and skills rather than dwelling on what's wrong. Here's how that takes shape in our work together.</p>
+        </div>
+      </div>
+      <div class="appro-grid">
+        <div class="pt reveal"><div class="n">01</div><h3>Holistic Approach</h3><p>We recognize that true well-being encompasses mind, body, and spirit. Our holistic approach considers all aspects of your life, emphasizing self-awareness and personal growth.</p></div>
+        <div class="pt reveal delay-1"><div class="n">02</div><h3>Guided Exploration of Inner Strengths</h3><p>Our skilled therapists act as compassionate guides, helping you uncover the hidden strengths within your subconscious mind. By understanding how the subconscious operates, we empower you to navigate life's challenges.</p></div>
+        <div class="pt reveal delay-2"><div class="n">03</div><h3>Healing Without Reliving Trauma</h3><p>Rather than delving into painful past traumas, we focus on acceptance and resilience. Traumas are acknowledged as part of the human experience, and our goal is to build strength from adversity.</p></div>
+        <div class="pt reveal"><div class="n">04</div><h3>Skill Development Over Symptom Reduction</h3><p>We view disorders such as anger, depression, and anxiety as signals of missing skills or attributes. Collaboratively, we work on nurturing these essential qualities rather than merely suppressing symptoms.</p></div>
+        <div class="pt reveal delay-1"><div class="n">05</div><h3>Mindful Focus for Multiplying Results</h3><p>Where we direct our attention matters. By concentrating on growth, self-sufficiency, and inner resources, we multiply positive outcomes.</p></div>
+        <div class="pt reveal delay-2" style="background:var(--ink);border-color:var(--ink);display:flex;flex-direction:column;justify-content:center">
+          <h3 style="color:#fff;font-size:1.32rem">A recovery-focused, strength-based model</h3>
+          <p style="color:var(--on-dark-soft);margin-top:10px">We believe your capacity for recovery already exists within you — our work is to help you tap into it and rebuild the whole person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYMBOL (dark feature) -->
+  <section class="sec dark symbol" id="symbol">
+    <div class="wrap symbol-grid">
+      <div class="figure reveal"><img src="img/balance.jpg" alt="Black-and-white tiger tapestry in the White Tiger Counseling reception" /></div>
+      <div class="reveal delay-1">
+        <p class="eyebrow">Inspired by the White Tiger</p>
+        <h2>Balance, power &amp; grace</h2>
+        <p class="big">"The white tiger represents balance, power and grace."</p>
+        <p>The black-and-white contrast represents the contrast found within each of us — and highlights how both complement each other to create balance.</p>
+        <div class="duo">
+          <div><div class="k"><span class="dot" style="background:#1a1d22;border:1px solid var(--line-dk)"></span>Black</div><span>Life's difficulty — sadness, fear, and trauma.</span></div>
+          <div><div class="k"><span class="dot" style="background:#fff"></span>White</div><span>Growth, recovery, and the strength within.</span></div>
+        </div>
+        <p style="margin-top:22px">Accepting both is where empowerment begins — and where we learn to extend that same grace to others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL STATEMENT TRIPTYCH -->
+  <section class="sec statement">
+    <span class="arch-outline" style="width:300px;height:150px;top:-1px;left:8%;opacity:.18"></span>
+    <span class="arch-outline" style="width:300px;height:150px;top:-1px;left:8%;transform:translateX(80px);opacity:.12"></span>
+    <div class="wrap">
+      <div class="st-lead reveal">
+        <p class="eyebrow center">Why people come to us</p>
+        <h2>Therapy that meets you where you are</h2>
+      </div>
+      <div class="st-grid">
+        <div class="it reveal"><div class="stripe"><i></i><i></i><i></i><i></i></div><p>Bring your whole self.</p></div>
+        <div class="it reveal delay-1"><div class="stripe"><i></i><i></i><i></i><i></i></div><p>Heal your inner child.</p></div>
+        <div class="it reveal delay-2"><div class="stripe"><i></i><i></i><i></i><i></i></div><p>Rebuild your sense of self.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (dark color band) -->
+  <section class="sec svc-band" id="services">
+    <span class="deco lg" style="top:54px;right:7%"><i></i><i></i><i></i><i></i><i></i></span>
+    <div class="wrap">
+      <div class="svc-intro reveal">
+        <p class="eyebrow center">How we work together</p>
+        <h2>Care shaped around you</h2>
+        <p>Strength-based, holistic counseling — in the format that fits your life.</p>
+      </div>
+      <div class="mod-grid">
+        <div class="mod reveal"><div class="ph"><img src="img/svc-individual.jpg" alt="Individual counseling session" /></div><div class="cap"><div class="st"><i></i><i></i><i></i></div><h3>Individual</h3><p>One-on-one support</p></div></div>
+        <div class="mod reveal delay-1"><div class="ph"><img src="img/svc-couples.jpg" alt="Couples counseling session" /></div><div class="cap"><div class="st"><i></i><i></i><i></i></div><h3>Couples</h3><p>Reconnect together</p></div></div>
+        <div class="mod reveal delay-2"><div class="ph"><img src="img/svc-family.jpg" alt="Family counseling session" /></div><div class="cap"><div class="st"><i></i><i></i><i></i></div><h3>Family</h3><p>Heal as a family</p></div></div>
+        <div class="mod reveal delay-3"><div class="ph"><img src="img/svc-group.jpg" alt="Group counseling session" /></div><div class="cap"><div class="st"><i></i><i></i><i></i></div><h3>Group</h3><p>Shared support</p></div></div>
+      </div>
+      <div class="cond-wrap reveal">
+        <p class="lbl">Areas of focus</p>
+        <div class="cond">
+          <span><span class="d">◆</span>Depression</span>
+          <span><span class="d">◆</span>Anxiety</span>
+          <span><span class="d">◆</span>PTSD / Trauma</span>
+          <span><span class="d">◆</span>Anger</span>
+          <span><span class="d">◆</span>Substance Use</span>
+          <span><span class="d">◆</span>Relationship</span>
+          <span><span class="d">◆</span>Parenting</span>
+          <span><span class="d">◆</span>Assessments &amp; Screenings</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO GET STARTED -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">Getting started</p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="n">01</div><h3>Reach out</h3><p>Call 480-637-7361 or schedule online — new clients are welcome, insured or private pay.</p></div>
+        <div class="step reveal delay-1"><div class="n">02</div><h3>Get matched</h3><p>We'll connect you with care suited to your needs and goals, and confirm your coverage or self-pay rate.</p></div>
+        <div class="step reveal delay-2"><div class="n">03</div><h3>Begin your work</h3><p>Start strength-based, holistic counseling that meets you exactly where you are.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION INTERLUDE -->
+  <section class="mission" id="mission">
+    <img src="img/forest.jpg" alt="" />
+    <div class="inner reveal">
+      <p class="eyebrow">Our mission</p>
+      <p class="q">"To mitigate the persistent stigma associated with mental health services and treatment by normalizing the care of the mind, just as we do for the body."</p>
+      <p class="vis">Our vision: to set the gold standard in mental health prevention and treatment.</p>
+    </div>
+  </section>
+
+  <!-- FEES & INSURANCE -->
+  <section class="sec fees" id="fees">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow center">Fees &amp; insurance</p>
+        <h2>Transparent pricing</h2>
+      </div>
+      <div class="pay-card reveal">
+        <div class="pay-top">
+          <div class="pay-col rates">
+            <p class="lbl"><span class="stripe"><i></i><i></i><i></i></span>Self-pay rates</p>
+            <div class="fee-row"><div class="svc-n"><h3>New Patient Intake</h3><span>Initial session</span></div><div class="price">$200</div></div>
+            <div class="fee-row"><div class="svc-n"><h3>Individual Session</h3><span>Per session</span></div><div class="price">$150</div></div>
+            <div class="fee-row"><div class="svc-n"><h3>Couples Session</h3><span>Per session</span></div><div class="price">$175</div></div>
+          </div>
+          <div class="pay-col">
+            <p class="lbl"><span class="stripe"><i></i><i></i><i></i></span>In-network insurance</p>
+            <ul class="ins-list">
+              <li><span class="ck">✓</span>United Healthcare / Optum / UMR / UHC</li>
+              <li><span class="ck">✓</span>Aetna <span style="color:var(--body-soft)">(Limited Plans)</span></li>
+              <li><span class="ck">✓</span>Cigna / Evernorth</li>
+              <li><span class="ck">✓</span>BCBS <span style="color:var(--body-soft)">(Most Plans)</span></li>
+              <li><span class="ck">✓</span>Uprise Healthcare</li>
+            </ul>
+            <div class="ins-eap"><b>Employee Assistance Programs (EAPs)</b>United Healthcare/Optum · Aetna · Cigna/Evernorth · BCBS (Most Plans) · Uprise Healthcare · Curalinc/Supportlinc</div>
+          </div>
+        </div>
+        <div class="pay-note">Please note: <strong>using insurance may require a diagnosis and may limit confidentiality.</strong> We're happy to discuss your options and help you make an informed decision.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq" style="background:var(--paper)">
+    <div class="wrap">
+      <div class="faq-shell reveal">
+        <span class="deco"><i></i><i></i><i></i><i></i><i></i></span>
+        <div class="sec-head"><p class="eyebrow center">FAQ's</p><h2>Questions, answered</h2></div>
+        <div class="faq-wrap">
+        <div class="faq-item"><button class="faq-q">What makes White Tiger unique?<span class="pl">+</span></button><div class="faq-a"><p>We offer recovery from a holistic treatment model — strength-based and recovery-focused. We believe your capacity for recovery already exists within you, and our work is to help you tap into it and rebuild the whole person.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What is the symbolism of the White Tiger?<span class="pl">+</span></button><div class="faq-a"><p>The white tiger represents balance, power and grace. The black-and-white contrast represents the contrast found within each of us, and highlights how both complement each other to create balance.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you accept insurance?<span class="pl">+</span></button><div class="faq-a"><p>Yes — we're in-network with several major plans, and we also accept EAPs. Self-pay rates are $200 for a new patient intake, $150 per individual session, and $175 per couples session.</p><div class="ins-mini"><span>United Healthcare/Optum/UMR/UHC</span><span>Aetna (Limited Plans)</span><span>Cigna/Evernorth</span><span>BCBS (Most Plans)</span><span>Uprise Healthcare</span></div><p>Please note: using insurance may require a diagnosis and may limit confidentiality. We're happy to discuss your options and help you make an informed decision.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I get started?<span class="pl">+</span></button><div class="faq-a"><p>Call 480-637-7361 (toll-free 855-948-1511) or use the scheduling links to book — both new and existing clients can schedule online.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="sec founder" id="founder">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-bottom:42px">
+        <p class="eyebrow center">Our staff</p>
+        <h2>Led by White Tiger's founder</h2>
+      </div>
+      <div class="founder-card reveal delay-1">
+        <div class="mono">DT</div>
+        <h3>Dr. Dace Tapley</h3>
+        <p class="cred">DBH · LPC · NCC — Owner</p>
+        <p>"We believe that mental well-being is everyone's right, and we're committed to making it a reality."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Schedule your first session</h2>
+          <p class="lead">Expert, strength-based care that meets you where you are — insured or private pay. Reach out and we'll help you take the first step.</p>
+          <div class="cline"><div class="ic">✆</div><div><b>480-637-7361</b><span>Office · Toll-free 855-948-1511 · Fax 855-727-8638</span></div></div>
+          <div class="cline"><div class="ic">⌖</div><div><b>2627 N. 3rd Street, Suite 106</b><span>Phoenix, AZ 85004</span></div></div>
+          <div class="cline"><div class="ic">🐅</div><div><b>Strength-based, holistic care</b><span>Individual, couples, family &amp; group therapy</span></div></div>
+          <div class="sched">
+            <a href="#contact" class="btn">New clients — schedule here</a>
+            <a href="#contact" class="btn btn-ghost">Existing clients</a>
+          </div>
+        </div>
+        <figure class="storefront reveal delay-1">
+          <img src="img/reception.jpg" alt="White Tiger Counseling reception, with the white tiger mural" />
+          <figcaption>Our Phoenix office</figcaption>
+        </figure>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=2627+N+3rd+Street+Suite+106,+Phoenix,+AZ+85004&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand"><b>White Tiger</b> <span style="color:var(--ice)">Counseling</span></div>
+        <p style="font-size:.92rem;max-width:34ch">Empowering holistic mental health in Phoenix, Arizona — strength-based, recovery-focused care.</p>
+        <p style="font-size:.9rem;margin-top:16px">2627 N. 3rd Street, Suite 106, Phoenix, AZ 85004<br/>Office 480-637-7361 · Toll-free 855-948-1511</p>
+        <p style="font-size:.8rem;margin-top:12px;color:#6b7079">White Tiger Integrated Services LLC</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>About</h5>
+          <a href="#mission">Our Mission, Vision &amp; Plan</a>
+          <a href="#approach">Our Work</a>
+          <a href="#founder">Staff</a>
+          <a href="#symbol">Inspired By White Tiger</a>
+        </div>
+        <div>
+          <h5>Care</h5>
+          <a href="#services">Services</a>
+          <a href="#fees">Fees &amp; Insurance</a>
+          <a href="#faq">FAQ's</a>
+          <a href="#symbol">Featured In</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Scheduling</a>
+          <a href="#contact">Patient Portal</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with White Tiger Counseling.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  /* Concept demo: buttons are intentionally inert — keep hover, click goes nowhere */
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>
