@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Mindful Counseling — Therapy for Adults, Couples &amp; Families · Albuquerque &amp; Rio Rancho</title>
+<meta name="description" content="Mindful Counseling — a warm, eclectic private practice offering individual, couples, family, and telehealth counseling across two Albuquerque offices. We're here to help." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand — deepened & warmed: garnet wine + brass + a teal/spruce nod, on warm bone */
+    --ink:#231019;--ink-2:#1a0c12;
+    --wine:#7A2438;--wine-deep:#5e1a2a;--wine-soft:#d8a9b3;
+    --brass:#b8944a;--brass-deep:#8f7239;--brass-soft:#e3c98f;
+    --spruce:#3D6267;--spruce-deep:#2c4a4f;
+    --bone:#F4EFE6;--bone-2:#eae3d3;--paper:#fbf7ed;--sand:#e3d6c0;
+    --body:#3C2B2B;--soft:#82736e;--line:#ddd1bd;--line-2:#cdbfa6;
+    --on-dark:#ece4d6;--on-dark-soft:#bcaaa7;--on-dark-line:rgba(236,228,214,.16);
+    --shadow:0 32px 64px -40px rgba(35,16,25,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wine-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--brass-deep);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:60px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--wine);color:#fbf2ec;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(58,18,30,.5)}
+  .btn:hover{background:var(--wine-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#3a2a00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--wine);color:var(--wine)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.14) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(35,16,25,.22),rgba(184,148,74,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(18,8,14,.72);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.14) contrast(1.02)}
+  .hero-photo .inset{width:200px;height:236px;left:-94px;bottom:52px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.45}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}
+  .topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--wine);font-size:1.15rem;flex-shrink:0;background:#fff;font-family:'Newsreader',serif;font-style:italic}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;line-height:1.02}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:24px}
+  .nav-links>a,.drop-t{font-family:'Source Sans 3',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--wine)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:6px}
+  .drop-t .car{font-size:.8em}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.2s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;min-width:240px}
+  .dropdown .inner a{display:block;padding:10px 14px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+  .dropdown .inner a:hover{background:var(--bone);color:var(--wine)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--wine);color:var(--wine)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.5rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:640px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:498px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.18) sepia(.16) contrast(1.03) brightness(.95);object-position:50% 38%}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,228,214,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--wine-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:540px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:230px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--wine);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--wine);margin:8px 12px 0 0}
+  .about .mini{margin-top:30px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--wine);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* INTRO VIDEO */
+  .intro-vid{background:var(--paper)}
+  .videowrap{max-width:920px;margin:0 auto;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:10px solid #fff;box-shadow:var(--shadow);background:var(--ink)}
+  .videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .intro-vid .cap-ed{justify-content:center;margin-top:22px}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px;margin-bottom:60px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--wine-soft);border:1px solid var(--wine);transform:rotate(45deg)}
+  .areas-band{text-align:center;padding-top:20px;border-top:1px solid var(--line)}
+  .areas-band .label{justify-content:center}
+  .areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:920px;margin:0 auto}
+  .areas span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--wine-deep);padding:0 4px}
+  .areas span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .areas span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:grayscale(.22) sepia(.16) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(35,16,25,.5),rgba(35,16,25,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:900px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* TEAM */
+  .team{background:var(--paper)}
+  .team-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:center}
+  .team-intro h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:16px}
+  .team-intro .lede{color:var(--soft);font-size:1.06rem;font-family:'Newsreader',serif;font-style:italic;margin-bottom:26px}
+  .team-intro .lede b{font-style:normal;font-weight:600;color:var(--wine)}
+  .team-carousel{position:relative}
+  .team-track{display:flex;gap:30px;overflow-x:auto;scroll-behavior:smooth;padding:8px 4px 14px;scrollbar-width:none}
+  .team-track::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 260px;text-align:center}
+  .pblob{position:relative;width:220px;height:226px;margin:0 auto 18px}
+  .pblob::before{content:"";position:absolute;inset:0;background:var(--wine);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .pblob .ph{position:absolute;inset:15px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:linear-gradient(155deg,var(--wine-deep),var(--ink));display:flex;align-items:center;justify-content:center}
+  .pblob .mono{font-family:'Newsreader',serif;font-style:italic;font-size:3rem;color:var(--brass-soft)}
+  .pcard h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.34rem;color:var(--wine);line-height:1.14}
+  .pcard .cred{font-size:.86rem;color:var(--soft);margin-top:6px;line-height:1.4}
+  .pcard .spec{font-size:.78rem;color:var(--brass-deep);margin-top:8px;font-weight:600;letter-spacing:.02em;max-width:240px;margin-left:auto;margin-right:auto;line-height:1.5}
+  .pcard .pbio{display:inline-flex;align-items:center;gap:8px;margin-top:15px;background:var(--wine);color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:999px;cursor:pointer;transition:.2s}
+  .pcard .pbio:hover{background:var(--wine-deep);gap:12px}
+  .pcard .pbio .ar{display:inline-flex;width:17px;height:17px;border-radius:50%;border:1px solid currentColor;align-items:center;justify-content:center;font-size:.66rem}
+  .team-arrows{display:flex;gap:14px;margin-top:22px}
+  .team-arrows button{width:46px;height:46px;border:1px solid var(--line-2);background:transparent;border-radius:50%;cursor:pointer;font-family:'Newsreader',serif;font-size:1.2rem;color:var(--wine);transition:.2s}
+  .team-arrows button:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+
+  /* GETTING STARTED STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--wine);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS (fee + insurance unified) */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1040px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2)}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-col .sub{color:var(--soft);font-size:.92rem;margin-bottom:14px}
+  .acc-list{list-style:none;margin-top:14px}
+  .acc-list li{padding:14px 0;border-top:1px solid var(--line);font-size:.96rem;color:var(--body);position:relative;padding-left:18px}
+  .acc-list li::before{content:"";position:absolute;left:0;top:21px;width:7px;height:1px;background:var(--brass)}
+  .acc-private{margin-top:22px;background:var(--paper);border:1px solid var(--line);padding:22px 24px;display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+  .acc-private .pl{font-family:'Newsreader',serif;font-weight:600;font-size:1.2rem;color:var(--ink)}
+  .acc-private .pl span{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:.84rem;color:var(--soft)}
+  .acc-private .amt{font-family:'Newsreader',serif;font-size:2.1rem;color:var(--wine);font-weight:600;white-space:nowrap}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* TELEHEALTH SUBBAND */
+  .tele{background:var(--spruce-deep);color:var(--on-dark)}
+  .tele-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .tele .label{color:var(--brass-soft)}.tele .label .num{color:#fff}.tele .label .rule{background:var(--on-dark-line)}
+  .tele h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.5rem)}
+  .tele p{color:var(--on-dark);margin:14px 0 22px;max-width:46ch}
+  .tele .framed{height:340px;border:1px solid var(--on-dark-line)}
+
+  /* FAQ — note: source plan.faq is empty; build from real verbatim source content */
+  .faq{background:var(--bone-2)}
+  .faq-wrap{max-width:840px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line-2)}
+  .faq-item:first-child{border-top:1px solid var(--line-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Newsreader',serif;font-size:1.3rem;font-weight:500;color:var(--ink)}
+  .faq-q .pl{color:var(--brass-deep);font-size:1.4rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 28px;color:var(--soft);font-size:1.02rem;max-width:66ch}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.3) sepia(.08)}
+
+  /* AFFILIATIONS + FOOTER */
+  .affil{background:var(--bone);border-top:1px solid var(--line);text-align:center}
+  .affil .label{justify-content:center}
+  .affil .row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 38px}
+  .affil .row span{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--wine);font-style:italic}
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#8a7e80}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:330px;order:1;padding:30px 0}.hero-photo .framed{position:relative;height:100%}
+    .about-grid,.tele-grid,.contact-grid,.team-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.acc-top,.step-grid,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .sec{padding:74px 0}.about .framed.main{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col,.acc-note{padding-left:26px;padding-right:26px}.creds .sep{display:none}.pcard{flex-basis:260px}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#231019;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+15058999329">505-899-9329</a>
+    <span class="addr">West Side: 4619 Greene St., N.W., Suite C · East Side: 4004 Carlisle Blvd., N.E., Suite Q · Albuquerque, NM</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">M</span><span><span class="bt">Mindful Counseling</span><small>Albuquerque · Rio Rancho</small></span></a>
+    <nav class="nav-links">
+      <a href="#intro">Home</a>
+      <a href="#services">Types of Therapy</a>
+      <a href="#team">Our Providers</a>
+      <a href="#fees">Payment Options</a>
+      <a href="#telehealth">Telehealth</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">More <i class="car">&rsaquo;</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#faq">Q&amp;A &mdash; Practice Information</a>
+          <a href="#contact">Resources</a>
+          <a href="#contact">Employment</a>
+          <a href="#contact">New Client Information</a>
+        </div></div>
+      </div>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#intro">Home</a>
+  <a href="#services">Types of Therapy</a>
+  <a href="#team">Our Providers</a>
+  <a href="#fees">Payment Options</a>
+  <a href="#telehealth">Tele-mental Health</a>
+  <a href="#faq">Q&amp;A &mdash; Practice Information</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Albuquerque &amp; Rio Rancho · Est. private practice</p>
+          <h1>We're here to <em>help.</em></h1>
+          <p class="lead">Healing and awareness begin with a therapist who is truly present — listening deeply, without judgment, with an eclectic approach uniquely fitted to the person in the room.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Establish as a new client <span class="ar">&rarr;</span></a>
+            <a href="#team" class="btn btn-light">Meet our providers</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A warm New Mexico landscape at golden hour" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="A therapist listening attentively in a warmly lit office" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Two offices</b> in Albuquerque</span><span class="sep"></span>
+        <span><b>In-office &amp; telehealth</b></span><span class="sep"></span>
+        <span>Adults · Adolescents · Couples · Families</span><span class="sep"></span>
+        <span>Monday &ndash; Friday</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> Who we are <span class="rule"></span></p>
+        <h2>A warm, nonjudgmental space &mdash; a holistic "custom-fit"</h2>
+        <p class="lede-p"><span class="cap">M</span>indful Counseling is a place where healing and awareness begins with a therapist who is truly present and listening deeply to the experience of the client. Clients will experience a warm, nonjudgmental environment from a therapist that uses an eclectic approach to therapy, pulling from many methods that are uniquely appropriate to the client &mdash; thereby creating a holistic "custom-fit." As a client, you can learn ways to cultivate a rich and meaningful existence, and strategies on how to relate to those around you in a more positive way.</p>
+        <div class="mini">
+          <div><b>2</b><span>Albuquerque office locations</span></div>
+          <div><b>Mon&ndash;Fri</b><span>ongoing weekly availability</span></div>
+          <div><b>Adults 18+</b><span>adolescents 10+ case by case</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/approach.jpg" alt="A therapist offering a warm, attentive presence" /></div>
+        <div class="tag"><b>Custom-fit</b><span>therapy uniquely appropriate to each client</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO VIDEO -->
+  <section class="sec intro-vid" id="intro-video">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="rule"></span> A quick intro <span class="rule"></span></p>
+        <h2>Meet Mindful Counseling</h2>
+      </div>
+      <div class="videowrap reveal delay-1">
+        <iframe src="https://www.youtube.com/embed/-58VD3z7ZiQ?wmode=opaque" title="A quick intro to Mindful Counseling" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="cap-ed reveal">A short introduction from the practice.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> Types of therapy <span class="rule"></span></p>
+        <h2>Ongoing individual &amp; relationship counseling</h2>
+        <p class="lede">All therapy sessions include effective, evidence-supported approaches &mdash; uniquely matched to the person in the room.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Individual Counseling</h3></div>
+          <ul>
+            <li>Individual counseling for adults (ages 18+)</li>
+            <li>Adolescent counseling (ages 10+, case by case)</li>
+            <li>Adolescents ages 16+ with Michelle Knight</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Relationship Counseling</h3></div>
+          <ul>
+            <li>Couples counseling</li>
+            <li>Family counseling</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Tele-mental Health</h3></div>
+          <ul>
+            <li>Telehealth counseling sessions, available alongside in-office care</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iv.</span><h3>Who We Don't See</h3></div>
+          <ul>
+            <li>We do not provide court-ordered services</li>
+            <li>We do not provide counseling for active legal issues</li>
+            <li>We do not accept third-party referrals</li>
+          </ul>
+        </div>
+      </div>
+      <div class="areas-band reveal">
+        <p class="label center"><span class="rule"></span> Counseling support for <span class="rule"></span></p>
+        <div class="areas">
+          <span>Substance use</span><span>Trauma</span><span>Depression</span><span>Anxiety</span><span>Bipolar disorders</span><span>Communication issues</span><span>Relationship issues</span><span>LGBTQIAPPK concerns</span><span>Anger management</span><span>Life transitions</span><span>Self-esteem &amp; acceptance</span><span>Compulsive behavior</span><span>Eating disorders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">Healing and awareness begins with a therapist who is <b>truly present</b> and listening deeply to the experience of the client.</p>
+        <p class="by">Mindful Counseling · Albuquerque, New Mexico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec team" id="team">
+    <div class="wrap team-grid">
+      <div class="team-intro reveal">
+        <p class="label"><span class="num">&#8470; 04</span> About our providers <span class="rule"></span></p>
+        <h2>Connect with a counselor in Albuquerque</h2>
+        <p class="lede">Two clinicians &mdash; a <b>licensed clinical social worker</b> and a <b>licensed marriage &amp; family therapist</b> &mdash; offering individual, couples, and family counseling.</p>
+        <a href="#contact" class="btn">Establish as a new client <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="team-carousel reveal delay-1">
+        <div class="team-track" id="teamTrack">
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">MK</span></div></div>
+            <h3>Michelle Knight</h3>
+            <p class="cred">MSW, LCSW (she/her) · Licensed Clinical Social Worker</p>
+            <p class="spec">Substance use · trauma · depression · anxiety · bipolar · LGBTQIAPPK · CBT, MI, Mindfulness &amp; EMDR</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">MN</span></div></div>
+            <h3>Michael Nold</h3>
+            <p class="cred">MA, LMFT · Licensed Marriage &amp; Family Therapist</p>
+            <p class="spec">Compulsive behavior · alcohol &amp; substance abuse · eating disorders · sexually compulsive behavior · compulsive stealing</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="team-arrows">
+          <button id="teamPrev" aria-label="Previous">&larr;</button>
+          <button id="teamNext" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> Getting started <span class="rule"></span></p>
+        <h2>How to establish as a new client</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>New clients begin through our Appointment Availability &amp; How to Establish as a New Client page. Existing clients may call 505-899-9329 or email admin@mindfulcounseling.org.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Match with a provider</h3><p>We'll help match you with the right clinician across our west-side and east-side offices &mdash; or via telehealth if that fits your life best.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin your work</h3><p>Sessions run weekly, Monday through Friday. Co-pays, deductibles and private-pay amounts are collected at the time of service through Ivy Pay.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INSURANCE -->
+  <section class="sec access" id="fees">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Payment options <span class="rule"></span></p>
+        <h2>Insurance &amp; private pay</h2>
+        <p class="lede">Mindful Counseling offers two payment options &mdash; in-network insurance, or private pay.</p>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Insurance (In-Network Only)</p>
+            <p class="sub">Mindful Counseling is credentialed with the following:</p>
+            <ul class="acc-list">
+              <li>Aetna (including Meritain)</li>
+              <li>Blue Cross/Blue Shield (Commercial, Federal and Marketplace)</li>
+              <li>New Mexico Medicaid (All Four Turquoise Plans and Exempt)</li>
+              <li>Medicare (Including BCBS Advantage &amp; Presbyterian Senior Care)</li>
+              <li>Molina Healthcare</li>
+              <li>Presbyterian Health Plan</li>
+              <li>United Health Care (including AARP, GEHA, Oxford and UMR)</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Private Pay &amp; Payments</p>
+            <p class="sub">A flat per-session rate, collected at the time of service.</p>
+            <div class="acc-private">
+              <div class="pl">Private Pay<span>Per session · collected at time of service</span></div>
+              <div class="amt">$105</div>
+            </div>
+            <ul class="acc-list" style="margin-top:18px">
+              <li>Patient-responsibility amounts (co-pay, deductible, co-insurance) collected at the time of service</li>
+              <li>Payments through <b>Ivy Pay</b> &mdash; accepts all major credit cards</li>
+              <li>Out-of-network policies are not billed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">Under the No Surprises Act, you have the right to receive a <strong>"Good Faith Estimate"</strong> explaining how much your medical care will cost. If you receive a bill that is at least $400 more than your Good Faith Estimate, you can dispute the bill. For questions, visit www.cms.gov/nosurprises or contact our office at (505) 899-9329.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELEHEALTH -->
+  <section class="sec tele" id="telehealth">
+    <div class="wrap tele-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 07</span> Tele-mental health <span class="rule"></span></p>
+        <h2>Therapy from wherever you are</h2>
+        <p>For clients who can't make it to one of our offices &mdash; or whose lives just work better from home &mdash; we provide telehealth counseling alongside our in-office sessions, with the same eclectic, custom-fit approach.</p>
+        <a href="#contact" class="btn btn-brass">Ask about telehealth <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="reveal delay-1">
+        <div class="framed arch"><img src="img/population.jpg" alt="A relaxed, supportive conversation in warm natural light" /></div>
+        <p class="cap-ed" style="color:var(--on-dark-soft)">In-office or telehealth &mdash; whichever fits your life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 08</span> Practice information <span class="rule"></span></p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item"><button class="faq-q">Do you take insurance?<span class="pl">+</span></button><div class="faq-a"><p>Yes &mdash; in-network only. We're credentialed with Aetna (including Meritain), Blue Cross/Blue Shield (Commercial, Federal and Marketplace), New Mexico Medicaid (All Four Turquoise Plans and Exempt), Medicare (including BCBS Advantage &amp; Presbyterian Senior Care), Molina Healthcare, Presbyterian Health Plan, and United Health Care (including AARP, GEHA, Oxford and UMR). We don't bill out-of-network policies.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What is private pay?<span class="pl">+</span></button><div class="faq-a"><p>Our Private Pay rate is $105 per session, collected at the time of service. Mindful Counseling's payment app, Ivy Pay, accepts all major credit cards.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Who do you see?<span class="pl">+</span></button><div class="faq-a"><p>Our providers primarily see adults, ages 18+. We also see a limited number of adolescents, ages 10+, on a case-by-case basis &mdash; and the adolescent must be willing to participate in the counseling process.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you accept court-ordered or third-party referrals?<span class="pl">+</span></button><div class="faq-a"><p>Our providers do not specialize in counseling services that are required by a 3rd party, including court-ordered services or counseling for clients currently experiencing legal issues. Our practice does not accept 3rd party referrals.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I establish as a new client?<span class="pl">+</span></button><div class="faq-a"><p>Please visit the <em>Appointment Availability &amp; How to Establish as a New Client</em> page on our website. Existing clients can reach us by calling 505-899-9329 or emailing admin@mindfulcounseling.org.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What is your cancellation policy?<span class="pl">+</span></button><div class="faq-a"><p>Please visit the Q&amp;A section on our website for our cancellation and rescheduling policy.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What about a Good Faith Estimate?<span class="pl">+</span></button><div class="faq-a"><p>Under the No Surprises Act, you have the right to receive a "Good Faith Estimate" explaining how much your medical care will cost. If you receive a bill that is at least $400 more than your Good Faith Estimate, you can dispute it. For questions, visit www.cms.gov/nosurprises or contact our Office Manager at (505) 899-9329.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 09</span> Contact us <span class="rule"></span></p>
+          <h2>Two offices in Albuquerque</h2>
+          <p class="lead">For new clients, please use the Appointment Availability &amp; How to Establish as a New Client page on our website. Existing clients are welcome to call or email.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+15058999329" style="color:inherit">505-899-9329</a></b><span>Fax 505-899-9729</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:admin@mindfulcounseling.org" style="color:inherit">admin@mindfulcounseling.org</a></b><span>Existing-client correspondence &amp; general questions</span></div></div>
+          <div class="cline"><span class="cl">West Side</span><div><b>4619 Greene St., N.W., Suite C</b><span>Albuquerque, NM 87114 &mdash; 10 min off Paseo del Norte &amp; I-25, minutes from Rio Rancho</span></div></div>
+          <div class="cline"><span class="cl">East Side</span><div><b>4004 Carlisle Blvd., N.E., Suite Q</b><span>Albuquerque, NM 87107 &mdash; centrally located off I-25 &amp; Montgomery</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Monday through Friday</b><span>Ongoing weekly individual &amp; relationship counseling</span></div></div>
+          <p class="note">For best experience loading our website, we suggest Firefox.</p>
+          <p style="margin-top:26px"><a href="tel:+15058999329" class="btn btn-brass">Call 505-899-9329 <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="A welcoming, warmly lit office space" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">A warm, nonjudgmental room to land in.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="West Side office location" src="https://www.google.com/maps?q=4619+Greene+St+NW+Suite+C+Albuquerque+NM+87114&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATIONS -->
+  <section class="sec affil" style="padding:64px 0">
+    <div class="wrap">
+      <p class="label center" style="margin-bottom:24px"><span class="rule"></span> Affiliation &amp; licensure <span class="rule"></span></p>
+      <div class="row">
+        <span>New Mexico Board of Social Work Examiners</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic">M</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Mindful Counseling</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A warm, eclectic private practice offering individual, couples, family and telehealth counseling across two Albuquerque offices.</p>
+        <p style="font-size:.9rem;margin-top:14px">West Side: 4619 Greene St., N.W., Suite C<br/>East Side: 4004 Carlisle Blvd., N.E., Suite Q<br/>Albuquerque, NM<br/>505-899-9329 · admin@mindfulcounseling.org</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#intro">Home</a>
+          <a href="#services">Types of Therapy</a>
+          <a href="#team">About Our Providers</a>
+          <a href="#telehealth">Tele-mental Health</a>
+        </div>
+        <div>
+          <h5>Information</h5>
+          <a href="#fees">Payment Options</a>
+          <a href="#faq">Q&amp;A &mdash; Practice Information</a>
+          <a href="#contact">Resources</a>
+          <a href="#contact">Employment</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact</a>
+          <a href="#start">New Client Information</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> &mdash; not affiliated with Mindful Counseling.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  /* team carousel */
+  (function(){
+    var track=document.getElementById('teamTrack');if(!track)return;
+    function step(){var c=track.querySelector('.pcard');return c?c.getBoundingClientRect().width+30:290;}
+    function atEnd(){return track.scrollLeft+track.clientWidth>=track.scrollWidth-8;}
+    document.getElementById('teamNext').addEventListener('click',function(){if(atEnd()){track.scrollTo({left:0,behavior:'smooth'})}else{track.scrollBy({left:step(),behavior:'smooth'})}});
+    document.getElementById('teamPrev').addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
+    /* with only 2 providers, gentle nudge instead of full auto-cycle */
+    var timer=setInterval(tick,4200);function tick(){if(atEnd()){track.scrollTo({left:0,behavior:'smooth'})}else{track.scrollBy({left:step(),behavior:'smooth'})}}
+    track.addEventListener('mouseenter',function(){clearInterval(timer)});
+    track.addEventListener('mouseleave',function(){clearInterval(timer);timer=setInterval(tick,4200)});
+  })();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>
