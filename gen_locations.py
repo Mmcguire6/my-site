@@ -44,11 +44,11 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
         ("st-albert", "St. Albert",
          "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website that looks like 2026. That's the gap I'm built for."),
         ("sherwood-park", "Sherwood Park",
-         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $199 a month, everything included."),
+         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $75 a month, everything included."),
         ("leduc", "Leduc",
          "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
         ("spruce-grove", "Spruce Grove",
-         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. I build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The $199/month plan grows with the business."),
+         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. I build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The $75/month plan grows with the business."),
         ("airdrie", "Airdrie",
          "Airdrie has tripled in population in twenty years, and the small-business market is still catching up. Most Airdrie businesses are bootstrapping: solo trades, single-owner shops, two-person clinics. A custom website without an enterprise budget is exactly the gap the studio fills."),
         ("red-deer", "Red Deer",
@@ -84,24 +84,24 @@ for prov, abbr, cities in CITIES:
 CITY_PAGE = """<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
-<meta name="description" content="{meta_desc}" />
+<meta name="description" content="{meta_desc}">
 
-<link rel="canonical" href="https://matthewmcguire.ca/locations/{slug}.html" />
-<link rel="icon" href="../mm-favicon.svg" type="image/svg+xml" />
-<link rel="icon" href="../mm-favicon.png" />
+<link rel="canonical" href="https://matthewmcguire.ca/locations/{slug}.html">
+<link rel="icon" href="../mm-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../mm-favicon.png">
 
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://matthewmcguire.ca/locations/{slug}.html" />
-<meta property="og:title" content="{title}" />
-<meta property="og:description" content="{meta_desc}" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matthewmcguire.ca/locations/{slug}.html">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{meta_desc}">
+<meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -187,8 +187,8 @@ CITY_PAGE = """<!DOCTYPE html>
         <h1 class="hero-name">{name} <span class="last">Web Designer</span></h1>
         <p class="hero-tag">Custom website design and development for {name} businesses. Built by hand, hosted, and supported.</p>
         <p class="hero-price">
-            <strong>$0 down</strong> &middot; <strong>$199 / month</strong> all-inclusive
-            <span class="hero-price-term">12-month minimum &middot; or $3,800 lump sum</span>
+            <strong>$0 down</strong> &middot; <strong>$75 / month</strong> all-inclusive
+            <span class="hero-price-term">12-month minimum, then month-to-month</span>
         </p>
         <p class="hero-lede">
             {intro}
@@ -297,14 +297,8 @@ CITY_PAGE = """<!DOCTYPE html>
             <div class="pricing-card">
                 <p class="pricing-card-name">Monthly subscription</p>
                 <p class="pricing-card-price"><strong>$0</strong> down</p>
-                <p class="pricing-card-sub">$199 / month all-inclusive &middot; 12-month minimum</p>
+                <p class="pricing-card-sub">$75 / month all-inclusive &middot; 12-month minimum</p>
                 <p class="pricing-card-body">Design, development, hosting, edits, security, and direct support, all for one monthly fee for as long as you stay. Site stays live as long as the subscription is active.</p>
-            </div>
-            <div class="pricing-card">
-                <p class="pricing-card-name">Lump sum</p>
-                <p class="pricing-card-price"><strong>$3,800</strong> one-time</p>
-                <p class="pricing-card-sub">+ $25 / month hosting (optional)</p>
-                <p class="pricing-card-body">Pay once, own the site outright. Hosting is an optional $25-a-month service if you'd like me to handle it, or take the code and host it elsewhere. Same design quality, same hand-coded build, same {name} support.</p>
             </div>
         </div>
         <p class="pricing-foot"><a href="../pricing.html" class="link-arrow">See full pricing details <span class="arrow">→</span></a></p>
@@ -330,7 +324,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </div>
             <div class="faq-item">
                 <dt>Do I own my {name} website?</dt>
-                <dd>On the $3,800 lump-sum plan, yes: you own the site outright, and hosting becomes an optional $25-a-month standalone service. On the $0-down, $199-a-month subscription, the site is hosted and supported as long as you stay on the plan; the monthly is a service relationship, not a buyout, so if the subscription ends, the built site goes offline. You always keep your domain (registered in your business's name from day one) and any content or assets you provided. Cancel before the 12-month minimum and the remaining months &times; $199 are due (e.g., cancel at month 6, owe 6 &times; $199 = $1,194). After 12 months, cancel any time with 30 days' notice, no exit fee.</dd>
+                <dd>The $0-down, $75-a-month plan is a service relationship, not a buyout: the site is hosted and supported as long as you stay on the plan, so if the subscription ends, the built site goes offline. You always keep your domain (registered in your business's name from day one) and any content or assets you provided. Cancel before the 12-month minimum and the remaining months &times; $75 are due (e.g., cancel at month 6, owe 6 &times; $75 = $450). After 12 months, cancel any time with 30 days' notice, no exit fee. Want to own the code outright? Just ask, a one-time buyout can be arranged.</dd>
             </div>
         </dl>
     </div>
@@ -1131,8 +1125,8 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
     studio_id = "https://matthewmcguire.ca/#studio"
     desc = (f"Custom-coded websites for {name} small businesses: trades, shops, "
             f"clinics, studios, consultancies, and professional services. "
-            f"$0 down, $199 a month all-inclusive, with design, hosting, edits, "
-            f"and security included. 12-month minimum, or $3,800 lump sum.")
+            f"$0 down, $75 a month all-inclusive, with design, hosting, edits, "
+            f"and security included. 12-month minimum, then month-to-month.")
 
     graph = [
         {
@@ -1172,16 +1166,9 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                 {
                     "@type": "Offer",
                     "name": "Monthly subscription",
-                    "price": "199",
+                    "price": "75",
                     "priceCurrency": "CAD",
-                    "description": "$0 down, $199/month all-inclusive (12-month minimum). Design, development, hosting, edits, security, support.",
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Lump sum",
-                    "price": "3800",
-                    "priceCurrency": "CAD",
-                    "description": "One-time $3,800 build, plus $25/month standalone hosting. You own the site outright.",
+                    "description": "$0 down, $75/month all-inclusive (12-month minimum, then month-to-month). Design, development, hosting, edits, security, support.",
                 },
             ],
         },
@@ -1225,14 +1212,13 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "name": f"Do I own my {name} website?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": ("On the $3,800 lump-sum plan, you own the site outright and "
-                                 "hosting becomes an optional $25/month standalone service. "
-                                 "The $0-down, $199/month subscription is a service "
+                        "text": ("The $0-down, $75/month plan is a service "
                                  "relationship, not a buyout: the site is hosted and supported "
                                  "as long as you stay on the plan. If the subscription ends, "
                                  "the built site goes offline; you keep your domain and any "
-                                 "content you provided. 12-month minimum; cancel early and "
-                                 "the remaining months × $199 are due."),
+                                 "content you provided. 12-month minimum, then month-to-month; "
+                                 "cancel early and the remaining months × $75 are due. "
+                                 "Want to own the code outright? Just ask, a one-time buyout can be arranged."),
                     },
                 },
             ],
@@ -1257,12 +1243,12 @@ def nearby_links_html(nearby_slugs: list[str]) -> str:
 
 def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     extras = EXTRAS.get(slug, {"areas": "the surrounding region", "nearby": []})
-    title = (f"{name} Web Designer | Custom Website Design & Development "
+    title = (f"{name} Web Designer | Custom Website Design &amp; Development "
              f"| Matthew McGuire")
     meta_desc = (f"{name} web designer building custom-coded websites for small businesses: "
-                 f"trades, shops, clinics, and professional services. $0 down, $199/month all-inclusive, "
-                 f"with design, hosting, edits, security included. 12-month minimum or "
-                 f"$3,800 lump sum.")
+                 f"trades, shops, clinics, and professional services. $0 down, $75/month all-inclusive, "
+                 f"with design, hosting, edits, security included. 12-month minimum, "
+                 f"then month-to-month.")
 
     html = CITY_PAGE.format(
         slug=slug,
@@ -1290,21 +1276,21 @@ def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
 LOCATIONS_INDEX = """<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire</title>
-<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $199/month all-inclusive. Remote work with businesses anywhere in Canada." />
-<link rel="canonical" href="https://matthewmcguire.ca/locations.html" />
-<link rel="icon" href="mm-favicon.svg" type="image/svg+xml" />
-<link rel="icon" href="mm-favicon.png" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://matthewmcguire.ca/locations.html" />
-<meta property="og:title" content="Alberta Web Designer | Matthew McGuire" />
-<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada." />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $75/month all-inclusive. Remote work with businesses anywhere in Canada.">
+<link rel="canonical" href="https://matthewmcguire.ca/locations.html">
+<link rel="icon" href="mm-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="mm-favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matthewmcguire.ca/locations.html">
+<meta property="og:title" content="Alberta Web Designer | Matthew McGuire">
+<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>
@@ -1434,7 +1420,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap">
         <p class="eyebrow">Locations</p>
         <h1>Web designer serving businesses <em>across Alberta.</em></h1>
-        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada. Custom-coded websites, $0 down, $199 a month all-inclusive (12-month minimum), or $3,800 lump sum if you'd rather own the site outright.</p>
+        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada. Custom-coded websites, $0 down, $75 a month all-inclusive, 12-month minimum then month-to-month.</p>
     </div>
 </section>
 
