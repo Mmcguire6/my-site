@@ -1287,7 +1287,7 @@ img { max-width: 100%; display: block; }
     }
     .work-head {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 48px;
         align-items: end;
         margin-bottom: clamp(56px, 6vw, 88px);
@@ -2023,6 +2023,41 @@ img { max-width: 100%; display: block; }
   .locations-list, .cta-band, .next-section, .skills-grid-section { padding-top: 40px; padding-bottom: 40px; }
 }
 </style>
+<style>
+/* free-preview guarantee band (matches cta-band language) + mid-page CTA */
+.guarantee-band {
+    background:
+        radial-gradient(ellipse 62% 100% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent) 0%, transparent 60%),
+        #0F2218;
+    color: var(--paper); text-align: center;
+    padding: clamp(64px, 8vw, 112px) 0;
+    border-top: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+    border-bottom: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+}
+.guarantee-band .eyebrow { color: color-mix(in oklch, var(--rust) 78%, white 22%); }
+.guarantee-band .eyebrow::before { background: var(--rust); }
+.guarantee-h2 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(32px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.02em;
+    max-width: 20ch; margin: 20px auto 22px; color: var(--paper);
+}
+.guarantee-h2 em { font-style: italic; font-weight: 500; color: color-mix(in oklch, var(--rust) 80%, white 20%); }
+.guarantee-lede {
+    font-size: clamp(16px, 1.3vw, 19px); line-height: 1.65;
+    color: color-mix(in oklch, var(--paper) 72%, var(--ink-3) 28%);
+    max-width: 56ch; margin: 0 auto;
+}
+.mid-cta {
+    padding: clamp(44px, 5.5vw, 76px) 0; text-align: center;
+    background: radial-gradient(ellipse 62% 100% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent) 0%, transparent 60%), #0F2218;
+    border-top: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+    border-bottom: 1px solid color-mix(in oklch, var(--paper) 18%, transparent);
+}
+.mid-cta-text { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 30px); line-height: 1.2; color: var(--paper); margin-bottom: 24px; }
+.mid-cta-text strong { font-weight: 500; font-style: italic; color: color-mix(in oklch, var(--rust) 80%, white 20%); }
+.mid-cta .btn-primary { background: var(--paper); color: var(--ink); }
+.mid-cta .btn-primary:hover { background: var(--rust); color: var(--paper); transform: translateY(-1px); }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2191,6 +2226,15 @@ img { max-width: 100%; display: block; }
 </section>
 
 <!-- TRUST STRIP -->
+<!-- FREE-PREVIEW GUARANTEE -->
+<section class="guarantee-band" aria-label="Risk-free guarantee">
+    <div class="wrap">
+        <span class="eyebrow">Zero-risk start</span>
+        <h2 class="guarantee-h2">See your real site free. <em>Pay nothing until you love it.</em></h2>
+        <p class="guarantee-lede">I build a working preview of your actual site before you commit a dollar, no deposit, no contract, no obligation. If it&rsquo;s not right, you walk away owing nothing.</p>
+    </div>
+</section>
+
 <section class="trust-strip" aria-label="Why hire this studio">
     <div class="wrap">
         <div class="trust-grid">
@@ -2290,37 +2334,6 @@ img { max-width: 100%; display: block; }
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section about">
-    <div class="wrap">
-        <div class="about-grid">
-            <figure class="about-photo">
-                <picture>
-                    <source type="image/webp" srcset="img/headshot/matt-headshot.webp">
-                    <img src="img/headshot/matt-headshot.jpg" alt="Matthew McGuire, owner and developer of the studio" width="1000" height="1500" loading="lazy" decoding="async">
-                </picture>
-            </figure>
-
-            <div class="about-text">
-                <span class="eyebrow">About me</span>
-                <h2 class="display about-h2">
-                    A one-person studio. <em>By design.</em>
-                </h2>
-                <div class="about-body">
-                    <p>I&rsquo;m Matthew. I run a one-person web studio out of Edmonton, Alberta, building modern websites for small businesses across Canada, <strong>trades and contractors, clinics, shops, studios, consultants, and professional services</strong>.</p>
-                    <p>I work directly with the businesses I build for. There&rsquo;s no project manager between you and the person making the design decisions, no rotating cast of junior designers, no offshore handoffs. Just me, doing the whole thing: strategy, brand, design, code, deploy.</p>
-                    <p>What I care about is the small details that make a website feel <strong>designed-not-templated</strong>. Typography that respects the work it&rsquo;s framing. Custom palettes built around your business&rsquo;s actual identity. Honest copy. Sites that load quickly on a laptop at the front desk and make sense on a customer&rsquo;s phone on the bus home.</p>
-                    <p>I work in focused stretches with each business I build for, so the work gets my full attention from preview to launch. If your business needs a website that signals what your work actually is, <a href="contact.html" style="color:var(--accent-deep);border-bottom:1px solid var(--accent-soft);">let&rsquo;s talk</a>.</p>
-                </div>
-
-                <p class="about-quote">
-                    The web should look like the businesses behind it, not the other way around.&rdquo;
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- SELECTED WORK -->
 <section id="work" class="section work">
     <div class="wrap">
@@ -2331,9 +2344,6 @@ img { max-width: 100%; display: block; }
                     Recent <em>builds.</em>
                 </h2>
             </div>
-            <p class="work-head-lede">
-                Three featured engagements from the past two years, a real client build and two product launches I designed end-to-end. Plus a working archive of concept rebuilds for small businesses across Canada and the United States.
-            </p>
         </header>
 
         <div class="work-grid">
@@ -2388,6 +2398,45 @@ img { max-width: 100%; display: block; }
         <div class="work-foot">
             <span class="work-foot-text"><strong>Three featured</strong> &middot; <strong>twelve+</strong> concept rebuilds in the archive</span>
             <a href="work.html" class="work-foot-link">See the full archive <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- MID-PAGE CTA -->
+<section class="mid-cta" aria-label="Start a free preview">
+    <div class="wrap">
+        <p class="mid-cta-text">Like what you see? <strong>Get a free preview of your own site, no commitment.</strong></p>
+        <a href="#top" class="btn btn-primary">See your site, free <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about">
+    <div class="wrap">
+        <div class="about-grid">
+            <figure class="about-photo">
+                <picture>
+                    <source type="image/webp" srcset="img/headshot/matt-headshot.webp">
+                    <img src="img/headshot/matt-headshot.jpg" alt="Matthew McGuire, owner and developer of the studio" width="1000" height="1500" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <div class="about-text">
+                <span class="eyebrow">About me</span>
+                <h2 class="display about-h2">
+                    A one-person studio. <em>By design.</em>
+                </h2>
+                <div class="about-body">
+                    <p>I&rsquo;m Matthew. I run a one-person web studio out of Edmonton, Alberta, building modern websites for small businesses across Canada, <strong>trades and contractors, clinics, shops, studios, consultants, and professional services</strong>.</p>
+                    <p>I work directly with the businesses I build for. There&rsquo;s no project manager between you and the person making the design decisions, no rotating cast of junior designers, no offshore handoffs. Just me, doing the whole thing: strategy, brand, design, code, deploy.</p>
+                    <p>What I care about is the small details that make a website feel <strong>designed-not-templated</strong>. Typography that respects the work it&rsquo;s framing. Custom palettes built around your business&rsquo;s actual identity. Honest copy. Sites that load quickly on a laptop at the front desk and make sense on a customer&rsquo;s phone on the bus home.</p>
+                    <p>I work in focused stretches with each business I build for, so the work gets my full attention from preview to launch. If your business needs a website that signals what your work actually is, <a href="contact.html" style="color:var(--accent-deep);border-bottom:1px solid var(--accent-soft);">let&rsquo;s talk</a>.</p>
+                </div>
+
+                <p class="about-quote">
+                    The web should look like the businesses behind it, not the other way around.&rdquo;
+                </p>
+            </div>
         </div>
     </div>
 </section>
