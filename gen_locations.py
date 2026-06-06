@@ -312,7 +312,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <dl class="faq-list">
             <div class="faq-item">
                 <dt>Do you only work with businesses in {name}?</dt>
-                <dd>Most of my clients are in {name} and the surrounding region, but the studio's remote workflow handles businesses anywhere in {province}, and across Canada generally. Whether your business is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
+                <dd>Most of my clients are in {name} and the surrounding region, but the studio's remote workflow handles businesses anywhere in {province}, and across Canada and the US generally. Whether your business is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
             </div>
             <div class="faq-item">
                 <dt>How long does a website build take in {name}?</dt>
@@ -388,7 +388,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with businesses across Canada</li>
+                    <li>Working with businesses across Canada and the US</li>
                 </ul>
             </div>
         </div>
@@ -1182,7 +1182,7 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                         "@type": "Answer",
                         "text": (f"Most of my clients are in {name} and the surrounding region, "
                                  f"but the studio's remote workflow handles businesses anywhere in {province} "
-                                 f"and across Canada. The build, edit, and support process is identical "
+                                 f"and across Canada and the US. The build, edit, and support process is identical "
                                  f"whether you're in {name} proper or a nearby community."),
                     },
                 },
@@ -1279,14 +1279,14 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire</title>
-<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $75/month all-inclusive. Remote work with businesses anywhere in Canada.">
+<meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $75/month all-inclusive. Remote work with businesses anywhere in Canada or the US.">
 <link rel="canonical" href="https://matthewmcguire.ca/locations.html">
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml">
 <link rel="icon" href="mm-favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://matthewmcguire.ca/locations.html">
 <meta property="og:title" content="Alberta Web Designer | Matthew McGuire">
-<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada.">
+<meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada or the US.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1420,7 +1420,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap">
         <p class="eyebrow">Locations</p>
         <h1>Web designer serving businesses <em>across Alberta.</em></h1>
-        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada. Custom-coded websites, $0 down, $75 a month all-inclusive, 12-month minimum then month-to-month.</p>
+        <p class="lede">The studio is based in Edmonton and works with small businesses across Alberta: Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer. Remote workflow handles businesses anywhere in Canada or the US. Custom-coded websites, $0 down, $75 a month all-inclusive, 12-month minimum then month-to-month.</p>
     </div>
 </section>
 
@@ -1434,7 +1434,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap cta-band">
         <p class="eyebrow">Start a project</p>
         <h2 class="display cta-band-h">Don't see your city? The studio works everywhere there's a business worth building for.</h2>
-        <p class="cta-band-sub">If your business is anywhere in Canada, send a few sentences about your business. The remote workflow handles the rest.</p>
+        <p class="cta-band-sub">If your business is anywhere in Canada or the US, send a few sentences about your business. The remote workflow handles the rest.</p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
             <a href="pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
@@ -1474,7 +1474,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with businesses across Canada</li>
+                    <li>Working with businesses across Canada and the US</li>
                 </ul>
             </div>
         </div>
