@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
 
 <title>FAQ | Matthew McGuire · Web Design Studio · Edmonton</title>
 <meta name="description" content="Common questions about pricing, plans, SEO, and how the studio builds websites for small businesses across Canada and the US.">
-
-<link rel="icon" href="mm-favicon.svg" type="image/svg+xml">
-<link rel="icon" href="mm-favicon.png">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://matthewmcguire.ca/faq.html">
@@ -264,7 +262,7 @@ a { color: inherit; text-decoration: none; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
-    .nav-mark-img { height: 52px; width: auto; display: block; }
+    .nav-mark-img { height: 48px; width: auto; max-width: none; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px; background-image: linear-gradient(var(--rust-deep), var(--rust-deep)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1); }
     .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
@@ -424,7 +422,7 @@ a { color: inherit; text-decoration: none; }
     @media (max-width: 760px) {
         .nav-links { display: none; }
         .nav-mark-name { display: none; }
-        body.nav-open .nav-mark-letters { display: none; }
+        body.nav-open .nav-mark { display: none; }
         .nav-cta { display: none; }
         .nav-toggle { display: inline-flex; }
         #site-nav { z-index: 70; }
@@ -846,6 +844,87 @@ a { color: inherit; text-decoration: none; }
   }
 }
 </style>
+<style>/* premium polish */
+h1, h2, h3, .display, .hero-name, .hero-tag, .services-h2, .perf-h2, .how-h2,
+.about-h2, .guarantee-h2, .cta-band-h2, .trust-h3, .how-step-title { text-wrap: balance; }
+p, li, .hero-lede, .services-lede { text-wrap: pretty; }
+::selection { background: color-mix(in oklch, var(--rust) 26%, transparent); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 3px; border-radius: 2px; }
+.hero-price strong, .perf-stat-n { font-variant-numeric: tabular-nums; }
+
+/* premium dropdown */
+.nav-dd-panel {
+  border: 1px solid color-mix(in oklch, var(--rule) 80%, transparent);
+  border-radius: 6px;
+  box-shadow: inset 0 2px 0 var(--rust),
+              0 30px 64px -34px rgba(26,24,20,0.50),
+              0 10px 26px -18px rgba(26,24,20,0.30);
+  padding: 8px;
+  margin-top: 16px;
+  transform: translateY(-6px) scale(0.98);
+  transform-origin: top left;
+  transition: opacity 220ms ease, transform 320ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-dd:hover > .nav-dd-panel,
+.nav-dd:focus-within > .nav-dd-panel { transform: translateY(0) scale(1); }
+.nav-dd-panel--rich { min-width: 268px; }
+.nav-dd-panel--rich > li > a {
+  display: block; padding: 11px 16px 12px; border-radius: 4px; position: relative;
+  transition: background 200ms ease, padding 240ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-dd-panel--rich > li > a::before {
+  content: ""; position: absolute; left: 7px; top: 13px; bottom: 13px; width: 2px;
+  background: var(--rust); border-radius: 2px; opacity: 0; transform: scaleY(0.35);
+  transition: opacity 200ms ease, transform 260ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-dd-panel--rich .dd-t {
+  display: block; font-family: var(--serif); font-style: italic; font-size: 17px;
+  font-weight: 500; color: var(--ink); line-height: 1.12; transition: color 180ms ease;
+}
+.nav-dd-panel--rich .dd-d {
+  display: block; margin-top: 4px; font-family: var(--mono); font-size: 9.5px;
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-3); transition: color 180ms ease;
+}
+.nav-dd-panel--rich > li > a:hover,
+.nav-dd-panel--rich > li > a:focus-visible {
+  background: color-mix(in oklch, var(--rust) 7%, transparent); padding-left: 22px;
+}
+.nav-dd-panel--rich > li > a:hover::before,
+.nav-dd-panel--rich > li > a:focus-visible::before { opacity: 1; transform: scaleY(1); }
+.nav-dd-panel--rich > li > a:hover .dd-d { color: var(--rust-deep); }
+
+/* mobile Studio accordion (matches desktop grouping) */
+.nm-group details { width: 100%; }
+.nm-group summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 14px;
+  padding: 12px 0; font-family: var(--serif); font-style: italic;
+  font-size: clamp(40px, 9vw, 64px); color: var(--ink); letter-spacing: -0.022em; line-height: 1;
+}
+.nm-group summary::-webkit-details-marker { display: none; }
+.nm-group summary::after {
+  content: ""; width: 13px; height: 13px; flex: none;
+  border-right: 2.5px solid currentColor; border-bottom: 2.5px solid currentColor;
+  transform: translateY(-5px) rotate(45deg); opacity: .4;
+  transition: transform .26s cubic-bezier(.2,.7,.2,1), opacity .2s;
+}
+.nm-group details[open] summary { color: var(--rust-deep); }
+.nm-group details[open] summary::after { transform: translateY(2px) rotate(225deg); opacity: 1; }
+.nm-sub {
+  list-style: none; margin: 8px 0 12px; padding-left: 22px; display: flex; flex-direction: column; gap: 2px;
+  border-left: 2px solid color-mix(in oklch, var(--rust) 32%, transparent);
+}
+.nm-sub a {
+  display: inline-block; padding: 9px 0; font-family: var(--serif); font-style: italic;
+  font-size: clamp(24px, 5.5vw, 36px); color: var(--ink-2); letter-spacing: -0.018em; line-height: 1;
+}
+.nm-sub a:active { color: var(--rust-deep); }
+@media (max-width: 600px) {
+  .nm-group summary { font-size: clamp(28px, 7vw, 42px); }
+  .nm-sub a { font-size: clamp(20px, 5vw, 30px); }
+}
+/* logo scales down on small screens so it never overruns the hamburger */
+@media (max-width: 760px) { .nav-mark-img { height: 40px; } }
+</style>
 </head>
 <body>
 
@@ -860,15 +939,15 @@ a { color: inherit; text-decoration: none; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="2021" height="368"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <div class="nav-dd" aria-current="page">
+                        <div class="nav-dd nav-dd--studio" aria-current="page">
                 <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
-                <ul class="nav-dd-panel" style="left:0;right:auto;">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="how.html">How we work</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                <ul class="nav-dd-panel nav-dd-panel--rich" style="left:0;right:auto;">
+                    <li><a href="about.html"><span class="dd-t">About</span><span class="dd-d">The studio &amp; the founder</span></a></li>
+                    <li><a href="how.html"><span class="dd-t">How we work</span><span class="dd-d">Preview-first, no surprises</span></a></li>
+                    <li><a href="faq.html"><span class="dd-t">FAQ</span><span class="dd-d">Pricing, plans &amp; details</span></a></li>
                 </ul>
             </div>
             <a href="work.html">Work</a>
@@ -904,11 +983,16 @@ a { color: inherit; text-decoration: none; }
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+                <li class="nm-group"><details>
+            <summary>Studio</summary>
+            <ul class="nm-sub">
+                <li><a href="about.html">About</a></li>
+                <li><a href="how.html">How we work</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </details></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="faq.html" aria-current="page">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
