@@ -268,13 +268,11 @@ img { max-width: 100%; display: block; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
-    .nav-links a::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px; background-image: url("img/brush-underline.webp"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-    .nav-links a[aria-current="page"] { color: var(--ink); }
-    .nav-links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px; background-image: linear-gradient(var(--rust-deep), var(--rust-deep)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
+    .nav-links a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -283,30 +281,33 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -349,7 +350,7 @@ img { max-width: 100%; display: block; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -360,7 +361,7 @@ img { max-width: 100%; display: block; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -1139,15 +1140,18 @@ img { max-width: 100%; display: block; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html" aria-current="page">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -1182,8 +1186,9 @@ img { max-width: 100%; display: block; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -1223,7 +1228,7 @@ img { max-width: 100%; display: block; }
         <header class="tiers-head">
             <p class="tiers-eyebrow">Our Pricing</p>
             <h2 id="tiers-title" class="tiers-h2">One Plan. <em>Everything Included.</em></h2>
-            <p class="tiers-sub">No tiers, no upsells. One simple monthly plan, and I handle everything.</p>
+            <p class="tiers-sub">No tiers, no upsells. One simple monthly plan, and everything&rsquo;s handled for you.</p>
         </header>
 
         <div class="tiers-grid tiers-grid--single">
@@ -1293,7 +1298,7 @@ img { max-width: 100%; display: block; }
             Ready To Get The Site You <em>Always Wanted?</em>
         </h2>
         <p class="cta-band-lede">
-            Send me a few sentences about your business and what you need. I&rsquo;ll come back with thoughts, a rough scope, and often a working preview within a few days.
+            Send a few sentences about your business and what you need. You&rsquo;ll get back thoughts, a rough scope, and often a working preview within a few days.
         </p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Get Started Today <span class="arrow">→</span></a>
@@ -1315,7 +1320,7 @@ img { max-width: 100%; display: block; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>

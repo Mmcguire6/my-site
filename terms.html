@@ -253,11 +253,10 @@ a { color: inherit; text-decoration: none; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
-    .nav-links a::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px; background-image: url("img/brush-underline.webp"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px; background-image: linear-gradient(var(--rust-deep), var(--rust-deep)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -266,30 +265,33 @@ a { color: inherit; text-decoration: none; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -332,7 +334,7 @@ a { color: inherit; text-decoration: none; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -343,7 +345,7 @@ a { color: inherit; text-decoration: none; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -722,15 +724,18 @@ a { color: inherit; text-decoration: none; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -765,8 +770,9 @@ a { color: inherit; text-decoration: none; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -815,7 +821,7 @@ a { color: inherit; text-decoration: none; }
         <div class="legal-prose">
 
             <h2>The <em>short version.</em></h2>
-            <p>These terms govern the use of matthewmcguire.ca and any service you engage me for as Matthew McGuire (&ldquo;the studio&rdquo;). By browsing this site or signing a service agreement, you agree to these terms. If anything below is unclear, email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a>, I&rsquo;ll explain in plain language.</p>
+            <p>These terms govern the use of matthewmcguire.ca and any service you engage the studio for. Matthew McGuire operates as the studio (&ldquo;the studio,&rdquo; &ldquo;we&rdquo;). By browsing this site or signing a service agreement, you agree to these terms. If anything below is unclear, email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> and we&rsquo;ll explain in plain language.</p>
             <p><strong>The studio runs on one simple plan:</strong> an all-inclusive monthly subscription.</p>
             <ul>
                 <li><strong>$0 down, $75/month.</strong> The studio designs, builds, hosts, and maintains the site as an ongoing service. 12-month minimum, then month-to-month. <strong>This is a subscription, not a buyout</strong>, if your subscription ends, the built site goes offline. You always keep your domain and the content you provided.</li>
@@ -823,7 +829,7 @@ a { color: inherit; text-decoration: none; }
             <p>Read the rest of these terms for full details on payment, cancellation, ownership, and liability.</p>
 
             <h2>What the studio <em>provides.</em></h2>
-            <p>I design and build websites for small businesses. Engagements run as an inclusive monthly subscription, the studio designs, hosts, and maintains the site as an ongoing service. Specifics of any individual engagement, page count, content scope, integrations, included pages, are documented in a service agreement signed by both parties before work begins.</p>
+            <p>The studio designs and builds websites for small businesses. Engagements run as an inclusive monthly subscription: the studio designs, hosts, and maintains the site as an ongoing service. Specifics of any individual engagement, page count, content scope, integrations, included pages, are documented in a service agreement signed by both parties before work begins.</p>
 
             <h2>Pricing and <em>payment.</em></h2>
             <p><strong>The monthly plan.</strong></p>
@@ -838,9 +844,9 @@ a { color: inherit; text-decoration: none; }
             <p>Invoices are sent monthly. Payment is due within fourteen days of receipt. Late payments more than thirty days past due may result in suspension of services and the site going offline until brought current.</p>
 
             <h2>Cancellation.</h2>
-            <p><strong>Before the 12-month minimum</strong>, if you cancel before completing the 12-month minimum, an early termination fee equal to the remaining months of the commitment multiplied by the $75 monthly rate is due on cancellation. For example, if you cancel at month 6, the remaining 6 months &times; $75 = <strong>$450</strong> is owed. This is what makes $0 down financially viable for a one-person studio.</p>
+            <p><strong>Before the 12-month minimum</strong>, if you cancel before completing the 12-month minimum, an early termination fee equal to the remaining months of the commitment multiplied by the $75 monthly rate is due on cancellation. For example, if you cancel at month 6, the remaining 6 months &times; $75 = <strong>$450</strong> is owed. This is what makes $0 down financially viable for an independent studio.</p>
             <p><strong>After the 12-month minimum</strong>, you may cancel at any time with 30 days&rsquo; written notice, no early termination fee. At the end of the notice period, the subscription ends and the site is taken offline.</p>
-            <p>The subscription does not advertise a buyout, ownership of the built site stays with the studio. That said, if owning the code outright matters to you, just ask, a one-time buyout can be arranged. This structure is how the $0-down monthly pricing stays financially viable for a one-person studio.</p>
+            <p>The subscription does not advertise a buyout, ownership of the built site stays with the studio. That said, if owning the code outright matters to you, just ask, a one-time buyout can be arranged. This structure is how the $0-down monthly pricing stays financially viable for an independent studio.</p>
 
             <h2>What you keep on <em>cancellation.</em></h2>
             <p>If your monthly subscription ends for any reason, you retain ownership of:</p>
@@ -897,7 +903,7 @@ a { color: inherit; text-decoration: none; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>
@@ -916,7 +922,7 @@ a { color: inherit; text-decoration: none; }
                 <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with businesses across Canada</li>
+                    <li>Working with businesses across Canada and the US</li>
                 </ul>
             </div>
         </div>

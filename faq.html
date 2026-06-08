@@ -264,13 +264,11 @@ a { color: inherit; text-decoration: none; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
-    .nav-links a::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px; background-image: url("img/brush-underline.webp"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-    .nav-links a[aria-current="page"] { color: var(--ink); }
-    .nav-links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px; background-image: linear-gradient(var(--rust-deep), var(--rust-deep)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
+    .nav-links a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -279,30 +277,33 @@ a { color: inherit; text-decoration: none; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -345,7 +346,7 @@ a { color: inherit; text-decoration: none; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -356,7 +357,7 @@ a { color: inherit; text-decoration: none; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -859,15 +860,18 @@ a { color: inherit; text-decoration: none; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd" aria-current="page">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -902,8 +906,9 @@ a { color: inherit; text-decoration: none; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -942,7 +947,7 @@ a { color: inherit; text-decoration: none; }
     <div class="wrap">
         <span class="eyebrow">Frequently asked questions</span>
         <h1 class="faq-h1">Things people <em>ask first.</em></h1>
-        <p class="faq-lede">Pricing, plans, SEO, websites: answered in plain language. Don&rsquo;t see your question? <a href="mailto:matt@mattmcguiredesign.com" style="color:var(--rust-deep);border-bottom:1px solid color-mix(in oklch, var(--rust) 40%, transparent);padding-bottom:1px;">Email me</a>.</p>
+        <p class="faq-lede">Pricing, plans, SEO, websites: answered in plain language. Don&rsquo;t see your question? <a href="mailto:matt@mattmcguiredesign.com" style="color:var(--rust-deep);border-bottom:1px solid color-mix(in oklch, var(--rust) 40%, transparent);padding-bottom:1px;">Email us</a>.</p>
     </div>
 </section>
 
@@ -978,7 +983,7 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>What&rsquo;s included in the $75/month plan?</summary>
                     <div class="faq-body">
-                        <p>Everything: design and development, hosting, SSL, analytics, security patches, lifetime updates, 24/7 support, and unlimited ongoing edits. You email me when something needs updating, new staff bios, updated services, blog posts, seasonal banners, layout tweaks, and I do them.</p>
+                        <p>Everything: design and development, hosting, SSL, analytics, security patches, lifetime updates, 24/7 support, and unlimited ongoing edits. You email when something needs updating, new staff bios, updated services, blog posts, seasonal banners, layout tweaks, and it&rsquo;s handled.</p>
                         <p>The plan covers up to five pages by default. Additional pages are <strong>$100 each, one-time</strong>. Adding a blog is <strong>$250 one-time</strong>. Major new features (e-commerce, booking systems, custom calculators) are quoted separately.</p>
                     </div>
                 </details>
@@ -987,7 +992,7 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>What if I want to cancel the monthly plan?</summary>
                     <div class="faq-body">
-                        <p><strong>Before the 12-month minimum</strong>, cancel and the remaining months of the commitment are due. Example: cancel at month 6, the remaining 6 months &times; $75 = $450 owed. This is what makes $0 down financially viable for a one-person studio.</p>
+                        <p><strong>Before the 12-month minimum</strong>, cancel and the remaining months of the commitment are due. Example: cancel at month 6, the remaining 6 months &times; $75 = $450 owed. This is what makes $0 down financially viable for an independent studio.</p>
                         <p><strong>After the 12-month minimum</strong>, cancel any time with 30 days&rsquo; written notice, no exit fee. At the end of the notice period, the subscription ends and the site is taken offline.</p>
                         <p>Your domain stays in your business&rsquo;s name and is yours regardless. Anything you provided (logo, photos, written content) is yours to keep. <strong>The built site itself is not transferable</strong>, the monthly plan is a subscription, not a buyout. See <a href="terms.html">the full terms</a>.</p>
                     </div>
@@ -1102,7 +1107,7 @@ a { color: inherit; text-decoration: none; }
                     <summary>Do you do SEO?</summary>
                     <div class="faq-body">
                         <p><strong>Foundational SEO is included</strong> at launch, sitemap submitted to Google, schema markup, optimized meta tags and titles, fast-loading pages, mobile-friendly layout, and clean URL structure. These are the things that matter most for ranking and they&rsquo;re built in by default.</p>
-                        <p>What&rsquo;s <strong>not</strong> included: ongoing SEO content campaigns (writing blog posts targeted to specific keywords each month), backlink-building services, paid Google Ads management. Those are specialty services and the studio doesn&rsquo;t offer them. If you need them, I&rsquo;m happy to recommend a few specialists I trust.</p>
+                        <p>What&rsquo;s <strong>not</strong> included: ongoing SEO content campaigns (writing blog posts targeted to specific keywords each month), backlink-building services, paid Google Ads management. Those are specialty services and the studio doesn&rsquo;t offer them. If you need them, we&rsquo;re happy to recommend a few specialists we trust.</p>
                     </div>
                 </details>
             </li>
@@ -1110,7 +1115,7 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>How long does it take to build?</summary>
                     <div class="faq-body">
-                        <p><strong>Two to three weeks</strong> from preview-accept to launch is typical. Most engagements start with a working preview I&rsquo;ve already put together based on your existing site, so you see a real, working landing page before any commitment. From there it&rsquo;s a fixed scope, two rounds of revisions, and a launch date you can plan around.</p>
+                        <p><strong>Two to three weeks</strong> from preview-accept to launch is typical. Most engagements start with a working preview already put together from your existing site, so you see a real, working landing page before any commitment. From there it&rsquo;s a fixed scope, two rounds of revisions, and a launch date you can plan around.</p>
                         <p>Faster timelines are possible if your content is ready and revisions are quick. Slower timelines happen if there are major copy rewrites or if you need to coordinate sign-off with multiple partners.</p>
                     </div>
                 </details>
@@ -1128,7 +1133,7 @@ a { color: inherit; text-decoration: none; }
                     <summary>What&rsquo;s the difference between hand-coded and a site builder?</summary>
                     <div class="faq-body">
                         <p>Hand-coded sites (HTML, CSS, JS, deployed as static files) are <strong>faster, lighter, more accessible, and more durable</strong>. There&rsquo;s no PHP runtime, no plugin updates that break the site at midnight, no database to backup or migrate, no theme that becomes deprecated and stranded.</p>
-                        <p>Site builders (WordPress, Wix, Squarespace) trade speed and flexibility for ease of self-editing. They&rsquo;re fine for some clients. They&rsquo;re not what this studio builds, because for the businesses I work with, the trade is the wrong direction, speed, security, and sharp typography matter more than DIY editing.</p>
+                        <p>Site builders (WordPress, Wix, Squarespace) trade speed and flexibility for ease of self-editing. They&rsquo;re fine for some clients. They&rsquo;re not what this studio builds, because for the businesses we work with, the trade runs the wrong direction, speed, security, and sharp typography matter more than DIY editing.</p>
                     </div>
                 </details>
             </li>
@@ -1136,8 +1141,8 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>Can I update content myself?</summary>
                     <div class="faq-body">
-                        <p>You don&rsquo;t need to. Edits are handled by me, you email when something needs updating, and I do it. Most edits go live the same day, or next business day at the latest.</p>
-                        <p>This is intentional. The businesses I work with would rather pay for someone to handle it correctly than learn yet another tool. If you genuinely want self-edit capability for a high-volume blog, we can talk about adding a headless CMS, but it&rsquo;s a quoted add-on, and most clients don&rsquo;t need it.</p>
+                        <p>You don&rsquo;t need to. Edits are handled for you, email when something needs updating and it&rsquo;s done. Most go live the same day, or the next business day at the latest.</p>
+                        <p>This is intentional. The businesses we work with would rather pay to have it handled correctly than learn yet another tool. If you genuinely want self-edit capability for a high-volume blog, a headless CMS can be added, it&rsquo;s a quoted add-on, and most clients don&rsquo;t need it.</p>
                     </div>
                 </details>
             </li>
@@ -1153,8 +1158,8 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>Can I keep my existing domain?</summary>
                     <div class="faq-body">
-                        <p>Yes. The site lives on Netlify under your existing domain. I handle the DNS pointer at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.</p>
-                        <p>If you don&rsquo;t have a domain yet, I&rsquo;ll register one in your business&rsquo;s name through a registrar of your choice and pass the cost through (typically $15&ndash;25/year).</p>
+                        <p>Yes. The site lives on Netlify under your existing domain, and the DNS pointer is handled for you at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.</p>
+                        <p>If you don&rsquo;t have a domain yet, we&rsquo;ll register one in your business&rsquo;s name through a registrar of your choice and pass the cost through (typically $15&ndash;25/year).</p>
                     </div>
                 </details>
             </li>
@@ -1179,8 +1184,8 @@ a { color: inherit; text-decoration: none; }
                 <details>
                     <summary>Can I use my existing logo and branding?</summary>
                     <div class="faq-body">
-                        <p>Yes. Send what you have, logo files (SVG ideal, but I can work with PNG or JPG), brand colors if you have them documented, photography, and any existing copy. I&rsquo;ll work around your existing identity rather than impose a new one.</p>
-                        <p>If you don&rsquo;t have a polished logo or brand kit yet, I can draft a simple wordmark and palette as part of the build. That&rsquo;s common for businesses that have grown organically without ever doing a formal brand pass.</p>
+                        <p>Yes. Send what you have, logo files (SVG ideal, but PNG or JPG work fine), brand colors if you have them documented, photography, and any existing copy. We&rsquo;ll work around your existing identity rather than impose a new one.</p>
+                        <p>If you don&rsquo;t have a polished logo or brand kit yet, we can draft a simple wordmark and palette as part of the build. That&rsquo;s common for businesses that have grown organically without ever doing a formal brand pass.</p>
                     </div>
                 </details>
             </li>
@@ -1198,7 +1203,7 @@ a { color: inherit; text-decoration: none; }
             Still have <em>questions?</em>
         </h2>
         <p class="cta-band-lede">
-            Email me a few sentences about your business and what you need. I&rsquo;ll come back within one business day with thoughts, a rough scope, and often a working preview within a few days.
+            Email a few sentences about your business and what you need. You&rsquo;ll hear back within one business day with thoughts, a rough scope, and often a working preview within a few days.
         </p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
@@ -1221,7 +1226,7 @@ a { color: inherit; text-decoration: none; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>

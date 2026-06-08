@@ -38,21 +38,21 @@ OUT.mkdir(exist_ok=True)
 CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
     ("Alberta", "AB", [
         ("edmonton", "Edmonton",
-         "Edmonton is home base. The studio works out of here, and most of my clients are businesses within an hour's drive of downtown. From Whyte Avenue storefronts to clinics in Sherwood Park to trades in St. Albert, I build websites for the kinds of small Edmonton-area businesses that can't justify a $15,000 agency build but still need a presence that does justice to their work."),
+         "Edmonton is home base. The studio works out of here, and most of our clients are businesses within an hour's drive of downtown. From Whyte Avenue storefronts to clinics in Sherwood Park to trades in St. Albert, we build websites for the kinds of small Edmonton-area businesses that can't justify a $15,000 agency build but still need a presence that does justice to their work."),
         ("calgary", "Calgary",
-         "Calgary's small-business market moves fast. A modern, hand-coded site sets the right tone with customers researching you from Mission, Beltline, or one of the suburban office parks. I work with Calgary shops, clinics, trades, and consultancies remotely. Every build, edit round, and hosting handover happens online, with no in-person discovery call required."),
+         "Calgary's small-business market moves fast. A modern, hand-coded site sets the right tone with customers researching you from Mission, Beltline, or one of the suburban office parks. We work with Calgary shops, clinics, trades, and consultancies remotely. Every build, edit round, and hosting handover happens online, with no in-person discovery call required."),
         ("st-albert", "St. Albert",
-         "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website that looks like 2026. That's the gap I'm built for."),
+         "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website that looks like 2026. That's the gap the studio is built for."),
         ("sherwood-park", "Sherwood Park",
          "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $75 a month, everything included."),
         ("leduc", "Leduc",
          "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
         ("spruce-grove", "Spruce Grove",
-         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. I build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The $75/month plan grows with the business."),
+         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. We build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The $75/month plan grows with the business."),
         ("airdrie", "Airdrie",
          "Airdrie has tripled in population in twenty years, and the small-business market is still catching up. Most Airdrie businesses are bootstrapping: solo trades, single-owner shops, two-person clinics. A custom website without an enterprise budget is exactly the gap the studio fills."),
         ("red-deer", "Red Deer",
-         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the business does. I build for central Alberta trades, shops, and clinics remotely. Discovery happens over email, design happens in the browser, and your site goes live without anyone having to drive Highway 2."),
+         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a website that works as hard as the business does. We build for central Alberta trades, shops, and clinics remotely. Discovery happens over email, design happens in the browser, and your site goes live without anyone having to drive Highway 2."),
     ]),
 ]
 
@@ -133,15 +133,20 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
+        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home">
+            <img src="../img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136">
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="../index.html">Home</a>
-            <a href="../about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../how.html">How we work</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="../work.html">Work</a>
-            <a href="../how.html">How I work</a>
             <a href="../pricing.html">Pricing</a>
 {nav_dropdown_desktop}
             <a href="../contact.html">Contact</a>
@@ -158,8 +163,9 @@ CITY_PAGE = """<!DOCTYPE html>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../work.html">Work</a></li>
-        <li><a href="../how.html">How I work</a></li>
+        <li><a href="../how.html">How we work</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="../contact.html">Contact</a></li>
     </ul>
@@ -205,10 +211,10 @@ CITY_PAGE = """<!DOCTYPE html>
         <p class="eyebrow">Areas served</p>
         <h2 class="display section-h">Web design and development across {name}.</h2>
         <p class="section-body">
-            The studio works with small businesses in {areas}. Most of my {name} clients are solo or small-team operations (trades, shops, clinics, studios, consultancies) that need a credible web presence without spending the kind of money downtown agencies charge.
+            The studio works with small businesses in {areas}. Most of our {name} clients are solo or small-team operations (trades, shops, clinics, studios, consultancies) that need a credible web presence without spending the kind of money downtown agencies charge.
         </p>
         <p class="section-body">
-            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. Discovery happens over email, design happens in the browser as a working preview, and the finished site is hosted, supported, and edited by the same person who built it. There's no account-management layer, no offshore dev team, no hidden hand-offs. Just one designer-developer, one codebase, and a website that does the work it's supposed to do.
+            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. Discovery happens over email, design happens in the browser as a working preview, and the finished site is hosted, supported, and edited by the same studio that built it. There's no account-management layer, no offshore dev team, no hidden hand-offs. Just one studio, one codebase, and a website that does the work it's supposed to do.
         </p>
     </div>
 </section>
@@ -241,7 +247,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </li>
             <li>
                 <h3>Direct one-on-one support</h3>
-                <p>You email me directly, not a help-desk queue. The same person who designed and built your {name} website is the same person who answers when something needs to change. That doesn't scale to thousands of clients, which is the point.</p>
+                <p>You email us directly, not a help-desk queue. The same studio that designed and built your {name} website is the one that answers when something needs to change. We don't scale to thousands of clients, which is the point.</p>
             </li>
         </ul>
     </div>
@@ -268,7 +274,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <li>
                 <span class="process-n">01</span>
                 <h3>Discovery</h3>
-                <p>You send a few sentences about your {name} business: what you do, who you serve, and what's not working with the current site (or the absence of one). I come back with thoughts, a rough scope, and a fixed-fee or subscription quote within one business day.</p>
+                <p>You send a few sentences about your {name} business: what you do, who you serve, and what's not working with the current site (or the absence of one). You'll get back thoughts, a rough scope, and a fixed-fee or subscription quote within one business day.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
@@ -283,7 +289,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <li>
                 <span class="process-n">04</span>
                 <h3>Ongoing edits &amp; support</h3>
-                <p>You email me when something needs to change: a new hire, a new service line, a new photo, new copy. Edits go live within one to two business days, included in the monthly fee. No tickets, no agency middlemen, no surprise invoices.</p>
+                <p>You email us when something needs to change: a new hire, a new service line, a new photo, new copy. Edits go live within one to two business days, included in the monthly fee. No tickets, no agency middlemen, no surprise invoices.</p>
             </li>
         </ol>
     </div>
@@ -312,7 +318,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <dl class="faq-list">
             <div class="faq-item">
                 <dt>Do you only work with businesses in {name}?</dt>
-                <dd>Most of my clients are in {name} and the surrounding region, but the studio's remote workflow handles businesses anywhere in {province}, and across Canada and the US generally. Whether your business is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
+                <dd>Most of our clients are in {name} and the surrounding region, but the studio's remote workflow handles businesses anywhere in {province}, and across Canada and the US generally. Whether your business is in {name} proper or in a nearby community, the build, edit, and support process is identical. Nothing about the work depends on being in the same room.</dd>
             </div>
             <div class="faq-item">
                 <dt>How long does a website build take in {name}?</dt>
@@ -348,7 +354,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap cta-band">
         <p class="eyebrow">Start a project</p>
         <h2 class="display cta-band-h">A modern {name} website that finally matches the work behind it.</h2>
-        <p class="cta-band-sub">Send a few sentences about your {name} business. I'll come back with thoughts, a rough scope, and often a working preview within a few days.</p>
+        <p class="cta-band-sub">Send a few sentences about your {name} business. You'll get back thoughts, a rough scope, and often a working preview within a few days.</p>
         <div class="cta-band-actions">
             <a href="../contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
             <a href="../pricing.html" class="btn btn-secondary">See pricing <span class="arrow">→</span></a>
@@ -371,7 +377,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <ul>
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../work.html">Selected work</a></li>
-                    <li><a href="../how.html">How I work</a></li>
+                    <li><a href="../how.html">How we work</a></li>
                     <li><a href="../pricing.html">Pricing</a></li>
                     <li><a href="../faq.html">FAQ</a></li>
                     <li><a href="../locations.html">All locations</a></li>
@@ -580,27 +586,33 @@ ul, ol { list-style: none; }
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
     text-transform: uppercase; color: var(--ink-3);
 }
+.nav-mark-img { height: 52px; width: auto; display: block; }
 .nav-links { display: flex; gap: 32px; align-items: center; position: relative; }
 .nav-links > a, .nav-links > .nav-dd > .nav-dd-trigger {
-    font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0;
+    font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px;
     transition: color 200ms ease; background: none; border: none;
     font-family: inherit; cursor: pointer;
 }
-.nav-links > a::after, .nav-links > .nav-dd > .nav-dd-trigger::after {
-    content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px;
-    height: 9px; background-image: url("../img/brush-underline.webp");
-    background-repeat: no-repeat; background-position: center; background-size: 100% 100%;
-    transform: scaleX(0); transform-origin: right;
-    transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+.nav-links > a {
+    background-image: linear-gradient(var(--rust-deep), var(--rust-deep));
+    background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px;
+    transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1);
 }
-.nav-links > a:hover, .nav-links > .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-.nav-links > a:hover::after, .nav-links > .nav-dd:hover > .nav-dd-trigger::after {
-    transform: scaleX(1); transform-origin: left;
+.nav-links > a:hover, .nav-links > a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
+.nav-links > .nav-dd > .nav-dd-trigger { display: inline-flex; align-items: center; gap: 7px; }
+.nav-links > .nav-dd > .nav-dd-trigger::after {
+    content: ""; width: 6px; height: 6px;
+    border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg); opacity: 0.5;
+    transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
+}
+.nav-links > .nav-dd:hover > .nav-dd-trigger,
+.nav-links > .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+.nav-links > .nav-dd:hover > .nav-dd-trigger::after,
+.nav-links > .nav-dd:focus-within > .nav-dd-trigger::after {
+    transform: translateY(1px) rotate(225deg); opacity: 1;
 }
 .nav-links > .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
-.nav-links > .nav-dd[aria-current="page"] > .nav-dd-trigger::after {
-    transform: scaleX(1); transform-origin: left;
-}
 
 /* DROPDOWN */
 .nav-dd { position: relative; }
@@ -634,14 +646,14 @@ ul, ol { list-style: none; }
     font-family: var(--sans);
     transition: background 160ms ease, color 160ms ease;
 }
-.nav-dd-panel > li > a::after {
+.nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
     content: "›"; font-size: 18px; color: var(--ink-3); margin-left: 16px;
     transition: transform 200ms ease, color 200ms ease;
 }
 .nav-dd-panel > li:hover > a {
     background: color-mix(in oklch, var(--ink) 6%, transparent); color: var(--ink);
 }
-.nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+.nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
 .nav-dd-sub {
     position: absolute; top: -14px; left: 100%; min-width: 220px;
@@ -1180,7 +1192,7 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "name": f"Do you only work with businesses in {name}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": (f"Most of my clients are in {name} and the surrounding region, "
+                        "text": (f"Most of our clients are in {name} and the surrounding region, "
                                  f"but the studio's remote workflow handles businesses anywhere in {province} "
                                  f"and across Canada and the US. The build, edit, and support process is identical "
                                  f"whether you're in {name} proper or a nearby community."),
@@ -1368,15 +1380,20 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home">
+            <img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136">
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
 {nav_dropdown_root}
             <a href="contact.html">Contact</a>
@@ -1393,8 +1410,9 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -1457,7 +1475,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>

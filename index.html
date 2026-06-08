@@ -421,6 +421,7 @@ img { max-width: 100%; display: block; }
         text-transform: uppercase;
         color: var(--ink-3);
     }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links {
         display: flex;
         gap: 32px;
@@ -430,32 +431,15 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
-        transition: color 200ms ease;
-    }
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
+        padding: 4px 1px;
+        background-image: linear-gradient(var(--rust-deep), var(--rust-deep));
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        background-position: 0 100%;
+        background-size: 0% 1.5px;
+        transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1);
     }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    .nav-links a[aria-current="page"] { color: var(--ink); }
-    .nav-links a[aria-current="page"]::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
+    .nav-links a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -464,30 +448,33 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -530,7 +517,7 @@ img { max-width: 100%; display: block; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -541,7 +528,7 @@ img { max-width: 100%; display: block; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -921,7 +908,7 @@ img { max-width: 100%; display: block; }
         letter-spacing: -0.022em;
         line-height: 1.05;
         color: var(--ink);
-        margin: 0 0 24px;
+        margin: 0 0 14px;
         max-width: 18ch;
     }
     .hero-name .last { color: var(--rust-deep); }
@@ -1198,36 +1185,70 @@ img { max-width: 100%; display: block; }
         gap: clamp(40px, 6vw, 96px);
         align-items: start;
     }
-    .about-photo {
+    .about-photo { position: relative; margin: 0; }
+    .about-photo-stage {
         position: relative;
+        aspect-ratio: 4 / 5;
+        isolation: isolate;
+    }
+    /* offset forest block sitting behind the photo for depth */
+    .about-photo-stage::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        inset: 22px -22px -22px 22px;
+        background: var(--accent);
+        border-radius: 4px;
+    }
+    .about-photo-stage picture {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
         border-radius: 4px;
         overflow: hidden;
         background: var(--paper-deeper);
-        aspect-ratio: 4 / 5;
-        box-shadow: 0 32px 64px -32px rgba(26, 24, 20, 0.18);
+        box-shadow: 0 28px 56px -30px rgba(26, 24, 20, 0.32);
     }
-    .about-photo img {
+    .about-photo-stage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
     }
-    .about-photo-caption {
-        position: absolute;
-        left: 16px;
-        bottom: 16px;
-        right: 16px;
-        background: color-mix(in oklch, var(--paper) 90%, transparent);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        padding: 14px 18px;
+    .about-photo-cap {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .about-photo-cap-name {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .about-photo-cap-name::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--rust);
+        flex: none;
+    }
+    .about-photo-cap-role {
         font-family: var(--mono);
         font-size: 11px;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--ink-2);
+        color: var(--ink-3);
+        padding-left: 40px;
     }
-    .about-photo-caption strong { color: var(--ink); font-weight: 600; }
     .about-text { padding-top: 18px; }
     .about-h2 {
         font-size: clamp(40px, 5.6vw, 76px);
@@ -1278,7 +1299,9 @@ img { max-width: 100%; display: block; }
     }
     @media (max-width: 880px) {
         .about-grid { grid-template-columns: 1fr; }
-        .about-photo { aspect-ratio: 4 / 3; max-width: 480px; }
+        .about-photo { max-width: 480px; }
+        .about-photo-stage { aspect-ratio: 4 / 3; }
+        .about-photo-stage::before { inset: 16px 0 -16px 0; }
     }
 
     /* ── SELECTED WORK (image-based cards) ── */
@@ -2123,15 +2146,18 @@ img { max-width: 100%; display: block; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="#top" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="#top" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -2165,9 +2191,10 @@ img { max-width: 100%; display: block; }
     <ul class="nav-mobile-links">
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -2213,7 +2240,8 @@ img { max-width: 100%; display: block; }
         <div class="hero-grid">
             <div class="hero-text">
                 <p class="hero-availability">Edmonton studio &middot; Now accepting new projects</p>
-                <h1 class="hero-name">A custom website that finally matches <span class="last">the work your business does.</span></h1>
+                <h1 class="hero-name">Small Business <span class="last">Web Designer</span></h1>
+                <p class="hero-tag">Custom websites that finally match the work your business does.</p>
                 <p class="hero-price">
                     <strong>$0 down</strong> &middot; <strong>$75 / month</strong> all-inclusive
                     <span class="hero-price-term">12-month minimum, then month-to-month</span>
@@ -2223,14 +2251,14 @@ img { max-width: 100%; display: block; }
                 </p>
                 <div class="hero-actions">
                     <a href="work.html" class="btn btn-primary">See selected work <span class="arrow">→</span></a>
-                    <a href="how.html" class="btn btn-secondary">How I work <span class="arrow">→</span></a>
+                    <a href="how.html" class="btn btn-secondary">How we work <span class="arrow">→</span></a>
                 </div>
             </div>
 
             <aside class="hero-form-card" aria-label="Start a project">
                 <p class="hero-form-eyebrow">Start a project</p>
-                <h2 class="hero-form-title">Tell me about <em>your business.</em></h2>
-                <p class="hero-form-sub">A few sentences is plenty. I respond within one business day.</p>
+                <h2 class="hero-form-title">Tell us about <em>your business.</em></h2>
+                <p class="hero-form-sub">A few sentences is plenty &mdash; you&rsquo;ll hear back within one business day.</p>
 
                 <form
                     method="POST"
@@ -2256,7 +2284,7 @@ img { max-width: 100%; display: block; }
                         <input type="text" id="hf-firm" name="firm" autocomplete="organization">
                     </div>
                     <div class="hf-field">
-                        <label for="hf-message">Tell me about your project</label>
+                        <label for="hf-message">Tell us about your project</label>
                         <textarea id="hf-message" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="hf-submit">
@@ -2265,7 +2293,7 @@ img { max-width: 100%; display: block; }
                     <p class="hf-foot">Or email <a href="mailto:matt@mattmcguiredesign.com" style="color:var(--ink);border-bottom:1px solid var(--rule);">matt@mattmcguiredesign.com</a> directly.</p>
 
                     <div class="hf-success" hidden>
-                        <strong>Thanks, message received.</strong> I&rsquo;ll be in touch within one business day.
+                        <strong>Thanks, message received.</strong> You&rsquo;ll hear back within one business day.
                     </div>
                     <div class="hf-error" hidden>
                         Something went wrong sending the message. Please email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> directly.
@@ -2282,7 +2310,7 @@ img { max-width: 100%; display: block; }
     <div class="wrap">
         <span class="eyebrow">Zero-risk start</span>
         <h2 class="guarantee-h2">See your real site free. <em>Pay nothing until you love it.</em></h2>
-        <p class="guarantee-lede">I build a working preview of your actual site before you commit a dollar, no deposit, no contract, no obligation. If it&rsquo;s not right, you walk away owing nothing.</p>
+        <p class="guarantee-lede">You see a working preview of your actual site before committing a dollar &mdash; no deposit, no contract, no obligation. If it&rsquo;s not right, you walk away owing nothing.</p>
     </div>
 </section>
 
@@ -2303,7 +2331,7 @@ img { max-width: 100%; display: block; }
                     <circle cx="12" cy="12" r="3"/>
                 </svg>
                 <h3 class="trust-h3">Preview <em>before you sign.</em></h3>
-                <p class="trust-p">Most engagements start with a working preview I&rsquo;ve already built. See your business&rsquo;s actual site before any commitment.</p>
+                <p class="trust-p">Most engagements start with a working preview already built for you &mdash; your business&rsquo;s actual site, before any commitment.</p>
             </div>
             <div class="trust-item">
                 <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2311,7 +2339,7 @@ img { max-width: 100%; display: block; }
                     <circle cx="12" cy="10" r="3"/>
                 </svg>
                 <h3 class="trust-h3">Edmonton-based, <em>Canadian-owned.</em></h3>
-                <p class="trust-p">A one-person studio in Alberta, working with small businesses across Canada and the US.</p>
+                <p class="trust-p">An Edmonton design studio, working with small businesses across Canada and the US.</p>
             </div>
         </div>
     </div>
@@ -2356,8 +2384,8 @@ img { max-width: 100%; display: block; }
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4Z"/>
                 </svg>
-                <h3 class="service-h3">Edits handled by <em>me.</em></h3>
-                <p class="service-p">Email when something needs updating, new staff bios, services, blog posts, seasonal banners, layout tweaks. I do them. You don&rsquo;t learn a CMS.</p>
+                <h3 class="service-h3">Edits handled <em>for you.</em></h3>
+                <p class="service-p">Email when something needs updating &mdash; new staff bios, services, blog posts, seasonal banners, layout tweaks &mdash; and it&rsquo;s handled. You never touch a CMS.</p>
             </article>
 
             <article class="service-card">
@@ -2447,8 +2475,8 @@ img { max-width: 100%; display: block; }
         <div class="perf-grid">
             <div class="perf-text">
                 <span class="eyebrow">Performance</span>
-                <h2 id="perf-title" class="perf-h2">I build <em>better</em> websites.</h2>
-                <p class="perf-lede">Most sites are slow, template-built, and bloated with plugins. I hand-code every site to load fast and score near-perfect on Google PageSpeed, so yours ranks higher, converts better, and feels effortless on any device. Run your current site through PageSpeed Insights and see how it compares.</p>
+                <h2 id="perf-title" class="perf-h2">Faster sites, <em>by design.</em></h2>
+                <p class="perf-lede">Most small-business sites are slow &mdash; template-built and bloated with plugins. Every site the studio ships is hand-coded to load fast and score near-perfect on Google PageSpeed, so yours ranks higher, converts better, and feels effortless on any device. Run your current site through PageSpeed Insights and see how it compares.</p>
                 <ul class="perf-points">
                     <li class="perf-point">
                         <span class="perf-point-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 7h7v7"/></svg></span>
@@ -2503,22 +2531,28 @@ img { max-width: 100%; display: block; }
     <div class="wrap">
         <div class="about-grid">
             <figure class="about-photo">
-                <picture>
-                    <source type="image/webp" srcset="img/headshot/matt-headshot.webp">
-                    <img src="img/headshot/matt-headshot.jpg" alt="Matthew McGuire, owner and developer of the studio" width="1000" height="1500" loading="lazy" decoding="async">
-                </picture>
+                <div class="about-photo-stage">
+                    <picture>
+                        <source type="image/webp" srcset="img/headshot/matt-headshot.webp">
+                        <img src="img/headshot/matt-headshot.jpg" alt="Matthew McGuire, founder of the studio" width="1000" height="1500" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <figcaption class="about-photo-cap">
+                    <span class="about-photo-cap-name">Matthew McGuire</span>
+                    <span class="about-photo-cap-role">Founder &amp; designer &middot; Edmonton, AB</span>
+                </figcaption>
             </figure>
 
             <div class="about-text">
-                <span class="eyebrow">About me</span>
+                <span class="eyebrow">About the studio</span>
                 <h2 class="display about-h2">
-                    A one-person studio. <em>By design.</em>
+                    A studio built for <em>small business.</em>
                 </h2>
                 <div class="about-body">
-                    <p>I&rsquo;m Matthew. I run a one-person web studio out of Edmonton, Alberta, building modern websites for small businesses across Canada and the US, <strong>trades and contractors, clinics, shops, studios, consultants, and professional services</strong>.</p>
-                    <p>I work directly with the businesses I build for. There&rsquo;s no project manager between you and the person making the design decisions, no rotating cast of junior designers, no offshore handoffs. Just me, doing the whole thing: strategy, brand, design, code, deploy.</p>
-                    <p>What I care about is the small details that make a website feel <strong>designed-not-templated</strong>. Typography that respects the work it&rsquo;s framing. Custom palettes built around your business&rsquo;s actual identity. Honest copy. Sites that load quickly on a laptop at the front desk and make sense on a customer&rsquo;s phone on the bus home.</p>
-                    <p>I work in focused stretches with each business I build for, so the work gets my full attention from preview to launch. If your business needs a website that signals what your work actually is, <a href="contact.html" style="color:var(--accent-deep);border-bottom:1px solid var(--accent-soft);">let&rsquo;s talk</a>.</p>
+                    <p>I&rsquo;m Matthew, founder of the studio. We build modern websites for small businesses across Canada and the US, <strong>trades and contractors, clinics, shops, studios, consultants, and professional services</strong>, out of Edmonton, Alberta.</p>
+                    <p>You work directly with the studio from first preview to launch. No project managers, no rotating cast of junior designers, no offshore handoffs. We own the whole process: strategy, brand, design, code, deploy.</p>
+                    <p>What we care about is the small details that make a website feel <strong>designed-not-templated</strong>. Typography that respects the work it&rsquo;s framing. Custom palettes built around your business&rsquo;s actual identity. Honest copy. Sites that load quickly on a laptop at the front desk and make sense on a customer&rsquo;s phone on the bus home.</p>
+                    <p>We work in focused stretches with each business we build for, so the work gets our full attention from preview to launch. If your business needs a website that signals what your work actually is, <a href="contact.html" style="color:var(--accent-deep);border-bottom:1px solid var(--accent-soft);">let&rsquo;s talk</a>.</p>
                 </div>
 
                 <p class="about-quote">
@@ -2533,12 +2567,12 @@ img { max-width: 100%; display: block; }
 <section id="how" class="section how">
     <div class="wrap">
         <header class="how-head">
-            <span class="eyebrow">How I work</span>
+            <span class="eyebrow">How we work</span>
             <h2 class="display how-h2">
                 See it first. <em>Then decide.</em>
             </h2>
             <p class="how-lede">
-                Most engagements start with a working preview I&rsquo;ve already built, your business&rsquo;s actual site, refined and ready to look at. No discovery calls, no pitch decks, no commitment until you&rsquo;ve seen what&rsquo;s possible.
+                Most engagements start with a working preview already built for you &mdash; your business&rsquo;s actual site, refined and ready to look at. No discovery calls, no pitch decks, no commitment until you&rsquo;ve seen what&rsquo;s possible.
             </p>
         </header>
 
@@ -2546,7 +2580,7 @@ img { max-width: 100%; display: block; }
             <article class="how-step">
                 <span class="how-step-n">01</span>
                 <h3 class="how-step-title">Preview &amp; <em>quote</em></h3>
-                <p class="how-step-body">You see a working preview of your business&rsquo;s site, real brand, real content polished from your existing copy, real working build. If it&rsquo;s a fit, I send a fixed scope and a service agreement, sign and return, no money down. No pressure, no presentations, no calls.</p>
+                <p class="how-step-body">You see a working preview of your business&rsquo;s site &mdash; real brand, real content polished from your existing copy, a real working build. If it&rsquo;s a fit, you get a fixed scope and a service agreement to sign and return. No money down, no pressure, no presentations, no calls.</p>
                 <ul class="how-step-list">
                     <li>Working preview built up front</li>
                     <li>Fixed scope &amp; agreement</li>
@@ -2557,7 +2591,7 @@ img { max-width: 100%; display: block; }
             <article class="how-step">
                 <span class="how-step-n">02</span>
                 <h3 class="how-step-title">Build &amp; <em>refine</em></h3>
-                <p class="how-step-body">From the preview, I refine into the final site, tightening copy, expanding pages, dialing in typography and palette around your business&rsquo;s identity. Two rounds of revisions baked into scope. You see real working pages, not Figma mockups.</p>
+                <p class="how-step-body">From there, the preview becomes the final site &mdash; copy tightened, pages expanded, typography and palette dialed in around your business&rsquo;s identity. Two rounds of revisions are baked into scope, and you review real working pages, never Figma mockups.</p>
                 <ul class="how-step-list">
                     <li>Two rounds of revisions</li>
                     <li>Content polished from your copy</li>
@@ -2589,7 +2623,7 @@ img { max-width: 100%; display: block; }
                     Have a project <em>in mind?</em>
                 </h2>
                 <p class="contact-lede">
-                    Tell me a little about your business and what you&rsquo;re trying to do. I&rsquo;ll respond within one business day with thoughts and a rough scope.
+                    Tell us a little about your business and what you&rsquo;re trying to do, and you&rsquo;ll have a reply within one business day with thoughts and a rough scope.
                 </p>
                 <a href="mailto:matt@mattmcguiredesign.com?subject=Project%20enquiry" class="contact-mailto">matt@mattmcguiredesign.com</a>
             </div>
@@ -2626,7 +2660,7 @@ img { max-width: 100%; display: block; }
             Let&rsquo;s see what your business <em>could look like.</em>
         </h2>
         <p class="cta-band-lede">
-            Send me a few sentences about your business and what you need. I&rsquo;ll come back with thoughts, a rough scope, and often a working preview within a few days.
+            Send a few sentences about your business and what you need. You&rsquo;ll get back thoughts, a rough scope, and often a working preview within a few days.
         </p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
@@ -2649,7 +2683,7 @@ img { max-width: 100%; display: block; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>

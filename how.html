@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://www.clarity.ms">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-<title>How I Work | Matthew McGuire · Web Design Studio · Edmonton</title>
+<title>How We Work | Matthew McGuire · Web Design Studio · Edmonton</title>
 <meta name="description" content="A preview-first process for designing and building modern, brand-coherent websites, no discovery calls, no Figma mockups. Real working pages, then a decision.">
 
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://matthewmcguire.ca/how.html">
 <meta property="og:url" content="https://matthewmcguire.ca/how.html">
-<meta property="og:title" content="How I Work | Matthew McGuire · Web Design Studio">
+<meta property="og:title" content="How We Work | Matthew McGuire · Web Design Studio">
 <meta property="og:description" content="$0 down, $75 per month, 12-month minimum. Preview-first. Design, hosting, edits, security, all in one subscription. Site goes offline if you cancel.">
 <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin>
@@ -355,22 +355,16 @@ img { max-width: 100%; display: block; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a {
-        font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0;
-        transition: color 200ms ease;
+        font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px;
+        background-image: linear-gradient(var(--rust-deep), var(--rust-deep));
+        background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px;
+        transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1);
     }
-    .nav-links a::after {
-        content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat; background-position: center; background-size: 100% 100%;
-        transform: scaleX(0); transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-    .nav-links a[aria-current="page"] { color: var(--ink); }
-    .nav-links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
+    .nav-links a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -379,30 +373,33 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -445,7 +442,7 @@ img { max-width: 100%; display: block; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -456,7 +453,7 @@ img { max-width: 100%; display: block; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -1374,15 +1371,18 @@ img { max-width: 100%; display: block; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd" aria-current="page">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html" aria-current="page">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -1417,8 +1417,9 @@ img { max-width: 100%; display: block; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html" aria-current="page">How I work</a></li>
+        <li><a href="how.html" aria-current="page">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -1457,11 +1458,11 @@ img { max-width: 100%; display: block; }
     <div class="wrap">
         <div class="how-hero-grid">
             <div>
-                <span class="eyebrow">How I work</span>
+                <span class="eyebrow">How we work</span>
                 <h1 class="how-hero-h1">See it first. <em>Then decide.</em></h1>
             </div>
             <p class="how-hero-lede">
-                Most engagements start with a working preview I&rsquo;ve already built, <strong>your business&rsquo;s actual site</strong>, refined and ready to look at. <strong>No discovery calls, no Figma mockups, no commitment</strong> until you&rsquo;ve seen what&rsquo;s possible.
+                Most engagements start with a working preview already built for you, <strong>your business&rsquo;s actual site</strong>, refined and ready to look at. <strong>No discovery calls, no Figma mockups, no commitment</strong> until you&rsquo;ve seen what&rsquo;s possible.
             </p>
         </div>
     </div>
@@ -1478,7 +1479,7 @@ img { max-width: 100%; display: block; }
             <div class="how-philo-prose">
                 <p>The reason most small-business websites end up looking the same is the way they&rsquo;re sold. You take a discovery call, you fill out a brief, an account manager pitches a deck, you sign a statement of work, and three months later something competent and forgettable goes live. Every step is a chance for the business&rsquo;s actual identity to get smoothed flat.</p>
 
-                <p>I run the engagement backwards. <strong>Before there&rsquo;s a contract, there&rsquo;s a working preview</strong>, your business&rsquo;s real name, real services, real copy polished from your existing pages, on a real working build. You see exactly what your site could look like, in your browser, before you decide anything.</p>
+                <p>The studio runs the engagement backwards. <strong>Before there&rsquo;s a contract, there&rsquo;s a working preview</strong>, your business&rsquo;s real name, real services, real copy polished from your existing pages, on a real working build. You see exactly what your site could look like, in your browser, before you decide anything.</p>
 
                 <p>That changes every conversation that follows. The brief writes itself. The scope is grounded in something real, not a guess. And by the time you&rsquo;re reviewing the final build, you&rsquo;ve already seen three rounds of the work. <strong>No discovery calls. No pitch decks. No commitment until you&rsquo;ve seen what&rsquo;s possible.</strong></p>
             </div>
@@ -1493,7 +1494,7 @@ img { max-width: 100%; display: block; }
             <span class="eyebrow">The three stages</span>
             <h2 class="how-steps-h">From preview to <em>launch.</em></h2>
             <p class="how-steps-lede">
-                Every engagement runs the same arc. The preview comes first. The scope is fixed. The build is one head, end to end. Two-to-three weeks from kickoff to launch is typical.
+                Every engagement runs the same arc. The preview comes first. The scope is fixed. The build stays in-house, end to end. Two-to-three weeks from kickoff to launch is typical.
             </p>
         </header>
 
@@ -1503,7 +1504,7 @@ img { max-width: 100%; display: block; }
                 <h3 class="how-step-title">Preview &amp; <em>quote</em></h3>
                 <p class="how-step-time">Working preview · Fixed scope · $0 down to sign</p>
                 <p class="how-step-body">
-                    You see a working preview of your business&rsquo;s site, real brand, real content polished from your existing copy, real working build, deployed to a private URL. If it&rsquo;s a fit, I send a fixed scope and a service agreement. Sign and return, no money changes hands until launch. No pressure, no presentations, no calls.
+                    You see a working preview of your business&rsquo;s site, real brand, real content polished from your existing copy, real working build, deployed to a private URL. If it&rsquo;s a fit, you get a fixed scope and a service agreement. Sign and return, and no money changes hands until launch. No pressure, no presentations, no calls.
                 </p>
                 <ul class="how-step-list">
                     <li>Working preview built up front</li>
@@ -1518,13 +1519,13 @@ img { max-width: 100%; display: block; }
                 <h3 class="how-step-title">Build &amp; <em>refine</em></h3>
                 <p class="how-step-time">Two revision rounds · Real working pages</p>
                 <p class="how-step-body">
-                    From the preview, I refine into the final site, tightening copy, expanding pages, dialing in typography and palette around your business&rsquo;s identity. Two rounds of revisions baked into scope. You see real working pages, not Figma mockups, on every pass.
+                    From there, the preview becomes the final site, copy tightened, pages expanded, typography and palette dialed in around your business&rsquo;s identity. Two rounds of revisions are baked into scope, and you review real working pages, not Figma mockups, on every pass.
                 </p>
                 <ul class="how-step-list">
                     <li>Two rounds of revisions</li>
                     <li>Custom typography &amp; palette</li>
                     <li>Real working pages every pass</li>
-                    <li>One inbox, one designer</li>
+                    <li>One inbox, no middlemen</li>
                 </ul>
             </article>
 
@@ -1539,7 +1540,7 @@ img { max-width: 100%; display: block; }
                     <li>Netlify deploy &amp; DNS</li>
                     <li>$0 due to sign, first $75 invoice on launch day</li>
                     <li>$75 / month, 12-month minimum</li>
-                    <li>Edits handled by me, not you</li>
+                    <li>Edits handled for you, not by you</li>
                 </ul>
             </article>
         </div>
@@ -1557,10 +1558,10 @@ img { max-width: 100%; display: block; }
         <div class="how-expects-grid">
             <div class="expect-col">
                 <span class="expect-col-key">What you get</span>
-                <h3 class="expect-col-h">A real site, built by <em>one person.</em></h3>
+                <h3 class="expect-col-h">A real site, built <em>in-house.</em></h3>
                 <ul class="expect-list">
                     <li>A working preview of your site, before any commitment</li>
-                    <li>One designer end-to-end: strategy, design, build, deploy</li>
+                    <li>One studio end-to-end: strategy, design, build, deploy</li>
                     <li>Custom typography and palette around your business&rsquo;s identity</li>
                     <li>Real, hand-written code, no website builders, no theme buys</li>
                     <li>Two rounds of revisions inside fixed scope</li>
@@ -1653,7 +1654,7 @@ img { max-width: 100%; display: block; }
                 <details>
                     <summary>How does the working preview actually work?</summary>
                     <div class="faq-body">
-                        I look at your existing site, pull your real services and bio copy, and build a real, deployed landing page, a redone version of your homepage so you can feel how the full site would be built out. You get a private URL, you see it live, you decide whether it&rsquo;s a direction worth pursuing. There&rsquo;s no charge for the preview; if it isn&rsquo;t a fit, no harm done.
+                        The studio looks at your existing site, pulls your real services and bio copy, and builds a real, deployed landing page, a redone version of your homepage so you can feel how the full site would be built out. You get a private URL, you see it live, you decide whether it&rsquo;s a direction worth pursuing. There&rsquo;s no charge for the preview; if it isn&rsquo;t a fit, no harm done.
                     </div>
                 </details>
             </li>
@@ -1661,7 +1662,7 @@ img { max-width: 100%; display: block; }
                 <details>
                     <summary>What do I need to provide to get started?</summary>
                     <div class="faq-body">
-                        Almost nothing for the preview. Your existing site URL is enough, I&rsquo;ll pull your business name, services, staff bios, and any photography you&rsquo;ve already published. Once we&rsquo;re into the build, I&rsquo;ll ask for any additional copy, headshots, or assets you want incorporated, but I won&rsquo;t hold the project up waiting on perfect content.
+                        Almost nothing for the preview. Your existing site URL is enough, that&rsquo;s where your business name, services, staff bios, and any published photography get pulled from. Once we&rsquo;re into the build, we&rsquo;ll ask for any additional copy, headshots, or assets you want incorporated, but the project won&rsquo;t be held up waiting on perfect content.
                     </div>
                 </details>
             </li>
@@ -1669,7 +1670,7 @@ img { max-width: 100%; display: block; }
                 <details>
                     <summary>Can I keep my existing domain and email?</summary>
                     <div class="faq-body">
-                        Yes. The site lives on Netlify under your existing domain. I handle the DNS pointer at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.
+                        Yes. The site lives on Netlify under your existing domain, and the DNS pointer is handled for you at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.
                     </div>
                 </details>
             </li>
@@ -1677,7 +1678,7 @@ img { max-width: 100%; display: block; }
                 <details>
                     <summary>What does the $75/month subscription actually cover?</summary>
                     <div class="faq-body">
-                        Everything: design, build, hosting, SSL, analytics, security patches, and ongoing content edits, you email me when something needs updating, and I do it. New staff bios, updated services, blog posts, seasonal banners, small layout tweaks, all included. Major new features (a booking system, a custom calculator, a full redesign of a section) are quoted separately and rolled into the monthly. 12-month minimum, then month-to-month indefinitely, cancel after 12 months with 30 days&rsquo; notice and the site comes down at the end of the notice period.
+                        Everything: design, build, hosting, SSL, analytics, security patches, and ongoing content edits, you email when something needs updating, and it&rsquo;s handled. New staff bios, updated services, blog posts, seasonal banners, small layout tweaks, all included. Major new features (a booking system, a custom calculator, a full redesign of a section) are quoted separately and rolled into the monthly. 12-month minimum, then month-to-month indefinitely, cancel after 12 months with 30 days&rsquo; notice and the site comes down at the end of the notice period.
                     </div>
                 </details>
             </li>
@@ -1711,7 +1712,7 @@ img { max-width: 100%; display: block; }
             Let&rsquo;s see what your business <em>could look like.</em>
         </h2>
         <p class="cta-band-lede">
-            Send me a few sentences about your business and what you need. I&rsquo;ll come back with thoughts, a rough scope, and often a working preview within a few days.
+            Send a few sentences about your business and what you need. You&rsquo;ll get back thoughts, a rough scope, and often a working preview within a few days.
         </p>
         <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
@@ -1734,7 +1735,7 @@ img { max-width: 100%; display: block; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>

@@ -253,11 +253,10 @@ a { color: inherit; text-decoration: none; }
     .nav-mark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; color: var(--ink); line-height: 1; }
     .nav-mark-letters { font-family: var(--serif); font-size: 22px; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
     .nav-mark-name { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 0; transition: color 200ms ease; }
-    .nav-links a::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: -8px; height: 9px; background-image: url("img/brush-underline.webp"); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; transform: scaleX(0); transform-origin: right; transition: transform 360ms cubic-bezier(.2,.7,.2,1); }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); position: relative; padding: 4px 1px; background-image: linear-gradient(var(--rust-deep), var(--rust-deep)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1); }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -266,30 +265,33 @@ a { color: inherit; text-decoration: none; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -332,7 +334,7 @@ a { color: inherit; text-decoration: none; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -343,7 +345,7 @@ a { color: inherit; text-decoration: none; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -722,15 +724,18 @@ a { color: inherit; text-decoration: none; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -765,8 +770,9 @@ a { color: inherit; text-decoration: none; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -815,19 +821,19 @@ a { color: inherit; text-decoration: none; }
         <div class="legal-prose">
 
             <h2>The <em>short version.</em></h2>
-            <p>I run a one-person web design studio. I collect the minimum information needed to respond to your enquiry, build your site, and run the studio. I don&rsquo;t sell or share your personal information. If you ever want your data removed, email me and it&rsquo;s done.</p>
+            <p>We run a web design studio. We collect the minimum information needed to respond to your enquiry, build your site, and run the studio. We don&rsquo;t sell or share your personal information. If you ever want your data removed, email us and it&rsquo;s done.</p>
 
-            <h2>What I <em>collect.</em></h2>
-            <p>When you fill out a contact form on this site, I collect the information you submit, typically name, email, phone (optional), business name, and a description of your project. This data is sent to me by email through Netlify Forms and stored in my email inbox.</p>
-            <p>When you visit any page on this site, my analytics tools (Google Analytics and Microsoft Clarity) collect anonymized usage information, pages visited, time on page, country, browser, device. This data does not personally identify you and is used only to understand which parts of the site are useful.</p>
+            <h2>What we <em>collect.</em></h2>
+            <p>When you fill out a contact form on this site, we collect the information you submit, typically name, email, phone (optional), business name, and a description of your project. It comes to us by email through Netlify Forms and is stored in our inbox.</p>
+            <p>When you visit any page on this site, our analytics tools (Google Analytics and Microsoft Clarity) collect anonymized usage information, pages visited, time on page, country, browser, device. This data does not personally identify you and is used only to understand which parts of the site are useful.</p>
 
-            <h2>How I <em>use it.</em></h2>
+            <h2>How we <em>use it.</em></h2>
             <ul>
-                <li><strong>To respond to your enquiry.</strong> Form submissions go straight to my email inbox so I can write back.</li>
-                <li><strong>To run the engagement.</strong> If we work together, I&rsquo;ll keep your contact details and project notes for as long as we&rsquo;re working together, plus any retention period required by tax or legal obligations.</li>
-                <li><strong>To improve the site.</strong> Anonymized analytics help me understand which pages are useful and where things break.</li>
+                <li><strong>To respond to your enquiry.</strong> Form submissions come straight to our inbox so we can write back.</li>
+                <li><strong>To run the engagement.</strong> If we work together, we&rsquo;ll keep your contact details and project notes for as long as we&rsquo;re working together, plus any retention period required by tax or legal obligations.</li>
+                <li><strong>To improve the site.</strong> Anonymized analytics help us understand which pages are useful and where things break.</li>
             </ul>
-            <p>I do not sell, trade, or rent personal information to third parties. Ever.</p>
+            <p>We do not sell, trade, or rent personal information to third parties. Ever.</p>
 
             <h2>Third-party <em>services.</em></h2>
             <p>This site uses the following third-party services that may receive data about your visit:</p>
@@ -845,7 +851,7 @@ a { color: inherit; text-decoration: none; }
             <h2>Your <em>rights.</em></h2>
             <p>Under Canadian privacy law (PIPEDA) and equivalent regulations, you have the right to:</p>
             <ul>
-                <li>Request a copy of the personal information I hold about you.</li>
+                <li>Request a copy of the personal information we hold about you.</li>
                 <li>Request correction of any inaccurate information.</li>
                 <li>Request deletion of your personal information at any time.</li>
                 <li>Withdraw consent for ongoing communications.</li>
@@ -853,7 +859,7 @@ a { color: inherit; text-decoration: none; }
             <p>To exercise any of these rights, email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a>. Most requests are handled within one business day.</p>
 
             <h2>Children&rsquo;s <em>privacy.</em></h2>
-            <p>This site and the studio&rsquo;s services are intended for businesses and adults. I do not knowingly collect information from children under 13.</p>
+            <p>This site and the studio&rsquo;s services are intended for businesses and adults. We do not knowingly collect information from children under 13.</p>
 
             <h2>Changes to this <em>policy.</em></h2>
             <p>This policy may be updated as the studio&rsquo;s practices change. The &ldquo;Last updated&rdquo; date at the top of this page reflects the most recent revision. Material changes will be flagged on the homepage for at least thirty days.</p>
@@ -882,7 +888,7 @@ a { color: inherit; text-decoration: none; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>
@@ -901,7 +907,7 @@ a { color: inherit; text-decoration: none; }
                 <h2 class="footer-h5">Based</h2>
                 <ul>
                     <li>Edmonton, Alberta</li>
-                    <li>Working with businesses across Canada</li>
+                    <li>Working with businesses across Canada and the US</li>
                 </ul>
             </div>
         </div>

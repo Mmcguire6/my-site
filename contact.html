@@ -8,7 +8,7 @@
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
 <title>Contact | Matthew McGuire · Web Design Studio · Edmonton</title>
-<meta name="description" content="Start a project with Matthew McGuire. Send a few sentences about your business and I'll respond within one business day with thoughts and a rough scope. Async over email, no discovery calls.">
+<meta name="description" content="Start a project with the studio. Send a few sentences about your business and you'll hear back within one business day with thoughts and a rough scope. Async over email, no discovery calls.">
 
 <link rel="icon" href="mm-favicon.svg" type="image/svg+xml">
 <link rel="icon" href="mm-favicon.png">
@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://matthewmcguire.ca/contact.html">
 <meta property="og:url" content="https://matthewmcguire.ca/contact.html">
 <meta property="og:title" content="Contact | Matthew McGuire · Web Design Studio · Edmonton">
-<meta property="og:description" content="Send a few sentences about your business. I'll respond within one business day.">
+<meta property="og:description" content="Send a few sentences about your business. You'll hear back within one business day.">
 <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-500-normal.woff2" crossorigin>
@@ -392,6 +392,7 @@ img { max-width: 100%; display: block; }
         text-transform: uppercase;
         color: var(--ink-3);
     }
+    .nav-mark-img { height: 52px; width: auto; display: block; }
     .nav-links {
         display: flex;
         gap: 32px;
@@ -401,32 +402,15 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
-        transition: color 200ms ease;
-    }
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
+        padding: 4px 1px;
+        background-image: linear-gradient(var(--rust-deep), var(--rust-deep));
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        background-position: 0 100%;
+        background-size: 0% 1.5px;
+        transition: color 200ms ease, background-size 300ms cubic-bezier(.2,.7,.2,1);
     }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    .nav-links a[aria-current="page"] { color: var(--ink); }
-    .nav-links a[aria-current="page"]::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
+    .nav-links a:hover { color: var(--ink); background-size: 100% 1.5px; }
+    .nav-links a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
 
     /* === LOCATIONS DROPDOWN === */
     .nav-links { position: relative; }
@@ -435,30 +419,33 @@ img { max-width: 100%; display: block; }
         font-size: 14px;
         color: var(--ink-2);
         position: relative;
-        padding: 4px 0;
+        padding: 4px 1px;
         background: none;
         border: none;
         font-family: inherit;
         cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
         transition: color 200ms ease;
     }
     .nav-dd-trigger::after {
         content: "";
-        position: absolute;
-        left: -4px; right: -4px; bottom: -8px;
-        height: 9px;
-        background-image: url("img/brush-underline.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+        width: 6px; height: 6px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.5;
+        transition: transform 260ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease;
     }
-    .nav-dd:hover > .nav-dd-trigger { color: var(--ink); }
-    .nav-dd:hover > .nav-dd-trigger::after {
-        transform: scaleX(1); transform-origin: left;
+    .nav-dd:hover > .nav-dd-trigger,
+    .nav-dd:focus-within > .nav-dd-trigger { color: var(--ink); }
+    .nav-dd:hover > .nav-dd-trigger::after,
+    .nav-dd:focus-within > .nav-dd-trigger::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
     }
+    .nav-dd[aria-current="page"] > .nav-dd-trigger { color: var(--ink); }
     .nav-dd-panel {
         position: absolute;
         top: 100%;
@@ -501,7 +488,7 @@ img { max-width: 100%; display: block; }
         font-family: var(--sans);
         transition: background 160ms ease, color 160ms ease;
     }
-    .nav-dd-panel > li > a::after {
+    .nav-dd-panel > li:has(> .nav-dd-sub) > a::after {
         content: "›";
         font-size: 18px;
         color: var(--ink-3);
@@ -512,7 +499,7 @@ img { max-width: 100%; display: block; }
         background: color-mix(in oklch, var(--ink) 6%, transparent);
         color: var(--ink);
     }
-    .nav-dd-panel > li:hover > a::after { transform: translateX(3px); color: var(--rust); }
+    .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
     .nav-dd-sub {
         position: absolute;
@@ -1497,15 +1484,18 @@ img { max-width: 100%; display: block; }
 <!-- NAV -->
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire, home">
-            <span class="nav-mark-letters">Matthew McGuire</span>
-            <span class="nav-mark-name">Designer · developer</span>
-        </a>
+        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.png" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="687" height="136"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
+                <ul class="nav-dd-panel" style="left:0;right:auto;">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="how.html">How we work</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
             <a href="work.html">Work</a>
-            <a href="how.html">How I work</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
             <div class="nav-dd">
@@ -1540,8 +1530,9 @@ img { max-width: 100%; display: block; }
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="how.html">How I work</a></li>
+        <li><a href="how.html">How we work</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
     </ul>
@@ -1583,10 +1574,10 @@ img { max-width: 100%; display: block; }
                 <span class="eyebrow">Get in touch</span>
                 <h1 class="contact-hero-h1">Let&rsquo;s <span class="accent">talk.</span></h1>
                 <p class="contact-hero-tag">
-                    Tell me about <em>your business.</em>
+                    Tell us about <em>your business.</em>
                 </p>
                 <p class="contact-hero-lede">
-                    A few sentences is plenty. I&rsquo;ll come back within one business day with thoughts, a rough scope, and often a working preview within a few days. Async over email is the default. No discovery calls, no pitch decks, no commitment until you&rsquo;ve seen what&rsquo;s possible.
+                    A few sentences is plenty. You&rsquo;ll hear back within one business day with thoughts, a rough scope, and often a working preview within a few days. Async over email is the default &mdash; no discovery calls, no pitch decks, no commitment until you&rsquo;ve seen what&rsquo;s possible.
                 </p>
 
                 <div class="contact-hero-fast">
@@ -1612,7 +1603,7 @@ img { max-width: 100%; display: block; }
             <aside class="contact-form-card" id="contact-form" aria-label="Start a project">
                 <p class="contact-form-eyebrow">Start a project</p>
                 <h2 class="contact-form-title">Send a <em>note.</em></h2>
-                <p class="contact-form-sub">Anything you can share helps, what you do, what you&rsquo;re looking for, what&rsquo;s prompting the new site. I respond personally to every message.</p>
+                <p class="contact-form-sub">Anything you can share helps, what you do, what you&rsquo;re looking for, what&rsquo;s prompting the new site. Every message gets a personal reply.</p>
 
                 <form
                     method="POST"
@@ -1638,7 +1629,7 @@ img { max-width: 100%; display: block; }
                         <input type="text" id="cf-firm" name="firm" autocomplete="organization">
                     </div>
                     <div class="cf-field">
-                        <label for="cf-message">Tell me about your project</label>
+                        <label for="cf-message">Tell us about your project</label>
                         <textarea id="cf-message" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="cf-submit">
@@ -1647,7 +1638,7 @@ img { max-width: 100%; display: block; }
                     <p class="cf-foot">Or email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> directly.</p>
 
                     <div class="cf-success" hidden>
-                        <strong>Thanks, message received.</strong> I&rsquo;ll be in touch within one business day.
+                        <strong>Thanks, message received.</strong> You&rsquo;ll hear back within one business day.
                     </div>
                     <div class="cf-error" hidden>
                         Something went wrong sending the message. Please email <a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a> directly.
@@ -1676,7 +1667,7 @@ img { max-width: 100%; display: block; }
                 <span class="next-step-n">Day 01</span>
                 <h3 class="next-step-h">A direct <em>reply.</em></h3>
                 <p class="next-step-body">
-                    Within one business day, you&rsquo;ll get a personal email back from me, not a templated auto-response. I&rsquo;ll ask a couple of clarifying questions if I have them, and confirm whether the studio is the right fit for what you&rsquo;re after.
+                    Within one business day, you&rsquo;ll get a personal email back, not a templated auto-response. Expect a couple of clarifying questions where they help, plus an honest read on whether the studio is the right fit for what you&rsquo;re after.
                 </p>
             </article>
 
@@ -1684,7 +1675,7 @@ img { max-width: 100%; display: block; }
                 <span class="next-step-n">Days 02&ndash;05</span>
                 <h3 class="next-step-h">A working <em>preview.</em></h3>
                 <p class="next-step-body">
-                    If we&rsquo;re a fit, I build a real preview of your business&rsquo;s site, not a Figma mockup, not a stock template. Your brand, your content polished from your existing copy, a real, responsive landing page, a redone homepage so you can feel how the full site would come together. No commitment yet.
+                    If we&rsquo;re a fit, the next step is a real preview of your business&rsquo;s site, not a Figma mockup, not a stock template. Your brand, your content polished from your existing copy, a real, responsive landing page, a redone homepage so you can feel how the full site would come together. No commitment yet.
                 </p>
             </article>
 
@@ -1692,7 +1683,7 @@ img { max-width: 100%; display: block; }
                 <span class="next-step-n">Days 06&ndash;10</span>
                 <h3 class="next-step-h">Scope, deposit, <em>build.</em></h3>
                 <p class="next-step-body">
-                    If the preview lands, I send a fixed scope and a service agreement, sign and return, no money down. From there it&rsquo;s two to three weeks of focused build, two rounds of revisions, and a launch date you can plan around. Your $75/month subscription begins on launch day, that&rsquo;s the only invoice, and it covers everything ongoing.
+                    If the preview lands, you get a fixed scope and a service agreement, sign and return, no money down. From there it&rsquo;s two to three weeks of focused build, two rounds of revisions, and a launch date you can plan around. Your $75/month subscription begins on launch day, that&rsquo;s the only invoice, and it covers everything ongoing.
                 </p>
             </article>
         </div>
@@ -1750,7 +1741,7 @@ img { max-width: 100%; display: block; }
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
-                    <li><a href="how.html">How I work</a></li>
+                    <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="locations.html">All locations</a></li>
