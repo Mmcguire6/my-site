@@ -85,4 +85,14 @@
     <lastmod>2026-06-08</lastmod>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://matthewmcguire.ca/blog/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://matthewmcguire.ca/blog/why-is-my-website-so-slow.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>

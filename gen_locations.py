@@ -146,6 +146,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="../work.html">Work</a>
+            <a href="../blog/">Blog</a>
             <a href="../pricing.html">Pricing</a>
 {nav_dropdown_desktop}
             <a href="../contact.html">Contact</a>
@@ -169,6 +170,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="../work.html">Work</a></li>
+        <li><a href="../blog/">Blog</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="../contact.html">Contact</a></li>
@@ -381,6 +383,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <ul>
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../work.html">Selected work</a></li>
+                    <li><a href="../blog/">Blog</a></li>
                     <li><a href="../how.html">How we work</a></li>
                     <li><a href="../pricing.html">Pricing</a></li>
                     <li><a href="../faq.html">FAQ</a></li>
@@ -1479,6 +1482,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="work.html">Work</a>
+            <a href="blog/">Blog</a>
             <a href="pricing.html">Pricing</a>
 {nav_dropdown_root}
             <a href="contact.html">Contact</a>
@@ -1502,6 +1506,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="work.html">Work</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
@@ -1565,6 +1570,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="work.html">Selected work</a></li>
+                    <li><a href="blog/">Blog</a></li>
                     <li><a href="how.html">How we work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
