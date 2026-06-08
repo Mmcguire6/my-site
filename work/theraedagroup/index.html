@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>The Raeda Group, PLLC — Therapy, Coaching &amp; Psychological Testing · Austin</title>
+<meta name="description" content="The Raeda Group, PLLC — a leading provider of therapy and counseling in Austin. Individual therapy, couples counseling, psychological testing, therapeutic coaching, and sports psychology from independently licensed clinicians." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand: deep aubergine purple + olive/sage + warm brass on bone */
+    --plum:#5a3d8a;--plum-deep:#3d2867;--plum-ink:#2b1f3b;
+    --olive:#4d6e24;--olive-deep:#3a5419;
+    --brass:#b8923a;--brass-deep:#9a7a2d;--brass-soft:#e1c785;
+    --bone:#f6f1e9;--bone-2:#ece3d2;--paper:#fbf7ee;--sand:#e2d4ba;
+    --ink:#2b1f3b;--body:#3a3530;--soft:#7d756c;--line:#dccfb6;--line-2:#c9bba0;
+    --on-dark:#ece3d2;--on-dark-soft:#bdb1be;--on-dark-line:rgba(236,227,210,.18);
+    --shadow:0 32px 64px -40px rgba(43,31,59,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--plum);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--plum);color:#fbf2ec;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(43,31,59,.5)}
+  .btn:hover{background:var(--plum-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#3a2a00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--plum);color:var(--plum)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--plum-ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.12) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(43,31,59,.22),rgba(184,146,58,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(18,10,22,.72);background:var(--plum-ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.12) contrast(1.02)}
+  .hero-photo .inset{width:200px;height:240px;left:-94px;bottom:46px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.4}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--plum-ink);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}
+  .topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--plum);font-family:'Newsreader',serif;font-style:italic;font-size:1.15rem;flex-shrink:0;background:#fff}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.24rem;line-height:1.02}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links>a,.drop-t{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--plum)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:6px}
+  .drop-t .car{font-size:.8em}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.2s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;min-width:220px}
+  .dropdown .inner a{display:block;padding:10px 14px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+  .dropdown .inner a:hover{background:var(--bone);color:var(--plum)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--plum);color:var(--plum)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--plum-ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.4rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--plum-ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:660px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:520px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.18) sepia(.14) contrast(1.03) brightness(.96)}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,227,210,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:44ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--plum-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:540px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:240px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--plum);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--plum);margin:8px 12px 0 0}
+  .about .mini{margin-top:28px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--plum);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.4rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:rgba(90,61,138,.18);border:1px solid var(--plum);transform:rotate(45deg)}
+  .conditions-band{margin-top:60px;text-align:center}
+  .conditions-band .label{justify-content:center}
+  .conds{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:880px;margin:0 auto}
+  .conds span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--plum-deep);padding:0 4px}
+  .conds span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .conds span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--plum-ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:grayscale(.22) sepia(.16) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(43,31,59,.5),rgba(43,31,59,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:900px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE — Sports Psych & Coaching */
+  .distinct{background:var(--olive-deep);color:var(--on-dark)}
+  .distinct-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .distinct .label{color:var(--brass-soft)}.distinct .label .num{color:#fff}.distinct .label .rule{background:var(--on-dark-line)}
+  .distinct h2{color:#fff;font-size:clamp(2rem,3.6vw,2.7rem)}
+  .distinct .lede-p{color:var(--on-dark);margin:18px 0 24px;font-size:1.06rem}
+  .distinct ul{list-style:none;border-top:1px solid var(--on-dark-line)}
+  .distinct ul li{padding:20px 0;border-bottom:1px solid var(--on-dark-line);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
+  .distinct ul li .mi{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-soft);font-size:1.1rem}
+  .distinct ul li b{font-family:'Newsreader',serif;font-weight:600;color:#fff;font-size:1.18rem;display:block;margin-bottom:4px}
+  .distinct ul li span{color:var(--on-dark-soft);font-size:.95rem}
+  .distinct .framed{height:520px;border:1px solid var(--on-dark-line)}
+
+  /* TEAM */
+  .team{background:var(--paper)}
+  .team-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:center}
+  .team-intro h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:16px}
+  .team-intro .lede{color:var(--soft);font-size:1.06rem;font-family:'Newsreader',serif;font-style:italic;margin-bottom:26px}
+  .team-intro .lede b{font-style:normal;font-weight:600;color:var(--plum)}
+  .team-carousel{position:relative}
+  .team-track{display:flex;gap:30px;overflow-x:auto;scroll-behavior:smooth;padding:8px 4px 14px;scrollbar-width:none}
+  .team-track::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 232px;text-align:center}
+  .pblob{position:relative;width:200px;height:206px;margin:0 auto 18px}
+  .pblob::before{content:"";position:absolute;inset:0;background:var(--plum);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .pblob .ph{position:absolute;inset:15px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:linear-gradient(155deg,var(--plum-deep),var(--ink));display:flex;align-items:center;justify-content:center}
+  .pblob .mono{font-family:'Newsreader',serif;font-style:italic;font-size:2.9rem;color:var(--brass-soft)}
+  .pcard h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.26rem;color:var(--plum);line-height:1.14}
+  .pcard .cred{font-size:.86rem;color:var(--soft);margin-top:6px;line-height:1.4}
+  .pcard .spec{font-size:.78rem;color:var(--brass-deep);margin-top:8px;font-weight:600;letter-spacing:.02em}
+  .pcard .pbio{display:inline-flex;align-items:center;gap:8px;margin-top:15px;background:var(--plum);color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:999px;cursor:pointer;transition:.2s}
+  .pcard .pbio:hover{background:var(--plum-deep);gap:12px}
+  .team-arrows{display:flex;gap:14px;margin-top:22px}
+  .team-arrows button{width:46px;height:46px;border:1px solid var(--line-2);background:transparent;border-radius:50%;cursor:pointer;font-family:'Newsreader',serif;font-size:1.2rem;color:var(--plum);transition:.2s}
+  .team-arrows button:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--plum);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS & INSURANCE — fees=null, insurance mode=access */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--plum-ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* FAQ */
+  .faq{background:var(--bone-2)}
+  .faq-wrap{max-width:840px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line-2)}
+  .faq-item:first-child{border-top:1px solid var(--line-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Newsreader',serif;font-size:1.3rem;font-weight:500;color:var(--ink)}
+  .faq-q .pl{color:var(--brass-deep);font-size:1.4rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 28px;color:var(--soft);font-size:1.02rem;max-width:66ch}
+
+  /* CONTACT */
+  .contact{background:var(--plum-ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.3) sepia(.08)}
+
+  /* FOOTER */
+  footer{background:var(--plum-ink);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#8a8090}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--plum-ink);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1100px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:340px;order:1;padding:0}.hero-photo .framed{position:relative;height:100%}
+    .about-grid,.distinct-grid,.contact-grid,.team-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.step-grid,.acc-top,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .sec{padding:74px 0}.about .framed.main,.distinct .framed{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    h1,h2,h3{overflow-wrap:anywhere}
+    .reveal{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col,.acc-note{padding-left:26px;padding-right:26px}.creds .sep{display:none}.conds span{font-size:.98rem}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#2B1F3B;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="mailto:contact@theraedagroup.com">contact@theraedagroup.com</a>
+    <span class="addr">500 W 6th Street, Ste 400 · Austin, TX 78701</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">R</span><span><span class="bt">The Raeda Group</span><small>PLLC · Austin, TX</small></span></a>
+    <nav class="nav-links">
+      <a href="#intro">Welcome</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Specialties <i class="car">&rsaquo;</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#services">Individual</a>
+          <a href="#services">Couples &amp; Family</a>
+          <a href="#services">Testing</a>
+          <a href="#distinct">Athletics</a>
+          <a href="#distinct">Life Coach</a>
+        </div></div>
+      </div>
+      <a href="#team">Our Team</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#intro">Welcome</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#distinct">Athletics &amp; Coaching</a>
+  <a href="#team">Our Team</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Downtown Austin · Independently licensed clinicians</p>
+          <h1>Therapeutic coaching for <em>advanced wellness.</em></h1>
+          <p class="lead">A leading provider of therapy and counseling in Austin — individual therapy, couples counseling, psychological testing, and therapeutic coaching. Warm yet challenging, personalized, evidence-based.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Free 15-min consultation <span class="ar">&rarr;</span></a>
+            <a href="#team" class="btn btn-light">Meet our clinicians</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="Downtown Austin at warm afternoon light" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="Inside our Austin counseling office" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Independently licensed</b> clinicians</span><span class="sep"></span>
+        <span><b>In-person</b> &middot; telehealth &middot; telephone</span><span class="sep"></span>
+        <span>PsyPact provider</span><span class="sep"></span>
+        <span>Downtown Austin, TX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> Who we are <span class="rule"></span></p>
+        <h2>A leading Austin practice for therapy &amp; coaching</h2>
+        <p class="lede-p"><span class="cap">T</span>he Raeda Group, PLLC is a leading provider of therapy and counseling services in Austin, offering individualized care through individual therapy, couples counseling, psychological testing, group therapy, and therapeutic coaching. Our independently licensed clinicians use evidence-based techniques to help adults, children, couples, families, and athletes build resilience, improve relationships, and create meaningful change.</p>
+        <p style="margin-top:18px;color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.05rem">Our name reflects our purpose — <b style="color:var(--plum);font-style:normal">Raeda</b> is Latin for <em>coach</em>, representing our commitment to guiding clients toward stronger mental health, greater clarity, and a higher quality of life.</p>
+        <div class="mini">
+          <div><b>4</b><span>clinicians</span></div>
+          <div><b>PsyPact</b><span>multi-state telehealth</span></div>
+          <div><b>Warm</b><span>yet challenging approach</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/approach.jpg" alt="A warm, light-filled therapy office" /></div>
+        <div class="tag"><b>Raeda</b><span>Latin for <em>coach</em></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> What we offer <span class="rule"></span></p>
+        <h2>Individualized care, evidence-based methods</h2>
+        <p class="lede">Therapy, counseling, psychological testing, and therapeutic coaching — for adults, children, couples, families, and athletes.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Individual Therapy</h3></div>
+          <ul><li>Individual therapy for adults &amp; children</li></ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Couples &amp; Family</h3></div>
+          <ul><li>Couples therapy and relationship counseling</li></ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Psychological Testing</h3></div>
+          <ul><li>Psychological testing and mental health evaluations</li></ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iv.</span><h3>Athletics</h3></div>
+          <ul><li>Sports psychology and performance coaching for athletes</li></ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">v.</span><h3>Therapeutic &amp; Life Coaching</h3></div>
+          <ul>
+            <li>Therapeutic and life coaching</li>
+            <li>Executive &amp; performance coaching for professionals and high performers</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">vi.</span><h3>Group Therapy</h3></div>
+          <ul><li>Group therapy programs <em style="color:var(--soft)">(currently on hold)</em></li></ul>
+        </div>
+      </div>
+      <div class="conditions-band reveal">
+        <p class="label center"><span class="rule"></span> Concerns we support <span class="rule"></span></p>
+        <div class="conds">
+          <span>Anxiety</span><span>Depression</span><span>Trauma recovery</span><span>Disaster Psychology</span><span>Major life transitions</span><span>Relationship difficulties</span><span>Grief &amp; loss</span><span>Professional &amp; performance challenges</span><span>Feeling overwhelmed or ineffective</span><span>Low confidence or discomfort with oneself</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/population.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">You can't stop the waves, but you can learn how to <b>surf.</b></p>
+        <p class="by">The Raeda Group, PLLC · Therapeutic coaching for advanced wellness</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE — Sports Psychology & Coaching -->
+  <section class="sec distinct" id="distinct">
+    <div class="wrap distinct-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 04</span> A specialty within a specialty <span class="rule"></span></p>
+        <h2>Sports Psychology &amp; Therapeutic Coaching</h2>
+        <p class="lede-p">Beyond traditional therapy, our clinicians offer performance-oriented work for athletes, executives, and high performers — using structured, evidence-based approaches focused on motivation, accountability, and skill building.</p>
+        <ul>
+          <li><span class="mi">i.</span><div><b>Sports Psychology</b><span>Performance coaching for athletes of all levels.</span></div></li>
+          <li><span class="mi">ii.</span><div><b>Executive &amp; Performance Coaching</b><span>Coaching for professionals and high performers to optimize focus, leadership, and success.</span></div></li>
+          <li><span class="mi">iii.</span><div><b>PsyPact Provider</b><span>Dr. Mclean is a PsyPact provider, enabling telehealth sessions across participating states.</span></div></li>
+          <li><span class="mi">iv.</span><div><b>Raeda: Latin for <em>Coach</em></b><span>The practice name embodies the mission — blending clinical therapy with goal-oriented coaching.</span></div></li>
+        </ul>
+      </div>
+      <div class="reveal delay-1">
+        <div class="framed arch"><img src="img/interlude.jpg" alt="An athlete on a trail at morning light" /></div>
+        <p class="cap-ed" style="color:var(--on-dark-soft)">Coaching for athletes, executives &amp; high performers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec team" id="team">
+    <div class="wrap team-grid">
+      <div class="team-intro reveal">
+        <p class="label"><span class="num">&#8470; 05</span> Meet our team <span class="rule"></span></p>
+        <h2>Connect with a therapist in Austin</h2>
+        <p class="lede">Our <b>independently licensed clinicians</b> — psychologists and clinical social workers — combine <b>evidence-based techniques</b> with a <b>warm, collaborative</b> style.</p>
+        <a href="#contact" class="btn">Request a consultation <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="team-carousel reveal delay-1">
+        <div class="team-track" id="teamTrack">
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">DM</span></div></div>
+            <h3>Delicia Mclean</h3>
+            <p class="cred">Ph.D., MHA · Licensed Psychologist</p>
+            <p class="spec">Disaster Psychology · Trauma · DBT</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">EO</span></div></div>
+            <h3>Emily O'Shea</h3>
+            <p class="cred">LCSW-S · Licensed Clinical Social Worker–Supervisor</p>
+            <p class="spec">Evening &amp; weekend availability</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">SM</span></div></div>
+            <h3>Scott Melgren</h3>
+            <p class="cred">LCSW · Licensed Clinical Social Worker</p>
+            <p class="spec">Counseling &amp; mental-health support</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+          <div class="pcard">
+            <div class="pblob"><div class="ph"><span class="mono">U</span></div></div>
+            <h3>Ms. Usrey</h3>
+            <p class="cred">The Raeda Group, PLLC</p>
+            <p class="spec">Counseling &amp; mental-health support</p>
+            <a class="pbio">Full bio <span class="ar">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="team-arrows">
+          <button id="teamPrev" aria-label="Previous">&larr;</button>
+          <button id="teamNext" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>Complete the contact form on the website or email <a href="mailto:contact@theraedagroup.com" style="color:var(--plum)">contact@theraedagroup.com</a> to request a free 15-minute telephone consultation. We typically respond within 24 hours, often sooner.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Find your fit</h3><p>Your brief consultation helps you decide if your therapist is the right match — both professionally and personally. We'll help match you with the provider who best fits your needs.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin your work</h3><p>Most new clients are seen within 1–2 weeks, sometimes sooner. Your first session focuses on your concerns, goals, and a plan for moving forward — in person, by secure telehealth, or by telephone.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INSURANCE (fees=null, mode=access) -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Access &amp; sessions <span class="rule"></span></p>
+        <h2>Care that fits your life</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Sessions</p>
+            <ul class="acc-list">
+              <li><b>Free 15-minute consultation</b>A brief phone consultation by request — helps you decide whether your therapist is the right fit.</li>
+              <li><b>In-person, telehealth &amp; telephone</b>In-person sessions at our Austin office, plus secure telehealth and telephone sessions.</li>
+              <li><b>PsyPact telehealth</b>Dr. Mclean is a PsyPact provider, enabling telehealth across participating states.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Availability</p>
+            <ul class="acc-list">
+              <li><b>Dr. Mclean</b>Monday – Thursday, 8 AM – 4 PM.</li>
+              <li><b>Ms. O'Shea &amp; Mr. Melgren</b>Evening and weekend availability in addition to standard daytime hours.</li>
+              <li><b>New clients</b>We strive to offer an appointment within 1–2 weeks — sometimes sooner.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">Reach out and we'll help you understand your options and get started. Complete the contact form or email <strong>contact@theraedagroup.com</strong> — we typically respond within 24 hours, often sooner.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 08</span> Common questions <span class="rule"></span></p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item"><button class="faq-q">How do I schedule an appointment or free consultation?<span class="pl">+</span></button><div class="faq-a"><p>You can schedule a free 15-minute telephone consultation, or appointment, by contacting us through our website or emailing us directly at contact@theraedagroup.com. We'll help match you with the provider who best fits your needs.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What can I expect during the first session?<span class="pl">+</span></button><div class="faq-a"><p>In advance of your first session, your therapist will ask you to complete all first session forms via the Client Portal. That way, all the paperwork is out of the way and the scheduled time can be spent in office talking. Your first session focuses on understanding your concerns, goals, and background. Your therapist will ask questions, explain their approach, and collaborate with you to create a plan for moving forward.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer in-person, virtual, or hybrid sessions?<span class="pl">+</span></button><div class="faq-a"><p>Yes. We offer in-person therapy at our Austin office as well as secure telehealth and telephone sessions for our clients.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How soon can I get an appointment?<span class="pl">+</span></button><div class="faq-a"><p>Availability varies by provider, but we strive to offer new clients an appointment within 1–2 weeks. Sometimes sooner.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I know if I need therapy?<span class="pl">+</span></button><div class="faq-a"><p>Consider therapy if you're experiencing persistent sadness, anxiety, relationship difficulties, major life transitions, or feeling stuck. Therapy isn't just for crisis situations, it's also valuable for personal growth and maintaining mental wellness.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How often will I need to attend therapy?<span class="pl">+</span></button><div class="faq-a"><p>This varies based on client need and preference, but most clients begin with biweekly sessions. As you progress, frequency may decrease to monthly maintenance sessions or PRN.</p></div></div>
+        <div class="faq-item"><button class="faq-q">When do you offer appointments?<span class="pl">+</span></button><div class="faq-a"><p>Delicia Mclean, Ph.D. sees clients Monday–Thursday from 8 AM to 4 PM. Emily O'Shea, LCSW-S, and Scott Melgren, LCSW, offer evening and weekend availability in addition to standard daytime hours.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What is the difference between therapy and coaching?<span class="pl">+</span></button><div class="faq-a"><p>Therapy focuses on emotional healing, mental health concerns, and behavioral patterns. Coaching focuses on performance, motivation, accountability, and skill building. Both use structured, evidence-based approaches.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer executive or performance coaching?<span class="pl">+</span></button><div class="faq-a"><p>Yes. We provide coaching for professionals, executives, and high performers looking to optimize focus, leadership, and success.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you work with athletes or high performers?<span class="pl">+</span></button><div class="faq-a"><p>Absolutely. We offer sports psychology and performance coaching for athletes of all levels.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 09</span> Contact us <span class="rule"></span></p>
+          <h2>Have questions? Set up an appointment.</h2>
+          <p class="lead">If you have questions or would like to schedule an appointment, send us an email. We typically respond within 24 hours, often sooner.</p>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:contact@theraedagroup.com" style="color:inherit">contact@theraedagroup.com</a></b><span>New-client inquiries &amp; general questions</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>500 W 6th Street, Ste 400</b><span>Austin, TX 78701</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Dr. Mclean: Mon–Thu, 8 AM – 4 PM</b><span>Ms. O'Shea &amp; Mr. Melgren: evening &amp; weekend availability</span></div></div>
+          <div class="cline"><span class="cl">Existing</span><div><b>Client Portal</b><span>Existing clients can use the Client Portal or email their provider</span></div></div>
+          <p class="note">Please note that email is not fully confidential, so security cannot be guaranteed.</p>
+          <p style="margin-top:26px"><a href="mailto:contact@theraedagroup.com" class="btn btn-brass">Request a free consultation <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="The downtown Austin building housing our office" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Our downtown office at 500 W 6th Street.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=500+W+6th+Street+Suite+400,+Austin,+TX+78701&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic">R</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">The Raeda Group</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A leading provider of therapy, counseling, psychological testing &amp; coaching in Austin — for adults, children, couples, families, and athletes.</p>
+        <p style="font-size:.9rem;margin-top:14px">500 W 6th Street, Ste 400, Austin, TX 78701<br/>contact@theraedagroup.com</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#intro">Welcome</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#team">Our Team</a>
+        </div>
+        <div>
+          <h5>Specialties</h5>
+          <a href="#services">Individual</a>
+          <a href="#services">Couples &amp; Family</a>
+          <a href="#services">Testing</a>
+          <a href="#distinct">Athletics</a>
+          <a href="#distinct">Life Coach</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact Us</a>
+          <a href="#contact">Location</a>
+          <a href="#faq">FAQs</a>
+          <a href="#access">Client Portal</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with The Raeda Group, PLLC.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),closeBtn=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  closeBtn.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){if(b.getAttribute('href')&&b.getAttribute('href').indexOf('mailto:')===0)return;e.preventDefault()})});
+  (function(){
+    var track=document.getElementById('teamTrack');if(!track)return;
+    function step(){var c=track.querySelector('.pcard');return c?c.getBoundingClientRect().width+30:262;}
+    function atEnd(){return track.scrollLeft+track.clientWidth>=track.scrollWidth-8;}
+    document.getElementById('teamNext').addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'})});
+    document.getElementById('teamPrev').addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
+    var timer=setInterval(tick,4000);function tick(){if(atEnd()){track.scrollTo({left:0,behavior:'smooth'})}else{track.scrollBy({left:step(),behavior:'smooth'})}}
+    track.addEventListener('mouseenter',function(){clearInterval(timer)});
+    track.addEventListener('mouseleave',function(){clearInterval(timer);timer=setInterval(tick,4000)});
+  })();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

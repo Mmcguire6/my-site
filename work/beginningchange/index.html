@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Beginning Change Counseling — Solution-Focused Therapy · Lubbock, TX</title>
+<meta name="description" content="Beginning Change Counseling — a Lubbock, Texas counseling practice led by Chris Medley. Solution-focused, person-centered therapy with flexible evening and Saturday availability for clients with busy schedules." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand: deep forest + warm brass on bone — deepened & warmed */
+    --forest:#1a5e4a;--forest-deep:#114436;--ink:#0d3028;--ink-2:#08201a;
+    --brass:#b8923c;--brass-deep:#8e7029;--brass-soft:#e0c887;
+    --bone:#f4f0e6;--bone-2:#ece5d2;--paper:#faf6ec;--sand:#e0d4b8;
+    --body:#2b2b20;--soft:#857d68;--line:#d8cfb8;--line-2:#c5bb9c;
+    --on-dark:#ece5d2;--on-dark-soft:#a8b0a6;--on-dark-line:rgba(236,229,210,.16);
+    --shadow:0 32px 64px -40px rgba(13,30,24,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--forest);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--forest);color:#f4f0e6;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(13,30,24,.55)}
+  .btn:hover{background:var(--forest-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#3a2a00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--forest);color:var(--forest)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.12) contrast(1.02) brightness(.98)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(13,48,40,.22),rgba(184,146,60,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(8,20,16,.72);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.14) sepia(.12) contrast(1.02)}
+  .hero-photo .inset{width:190px;height:224px;left:-90px;bottom:42px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.4}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,240,230,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--forest);font-family:'Newsreader',serif;font-style:italic;font-size:1.15rem;flex-shrink:0;background:var(--paper)}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.26rem;line-height:1.02}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--forest)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--forest);color:var(--forest)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.6rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:640px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:498px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.14) sepia(.14) contrast(1.03) brightness(.98)}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,229,210,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--forest-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:540px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:230px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.5rem;color:var(--forest);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--forest);margin:8px 12px 0 0}
+  .about .mini{margin-top:28px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--forest);display:block;line-height:1.1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* APPROACH (services) */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:9px 0 9px 20px;position:relative;font-size:1.02rem;color:var(--body);border-bottom:1px solid var(--line)}
+  .svc-cat li:last-child{border-bottom:0}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:17px;width:7px;height:7px;background:rgba(26,94,74,.18);border:1px solid var(--forest);transform:rotate(45deg)}
+  .svc-inline{margin-top:50px;text-align:center}
+  .svc-inline .label{justify-content:center}
+  .svc-inline .row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 12px;max-width:760px;margin:0 auto}
+  .svc-inline .row span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--forest-deep);padding:0 4px}
+  .svc-inline .row span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .svc-inline .row span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:grayscale(.2) sepia(.18) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(13,30,24,.5),rgba(8,32,26,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE — Flexible Scheduling */
+  .flex-sec{background:var(--paper)}
+  .flex-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:72px;align-items:center}
+  .flex-sec .photo-stack{position:relative;padding:28px 28px 0 0}
+  .flex-sec .framed{height:520px;border:1px solid var(--line-2)}
+  .flex-sec .frame-line{position:absolute;top:0;right:0;width:60%;height:60%;border:1px solid var(--brass);z-index:0}
+  .flex-sec ul{list-style:none;margin:26px 0 32px;border-top:1px solid var(--line)}
+  .flex-sec li{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:baseline}
+  .flex-sec li .mi{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.2rem;min-width:28px}
+  .flex-sec li h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.32rem;color:var(--ink);margin-bottom:4px}
+  .flex-sec li p{font-size:.96rem;color:var(--soft)}
+
+  /* TEAM — single founder card */
+  .team{background:var(--bone-2)}
+  .founder{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center;background:var(--paper);border:1px solid var(--line-2);padding:54px}
+  .founder .portrait{position:relative}
+  .founder .portrait .pblob{position:relative;width:100%;aspect-ratio:1/1.08;max-width:340px;margin:0 auto}
+  .founder .portrait .pblob::before{content:"";position:absolute;inset:0;background:var(--forest);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .founder .portrait .pblob .ph{position:absolute;inset:14px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:var(--ink)}
+  .founder .portrait .pblob .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 26%;filter:grayscale(.12) sepia(.1) contrast(1.02)}
+  .founder .copy .label{margin-bottom:18px}
+  .founder h3{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(2rem,3.4vw,2.6rem);color:var(--ink);line-height:1.05}
+  .founder .role{margin-top:8px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-deep)}
+  .founder .bio{margin-top:20px;font-size:1.04rem;color:var(--body)}
+  .founder .spec-line{margin-top:18px;font-family:'Newsreader',serif;font-style:italic;font-size:1rem;color:var(--forest-deep);border-top:1px solid var(--line);padding-top:18px}
+  .founder .spec-line b{font-style:normal;font-weight:600;color:var(--brass-deep);display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;font-family:'Source Sans 3',sans-serif}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--forest);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS & PAYMENT */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:18px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:3px}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem;word-break:break-word}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:20px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:430px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.3) sepia(.08)}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#857d68}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:330px;order:1;padding:24px 0}.hero-photo .framed{position:relative;height:100%}
+    .about-grid,.contact-grid,.flex-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack,.flex-sec .photo-stack{order:-1;padding:0}
+    .svc-grid,.step-grid,.acc-top,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .founder{grid-template-columns:1fr;padding:38px 28px;gap:36px}
+    .sec{padding:74px 0}.about .framed.main,.flex-sec .framed{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    h1,h2,h3{overflow-wrap:anywhere}
+    .reveal{transform:none}.reveal.in{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col{padding:34px 26px}.acc-note{padding:22px 26px}.creds .sep{display:none}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#0d3028;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="mailto:chris@beginningchange.com">chris@beginningchange.com</a>
+    <span class="addr">Lubbock, Texas · Evenings &amp; Saturdays available</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">&#8612;</span><span><span class="bt">Beginning Change</span><small>Counseling · Lubbock, TX</small></span></a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#flex">Scheduling</a>
+      <a href="#contact">Location</a>
+      <a href="#fees">Online Payment</a>
+      <a href="#contact" class="nav-cta">Appointments</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#approach">Approach</a>
+  <a href="#flex">Scheduling</a>
+  <a href="#contact">Location</a>
+  <a href="#fees">Online Payment</a>
+  <a href="#contact">Appointments</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Lubbock, Texas · Solution-focused therapy</p>
+          <h1>A safe place to <em>feel heard.</em></h1>
+          <p class="lead">Beginning Change Counseling is the vision of Chris Medley — a solution-focused, person-centered practice helping clients in Lubbock take charge of their lives, with the kind of evening and Saturday availability a busy schedule actually needs.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+            <a href="#about" class="btn btn-light">About Chris</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A moment of calm in the West Texas afternoon light" /></div>
+          <div class="inset arch"><img src="img/gbp-interior-1.jpg" alt="Inside the Beginning Change counseling office" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Solution-focused</b> &amp; person-centered</span><span class="sep"></span>
+        <span>Lubbock, TX</span><span class="sep"></span>
+        <span><b>Evenings &amp; Saturdays</b> by appointment</span><span class="sep"></span>
+        <span>Beginning Change, LLC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> About Beginning Change <span class="rule"></span></p>
+        <h2>Built on availability &amp; the dignity of being heard</h2>
+        <p class="lede-p"><span class="cap">B</span>eginning Change Counseling is the vision of Chris Medley. After a decade and a half of working in the University system, Chris saw the growing need for support in the Lubbock community. The goal is to provide autonomy to the client and help the client take charge of their life — because no one should have to feel helpless or voiceless.</p>
+        <div class="mini">
+          <div><b>15 yrs</b><span>in the University system</span></div>
+          <div><b>Evenings<br/>&amp; Saturdays</b><span>outside the standard 8–5</span></div>
+          <div><b>Solution-<br/>focused</b><span>person-centered in session</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/gbp-interior-1.jpg" alt="The Beginning Change counseling office in Lubbock" /></div>
+        <div class="tag"><b>A safe place</b><span>for the client to feel heard</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH / SERVICES -->
+  <section class="sec services" id="approach">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> What we work on <span class="rule"></span></p>
+        <h2>Specialties &amp; therapeutic approaches</h2>
+        <p class="lede">Chris works with clients on just about any change they might want to make — drawing on advanced training in Motivational Interviewing alongside several evidence-based approaches.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Specialties</h3></div>
+          <ul>
+            <li>Depression</li>
+            <li>Anxiety</li>
+            <li>Grief &amp; loss</li>
+            <li>Substance use</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Therapeutic Approaches</h3></div>
+          <ul>
+            <li>Motivational Interviewing</li>
+            <li>Cognitive Behavioral Therapy</li>
+            <li>Narrative Therapy</li>
+            <li>Mindfulness</li>
+            <li>Rational Emotive Behavioral Therapy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc-inline reveal">
+        <p class="label center" style="margin-top:50px"><span class="rule"></span> A practice for <span class="rule"></span></p>
+        <div class="row">
+          <span>Busy schedules</span><span>Solution-focused work</span><span>Person-centered care</span><span>Lubbock &amp; surrounding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/population.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">No one should have to feel helpless or voiceless. At Beginning Change we want to provide a <b>safe place for the client to feel heard.</b></p>
+        <p class="by">Beginning Change Counseling · Lubbock, Texas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE: FLEXIBLE SCHEDULING -->
+  <section class="sec flex-sec" id="flex">
+    <div class="wrap flex-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 04</span> Flexible scheduling <span class="rule"></span></p>
+        <h2 style="font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500">Care that fits a real schedule</h2>
+        <p class="lede-p" style="margin-top:14px">Chris aims to accommodate clients that might have a busy schedule and need to schedule appointments outside of the standard 8:00 am to 5:00 pm office hours.</p>
+        <ul>
+          <li><span class="mi">i.</span><div><h3>Evening appointments</h3><p>Available outside standard 8:00 am – 5:00 pm office hours.</p></div></li>
+          <li><span class="mi">ii.</span><div><h3>Saturday appointments</h3><p>Weekend availability for clients with busy weekday schedules.</p></div></li>
+        </ul>
+        <a href="#contact" class="btn">Request a time <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <span class="frame-line"></span>
+        <div class="framed arch"><img src="img/interlude.jpg" alt="A quiet corner inside the practice" /></div>
+        <p class="cap-ed">Evenings &amp; Saturdays — by appointment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM — single founder card -->
+  <section class="sec team" id="team">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> Meet your counselor <span class="rule"></span></p>
+        <h2>One steady person across every session</h2>
+        <p class="lede">A small, solo practice — every client works directly with Chris.</p>
+      </div>
+      <div class="founder reveal">
+        <div class="portrait">
+          <div class="pblob"><div class="ph"><img src="img/gbp-team-group-1.jpg" alt="Chris Medley, founder of Beginning Change Counseling" /></div></div>
+        </div>
+        <div class="copy">
+          <p class="label"><span class="num">i.</span> Founder &amp; counselor <span class="rule"></span></p>
+          <h3>Chris Medley</h3>
+          <p class="role">Beginning Change Counseling, Lubbock</p>
+          <p class="bio">Chris works with clients on just about any change that they might want to make. Some areas where he has the most experience are depression, anxiety, grief and loss, and substance use. Chris is solution focused and person centered in session, with advanced training in Motivational Interviewing alongside Cognitive Behavioral Therapy, Narrative Therapy, Mindfulness, and Rational Emotive Behavioral Therapy.</p>
+          <p class="spec-line"><b>Areas of focus</b>Depression · Anxiety · Grief &amp; loss · Substance use · Motivational Interviewing · CBT · Narrative Therapy · Mindfulness · REBT</p>
+          <p style="margin-top:26px"><a href="#contact" class="btn btn-brass">Request an appointment <span class="ar">&rarr;</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Three quiet steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>Email Chris directly, or complete the contact form on the Appointments page with your name, phone, email, and a short note.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Find a time that works</h3><p>Standard daytime hours, plus evenings and Saturdays for clients with busy weekday schedules.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin the work</h3><p>Solution-focused, person-centered sessions in a safe place where the client is heard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & PAYMENT -->
+  <section class="sec access" id="fees">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Access &amp; payment <span class="rule"></span></p>
+        <h2>Straightforward access to care</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Access</p>
+            <ul class="acc-list">
+              <li><b>Solo private practice</b>Every session is directly with Chris — continuity from the first appointment forward.</li>
+              <li><b>Flexible hours</b>Evening appointments and Saturday appointments available alongside standard 8:00 am – 5:00 pm hours.</li>
+              <li><b>All clients</b>Beginning Change works with clients across the Lubbock community.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Online payment</p>
+            <ul class="acc-list">
+              <li><b>Online payment portal</b>Existing clients can submit invoice payments through the Online Payment page on the site.</li>
+              <li><b>What you'll need</b>Your invoice number, the number of session hours, your contact details, and your card information.</li>
+              <li><b>Questions about cost</b>Reach out through the appointment form and Chris will walk you through it.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">Have a question, or would like to book an appointment? <strong>The best first step is the contact form on the Appointments page</strong> — your name, phone, email, and a short note on what you're hoping to work on.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 08</span> Appointments <span class="rule"></span></p>
+          <h2>Have a question — or ready to book?</h2>
+          <p class="lead">The best way to reach Beginning Change is by email or through the contact form on the Appointments page.</p>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:chris@beginningchange.com" style="color:inherit">chris@beginningchange.com</a></b><span>New-client inquiries &amp; general questions</span></div></div>
+          <div class="cline"><span class="cl">Inquire</span><div><b>Appointments contact form</b><span>First name, last name, phone, email, questions/comments</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Evening &amp; Saturday appointments</b><span>Outside the standard 8:00 am – 5:00 pm</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>Lubbock, Texas</b><span>See the Location page for office details</span></div></div>
+          <div class="cline"><span class="cl">Existing</span><div><b>Online payment portal</b><span>Submit invoice payments on the Online Payment page</span></div></div>
+          <p class="note">A safe place for the client to feel heard.</p>
+          <p style="margin-top:26px"><a href="mailto:chris@beginningchange.com" class="btn btn-brass">Email Chris <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="A welcoming entry into the counseling office" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Welcome — come in.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Beginning Change Counseling — Lubbock, TX" src="https://www.google.com/maps?q=Beginning+Change+Counseling+Lubbock+TX&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic">&#8612;</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Beginning Change</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A solo counseling practice in Lubbock, Texas — solution-focused, person-centered, with evening &amp; Saturday availability.</p>
+        <p style="font-size:.9rem;margin-top:14px">Lubbock, Texas<br/>chris@beginningchange.com</p>
+        <p style="font-size:.8rem;margin-top:12px;color:#857d68">Copyright 2026 © Beginning Change, LLC</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#top">Home</a>
+          <a href="#about">About</a>
+          <a href="#approach">Approach</a>
+          <a href="#flex">Scheduling</a>
+        </div>
+        <div>
+          <h5>Information</h5>
+          <a href="#team">Meet Chris</a>
+          <a href="#start">Getting Started</a>
+          <a href="#fees">Online Payment</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Appointments</a>
+          <a href="#contact">Location</a>
+          <a href="mailto:chris@beginningchange.com">Email Chris</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Beginning Change Counseling, LLC.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var prm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prm){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

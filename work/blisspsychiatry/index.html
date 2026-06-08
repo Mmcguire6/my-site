@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Bliss Psychiatry — Outpatient Psychiatry · Iowa · Kansas · North Dakota</title>
+<meta name="description" content="Bliss Psychiatry — high quality outpatient psychiatric care across the lifespan. In-person and HIPAA-compliant telehealth appointments, often within a week. Serving Iowa, Kansas, and North Dakota." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand teal — deepened to forest-teal + warm brass on bone */
+    --teal:#1c5c5c;--teal-deep:#143f3f;--teal-ink:#0d2020;--teal-2:rgba(28,92,92,.28);
+    --brass:#b8935a;--brass-deep:#917139;--brass-soft:#e2c799;
+    --bone:#f4efe6;--bone-2:#ebe3d3;--paper:#fbf6ec;--sand:#e0d4bc;
+    --ink:#2b2b28;--body:#54514a;--soft:#857f72;--line:#dccfb8;--line-2:#cbbb9e;
+    --on-dark:#ece4d4;--on-dark-soft:#a8b4ad;--on-dark-line:rgba(236,228,212,.18);
+    --shadow:0 32px 64px -40px rgba(13,32,32,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink);overflow-wrap:anywhere}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--teal);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--teal);color:#f4efe6;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(13,32,32,.5)}
+  .btn:hover{background:var(--teal-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#2d1f00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--teal-ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.12) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(13,32,32,.22),rgba(184,147,90,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(8,18,18,.7);background:var(--teal-ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.12) contrast(1.02)}
+  .hero-photo .inset{width:196px;height:230px;left:-86px;bottom:48px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:60px;opacity:.42}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--teal-ink);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}
+  .topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1rem;flex-shrink:0;background:#fff;font-family:'Newsreader',serif;font-style:italic;font-weight:600}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;line-height:1;letter-spacing:.005em}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:4px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--teal)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--teal);color:var(--teal)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--teal-ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.5rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--teal-ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:640px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:498px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.18) sepia(.14) contrast(1.03) brightness(.98);object-position:60% 30%}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,228,212,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:44ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--teal-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:520px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:230px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--teal);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--teal);margin:8px 12px 0 0}
+  .about .mini{margin-top:28px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--teal);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--teal-2);border:1px solid var(--teal);transform:rotate(45deg)}
+  .cond-band{margin-top:66px;text-align:center}
+  .cond-band .label{justify-content:center}
+  .cond-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:880px;margin:0 auto}
+  .cond-list span{font-family:'Newsreader',serif;font-size:1.08rem;color:var(--teal-deep);padding:0 4px}
+  .cond-list span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .cond-list span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--teal-ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:grayscale(.25) sepia(.18) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(13,32,32,.5),rgba(13,32,32,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* STATES (distinctive section) */
+  .states{background:var(--paper)}
+  .st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+  .st-card{padding:48px 38px;border-right:1px solid var(--line);position:relative}
+  .st-card:last-child{border-right:0}
+  .st-card .si{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.05rem;margin-bottom:10px}
+  .st-card h3{font-family:'Newsreader',serif;font-weight:600;font-size:2rem;color:var(--teal-ink);margin-bottom:14px;line-height:1}
+  .st-card h3 small{display:block;font-family:'Source Sans 3',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);margin-top:8px}
+  .st-card p{color:var(--body);font-size:.98rem}
+  .st-card .stag{margin-top:18px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700;display:inline-flex;align-items:center;gap:8px}
+  .st-card .stag::before{content:"";width:18px;height:1px;background:var(--brass)}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--teal);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS & INSURANCE */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--teal-ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--teal-ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline b a{color:#fff}.cline b a:hover{color:var(--brass-soft)}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:400px;border:1px solid var(--on-dark-line)}
+  .locs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:46px;border-top:1px solid var(--on-dark-line);border-bottom:1px solid var(--on-dark-line)}
+  .loc{padding:28px 28px;border-right:1px solid var(--on-dark-line)}
+  .loc:last-child{border-right:0}
+  .loc .lt{font-family:'Source Sans 3',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+  .loc .ln{font-family:'Newsreader',serif;font-size:1.42rem;color:#fff;margin-bottom:6px;line-height:1.12}
+  .loc .la{font-size:.9rem;color:var(--on-dark-soft);line-height:1.6}
+  .map{margin-top:28px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.3) sepia(.08)}
+
+  /* FOOTER */
+  footer{background:var(--teal-ink);color:var(--on-dark-soft);padding:64px 0 30px;border-top:1px solid var(--on-dark-line)}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7c8378}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--teal-ink);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:330px;order:1;padding:18px}
+    .hero-photo .framed{height:100%}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.foot-top,.foot-cols,.step-grid,.acc-top,.st-grid,.locs{grid-template-columns:1fr}
+    .sec{padding:74px 0}.about .framed.main{height:400px}
+    .mission{border-radius:90px 90px 0 0}
+    .inset{display:none}.motif.lg{display:none}
+    .st-card{border-right:0;border-bottom:1px solid var(--line)}.st-card:last-child{border-bottom:0}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}.step:first-child{border-top:0;padding-top:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .loc{border-right:0;border-bottom:1px solid var(--on-dark-line)}.loc:last-child{border-bottom:0}
+    .reveal{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.4rem}.acc-col{padding:34px 26px}.acc-note{padding:22px 26px}.creds .sep{display:none}}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#0D2020;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+15154417944">(515) 441-7944</a>
+    <span class="addr">Iowa · Kansas · North Dakota — In-person &amp; Telehealth</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">B</span><span><span class="bt">Bliss Psychiatry</span><small>Iowa · Kansas · North Dakota</small></span></a>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#states">Locations</a>
+      <a href="#access">Insurance</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#hero">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About Us</a>
+  <a href="#states">Locations</a>
+  <a href="#access">Insurance</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Outpatient psychiatry · Three-state practice</p>
+          <h1>High-quality mental healthcare <em>for all.</em></h1>
+          <p class="lead">Examination, diagnosis, treatment, and ongoing wellness — in person or by HIPAA-compliant telehealth, across the lifespan, with same-week appointments often available.</p>
+          <div class="hero-cta">
+            <a href="https://practice.kareo.com/appointment" target="_blank" rel="noopener" class="btn">Self-schedule online <span class="ar">&rarr;</span></a>
+            <a href="#services" class="btn btn-light">Explore services</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A welcoming psychiatric clinic team" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="A patient meeting with a provider over secure telehealth" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Across the lifespan</b></span><span class="sep"></span>
+        <span><b>In-person</b> &amp; <b>telehealth</b></span><span class="sep"></span>
+        <span><b>Same-week</b> appointments</span><span class="sep"></span>
+        <span>Mon – Fri · 9AM–5PM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> About us <span class="rule"></span></p>
+        <h2>Mental healthcare across the lifespan</h2>
+        <p class="lede-p"><span class="cap">A</span>t Bliss Psychiatry, we believe in mental healthcare for all. We specialize in providing services across the lifespan — we're here for examination, diagnosis, treatment, and ongoing wellness for you and your family. Not feeling well, or just need a second opinion? Life can be stressful; we're here to help you reduce that stress, improve your interpersonal relationships, and lift your overall quality of life.</p>
+        <div class="mini">
+          <div><b>3</b><span>states served</span></div>
+          <div><b>1 wk</b><span>typical access window</span></div>
+          <div><b>HIPAA</b><span>compliant telehealth</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/population.jpg" alt="Families and individuals supported by Bliss Psychiatry" /></div>
+        <div class="tag"><b>For all</b><span>children, adolescents, adults &amp; families</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> What we provide <span class="rule"></span></p>
+        <h2>High-quality, convenient care</h2>
+        <p class="lede">Outpatient psychiatry, telemedicine, and wellness support — delivered without the wait.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Psychiatric Care</h3></div>
+          <ul>
+            <li>Comprehensive assessments</li>
+            <li>Examination, diagnosis &amp; treatment</li>
+            <li>Ongoing wellness &amp; medication management</li>
+            <li>In-person appointments</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Telehealth &amp; Telemedicine</h3></div>
+          <ul>
+            <li>HIPAA-compliant secure video sessions</li>
+            <li>Care for those who can't make it to an office</li>
+            <li>Available across all three states we serve</li>
+            <li>Same-week appointments available</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Access &amp; Scheduling</h3></div>
+          <ul>
+            <li>Appointments within a week</li>
+            <li>Self-scheduling online</li>
+            <li>Same-week appointments available</li>
+            <li>Flexible options to fit your schedule</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iv.</span><h3>Wellness &amp; Community</h3></div>
+          <ul>
+            <li>A team supporting a healthier you</li>
+            <li>Coordination with the services you need</li>
+            <li>A community of care across our locations</li>
+            <li>Working together for a healthier world</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cond-band reveal">
+        <p class="label center"><span class="rule"></span> Conditions we treat <span class="rule"></span></p>
+        <div class="cond-list">
+          <span>ADHD</span><span>Anxiety</span><span>Depression</span><span>PTSD</span><span>Bipolar Depression</span><span>ODD</span><span>Substance Abuse</span><span>&amp; more</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">At Bliss Psychiatry, we believe in <b>mental healthcare for all</b> — across the lifespan, across our communities.</p>
+        <p class="by">Bliss Psychiatry · Iowa · Kansas · North Dakota</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATES (distinctive section) -->
+  <section class="sec states" id="states">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 04</span> Serving three states <span class="rule"></span></p>
+        <h2>Iowa, Kansas &amp; North Dakota</h2>
+        <p class="lede">A multi-state outpatient psychiatry practice — meeting people where they live, with the coverage they already carry.</p>
+      </div>
+      <div class="st-grid reveal">
+        <div class="st-card">
+          <p class="si">i.</p>
+          <h3>Iowa<small>Established location</small></h3>
+          <p>We offer both in-person and telehealth options — we can see anyone in the state of Iowa. We accept <strong style="color:var(--teal-ink)">most</strong> health plans, including Medicaid and Medicare.</p>
+          <span class="stag">In-person &amp; Telehealth</span>
+        </div>
+        <div class="st-card">
+          <p class="si">ii.</p>
+          <h3>Kansas<small>Our newest location</small></h3>
+          <p>Kansas is our newest location. We offer outpatient psychiatry services and accept most insurances, including Medicaid and Medicare, to anyone in the state of Kansas.</p>
+          <span class="stag">In-person &amp; Telehealth</span>
+        </div>
+        <div class="st-card">
+          <p class="si">iii.</p>
+          <h3>North Dakota<small>Telehealth</small></h3>
+          <p>We offer telehealth services in our North Dakota location and accept Blue Cross Blue Shield and Out-of-Network insurance.</p>
+          <span class="stag">Telehealth only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> Getting started <span class="rule"></span></p>
+        <h2>Three simple steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Self-schedule online</h3><p>Click through to our online scheduler to book an in-person or telehealth appointment at a time that works for you — often within the week.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Or reach out directly</h3><p>Prefer to talk to someone first? Call (515) 441-7944 or text (515) 758-7787 — Monday through Friday, 9AM–5PM.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin your care</h3><p>Meet your provider for a comprehensive assessment, then build a plan together for examination, diagnosis, treatment, and ongoing wellness.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INSURANCE -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Access &amp; insurance <span class="rule"></span></p>
+        <h2>Care that's covered &amp; accessible</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Coverage</p>
+            <ul class="acc-list">
+              <li><b>Medicaid</b>Accepted in Iowa and Kansas.</li>
+              <li><b>Medicare</b>Accepted in Iowa and Kansas.</li>
+              <li><b>Blue Cross Blue Shield</b>Accepted in North Dakota.</li>
+              <li><b>Out-of-Network</b>Available in North Dakota.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Access</p>
+            <ul class="acc-list">
+              <li><b>Appointments within a week</b>Same-week scheduling available — your mental health can't wait.</li>
+              <li><b>In-person &amp; telehealth</b>HIPAA-compliant video sessions everywhere we serve.</li>
+              <li><b>Self-scheduling</b>Book online, or reach out by phone or text.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note"><strong>Iowa:</strong> we accept most health plans, including Medicaid and Medicare. <strong>Kansas:</strong> we accept most insurances, including Medicaid and Medicare. <strong>North Dakota:</strong> we accept Blue Cross Blue Shield and Out-of-Network insurance. Reach out and we'll help confirm your coverage.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 07</span> Contact us <span class="rule"></span></p>
+          <h2>Schedule an appointment</h2>
+          <p class="lead">Please contact us directly with any questions, comments, or scheduling inquiries you may have — or self-schedule online any time.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+15154417944">(515) 441-7944</a></b><span>Monday through Friday, 9AM – 5PM</span></div></div>
+          <div class="cline"><span class="cl">Text</span><div><b><a href="sms:+15157587787">(515) 758-7787</a></b><span>Quick questions &amp; existing-client requests</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:contact@blisspsychiatry.org">contact@blisspsychiatry.org</a></b><span>General inquiries</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Mon – Fri, 9AM – 5PM</b><span>Saturday &amp; Sunday: by appointment</span></div></div>
+          <div class="cline"><span class="cl">Fax</span><div><b>(515) 441-7944</b><span>For records &amp; provider communication</span></div></div>
+          <p class="note">Click to self-schedule online — practice.kareo.com/appointment</p>
+          <p style="margin-top:26px"><a href="https://practice.kareo.com/appointment" target="_blank" rel="noopener" class="btn btn-brass">Self-schedule online <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="Bliss Psychiatry office exterior" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Locations across the Midwest &amp; Great Plains.</p></div>
+      </div>
+      <div class="locs reveal">
+        <div class="loc">
+          <p class="lt">Kansas</p>
+          <p class="ln">Overland Park</p>
+          <p class="la">8101 College Boulevard, Suite 100<br/>Overland Park, KS 66210</p>
+        </div>
+        <div class="loc">
+          <p class="lt">Iowa</p>
+          <p class="ln">Des Moines</p>
+          <p class="la">699 Walnut Street, Suite 400<br/>Des Moines, IA 50309</p>
+        </div>
+        <div class="loc">
+          <p class="lt">North Dakota</p>
+          <p class="ln">Fargo</p>
+          <p class="la">19 8th St S, PMB 394<br/>Fargo, ND 58103 · Telehealth</p>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=8101+College+Boulevard+Suite+100,+Overland+Park,+KS+66210&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic;font-weight:600">B</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Bliss Psychiatry</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">High-quality outpatient psychiatric care across the lifespan — in person and by HIPAA-compliant telehealth.</p>
+        <p style="font-size:.9rem;margin-top:14px">(515) 441-7944 · contact@blisspsychiatry.org<br/>Iowa · Kansas · North Dakota</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#hero">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#states">Locations</a>
+        </div>
+        <div>
+          <h5>Information</h5>
+          <a href="#access">Access &amp; Insurance</a>
+          <a href="#start">Getting Started</a>
+          <a href="#mission">Our Mission</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact Us</a>
+          <a href="https://practice.kareo.com/appointment" target="_blank" rel="noopener">Self-Schedule</a>
+          <a href="tel:+15154417944">Call (515) 441-7944</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Bliss Psychiatry.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){
+    var href=b.getAttribute('href')||'';
+    if(href.indexOf('mailto:')===0||href.indexOf('tel:')===0||href.indexOf('sms:')===0||href.indexOf('http')===0)return;
+    e.preventDefault();
+  })});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>El Paso Psychological Services — Consulting Psychology Specialists · El Paso, TX</title>
+<meta name="description" content="El Paso Psychological Services — a consulting psychology firm taking psychology beyond the clinic. Evidence-based consultation, education, and specialized evaluation for individuals, teams, and organizations across El Paso, TX." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand — deep midnight navy + warm brass on bone, deepened & warmed */
+    --ink:#13132a;--ink-2:#1c1c32;--navy:#253256;--navy-deep:#1a233e;--navy-soft:#3b4a72;
+    --brass:#b8925a;--brass-deep:#8e6f3f;--brass-soft:#dec59a;
+    --bone:#f4efe6;--bone-2:#ebe3d3;--paper:#fbf6ec;--sand:#e0d3ba;
+    --body:#3a3a44;--soft:#7a7682;--line:#dccfb8;--line-2:#cdbfa6;
+    --on-dark:#ece4d6;--on-dark-soft:#a9a9b5;--on-dark-line:rgba(236,228,214,.16);
+    --shadow:0 32px 64px -40px rgba(19,19,42,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--navy);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:60px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--navy);color:#fdf3ec;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(19,19,42,.6)}
+  .btn:hover{background:var(--navy-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#2b1f0a}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.18) sepia(.14) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(19,19,42,.22),rgba(184,146,90,.2));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(10,8,22,.7);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.18) sepia(.13) contrast(1.02)}
+  .hero-photo .inset{width:200px;height:236px;left:-90px;bottom:48px;z-index:3;border-color:var(--bone)}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.42}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:44px;height:44px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--navy);font-family:'Newsreader',serif;font-style:italic;font-size:1.15rem;font-weight:600;flex-shrink:0;background:var(--paper)}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.26rem;line-height:1.02;letter-spacing:.005em}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--navy)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--navy);color:var(--navy)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1)}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.6rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:660px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:506px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.2) sepia(.15) contrast(1.03) brightness(.96)}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,228,214,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.3rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:44ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--navy-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:528px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:230px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--navy);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--navy);margin:8px 12px 0 0}
+  .about .mini{margin-top:30px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--navy);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-top{max-width:780px;margin:0 auto 56px;text-align:center}
+  .svc-top h2{font-size:clamp(2.2rem,4vw,3rem);font-weight:500;margin-bottom:18px}
+  .svc-top p{color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.14rem}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 56px}
+  .svc-cat{padding:34px 0 8px;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.45rem;color:var(--ink)}
+  .svc-cat .blurb{font-size:.92rem;color:var(--soft);margin-bottom:18px;line-height:1.6}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:9px 0 9px 18px;position:relative;font-size:.97rem;color:var(--body);border-top:1px solid var(--line)}
+  .svc-cat li:first-child{border-top:0}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:17px;width:7px;height:7px;background:transparent;border:1px solid var(--brass);transform:rotate(45deg)}
+
+  /* CONDITIONS BAND */
+  .areas-band{margin-top:74px;text-align:center}
+  .areas-band .label{justify-content:center}
+  .areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 4px;max-width:880px;margin:0 auto}
+  .areas span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--navy);padding:0 4px}
+  .areas span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .areas span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(.25) sepia(.18) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(19,19,42,.5),rgba(19,19,42,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE: SPECIALIZED EVALUATIONS */
+  .distinct{background:var(--navy-deep);color:var(--on-dark)}
+  .distinct .sec-head h2,.distinct .label{color:#fff}.distinct .label{color:var(--brass-soft)}.distinct .label .num{color:#fff}.distinct .label .rule{background:var(--on-dark-line)}
+  .distinct .sec-head .lede{color:var(--on-dark-soft)}
+  .dist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px;max-width:1000px;margin:0 auto}
+  .dist-row{padding:26px 0;border-top:1px solid var(--on-dark-line);display:flex;gap:20px;align-items:baseline}
+  .dist-row:nth-last-child(-n+2){border-bottom:0}
+  .dist-row .idx{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-soft);font-size:1.15rem;flex-shrink:0;width:30px}
+  .dist-row h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.28rem;color:#fff;margin-bottom:6px}
+  .dist-row p{color:var(--on-dark-soft);font-size:.94rem;line-height:1.6}
+
+  /* TEAM — single founder card */
+  .team{background:var(--paper)}
+  .team-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:64px;align-items:center}
+  .team .photo-stack{position:relative;padding:0 28px 0 0;order:2}
+  .team .framed{height:520px;border:1px solid var(--line-2)}
+  .team .photo-stack .frame-line{position:absolute;top:-22px;right:0;width:60%;height:60%;border:1px solid var(--brass);z-index:-0}
+  .team h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .team .lede{color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.14rem;margin:8px 0 26px}
+  .founder{margin-top:26px;border-top:1px solid var(--line);padding-top:24px}
+  .founder .fn{font-family:'Newsreader',serif;font-weight:600;font-size:1.6rem;color:var(--navy);line-height:1.1}
+  .founder .fc{font-size:.84rem;color:var(--soft);margin-top:4px;letter-spacing:.04em}
+  .founder .fspec{margin-top:14px}
+  .founder .fspec span{font-size:.78rem;color:var(--brass-deep);font-weight:600;letter-spacing:.02em;display:block;line-height:1.7}
+  .founder .fspec span::before{content:"";display:inline-block;width:14px;height:1px;background:var(--brass);vertical-align:middle;margin-right:10px;transform:translateY(-2px)}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--brass);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .emerg{margin-top:22px;font-size:.86rem;color:var(--on-dark-soft);font-family:'Newsreader',serif;font-style:italic;padding:14px 16px;border:1px solid var(--on-dark-line);border-left:2px solid var(--brass)}
+  .contact .emerg b{color:#fff;font-style:normal;font-weight:600}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.4) sepia(.1)}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#8a8090}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:340px;order:1;padding:0}.hero-photo .framed{position:relative;height:100%}
+    .about-grid,.contact-grid,.team-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .team .photo-stack{order:-1;padding:0}
+    .svc-grid,.dist-grid,.step-grid,.acc-top,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .sec{padding:74px 0}.about .framed.main,.team .framed{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col{padding:34px 26px}.acc-note{padding:22px 26px}.creds .sep{display:none}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#1C1C32;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+19159962247">(915) 996-2247</a>
+    <span class="addr">Consulting Psychology Specialists · El Paso, Texas</span>
+    <a class="tb-r" href="#contact">Schedule a consultation &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">E</span><span><span class="bt">El Paso Psychological Services</span><small>Consulting Psychology · El Paso, TX</small></span></a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#evaluations">Evaluations</a>
+      <a href="#director">Director</a>
+      <a href="#contact" class="nav-cta">Booking</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#evaluations">Evaluations</a>
+  <a href="#director">Director</a>
+  <a href="#contact">Booking</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> El Paso, Texas · Consulting psychology specialists</p>
+          <h1>Psychology <em>beyond</em> the clinic.</h1>
+          <p class="lead">A consulting psychology firm adapting evidence-based psychological science to assess, consult, and enhance human performance — for individuals, teams, and organizations.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Schedule an initial consultation <span class="ar">&rarr;</span></a>
+            <a href="#services" class="btn btn-light">Our services</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A professional consultation in a warm modern office" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="One-on-one psychological consultation" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Licensed</b> psychologist-led</span><span class="sep"></span>
+        <span><b>Consulting</b> · education · evaluation</span><span class="sep"></span>
+        <span>Individuals · teams · organizations</span><span class="sep"></span>
+        <span>El Paso, Texas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> Who we are <span class="rule"></span></p>
+        <h2>A new frontier for applied psychology</h2>
+        <p class="lede-p"><span class="cap">O</span>ur mission at EPPS is to take psychology beyond the preconceived notion of the clinical context and into the boundless echelons of psychological consultation. In this new frontier, we construct a dynamic paradigm by incorporating evidenced-based psychological principles to assess, consult, and enhance human performance in any operational and organizational setting.</p>
+        <div class="mini">
+          <div><b>Individuals</b><span>for personal performance</span></div>
+          <div><b>Teams</b><span>for group &amp; peer dynamics</span></div>
+          <div><b>Organizations</b><span>for systemic human factors</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/approach.jpg" alt="Consulting in a warm professional office" /></div>
+        <div class="tag"><b>Est.</b><span>consulting psychology specialists in El Paso</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="svc-top reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> Our services <span class="rule"></span></p>
+        <h2>Psychological services</h2>
+        <p>Consultation, education, and evaluation — three disciplines under one applied-psychology practice.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Psychological Consultation</h3></div>
+          <p class="blurb">We adapt the psychological sciences to collaborate and advise on individual, group, and systemic human factors — delivering tailored, evidence-based strategies.</p>
+          <ul>
+            <li>Individual consultation</li>
+            <li>Group consultation</li>
+            <li>Systemic human factors consultation</li>
+            <li>Psychological assessment</li>
+            <li>Psychological intervention</li>
+            <li>Evidence-based strategies for workplace issues</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Psychological Education</h3></div>
+          <p class="blurb">Through our Psych-Talks, we use a roundtable approach to knowledge-based learning — engaging dialogue, critical insight, and actionable solutions.</p>
+          <ul>
+            <li>Psych-Talks lecture series</li>
+            <li>Roundtable knowledge-based learning</li>
+            <li>Behavior and habit change</li>
+            <li>Individual performance improvement</li>
+            <li>Group and peer dynamics</li>
+            <li>Workplace culture</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Psychological Evaluation</h3></div>
+          <p class="blurb">Specialized evaluations that determine psychological suitability using evidence-based psychometric testing, analysis, and clinical interviews.</p>
+          <ul>
+            <li>Pre-Employment Evaluation</li>
+            <li>Fitness-for-Duty Evaluation</li>
+            <li>Special Duty Evaluation</li>
+            <li>Compensation &amp; Pension Evaluation</li>
+            <li>Pre-Surgical Clearance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="areas-band reveal">
+        <p class="label center"><span class="rule"></span> Subject-matter expertise across <span class="rule"></span></p>
+        <div class="areas">
+          <span>Human performance</span><span>Workplace culture</span><span>Individual performance</span><span>Group &amp; peer dynamics</span><span>Behavior &amp; habit change</span><span>Organizational challenges</span><span>Psychological suitability</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">It is time to rise above the barriers and transcend limitless potential to ensure <b>you, your team, and your organization</b> will compete at the highest levels of any enterprise.</p>
+        <p class="by">El Paso Psychological Services · Consulting Psychology Specialists</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE: SPECIALIZED EVALUATIONS -->
+  <section class="sec distinct" id="evaluations">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 04</span> A specialty within the practice <span class="rule"></span></p>
+        <h2>Specialized evaluations</h2>
+        <p class="lede">Psychological suitability, determined through evidence-based psychometric testing, analysis, and clinical interviews. A full clinical report and documentation can be provided to the requesting authority.</p>
+      </div>
+      <div class="dist-grid reveal">
+        <div class="dist-row"><span class="idx">i.</span><div><h3>Pre-Employment Evaluation</h3><p>Psychological suitability determination for prospective hires.</p></div></div>
+        <div class="dist-row"><span class="idx">ii.</span><div><h3>Fitness-for-Duty Evaluation</h3><p>Evidence-based psychometric testing and clinical interview.</p></div></div>
+        <div class="dist-row"><span class="idx">iii.</span><div><h3>Special Duty Evaluation</h3><p>Assessment for specialized role or assignment readiness.</p></div></div>
+        <div class="dist-row"><span class="idx">iv.</span><div><h3>Compensation &amp; Pension Evaluation</h3><p>Full clinical report and documentation provided to the requesting authority.</p></div></div>
+        <div class="dist-row"><span class="idx">v.</span><div><h3>Pre-Surgical Clearance</h3><p>Psychological clearance evaluation prior to surgery.</p></div></div>
+      </div>
+      <div style="text-align:center;margin-top:42px" class="reveal">
+        <a href="#contact" class="btn btn-brass">Inquire about evaluations <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM — single founder card -->
+  <section class="sec team" id="director">
+    <div class="wrap team-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 05</span> Director of operations <span class="rule"></span></p>
+        <h2>Meet the licensed psychologist behind EPPS</h2>
+        <p class="lede">A practitioner of consulting psychology — bringing assessment, intervention, and evaluation to operational and organizational settings.</p>
+        <div class="founder">
+          <p class="fn">Justin D. Kepple, Psy.D.</p>
+          <p class="fc">Licensed Psychologist · Director of Operations</p>
+          <div class="fspec">
+            <span>Consulting psychology</span>
+            <span>Psychological assessment</span>
+            <span>Human performance enhancement</span>
+            <span>Organizational consultation</span>
+            <span>Psychological evaluation</span>
+          </div>
+          <p style="margin-top:26px"><a href="#contact" class="btn btn-outline">Schedule with the director <span class="ar">&rarr;</span></a></p>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <span class="frame-line"></span>
+        <div class="framed arch"><img src="img/population.jpg" alt="A consulting psychology session with a professional team" /></div>
+        <p class="cap-ed">Applied psychology, at the table with your team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>Call (915) 996-2247 or book online to schedule an initial consultation with the director.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Define the engagement</h3><p>We'll listen to the challenge — individual, team, or organizational — and frame the right consulting, education, or evaluation path.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin the work</h3><p>We deliver tailored, evidence-based strategies — and, where applicable, a full clinical report to the requesting authority.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Access &amp; engagement <span class="rule"></span></p>
+        <h2>How to engage the firm</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Engagements</p>
+            <ul class="acc-list">
+              <li><b>Consulting psychology</b>Individual, group, and systemic human-factors consultation.</li>
+              <li><b>Psychological education</b>Psych-Talks lecture series &amp; roundtable knowledge-based learning.</li>
+              <li><b>Specialized evaluations</b>Pre-employment, fitness-for-duty, special duty, C&amp;P, and pre-surgical clearance.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Working with us</p>
+            <ul class="acc-list">
+              <li><b>Initial consultation</b>Begin by calling (915) 996-2247 or booking online.</li>
+              <li><b>Documentation</b>A full clinical report can be provided to the requesting authority.</li>
+              <li><b>Subject-matter expertise</b>Specialized proficiencies across operational and organizational settings.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">EPPS operates as a <strong>consulting psychology firm</strong> — adapting evidence-based psychological science to operational and organizational settings. For specific engagement terms, contact the office directly.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 08</span> Booking <span class="rule"></span></p>
+          <h2>Schedule an initial consultation</h2>
+          <p class="lead">Schedule by calling (915) 996-2247 or booking online — we'll set the right starting point for you, your team, or your organization.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+19159962247" style="color:inherit">(915) 996-2247</a></b><span>Office line · El Paso Psychological Services</span></div></div>
+          <div class="cline"><span class="cl">Book</span><div><b>Online booking available</b><span>Schedule an initial consultation through the booking portal</span></div></div>
+          <div class="cline"><span class="cl">Serving</span><div><b>El Paso, Texas</b><span>Individuals, teams &amp; organizations</span></div></div>
+          <p class="emerg"><b>Note —</b> If you are currently experiencing a mental health emergency, please go to your local emergency room or call 911 immediately.</p>
+          <p style="margin-top:26px"><a href="tel:+19159962247" class="btn btn-brass">Call (915) 996-2247 <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="The El Paso Psychological Services office" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Consulting psychology, in El Paso.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=El+Paso+Psychological+Services+El+Paso+TX&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic;font-weight:600">E</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">El Paso Psychological Services</span></div>
+        <p style="font-size:.93rem;max-width:38ch;margin-top:14px">A consulting psychology firm taking psychology beyond the clinic — applied psychological science for individuals, teams, and organizations in El Paso, Texas.</p>
+        <p style="font-size:.9rem;margin-top:14px">(915) 996-2247 · El Paso, TX</p>
+        <p style="font-size:.78rem;margin-top:12px;color:#8a8090">©2020 Desert Zephyr LLC</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#director">Director</a>
+          <a href="#evaluations">Evaluations</a>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <a href="#services">Psychological Consultation</a>
+          <a href="#services">Psychological Education</a>
+          <a href="#evaluations">Psychological Evaluation</a>
+          <a href="#start">Getting Started</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Booking</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with El Paso Psychological Services.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){var h=b.getAttribute('href')||'';if(h.indexOf('tel:')===0||h.indexOf('mailto:')===0)return;e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

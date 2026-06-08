@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>One Life Psychiatry — Vilash Reddy, M.D. · Telepsychiatry for Missouri &amp; Kansas</title>
+<meta name="description" content="One Life Psychiatry, led by Vilash Reddy, M.D. — a holistic child & adult telepsychiatry practice serving patients across Missouri and Kansas. Medication, therapy, and alternative remedies, with a focus on educating and empowering each patient." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* deepened from THEIR palette — midnight indigo + brass + teal nod, on warm bone */
+    --ink:#0d1238;--ink-2:#080c26;--indigo:#1a2e8a;--indigo-deep:#111a52;
+    --brass:#b8903f;--brass-deep:#967330;--brass-soft:#e6cd96;
+    --teal:#1a7a8a;--teal-deep:#13606d;
+    --bone:#f4ede0;--bone-2:#ebe3d2;--paper:#fbf6ec;--sand:#e3d6c0;
+    --body:#3a342c;--soft:#857d6f;--line:#d9cdb8;--line-2:#c8baa1;
+    --on-dark:#ece4d6;--on-dark-soft:#a8aec7;--on-dark-line:rgba(236,228,214,.16);
+    --shadow:0 32px 64px -40px rgba(13,18,56,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--brass-deep);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:60px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--indigo);color:#f5f1e5;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(13,18,56,.6)}
+  .btn:hover{background:var(--indigo-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#241a00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2);letter-spacing:.13em}
+  .btn-outline:hover{border-color:var(--indigo);color:var(--indigo);background:transparent}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.12) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(13,18,56,.22),rgba(184,144,63,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(8,12,38,.72);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.12) contrast(1.02)}
+  .inset::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(13,18,56,.2),rgba(184,144,63,.18));mix-blend-mode:multiply}
+  .hero-photo .inset{width:192px;height:226px;left:-86px;bottom:42px;z-index:3;border-color:var(--bone)}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.45}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:740px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,237,224,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:44px;height:44px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--indigo);font-family:'Newsreader',serif;font-style:italic;font-size:1.15rem;flex-shrink:0;background:#fff}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.28rem;line-height:1.02;letter-spacing:.01em}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--indigo)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--indigo);color:var(--indigo)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.5rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:640px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:498px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.18) sepia(.14) contrast(1.03) brightness(.96)}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,228,214,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em;overflow-wrap:anywhere}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--indigo-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:520px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:240px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.5rem;color:var(--indigo);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--indigo);margin:8px 12px 0 0}
+  .about .mini{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--indigo);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* CONDITIONS — quiet ruled list */
+  .conds{background:var(--bone-2)}
+  .conds .areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:920px;margin:0 auto}
+  .conds .areas span{font-family:'Newsreader',serif;font-size:1.06rem;color:var(--indigo-deep);padding:0 4px}
+  .conds .areas span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .conds .areas span:last-child::after{display:none}
+
+  /* SERVICES */
+  .services{background:var(--paper)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:rgba(26,46,138,.18);border:1px solid var(--indigo);transform:rotate(45deg)}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(.22) sepia(.16) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(13,18,56,.5),rgba(8,12,38,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE — Specialized & Integrative Focus Areas */
+  .focus{background:var(--teal-deep);color:var(--on-dark)}
+  .focus-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
+  .focus .label{color:var(--brass-soft)}.focus .label .num{color:#fff}.focus .label .rule{background:var(--on-dark-line)}
+  .focus h2{color:#fff;font-size:clamp(2rem,3.6vw,2.7rem)}
+  .focus p{color:var(--on-dark);margin:16px 0}
+  .focus-list{list-style:none}
+  .focus-list li{padding:22px 0;border-top:1px solid var(--on-dark-line);display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:baseline}
+  .focus-list li:last-child{border-bottom:1px solid var(--on-dark-line)}
+  .focus-list .fi{font-family:'Newsreader',serif;font-style:italic;font-size:1.2rem;color:var(--brass-soft)}
+  .focus-list h3{color:#fff;font-family:'Newsreader',serif;font-weight:600;font-size:1.32rem;margin-bottom:4px}
+  .focus-list small{color:var(--on-dark-soft);font-size:.9rem;line-height:1.55;display:block}
+
+  /* TEAM — single founder card */
+  .team{background:var(--paper)}
+  .team-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
+  .team-intro h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:16px}
+  .team-intro .lede{color:var(--soft);font-size:1.06rem;font-family:'Newsreader',serif;font-style:italic;margin-bottom:26px}
+  .team-intro .lede b{font-style:normal;font-weight:600;color:var(--indigo)}
+  .founder{position:relative;background:var(--bone);border:1px solid var(--line-2);padding:42px;display:grid;grid-template-columns:160px 1fr;gap:34px;align-items:center;box-shadow:var(--shadow)}
+  .founder .mono-frame{position:relative;width:160px;height:170px}
+  .founder .mono-frame::before{content:"";position:absolute;inset:0;background:var(--indigo);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .founder .mono-frame .mono{position:absolute;inset:12px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;background:linear-gradient(155deg,var(--indigo-deep),var(--ink));display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-style:italic;font-size:3.4rem;color:var(--brass-soft)}
+  .founder h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.9rem;color:var(--indigo);line-height:1.05}
+  .founder .cred{font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-deep);margin-top:8px}
+  .founder p{font-size:.98rem;color:var(--body);margin-top:14px;line-height:1.7}
+  .founder .specs{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:18px}
+  .founder .specs span{font-family:'Newsreader',serif;font-style:italic;font-size:.92rem;color:var(--teal-deep)}
+  .founder .specs span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .founder .specs span:last-child::after{display:none}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--indigo);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS & INSURANCE — unified card (no per-session fee list) */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1080px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-col .sub{font-size:.92rem;color:var(--soft);margin-top:6px}
+  .ins-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 18px;margin-top:18px;list-style:none}
+  .ins-grid li{padding:7px 0;border-bottom:1px dotted var(--line);font-size:.92rem;color:var(--body)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.65;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* FAQ */
+  .faq{background:var(--bone-2)}
+  .faq-wrap{max-width:840px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line-2)}
+  .faq-item:first-child{border-top:1px solid var(--line-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Newsreader',serif;font-size:1.3rem;font-weight:500;color:var(--ink)}
+  .faq-q .pl{color:var(--brass-deep);font-size:1.4rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 28px;color:var(--soft);font-size:1.02rem;max-width:66ch}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:108px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem;display:block;margin-top:2px}
+  .cline a{color:#fff}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .urgent{margin-top:36px;padding:22px 26px;background:rgba(184,144,63,.08);border:1px solid var(--on-dark-line);border-left:3px solid var(--brass)}
+  .urgent h4{color:#fff;font-family:'Source Sans 3',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+  .urgent p{font-size:.94rem;color:var(--on-dark);font-family:'Newsreader',serif;font-style:italic;line-height:1.65}
+  .urgent b{color:#fff;font-style:normal;font-weight:500}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7d7a90}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}
+    .hero-photo{height:340px;order:1;padding:24px 0}
+    .hero-photo .framed{position:relative;height:100%}
+    .about-grid,.contact-grid,.focus-grid,.team-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.foot-top,.foot-cols,.step-grid,.acc-top,.ins-grid{grid-template-columns:1fr}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .sec{padding:74px 0}
+    .about .framed.main{height:400px}
+    .mission{border-radius:90px 90px 0 0}
+    .inset{display:none}
+    .motif.lg{display:none}
+    .founder{grid-template-columns:1fr;text-align:center;padding:32px;gap:22px}
+    .founder .mono-frame{margin:0 auto}
+    .founder .specs{justify-content:center}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 20px}
+    .hero h1{font-size:2.45rem}
+    .acc-col{padding:34px 26px}.acc-note{padding:22px 26px}
+    .creds .sep{display:none}
+    .conds .areas span{font-size:.98rem}
+  }
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#111A52;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+18888550947">888-855-0947</a>
+    <span class="addr">Telepsychiatry · serving Missouri &amp; Kansas · M–F 10am–6pm</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">1</span><span><span class="bt">One Life Psychiatry</span><small>Vilash Reddy, M.D.</small></span></a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#conditions">Conditions</a>
+  <a href="#services">Services</a>
+  <a href="#focus">Focus Areas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Telepsychiatry · Missouri &amp; Kansas</p>
+          <h1>Ready for your mental-health <em>transformation?</em></h1>
+          <p class="lead">A holistic child &amp; adult psychiatry practice — medication, therapy, and alternative remedies — built around genuinely caring for, educating, and empowering each patient.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+            <a href="#about" class="btn btn-light">Read our philosophy</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A patient connecting from home with a telepsychiatrist" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="An attentive, collaborative conversation" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span>M.D.</span><span class="sep"></span>
+        <span><b>12 years</b> of experience</span><span class="sep"></span>
+        <span>Children · Adolescents · Adults</span><span class="sep"></span>
+        <span><b>Telepsychiatry</b> · Missouri &amp; Kansas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> About the practice <span class="rule"></span></p>
+        <h2>A holistic approach to mental health</h2>
+        <p class="lede-p"><span class="cap">O</span>ne Life Psychiatry is a holistic approach to mental health, through the use of medication, therapy, and alternative remedies. In the field of child and adult psychiatry, I believe it is vital to <em>genuinely care, educate, and empower</em> patients who are struggling with mental illness. The collaborative approach helps to increase treatment compliance, improves open communication, and validates the patient's wishes — while reducing barriers based on mental-health stigma. Fundamentally, each patient wants to feel connected and understood by their psychiatrist.</p>
+        <div class="mini">
+          <div><b>12 yrs</b><span>of psychiatric experience</span></div>
+          <div><b>Children &amp; Adults</b><span>ages we treat</span></div>
+          <div><b>MO + KS</b><span>states served (telehealth)</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/population.jpg" alt="A young patient in a calm, supported moment" /></div>
+        <div class="tag"><b>Est.</b><span>child &amp; adult psychiatry</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS -->
+  <section class="sec conds" id="conditions">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> Conditions we treat <span class="rule"></span></p>
+        <h2>Care across the spectrum of mental health</h2>
+        <p class="lede">From mood and anxiety disorders through neurodevelopmental conditions — evidence-based treatment for children, adolescents, and adults.</p>
+      </div>
+      <div class="areas reveal">
+        <span>Suicidal Behavior</span><span>Anxiety Disorders</span><span>Depressive Disorders</span><span>Bipolar Disorder</span><span>ADHD</span><span>Oppositional Defiant Disorder</span><span>Autism Spectrum Disorder</span><span>Intellectual Disability</span><span>Obsessive Compulsive Disorder</span><span>Post-Traumatic Stress Disorder</span><span>Schizophrenia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 04</span> What we provide <span class="rule"></span></p>
+        <h2>Whole-person psychiatry, under one roof</h2>
+        <p class="lede">Medication management, therapy, and alternative remedies — analyzed together, weighed honestly, and tailored to each patient.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Child &amp; Adolescent Psychiatry</h3></div>
+          <ul>
+            <li>Child psychiatry</li>
+            <li>Adolescent psychiatry</li>
+            <li>Adolescent mood disorders</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Adult Psychiatry</h3></div>
+          <ul>
+            <li>Adult psychiatry</li>
+            <li>Medication management</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Therapy</h3></div>
+          <ul>
+            <li>Individual therapy</li>
+            <li>Family therapy</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iv.</span><h3>Alternative Medicine &amp; Telepsychiatry</h3></div>
+          <ul>
+            <li>Alternative remedies</li>
+            <li>Holistic mental-health care</li>
+            <li>Telepsychiatry (Missouri &amp; Kansas)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">Medication can only alter chemicals in your brain. Therapy helps alter <b>your patterns of thinking</b> — and gives you a bird's-eye perspective of your life.</p>
+        <p class="by">Vilash Reddy, M.D. · One Life Psychiatry</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE — Focus Areas -->
+  <section class="sec focus" id="focus">
+    <div class="wrap focus-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 05</span> A practice with depth <span class="rule"></span></p>
+        <h2>Specialized &amp; integrative focus areas</h2>
+        <p>Beyond day-to-day psychiatric care, the practice carries depth in adjacent areas — informing how each case is approached, weighed, and explained.</p>
+        <a href="#contact" class="btn btn-brass" style="margin-top:14px">Inquire about a focus area <span class="ar">&rarr;</span></a>
+      </div>
+      <ul class="focus-list reveal delay-1">
+        <li><span class="fi">i.</span><div><h3>Forensic Psychiatry</h3><small>Listed among the clinical focus areas of the practice.</small></div></li>
+        <li><span class="fi">ii.</span><div><h3>Clinical Trials</h3><small>Clinical-trial care included among the practice's service areas.</small></div></li>
+        <li><span class="fi">iii.</span><div><h3>Continuing Medical Education</h3><small>Ongoing CME is a stated part of the practice's commitment.</small></div></li>
+        <li><span class="fi">iv.</span><div><h3>Alternative Medicine</h3><small>Alternative remedies integrated alongside medication and therapy as a core pillar of care.</small></div></li>
+        <li><span class="fi">v.</span><div><h3>12 Years of Experience</h3><small>Drawing on more than a decade in child and adult psychiatry.</small></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TEAM — single founder card -->
+  <section class="sec team" id="team">
+    <div class="wrap team-grid">
+      <div class="team-intro reveal">
+        <p class="label"><span class="num">&#8470; 06</span> Meet your psychiatrist <span class="rule"></span></p>
+        <h2>One physician — your one-on-one care</h2>
+        <p class="lede">A solo practice means the <b>same physician</b> who diagnoses you is the one who treats you, follows up, and explains the cost &amp; benefit of every recommendation.</p>
+        <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="founder reveal delay-1">
+        <div class="mono-frame"><div class="mono">VR</div></div>
+        <div>
+          <h3>Vilash Reddy, M.D.</h3>
+          <p class="cred">Physician · Child &amp; Adult Psychiatrist</p>
+          <p>Founder of One Life Psychiatry. Believes psychiatric disorders are often best addressed with both therapy and medication — analyzing cost and benefit, and providing patients with the medical education to make informed decisions about their own care.</p>
+          <div class="specs">
+            <span>Child psychiatry</span>
+            <span>Adolescent psychiatry</span>
+            <span>Adult psychiatry</span>
+            <span>Holistic / integrative psychiatry</span>
+            <span>Medication management</span>
+            <span>Family therapy</span>
+            <span>Alternative remedies</span>
+            <span>Forensic psychiatry</span>
+            <span>Clinical trials</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+        <p class="lede">This is not online booking — our staff reviews each request and contacts you to set up the appointment.</p>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal">
+          <div class="sn">i.</div>
+          <h3>Submit your intake</h3>
+          <p>Submit your appointment request through the Practice Q portal. All submitted information is HIPAA-compliant and encrypted.</p>
+        </div>
+        <div class="step reveal delay-1">
+          <div class="sn">ii.</div>
+          <h3>We verify your insurance</h3>
+          <p>Our staff reviews your information and verifies your individual plan's network status. All forms must be completed for insurance to be verified.</p>
+        </div>
+        <div class="step reveal delay-2">
+          <div class="sn">iii.</div>
+          <h3>Schedule your first visit</h3>
+          <p>We contact you to set up the appointment — a telepsychiatry visit anywhere in Missouri or Kansas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INSURANCE -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 08</span> Access &amp; insurance <span class="rule"></span></p>
+        <h2>In-network with the majority of insurances</h2>
+        <p class="lede">If you don't see your plan listed below, it may be under an umbrella company such as United Healthcare — please contact us to verify.</p>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> In-network insurances</p>
+            <p class="sub">A partial list — we continue to add contracts with additional carriers.</p>
+            <ul class="ins-grid">
+              <li>Aetna</li><li>Allwell</li><li>Ambetter</li><li>Anthem Blue</li>
+              <li>Blue Cross Blue Shield (KC)</li><li>Blue Care (HMO)</li><li>Blue Medicare Advantage</li><li>Blue Access</li>
+              <li>Blue Select</li><li>Blue Select Plus</li><li>Cenpatico</li><li>ChampVA</li>
+              <li>Cigna / Evernorth</li><li>GEHA</li><li>First Health</li><li>Freedom Network</li>
+              <li>Freedom Network Select</li><li>High Performance Network</li><li>Healthgram</li><li>Healthy Blue</li>
+              <li>Home State Health Plan</li><li>Humana</li><li>Magellan</li><li>Medicaid</li>
+              <li>Medicare</li><li>MO Health Network</li><li>MO Healthnet</li><li>Multiplan</li>
+              <li>Multiplan PHCS</li><li>Optum</li><li>Optimum Choice</li><li>Optimum HealthCare</li>
+              <li>Optum / United Health Care</li><li>Optum Health</li><li>Oscar Health Insurance Co.</li><li>Oscar Health PAR Traditional</li>
+              <li>Preferred Care</li><li>Preferred Care Blue</li><li>Peach State</li><li>Show Me Healthy Kids</li>
+              <li>TRICARE</li><li>United Behavioral Health</li><li>UnitedHealthcare</li><li>United Healthcare Community Plan</li>
+              <li>UHC</li><li>VA Community Care Network (CCN)</li><li>WellCare</li><li>USAA</li>
+              <li>WellChoice PPO</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Access</p>
+            <p class="sub">How and where care is delivered.</p>
+            <ul class="acc-list">
+              <li><b>Telepsychiatry only</b>All visits delivered by secure video — serving patients located in Missouri and Kansas.</li>
+              <li><b>Children, adolescents &amp; adults</b>Contact us to confirm age eligibility.</li>
+              <li><b>Office hours</b>Monday – Friday, 10am – 6pm.</li>
+              <li><b>Active card on file</b>Per our office policy, an active credit card is required to schedule new and follow-up appointments.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note"><strong>A note on coverage —</strong> based on the complexity of insurance we need to verify your individual policy to let you know your network status before scheduling. *We will continually update this list as we finalize contracts with additional carriers. If you have a question, please contact us to verify.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 09</span> Frequently asked <span class="rule"></span></p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item"><button class="faq-q">Do you take insurance?<span class="pl">+</span></button><div class="faq-a"><p>We are currently in-network with a large number of insurances and will continue to add more. If you don't see your insurance listed it may be under an umbrella company such as United Healthcare. Please contact us to verify. Based on the complexity of insurance we would need to verify your individual plan to let you know network status before scheduling an appointment.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you only see patients located in Missouri and Kansas?<span class="pl">+</span></button><div class="faq-a"><p>Yes — we currently only offer tele-psychiatry services for patients located in the State of Missouri and Kansas.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How do I request an appointment?<span class="pl">+</span></button><div class="faq-a"><p>This is not online booking. Submit your intake through the Practice Q portal; our staff will first review your information and contact you to set up an appointment. All forms must be completed for insurance to be verified and an appointment scheduled. Within a week, charts that are not completed will be deleted.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What if I have an urgent or life-threatening situation?<span class="pl">+</span></button><div class="faq-a"><p>If urgent or life-threatening, please dial 988, 911, or go to the nearest ER. For side effects to medications after hours, please text 816-766-0119. For all other non-urgent issues, contact us via the Practice Q messaging portal or call 888-855-0947 during clinic hours.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What is the age range of patients you treat?<span class="pl">+</span></button><div class="faq-a"><p>We see children, adolescents, and adults. Please contact us to confirm age eligibility.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 10</span> Contact us <span class="rule"></span></p>
+          <h2>Start your journey</h2>
+          <p class="lead">Submit a request through the Practice Q portal — our staff will review your information and contact you to schedule.</p>
+          <div class="cline"><span class="cl">Office</span><div><b><a href="tel:+18888550947">888-855-0947</a></b><span>Main line · M–F 10am – 6pm</span></div></div>
+          <div class="cline"><span class="cl">After-hours</span><div><b><a href="sms:+18167660119">Text 816-766-0119</a></b><span>For medication side-effects only</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:support@onelifepsychiatry.com">support@onelifepsychiatry.com</a></b><span>Non-urgent inquiries</span></div></div>
+          <div class="cline"><span class="cl">Fax</span><div><b>346-766-0599</b><span>Records &amp; referrals</span></div></div>
+          <div class="cline"><span class="cl">Where</span><div><b>Telepsychiatry only</b><span>Serving patients located in Missouri &amp; Kansas</span></div></div>
+          <p class="note">All submitted information is HIPAA-compliant and encrypted via the Practice Q portal.</p>
+          <p style="margin-top:26px"><a href="#contact" class="btn btn-brass">Request an appointment <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1">
+          <div class="framed arch"><img src="img/contact.jpg" alt="A calm, well-lit space ready for a telehealth visit" /></div>
+          <p class="cap-ed" style="color:var(--on-dark-soft)">A telehealth visit, from wherever you feel most yourself.</p>
+          <div class="urgent">
+            <h4>If this is an emergency</h4>
+            <p>If urgent or life-threatening, please dial <b>988</b>, <b>911</b>, or go to the nearest ER.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic;margin-right:12px;vertical-align:middle">1</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">One Life Psychiatry</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A holistic child &amp; adult telepsychiatry practice led by Vilash Reddy, M.D. — serving patients across Missouri and Kansas.</p>
+        <p style="font-size:.9rem;margin-top:14px">888-855-0947 · support@onelifepsychiatry.com<br/>Fax 346-766-0599 · M–F 10am – 6pm</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#conditions">Conditions Treated</a>
+          <a href="#focus">Focus Areas</a>
+        </div>
+        <div>
+          <h5>Information</h5>
+          <a href="#access">Access &amp; Insurance</a>
+          <a href="#faq">FAQ</a>
+          <a href="#start">Getting Started</a>
+          <a href="#team">Your Psychiatrist</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact Us</a>
+          <a href="#contact">Request an Appointment</a>
+          <a href="#contact">Practice Q Portal</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with One Life Psychiatry.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

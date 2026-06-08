@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Journey Mental Health PLLC — Telehealth Psychiatry for Iowans 12+ · West Des Moines</title>
+<meta name="description" content="Journey Mental Health PLLC — telehealth psychiatry, evaluations, diagnoses, and medication management for ages 12 and up, from the comfort of home across Iowa." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand — deepened: forest green + warm wheat/brass on warm bone */
+    --ink:#1b2a18;--ink-2:#15200f;--moss:#3d5e35;--moss-deep:#2d4527;--moss-soft:#a8be9a;
+    --wheat:#a87422;--wheat-deep:#85591a;--wheat-soft:#dcbe87;
+    --bone:#f3ede2;--bone-2:#ebe3d1;--paper:#fbf6ec;--sand:#e1d6bf;
+    --body:#3a352d;--soft:#857e6f;--line:#ddd1bb;--line-2:#cdbfa3;
+    --on-dark:#ece4d4;--on-dark-soft:#a7b39e;--on-dark-line:rgba(236,228,212,.18);
+    --shadow:0 32px 64px -40px rgba(27,42,24,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;overflow-wrap:anywhere}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink);overflow-wrap:anywhere}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wheat-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--moss);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--moss);color:#f5f0e2;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(27,42,24,.6)}
+  .btn:hover{background:var(--moss-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-wheat{background:var(--wheat);color:#28190a}.btn-wheat:hover{background:var(--wheat-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--moss);color:var(--moss-deep)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.14) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(27,42,24,.22),rgba(168,116,34,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--wheat);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(15,22,12,.7);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.12) contrast(1.02)}
+  .hero-photo .inset{width:200px;height:236px;left:-86px;bottom:46px;border-color:var(--ink);z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--wheat);width:58px;opacity:.45}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--wheat-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(243,237,226,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--wheat);display:flex;align-items:center;justify-content:center;color:var(--moss);font-size:1.05rem;flex-shrink:0;background:#fff}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.28rem;line-height:1.02}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--moss)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--moss);color:var(--moss)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.5rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:640px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:500px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero .label{color:var(--wheat-soft)}.hero .label .num{color:var(--wheat)}.hero .label .rule{background:rgba(236,228,212,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--wheat-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--moss-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--wheat-soft)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:520px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--wheat);padding:16px 22px;max-width:220px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.5rem;color:var(--moss-deep);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--moss);margin:8px 12px 0 0}
+  .about .mini{margin-top:28px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--wheat);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--moss-deep);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-top{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:46px}
+  .svc-top h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500}
+  .svc-top p{color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.08rem;max-width:42ch}
+  .svc-list{border-top:1px solid var(--line)}
+  .svc-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:26px 4px;border-bottom:1px solid var(--line);transition:.25s}
+  .svc-row:hover{padding-left:14px;background:linear-gradient(90deg,var(--paper),transparent)}
+  .svc-row .idx{font-family:'Newsreader',serif;font-style:italic;font-size:1.2rem;color:var(--wheat-deep);width:36px}
+  .svc-row h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.42rem;color:var(--ink)}
+  .svc-row .meta{font-size:.86rem;color:var(--soft);max-width:34ch;text-align:right}
+  .cond-band{margin-top:60px;text-align:center}
+  .cond-band .label{justify-content:center}
+  .cond{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:880px;margin:0 auto}
+  .cond span{font-family:'Newsreader',serif;font-size:1.06rem;color:var(--moss-deep);padding:0 4px}
+  .cond span::after{content:"·";margin-left:14px;color:var(--wheat)}
+  .cond span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:grayscale(.22) sepia(.16) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(21,32,15,.45),rgba(21,32,15,.86));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--wheat);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--wheat-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* FOUNDER / SINGLE PROVIDER CARD */
+  .founder{background:var(--paper)}
+  .founder-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:64px;align-items:center}
+  .founder-photo{position:relative;padding:28px 28px 0 0}
+  .founder-photo .frame-line{position:absolute;top:0;right:0;width:62%;height:60%;border:1px solid var(--wheat);z-index:0}
+  .founder-photo .pblob{position:relative;width:100%;max-width:380px;aspect-ratio:1/1.06;margin:0 auto}
+  .founder-photo .pblob::before{content:"";position:absolute;inset:0;background:var(--moss);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .founder-photo .pblob .ph{position:absolute;inset:18px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:linear-gradient(155deg,var(--moss-deep),var(--ink-2));display:flex;align-items:center;justify-content:center;color:var(--wheat-soft);font-family:'Newsreader',serif;font-style:italic;font-size:5rem}
+  .founder h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:6px}
+  .founder .cred{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--wheat-deep);margin-bottom:18px}
+  .founder p{margin-bottom:14px}
+  .founder .pquote{font-family:'Newsreader',serif;font-style:italic;font-size:1.12rem;color:var(--ink);padding:18px 0 18px 22px;border-left:2px solid var(--wheat);margin:22px 0 24px;line-height:1.55}
+  .founder .specs{list-style:none;margin:18px 0 30px;border-top:1px solid var(--line)}
+  .founder .specs li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem;color:var(--body)}
+  .founder .specs li .mi{font-family:'Newsreader',serif;font-style:italic;color:var(--wheat-deep);flex-shrink:0}
+
+  /* RESOURCES (distinctive) */
+  .resources{background:var(--bone-2)}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:1000px;margin:0 auto;border-top:1px solid var(--line)}
+  .res-col{padding:42px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+  .res-col:last-child{border-right:0}
+  .res-col .rn{font-family:'Newsreader',serif;font-style:italic;font-size:3rem;color:var(--wheat-deep);line-height:1;margin-bottom:16px}
+  .res-col h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:8px}
+  .res-col p{color:var(--soft);font-size:.96rem;margin-bottom:18px}
+  .res-col .rl{display:inline-flex;align-items:center;gap:8px;font-family:'Source Sans 3',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-deep);border-bottom:1px solid var(--wheat);padding-bottom:4px}
+  .res-col .rl .ar{font-family:'Newsreader',serif;font-style:italic;font-size:1em}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--moss);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2)}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--wheat-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--wheat-soft)}.contact .label .num{color:var(--wheat)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wheat);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .framed{height:100%;min-height:400px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.3) sepia(.08)}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wheat);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7d7a70}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--wheat)}
+  .demo b{color:var(--wheat-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:340px;order:1;padding:30px 0}
+    .about-grid,.founder-grid,.svc-top,.contact-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack,.founder-photo{order:-1;padding:0}
+    .res-grid,.step-grid,.acc-top,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .res-col{border-right:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .step{padding:28px 0 0;border-left:0;border-top:1px solid var(--line)}
+    .step:first-child{padding-top:0;border-top:0}
+    .sec{padding:74px 0}.about .framed.main{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    .svc-row .meta{display:none}
+    .reveal{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col{padding:32px 26px}.acc-note{padding:22px 26px}.creds .sep{display:none}.res-col{padding:34px 26px}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#243820;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+15154970165">(515) 497-0165 · Call or Text</a>
+    <span class="addr">5550 Wild Rose Lane, Suite 400 · West Des Moines, IA 50266</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">&#10047;</span><span><span class="bt">Journey Mental Health</span><small>PLLC · Telehealth Psychiatry · Iowa</small></span></a>
+    <nav class="nav-links">
+      <a href="#intro">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#intro">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#provider">Your Provider</a>
+  <a href="#resources">Resources</a>
+  <a href="#access">Access</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Telehealth across Iowa · A path to wellness</p>
+          <h1>Mental wellness, <em>from the comfort of home.</em></h1>
+          <p class="lead">A telehealth psychiatry clinic providing evaluations, diagnoses, and medication management for Iowans ages 12 and up — wherever you are in the state.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+            <a href="#provider" class="btn btn-light">Meet your provider</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A patient in a warm, comfortable home setting on a telehealth visit" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="A psychiatric nurse practitioner reviewing notes in a quiet office" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Telehealth</b> across Iowa</span><span class="sep"></span>
+        <span><b>Ages 12+</b></span><span class="sep"></span>
+        <span>Mon–Thu <b>8–5</b> · Fri <b>8–12</b></span><span class="sep"></span>
+        <span>West Des Moines, IA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> Who we are <span class="rule"></span></p>
+        <h2>A telehealth psychiatry clinic, on the path with you</h2>
+        <p class="lede-p"><span class="cap">J</span>ourney Mental Health PLLC is dedicated to helping you on your path to mental wellness. Our telehealth psychiatry services offer evaluations, diagnoses, and medication management from the comfort of your own home. Our professional team is here to support you with tailored approaches that address your individual needs — striving to make our services easily accessible and affordable to anyone in need.</p>
+        <div class="mini">
+          <div><b>2019</b><span>PMHNP certification (Allen College)</span></div>
+          <div><b>12+</b><span>ages we serve, statewide</span></div>
+          <div><b>Iowa</b><span>licensed telehealth</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/population.jpg" alt="A teen and parent in a candid, supportive conversation at home" /></div>
+        <div class="tag"><b>PMHNP cert. 2019</b><span>PMHNP-led psychiatric care for Iowa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".12"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".12"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".12"/><path d="M30 60c15-4 22-16 22-30-15 2-22 12-22 30Z" fill="currentColor" fill-opacity=".12"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="svc-top reveal">
+        <div>
+          <p class="label"><span class="num">&#8470; 03</span> What we provide <span class="rule"></span></p>
+          <h2>Telehealth psychiatry, tailored to you</h2>
+        </div>
+        <p>Evaluations, diagnoses, and ongoing medication management — delivered through secure telehealth, anywhere in Iowa.</p>
+      </div>
+      <div class="svc-list reveal">
+        <div class="svc-row"><span class="idx">i.</span><h3>Psychiatric Evaluations</h3><span class="meta">A thorough first-visit assessment to understand what's going on</span></div>
+        <div class="svc-row"><span class="idx">ii.</span><h3>Mental Health Diagnosing</h3><span class="meta">Clarity on the right diagnosis, explained in plain language</span></div>
+        <div class="svc-row"><span class="idx">iii.</span><h3>Medication Management</h3><span class="meta">Ongoing care, monitoring, and adjustment of psychiatric medications</span></div>
+      </div>
+      <div class="cond-band reveal">
+        <p class="label center"><span class="rule"></span> Conditions we treat <span class="rule"></span></p>
+        <div class="cond">
+          <span>Seasonal Depression</span><span>Depression</span><span>Anxiety</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">It is just as important to take care of our <b>mental health</b> as our physical health.</p>
+        <p class="by">Erin Bailey, PMHNP, MSN, RN · Journey Mental Health PLLC</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVIDER (single founder card — staffMode: card, 1 provider) -->
+  <section class="sec founder" id="provider">
+    <div class="wrap founder-grid">
+      <div class="founder-photo reveal">
+        <span class="frame-line"></span>
+        <div class="pblob"><div class="ph"><span>EB</span></div></div>
+        <p class="cap-ed" style="justify-content:center">Your provider for the journey.</p>
+      </div>
+      <div class="reveal delay-1">
+        <p class="label"><span class="num">&#8470; 04</span> Meet your provider <span class="rule"></span></p>
+        <h2>Erin Bailey</h2>
+        <p class="cred">PMHNP · MSN · RN — Psychiatric Mental Health Nurse Practitioner</p>
+        <p>Erin Bailey has been practicing as a nurse since 1996. She specialized and graduated from Allen College in Waterloo, Iowa with a certification as a Psychiatric Nurse Practitioner in 2019. Since then she has continued to grow in her knowledge and experience in treating patients and working alongside other providers in the same profession.</p>
+        <p>She strives to make every patient feel heard, understood, and to involve them as much as possible in their care to help ensure therapeutic treatment success.</p>
+        <p class="pquote">&ldquo;I have grown up in the rural communities of Iowa. I choose to specialize in Mental Health because growing up in this area I realize that there is still quiet a stigma around Mental Health, and I have personally struggled myself, along with loved ones. I look forward to utilizing my skills to help others and their loved ones on their own Mental Health Journeys!&rdquo;</p>
+        <ul class="specs">
+          <li><span class="mi">i.</span> Psychiatric evaluation &amp; diagnosing</li>
+          <li><span class="mi">ii.</span> Medication management</li>
+          <li><span class="mi">iii.</span> Mental health treatment for ages 12 and up</li>
+          <li><span class="mi">iv.</span> Reducing mental health stigma in rural Iowa communities</li>
+        </ul>
+        <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES (distinctive content) -->
+  <section class="sec resources" id="resources">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> Patient resources <span class="rule"></span></p>
+        <h2>Tools &amp; access for our patients</h2>
+        <p class="lede">Screening questionnaires and the patient portal — available to help you prepare and stay connected.</p>
+      </div>
+      <div class="res-grid reveal">
+        <div class="res-col">
+          <div class="rn">i.</div>
+          <h3>PHQ-9 Form</h3>
+          <p>Depression screening questionnaire available for patients.</p>
+          <span class="rl">Available form <span class="ar">&rarr;</span></span>
+        </div>
+        <div class="res-col">
+          <div class="rn">ii.</div>
+          <h3>GAD-7 Form</h3>
+          <p>Anxiety screening questionnaire available for patients.</p>
+          <span class="rl">Available form <span class="ar">&rarr;</span></span>
+        </div>
+        <div class="res-col">
+          <div class="rn">iii.</div>
+          <h3>Patient Portal</h3>
+          <p>Secure online portal via Kareo for existing patients.</p>
+          <a class="rl" href="https://portal.kareo.com/app/new/login" target="_blank" rel="noopener">portal.kareo.com <span class="ar">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal">
+          <div class="sn">i.</div>
+          <h3>Reach out</h3>
+          <p>Call or text the office at (515) 497-0165 — we're always here to answer questions.</p>
+        </div>
+        <div class="step reveal delay-1">
+          <div class="sn">ii.</div>
+          <h3>Schedule your evaluation</h3>
+          <p>We'll set up your first psychiatric evaluation as a telehealth visit, from the comfort of home.</p>
+        </div>
+        <div class="step reveal delay-2">
+          <div class="sn">iii.</div>
+          <h3>Begin your journey</h3>
+          <p>Diagnosis, a tailored plan, and ongoing medication management — with you involved every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS (no per-session price list → access card) -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Access &amp; affordability <span class="rule"></span></p>
+        <h2>Easily accessible care, by design</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Coverage</p>
+            <ul class="acc-list">
+              <li><b>Verify your coverage</b>Call or text the office and we'll help you understand your options before your first visit.</li>
+              <li><b>Iowa-licensed practice</b>Telehealth psychiatric care for Iowans, anywhere in the state.</li>
+              <li><b>Patient portal billing</b>Existing patients can access billing &amp; records through the secure Kareo portal.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Access</p>
+            <ul class="acc-list">
+              <li><b>Telehealth, from home</b>Evaluations, diagnoses, and medication management — wherever you are.</li>
+              <li><b>Flexible weekday hours</b>Monday through Thursday 8am–5pm; Friday 8am–12pm.</li>
+              <li><b>Call or text to start</b>Reach the office directly at (515) 497-0165.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">&ldquo;We strive to make our services <strong>easily accessible and affordable</strong> to anyone in need.&rdquo; — Journey Mental Health PLLC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 08</span> Get in touch <span class="rule"></span></p>
+          <h2>Have questions? We're here.</h2>
+          <p class="lead">Please call or text the office for assistance — we are always here to answer.</p>
+          <div class="cline"><span class="cl">Call / Text</span><div><b><a href="tel:+15154970165" style="color:inherit">(515) 497-0165</a></b><span>New patients &amp; general questions</span></div></div>
+          <div class="cline"><span class="cl">Fax</span><div><b>(949) 695-2400</b><span>For secure document transmission</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>5550 Wild Rose Lane, Suite 400</b><span>West Des Moines, Iowa 50266</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Mon – Thu, 8:00am – 5:00pm</b><span>Friday, 8:00am – 12:00pm</span></div></div>
+          <div class="cline"><span class="cl">Existing</span><div><b>Patient Portal</b><span>portal.kareo.com — secure access for existing patients</span></div></div>
+          <p style="margin-top:26px"><a href="tel:+15154970165" class="btn btn-wheat">Call or text (515) 497-0165 <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="A welcoming home office, ready for a telehealth visit" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">A path to wellness — from the comfort of home.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=5550+Wild+Rose+Lane+Suite+400+West+Des+Moines+Iowa+50266&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--wheat);align-items:center;justify-content:center;color:var(--wheat-soft);margin-right:12px;vertical-align:middle">&#10047;</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Journey Mental Health</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A telehealth psychiatry clinic — evaluations, diagnoses &amp; medication management for Iowans ages 12 and up.</p>
+        <p style="font-size:.9rem;margin-top:14px">5550 Wild Rose Lane, Suite 400<br/>West Des Moines, Iowa 50266<br/>(515) 497-0165 (Call or Text) · Fax (949) 695-2400</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#intro">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#provider">Your Provider</a>
+        </div>
+        <div>
+          <h5>Patient</h5>
+          <a href="#resources">Resources</a>
+          <a href="#resources">PHQ-9 Form</a>
+          <a href="#resources">GAD-7 Form</a>
+          <a href="https://portal.kareo.com/app/new/login" target="_blank" rel="noopener">Patient Portal</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact Us</a>
+          <a href="#access">Access &amp; Affordability</a>
+          <a href="#start">Getting Started</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Journey Mental Health PLLC.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){if(b.tagName==='A'&&(b.getAttribute('href')||'').match(/^(tel:|mailto:|https?:)/))return;e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Tracy Muller Counseling Services, LLC — EMDR &amp; Counseling for Women · Omaha</title>
+<meta name="description" content="Tracy Muller Counseling Services, LLC — EMDR and counseling for women in Omaha, Nebraska. A person-centered, solution-focused practice with Tracy Muller, M.S., Licensed Independent Mental Health Clinician." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand — deepened & warmed: a steel-slate blue + a deep navy ink + an oak-gold accent on bone */
+    --ink:#162533;--ink-2:#0f1c28;--slate:#3d5566;--slate-deep:#2b3e4d;--slate-soft:#7d93a3;
+    --gold:#b8924a;--gold-deep:#8e6f31;--gold-soft:#e4caa1;
+    --bone:#f2e8d9;--bone-2:#e9ddc8;--paper:#fbf4e5;--sand:#dcc9a8;
+    --body:#3a3028;--soft:#857a6e;--line:#d8c9ad;--line-2:#c8b797;
+    --on-dark:#ece2cf;--on-dark-soft:#a8b3bc;--on-dark-line:rgba(236,226,207,.18);
+    --shadow:0 32px 64px -40px rgba(22,37,51,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--slate);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--slate);color:#fbf2e0;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(22,37,51,.5)}
+  .btn:hover{background:var(--ink)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-gold{background:var(--gold);color:#3a2a00}.btn-gold:hover{background:var(--gold-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--slate);color:var(--slate-deep)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15) sepia(.12) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(22,37,51,.2),rgba(184,146,74,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--gold);flex-shrink:0}
+  /* layered "print on top": light mat + real shadow so it floats above */
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(10,18,28,.72);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) sepia(.12) contrast(1.02)}
+  .hero-photo .inset{width:200px;height:240px;left:-86px;bottom:46px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--gold);width:58px;opacity:.45}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--gold-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(242,232,217,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--slate);font-family:'Newsreader',serif;font-style:italic;font-size:1.15rem;flex-shrink:0;background:#fff}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.24rem;line-height:1.02;letter-spacing:.005em}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links>a,.drop-t{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap;cursor:pointer}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--slate-deep)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:6px}
+  .drop-t .car{font-size:.8em}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.2s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;min-width:260px}
+  .dropdown .inner a{display:block;padding:11px 16px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+  .dropdown .inner a:hover{background:var(--bone);color:var(--slate-deep)}
+  .nav-cta{border:0;background:var(--slate);color:#fbf2e0;padding:12px 22px;border-radius:999px;box-shadow:0 10px 18px -12px rgba(22,37,51,.5)}
+  .nav-cta:hover{background:var(--ink);color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.4rem;text-align:center}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:660px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:520px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.16) sepia(.14) contrast(1.03) brightness(.98)}
+  .hero .label{color:var(--gold-soft)}.hero .label .num{color:var(--gold)}.hero .label .rule{background:rgba(236,226,207,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:44ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--slate-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:560px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);padding:16px 22px;max-width:240px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.4rem;color:var(--slate-deep);display:block;line-height:1.05}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.8rem;line-height:.78;font-weight:600;color:var(--slate);margin:8px 12px 0 0}
+  .about .mini{margin-top:30px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--gold);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--slate-deep);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--gold-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:8px 0 8px 20px;position:relative;font-size:1rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;background:transparent;border:1px solid var(--slate);transform:rotate(45deg)}
+  .areas-band{margin-top:62px;text-align:center}
+  .areas-band .label{justify-content:center}
+  .areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:880px;margin:0 auto}
+  .areas span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--slate-deep);padding:0 4px}
+  .areas span::after{content:"·";margin-left:14px;color:var(--gold)}
+  .areas span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;filter:grayscale(.2) sepia(.18) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(15,28,40,.5),rgba(15,28,40,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--gold);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:900px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--gold-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE — FBA band */
+  .distinct{background:var(--slate-deep);color:var(--on-dark)}
+  .distinct-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .distinct .label{color:var(--gold-soft)}.distinct .label .num{color:#fff}.distinct .label .rule{background:var(--on-dark-line)}
+  .distinct h2{color:#fff;font-size:clamp(2rem,3.6vw,2.7rem)}
+  .distinct p{color:var(--on-dark);margin:16px 0}
+  .distinct .framed{height:420px;border:1px solid var(--on-dark-line)}
+  .distinct .ticks{list-style:none;margin:20px 0 28px}
+  .distinct .ticks li{padding:11px 0;border-top:1px solid var(--on-dark-line);color:var(--on-dark);font-size:.98rem;display:flex;gap:14px}
+  .distinct .ticks li .mi{font-family:'Newsreader',serif;font-style:italic;color:var(--gold-soft)}
+  .distinct .ticks li:last-child{border-bottom:1px solid var(--on-dark-line)}
+
+  /* FOUNDER CARD — single provider, NOT a carousel */
+  .founder{background:var(--paper)}
+  .founder-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:64px;align-items:center}
+  .founder .photo-stack{position:relative;padding:0 28px 28px 0}
+  .founder .framed.main{height:560px;border:10px solid var(--bone);box-shadow:var(--shadow)}
+  .founder .framed.main img{filter:grayscale(.12) sepia(.1) contrast(1.02)}
+  .founder .photo-stack .frame-line{position:absolute;bottom:0;left:0;width:60%;height:65%;border:1px solid var(--gold);z-index:-0}
+  .founder h2{font-size:clamp(2rem,3.6vw,2.7rem);font-weight:500;line-height:1.08;margin-bottom:4px}
+  .founder .cred-line{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:24px}
+  .founder .bio{font-size:1.06rem;color:var(--body);margin-bottom:22px}
+  .founder .modalities{margin:22px 0 30px}
+  .modalities .mh{font-family:'Source Sans 3',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--slate);margin-bottom:14px}
+  .modalities ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+  .modalities li{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--ink);padding:10px 0;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:12px}
+  .modalities li:nth-child(-n+2){border-top:1px solid var(--line)}
+  .modalities li .mi{font-style:italic;color:var(--gold-deep);font-size:.92rem}
+  .founder .cap-ed{margin-top:8px}
+
+  /* STEPS */
+  .steps{background:var(--bone)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--gold);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* FEES */
+  .fees{background:var(--paper)}
+  .fees-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;max-width:1080px;margin:0 auto;align-items:stretch}
+  .fee-card{background:var(--bone);border:1px solid var(--line-2);height:100%;display:flex;flex-direction:column}
+  .fee-card .fh{padding:30px 40px 0;display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .fee-card .fh h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.4rem;color:var(--ink)}
+  .fee-card .fh .fi{font-family:'Newsreader',serif;font-style:italic;font-size:1rem;color:var(--gold-deep)}
+  .fee-rows{padding:8px 40px;flex:1}
+  .fee-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .fee-row:last-child{border-bottom:0}
+  .fee-row .fn h4{font-family:'Newsreader',serif;font-weight:600;font-size:1.18rem;color:var(--ink);line-height:1.1}
+  .fee-row .fn span{font-size:.86rem;color:var(--soft)}
+  .fee-row .amt{font-family:'Newsreader',serif;font-weight:600;font-size:1.65rem;color:var(--slate-deep);white-space:nowrap}
+  .ins-card{background:var(--bone);border:1px solid var(--line-2);height:100%;display:flex;flex-direction:column}
+  .ins-card .fh{padding:30px 40px 0;display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .ins-card .fh h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.4rem;color:var(--ink)}
+  .ins-card .fh .fi{font-family:'Newsreader',serif;font-style:italic;font-size:1rem;color:var(--gold-deep)}
+  .ins-lede{padding:14px 40px 4px;font-size:.96rem;color:var(--body);font-family:'Newsreader',serif;font-style:italic}
+  .ins-list{padding:0 40px;list-style:none;flex:1}
+  .ins-list li{padding:11px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body);display:flex;align-items:center;gap:12px}
+  .ins-list li::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+  .ins-note{padding:22px 40px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .ins-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--gold-soft)}.contact .label .num{color:var(--gold)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .locnote{margin-top:18px;font-size:.92rem;color:var(--gold-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.4) sepia(.1)}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:66px 0 32px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:48px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7e7c75}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--gold)}
+  .demo b{color:var(--gold-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1080px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:340px;order:1;padding:0}.hero-photo .framed{position:relative;height:100%;border-width:6px}
+    .about-grid,.distinct-grid,.founder-grid,.contact-grid,.fees-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack,.founder .photo-stack{order:-1;padding:0}
+    .modalities ul,.svc-grid,.step-grid,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .sec{padding:74px 0}.about .framed.main,.founder .framed.main{height:440px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    .reveal{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.4rem}.fee-card .fh,.ins-card .fh,.fee-rows,.ins-list,.ins-lede,.ins-note{padding-left:24px;padding-right:24px}.creds .sep{display:none}h1,h2,h3{overflow-wrap:anywhere}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#1E3040;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+14029153024">(402) 915-3024</a>
+    <span class="addr">9802 Nicholas St, #305 · Omaha, NE 68114</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">TM</span><span><span class="bt">Tracy Muller Counseling</span><small>Services, LLC · Omaha, NE</small></span></a>
+    <nav class="nav-links">
+      <a href="#intro">Home</a>
+      <a href="#about">About</a>
+      <div class="has-drop">
+        <span class="drop-t" tabindex="0">Services <i class="car">&rsaquo;</i></span>
+        <div class="dropdown"><div class="inner">
+          <a href="#services">Counseling for Women's Issues</a>
+          <a href="#services">Relationship Therapy</a>
+          <a href="#services">EMDR Therapy</a>
+          <a href="#fba">FBAs</a>
+        </div></div>
+      </div>
+      <a href="#blog">Blog</a>
+      <a href="#fees">Insurance &amp; Rates</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Request Appointment</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#intro">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Counseling for Women's Issues</a>
+  <a href="#services">Relationship Therapy</a>
+  <a href="#services">EMDR Therapy</a>
+  <a href="#fba">FBAs</a>
+  <a href="#blog">Blog</a>
+  <a href="#fees">Insurance &amp; Rates</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Omaha, Nebraska · Est. solo practice</p>
+          <h1>EMDR &amp; counseling for <em>women</em> in Omaha.</h1>
+          <p class="lead">A person-centered, solution-focused practice — for adults navigating the many ups and downs of life, with care for women's issues at the heart.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+            <a href="#about" class="btn btn-light">Meet Tracy</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/gbp-interior-1.jpg" alt="Reception foyer with navy accent wall and bronze logo at Tracy Muller Counseling Services" /></div>
+          <div class="inset arch"><img src="img/gbp-interior-2.jpg" alt="Therapy room interior with backlit stone water feature and warm wood tones" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Licensed Independent</b> Mental Health Clinician</span><span class="sep"></span>
+        <span>Person-centered &amp; <b>solution-focused</b></span><span class="sep"></span>
+        <span>EMDR · DBT · CBT · Gottman</span><span class="sep"></span>
+        <span>Near Westroads Mall</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> About the practice <span class="rule"></span></p>
+        <h2>Authenticity, acceptance &amp; a strengths-based approach</h2>
+        <p class="lede-p"><span class="cap">A</span>s a therapist I enjoy working with a variety of groups but particularly enjoy working with adults navigating the many ups and downs of life. I primarily work with clients experiencing anxiety, depression, life adjustments, interpersonal conflict, relationship issues, and women's issues — using a person-centered and solution-focused approach to help individuals discover their strengths and overcome daily challenges.</p>
+        <div class="mini">
+          <div><b>M.S.</b><span>Clinical Counseling</span></div>
+          <div><b>LIMHC</b><span>Licensed in Nebraska</span></div>
+          <div><b>EMDR</b><span>Trauma reprocessing</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/gbp-hero-candidate-2.jpg" alt="Inviting lobby with live-edge reception counter, tufted leather sofa, and warm chartreuse seating" /></div>
+        <div class="tag"><b>Person-centered</b><span>strengths-based, solution-focused</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> What I offer <span class="rule"></span></p>
+        <h2>Counseling, EMDR &amp; assessment</h2>
+        <p class="lede">A focused suite of services, anchored in evidence-based modalities and tailored to meet your needs.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Counseling Services</h3></div>
+          <ul>
+            <li>Counseling for Women's Issues</li>
+            <li>Relationship Therapy</li>
+            <li>EMDR Therapy</li>
+            <li>Functional Behavior Assessments (FBAs)</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Treatment Modalities</h3></div>
+          <ul>
+            <li>Dialectical Behavior Therapy (DBT)</li>
+            <li>Cognitive Behavioral Therapy (CBT)</li>
+            <li>The Gottman Method</li>
+            <li>Eye Movement Desensitization Reprocessing (EMDR)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="areas-band reveal">
+        <p class="label center"><span class="rule"></span> Areas of focus <span class="rule"></span></p>
+        <div class="areas">
+          <span>Anxiety</span><span>Depression</span><span>Life adjustments</span><span>Interpersonal conflict</span><span>Relationship issues</span><span>Self-esteem</span><span>Body issues</span><span>Parenting / motherhood</span><span>Work / life balance</span><span>Postpartum</span><span>Menopause</span><span>Traumatic memories</span><span>Distressing experiences</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">Happiness, not in another place but in this place &hellip; not for another hour, but <b>this hour.</b></p>
+        <p class="by">— Walt Whitman</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE — FBAs -->
+  <section class="sec distinct" id="fba">
+    <div class="wrap distinct-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 04</span> A specialty within a specialty <span class="rule"></span></p>
+        <h2>Functional Behavior Assessments</h2>
+        <p>Alongside counseling and EMDR, I provide Functional Behavior Assessments (FBAs) — a distinct, evaluative service offered as part of the practice.</p>
+        <ul class="ticks">
+          <li><span class="mi">i.</span> Listed alongside counseling as a primary service of the practice</li>
+          <li><span class="mi">ii.</span> Conducted by a Licensed Independent Mental Health Clinician</li>
+          <li><span class="mi">iii.</span> Inquire by phone or via the contact form to discuss fit</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">Inquire about FBAs <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="reveal delay-1">
+        <div class="framed arch"><img src="img/approach.jpg" alt="A quiet, warmly lit therapy office prepared for a session" /></div>
+        <p class="cap-ed" style="color:var(--on-dark-soft)">A focused, evaluative service within the practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER CARD — single provider -->
+  <section class="sec founder" id="team">
+    <div class="wrap founder-grid">
+      <div class="photo-stack reveal">
+        <span class="frame-line"></span>
+        <div class="framed main"><img src="img/gbp-team-group-1.jpg" alt="Tracy Muller, M.S., LIMHC — outdoor portrait in warm golden-hour light" /></div>
+        <p class="cap-ed">Tracy Muller, M.S., LIMHC.</p>
+      </div>
+      <div class="reveal delay-1">
+        <p class="label"><span class="num">&#8470; 05</span> Meet your therapist <span class="rule"></span></p>
+        <h2>Tracy Muller</h2>
+        <p class="cred-line">M.S. · Licensed Independent Mental Health Clinician</p>
+        <p class="bio">I have a Masters of Science in Clinical Counseling and am a Licensed Independent Mental Health Clinician. Authenticity and acceptance are essential components of a successful therapeutic relationship — as well as my personal counseling style. Throughout the therapeutic process, my goal is for clients to gain insight about their experiences, emotions, and thoughts to facilitate new responses to old patterns of behavior. <em>Together, we can approach a treatment plan to meet your needs.</em></p>
+        <div class="modalities">
+          <p class="mh">Primary modalities</p>
+          <ul>
+            <li><span class="mi">i.</span> Dialectical Behavior Therapy (DBT)</li>
+            <li><span class="mi">ii.</span> Cognitive Behavioral Therapy (CBT)</li>
+            <li><span class="mi">iii.</span> The Gottman Method</li>
+            <li><span class="mi">iv.</span> EMDR — trauma reprocessing</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn">Request an appointment <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Three simple steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>Call (402) 915-3024 or email connect@tracymullercounselingservices.com to ask a question or share what you're hoping to work on.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Request an appointment</h3><p>View appointment availability, request a time that works for you, and complete intake paperwork to get started.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin together</h3><p>Meet in-person near Westroads Mall, or by telehealth — we'll build a treatment plan together to meet your needs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES & INSURANCE -->
+  <section class="sec fees" id="fees">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Insurance &amp; rates <span class="rule"></span></p>
+        <h2>Clear pricing &amp; in-network options</h2>
+        <p class="lede">Private pay welcomed, with in-network coverage available through several major insurers and employer plans.</p>
+      </div>
+      <div class="fees-grid reveal">
+        <div class="fee-card">
+          <div class="fh"><h3>Rates</h3><span class="fi">i.</span></div>
+          <div class="fee-rows">
+            <div class="fee-row"><div class="fn"><h4>Initial Session</h4><span>First appointment / intake</span></div><div class="amt">$300</div></div>
+            <div class="fee-row"><div class="fn"><h4>Individual Session</h4><span>50 minutes</span></div><div class="amt">$200</div></div>
+            <div class="fee-row"><div class="fn"><h4>Couple / Family Session</h4><span>50 minutes</span></div><div class="amt">$250</div></div>
+            <div class="fee-row"><div class="fn"><h4>Extended Session</h4><span>60 minutes</span></div><div class="amt">$250</div></div>
+          </div>
+          <div class="ins-note">Depending on your current health insurance provider or employee benefit plan, it is possible for services to be covered in full or in part. You may contact your provider to verify how your plan compensates for psychotherapy services.</div>
+        </div>
+        <div class="ins-card">
+          <div class="fh"><h3>In-Network Insurance</h3><span class="fi">ii.</span></div>
+          <p class="ins-lede">I accept private pay and am In Network with the following insurance companies:</p>
+          <ul class="ins-list">
+            <li>Aetna</li>
+            <li>Blue Cross &amp; Blue Shield</li>
+            <li>Optum (United Healthcare / UMR)</li>
+            <li>Firefighters Healthcare Trust</li>
+            <li>First Choice Health / Alliance Network</li>
+            <li>Multiplan</li>
+            <li>Nebraska Medicine Employee Health Plan</li>
+            <li>University of NE Employee Plan</li>
+          </ul>
+          <div class="ins-note">I am considered <strong>Out of Network (OON)</strong> for other insurances. Depending on your provider or employee benefit plan, services may be covered in full or in part. Fees not reimbursed by insurance may be deductible as medical expenses if you itemize deductions on your tax return.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 08</span> Contact &amp; request <span class="rule"></span></p>
+          <h2>Let's get started</h2>
+          <p class="lead">For new clients — view appointment availability, request an appointment, and complete intake paperwork to get started.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+14029153024" style="color:inherit">(402) 915-3024</a></b><span>Office line</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:connect@tracymullercounselingservices.com" style="color:inherit">connect@tracymullercounselingservices.com</a></b><span>Questions &amp; new-client inquiries</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>9802 Nicholas St, #305</b><span>Omaha, Nebraska 68114</span></div></div>
+          <div class="cline"><span class="cl">Existing</span><div><b>Client Portal</b><span>Log on to pay a bill, or request / change an appointment</span></div></div>
+          <div class="cline"><span class="cl">Telehealth</span><div><b>Click the link in your appointment</b><span>Or use the telehealth link provided to you</span></div></div>
+          <p class="locnote">My office is located near the Westroads Mall.</p>
+          <p style="margin-top:26px"><a href="#contact" class="btn btn-gold">Request an appointment <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1">
+          <div class="framed arch"><img src="img/gbp-exterior-1.jpg" alt="The two-story red-brick building housing the Omaha office near Westroads Mall" /></div>
+          <p class="cap-ed" style="color:var(--on-dark-soft)">9802 Nicholas St, near Westroads.</p>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=9802+Nicholas+St+305+Omaha+Nebraska+68114&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);align-items:center;justify-content:center;color:var(--gold-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem">TM</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Tracy Muller Counseling Services, LLC</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">EMDR and counseling for women in Omaha, Nebraska — a person-centered, solution-focused practice.</p>
+        <p style="font-size:.9rem;margin-top:14px">9802 Nicholas St, #305, Omaha, Nebraska 68114<br/>(402) 915-3024 · connect@tracymullercounselingservices.com</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#intro">Home</a>
+          <a href="#about">About</a>
+          <a href="#team">Meet Tracy</a>
+          <a href="#fba">FBAs</a>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <a href="#services">Counseling for Women's Issues</a>
+          <a href="#services">Relationship Therapy</a>
+          <a href="#services">EMDR Therapy</a>
+          <a href="#fees">Insurance &amp; Rates</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Request Appointment</a>
+          <a href="#blog">Blog</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Tracy Muller Counseling Services, LLC.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

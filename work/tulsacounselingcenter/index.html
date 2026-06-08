@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Tulsa Counseling Center — Compassionate, Family-Focused Mental Health Care · Bixby, OK</title>
+<meta name="description" content="Tulsa Counseling Center — a faith-based nonprofit offering individual, couples, family, biblical, and military counseling in Bixby/Tulsa. Help, healing and hope, regardless of cost." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their brand — deepened: navy + gold + a rust accent on warm bone, with brass hairlines */
+    --ink:#141f3e;--ink-2:#0f1830;--navy:#1e3370;--navy-deep:#162555;
+    --gold:#b8902a;--gold-deep:#947122;--gold-soft:#e3c98a;
+    --rust:#a23026;--rust-deep:#82241d;
+    --bone:#f6f1e7;--bone-2:#ede5d3;--paper:#fbf6ec;--sand:#e3d7bd;
+    --body:#3a3025;--soft:#857c6f;--line:#dccfb7;--line-2:#cdbf9f;
+    --on-dark:#ece4d6;--on-dark-soft:#b1b5c5;--on-dark-line:rgba(236,228,214,.18);
+    --shadow:0 32px 64px -40px rgba(20,31,62,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px;overflow-wrap:anywhere}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--navy);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--navy);color:#fdf6e9;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(20,31,62,.5)}
+  .btn:hover{background:var(--navy-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-gold{background:var(--gold);color:#2f2300}.btn-gold:hover{background:var(--gold-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) sepia(.13) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(20,31,62,.22),rgba(184,144,42,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--gold);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(10,16,32,.7);background:var(--ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.13) contrast(1.02)}
+  .hero-photo .inset{width:190px;height:224px;left:-86px;bottom:46px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--gold);width:58px;opacity:.4}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500;overflow-wrap:anywhere}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--ink-2);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--gold-soft)}
+  .topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:1.05rem;flex-shrink:0;background:#fff;font-family:'Newsreader',serif;font-style:italic;font-weight:600}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.2rem;line-height:1.02}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links>a,.drop-t{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap;cursor:pointer;background:none;border:0;padding:0}
+  .nav-links>a:not(.nav-cta):hover,.drop-t:hover{color:var(--navy)}
+  .has-drop{position:relative}
+  .drop-t{display:inline-flex;align-items:center;gap:6px}
+  .drop-t .car{font-size:.8em}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:16px;opacity:0;visibility:hidden;transition:.2s;z-index:70}
+  .has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;visibility:visible}
+  .dropdown .inner{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;min-width:240px}
+  .dropdown .inner a{display:block;padding:10px 14px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+  .dropdown .inner a:hover{background:var(--bone);color:var(--navy)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--navy);color:var(--navy)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.5rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:660px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:498px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.18) sepia(.14) contrast(1.03) brightness(.98);object-position:50% 30%}
+  .hero .label{color:var(--gold-soft)}.hero .label .num{color:var(--gold)}.hero .label .rule{background:rgba(236,228,214,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em;overflow-wrap:anywhere}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--navy-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:520px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);padding:16px 22px;max-width:230px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.45rem;color:var(--navy);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px;overflow-wrap:anywhere}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--navy);margin:8px 12px 0 0}
+  .about .mini{margin-top:24px;display:flex;gap:26px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--gold);padding-top:8px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--navy);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* MISSION SPLIT (deep navy block + light pillar block) */
+  .principle{background:var(--bone-2)}
+  .princ-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-2)}
+  .princ-l{background:var(--navy);color:var(--on-dark);padding:62px 56px}
+  .princ-r{background:var(--paper);padding:62px 56px}
+  .princ-l .label{color:var(--gold-soft)}.princ-l .label .num{color:#fff}.princ-l .label .rule{background:var(--on-dark-line)}
+  .princ-l h3{color:#fff;font-family:'Newsreader',serif;font-style:italic;font-size:1.7rem;font-weight:400;line-height:1.34;margin-bottom:18px}
+  .princ-l p{color:var(--on-dark);font-size:1rem}
+  .princ-r .label{color:var(--gold-deep)}.princ-r .label .num{color:var(--navy)}
+  .princ-r h3{font-family:'Newsreader',serif;font-size:1.5rem;font-weight:600;margin-bottom:14px;color:var(--ink)}
+  .princ-r p{color:var(--body);font-size:1rem}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--gold-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.45rem;color:var(--ink);overflow-wrap:anywhere}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--gold-soft);border:1px solid var(--gold);transform:rotate(45deg)}
+  .conditions-band{margin-top:60px;text-align:center}
+  .conditions-band .label{justify-content:center}
+  .conditions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:820px;margin:0 auto}
+  .conditions span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--navy);padding:0 4px}
+  .conditions span::after{content:"·";margin-left:14px;color:var(--gold)}
+  .conditions span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(.22) sepia(.16) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(15,24,48,.5),rgba(15,24,48,.88));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--gold);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:920px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--gold-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE */
+  .distinctive{background:var(--paper)}
+  .dist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 70px;max-width:980px;margin:0 auto}
+  .dist-row{display:flex;align-items:baseline;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .dist-row .di{width:9px;height:9px;flex-shrink:0;transform:rotate(45deg);background:var(--rust);margin-top:8px}
+  .dist-row h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.35rem;color:var(--ink);margin-bottom:4px}
+  .dist-row p{font-size:.92rem;color:var(--soft);max-width:36ch}
+
+  /* TEAM */
+  .team{background:var(--bone)}
+  .team-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center}
+  .team-intro h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:16px;overflow-wrap:anywhere}
+  .team-intro .lede{color:var(--soft);font-size:1.06rem;font-family:'Newsreader',serif;font-style:italic;margin-bottom:26px}
+  .team-intro .lede b{font-style:normal;font-weight:600;color:var(--navy)}
+  .team-carousel{position:relative}
+  .team-track{display:flex;gap:30px;overflow-x:auto;scroll-behavior:smooth;padding:8px 4px 14px;scrollbar-width:none}
+  .team-track::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 232px;text-align:center}
+  .pblob{position:relative;width:200px;height:206px;margin:0 auto 18px}
+  .pblob::before{content:"";position:absolute;inset:0;background:var(--navy);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .pblob .ph{position:absolute;inset:15px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:linear-gradient(155deg,var(--navy-deep),var(--ink));display:flex;align-items:center;justify-content:center}
+  .pblob .mono{font-family:'Newsreader',serif;font-style:italic;font-size:2.9rem;color:var(--gold-soft)}
+  .pcard h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.22rem;color:var(--navy);line-height:1.14}
+  .pcard .cred{font-size:.84rem;color:var(--soft);margin-top:6px;line-height:1.4}
+  .pcard .spec{font-size:.76rem;color:var(--gold-deep);margin-top:8px;font-weight:600;letter-spacing:.02em}
+  .pcard .pbio{display:inline-flex;align-items:center;gap:8px;margin-top:15px;background:var(--navy);color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:999px;cursor:pointer;transition:.2s}
+  .pcard .pbio:hover{background:var(--navy-deep);gap:12px}
+  .pcard .pbio .ar{display:inline-flex;width:17px;height:17px;border-radius:50%;border:1px solid currentColor;align-items:center;justify-content:center;font-size:.66rem}
+  .team-arrows{display:flex;gap:14px;margin-top:22px}
+  .team-arrows button{width:46px;height:46px;border:1px solid var(--line-2);background:transparent;border-radius:50%;cursor:pointer;font-family:'Newsreader',serif;font-size:1.2rem;color:var(--navy);transition:.2s}
+  .team-arrows button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+  /* STEPS */
+  .steps{background:var(--bone-2)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--rust);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.45rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--gold-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* FAQ */
+  .faq{background:var(--bone-2)}
+  .faq-wrap{max-width:840px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line-2)}
+  .faq-item:first-child{border-top:1px solid var(--line-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Newsreader',serif;font-size:1.3rem;font-weight:500;color:var(--ink)}
+  .faq-q .pl{color:var(--gold-deep);font-size:1.4rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 28px;color:var(--soft);font-size:1.02rem;max-width:66ch}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--gold-soft)}.contact .label .num{color:var(--gold)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500;overflow-wrap:anywhere}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 28px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem;overflow-wrap:anywhere}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--gold-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.35) sepia(.1)}
+
+  /* AFFILIATIONS + FOOTER */
+  .affil{background:var(--bone);border-top:1px solid var(--line);text-align:center}
+  .affil .label{justify-content:center}
+  .affil .row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 38px}
+  .affil .row span{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--navy);font-style:italic}
+  footer{background:var(--ink-2);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7d7d8c}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--ink-2);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--gold)}
+  .demo b{color:var(--gold-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1100px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:330px;order:1;padding:0}.hero-photo .framed{position:relative;height:100%}
+    .about-grid,.contact-grid,.princ-grid,.team-grid{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.dist-grid,.foot-top,.foot-cols,.step-grid,.acc-top{grid-template-columns:1fr}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .princ-grid{gap:0}.princ-l,.princ-r{padding:44px 30px}
+    .sec{padding:74px 0}.about .framed.main{height:400px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    .reveal{transform:none}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.4rem}.creds .sep{display:none}.acc-col{padding:34px 26px}.acc-note{padding:22px 26px}.pcard{flex-basis:240px}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#1A2850;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="home">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+19189360620">(918) 936-0620</a>
+    <span class="addr">8214 East 111th Pl S, Suite 100 · Bixby, OK 74008</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="brand"><span class="mk">T</span><span><span class="bt">Tulsa Counseling Center</span><small>Faith-based nonprofit · Bixby, OK</small></span></a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Book a Service</a>
+      <div class="has-drop">
+        <button class="drop-t" tabindex="0">Programs <i class="car">&rsaquo;</i></button>
+        <div class="dropdown"><div class="inner">
+          <a href="#services">Anger Management</a>
+          <a href="#services">Family Counseling Service</a>
+          <a href="#services">Christian / Biblical</a>
+          <a href="#distinctive">Military &amp; Veterans</a>
+          <a href="#distinctive">Diversion Programs</a>
+        </div></div>
+      </div>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Book a Service</a>
+  <a href="#services">Anger Management</a>
+  <a href="#services">Family Counseling</a>
+  <a href="#services">Christian / Biblical</a>
+  <a href="#team">Our Team</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Bixby · Tulsa · Faith-based nonprofit</p>
+          <h1>Tulsa's home of compassionate &amp; <em>family-focused</em> mental health care.</h1>
+          <p class="lead">A nonprofit dedicated to healing the heart and mind of Tulsa, Oklahoma families and individuals — providing help, healing and hope, regardless of cost.</p>
+          <div class="hero-cta">
+            <a href="tel:+19189360620" class="btn">Call (918) 936-0620 <span class="ar">&rarr;</span></a>
+            <a href="#about" class="btn btn-light">About our practice</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="An Oklahoma family supported in warm natural light" /></div>
+          <div class="inset arch"><img src="img/gbp-interior-1.jpg" alt="A warm counseling room with navy accent wall and inviting lamp light" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Nonprofit</b> organization</span><span class="sep"></span>
+        <span>In-office &amp; <b>teletherapy</b></span><span class="sep"></span>
+        <span>Now <b>taking new clients</b></span><span class="sep"></span>
+        <span>Bixby · Tulsa, OK</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> About us <span class="rule"></span></p>
+        <h2>A faith-based nonprofit — care for everyone</h2>
+        <p class="lede-p"><span class="cap">O</span>ur experience enables us to offer effective outpatient, individual counseling, marriage and relationship counseling, diversion programs, sports psychology, spiritual care and therapy for military members and veterans. We treat a number of mental health disorders, and provide a safe space for individuals, families, and couples. As a nonprofit organization, we do everything we can to ensure whoever needs help, healing and hope, receives it regardless of cost.</p>
+        <div class="mini">
+          <div><b>Eclectic</b><span>standard &amp; faith-informed care</span></div>
+          <div><b>≤ 2 wks</b><span>typical time to first session</span></div>
+          <div><b>Regardless</b><span>of ability to pay</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/approach.jpg" alt="A therapist listening attentively in a warm wood-toned counseling office" /></div>
+        <div class="tag"><b>Help.</b><span>Healing &amp; hope, regardless of cost.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLE / MISSION SPLIT -->
+  <section class="sec principle">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> Our mission &amp; vision <span class="rule"></span></p>
+        <h2>Healing the whole person</h2>
+        <p class="lede">A philosophy rooted in the belief that mental and emotional well-being are integral to overall health.</p>
+      </div>
+      <div class="princ-grid reveal">
+        <div class="princ-l">
+          <p class="label"><span class="num">i.</span> Our mission <span class="rule"></span></p>
+          <h3>&ldquo;Everyone has the ability to lead a happy and fulfilling life.&rdquo;</h3>
+          <p>Therapy can be a powerful tool for achieving balance — and we are committed to educating, empowering and advocating for mental health and wellness.</p>
+        </div>
+        <div class="princ-r">
+          <p class="label"><span class="num">ii.</span> Our vision <span class="rule"></span></p>
+          <h3>The home of compassionate family mental health care</h3>
+          <p>We promote psychological value and provide personal therapy to heal the whole person and improve peace of mind. Our team is bold and authentic — grit, determination, and positive self-regard for the human condition is part of our primary practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 04</span> Book a service <span class="rule"></span></p>
+        <h2>Specialized, personalized therapeutic care</h2>
+        <p class="lede">From individual counseling to guided meditation, marriage counseling, group therapy, art therapy and beyond — we deliver specialized approaches to empower you with help, healing and hope.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Individual &amp; Family</h3></div>
+          <ul>
+            <li>Individual counseling</li>
+            <li>Couples therapy</li>
+            <li>Marriage counseling</li>
+            <li>Family counseling</li>
+            <li>Group therapy</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Specialized Programs</h3></div>
+          <ul>
+            <li>Anger management</li>
+            <li>Christian / Biblical counseling</li>
+            <li>Brief trauma therapy</li>
+            <li>Diversion programs</li>
+            
+            <li>Sports psychology</li>
+            <li>Spiritual care</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iii.</span><h3>Wellness &amp; Creative</h3></div>
+          <ul>
+            <li>Art therapy</li>
+            <li>Guided meditation</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">iv.</span><h3>Military, Veterans &amp; Telehealth</h3></div>
+          <ul>
+            <li>Therapy for military members and veterans</li>
+            <li>Teletherapy sessions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="conditions-band reveal">
+        <p class="label center"><span class="rule"></span> Counseling support for <span class="rule"></span></p>
+        <div class="conditions">
+          <span>Anxiety</span><span>Depression</span><span>Trauma</span><span>PTSD</span><span>ADHD</span><span>Relationship issues</span><span>Anger</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">As a nonprofit organization, we do everything we can to ensure <b>whoever needs help, healing and hope,</b> receives it regardless of cost.</p>
+        <p class="by">Tulsa Counseling Center · A nonprofit for individuals, couples &amp; families</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE -->
+  <section class="sec distinctive" id="distinctive">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> What makes us tulsa counseling center <span class="rule"></span></p>
+        <h2>Faith-based nonprofit — care for everyone</h2>
+        <p class="lede">Four threads woven through every program we offer.</p>
+      </div>
+      <div class="dist-grid reveal">
+        <div class="dist-row"><span class="di"></span><div><h3>Nonprofit Organization</h3><p>Committed to providing care regardless of ability to pay.</p></div></div>
+        <div class="dist-row"><span class="di"></span><div><h3>Military &amp; Veterans Care</h3><p>Spiritual care and therapy specifically for military members and veterans.</p></div></div>
+        <div class="dist-row"><span class="di"></span><div><h3>Christian / Biblical Counseling</h3><p>Faith-informed approaches available alongside standard and eclectic treatment models.</p></div></div>
+        <div class="dist-row"><span class="di"></span><div><h3>Diversion Programs</h3><p>Diversion programs offered.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec team" id="team">
+    <div class="wrap team-grid">
+      <div class="team-intro reveal">
+        <p class="label"><span class="num">&#8470; 06</span> Meet our team <span class="rule"></span></p>
+        <h2>Connect with a counselor in Tulsa</h2>
+        <p class="lede">Our team — <b>pastoral counselors</b>, <b>licensed therapists</b> &amp; a <b>psychiatric nurse practitioner</b> — offers culturally sensitive, evidence-based, and faith-informed care.</p>
+        <a href="tel:+19189360620" class="btn">Call to be matched <span class="ar">&rarr;</span></a>
+      </div>
+      <div class="team-carousel reveal delay-1">
+        <div class="team-track" id="teamTrack">
+          <div class="pcard"><div class="pblob"><div class="ph"><span class="mono">HG</span></div></div><h3>Rev. Harry D. Gatewood</h3><p class="cred">M.Div, CAMS-I · Licensed Pastoral Counselor</p><p class="spec">Pastoral · Anger · Military · Trauma</p><a class="pbio">Full bio <span class="ar">&rarr;</span></a></div>
+          <div class="pcard"><div class="pblob"><div class="ph"><span class="mono">MP</span></div></div><h3>Mical Pacheco</h3><p class="cred">PMHNP-BC · Psychiatric-Mental Health NP</p><p class="spec">ADHD across the lifespan · evaluation</p><a class="pbio">Full bio <span class="ar">&rarr;</span></a></div>
+          <div class="pcard"><div class="pblob"><div class="ph"><span class="mono">NF</span></div></div><h3>Natalie Fernandez</h3><p class="cred">LPC · Licensed Professional Counselor</p><p class="spec">Couples · communication &amp; conflict</p><a class="pbio">Full bio <span class="ar">&rarr;</span></a></div>
+          <div class="pcard"><div class="pblob"><div class="ph"><span class="mono">MF</span></div></div><h3>Maryann Farris</h3><p class="cred">MABC · Master's-Level Biblical Counselor</p><p class="spec">Biblical · couples · sexual integrity</p><a class="pbio">Full bio <span class="ar">&rarr;</span></a></div>
+        </div>
+        <div class="team-arrows">
+          <button id="teamPrev" aria-label="Previous">&larr;</button>
+          <button id="teamNext" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Call us</h3><p>Call (918) 936-0620 with any questions or concerns to book an appointment. Now taking new clients.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>Match &amp; schedule</h3><p>We'll match you with the right counselor — and if your schedule doesn't fit our listed hours, we can meet at times not listed on the website.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin care</h3><p>Meet with us in-office or via teletherapy. We should be able to meet with you in two weeks or less unless scheduling does not permit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & FEES (nonprofit — no per-session price list) -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 08</span> Access &amp; cost <span class="rule"></span></p>
+        <h2>Care that's accessible &amp; flexible</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Cost</p>
+            <ul class="acc-list">
+              <li><b>Nonprofit organization</b>We do everything we can to ensure whoever needs help, healing and hope receives it regardless of cost.</li>
+              <li><b>Talk to our staff</b>Call (918) 936-0620 and we'll walk you through your options.</li>
+              <li><b>No barriers</b>Cost should not be the reason care doesn't happen.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Access</p>
+            <ul class="acc-list">
+              <li><b>In-office or teletherapy</b>Meet with us on-the-go or from the comfort of your home.</li>
+              <li><b>Flexible scheduling</b>We can meet at times not listed on our website if your schedule does not permit.</li>
+              <li><b>Seen quickly</b>We should be able to meet with you in two weeks or less unless scheduling does not permit.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">As a <strong>faith-based nonprofit,</strong> we do everything we can to ensure whoever needs help, healing and hope, receives it regardless of cost. Call our staff to talk through options and special accommodations.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 09</span> Good to know <span class="rule"></span></p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item"><button class="faq-q">How do I schedule an appointment?<span class="pl">+</span></button><div class="faq-a"><p>Please call (918) 936-0620 with any questions or concerns to book an appointment.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer teletherapy?<span class="pl">+</span></button><div class="faq-a"><p>We offer teletherapy sessions so you can meet with us on-the-go or from the comfort of your home.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What if my schedule doesn't fit your listed hours?<span class="pl">+</span></button><div class="faq-a"><p>We can meet at times not listed on our website if your schedule does not permit. Call and talk to our staff if you need special accommodations.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How soon can I be seen?<span class="pl">+</span></button><div class="faq-a"><p>We should be able to meet with you in two weeks or less unless scheduling does not permit.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Is cost a barrier to receiving care?<span class="pl">+</span></button><div class="faq-a"><p>As a nonprofit organization, we do everything we can to ensure whoever needs help, healing and hope, receives it regardless of cost.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 10</span> Contact us <span class="rule"></span></p>
+          <h2>Give us a call today</h2>
+          <p class="lead">Schedule your appointment. Now taking new clients — call (918) 936-0620.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+19189360620" style="color:inherit">(918) 936-0620</a></b><span>talk to our staff for accommodations</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:office@tulsacounselingcenter.org" style="color:inherit">office@tulsacounselingcenter.org</a></b><span>General inquiries &amp; existing clients</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>8214 East 111th Place South, Suite 100</b><span>Bixby, Oklahoma 74008</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>9:00 am – 6:00 pm</b><span>Evenings &amp; off-hours by accommodation</span></div></div>
+          <p class="note">We understand you might have a difficult schedule — we offer teletherapy and can meet at times not listed here.</p>
+          <p style="margin-top:26px"><a href="tel:+19189360620" class="btn btn-gold">Call (918) 936-0620 <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="The Tulsa Counseling Center neighborhood in afternoon light" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Discover help, healing and hope.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=8214+East+111th+Place+South+Suite+100+Bixby+Oklahoma+74008&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATIONS -->
+  <section class="sec affil" style="padding:64px 0">
+    <div class="wrap">
+      <p class="label center" style="margin-bottom:24px"><span class="rule"></span> Our affiliations <span class="rule"></span></p>
+      <div class="row">
+        <span>American Association of Christian Counselors</span>
+        
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);align-items:center;justify-content:center;color:var(--gold-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic">T</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Tulsa Counseling Center</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">A faith-based nonprofit dedicated to healing the heart and mind of Tulsa, Oklahoma families and individuals.</p>
+        <p style="font-size:.9rem;margin-top:14px">8214 East 111th Place South, Suite 100<br/>Bixby, Oklahoma 74008<br/>(918) 936-0620 · office@tulsacounselingcenter.org</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Book a Service</a>
+          <a href="#team">Our Team</a>
+        </div>
+        <div>
+          <h5>Programs</h5>
+          <a href="#services">Anger Management</a>
+          <a href="#services">Family Counseling</a>
+          <a href="#services">Christian / Biblical</a>
+          <a href="#distinctive">Military &amp; Veterans</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact</a>
+          <a href="tel:+19189360620">(918) 936-0620</a>
+          <a href="mailto:office@tulsacounselingcenter.org">Email Us</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> — not affiliated with Tulsa Counseling Center.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),closeBtn=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  closeBtn.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){var h=b.getAttribute('href')||'';if(h.indexOf('tel:')===0||h.indexOf('mailto:')===0)return;if(h.charAt(0)==='#')return;e.preventDefault()})});
+  /* team carousel */
+  (function(){
+    var track=document.getElementById('teamTrack');if(!track)return;
+    function step(){var c=track.querySelector('.pcard');return c?c.getBoundingClientRect().width+30:262;}
+    function atEnd(){return track.scrollLeft+track.clientWidth>=track.scrollWidth-8;}
+    document.getElementById('teamNext').addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'})});
+    document.getElementById('teamPrev').addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
+    var timer=setInterval(tick,4000);function tick(){if(atEnd()){track.scrollTo({left:0,behavior:'smooth'})}else{track.scrollBy({left:step(),behavior:'smooth'})}}
+    track.addEventListener('mouseenter',function(){clearInterval(timer)});
+    track.addEventListener('mouseleave',function(){clearInterval(timer);timer=setInterval(tick,4000)});
+  })();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>

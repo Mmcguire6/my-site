@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Pearlman &amp; Associates — Trusted Counseling Services · St. Louis, MO</title>
+<meta name="description" content="Pearlman & Associates — a trusted St. Louis mental health clinic since 2005. Compassionate, evidence-based therapy & coaching for adults, couples, families & children in Creve Coeur and across the St. Louis metro." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* their forest green deepened + warmed; gold-brass accent on bone */
+    --moss:#2a5c0c;--moss-deep:#1c3f08;--moss-ink:#152e06;--moss-2:#2a5c0c33;
+    --brass:#c49a3c;--brass-deep:#9c7a2c;--brass-soft:#e6cf95;
+    --bone:#f3ede2;--bone-2:#ebe2d2;--paper:#fbf6ec;--sand:#e2d6bf;
+    --ink:#2c2b17;--body:#544f3a;--soft:#857f6a;--line:#dccfb6;--line-2:#c9bb9d;
+    --on-dark:#ece4d2;--on-dark-soft:#b6b69e;--on-dark-line:rgba(236,228,210,.16);
+    --shadow:0 32px 64px -40px rgba(20,28,8,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--body);background:var(--bone);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .label{display:flex;align-items:center;gap:14px;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:22px}
+  .label .num{font-family:'Newsreader',serif;font-style:italic;font-weight:500;font-size:1.05rem;letter-spacing:0;color:var(--moss);text-transform:none}
+  .label .rule{flex:1;height:1px;background:var(--line-2);max-width:64px}
+  .label.center{justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.6em;background:var(--moss);color:#f6f1e2;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;border-radius:999px;border:0;cursor:pointer;transition:.25s;box-shadow:0 16px 30px -16px rgba(20,40,8,.55)}
+  .btn:hover{background:var(--moss-deep)}
+  .btn .ar{font-family:'Newsreader',serif;font-size:1.1em;transform:translateY(-1px)}
+  .btn-brass{background:var(--brass);color:#3a2a00}.btn-brass:hover{background:var(--brass-deep);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+  .btn-outline:hover{border-color:var(--moss);color:var(--moss)}
+  .btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  section{position:relative}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+  .framed{position:relative;overflow:hidden;background:var(--moss-ink)}
+  .framed img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.14) sepia(.14) contrast(1.02) brightness(.99)}
+  .framed::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(21,46,6,.22),rgba(196,154,60,.18));mix-blend-mode:multiply;pointer-events:none}
+  .arch{border-radius:50% 50% 4px 4px/30% 30% 2px 2px}
+  .cap-ed{font-family:'Newsreader',serif;font-style:italic;font-size:.88rem;color:var(--soft);margin-top:16px;display:flex;align-items:center;gap:10px}
+  .cap-ed::before{content:"";width:22px;height:1px;background:var(--brass);flex-shrink:0}
+  .inset{position:absolute;overflow:hidden;z-index:5;border:9px solid var(--bone);box-shadow:0 34px 60px -26px rgba(10,18,4,.72);background:var(--moss-ink)}
+  .inset img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) sepia(.14) contrast(1.02)}
+  .inset::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(21,46,6,.2),rgba(196,154,60,.18));mix-blend-mode:multiply}
+  .hero-photo .inset{width:190px;height:224px;left:-90px;bottom:42px;z-index:3}
+  .motif{position:absolute;pointer-events:none;z-index:0;color:var(--brass);width:58px;opacity:.45}
+  .motif.lg{width:230px;opacity:.1}
+
+  .sec{padding:112px 0;position:relative}
+  .sec>.wrap{position:relative;z-index:1}
+  .sec-head{max-width:760px;margin:0 auto 58px;text-align:center}
+  .sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:500}
+  .sec-head .lede{color:var(--soft);font-size:1.16rem;margin-top:16px;font-family:'Newsreader',serif;font-style:italic}
+
+  /* TOP UTILITY BAR */
+  .topbar{background:var(--moss-ink);color:var(--on-dark-soft)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 0;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+  .topbar a{color:var(--on-dark)}.topbar a:hover{color:#fff}
+  .topbar .addr{color:var(--on-dark-soft)}
+  .topbar .tb-r{display:inline-flex;align-items:center;gap:7px;color:var(--brass-soft)}.topbar .tb-r:hover{color:#fff}
+  @media(max-width:760px){.topbar .addr{display:none}}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(243,237,226,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+  .brand .mk{width:44px;height:44px;border-radius:50%;border:1px solid var(--brass);display:flex;align-items:center;justify-content:center;color:var(--moss);font-family:'Newsreader',serif;font-style:italic;font-weight:600;font-size:1.15rem;flex-shrink:0;background:#fff}
+  .brand .bt{font-family:'Newsreader',serif;font-weight:600;font-size:1.28rem;line-height:1.02;letter-spacing:.005em}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links>a{font-family:'Source Sans 3',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;white-space:nowrap}
+  .nav-links>a:not(.nav-cta):hover{color:var(--moss)}
+  .nav-cta{border:1px solid var(--line-2);padding:11px 22px;border-radius:999px}
+  .nav-cta:hover{border-color:var(--moss);color:var(--moss)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:1.5px;background:var(--ink);border-radius:2px}
+  .overlay{position:fixed;inset:0;background:var(--moss-ink);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.3,1);overflow-y:auto}
+  .overlay.open{transform:none}
+  .overlay a{color:var(--on-dark);font-family:'Newsreader',serif;font-size:1.55rem}
+  .overlay .close{position:absolute;top:28px;right:30px;font-size:2rem;color:var(--on-dark);background:none;border:0;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:var(--moss-ink);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;min-height:660px}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px 0}
+  .hero-photo{position:relative;display:flex;align-items:center;padding:66px 54px 78px 26px}
+  .hero-photo .framed{position:relative;width:100%;height:520px;border:10px solid var(--bone);box-shadow:0 44px 80px -42px rgba(0,0,0,.72);z-index:1}
+  .hero-photo .framed img{filter:grayscale(.16) sepia(.16) contrast(1.03) brightness(.97)}
+  .hero .label{color:var(--brass-soft)}.hero .label .num{color:var(--brass)}.hero .label .rule{background:rgba(236,228,210,.3)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:500;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:var(--brass-soft)}
+  .hero .lead{color:var(--on-dark);font-size:1.16rem;margin:26px 0 36px;max-width:46ch}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* CREDENTIAL LINE */
+  .creds{background:var(--moss-deep);border-bottom:1px solid var(--on-dark-line)}
+  .creds .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 30px;padding:20px 0}
+  .creds span{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);display:flex;align-items:center;gap:12px}
+  .creds span b{color:#fff;font-weight:700}
+  .creds .sep{width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+  .about .photo-stack{position:relative;padding:0 0 28px 28px}
+  .about .framed.main{height:540px;border:1px solid var(--line-2)}
+  .about .photo-stack .tag{position:absolute;left:0;bottom:0;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--brass);padding:16px 22px;max-width:240px;box-shadow:var(--shadow)}
+  .about .photo-stack .tag b{font-family:'Newsreader',serif;font-size:1.5rem;color:var(--moss);display:block;line-height:1}
+  .about .photo-stack .tag span{font-size:.82rem;color:var(--soft)}
+  .about h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500;margin-bottom:8px}
+  .lede-p{font-size:1.1rem;color:var(--body)}
+  .lede-p .cap{float:left;font-family:'Newsreader',serif;font-size:3.6rem;line-height:.78;font-weight:600;color:var(--moss);margin:8px 12px 0 0}
+  .about .mini{margin-top:30px;display:flex;gap:30px;flex-wrap:wrap}
+  .about .mini div{border-top:2px solid var(--brass);padding-top:8px;min-width:120px}
+  .about .mini b{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--moss);display:block;line-height:1}
+  .about .mini span{font-size:.82rem;color:var(--soft)}
+
+  /* SERVICES */
+  .services{background:var(--bone-2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .svc-cat{padding:30px 0;border-top:1px solid var(--line)}
+  .svc-cat .ch{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .svc-cat .ch .ci{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1.1rem}
+  .svc-cat h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink)}
+  .svc-cat ul{list-style:none}
+  .svc-cat li{padding:7px 0 7px 18px;position:relative;font-size:.98rem;color:var(--body)}
+  .svc-cat li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--moss-2);border:1px solid var(--moss);transform:rotate(45deg)}
+  .symptoms-band{margin-top:60px;text-align:center}
+  .symptoms-band .label{justify-content:center}
+  .symptoms{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:900px;margin:0 auto}
+  .symptoms span{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--moss-deep);padding:0 4px}
+  .symptoms span::after{content:"·";margin-left:14px;color:var(--brass)}
+  .symptoms span:last-child::after{display:none}
+
+  /* MISSION BAND */
+  .mission{background:var(--moss-ink);color:var(--on-dark);text-align:center;border-radius:170px 170px 0 0;overflow:hidden}
+  .mission>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(.24) sepia(.2) contrast(1.03)}
+  .mission::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,rgba(21,46,6,.5),rgba(21,46,6,.9));z-index:0}
+  .mission .wrap{position:relative;z-index:1}
+  .mission .qmark{font-family:'Newsreader',serif;font-size:6rem;line-height:.6;color:var(--brass);opacity:.55}
+  .mission .q{font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;color:#fff;max-width:900px;margin:0 auto;letter-spacing:-.01em}
+  .mission .q b{font-style:normal;font-weight:500;color:var(--brass-soft)}
+  .mission .by{margin-top:24px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+  /* DISTINCTIVE — Life Change Coaching */
+  .distinct{background:var(--paper)}
+  .dist-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start}
+  .dist h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:500;margin-bottom:14px}
+  .dist .lede{color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem;margin-bottom:28px;max-width:42ch}
+  .dist .lede b{font-style:normal;font-weight:600;color:var(--moss)}
+  .dist-list{border-top:1px solid var(--line)}
+  .dist-row{display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
+  .dist-row .idx{font-family:'Newsreader',serif;font-style:italic;font-size:1.2rem;color:var(--brass-deep)}
+  .dist-row h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.4rem;color:var(--ink);margin-bottom:6px}
+  .dist-row p{font-size:.95rem;color:var(--soft);max-width:54ch}
+
+  /* TEAM — two providers side-by-side */
+  .team{background:var(--bone)}
+  .team-intro{max-width:780px;margin:0 auto 56px;text-align:center}
+  .team-intro .label{justify-content:center}
+  .team-intro h2{font-size:clamp(2.1rem,3.8vw,2.9rem);font-weight:500}
+  .team-intro p{color:var(--soft);font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem;margin-top:16px}
+  .team-intro p b{font-style:normal;font-weight:600;color:var(--moss)}
+  .team-two{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1080px;margin:0 auto}
+  .pcard{background:var(--paper);border:1px solid var(--line-2);padding:42px 38px;position:relative}
+  .pcard::before{content:"";position:absolute;top:0;left:0;width:60px;height:1px;background:var(--brass)}
+  .pcard .pnum{font-family:'Newsreader',serif;font-style:italic;color:var(--brass-deep);font-size:1rem;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+  .pcard .pnum::after{content:"";flex:1;height:1px;background:var(--line-2)}
+  .pblob{position:relative;width:166px;height:170px;margin:0 0 22px}
+  .pblob::before{content:"";position:absolute;inset:0;background:var(--moss);border-radius:46% 54% 48% 52%/55% 46% 54% 45%}
+  .pblob .ph{position:absolute;inset:13px;border-radius:46% 54% 48% 52%/55% 46% 54% 45%;overflow:hidden;background:linear-gradient(155deg,var(--moss-deep),var(--moss-ink));display:flex;align-items:center;justify-content:center}
+  .pblob .mono{font-family:'Newsreader',serif;font-style:italic;font-size:2.6rem;color:var(--brass-soft)}
+  .pcard h3{font-family:'Newsreader',serif;font-weight:600;font-size:1.7rem;color:var(--moss-deep);line-height:1.1;margin-bottom:6px}
+  .pcard .cred{font-size:.84rem;color:var(--soft);font-weight:600;letter-spacing:.04em;margin-bottom:18px;text-transform:uppercase}
+  .pcard .role{font-family:'Newsreader',serif;font-style:italic;font-size:1.05rem;color:var(--brass-deep);margin-bottom:18px;display:block}
+  .pcard .pbio{font-size:.98rem;color:var(--body);margin-bottom:22px}
+  .pcard .speclbl{font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);margin-bottom:10px}
+  .pcard ul{list-style:none}
+  .pcard li{padding:8px 0 8px 18px;position:relative;font-size:.92rem;color:var(--body);border-top:1px solid var(--line)}
+  .pcard li:first-child{border-top:0}
+  .pcard li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;background:var(--brass);transform:rotate(45deg)}
+
+  /* STEPS */
+  .steps{background:var(--bone-2)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .step{padding:0 40px;border-left:1px solid var(--line)}
+  .step:first-child{padding-left:0;border-left:0}
+  .step .sn{font-family:'Newsreader',serif;font-style:italic;font-size:3.2rem;color:var(--brass-deep);line-height:1;margin-bottom:18px}
+  .step h3{font-size:1.5rem;font-weight:600;margin-bottom:10px}
+  .step p{color:var(--soft);font-size:.98rem}
+
+  /* ACCESS & INSURANCE */
+  .access{background:var(--paper)}
+  .acc-card{max-width:1000px;margin:0 auto;background:var(--bone);border:1px solid var(--line-2);position:relative}
+  .acc-top{display:grid;grid-template-columns:1fr 1fr}
+  .acc-col{padding:48px 50px}
+  .acc-col.cov{border-right:1px solid var(--line)}
+  .acc-col .ch{font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .acc-col .ch .cn{font-style:italic;font-size:1rem;color:var(--brass-deep)}
+  .acc-list{list-style:none;margin-top:20px}
+  .acc-list li{padding:16px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--body)}
+  .acc-list li b{font-family:'Newsreader',serif;font-weight:600;font-size:1.12rem;color:var(--ink);display:block;margin-bottom:2px}
+  .acc-note{padding:24px 50px;background:var(--moss-ink);color:var(--on-dark-soft);font-size:.92rem;line-height:1.6;font-family:'Newsreader',serif;font-style:italic}
+  .acc-note strong{color:#fff;font-style:normal;font-weight:500}
+
+  /* FAQ */
+  .faq{background:var(--bone-2)}
+  .faq-wrap{max-width:840px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line-2)}
+  .faq-item:first-child{border-top:1px solid var(--line-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Newsreader',serif;font-size:1.3rem;font-weight:500;color:var(--ink)}
+  .faq-q .pl{color:var(--brass-deep);font-size:1.4rem;transition:.3s;flex-shrink:0}
+  .faq-q.open .pl{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-a p{padding:0 0 28px;color:var(--soft);font-size:1.02rem;max-width:66ch}
+
+  /* CONTACT */
+  .contact{background:var(--moss-ink);color:var(--on-dark)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:stretch}
+  .contact .label{color:var(--brass-soft)}.contact .label .num{color:var(--brass)}.contact .label .rule{background:var(--on-dark-line)}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4vw,3rem);font-weight:500}
+  .contact .lead{color:var(--on-dark-soft);margin:18px 0 30px;font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem}
+  .cline{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid var(--on-dark-line)}
+  .cline .cl{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);width:96px;flex-shrink:0;padding-top:4px}
+  .cline b{color:#fff;display:block;font-weight:600;font-size:1.04rem}
+  .cline span{color:var(--on-dark-soft);font-size:.9rem}
+  .contact .note{margin-top:18px;font-size:.9rem;color:var(--brass-soft);font-family:'Newsreader',serif;font-style:italic}
+  .contact .framed{height:100%;min-height:420px;border:1px solid var(--on-dark-line)}
+  .map{margin-top:46px;border:1px solid var(--on-dark-line)}
+  .map iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(.3) sepia(.1)}
+
+  /* AFFILIATIONS + FOOTER */
+  .affil{background:var(--bone);border-top:1px solid var(--line);text-align:center}
+  .affil .label{justify-content:center}
+  .affil .row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 38px}
+  .affil .row span{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--moss);font-style:italic}
+  footer{background:var(--moss-ink);color:var(--on-dark-soft);padding:64px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:46px;align-items:start}
+  .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .foot-cols h5{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;font-weight:700}
+  .foot-cols a{display:block;color:var(--on-dark-soft);font-size:.94rem;margin-bottom:11px}
+  .foot-cols a:hover{color:#fff}
+  .credit{border-top:1px solid var(--on-dark-line);margin-top:42px;padding-top:24px;font-size:.82rem;text-align:center;color:#7d7b65}
+  .credit b{color:var(--on-dark-soft);font-weight:500}
+
+  .demo{position:fixed;bottom:0;left:0;right:0;z-index:80;background:var(--moss-ink);color:var(--on-dark);font-size:.82rem;padding:12px 46px 12px 20px;text-align:center;line-height:1.4;border-top:1px solid var(--brass)}
+  .demo b{color:var(--brass-soft)}
+  .demo .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--on-dark);font-size:1.2rem;cursor:pointer}
+
+  @media(max-width:1000px){.nav-links{display:none}.burger{display:flex}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:78px 0;order:2}.hero-photo{height:340px;order:1;padding:0}.hero-photo .framed{position:relative;height:340px;border-width:6px}
+    .about-grid,.dist-grid,.contact-grid,.team-two{grid-template-columns:1fr;gap:44px}
+    .about .photo-stack{order:-1;padding:0}
+    .svc-grid,.step-grid,.acc-top,.foot-top,.foot-cols{grid-template-columns:1fr}
+    .step{padding:0 0 8px;border-left:0;border-top:1px solid var(--line);padding-top:28px}
+    .step:first-child{border-top:0;padding-top:0}
+    .acc-col.cov{border-right:0;border-bottom:1px solid var(--line)}
+    .sec{padding:74px 0}.about .framed.main{height:420px}
+    .mission{border-radius:90px 90px 0 0}.inset{display:none}.motif.lg{display:none}
+    .pcard{padding:34px 28px}
+  }
+  @media(max-width:480px){.wrap{padding:0 20px}.hero h1{font-size:2.5rem}.acc-col{padding:34px 24px}.acc-note{padding:22px 24px}.creds .sep{display:none}.symptoms span{font-size:.98rem}}
+</style>
+<style>
+/* mobile overflow safety-net (auto-injected) */
+@media (max-width:760px){
+  *{min-width:0 !important}
+  h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,address{white-space:normal !important;overflow-wrap:anywhere !important}
+}
+</style>
+<style>/* pills + top bar (auto-injected, deterministic) */
+.btn,.nav-cta,a.btn,button.btn{border-radius:999px !important}
+.cs-topbar{background:#172E06;color:rgba(255,255,255,.74);font-family:'Source Sans 3',system-ui,sans-serif}
+.cs-topbar .in{max-width:1180px;margin:0 auto;padding:9px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.74rem;font-weight:600;letter-spacing:.05em}
+.cs-topbar a{color:#fff;text-decoration:none}.cs-topbar a:hover{opacity:.8}
+@media(max-width:760px){.cs-topbar .addr{display:none}.cs-topbar .in{padding:8px 18px}}
+</style>
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap row">
+    <a href="tel:+13149421147">314-942-1147</a>
+    <span class="addr">655 Craig Road, Suite 300 · Creve Coeur, MO 63141</span>
+    <a class="tb-r" href="#contact">Request an appointment &rsaquo;</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">P</span><span><span class="bt">Pearlman &amp; Associates</span><small>Counseling · St. Louis · Est. 2005</small></span></a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#team">Our Team</a>
+      <a href="#services">Services</a>
+      <a href="#services">Symptoms</a>
+      <a href="#faq">FAQ&rsquo;s</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#team">Our Team</a>
+  <a href="#services">Services</a>
+  <a href="#services">Symptoms</a>
+  <a href="#faq">FAQ&rsquo;s</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="label"><span class="num">&#8470; 01</span> Creve Coeur · Serving the St. Louis metro</p>
+          <h1>Trusted counseling for <em>every stage</em> of life.</h1>
+          <p class="lead">Pearlman &amp; Associates provides confidential, evidence-based therapy for adults, couples, families, and children across the St. Louis metro area — compassionate counseling services built around your unique needs, since 2005.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Schedule an appointment <span class="ar">&rarr;</span></a>
+            <a href="#team" class="btn btn-light">Meet our therapists</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal delay-1">
+          <div class="framed"><img src="img/hero.jpg" alt="A warm, light-filled counseling space at Pearlman &amp; Associates" /></div>
+          <div class="inset arch"><img src="img/approach.jpg" alt="A therapist and client in conversation" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL LINE -->
+  <section class="creds">
+    <div class="wrap">
+      <div class="row">
+        <span><b>Established 2005</b></span><span class="sep"></span>
+        <span><b>Evidence-based</b> therapy</span><span class="sep"></span>
+        <span>Licensed <b>LCSW &amp; LMSW</b></span><span class="sep"></span>
+        <span>In-person &amp; telehealth</span><span class="sep"></span>
+        <span>All ages welcome</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 02</span> A safe space for healing &amp; growth <span class="rule"></span></p>
+        <h2>Trusted counseling services in St.&nbsp;Louis, MO</h2>
+        <p class="lede-p"><span class="cap">A</span>t Pearlman &amp; Associates, our licensed counselors work with clients of all ages — individual, couples, family, and group therapy for adults, adolescents, and children. As a client-centered practice, our team specializes in navigating anxiety, depression, relationship concerns, school stressors, life transitions, anger management, trauma, and other emotional-wellness challenges. Our holistic therapy approach focuses on the whole person, exploring thoughts, feelings, and behaviors in a compassionate, non-judgmental environment.</p>
+        <div class="mini">
+          <div><b>Since 2005</b><span>serving the St. Louis metro</span></div>
+          <div><b>All ages</b><span>children &middot; teens &middot; adults &middot; couples &middot; families</span></div>
+          <div><b>In-person &amp; telehealth</b><span>Monday through Saturday</span></div>
+        </div>
+      </div>
+      <div class="photo-stack reveal delay-1">
+        <div class="framed main arch"><img src="img/population.jpg" alt="A family supported together at Pearlman &amp; Associates" /></div>
+        <div class="tag"><b>Est. 2005</b><span>a trusted St. Louis mental-health clinic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="services">
+    <svg class="motif lg" style="top:60px;right:-40px;transform:rotate(8deg)" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 200V44"/><path d="M30 150c-18-4-26-18-26-34 16 2 26 14 26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 116c18-4 26-18 26-34-16 2-26 14-26 34Z" fill="currentColor" fill-opacity=".1"/><path d="M30 86c-16-4-23-16-23-30 16 2 23 12 23 30Z" fill="currentColor" fill-opacity=".1"/><path d="M30 60c15-4 22-16 22-30-15 2-22 12-22 30Z" fill="currentColor" fill-opacity=".1"/><circle cx="30" cy="40" r="4.5" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 03</span> Our services <span class="rule"></span></p>
+        <h2>Therapy that meets you where you are</h2>
+        <p class="lede">Whether you&rsquo;re facing anxiety, navigating a relationship challenge, or supporting a child through a difficult time, our counseling services cover a wide range of needs.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">i.</span><h3>Therapy &amp; Counseling</h3></div>
+          <ul>
+            <li>Individual Counseling</li>
+            <li>Couples Counseling</li>
+            <li>Family Counseling</li>
+            <li>Child Counseling — age-appropriate &amp; play-based</li>
+            <li>Teen &amp; Adolescent Counseling</li>
+            <li>Group Therapy</li>
+            <li>Grief Counseling</li>
+            <li>Trauma &amp; PTSD Counseling</li>
+            <li>Anxiety Counseling</li>
+            <li>Depression Counseling</li>
+          </ul>
+        </div>
+        <div class="svc-cat">
+          <div class="ch"><span class="ci">ii.</span><h3>Coaching &amp; Telehealth</h3></div>
+          <ul>
+            <li>Telehealth Therapy — secure online sessions across Missouri</li>
+            <li>Life-change &amp; mental-performance coaching</li>
+          </ul>
+        </div>
+      </div>
+      <div class="symptoms-band reveal" id="symptoms">
+        <p class="label center"><span class="rule"></span> Counseling support for <span class="rule"></span></p>
+        <div class="symptoms">
+          <span>Anxiety &amp; Panic</span><span>Depression</span><span>Grief</span><span>Trauma &amp; PTSD</span><span>Relationship concerns</span><span>Life transitions &amp; stressors</span><span>Anger management</span><span>School stressors</span><span>Social anxiety</span><span>Academic stress</span><span>Stress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION BAND -->
+  <section class="sec mission" id="mission">
+    <img src="img/interlude.jpg" alt="" />
+    <div class="wrap">
+      <div class="reveal">
+        <div class="qmark">&ldquo;</div>
+        <p class="q">It is a strength and sign of resilience to acknowledge anything that may be interfering with our happiness. <b>You have the capacity to make positive changes — we&rsquo;re here to walk alongside you.</b></p>
+        <p class="by">Dr. Lena Pearlman, LCSW &middot; Clinical Director</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTINCTIVE -->
+  <section class="sec distinct dist" id="distinctive">
+    <div class="wrap dist-grid">
+      <div class="reveal">
+        <p class="label"><span class="num">&#8470; 04</span> A specialty within a specialty <span class="rule"></span></p>
+        <h2>Life-change coaching &amp; mental performance</h2>
+        <p class="lede">Beyond traditional therapy, our practice blends <b>life-change coaching</b>, <b>mental-performance work</b>, and specialized clinical expertise to help you become the best version of yourself — at school, at work, and in your relationships.</p>
+      </div>
+      <div class="dist-list reveal delay-1">
+        <div class="dist-row"><span class="idx">i.</span><div><h3>Goal Setting &amp; Skill Building</h3><p>A customized approach focused on the client&rsquo;s present state and where they want to go in the future — goal setting, mentoring, coping strategies, and targeted action.</p></div></div>
+        <div class="dist-row"><span class="idx">ii.</span><div><h3>Mental-Performance Coaching</h3><p>Working with students, professionals, and individuals on becoming the best version of themselves in school, careers, and relationships.</p></div></div>
+        <div class="dist-row"><span class="idx">iii.</span><div><h3>ADHD &amp; Executive Function</h3><p>Specialized support for thriving with executive-function challenges — practical strategies drawn from Dr.&nbsp;Bryan Pearlman&rsquo;s book <em>ADHD Is My Superpower</em>.</p></div></div>
+        <div class="dist-row"><span class="idx">iv.</span><div><h3>Forensic Social Work</h3><p>Dr.&nbsp;Lena Pearlman is considered an expert witness within the legal system, with extensive experience across forensic and medical settings.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec team" id="team">
+    <div class="wrap">
+      <div class="team-intro reveal">
+        <p class="label center"><span class="num">&#8470; 05</span> Meet our therapists <span class="rule"></span></p>
+        <h2>Our St.&nbsp;Louis counseling team</h2>
+        <p>A <b>multidisciplinary</b> practice combining clinical social work, holistic natural health, education, and <b>life-change coaching</b> — under one roof in Creve Coeur.</p>
+      </div>
+      <div class="team-two">
+        <div class="pcard reveal">
+          <p class="pnum">i. Clinical Director</p>
+          <div class="pblob"><div class="ph"><span class="mono">LP</span></div></div>
+          <h3>Dr. Lena Pearlman</h3>
+          <p class="cred">LCSW &middot; Licensed Clinical Social Worker</p>
+          <span class="role">Clinical Director &middot; medical &amp; forensic support</span>
+          <p class="pbio">Dr.&nbsp;Lena Pearlman holds a Master&rsquo;s of Social Work and a Doctorate in Holistic Natural Health, and has practiced for 20 years across in-patient and out-patient hospitals, sub-acute rehabilitation, and forensic treatment centers. She is the author &amp; creator of <em>Stay Here: Your Personal Journal to Staying Present, Mindful &amp; Grateful Every Day.</em></p>
+          <p class="speclbl">Specialties</p>
+          <ul>
+            <li>Forensic social work &amp; expert witness in the legal system</li>
+            <li>In-patient &amp; out-patient hospital settings</li>
+            <li>Sub-acute rehabilitation</li>
+            <li>Acute, terminal &amp; chronic medical conditions</li>
+            <li>Holistic natural health</li>
+            <li>Mindfulness</li>
+          </ul>
+        </div>
+        <div class="pcard reveal delay-1">
+          <p class="pnum">ii. Life-Change Specialist</p>
+          <div class="pblob"><div class="ph"><span class="mono">BP</span></div></div>
+          <h3>Dr. Bryan Pearlman</h3>
+          <p class="cred">EdD, LMSW &middot; Licensed Master Social Worker</p>
+          <span class="role">Life-change specialist, mental-performance coach, educator &amp; mediator</span>
+          <p class="pbio">Dr.&nbsp;Bryan Pearlman holds a Doctorate of Education from Maryville University and Master&rsquo;s degrees in Social Work and Education. A former school principal, keynote speaker, and adjunct professor, he is the author of several books including <em>The Anxiety Cheat Code</em>, <em>ADHD Is My Superpower</em>, and <em>Ramping Up</em>, and is co-founder of the Distinguished School of Mental Health &amp; Wellness.</p>
+          <p class="speclbl">Specialties</p>
+          <ul>
+            <li>Anxiety</li>
+            <li>ADHD &amp; executive function</li>
+            <li>Goal setting &amp; skill building</li>
+            <li>Mental-performance coaching</li>
+            <li>Coping strategies</li>
+            <li>Education &amp; school-related challenges</li>
+            <li>Life change &amp; personal development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec steps" id="start">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 06</span> Getting started <span class="rule"></span></p>
+        <h2>Your first steps</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="sn">i.</div><h3>Reach out</h3><p>Call <a href="tel:+13149421147" style="color:inherit;text-decoration:underline;text-decoration-color:var(--brass)">(314) 942-1147</a>, or use our online Contact Us form — whichever you prefer.</p></div>
+        <div class="step reveal delay-1"><div class="sn">ii.</div><h3>We&rsquo;ll match you</h3><p>We&rsquo;ll talk through what you&rsquo;re working on and pair you with the therapist on our team best suited to your needs.</p></div>
+        <div class="step reveal delay-2"><div class="sn">iii.</div><h3>Begin counseling</h3><p>Start in person at our Creve Coeur office, or via secure telehealth across Missouri — Monday through Saturday.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INSURANCE -->
+  <section class="sec access" id="access">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 07</span> Access &amp; insurance <span class="rule"></span></p>
+        <h2>Care that&rsquo;s covered &amp; accessible</h2>
+      </div>
+      <div class="acc-card reveal">
+        <div class="acc-top">
+          <div class="acc-col cov">
+            <p class="ch"><span class="cn">i.</span> Coverage</p>
+            <ul class="acc-list">
+              <li><b>Insurance &amp; coverage</b>Contact us to discuss your coverage and payment options.</li>
+              <li><b>HIPAA-compliant</b>Confidential care &amp; secure handling of your information.</li>
+              <li><b>Sessions are 45 minutes</b>Most clients are seen weekly to start, then less frequently as time goes on.</li>
+            </ul>
+          </div>
+          <div class="acc-col">
+            <p class="ch"><span class="cn">ii.</span> Access</p>
+            <ul class="acc-list">
+              <li><b>In-person in Creve Coeur</b>655 Craig Road, Suite 300, near Olive &amp; I-270.</li>
+              <li><b>Telehealth across Missouri</b>Secure online sessions, same quality of care.</li>
+              <li><b>Monday &ndash; Saturday</b>Convenient appointments to fit your schedule. Sunday closed.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-note">Pearlman &amp; Associates serves clients in Creve Coeur, Chesterfield, Maryland Heights, Clayton, Ballwin, Wildwood, Ladue, and surrounding communities. Reach out and we&rsquo;ll help confirm your coverage.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label center"><span class="num">&#8470; 08</span> Common questions <span class="rule"></span></p>
+        <h2>FAQ&rsquo;s</h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item"><button class="faq-q">How long and how many times a week is a typical session?<span class="pl">+</span></button><div class="faq-a"><p>Sessions are 45 minutes. Most clients are seen once a week in the beginning, then, as time goes on, less frequently. The number of sessions depends on what your current needs are.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How long will I be in counseling?<span class="pl">+</span></button><div class="faq-a"><p>The length of time a client is in counseling depends the nature of the problem and the goals of the counseling. Some clients have a very specific problem that can be worked through in a set course of counseling. For others, counseling is an on-going learning process and they choose to receive counseling for a longer period.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What if I want couples counseling, but my partner won&rsquo;t come?<span class="pl">+</span></button><div class="faq-a"><p>Unfortunately, sometimes one partner is not as willing as the other to come in for counseling. However, we often find that it is possible to improve the relationship with just one person involved in counseling.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What types of services do you provide?<span class="pl">+</span></button><div class="faq-a"><p>At Pearlman &amp; Associates, we offer therapy, counseling, and coaching services. In terms of therapeutic services, we offer individual therapy; group therapy; couples therapy, and family therapy. We specialize in anxiety, depression, stress, relationships, and other mental-health related challenges. Contact us to discuss your individual treatment needs and find out more on how we can help get you on the path to recovery, healing and wellness.</p></div></div>
+        <div class="faq-item"><button class="faq-q">How can I get started?<span class="pl">+</span></button><div class="faq-a"><p>The best way is to call us at (314)&nbsp;942-1147. Or, if you prefer, you can use our online &ldquo;Contact Us&rdquo; form.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label"><span class="num">&#8470; 09</span> Contact us <span class="rule"></span></p>
+          <h2>Request an appointment</h2>
+          <p class="lead">The best way to reach us is by phone, or use our online Contact Us form — we&rsquo;ll talk through your needs and pair you with the right therapist on our team.</p>
+          <div class="cline"><span class="cl">Call</span><div><b><a href="tel:+13149421147" style="color:inherit">(314) 942-1147</a></b><span>For new &amp; existing clients</span></div></div>
+          <div class="cline"><span class="cl">Email</span><div><b><a href="mailto:bryan@stlmentalhealth.com" style="color:inherit">bryan@stlmentalhealth.com</a></b><span>General questions &amp; inquiries</span></div></div>
+          <div class="cline"><span class="cl">Visit</span><div><b>655 Craig Road, Suite 300</b><span>St. Louis, MO 63141 &middot; in Creve Coeur, near Olive &amp; I-270</span></div></div>
+          <div class="cline"><span class="cl">Hours</span><div><b>Monday &ndash; Saturday</b><span>Sunday closed &middot; convenient appointments to fit your schedule</span></div></div>
+          <p class="note">Telehealth appointments are available throughout Missouri, Monday through Saturday.</p>
+          <p style="margin-top:26px"><a href="tel:+13149421147" class="btn btn-brass">Call (314) 942-1147 <span class="ar">&rarr;</span></a></p>
+        </div>
+        <div class="reveal delay-1"><div class="framed arch"><img src="img/contact.jpg" alt="Our Creve Coeur neighborhood" /></div><p class="cap-ed" style="color:var(--on-dark-soft)">Creve Coeur, Missouri &mdash; our home since 2005.</p></div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location" src="https://www.google.com/maps?q=655+Craig+Road,+St.+Louis,+MO+63141&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATIONS -->
+  <section class="sec affil" style="padding:64px 0">
+    <div class="wrap">
+      <p class="label center" style="margin-bottom:24px"><span class="rule"></span> Our affiliations <span class="rule"></span></p>
+      <div class="row">
+        <span>Missouri Society of Clinical Social Work</span>
+        <span>Employee Assistance Professionals Association</span>
+        <span>National Organization of Forensic Social Workers</span>
+        <span>Distinguished School of Mental Health &amp; Wellness</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:#fff"><span class="mk" style="display:inline-flex;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);align-items:center;justify-content:center;color:var(--brass-soft);margin-right:12px;vertical-align:middle;font-family:'Newsreader',serif;font-style:italic">P</span><span class="bt" style="font-family:'Newsreader',serif;font-weight:600;font-size:1.3rem;color:#fff">Pearlman &amp; Associates</span></div>
+        <p style="font-size:.93rem;max-width:36ch;margin-top:14px">Trusted counseling services in St. Louis, MO — compassionate, evidence-based therapy for adults, couples, families, and children since 2005.</p>
+        <p style="font-size:.9rem;margin-top:14px">655 Craig Road, Suite 300<br/>St. Louis, MO 63141<br/>(314) 942-1147 &middot; bryan@stlmentalhealth.com</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h5>Practice</h5>
+          <a href="#top">Home</a>
+          <a href="#team">Our Team</a>
+          <a href="#services">Services</a>
+          <a href="#distinctive">Life-Change Coaching</a>
+        </div>
+        <div>
+          <h5>Information</h5>
+          <a href="#symptoms">Symptoms</a>
+          <a href="#access">Insurance &amp; Access</a>
+          <a href="#faq">FAQ&rsquo;s</a>
+          <a href="#start">Getting Started</a>
+        </div>
+        <div>
+          <h5>Connect</h5>
+          <a href="#contact">Contact Us</a>
+          <a href="tel:+13149421147">Call (314) 942-1147</a>
+          <a href="mailto:bryan@stlmentalhealth.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Concept by <b>Matthew McGuire</b></p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  Unsolicited concept redesign by <b>Matthew McGuire</b> &mdash; not affiliated with Pearlman &amp; Associates.
+  <button class="x" id="demoX" aria-label="Dismiss">&times;</button>
+</div>
+
+<script>
+  var burger=document.getElementById('burger'),overlay=document.getElementById('overlay'),close=document.getElementById('close');
+  burger.addEventListener('click',function(){overlay.classList.add('open')});
+  close.addEventListener('click',function(){overlay.classList.remove('open')});
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){overlay.classList.remove('open')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var a=q.nextElementSibling;var open=q.classList.contains('open');
+    q.classList.toggle('open');a.style.maxHeight=open?null:a.scrollHeight+'px';
+  })});
+  document.getElementById('demoX').addEventListener('click',function(){document.getElementById('demo').style.display='none'});
+  document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault()})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");
+</script>
+</body>
+</html>
