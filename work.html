@@ -901,59 +901,44 @@ img { max-width: 100%; display: block; }
     .work-feat-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: clamp(20px, 2.5vw, 32px);
+        gap: clamp(32px, 4vw, 56px);
     }
+    /* Floating items — no card chrome; mockup floats, text below */
     .work-card {
         display: flex;
         flex-direction: column;
-        background: var(--paper-soft);
-        border: 1px solid var(--rule);
-        border-radius: 4px;
-        overflow: hidden;
-        transition: transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms ease, border-color 200ms ease;
-        will-change: transform;
-    }
-    .work-card:hover {
-        transform: translateY(-3px);
-        border-color: color-mix(in oklch, var(--ink) 30%, transparent);
-        box-shadow: 0 24px 48px -28px rgba(26, 24, 19, 0.32);
+        gap: 20px;
     }
     .work-card-image {
-        aspect-ratio: 4 / 3;
-        overflow: hidden;
-        background: var(--paper-deeper);
+        aspect-ratio: 16 / 9;
+        margin: 0 clamp(-24px, -5%, -10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .work-card-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+        object-fit: contain;
+        filter: drop-shadow(0 18px 30px rgba(26, 24, 20, 0.16));
+        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
     }
-    .work-card:hover .work-card-image img { transform: scale(1.04); }
+    .work-card:hover .work-card-image img { transform: translateY(-6px); }
     .work-card-body {
-        padding: clamp(20px, 2.4vw, 28px);
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 12px;
         flex: 1;
     }
-    .work-card-meta {
-        display: flex;
-        gap: 16px;
-        font-family: var(--mono);
-        font-size: 10px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--ink-3);
-    }
-    .work-card-meta-tag { color: var(--accent-deep); }
     .work-card-name {
         font-family: var(--serif);
-        font-size: clamp(22px, 2vw, 28px);
+        font-size: clamp(26px, 2.8vw, 38px);
         font-weight: 700;
-        letter-spacing: -0.018em;
-        line-height: 1.1;
+        letter-spacing: -0.02em;
+        line-height: 1.06;
         color: var(--ink);
+        margin: 0;
         transition: color 240ms ease;
     }
     .work-card-name em { font-style: italic; font-weight: 500; color: var(--ink-2); }
@@ -962,23 +947,27 @@ img { max-width: 100%; display: block; }
         font-size: 14.5px;
         line-height: 1.65;
         color: var(--ink-2);
-        flex: 1;
+        margin: 0;
     }
     .work-card-link {
+        margin-top: auto;
+        align-self: flex-start;
+        padding: 12px 22px;
+        background: var(--ink);
+        color: var(--paper);
+        border-radius: 999px;
         font-family: var(--mono);
         font-size: 11px;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--ink);
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        margin-top: 4px;
-        transition: gap 240ms ease, color 200ms ease;
+        transition: background 220ms ease, color 220ms ease, gap 200ms ease, transform 200ms ease;
     }
-    .work-card:hover .work-card-link { color: var(--accent-deep); gap: 12px; }
+    .work-card:hover .work-card-link { background: var(--accent-deep); color: var(--paper); gap: 12px; transform: translateY(-1px); }
     @media (max-width: 980px) {
-        .work-feat-grid { grid-template-columns: 1fr 1fr; }
+        .work-feat-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) {
         .work-feat-grid { grid-template-columns: 1fr; }
@@ -1373,46 +1362,34 @@ img { max-width: 100%; display: block; }
         <div class="work-feat-grid">
             <a href="work/OT-Solutions/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="work/OT-Solutions/assets/hero.jpg" alt="OT Solutions, site preview" loading="lazy">
+                    <img src="img/otsolutions-recent-work.png" alt="OT Solutions website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Engagement</span>
-                    </div>
                     <h3 class="work-card-name">OT Solutions <em>Inc.</em></h3>
                     <p class="work-card-blurb">A Sherwood Park-based data consultancy. Multi-page build, custom branding, SEO continuity from a legacy site, contact form, deploy.</p>
-                    <span class="work-card-link">View case <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
 
             <a href="https://closecombat.app/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="img/closecombat/closecombat-cover1.png" alt="CloseCombat, site preview" loading="lazy">
+                    <img src="img/closecombat-recent-work.png" alt="CloseCombat website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Product</span>
-                    </div>
                     <h3 class="work-card-name">Close<em>Combat</em></h3>
                     <p class="work-card-blurb">An AI-powered sales training platform, practice cold calls and objection handling against a real-time AI prospect, with research-backed coaching after every call.</p>
-                    <span class="work-card-link">Visit closecombat.app <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
 
             <a href="https://datafuse.app/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="img/datafuse/datafuse-cover1.png" alt="DataFuse, site preview" loading="lazy">
+                    <img src="img/datafuse-recent-work.png" alt="DataFuse website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Product</span>
-                    </div>
                     <h3 class="work-card-name">Data<em>Fuse</em></h3>
                     <p class="work-card-blurb">Shopify profit intelligence platform. Real-time P&amp;L, Profit ROAS, first-party attribution, AI-powered daily briefings for Shopify merchants.</p>
-                    <span class="work-card-link">Visit datafuse.app <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
         </div>

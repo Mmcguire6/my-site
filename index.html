@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://www.clarity.ms">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-<link rel="preload" as="image" imagesrcset="img/hero-pnw-5-960.webp 960w, img/hero-pnw-5-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/hero-pnw-5-960.avif 960w, img/hero-pnw-5-1920.avif 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-500-normal.woff2" crossorigin>
@@ -1309,7 +1309,7 @@ img { max-width: 100%; display: block; }
     .work-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: clamp(20px, 2.5vw, 32px);
+        gap: clamp(32px, 4vw, 56px);
     }
     .work-foot {
         margin-top: clamp(36px, 4.5vw, 56px);
@@ -1341,51 +1341,34 @@ img { max-width: 100%; display: block; }
         transition: gap 240ms ease, color 200ms ease;
     }
     .work-foot-link:hover { gap: 12px; color: var(--rust-deep); }
+    /* Floating items — no card chrome; mockup floats, text below */
     .work-card {
         display: flex;
         flex-direction: column;
-        background: var(--paper-soft);
-        border: 1px solid var(--rule);
-        border-radius: 4px;
-        overflow: hidden;
-        transition: transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms ease, border-color 320ms ease;
-    }
-    .work-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 32px 64px -32px rgba(26, 24, 20, 0.20);
-        border-color: var(--accent-soft);
+        gap: 20px;
     }
     .work-card-image {
-        aspect-ratio: 4 / 3;
-        background: var(--paper-deeper);
-        overflow: hidden;
-        position: relative;
+        aspect-ratio: 16 / 9;
+        margin: 0 clamp(-24px, -5%, -10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .work-card-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+        object-fit: contain;
+        filter: drop-shadow(0 18px 30px rgba(26, 24, 20, 0.16));
+        transition: transform 360ms cubic-bezier(.2,.7,.2,1);
     }
-    .work-card:hover .work-card-image img { transform: scale(1.04); }
+    .work-card:hover .work-card-image img { transform: translateY(-6px); }
     .work-card-body {
-        padding: clamp(22px, 2.4vw, 32px);
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 12px;
         flex: 1;
     }
-    .work-card-meta {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        font-family: var(--mono);
-        font-size: 10px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--ink-3);
-    }
-    .work-card-meta-tag { color: var(--accent-deep); }
     .work-card-name {
         font-family: var(--serif);
         font-size: clamp(28px, 3vw, 40px);
@@ -1406,18 +1389,21 @@ img { max-width: 100%; display: block; }
     }
     .work-card-link {
         margin-top: auto;
-        padding-top: 18px;
+        align-self: flex-start;
+        padding: 12px 22px;
+        background: var(--ink);
+        color: var(--paper);
+        border-radius: 999px;
         font-family: var(--mono);
         font-size: 11px;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--ink);
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        transition: color 200ms ease, gap 200ms ease;
+        transition: background 220ms ease, color 220ms ease, gap 200ms ease, transform 200ms ease;
     }
-    .work-card:hover .work-card-link { color: var(--accent-deep); gap: 12px; }
+    .work-card:hover .work-card-link { background: var(--accent-deep); color: var(--paper); gap: 12px; transform: translateY(-1px); }
     @media (max-width: 980px) {
         .work-head { grid-template-columns: 1fr; gap: 20px; align-items: start; }
         .work-grid { grid-template-columns: 1fr; }
@@ -1428,7 +1414,10 @@ img { max-width: 100%; display: block; }
         background:
             radial-gradient(ellipse 80% 60% at 30% 0%, color-mix(in oklch, var(--accent) 50%, transparent) 0%, transparent 65%),
             linear-gradient(180deg, rgba(15, 34, 24, 0.86) 0%, rgba(15, 34, 24, 0.94) 100%),
-            url('img/hero-pnw-4.webp') center/cover no-repeat;
+            image-set(
+                url('img/hero-pnw-4.avif') type('image/avif'),
+                url('img/hero-pnw-4-sm.webp') type('image/webp')
+            ) center/cover no-repeat;
         background-color: #0F2218;
         color: var(--paper);
     }
@@ -2047,6 +2036,82 @@ img { max-width: 100%; display: block; }
     color: color-mix(in oklch, var(--paper) 72%, var(--ink-3) 28%);
     max-width: 56ch; margin: 0 auto;
 }
+/* ── PERFORMANCE PROOF ── */
+.perf { background: var(--paper-soft); }
+.perf-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 88px);
+    align-items: center;
+}
+.perf-h2 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.04;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 18px 0 0;
+    max-width: 15ch;
+}
+.perf-h2 em { font-style: italic; font-weight: 500; color: var(--rust); }
+.perf-lede {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    margin: 20px 0 0;
+    max-width: 46ch;
+}
+.perf-points { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.perf-point { display: flex; gap: 14px; align-items: flex-start; }
+.perf-point-ico {
+    flex: none; width: 38px; height: 38px; border-radius: 9px;
+    display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent-deep);
+}
+.perf-point-ico svg { width: 19px; height: 19px; }
+.perf-point p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--ink); font-weight: 500; }
+.perf-cta { margin-top: 32px; }
+.perf-panel { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
+.perf-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.perf-stat-n {
+    font-family: var(--serif);
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1; font-weight: 700; letter-spacing: -0.02em;
+    color: var(--accent);
+}
+.perf-stat-l {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-3); margin-top: 10px; line-height: 1.5;
+}
+.perf-report {
+    --ok: #0CCE6B;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: clamp(20px, 2.4vw, 30px);
+    box-shadow: 0 30px 60px -34px rgba(26, 24, 19, 0.30);
+}
+.perf-gauges { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.perf-gauge { display: flex; flex-direction: column; align-items: center; gap: 9px; flex: 1; min-width: 60px; }
+.perf-ring {
+    width: 62px; height: 62px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: color-mix(in srgb, #0CCE6B 12%, #fff);
+    border: 3px solid var(--ok);
+    color: #0a7a40; font-weight: 600; font-size: 19px; font-family: var(--mono);
+}
+.perf-gauge-l { font-size: 11px; color: #5f6b62; text-align: center; }
+.perf-divider { height: 1px; background: #e6e8ea; margin: clamp(18px, 2.2vw, 24px) 0; border: 0; }
+.perf-vitals { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+.perf-vital { display: flex; flex-direction: column; gap: 3px; }
+.perf-vital-k { font-size: 11px; color: #6b7280; display: inline-flex; align-items: center; gap: 7px; }
+.perf-vital-k::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
+.perf-vital-v { font-size: 17px; font-weight: 600; color: #1f2937; font-family: var(--mono); }
+@media (max-width: 940px) {
+    .perf-grid { grid-template-columns: 1fr; gap: 44px; }
+}
+
 .mid-cta {
     padding: clamp(44px, 5.5vw, 76px) 0; text-align: center;
     background: radial-gradient(ellipse 62% 100% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent) 0%, transparent 60%), #0F2218;
@@ -2154,6 +2219,7 @@ img { max-width: 100%; display: block; }
 <!-- HERO -->
 <section id="top" class="hero">
     <picture>
+        <source type="image/avif" srcset="img/hero-pnw-5-960.avif 960w, img/hero-pnw-5-1920.avif 1920w" sizes="100vw">
         <source type="image/webp" srcset="img/hero-pnw-5-960.webp 960w, img/hero-pnw-5-1920.webp 1920w" sizes="100vw">
         <source type="image/jpeg" srcset="img/hero-pnw-5-960.jpg 960w, img/hero-pnw-5-1920.jpg 1920w" sizes="100vw">
         <img class="hero-bg-img" src="img/hero-pnw-5-1920.jpg" alt="" fetchpriority="high" decoding="async" width="1920" height="1280">
@@ -2350,46 +2416,34 @@ img { max-width: 100%; display: block; }
 
             <a href="work/OT-Solutions/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="work/OT-Solutions/assets/hero.jpg" alt="OT Solutions, site preview" loading="lazy">
+                    <img src="img/otsolutions-recent-work.png" alt="OT Solutions website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Engagement</span>
-                    </div>
                     <h3 class="work-card-name">OT Solutions <em>Inc.</em></h3>
                     <p class="work-card-blurb">A Sherwood Park-based data consultancy. Multi-page build, custom branding, SEO continuity from a legacy site, contact form, deploy.</p>
-                    <span class="work-card-link">View case <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
 
             <a href="https://closecombat.app/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="img/closecombat/closecombat-cover1.png" alt="CloseCombat, site preview" loading="lazy">
+                    <img src="img/closecombat-recent-work.png" alt="CloseCombat website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Product</span>
-                    </div>
                     <h3 class="work-card-name">Close<em>Combat</em></h3>
                     <p class="work-card-blurb">An AI-powered sales training platform, practice cold calls and objection handling against a real-time AI prospect, with research-backed coaching after every call.</p>
-                    <span class="work-card-link">Visit closecombat.app <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
 
             <a href="https://datafuse.app/" class="work-card" target="_blank" rel="noopener">
                 <div class="work-card-image">
-                    <img src="img/datafuse/datafuse-cover1.png" alt="DataFuse, site preview" loading="lazy">
+                    <img src="img/datafuse-recent-work.png" alt="DataFuse website shown on a laptop and phone" loading="lazy">
                 </div>
                 <div class="work-card-body">
-                    <div class="work-card-meta">
-                        <span>2026</span>
-                        <span class="work-card-meta-tag">Product</span>
-                    </div>
                     <h3 class="work-card-name">Data<em>Fuse</em></h3>
                     <p class="work-card-blurb">Shopify profit intelligence platform. Real-time P&amp;L, Profit ROAS, first-party attribution, AI-powered daily briefings for Shopify merchants.</p>
-                    <span class="work-card-link">Visit datafuse.app <span aria-hidden="true">→</span></span>
+                    <span class="work-card-link">Visit website <span aria-hidden="true">→</span></span>
                 </div>
             </a>
 
@@ -2398,6 +2452,68 @@ img { max-width: 100%; display: block; }
         <div class="work-foot">
             <span class="work-foot-text"><strong>Three featured</strong> &middot; <strong>twelve+</strong> concept rebuilds in the archive</span>
             <a href="work.html" class="work-foot-link">See the full archive <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- PERFORMANCE PROOF -->
+<section class="section perf" aria-labelledby="perf-title">
+    <div class="wrap">
+        <div class="perf-grid">
+            <div class="perf-text">
+                <span class="eyebrow">Performance</span>
+                <h2 id="perf-title" class="perf-h2">Websites built to <em>actually perform.</em></h2>
+                <p class="perf-lede">Most sites crawl. Mine are hand-coded to hit near-perfect Google PageSpeed scores, so they load fast, rank better, and convert more. Run your current site through PageSpeed Insights and see where it stands right now.</p>
+                <ul class="perf-points">
+                    <li class="perf-point">
+                        <span class="perf-point-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 7h7v7"/></svg></span>
+                        <p>Faster load times mean more traffic and more conversions over time.</p>
+                    </li>
+                    <li class="perf-point">
+                        <span class="perf-point-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+                        <p>Speed directly helps your SEO and your Google Ads performance.</p>
+                    </li>
+                    <li class="perf-point">
+                        <span class="perf-point-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+                        <p>Hand-coded sites load in about a second, for a better experience on every device.</p>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary perf-cta">Get started today <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+
+            <div class="perf-panel">
+                <div class="perf-stats">
+                    <div class="perf-stat">
+                        <div class="perf-stat-n">100</div>
+                        <div class="perf-stat-l">PageSpeed scores</div>
+                    </div>
+                    <div class="perf-stat">
+                        <div class="perf-stat-n">&lt;1s</div>
+                        <div class="perf-stat-l">Load times</div>
+                    </div>
+                    <div class="perf-stat">
+                        <div class="perf-stat-n">$0</div>
+                        <div class="perf-stat-l">To preview your site</div>
+                    </div>
+                </div>
+
+                <div class="perf-report" role="img" aria-label="Google PageSpeed Insights report showing scores of 100 for Performance, Accessibility, Best Practices, and SEO, with fast core web vitals">
+                    <div class="perf-gauges">
+                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Performance</div></div>
+                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Accessibility</div></div>
+                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Best Practices</div></div>
+                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">SEO</div></div>
+                    </div>
+                    <hr class="perf-divider">
+                    <div class="perf-vitals">
+                        <div class="perf-vital"><span class="perf-vital-k">First Contentful Paint</span><span class="perf-vital-v">0.8 s</span></div>
+                        <div class="perf-vital"><span class="perf-vital-k">Largest Contentful Paint</span><span class="perf-vital-v">1.1 s</span></div>
+                        <div class="perf-vital"><span class="perf-vital-k">Total Blocking Time</span><span class="perf-vital-v">0 ms</span></div>
+                        <div class="perf-vital"><span class="perf-vital-k">Cumulative Layout Shift</span><span class="perf-vital-v">0.00</span></div>
+                        <div class="perf-vital"><span class="perf-vital-k">Speed Index</span><span class="perf-vital-v">1.0 s</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
