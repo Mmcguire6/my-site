@@ -2085,29 +2085,13 @@ img { max-width: 100%; display: block; }
     text-transform: uppercase; color: var(--ink-3); margin-top: 10px; line-height: 1.5;
 }
 .perf-report {
-    --ok: #0CCE6B;
     background: #fff;
     border: 1px solid var(--rule);
     border-radius: 14px;
-    padding: clamp(20px, 2.4vw, 30px);
+    overflow: hidden;
     box-shadow: 0 30px 60px -34px rgba(26, 24, 19, 0.30);
 }
-.perf-gauges { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
-.perf-gauge { display: flex; flex-direction: column; align-items: center; gap: 9px; flex: 1; min-width: 60px; }
-.perf-ring {
-    width: 62px; height: 62px; border-radius: 50%;
-    display: grid; place-items: center;
-    background: color-mix(in srgb, #0CCE6B 12%, #fff);
-    border: 3px solid var(--ok);
-    color: #0a7a40; font-weight: 600; font-size: 19px; font-family: var(--mono);
-}
-.perf-gauge-l { font-size: 11px; color: #5f6b62; text-align: center; }
-.perf-divider { height: 1px; background: #e6e8ea; margin: clamp(18px, 2.2vw, 24px) 0; border: 0; }
-.perf-vitals { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
-.perf-vital { display: flex; flex-direction: column; gap: 3px; }
-.perf-vital-k { font-size: 11px; color: #6b7280; display: inline-flex; align-items: center; gap: 7px; }
-.perf-vital-k::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
-.perf-vital-v { font-size: 17px; font-weight: 600; color: #1f2937; font-family: var(--mono); }
+.perf-report img { width: 100%; height: auto; display: block; }
 @media (max-width: 940px) {
     .perf-grid { grid-template-columns: 1fr; gap: 44px; }
 }
@@ -2462,7 +2446,7 @@ img { max-width: 100%; display: block; }
         <div class="perf-grid">
             <div class="perf-text">
                 <span class="eyebrow">Performance</span>
-                <h2 id="perf-title" class="perf-h2">Websites built to <em>actually perform.</em></h2>
+                <h2 id="perf-title" class="perf-h2">I build better websites with <em>near-perfect performance.</em></h2>
                 <p class="perf-lede">Most sites crawl. Mine are hand-coded to hit near-perfect Google PageSpeed scores, so they load fast, rank better, and convert more. Run your current site through PageSpeed Insights and see where it stands right now.</p>
                 <ul class="perf-points">
                     <li class="perf-point">
@@ -2475,7 +2459,7 @@ img { max-width: 100%; display: block; }
                     </li>
                     <li class="perf-point">
                         <span class="perf-point-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-                        <p>Hand-coded sites load in about a second, for a better experience on every device.</p>
+                        <p>Hand-coded sites load in a second or two, for a better experience on every device.</p>
                     </li>
                 </ul>
                 <a href="contact.html" class="btn btn-primary perf-cta">Get started today <span class="arrow" aria-hidden="true">&rarr;</span></a>
@@ -2484,11 +2468,11 @@ img { max-width: 100%; display: block; }
             <div class="perf-panel">
                 <div class="perf-stats">
                     <div class="perf-stat">
-                        <div class="perf-stat-n">100</div>
+                        <div class="perf-stat-n">95+</div>
                         <div class="perf-stat-l">PageSpeed scores</div>
                     </div>
                     <div class="perf-stat">
-                        <div class="perf-stat-n">&lt;1s</div>
+                        <div class="perf-stat-n">&lt;2s</div>
                         <div class="perf-stat-l">Load times</div>
                     </div>
                     <div class="perf-stat">
@@ -2497,21 +2481,8 @@ img { max-width: 100%; display: block; }
                     </div>
                 </div>
 
-                <div class="perf-report" role="img" aria-label="Google PageSpeed Insights report showing scores of 100 for Performance, Accessibility, Best Practices, and SEO, with fast core web vitals">
-                    <div class="perf-gauges">
-                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Performance</div></div>
-                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Accessibility</div></div>
-                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">Best Practices</div></div>
-                        <div class="perf-gauge"><div class="perf-ring">100</div><div class="perf-gauge-l">SEO</div></div>
-                    </div>
-                    <hr class="perf-divider">
-                    <div class="perf-vitals">
-                        <div class="perf-vital"><span class="perf-vital-k">First Contentful Paint</span><span class="perf-vital-v">0.8 s</span></div>
-                        <div class="perf-vital"><span class="perf-vital-k">Largest Contentful Paint</span><span class="perf-vital-v">1.1 s</span></div>
-                        <div class="perf-vital"><span class="perf-vital-k">Total Blocking Time</span><span class="perf-vital-v">0 ms</span></div>
-                        <div class="perf-vital"><span class="perf-vital-k">Cumulative Layout Shift</span><span class="perf-vital-v">0.00</span></div>
-                        <div class="perf-vital"><span class="perf-vital-k">Speed Index</span><span class="perf-vital-v">1.0 s</span></div>
-                    </div>
+                <div class="perf-report">
+                    <img src="img/mm-lighthouse.png" alt="Google PageSpeed Insights report for matthewmcguire.ca: Performance 96, Accessibility 100, Best Practices 96, SEO 100, with First Contentful Paint 1.6s and Largest Contentful Paint 1.9s" width="744" height="796" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
