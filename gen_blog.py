@@ -175,7 +175,7 @@ FOOTER = """<footer class="footer">
     <div class="wrap">
         <div class="footer-grid">
             <div>
-                <p class="footer-brand">Matthew McGuire</p>
+                <p class="footer-brand">Matthew McGuire Web Designs</p>
                 <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
@@ -201,7 +201,7 @@ FOOTER = """<footer class="footer">
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© <span id="footer-year">2026</span> Matthew McGuire. All rights reserved.</span>
+            <span>© <span id="footer-year">2026</span> Matthew McGuire Web Designs. All rights reserved.</span>
             <span class="footer-bottom-links"><a href="../privacy.html">Privacy</a><span class="dot">·</span><a href="../terms.html">Terms</a></span>
             <span>Designed &amp; built by hand</span>
         </div>
@@ -291,6 +291,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="../favicon.png">
 <meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="Matthew McGuire Web Designs">
 <meta property="og:url" content="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -324,7 +325,7 @@ def post_schema(p: dict, url: str) -> str:
         "description": p["description"], "url": url,
         "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
         "author": {"@type": "Person", "name": AUTHOR, "url": SITE + "/about.html"},
-        "publisher": {"@type": "Organization", "name": "Matthew McGuire Web Design Studio",
+        "publisher": {"@type": "Organization", "@id": "https://matthewmcguire.ca/#org", "name": "Matthew McGuire Web Designs",
                        "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "articleSection": p.get("category", "Articles"),
@@ -355,7 +356,7 @@ def write_post(p: dict) -> Path:
             for q, a in p["faqs"])
         faq_html = f"""<section class="post-faq"><div class="wrap"><p class="eyebrow">FAQ</p><h2>Frequently asked questions</h2><dl>{items}</dl></div></section>"""
 
-    head = HEAD.format(title=html.escape(p["title"]) + " | Matthew McGuire",
+    head = HEAD.format(title=html.escape(p["title"]) + " | Matthew McGuire Web Designs",
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        ld_json=post_schema(p, url), styles=BLOG_CSS)
     body = f"""{nav_html()}
@@ -393,11 +394,11 @@ def write_index(posts: list) -> Path:
             <p class="post-card-meta">{pretty_date(p['date'])} &middot; {p['read_time']} min read</p>
         </a>""" for p in posts)
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "@id": SITE + "/blog/#blog",
-                     "url": SITE + "/blog/", "name": "Matthew McGuire — Web Design & SEO Blog",
+                     "url": SITE + "/blog/", "name": "Matthew McGuire Web Designs Blog",
                      "description": "Plain-English guides on web design, performance, and SEO for small businesses.",
                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html",
                                     "datePublished": p["date"]} for p in posts]}, ensure_ascii=False, indent=2)
-    head = HEAD.format(title="Web Design &amp; SEO Blog | Matthew McGuire",
+    head = HEAD.format(title="Web Design &amp; SEO Blog | Matthew McGuire Web Designs",
                        desc="Plain-English guides on web design, website speed, and SEO for small businesses — from an Edmonton web design studio.",
                        canonical=SITE + "/blog/", og_type="website", ld_json=ld, styles=BLOG_CSS)
     body = f"""{nav_html()}
