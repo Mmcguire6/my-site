@@ -1711,7 +1711,6 @@ def build_sitemap() -> Path:
         ("faq.html", 0.7),
         ("locations.html", 0.85),
         ("contact.html", 0.8),
-        ("skills.html", 0.6),
         # /work/* is intentionally excluded — those are prospect-preview
         # pages and should not be indexed (also noindexed at the page level
         # and disallowed in robots.txt).

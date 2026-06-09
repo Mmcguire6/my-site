@@ -19,7 +19,7 @@ from gen_locations import CITIES, mobile_loc_provinces_html
 ROOT = Path(__file__).parent
 MAIN_PAGES = [
     "index.html", "about.html", "work.html", "how.html", "pricing.html",
-    "faq.html", "contact.html", "privacy.html", "terms.html", "skills.html",
+    "faq.html", "contact.html", "privacy.html", "terms.html",
 ]
 SENTINEL = "<!-- LOCATIONS_DROPDOWN_INJECTED -->"
 
