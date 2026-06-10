@@ -126,6 +126,7 @@ def nav_html() -> str:
                 </ul>
             </div>
             <a href="../work.html">Work</a>
+            <a href="../ai-automation.html">AI Automation</a>
             <a href="index.html" aria-current="page">Blog</a>
             <a href="../pricing.html">Pricing</a>
 {desktop_dropdown()}
@@ -150,6 +151,7 @@ def nav_html() -> str:
             </ul>
         </details></li>
         <li><a href="../work.html">Work</a></li>
+        <li><a href="../ai-automation.html">AI Automation</a></li>
         <li><a href="index.html" aria-current="page">Blog</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>

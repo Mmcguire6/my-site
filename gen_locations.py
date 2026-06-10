@@ -44,7 +44,7 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
         ("st-albert", "St. Albert",
          "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website that looks like 2026. That's the gap the studio is built for."),
         ("sherwood-park", "Sherwood Park",
-         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, $75 a month, everything included."),
+         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website without an enterprise build budget. $0 down, from $75/month, everything included."),
         ("leduc", "Leduc",
          "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once. The studio builds clean, fast, mobile-first sites that load on a phone in a parking lot just as well as on a desk in a downtown office."),
         ("spruce-grove", "Spruce Grove",
@@ -147,6 +147,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="../work.html">Work</a>
+            <a href="../ai-automation.html">AI Automation</a>
             <a href="../blog/">Blog</a>
             <a href="../pricing.html">Pricing</a>
 {nav_dropdown_desktop}
@@ -171,6 +172,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="../work.html">Work</a></li>
+        <li><a href="../ai-automation.html">AI Automation</a></li>
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
@@ -200,7 +202,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <h1 class="hero-name">{name} <span class="last">Web Designer</span></h1>
         <p class="hero-tag">Custom website design and development for {name} businesses. Built by hand, hosted, and supported.</p>
         <p class="hero-price">
-            <strong>$0 down</strong> &middot; <strong>$75 / month</strong> all-inclusive
+            <strong>$0 down</strong> &middot; from <strong>$75 / month</strong>, all-inclusive
             <span class="hero-price-term">12-month minimum, then month-to-month</span>
         </p>
         <p class="hero-lede">
@@ -310,7 +312,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <div class="pricing-card">
                 <p class="pricing-card-name">Monthly subscription</p>
                 <p class="pricing-card-price"><strong>$0</strong> down</p>
-                <p class="pricing-card-sub">$75 / month all-inclusive &middot; 12-month minimum</p>
+                <p class="pricing-card-sub">from $75 / month all-inclusive &middot; 12-month minimum</p>
                 <p class="pricing-card-body">Design, development, hosting, edits, security, and direct support, all for one monthly fee for as long as you stay. Site stays live as long as the subscription is active.</p>
             </div>
         </div>
@@ -1227,7 +1229,7 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
     studio_id = "https://matthewmcguire.ca/#org"
     desc = (f"Custom-coded websites for {name} small businesses: trades, shops, "
             f"clinics, studios, consultancies, and professional services. "
-            f"$0 down, $75 a month all-inclusive, with design, hosting, edits, "
+            f"$0 down, from $75/month all-inclusive, with design, hosting, edits, "
             f"and security included. 12-month minimum, then month-to-month.")
 
     graph = [
@@ -1270,7 +1272,7 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "name": "Monthly subscription",
                     "price": "75",
                     "priceCurrency": "CAD",
-                    "description": "$0 down, $75/month all-inclusive (12-month minimum, then month-to-month). Design, development, hosting, edits, security, support.",
+                    "description": "$0 down, from $75/month (12-month minimum, then month-to-month). Design, development, hosting, edits, security, support.",
                 },
             ],
         },
@@ -1484,6 +1486,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="work.html">Work</a>
+            <a href="ai-automation.html">AI Automation</a>
             <a href="blog/">Blog</a>
             <a href="pricing.html">Pricing</a>
 {nav_dropdown_root}
@@ -1508,6 +1511,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="work.html">Work</a></li>
+        <li><a href="ai-automation.html">AI Automation</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
@@ -1706,6 +1710,7 @@ def build_sitemap() -> Path:
         ("", 1.0),
         ("about.html", 0.8),
         ("work.html", 0.85),
+        ("ai-automation.html", 0.85),
         ("how.html", 0.75),
         ("pricing.html", 0.9),
         ("faq.html", 0.7),

@@ -8,15 +8,37 @@
 <link rel="preconnect" href="https://www.clarity.ms">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-<title>How We Work | Matthew McGuire Web Designs</title>
-<meta name="description" content="A preview-first process for designing and building modern, brand-coherent websites, no discovery calls, no Figma mockups. Real working pages, then a decision.">
+<title>AI Automation for Small Business | Matthew McGuire Web Designs</title>
+<meta name="description" content="Practical AI automation for small businesses: 24/7 website chat assistants, AI phone agents that answer and book calls, automated lead follow-up, and content automation, built around the tools you already use.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Matthew McGuire Web Designs">
-<link rel="canonical" href="https://matthewmcguire.ca/how.html">
-<meta property="og:url" content="https://matthewmcguire.ca/how.html">
-<meta property="og:title" content="How We Work | Matthew McGuire Web Designs">
-<meta property="og:description" content="$0 down, $75 per month, 12-month minimum. Preview-first. Design, hosting, edits, security, all in one subscription. Site goes offline if you cancel.">
+<link rel="canonical" href="https://matthewmcguire.ca/ai-automation.html">
+<meta property="og:url" content="https://matthewmcguire.ca/ai-automation.html">
+<meta property="og:title" content="AI Automation for Small Business | Matthew McGuire Web Designs">
+<meta property="og:description" content="Practical AI automation for small businesses: website chat assistants, AI phone/voice agents, automated lead follow-up and booking, and content automation.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI automation for small business",
+  "serviceType": "AI automation, chatbots, and voice agents",
+  "provider": { "@id": "https://matthewmcguire.ca/#org" },
+  "areaServed": { "@type": "Country", "name": "Canada" },
+  "url": "https://matthewmcguire.ca/ai-automation.html",
+  "description": "Custom AI automation for small businesses: website chat assistants, AI phone and voice agents, lead and booking automation, and content and back-office automation.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "AI automation services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI website chat assistant" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI phone and voice agent" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead and booking automation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content and back-office automation" } }
+    ]
+  }
+}
+</script>
 <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-700-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/inter-500-normal.woff2" crossorigin>
@@ -1454,7 +1476,7 @@ p, li, .hero-lede, .services-lede { text-wrap: pretty; }
         <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home"><img src="img/mm-nav-logo.webp" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="988" height="180"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
-                        <div class="nav-dd nav-dd--studio" aria-current="page">
+                        <div class="nav-dd nav-dd--studio">
                 <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
                 <ul class="nav-dd-panel nav-dd-panel--rich" style="left:0;right:auto;">
                     <li><a href="about.html"><span class="dd-t">About</span><span class="dd-d">The studio &amp; the founder</span></a></li>
@@ -1463,7 +1485,7 @@ p, li, .hero-lede, .services-lede { text-wrap: pretty; }
                 </ul>
             </div>
             <a href="work.html">Work</a>
-            <a href="ai-automation.html">AI Automation</a>
+            <a href="ai-automation.html" aria-current="page">AI Automation</a>
             <a href="blog/">Blog</a>
             <a href="pricing.html">Pricing</a>
             <!-- LOCATIONS_DROPDOWN_INJECTED -->
@@ -1506,7 +1528,7 @@ p, li, .hero-lede, .services-lede { text-wrap: pretty; }
             </ul>
         </details></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="ai-automation.html">AI Automation</a></li>
+        <li><a href="ai-automation.html" aria-current="page">AI Automation</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
@@ -1542,252 +1564,136 @@ p, li, .hero-lede, .services-lede { text-wrap: pretty; }
 
 <main id="main">
 
+<style>
+/* AI automation page */
+.ai-services { padding: clamp(48px,6vw,96px) 0; }
+.ai-services .wrap, .ai-steps .wrap { max-width: 1080px; }
+.ai-services-head { max-width: 680px; margin: 0 auto clamp(34px,4vw,52px); text-align: center; }
+.ai-services-head h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(28px,3.4vw,44px); color: var(--ink); letter-spacing: -.02em; margin-top: 12px; }
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px,2.2vw,26px); }
+.ai-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: clamp(28px,3vw,38px); display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(26,24,19,.04), 0 18px 40px -28px rgba(26,24,19,.18); }
+.ai-card-ico { width: 46px; height: 46px; border-radius: 11px; display: grid; place-items: center; background: color-mix(in oklch, var(--rust) 13%, var(--paper)); color: var(--rust-deep); margin-bottom: 4px; }
+.ai-card-ico svg { width: 24px; height: 24px; }
+.ai-card-tag { font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--rust); }
+.ai-card h3 { font-family: var(--serif); font-weight: 700; font-size: clamp(20px,2vw,25px); color: var(--ink); letter-spacing: -.01em; }
+.ai-card p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin: 0; }
+.ai-steps { padding: clamp(40px,5vw,84px) 0 clamp(48px,6vw,96px); background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.ai-steplist { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(22px,3vw,40px); max-width: 1080px; margin: 0 auto; }
+.ai-steplist li { display: flex; flex-direction: column; gap: 10px; }
+.ai-step-n { font-family: var(--mono); font-size: 13px; letter-spacing: .2em; color: var(--rust); }
+.ai-steplist h3 { font-family: var(--serif); font-weight: 700; font-size: clamp(19px,1.9vw,23px); color: var(--ink); }
+.ai-steplist p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+.ai-cta { padding: clamp(56px,8vw,112px) 0; text-align: center; }
+.ai-cta .wrap { max-width: 640px; }
+.ai-cta h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(30px,4vw,50px); color: var(--ink); letter-spacing: -.022em; }
+.ai-cta > .wrap > p { font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 18px auto 0; }
+.ai-cta-btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 16px 34px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; border-radius: 999px; transition: transform .2s ease, background .2s ease; }
+.ai-cta-btn:hover { transform: translateY(-1px); background: var(--rust-deep); }
+.ai-cta-sub { font-size: 13.5px; color: var(--ink-2); opacity: .8; margin-top: 18px !important; }
+@media (max-width: 760px){ .ai-grid { grid-template-columns: 1fr; } .ai-steplist { grid-template-columns: 1fr; } }
+</style>
+
 <!-- HERO -->
 <section class="how-hero">
     <div class="wrap">
         <div class="how-hero-grid">
             <div>
-                <span class="eyebrow">How we work</span>
-                <h1 class="how-hero-h1">See it first. <em>Then decide.</em></h1>
+                <span class="eyebrow">AI Automation</span>
+                <h1 class="how-hero-h1">Put the busywork <em>on autopilot.</em></h1>
             </div>
             <p class="how-hero-lede">
-                Most engagements start with a working preview already built for you, <strong>your business&rsquo;s actual site</strong>, refined and ready to look at. <strong>No discovery calls, no Figma mockups, no commitment</strong> until you&rsquo;ve seen what&rsquo;s possible.
+                The same AI reshaping big companies is now within reach for small ones. We build practical automations that <strong>answer your customers, capture your leads, and handle the repetitive work</strong> &mdash; so your time goes to the parts of the business only you can do.
             </p>
         </div>
     </div>
 </section>
 
-<!-- PHILOSOPHY -->
+<!-- WHAT IT IS -->
 <section class="how-philo">
     <div class="wrap">
         <div class="how-philo-grid">
-            <aside class="how-philo-aside" aria-label="Why this process">
-                <span class="eyebrow">The philosophy</span>
-                <h2 class="how-philo-h">Show, then <em>tell.</em></h2>
+            <aside class="how-philo-aside" aria-label="What it is">
+                <span class="eyebrow">What it is</span>
+                <h2 class="how-philo-h">AI that <em>does the work.</em></h2>
             </aside>
             <div class="how-philo-prose">
-                <p>The reason most small-business websites end up looking the same is the way they&rsquo;re sold. You take a discovery call, you fill out a brief, an account manager pitches a deck, you sign a statement of work, and three months later something competent and forgettable goes live. Every step is a chance for the business&rsquo;s actual identity to get smoothed flat.</p>
-
-                <p>The studio runs the engagement backwards. <strong>Before there&rsquo;s a contract, there&rsquo;s a working preview</strong>, your business&rsquo;s real name, real services, real copy polished from your existing pages, on a real working build. You see exactly what your site could look like, in your browser, before you decide anything.</p>
-
-                <p>That changes every conversation that follows. The brief writes itself. The scope is grounded in something real, not a guess. And by the time you&rsquo;re reviewing the final build, you&rsquo;ve already seen three rounds of the work. <strong>No discovery calls. No pitch decks. No commitment until you&rsquo;ve seen what&rsquo;s possible.</strong></p>
+                <p>&ldquo;AI automation&rdquo; sounds futuristic, but it&rsquo;s simple: software that handles a task a person used to &mdash; instantly, and around the clock. A customer asks a question at 11pm and gets a real answer. A new lead fills out a form and hears back in seconds, not days. A booking lands straight in your calendar with no email back-and-forth.</p>
+                <p>It isn&rsquo;t about replacing the human touch. It&rsquo;s about removing the friction that quietly loses you business &mdash; the missed call, the slow reply, the enquiry that slipped through. We build each system around <strong>your</strong> business, wire it into the tools you already use, and keep a human in the loop wherever it matters.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PROCESS STEPS -->
-<section class="how-steps">
+<!-- THE SERVICES -->
+<section class="ai-services" aria-labelledby="ai-services-title">
     <div class="wrap">
-        <header class="how-steps-head">
-            <span class="eyebrow">The three stages</span>
-            <h2 class="how-steps-h">From preview to <em>launch.</em></h2>
-            <p class="how-steps-lede">
-                Every engagement runs the same arc. The preview comes first. The scope is fixed. The build stays in-house, end to end. Two-to-three weeks from kickoff to launch is typical.
-            </p>
-        </header>
-
-        <div class="how-steps-grid">
-            <article class="how-step">
-                <span class="how-step-n">01 &middot; Days 01–05</span>
-                <h3 class="how-step-title">Preview &amp; <em>quote</em></h3>
-                <p class="how-step-time">Working preview · Fixed scope · $0 down to sign</p>
-                <p class="how-step-body">
-                    You see a working preview of your business&rsquo;s site, real brand, real content polished from your existing copy, real working build, deployed to a private URL. If it&rsquo;s a fit, you get a fixed scope and a service agreement. Sign and return, and no money changes hands until launch. No pressure, no presentations, no calls.
-                </p>
-                <ul class="how-step-list">
-                    <li>Working preview built up front</li>
-                    <li>Real copy, polished from your pages</li>
-                    <li>Fixed scope &amp; agreement</li>
-                    <li>$0 down to sign</li>
-                </ul>
+        <div class="ai-services-head">
+            <span class="eyebrow">What we build</span>
+            <h2 id="ai-services-title">Four ways to automate.</h2>
+        </div>
+        <div class="ai-grid">
+            <article class="ai-card">
+                <span class="ai-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1-.9-3.8A8.38 8.38 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5z"/></svg></span>
+                <span class="ai-card-tag">Always on</span>
+                <h3>AI website chat assistant</h3>
+                <p>A smart assistant on your site that answers questions, captures leads, and books appointments 24/7 &mdash; trained on your business, so it actually knows your services, hours, and prices.</p>
             </article>
-
-            <article class="how-step">
-                <span class="how-step-n">02 &middot; Days 05–14</span>
-                <h3 class="how-step-title">Build &amp; <em>refine</em></h3>
-                <p class="how-step-time">Two revision rounds · Real working pages</p>
-                <p class="how-step-body">
-                    From there, the preview becomes the final site, copy tightened, pages expanded, typography and palette dialed in around your business&rsquo;s identity. Two rounds of revisions are baked into scope, and you review real working pages, not Figma mockups, on every pass.
-                </p>
-                <ul class="how-step-list">
-                    <li>Two rounds of revisions</li>
-                    <li>Custom typography &amp; palette</li>
-                    <li>Real working pages every pass</li>
-                    <li>One inbox, no middlemen</li>
-                </ul>
+            <article class="ai-card">
+                <span class="ai-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <span class="ai-card-tag">Never miss a call</span>
+                <h3>AI phone &amp; voice agent</h3>
+                <p>A natural-sounding voice agent that answers your phone, qualifies callers, and books appointments &mdash; so you never lose a customer to a missed call or an after-hours voicemail again.</p>
             </article>
-
-            <article class="how-step">
-                <span class="how-step-n">03 &middot; Days 14–21</span>
-                <h3 class="how-step-title">Launch &amp; <em>maintain</em></h3>
-                <p class="how-step-time">Deploy · $75/mo begins · 12-month term</p>
-                <p class="how-step-body">
-                    Domain, hosting, SSL, analytics, contact-form wiring, search-engine submission. Your $75/month subscription begins on launch day, that&rsquo;s the only invoice, and it covers design, hosting, all ongoing edits and content changes, security patches, and small additions. 12-month minimum, then month-to-month.
-                </p>
-                <ul class="how-step-list">
-                    <li>Netlify deploy &amp; DNS</li>
-                    <li>$0 due to sign, first $75 invoice on launch day</li>
-                    <li>$75 / month, 12-month minimum</li>
-                    <li>Edits handled for you, not by you</li>
-                </ul>
+            <article class="ai-card">
+                <span class="ai-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+                <span class="ai-card-tag">Hands-off</span>
+                <h3>Lead &amp; booking automation</h3>
+                <p>Every enquiry followed up instantly, every booking scheduled and reminded, every happy customer asked for a review &mdash; automatically, without you touching a thing.</p>
+            </article>
+            <article class="ai-card">
+                <span class="ai-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></span>
+                <span class="ai-card-tag">Behind the scenes</span>
+                <h3>Content &amp; back-office automation</h3>
+                <p>AI-drafted blog posts and social content, intake forms that summarise themselves, and your everyday tools wired together so information flows without the copy-paste.</p>
             </article>
         </div>
     </div>
 </section>
 
-<!-- EXPECTATIONS -->
-<section class="how-expects">
+<!-- HOW WE BUILD IT -->
+<section class="ai-steps" aria-labelledby="ai-steps-title">
     <div class="wrap">
-        <header class="work-section-head" style="display:block; max-width:760px;">
-            <span class="eyebrow">What to expect</span>
-            <h2 class="how-philo-h" style="margin-top:16px;">A short list of <em>yes &amp; no.</em></h2>
-        </header>
-
-        <div class="how-expects-grid">
-            <div class="expect-col">
-                <span class="expect-col-key">What you get</span>
-                <h3 class="expect-col-h">A real site, built <em>in-house.</em></h3>
-                <ul class="expect-list">
-                    <li>A working preview of your site, before any commitment</li>
-                    <li>One studio end-to-end: strategy, design, build, deploy</li>
-                    <li>Custom typography and palette around your business&rsquo;s identity</li>
-                    <li>Real, hand-written code, no website builders, no theme buys</li>
-                    <li>Two rounds of revisions inside fixed scope</li>
-                    <li>Domain, hosting, SSL, analytics, contact-form wiring at launch</li>
-                    <li>Ongoing edits and maintenance via a small monthly plan</li>
-                </ul>
-            </div>
-            <div class="expect-col no">
-                <span class="expect-col-key">What you don&rsquo;t</span>
-                <h3 class="expect-col-h">No process <em>theatre.</em></h3>
-                <ul class="expect-list">
-                    <li>No discovery calls, no chemistry meetings, no pitch decks</li>
-                    <li>No Figma mockups, you see a real, working page from day one</li>
-                    <li>No project managers or account handlers between us</li>
-                    <li>No offshore production or junior handoffs</li>
-                    <li>No domain hostage, your domain is registered in your business&rsquo;s name from day one</li>
-                    <li>No surprise scope creep, the quote is the quote</li>
-                </ul>
-            </div>
+        <div class="ai-services-head">
+            <span class="eyebrow">How it works</span>
+            <h2 id="ai-steps-title">Start small. Scale what works.</h2>
         </div>
+        <ol class="ai-steplist">
+            <li>
+                <span class="ai-step-n">01</span>
+                <h3>Find the leak</h3>
+                <p>A short conversation about where your time and leads actually go. We pick the one or two automations that&rsquo;ll pay for themselves fastest &mdash; no boiling the ocean.</p>
+            </li>
+            <li>
+                <span class="ai-step-n">02</span>
+                <h3>Build &amp; wire it in</h3>
+                <p>We build the automation around your business and connect it to the tools you already use &mdash; your calendar, inbox, CRM, or phone line. You see it working before it goes live.</p>
+            </li>
+            <li>
+                <span class="ai-step-n">03</span>
+                <h3>Watch it, tune it</h3>
+                <p>Once it&rsquo;s live we keep an eye on it, refine how it responds, and add the next automation when you&rsquo;re ready. It gets sharper as it goes.</p>
+            </li>
+        </ol>
     </div>
 </section>
 
-<!-- PRICING -->
-<section class="how-price">
+<!-- CTA -->
+<section class="ai-cta">
     <div class="wrap">
-        <header class="work-section-head" style="display:block; max-width:760px;">
-            <span class="eyebrow">What it costs</span>
-            <h2 class="how-philo-h" style="margin-top:16px;">$0 down. <em>$75 per month.</em></h2>
-            <p class="how-philo-prose" style="max-width:60ch; margin-top:24px; font-size:clamp(15px, 1.15vw, 17px);">
-                One inclusive subscription, no surprises. Each plan is one flat monthly number, design, build, hosting, edits, security, support, all in. No deposit to sign, no separate build invoice, no scope-creep clock running in the background. Read the cancellation row below carefully, this is a subscription, not a buyout.
-            </p>
-        </header>
-
-        <div class="price-rows">
-            <div class="price-row">
-                <span class="price-key">The subscription</span>
-                <span class="price-val">Design, build, hosting, edits, security patches, small additions: everything included. <em>$0 down to sign. Plan begins on launch day.</em></span>
-                <span class="price-amt">$75<em>/ month</em></span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Term</span>
-                <span class="price-val">12-month minimum, then month-to-month indefinitely. <em>Cancel after 12 months with 30 days&rsquo; notice, no exit fee.</em></span>
-                <span class="price-amt">12 months</span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Early cancellation</span>
-                <span class="price-val">Cancel before the 12-month minimum and the remaining months of the commitment are due. <em>Example: cancel at month 6, the remaining 6 months &times; $75 = $450 owed.</em></span>
-                <span class="price-amt">remaining<em>&times; $75</em></span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">If you cancel</span>
-                <span class="price-val">You keep your domain and anything you provided (logo, photos, copy). <em>The built site itself comes down at the end of the notice period.</em> No buyout.</span>
-                <span class="price-amt">Site offline</span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Domain &amp; SSL</span>
-                <span class="price-val">Standard registrar fees passed through at cost. <em>Registered in your business&rsquo;s name from day one.</em></span>
-                <span class="price-amt">At cost</span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Revisions</span>
-                <span class="price-val">Two rounds inside scope. <em>Additional rounds quoted hourly if needed.</em></span>
-                <span class="price-amt">Included</span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Major add-ons</span>
-                <span class="price-val">New booking systems, e-commerce, custom calculators, full redesigns. <em>Quoted separately and rolled into the monthly when added.</em></span>
-                <span class="price-amt">On request</span>
-            </div>
-            <div class="price-row">
-                <span class="price-key">Timeline</span>
-                <span class="price-val">Two-to-three weeks from preview-accept to launch is typical. <em>Faster if your content is ready.</em></span>
-                <span class="price-amt">2–3 wks</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="how-faq">
-    <div class="wrap">
-        <header class="work-section-head" style="display:block; max-width:760px;">
-            <span class="eyebrow">A few common questions</span>
-            <h2 class="how-philo-h" style="margin-top:16px;">Things people <em>ask first.</em></h2>
-        </header>
-
-        <ul class="faq-list">
-            <li>
-                <details>
-                    <summary>How does the working preview actually work?</summary>
-                    <div class="faq-body">
-                        The studio looks at your existing site, pulls your real services and bio copy, and builds a real, deployed landing page, a redone version of your homepage so you can feel how the full site would be built out. You get a private URL, you see it live, you decide whether it&rsquo;s a direction worth pursuing. There&rsquo;s no charge for the preview; if it isn&rsquo;t a fit, no harm done.
-                    </div>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>What do I need to provide to get started?</summary>
-                    <div class="faq-body">
-                        Almost nothing for the preview. Your existing site URL is enough, that&rsquo;s where your business name, services, staff bios, and any published photography get pulled from. Once we&rsquo;re into the build, we&rsquo;ll ask for any additional copy, headshots, or assets you want incorporated, but the project won&rsquo;t be held up waiting on perfect content.
-                    </div>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>Can I keep my existing domain and email?</summary>
-                    <div class="faq-body">
-                        Yes. The site lives on Netlify under your existing domain, and the DNS pointer is handled for you at launch. Your email continues to work as it does today (Google Workspace, Microsoft 365, or whatever you&rsquo;re on); the website doesn&rsquo;t touch your mail records.
-                    </div>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>What does the $75/month subscription actually cover?</summary>
-                    <div class="faq-body">
-                        Everything: design, build, hosting, SSL, analytics, security patches, and ongoing content edits, you email when something needs updating, and it&rsquo;s handled. New staff bios, updated services, blog posts, seasonal banners, small layout tweaks, all included. Major new features (a booking system, a custom calculator, a full redesign of a section) are quoted separately and rolled into the monthly. 12-month minimum, then month-to-month indefinitely, cancel after 12 months with 30 days&rsquo; notice and the site comes down at the end of the notice period.
-                    </div>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>Do I own the site if I cancel?</summary>
-                    <div class="faq-body">
-                        No, and this is the most important thing to understand before signing up. The studio operates on a subscription model, not a buyout model. $0 down + $75/month buys you ongoing access to a hand-built site. If your subscription ends, the site goes offline at the end of the notice period. You keep your domain (it&rsquo;s registered in your business&rsquo;s name from day one) and anything you provided, logo, photos, written content. You don&rsquo;t keep the built site itself. This is the trade for $0 down: the studio recoups the build cost over multiple years of subscription, so departures with the site can&rsquo;t be permitted. If owning the code outright matters more than ongoing service, just ask, a one-time buyout can be arranged.
-                    </div>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>What kinds of businesses do you usually work with?</summary>
-                    <div class="faq-body">
-                        All kinds, trades and contractors, clinics and practitioners, shops and studios, consultants, and professional services. The thread is small businesses that do careful, serious work for their customers and want a website that reflects that, precise, current, never showy.
-                    </div>
-                </details>
-            </li>
-        </ul>
+        <h2>Tell us what eats your time.</h2>
+        <p>Every business is different, so AI automation is scoped and quoted per project &mdash; and it always starts with a free, no-pressure conversation about what&rsquo;s actually worth automating.</p>
+        <a href="contact.html" class="ai-cta-btn">Start the conversation <span aria-hidden="true">&rarr;</span></a>
+        <p class="ai-cta-sub">Already a web client? Ask about adding automation to your plan.</p>
     </div>
 </section>
 
