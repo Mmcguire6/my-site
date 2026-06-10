@@ -659,7 +659,7 @@ ul, ol { list-style: none; }
     transition: transform 200ms ease, color 200ms ease;
 }
 .nav-dd-panel > li:hover > a {
-    background: color-mix(in oklch, var(--ink) 6%, transparent); color: var(--ink);
+    background: color-mix(in oklch, var(--rust) 7%, transparent); color: var(--ink);
 }
 .nav-dd-panel > li:has(> .nav-dd-sub):hover > a::after { transform: translateX(3px); color: var(--rust); }
 
@@ -690,7 +690,7 @@ ul, ol { list-style: none; }
     display: block; padding: 7px 22px; font-size: 13px; color: var(--ink-2);
     transition: background 140ms ease, color 140ms ease;
 }
-.nav-dd-sub a:hover { background: color-mix(in oklch, var(--ink) 6%, transparent); color: var(--ink); }
+.nav-dd-sub a:hover { background: color-mix(in oklch, var(--rust) 7%, transparent); color: var(--ink); }
 
 @media (max-width: 1100px) { .nav-dd-panel { right: auto; left: 0; } }
 
