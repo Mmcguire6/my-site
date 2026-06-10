@@ -147,7 +147,6 @@ CITY_PAGE = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="../work.html">Work</a>
-            <a href="../ai-automation.html">AI Automation</a>
             <a href="../blog/">Blog</a>
             <a href="../pricing.html">Pricing</a>
 {nav_dropdown_desktop}
@@ -172,7 +171,6 @@ CITY_PAGE = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="../work.html">Work</a></li>
-        <li><a href="../ai-automation.html">AI Automation</a></li>
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
@@ -1486,7 +1484,6 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                 </ul>
             </div>
             <a href="work.html">Work</a>
-            <a href="ai-automation.html">AI Automation</a>
             <a href="blog/">Blog</a>
             <a href="pricing.html">Pricing</a>
 {nav_dropdown_root}
@@ -1511,7 +1508,6 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             </ul>
         </details></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="ai-automation.html">AI Automation</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
@@ -1710,7 +1706,6 @@ def build_sitemap() -> Path:
         ("", 1.0),
         ("about.html", 0.8),
         ("work.html", 0.85),
-        ("ai-automation.html", 0.85),
         ("how.html", 0.75),
         ("pricing.html", 0.9),
         ("faq.html", 0.7),
