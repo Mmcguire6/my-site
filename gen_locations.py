@@ -138,17 +138,17 @@ CITY_PAGE = """<!DOCTYPE html>
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="../index.html">Home</a>
+            <a href="../work.html">Work</a>
+            <a href="../pricing.html">Pricing</a>
             <div class="nav-dd nav-dd--studio">
                 <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
                 <ul class="nav-dd-panel nav-dd-panel--rich" style="left:0;right:auto;">
                     <li><a href="../about.html"><span class="dd-t">About</span><span class="dd-d">The studio &amp; the founder</span></a></li>
                     <li><a href="../how.html"><span class="dd-t">How we work</span><span class="dd-d">Preview-first, no surprises</span></a></li>
                     <li><a href="../faq.html"><span class="dd-t">FAQ</span><span class="dd-d">Pricing, plans &amp; details</span></a></li>
+                    <li><a href="../blog/"><span class="dd-t">Blog</span><span class="dd-d">Guides &amp; insights</span></a></li>
                 </ul>
             </div>
-            <a href="../work.html">Work</a>
-            <a href="../blog/">Blog</a>
-            <a href="../pricing.html">Pricing</a>
 {nav_dropdown_desktop}
             <a href="../contact.html">Contact</a>
         </nav>
@@ -162,17 +162,17 @@ CITY_PAGE = """<!DOCTYPE html>
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
         <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
         <li class="nm-group"><details>
             <summary>Studio</summary>
             <ul class="nm-sub">
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../how.html">How we work</a></li>
                 <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../blog/">Blog</a></li>
             </ul>
         </details></li>
-        <li><a href="../work.html">Work</a></li>
-        <li><a href="../blog/">Blog</a></li>
-        <li><a href="../pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="../contact.html">Contact</a></li>
     </ul>
@@ -1475,17 +1475,17 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="pricing.html">Pricing</a>
             <div class="nav-dd nav-dd--studio">
                 <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
                 <ul class="nav-dd-panel nav-dd-panel--rich" style="left:0;right:auto;">
                     <li><a href="about.html"><span class="dd-t">About</span><span class="dd-d">The studio &amp; the founder</span></a></li>
                     <li><a href="how.html"><span class="dd-t">How we work</span><span class="dd-d">Preview-first, no surprises</span></a></li>
                     <li><a href="faq.html"><span class="dd-t">FAQ</span><span class="dd-d">Pricing, plans &amp; details</span></a></li>
+                    <li><a href="blog/"><span class="dd-t">Blog</span><span class="dd-d">Guides &amp; insights</span></a></li>
                 </ul>
             </div>
-            <a href="work.html">Work</a>
-            <a href="blog/">Blog</a>
-            <a href="pricing.html">Pricing</a>
 {nav_dropdown_root}
             <a href="contact.html">Contact</a>
         </nav>
@@ -1499,17 +1499,17 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
     <ul class="nav-mobile-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
         <li class="nm-group"><details>
             <summary>Studio</summary>
             <ul class="nm-sub">
                 <li><a href="about.html">About</a></li>
                 <li><a href="how.html">How we work</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog/">Blog</a></li>
             </ul>
         </details></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
         <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
