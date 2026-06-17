@@ -2794,5 +2794,78 @@
     });
 </script>
 
+<!-- Motion layer v2 (Lenis + GSAP, full) — shared enhancement -->
+<script>
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  function load(src){return new Promise(function(res,rej){var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s);});}
+  function accent(){
+    var b=document.querySelector('.btn-gold,.btn-ink,.btn-crimson,.btn-navy,.btn-brass,.btn-amber,.btn-wine,.btn-sage,.btn-forest,.btn-indigo,.btn-orange,.btn:not([class*="ghost"])');
+    if(b){var c=getComputedStyle(b).backgroundColor;if(c&&c!=='rgba(0, 0, 0, 0)'&&c!=='transparent')return c;}
+    return '#b8902f';
+  }
+  Promise.all([
+    load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'),
+    load('https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js')
+  ]).then(function(){return load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js');})
+   .then(init).catch(function(){});
+  function init(){
+    if(typeof gsap==='undefined')return;
+    gsap.registerPlugin(ScrollTrigger);
+    var ac=accent();
+    var bar=document.createElement('div');
+    bar.style.cssText='position:fixed;top:0;left:0;height:3px;width:0;z-index:9999;pointer-events:none;opacity:0.9;background:'+ac+';';
+    document.body.appendChild(bar);
+    function prog(y){var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?(y/h)*100:0)+'%';}
+    var lenis=null;
+    if(typeof Lenis!=='undefined'){
+      document.documentElement.style.scrollBehavior='auto';
+      lenis=new Lenis({duration:1.1,smoothWheel:true,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}});
+      lenis.on('scroll',function(e){ScrollTrigger.update();prog(e.scroll);});
+      (function raf(t){lenis.raf(t);requestAnimationFrame(raf);})(0);
+    }else{addEventListener('scroll',function(){prog(scrollY);},{passive:true});}
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      var id=a.getAttribute('href');if(!id||id.length<=1)return;
+      a.addEventListener('click',function(e){var t=document.querySelector(id);if(!t)return;e.preventDefault();if(lenis)lenis.scrollTo(t,{offset:-80,duration:1.1});else t.scrollIntoView();});
+    });
+    gsap.utils.toArray('.hero-bg').forEach(function(el){
+      gsap.set(el,{scale:1.12,transformOrigin:'center center'});
+      gsap.to(el,{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    });
+    if(matchMedia('(pointer: fine)').matches){
+      document.querySelectorAll('.btn:not([class*="ghost"])').forEach(function(btn){
+        var xTo=gsap.quickTo(btn,'x',{duration:0.4,ease:'power3'}),yTo=gsap.quickTo(btn,'y',{duration:0.4,ease:'power3'});
+        btn.addEventListener('mousemove',function(e){var r=btn.getBoundingClientRect();xTo((e.clientX-(r.left+r.width/2))*0.3);yTo((e.clientY-(r.top+r.height/2))*0.4);});
+        btn.addEventListener('mouseleave',function(){xTo(0);yTo(0);});
+      });
+    }
+    // ---- GSAP-driven reveals (power3 + directional + hero stagger) ----
+    var all=gsap.utils.toArray('[class*="reveal"]');
+    all.forEach(function(el){el.classList.add('visible');});   // end-state visible (also neutralizes their IO)
+    gsap.set(all,{transition:'none'});                         // GSAP owns these, not their CSS transition
+    function dir(cls){
+      cls=' '+(cls||'').replace(/\s+/g,' ')+' ';
+      if(/ (reveal-left|reveal-l) /.test(cls)) return {x:-44};
+      if(/ (reveal-right|reveal-r) /.test(cls)) return {x:44};
+      if(/ reveal-scale /.test(cls)) return {scale:0.92};
+      return {y:30};
+    }
+    var heroEls=all.filter(function(el){return el.closest('.hero');});
+    var scrollEls=all.filter(function(el){return !el.closest('.hero');});
+    if(heroEls.length){
+      gsap.timeline().from(heroEls,{autoAlpha:0,y:24,duration:0.9,ease:'power3.out',stagger:0.1});
+    }
+    scrollEls.forEach(function(el){
+      var f=dir(el.className||'');f.autoAlpha=0;f.duration=0.85;f.ease='power3.out';
+      f.scrollTrigger={trigger:el,start:'top 86%'};
+      gsap.from(el,f);
+    });
+    prog(scrollY||0);
+    ScrollTrigger.refresh();
+  }
+})();
+</script>
+
 </body>
 </html>
