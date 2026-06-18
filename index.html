@@ -1194,6 +1194,33 @@ img { max-width: 100%; display: block; }
     .btn .arrow { transition: transform 220ms ease; display: inline-block; }
     .btn:hover .arrow { transform: translateX(4px); }
 
+    .hero-preview-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        margin-top: 18px;
+        padding: 11px 22px;
+        border-radius: 999px;
+        background: rgba(122, 74, 40, 0.08);
+        border: 1px solid rgba(122, 74, 40, 0.45);
+        color: var(--rust-deep);
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+        transition: all 220ms cubic-bezier(.2,.7,.2,1);
+    }
+    .hero-preview-cta:hover {
+        background: var(--rust);
+        border-color: var(--rust);
+        color: var(--paper);
+        transform: translateY(-1px);
+    }
+    .hero-preview-cta strong { font-weight: 700; }
+    .hero-preview-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .hero-preview-cta .arrow { transition: transform 220ms ease; display: inline-block; }
+    .hero-preview-cta:hover .arrow { transform: translateX(4px); }
+
     .text-link {
         font-family: var(--mono);
         font-size: 12px;
@@ -2376,6 +2403,11 @@ p, li, .hero-lede, .services-lede { text-wrap: pretty; }
                     <a href="work.html" class="btn btn-primary">See selected work <span class="arrow">→</span></a>
                     <a href="how.html" class="btn btn-secondary">How we work <span class="arrow">→</span></a>
                 </div>
+                <a href="free-preview.html" class="hero-preview-cta">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 5.6L19.5 9l-5.6 1.9L12 16l-1.9-5.1L4.5 9l5.6-1.4z"/><path d="M18.5 14l.8 2.3 2.2.7-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.7z"/></svg>
+                    <span><strong>Free preview</strong> &mdash; see your site reimagined</span>
+                    <span class="arrow">→</span>
+                </a>
             </div>
 
             <aside class="hero-form-card" aria-label="Start a project">
