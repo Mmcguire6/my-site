@@ -193,7 +193,7 @@ FOOTER = """<footer class="footer">
             </div>
             <div class="footer-col">
                 <h2 class="footer-h5">Reach</h2>
-                <ul><li><a href="mailto:matt@mattmcguiredesign.com">matt@mattmcguiredesign.com</a></li></ul>
+                <ul><li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li></ul>
             </div>
             <div class="footer-col">
                 <h2 class="footer-h5">Based</h2>
