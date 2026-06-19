@@ -89,12 +89,12 @@ CITY_PAGE = """<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{meta_desc}">
 
-<link rel="canonical" href="https://matthewmcguire.ca/locations/{slug}.html">
+<link rel="canonical" href="https://matthewmcguire.ca/locations/{slug}">
 <link rel="icon" type="image/png" href="../favicon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Matthew McGuire Web Designs">
-<meta property="og:url" content="https://matthewmcguire.ca/locations/{slug}.html">
+<meta property="og:url" content="https://matthewmcguire.ca/locations/{slug}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{meta_desc}">
 <meta name="twitter:card" content="summary_large_image">
@@ -1382,11 +1382,11 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire Web Designs</title>
 <meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $75/month all-inclusive. Remote work with businesses anywhere in Canada or the US.">
-<link rel="canonical" href="https://matthewmcguire.ca/locations.html">
+<link rel="canonical" href="https://matthewmcguire.ca/locations">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Matthew McGuire Web Designs">
-<meta property="og:url" content="https://matthewmcguire.ca/locations.html">
+<meta property="og:url" content="https://matthewmcguire.ca/locations">
 <meta property="og:title" content="Alberta Web Designer | Matthew McGuire Web Designs">
 <meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada or the US.">
 <meta name="twitter:card" content="summary_large_image">

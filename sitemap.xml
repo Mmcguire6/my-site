@@ -6,77 +6,77 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/about.html</loc>
+    <loc>https://matthewmcguire.ca/about</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/work.html</loc>
+    <loc>https://matthewmcguire.ca/work</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/how.html</loc>
+    <loc>https://matthewmcguire.ca/how</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/pricing.html</loc>
+    <loc>https://matthewmcguire.ca/pricing</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/faq.html</loc>
+    <loc>https://matthewmcguire.ca/faq</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations.html</loc>
+    <loc>https://matthewmcguire.ca/locations</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/contact.html</loc>
+    <loc>https://matthewmcguire.ca/contact</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/edmonton.html</loc>
+    <loc>https://matthewmcguire.ca/locations/edmonton</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/calgary.html</loc>
+    <loc>https://matthewmcguire.ca/locations/calgary</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/st-albert.html</loc>
+    <loc>https://matthewmcguire.ca/locations/st-albert</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/sherwood-park.html</loc>
+    <loc>https://matthewmcguire.ca/locations/sherwood-park</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/leduc.html</loc>
+    <loc>https://matthewmcguire.ca/locations/leduc</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/spruce-grove.html</loc>
+    <loc>https://matthewmcguire.ca/locations/spruce-grove</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/airdrie.html</loc>
+    <loc>https://matthewmcguire.ca/locations/airdrie</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/locations/red-deer.html</loc>
+    <loc>https://matthewmcguire.ca/locations/red-deer</loc>
     <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
@@ -86,8 +86,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://matthewmcguire.ca/blog/why-is-my-website-so-slow.html</loc>
+    <loc>https://matthewmcguire.ca/blog/why-is-my-website-so-slow</loc>
     <lastmod>2026-06-08</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://matthewmcguire.ca/free-preview</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://matthewmcguire.ca/privacy</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://matthewmcguire.ca/terms</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>
