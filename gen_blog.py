@@ -310,7 +310,7 @@ HEAD = """<!DOCTYPE html>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="masthead"><div class="wrap masthead-inner"><span class="masthead-edition">Web Design Studio &middot; Edmonton</span><span class="masthead-meta">Vol. I &middot; MMXXVI</span></div></div>
+<div class="masthead"><div class="wrap masthead-inner"><span class="masthead-edition">AI Automation &amp; Web Studio &middot; Edmonton</span><span class="masthead-meta">Vol. I &middot; MMXXVI</span></div></div>
 """
 
 def _plain(text: str) -> str:
@@ -399,7 +399,7 @@ def write_index(posts: list) -> Path:
                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html",
                                     "datePublished": p["date"]} for p in posts]}, ensure_ascii=False, indent=2)
     head = HEAD.format(title="Web Design &amp; SEO Blog | Northern Peak Systems",
-                       desc="Plain-English guides on web design, website speed, and SEO for small businesses — from an Edmonton web design studio.",
+                       desc="Plain-English guides on web design, website speed, and SEO for small businesses — from Northern Peak Systems in Edmonton.",
                        canonical=SITE + "/blog/", og_type="website", ld_json=ld, styles=BLOG_CSS)
     body = f"""{nav_html()}
 <main id="main">
@@ -423,7 +423,7 @@ def update_sitemap(posts: list) -> None:
     if not sm.exists():
         return
     text = sm.read_text(encoding="utf-8")
-    text = re.sub(r'\s*<url>\s*<loc>https://matthewmcguire\.ca/blog/[^<]*</loc>.*?</url>', '', text, flags=re.S)
+    text = re.sub(r'\s*<url>\s*<loc>https://northernpeaksystems\.ca/blog/[^<]*</loc>.*?</url>', '', text, flags=re.S)
     today = date.today().isoformat()
     entries = [f"  <url>\n    <loc>{SITE}/blog/</loc>\n    <lastmod>{today}</lastmod>\n    <priority>0.8</priority>\n  </url>"]
     for p in posts:

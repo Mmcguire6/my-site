@@ -126,7 +126,7 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <div class="masthead">
     <div class="wrap masthead-inner">
-        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-edition">AI Automation &amp; Web Studio &middot; Edmonton</span>
         <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
     </div>
 </div>
@@ -1463,7 +1463,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 <div class="masthead">
     <div class="wrap masthead-inner">
-        <span class="masthead-edition">Web Design Studio &middot; Edmonton</span>
+        <span class="masthead-edition">AI Automation &amp; Web Studio &middot; Edmonton</span>
         <span class="masthead-meta">Vol. I &middot; MMXXVI</span>
     </div>
 </div>
