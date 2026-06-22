@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Generate SEO-optimized Alberta-city landing pages for matthewmcguire.ca.
+"""Generate SEO-optimized Alberta-city landing pages for northernpeaksystems.ca.
 
 Each page targets the high-intent local keyword pattern "[city] web designer"
 with a keyword-targeted title/H1/H2 hierarchy, ~1000 words of body, an FAQ
@@ -89,12 +89,12 @@ CITY_PAGE = """<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{meta_desc}">
 
-<link rel="canonical" href="https://matthewmcguire.ca/locations/{slug}">
+<link rel="canonical" href="https://northernpeaksystems.ca/locations/{slug}">
 <link rel="icon" type="image/png" href="../favicon.png">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Matthew McGuire Web Designs">
-<meta property="og:url" content="https://matthewmcguire.ca/locations/{slug}">
+<meta property="og:site_name" content="Northern Peak Systems">
+<meta property="og:url" content="https://northernpeaksystems.ca/locations/{slug}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{meta_desc}">
 <meta name="twitter:card" content="summary_large_image">
@@ -133,8 +133,8 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home">
-            <img src="../img/mm-nav-logo.webp" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="988" height="180">
+        <a href="../index.html" class="nav-mark" aria-label="Northern Peak Systems, home">
+            <img src="../img/mm-nav-logo.webp" alt="Northern Peak Systems" class="nav-mark-img" width="988" height="180">
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="../index.html">Home</a>
@@ -375,7 +375,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <div class="footer-grid">
             <div>
-                <p class="footer-brand">Matthew McGuire Web Designs</p>
+                <p class="footer-brand">Northern Peak Systems</p>
                 <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
@@ -395,7 +395,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <div class="footer-col">
                 <h2 class="footer-h5">Reach</h2>
                 <ul>
-                    <li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li>
+                    <li><a href="mailto:matt@northernpeaksystems.ca">matt@northernpeaksystems.ca</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -407,7 +407,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© <span id="footer-year">2026</span> Matthew McGuire Web Designs. All rights reserved.</span>
+            <span>© <span id="footer-year">2026</span> Northern Peak Systems. All rights reserved.</span>
             <span class="footer-bottom-links">
                 <a href="../privacy.html">Privacy</a><span class="dot">·</span><a href="../terms.html">Terms</a>
             </span>
@@ -1224,7 +1224,7 @@ def desktop_dropdown_for_root(active: bool = False) -> str:
 # ---------------------------------------------------------------------------
 
 def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
-    studio_id = "https://matthewmcguire.ca/#org"
+    studio_id = "https://northernpeaksystems.ca/#org"
     desc = (f"Custom-coded websites for {name} small businesses: trades, shops, "
             f"clinics, studios, consultancies, and professional services. "
             f"$0 down, from $75/month all-inclusive, with design, hosting, edits, "
@@ -1234,9 +1234,9 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
         {
             "@type": ["ProfessionalService", "LocalBusiness"],
             "@id": studio_id,
-            "name": "Matthew McGuire Web Designs",
-            "url": "https://matthewmcguire.ca/",
-            "image": "https://matthewmcguire.ca/img/headshot/matt-headshot.jpg",
+            "name": "Northern Peak Systems",
+            "url": "https://northernpeaksystems.ca/",
+            "image": "https://northernpeaksystems.ca/img/headshot/matt-headshot.jpg",
             "telephone": "",
             "priceRange": "$$",
             "address": {
@@ -1346,7 +1346,7 @@ def nearby_links_html(nearby_slugs: list[str]) -> str:
 def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     extras = EXTRAS.get(slug, {"areas": "the surrounding region", "nearby": []})
     title = (f"{name} Web Designer | Custom Website Design &amp; Development "
-             f"| Matthew McGuire Web Designs")
+             f"| Northern Peak Systems")
     meta_desc = (f"{name} web designer building custom-coded websites for small businesses: "
                  f"trades, shops, clinics, and professional services. $0 down, $75/month all-inclusive, "
                  f"with design, hosting, edits, security included. 12-month minimum, "
@@ -1380,14 +1380,14 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Matthew McGuire Web Designs</title>
+<title>Alberta Web Designer: Custom Websites for Edmonton, Calgary &amp; Area Businesses | Northern Peak Systems</title>
 <meta name="description" content="Alberta web designer serving small businesses in Edmonton, Calgary, and the surrounding region. Custom-coded websites, $0 down, $75/month all-inclusive. Remote work with businesses anywhere in Canada or the US.">
-<link rel="canonical" href="https://matthewmcguire.ca/locations">
+<link rel="canonical" href="https://northernpeaksystems.ca/locations">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Matthew McGuire Web Designs">
-<meta property="og:url" content="https://matthewmcguire.ca/locations">
-<meta property="og:title" content="Alberta Web Designer | Matthew McGuire Web Designs">
+<meta property="og:site_name" content="Northern Peak Systems">
+<meta property="og:url" content="https://northernpeaksystems.ca/locations">
+<meta property="og:title" content="Alberta Web Designer | Northern Peak Systems">
 <meta property="og:description" content="Custom-coded websites for Alberta businesses in Edmonton, Calgary, and the surrounding region. Remote work with businesses anywhere in Canada or the US.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1470,8 +1470,8 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 <header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home">
-            <img src="img/mm-nav-logo.webp" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="988" height="180">
+        <a href="index.html" class="nav-mark" aria-label="Northern Peak Systems, home">
+            <img src="img/mm-nav-logo.webp" alt="Northern Peak Systems" class="nav-mark-img" width="988" height="180">
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="index.html">Home</a>
@@ -1563,7 +1563,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap">
         <div class="footer-grid">
             <div>
-                <p class="footer-brand">Matthew McGuire Web Designs</p>
+                <p class="footer-brand">Northern Peak Systems</p>
                 <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
@@ -1583,7 +1583,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             <div class="footer-col">
                 <h2 class="footer-h5">Reach</h2>
                 <ul>
-                    <li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li>
+                    <li><a href="mailto:matt@northernpeaksystems.ca">matt@northernpeaksystems.ca</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1595,7 +1595,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© <span id="footer-year">2026</span> Matthew McGuire Web Designs. All rights reserved.</span>
+            <span>© <span id="footer-year">2026</span> Northern Peak Systems. All rights reserved.</span>
             <span class="footer-bottom-links">
                 <a href="privacy.html">Privacy</a><span class="dot">·</span><a href="terms.html">Terms</a>
             </span>
@@ -1701,7 +1701,7 @@ def build_locations_index() -> Path:
 
 def build_sitemap() -> Path:
     today = date.today().isoformat()
-    base = "https://matthewmcguire.ca/"
+    base = "https://northernpeaksystems.ca/"
     main_pages = [
         ("", 1.0),
         ("about.html", 0.8),

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /work/
 Disallow: /campground/
 
-Sitemap: https://matthewmcguire.ca/sitemap.xml
+Sitemap: https://northernpeaksystems.ca/sitemap.xml

@@ -23,7 +23,7 @@ ROOT = Path(__file__).parent
 POSTS_DIR = ROOT / "blog_posts"
 OUT = ROOT / "blog"
 OUT.mkdir(exist_ok=True)
-SITE = "https://matthewmcguire.ca"
+SITE = "https://northernpeaksystems.ca"
 AUTHOR = "Matthew McGuire"
 
 # ---------------------------------------------------------------------------
@@ -112,8 +112,8 @@ def parse_post(path: Path) -> dict:
 def nav_html() -> str:
     return f"""<header class="nav" id="site-nav">
     <div class="wrap nav-inner">
-        <a href="../index.html" class="nav-mark" aria-label="Matthew McGuire Web Designs, home">
-            <img src="../img/mm-nav-logo.webp" alt="Matthew McGuire Web Designs" class="nav-mark-img" width="988" height="180">
+        <a href="../index.html" class="nav-mark" aria-label="Northern Peak Systems, home">
+            <img src="../img/mm-nav-logo.webp" alt="Northern Peak Systems" class="nav-mark-img" width="988" height="180">
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="../index.html">Home</a>
@@ -175,7 +175,7 @@ FOOTER = """<footer class="footer">
     <div class="wrap">
         <div class="footer-grid">
             <div>
-                <p class="footer-brand">Matthew McGuire Web Designs</p>
+                <p class="footer-brand">Northern Peak Systems</p>
                 <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
                 <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
             </div>
@@ -193,7 +193,7 @@ FOOTER = """<footer class="footer">
             </div>
             <div class="footer-col">
                 <h2 class="footer-h5">Reach</h2>
-                <ul><li><a href="mailto:matt@matthewmcguire.ca">matt@matthewmcguire.ca</a></li></ul>
+                <ul><li><a href="mailto:matt@northernpeaksystems.ca">matt@northernpeaksystems.ca</a></li></ul>
             </div>
             <div class="footer-col">
                 <h2 class="footer-h5">Based</h2>
@@ -201,7 +201,7 @@ FOOTER = """<footer class="footer">
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© <span id="footer-year">2026</span> Matthew McGuire Web Designs. All rights reserved.</span>
+            <span>© <span id="footer-year">2026</span> Northern Peak Systems. All rights reserved.</span>
             <span class="footer-bottom-links"><a href="../privacy.html">Privacy</a><span class="dot">·</span><a href="../terms.html">Terms</a></span>
             <span>Designed &amp; built by hand</span>
         </div>
@@ -291,7 +291,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="../favicon.png">
 <meta property="og:type" content="{og_type}">
-<meta property="og:site_name" content="Matthew McGuire Web Designs">
+<meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:url" content="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -325,7 +325,7 @@ def post_schema(p: dict, url: str) -> str:
         "description": p["description"], "url": url,
         "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
         "author": {"@type": "Person", "name": AUTHOR, "url": SITE + "/about.html"},
-        "publisher": {"@type": "Organization", "@id": "https://matthewmcguire.ca/#org", "name": "Matthew McGuire Web Designs",
+        "publisher": {"@type": "Organization", "@id": "https://northernpeaksystems.ca/#org", "name": "Northern Peak Systems",
                        "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "articleSection": p.get("category", "Articles"),
@@ -356,7 +356,7 @@ def write_post(p: dict) -> Path:
             for q, a in p["faqs"])
         faq_html = f"""<section class="post-faq"><div class="wrap"><p class="eyebrow">FAQ</p><h2>Frequently asked questions</h2><dl>{items}</dl></div></section>"""
 
-    head = HEAD.format(title=html.escape(p["title"]) + " | Matthew McGuire Web Designs",
+    head = HEAD.format(title=html.escape(p["title"]) + " | Northern Peak Systems",
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        ld_json=post_schema(p, url), styles=BLOG_CSS)
     body = f"""{nav_html()}
@@ -394,11 +394,11 @@ def write_index(posts: list) -> Path:
             <p class="post-card-meta">{pretty_date(p['date'])} &middot; {p['read_time']} min read</p>
         </a>""" for p in posts)
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "@id": SITE + "/blog/#blog",
-                     "url": SITE + "/blog/", "name": "Matthew McGuire Web Designs Blog",
+                     "url": SITE + "/blog/", "name": "Northern Peak Systems Blog",
                      "description": "Plain-English guides on web design, performance, and SEO for small businesses.",
                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html",
                                     "datePublished": p["date"]} for p in posts]}, ensure_ascii=False, indent=2)
-    head = HEAD.format(title="Web Design &amp; SEO Blog | Matthew McGuire Web Designs",
+    head = HEAD.format(title="Web Design &amp; SEO Blog | Northern Peak Systems",
                        desc="Plain-English guides on web design, website speed, and SEO for small businesses — from an Edmonton web design studio.",
                        canonical=SITE + "/blog/", og_type="website", ld_json=ld, styles=BLOG_CSS)
     body = f"""{nav_html()}
