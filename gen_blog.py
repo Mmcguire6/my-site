@@ -17,7 +17,7 @@ import re, json, html
 from pathlib import Path
 from datetime import date
 
-from gen_locations import CITY_STYLES, desktop_dropdown, mobile_loc_provinces_html
+from gen_locations import CITY_STYLES
 
 ROOT = Path(__file__).parent
 POSTS_DIR = ROOT / "blog_posts"
@@ -110,175 +110,194 @@ def parse_post(path: Path) -> dict:
 # ---------------------------------------------------------------------------
 
 def nav_html() -> str:
-    return f"""<header class="nav" id="site-nav">
+    return """<header class="nav">
     <div class="wrap nav-inner">
-        <a href="../index.html" class="nav-mark" aria-label="Northern Peak Systems, home">
-            <img src="../img/mm-nav-logo.webp" alt="Northern Peak Systems" class="nav-mark-img" width="988" height="180">
-        </a>
+        <a href="../index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
         <nav class="nav-links" aria-label="Primary">
             <a href="../index.html">Home</a>
             <a href="../work.html">Work</a>
             <a href="../pricing.html">Pricing</a>
-            <div class="nav-dd nav-dd--studio" aria-current="page">
-                <button type="button" class="nav-dd-trigger" aria-haspopup="true" aria-expanded="false">Studio</button>
-                <ul class="nav-dd-panel nav-dd-panel--rich" style="left:0;right:auto;">
-                    <li><a href="../about.html"><span class="dd-t">About</span><span class="dd-d">The studio &amp; the founder</span></a></li>
-                    <li><a href="../how.html"><span class="dd-t">How we work</span><span class="dd-d">Preview-first, no surprises</span></a></li>
-                    <li><a href="../faq.html"><span class="dd-t">FAQ</span><span class="dd-d">Pricing, plans &amp; details</span></a></li>
-                    <li><a href="../blog/" aria-current="page"><span class="dd-t">Blog</span><span class="dd-d">Guides &amp; insights</span></a></li>
-                </ul>
+            <div class="nav-dd">
+                <button class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu">
+                    <a href="../about.html">About</a>
+                    <a href="../how.html">How it works</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="index.html" class="active">Blog</a>
+                </div>
             </div>
-{desktop_dropdown()}
+            <div class="nav-dd">
+                <button class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu cols">
+                    <a href="../locations/edmonton.html">Edmonton</a>
+                    <a href="../locations/calgary.html">Calgary</a>
+                    <a href="../locations/st-albert.html">St. Albert</a>
+                    <a href="../locations/sherwood-park.html">Sherwood Park</a>
+                    <a href="../locations/leduc.html">Leduc</a>
+                    <a href="../locations/spruce-grove.html">Spruce Grove</a>
+                    <a href="../locations/airdrie.html">Airdrie</a>
+                    <a href="../locations/red-deer.html">Red Deer</a>
+                    <a href="../locations.html" class="dd-all">All locations &rarr;</a>
+                </div>
+            </div>
             <a href="../contact.html">Contact</a>
         </nav>
-        <a href="../contact.html" class="nav-cta">Start a project →</a>
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
-            <span class="nav-toggle-bars" aria-hidden="true"></span>
-        </button>
+        <div class="nav-cta">
+            <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+        </div>
     </div>
 </header>
 
-<aside class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
-    <ul class="nav-mobile-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../work.html">Work</a></li>
-        <li><a href="../pricing.html">Pricing</a></li>
-        <li class="nm-group"><details>
-            <summary>Studio</summary>
-            <ul class="nm-sub">
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../how.html">How we work</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../blog/" aria-current="page">Blog</a></li>
-            </ul>
-        </details></li>
-        <li><button type="button" class="nm-loc-trigger" aria-haspopup="true" aria-controls="nav-mobile-locations" aria-expanded="false">Locations <span class="nm-loc-chev" aria-hidden="true">→</span></button></li>
-        <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <a href="../contact.html" class="nav-mobile-cta">Start a project →</a>
-</aside>
-
-<aside class="nav-mobile-locations" id="nav-mobile-locations" aria-label="Locations menu" aria-hidden="true" inert>
-    <button type="button" class="nm-loc-back" aria-label="Back to main menu">
-        <span class="nm-loc-back-arrow" aria-hidden="true">←</span>
-        <span class="nm-loc-back-label">Back</span>
-    </button>
-    <div class="nm-loc-content">
-        <p class="eyebrow">Locations</p>
-        <h2 class="nm-loc-h">Web designer <em>across Alberta.</em></h2>
-{mobile_loc_provinces_html("../locations/")}
-        <a href="../locations.html" class="nm-loc-all-link">See all locations <span class="arrow">→</span></a>
+<div class="mnav" id="mnav" aria-hidden="true">
+    <div class="mnav-top">
+        <span class="brand"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
+        <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     </div>
-</aside>"""
+    <nav class="mnav-links" aria-label="Mobile">
+        <a href="../index.html"><span class="gold">Home</span></a>
+        <a href="../work.html"><span class="gold">Work</span></a>
+        <a href="../pricing.html"><span class="gold">Pricing</span></a>
+        <a href="../about.html"><span class="gold">About</span></a>
+        <a href="../how.html">How it <span class="gold">works</span></a>
+        <a href="index.html"><span class="gold">Blog</span></a>
+        <a href="../contact.html"><span class="gold">Contact</span></a>
+    </nav>
+    <div class="mnav-foot">
+        <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+        <a href="../contact.html" class="btn btn-ghost">Get in touch</a>
+    </div>
+</div>"""
 
-FOOTER = """<footer class="footer">
+FOOTER = """<footer class="foot">
     <div class="wrap">
-        <div class="footer-grid">
-            <div>
-                <p class="footer-brand">Northern Peak Systems</p>
-                <p class="footer-blurb">Small businesses deserve websites that feel like the work behind them. That's what the studio is for.</p>
-                <p class="footer-credit"><span class="footer-credit-dot" aria-hidden="true"></span>Canadian owned &middot; Based in Edmonton, Alberta</p>
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <span class="brand"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
+                <p class="foot-copy">&copy; <span id="yr">2026</span> Northern Peak Systems<br>All rights reserved.</p>
             </div>
-            <div class="footer-col">
-                <h2 class="footer-h5">Site</h2>
-                <ul>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../work.html">Selected work</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="../pricing.html">Pricing</a></li>
-                    <li><a href="../faq.html">FAQ</a></li>
-                    <li><a href="../locations.html">All locations</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
+            <div class="foot-col">
+                <h4>Services</h4>
+                <a href="../index.html#services">AI automation</a>
+                <a href="../index.html#services">Web design</a>
+                <a href="../index.html#services">SEO &amp; local search</a>
             </div>
-            <div class="footer-col">
-                <h2 class="footer-h5">Reach</h2>
-                <ul><li><a href="mailto:matt@northernpeaksystems.ca">matt@northernpeaksystems.ca</a></li></ul>
+            <div class="foot-col">
+                <h4>Company</h4>
+                <a href="../about.html">About</a>
+                <a href="../work.html">Work</a>
+                <a href="../how.html">How it works</a>
+                <a href="../pricing.html">Pricing</a>
+                <a href="../faq.html">FAQ</a>
             </div>
-            <div class="footer-col">
-                <h2 class="footer-h5">Based</h2>
-                <ul><li>Edmonton, Alberta</li><li>Working with businesses across Canada and the US</li></ul>
+            <div class="foot-col">
+                <h4>Get started</h4>
+                <a href="../contact.html">Free preview</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../locations.html">Locations</a>
+                <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <span>© <span id="footer-year">2026</span> Northern Peak Systems. All rights reserved.</span>
-            <span class="footer-bottom-links"><a href="../privacy.html">Privacy</a><span class="dot">·</span><a href="../terms.html">Terms</a></span>
-            <span>Designed &amp; built by hand</span>
+        <div class="foot-bottom">
+            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
+            <div class="foot-social">
+                <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
+                <a href="../privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
+                <a href="../terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
+            </div>
         </div>
     </div>
 </footer>"""
 
 NAV_SCRIPT = """<script>
-    var nav=document.getElementById('site-nav');
-    if(nav){var os=function(){nav.classList.toggle('scrolled',window.scrollY>12)};window.addEventListener('scroll',os,{passive:true});os();}
-    var y=document.getElementById('footer-year'); if(y)y.textContent=new Date().getFullYear();
-    var nt=document.querySelector('.nav-toggle'),nm=document.querySelector('.nav-mobile'),nl=document.querySelector('.nav-mobile-locations');
-    function setLoc(o){document.body.classList.toggle('nav-loc-open',o);if(nl){nl.setAttribute('aria-hidden',o?'false':'true');nl.toggleAttribute('inert',!o);}var t=document.querySelector('.nm-loc-trigger');if(t)t.setAttribute('aria-expanded',o?'true':'false');}
-    function setNav(o){document.body.classList.toggle('nav-open',o);if(!o)setLoc(false);if(nt){nt.setAttribute('aria-expanded',o?'true':'false');nt.setAttribute('aria-label',o?'Close menu':'Open menu');}}
-    if(nt)nt.addEventListener('click',function(){setNav(!document.body.classList.contains('nav-open'));});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(document.body.classList.contains('nav-loc-open'))setLoc(false);else if(document.body.classList.contains('nav-open'))setNav(false);}});
-    if(nm)nm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false);});});
-    document.querySelectorAll('.nm-loc-trigger').forEach(function(b){b.addEventListener('click',function(){setLoc(true);});});
-    document.querySelectorAll('.nm-loc-back').forEach(function(b){b.addEventListener('click',function(){setLoc(false);});});
-    if(nl)nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setLoc(false);setNav(false);});});
+document.getElementById('yr').textContent=new Date().getFullYear();
+var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
+function openM(){mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeM(){mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
+mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>"""
 
-# Blog-specific CSS appended to the shared site styles
+# Blog-specific CSS appended to the shared dark site styles (CITY_STYLES supplies
+# the dark :root vars, nav, mnav, footer, buttons and .reveal animation).
 BLOG_CSS = CITY_STYLES + """
-/* BLOG */
-.post-hero { padding: clamp(56px,7vw,104px) 0 clamp(28px,3vw,44px); background: var(--paper); border-bottom: 1px solid var(--rule); }
-.post-hero .wrap { max-width: 820px; }
-.post-cat { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--rust-deep); }
-.post-h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(32px,4.6vw,58px); line-height: 1.06; letter-spacing: -.022em; color: var(--ink); margin: 16px 0 18px; text-wrap: balance; }
-.post-meta { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; color: var(--ink-3); display: flex; gap: 14px; flex-wrap: wrap; }
-.post-body { padding: clamp(40px,5vw,72px) 0 clamp(48px,6vw,88px); }
-.post-body .wrap { max-width: 720px; }
-.post-body p, .post-body li { font-size: clamp(16.5px,1.2vw,18.5px); line-height: 1.75; color: var(--ink-2); text-wrap: pretty; }
-.post-body p { margin: 0 0 22px; }
-.post-body > p:first-of-type { font-size: clamp(18px,1.4vw,21px); color: var(--ink); line-height: 1.65; }
-.post-body h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(24px,2.6vw,34px); line-height: 1.2; letter-spacing: -.018em; color: var(--ink); margin: 48px 0 16px; text-wrap: balance; }
-.post-body h3 { font-family: var(--serif); font-weight: 600; font-size: clamp(19px,1.7vw,23px); color: var(--ink); margin: 32px 0 10px; }
-.post-body ul, .post-body ol { margin: 0 0 22px; padding-left: 24px; }
-.post-body li { margin-bottom: 9px; }
-.post-body ul li { list-style: none; position: relative; }
-.post-body ul li::before { content: ""; position: absolute; left: -18px; top: 12px; width: 6px; height: 6px; background: var(--rust); border-radius: 999px; }
-.post-body ol { list-style: decimal; }
-.post-body a { color: var(--rust-deep); border-bottom: 1px solid color-mix(in oklch, var(--rust) 40%, transparent); }
-.post-body a:hover { background: color-mix(in oklch, var(--rust) 8%, transparent); }
-.post-body strong { color: var(--ink); font-weight: 700; }
-.post-body code { font-family: var(--mono); font-size: .88em; background: var(--paper-soft); padding: 1px 6px; border-radius: 4px; }
-.post-body blockquote { margin: 28px 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--rust); }
-.post-body blockquote p { font-family: var(--serif); font-style: italic; font-size: clamp(19px,1.7vw,23px); color: var(--ink); }
-.post-faq { background: var(--paper-soft); padding: clamp(48px,6vw,88px) 0; border-top: 1px solid var(--rule); }
-.post-faq .wrap { max-width: 760px; }
-.post-faq .eyebrow { margin-bottom: 16px; }
-.post-faq h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(26px,3vw,40px); color: var(--ink); margin-bottom: 32px; letter-spacing: -.018em; }
-.faq-q { border-top: 1px solid var(--rule); padding-top: 22px; margin-top: 22px; }
-.faq-q:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-.faq-q dt { font-family: var(--serif); font-weight: 600; font-size: clamp(18px,1.7vw,23px); color: var(--ink); margin-bottom: 10px; }
-.faq-q dd { margin: 0; font-size: 16px; line-height: 1.7; color: var(--ink-2); }
-.faq-q dd a { color: var(--rust-deep); border-bottom: 1px solid color-mix(in oklch, var(--rust) 40%, transparent); }
-/* index */
-.blog-hero { padding: clamp(72px,9vw,130px) 0 clamp(32px,4vw,56px); }
-.blog-hero h1 { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: clamp(40px,5.4vw,76px); letter-spacing: -.022em; color: var(--ink); margin: 16px 0 18px; }
-.blog-hero h1 em { color: var(--rust-deep); }
-.blog-hero .lede { max-width: 60ch; }
-.post-list { padding: clamp(40px,5vw,80px) 0 clamp(60px,8vw,110px); }
-.post-card { display: block; border-top: 1px solid var(--rule); padding: 32px 0; transition: padding 220ms cubic-bezier(.2,.7,.2,1); }
-.post-card:hover { padding-left: 8px; }
-.post-card-cat { font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--rust-deep); }
-.post-card h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(24px,2.6vw,34px); line-height: 1.15; letter-spacing: -.018em; color: var(--ink); margin: 12px 0 12px; max-width: 26ch; transition: color 200ms ease; }
-.post-card:hover h2 { color: var(--rust-deep); }
-.post-card p { font-size: 16px; line-height: 1.6; color: var(--ink-2); max-width: 62ch; margin: 0 0 14px; }
-.post-card-meta { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--ink-3); }
-.post-cta { background: var(--ink); color: var(--paper); padding: clamp(48px,6vw,88px) 0; }
-.post-cta .wrap { max-width: 760px; }
-.post-cta .eyebrow { color: color-mix(in oklch, var(--paper) 70%, transparent); }
-.post-cta .eyebrow::before { background: color-mix(in oklch, var(--rust) 90%, transparent); }
-.post-cta h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(28px,3.4vw,44px); color: var(--paper); margin: 16px 0 16px; max-width: 20ch; letter-spacing: -.018em; }
-.post-cta p { color: color-mix(in oklch, var(--paper) 76%, transparent); font-size: 16px; line-height: 1.65; max-width: 54ch; margin-bottom: 28px; }
-.post-cta .btn-primary { background: var(--paper); color: var(--ink); }
-.post-cta .btn-primary:hover { background: var(--rust); color: var(--paper); }
+.skip-link{position:absolute;top:-48px;left:8px;background:var(--gold);color:#fff;padding:8px 14px;font-size:13px;font-weight:600;border-radius:6px;z-index:200;transition:top .2s;}
+.skip-link:focus{top:8px;}
+
+/* ===== POST HERO ===== */
+.bhero{background:#000;border-bottom:1px solid var(--line);position:relative;overflow:hidden;}
+.bhero-bg{position:absolute;inset:0;z-index:0;}
+.bhero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.32;}
+.bhero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,9,11,0.94),rgba(8,9,11,0.7)),linear-gradient(to top,var(--bg) 1%,transparent 60%);}
+.bhero .wrap{position:relative;z-index:2;max-width:820px;padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(36px,4vw,56px);}
+.bhero h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,5vw,62px);line-height:1.06;letter-spacing:-0.022em;max-width:20ch;margin:16px 0 18px;}
+.bhero h1 em{font-style:italic;color:var(--gold);}
+.post-meta{font-size:13px;letter-spacing:0.02em;color:var(--mist-2);display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.post-meta span + span::before{content:"·";margin-right:14px;color:var(--mist-2);}
+
+/* ===== POST BODY ===== */
+.post-body{padding:clamp(40px,5vw,72px) 0 clamp(48px,6vw,88px);}
+.post-body .wrap{max-width:760px;}
+.post-body p,.post-body li{font-size:clamp(16.5px,1.2vw,18px);line-height:1.8;color:var(--mist);}
+.post-body p{margin:0 0 22px;}
+.post-body > p:first-of-type{font-size:clamp(18px,1.4vw,21px);color:var(--white);line-height:1.72;}
+.post-body h2{font-family:var(--display);font-weight:600;font-size:clamp(25px,2.8vw,36px);line-height:1.18;letter-spacing:-0.018em;color:var(--white);margin:52px 0 16px;}
+.post-body h3{font-family:var(--display);font-weight:500;font-size:clamp(19px,1.8vw,24px);color:var(--gold-2);margin:34px 0 10px;}
+.post-body ul,.post-body ol{margin:0 0 22px;padding-left:24px;}
+.post-body li{margin-bottom:10px;}
+.post-body ul li{list-style:none;position:relative;}
+.post-body ul li::before{content:"";position:absolute;left:-18px;top:13px;width:6px;height:6px;background:var(--gold);border-radius:999px;}
+.post-body ol{list-style:none;counter-reset:li;}
+.post-body ol li{counter-increment:li;position:relative;}
+.post-body ol li::before{content:counter(li);position:absolute;left:-26px;top:1px;font-size:13px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;}
+.post-body a{color:var(--gold-2);border-bottom:1px solid rgba(197,137,74,0.4);transition:color .18s,border-color .18s;}
+.post-body a:hover{color:var(--gold);border-bottom-color:var(--gold);}
+.post-body strong{color:var(--white);font-weight:700;}
+.post-body em{color:var(--mist);}
+.post-body code{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.88em;background:var(--bg-3);border:1px solid var(--line);color:var(--gold-2);padding:2px 7px;border-radius:6px;}
+.post-body blockquote{margin:30px 0;padding:6px 0 6px 26px;border-left:3px solid var(--gold);}
+.post-body blockquote p{font-family:var(--display);font-style:italic;font-size:clamp(19px,1.8vw,24px);color:var(--white);}
+
+/* ===== POST FAQ ===== */
+.post-faq{background:var(--bg-2);padding:clamp(48px,6vw,88px) 0;border-top:1px solid var(--line);}
+.post-faq .wrap{max-width:760px;}
+.post-faq .eyebrow{margin-bottom:16px;}
+.post-faq h2{font-family:var(--display);font-weight:600;font-size:clamp(26px,3vw,40px);color:var(--white);margin-bottom:32px;letter-spacing:-0.018em;}
+.faq-q{border-top:1px solid var(--line);padding-top:24px;margin-top:24px;}
+.faq-q:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.faq-q dt{font-family:var(--display);font-weight:600;font-size:clamp(18px,1.7vw,23px);color:var(--white);margin-bottom:10px;}
+.faq-q dd{margin:0;font-size:16px;line-height:1.75;color:var(--mist);}
+.faq-q dd a{color:var(--gold-2);border-bottom:1px solid rgba(197,137,74,0.4);}
+.faq-q dd a:hover{color:var(--gold);}
+
+/* ===== CTA ===== */
+.post-cta{background:#0a0b0c;padding:clamp(56px,7vw,96px) 0;border-top:1px solid var(--line);}
+.post-cta .wrap{max-width:760px;}
+.post-cta .eyebrow{margin-bottom:14px;}
+.post-cta h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,46px);color:var(--white);margin:0 0 16px;max-width:20ch;letter-spacing:-0.018em;}
+.post-cta h2 em{font-style:italic;color:var(--gold);}
+.post-cta p{color:var(--mist);font-size:clamp(15px,1.3vw,17px);line-height:1.7;max-width:54ch;margin-bottom:30px;}
+.post-cta-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.post-back{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--mist);transition:color .18s;}
+.post-back:hover{color:var(--gold);}
+
+/* ===== BLOG INDEX ===== */
+.blog-hero{padding:clamp(72px,9vw,130px) 0 clamp(32px,4vw,56px);}
+.blog-hero h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,5.4vw,76px);letter-spacing:-0.022em;color:var(--white);margin:16px 0 18px;}
+.blog-hero h1 em{font-style:italic;color:var(--gold);}
+.blog-hero .lede{max-width:60ch;font-size:clamp(16px,1.4vw,19px);color:var(--mist);}
+.post-list{padding:clamp(40px,5vw,80px) 0 clamp(60px,8vw,110px);}
+.post-card{display:block;border-top:1px solid var(--line);padding:32px 0;transition:padding .22s cubic-bezier(.2,.7,.2,1);}
+.post-card:last-child{border-bottom:1px solid var(--line);}
+.post-card:hover{padding-left:8px;}
+.post-card-cat{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+.post-card h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,2.6vw,34px);line-height:1.15;letter-spacing:-0.018em;color:var(--white);margin:12px 0 12px;max-width:26ch;transition:color .2s;}
+.post-card:hover h2{color:var(--gold-2);}
+.post-card p{font-size:16px;line-height:1.6;color:var(--mist);max-width:62ch;margin:0 0 14px;}
+.post-card-meta{font-size:12.5px;letter-spacing:.02em;color:var(--mist-2);}
 """
 
 HEAD = """<!DOCTYPE html>
@@ -289,7 +308,9 @@ HEAD = """<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
-<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" href="../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:url" content="{canonical}">
@@ -298,19 +319,19 @@ HEAD = """<!DOCTYPE html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {ld_json}
 </script>
 <style>
 {styles}
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","wh3e6pv2u4");</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="masthead"><div class="wrap masthead-inner"><span class="masthead-edition">AI Automation &amp; Web Studio &middot; Edmonton</span><span class="masthead-meta">Vol. I &middot; MMXXVI</span></div></div>
 """
 
 def _plain(text: str) -> str:
@@ -362,11 +383,15 @@ def write_post(p: dict) -> Path:
     body = f"""{nav_html()}
 <main id="main">
 <article>
-<header class="post-hero"><div class="wrap">
-    <p class="post-cat">{html.escape(p.get('category','Article'))}</p>
-    <h1 class="post-h1">{html.escape(p['title'])}</h1>
-    <p class="post-meta"><span>{pretty_date(p['date'])}</span><span>{p['read_time']} min read</span><span>By {AUTHOR}</span></p>
-</div></header>
+<header class="bhero">
+    <div class="bhero-bg"><img src="../img/work-hero-bg.webp" alt="" decoding="async" width="1536" height="1024"></div>
+    <div class="bhero-scrim"></div>
+    <div class="wrap">
+        <span class="eyebrow">{html.escape(p.get('category','Article'))}</span>
+        <h1>{html.escape(p['title'])}</h1>
+        <p class="post-meta"><span>{pretty_date(p['date'])}</span><span>{p['read_time']} min read</span><span>By {AUTHOR}</span></p>
+    </div>
+</header>
 <div class="post-body"><div class="wrap">
 {p['body_html']}
 </div></div>
@@ -374,9 +399,12 @@ def write_post(p: dict) -> Path:
 {faq_html}
 <section class="post-cta"><div class="wrap">
     <p class="eyebrow">See it first</p>
-    <h2>Want a site that's fast by default?</h2>
-    <p>Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box. Send a few sentences about your business and you'll get back a working preview — no commitment.</p>
-    <a href="../contact.html" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
+    <h2>Want a site that's <em>fast by default?</em></h2>
+    <p>Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $99/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.</p>
+    <div class="post-cta-actions">
+        <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+        <a href="index.html" class="post-back">← Back to blog</a>
+    </div>
 </div></section>
 {FOOTER}
 {NAV_SCRIPT}
