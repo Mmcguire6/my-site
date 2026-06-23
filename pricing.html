@@ -120,56 +120,78 @@ section{position:relative;}
 .mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:16px;}
 
 /* ===== HERO ===== */
-.phero{position:relative;overflow:hidden;padding:clamp(70px,10vh,120px) 0 clamp(56px,7vw,86px);}
+.phero{position:relative;overflow:hidden;min-height:84vh;display:flex;align-items:center;background:#000;padding:clamp(70px,10vh,120px) 0 clamp(56px,7vw,86px);}
 .phero-bg{position:absolute;inset:0;z-index:0;}
 .phero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
-.phero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,11,13,0.94) 0%,rgba(10,11,13,0.78) 50%,rgba(10,11,13,0.6) 100%),linear-gradient(to top,var(--bg) 1%,transparent 42%);}
-.phero .wrap{position:relative;z-index:2;}
-.phero h1{font-family:var(--display);font-weight:600;font-size:clamp(46px,7vw,92px);line-height:1.0;letter-spacing:-0.02em;margin-top:16px;}
+@media(min-width:701px){.phero-bg img{object-fit:contain;object-position:center right;}}
+.phero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,11,13,0.9) 0%,rgba(10,11,13,0.62) 24%,rgba(10,11,13,0.18) 45%,rgba(10,11,13,0) 62%),linear-gradient(to top,var(--bg) 1%,transparent 42%);}
+.phero .wrap{position:relative;z-index:2;width:100%;}
+.phero-panel{max-width:600px;}
+.phero h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,4.8vw,62px);line-height:1.05;letter-spacing:-0.02em;margin-top:14px;}
 .phero h1 em{font-style:italic;color:var(--gold);}
-.phero-sub{font-family:var(--display);font-style:italic;font-size:clamp(18px,1.8vw,24px);color:var(--mist);margin-top:18px;}
-.phero-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:30px;}
+.phero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--mist);margin-top:18px;max-width:44ch;}
+.phero-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:30px;max-width:560px;}
 .phero-badges li{list-style:none;display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--white);}
 .phero-badges svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;}
 
 /* ===== BUILDER ===== */
 .builder-sec{background:var(--cream);color:var(--ink-1);padding:clamp(58px,7vw,100px) 0;}
-.builder-head{max-width:640px;margin-bottom:clamp(34px,4vw,50px);}
-.builder-head h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,50px);line-height:1.04;letter-spacing:-0.02em;color:var(--ink-1);margin-top:12px;}
-.builder-head h2 em{font-style:italic;color:var(--gold);}
-.builder-head p{font-size:15.5px;color:var(--ink-2);margin-top:14px;}
-.builder{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(26px,3vw,44px);align-items:start;}
-.bld-list-label{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#9a9486;margin-bottom:16px;}
-.svc{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid #e3ddcf;border-radius:13px;background:#fbf8f1;cursor:pointer;margin-bottom:10px;transition:border-color .2s,background .2s,box-shadow .2s;}
-.svc input{position:absolute;opacity:0;width:0;height:0;}
-.svc.on{border-color:rgba(170,115,59,0.5);background:#fff;box-shadow:0 14px 30px -22px rgba(80,55,20,0.4);}
-.svc-check{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:2px solid #cfc7b5;display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,border-color .2s;}
-.svc-check svg{width:13px;height:13px;opacity:0;transition:opacity .2s;}
-.svc.on .svc-check{background:var(--gold);border-color:var(--gold);}
-.svc.on .svc-check svg{opacity:1;}
-.svc-ic{flex-shrink:0;color:var(--gold);display:flex;}
-.svc-ic svg{width:24px;height:24px;stroke-width:1.7;}
+.builder{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(24px,3vw,42px);align-items:start;}
+.bld-left{min-width:0;}
+.builder-head{margin-bottom:24px;}
+.builder-head h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.04;letter-spacing:-0.02em;color:var(--ink-1);}
+.builder-head p{font-size:15px;color:var(--ink-2);margin-top:11px;max-width:46ch;}
+.bld-list-label{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#9a9486;margin-bottom:14px;}
+
+.svc{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid #e6e0d2;border-radius:14px;background:#fffdf8;cursor:pointer;margin-bottom:10px;transition:border-color .2s,background .2s,box-shadow .2s;}
+.svc input{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+.svc.on{border-color:rgba(170,115,59,0.45);box-shadow:0 12px 26px -20px rgba(80,55,20,0.45);}
+.svc.included{cursor:default;}
+.svc-status{width:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.svc-incl{width:22px;height:22px;border-radius:50%;background:#2e9e5b;display:flex;align-items:center;justify-content:center;color:#fff;}
+.svc-incl svg{width:12px;height:12px;}
+.svc-icon{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#17130d;display:flex;align-items:center;justify-content:center;color:var(--gold);}
+.svc-icon svg{width:23px;height:23px;stroke-width:1.7;}
 .svc-main{flex:1;min-width:0;}
-.svc-main b{display:block;font-size:15px;font-weight:700;color:var(--ink-1);letter-spacing:-0.005em;}
-.svc-main span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.45;margin-top:2px;}
-.svc-price{flex-shrink:0;font-size:15px;font-weight:700;color:var(--ink-1);}
-.svc.on .svc-price{color:var(--gold);}
+.svc-main b{display:block;font-size:14.5px;font-weight:700;color:var(--ink-1);letter-spacing:-0.005em;}
+.svc-main span{display:block;font-size:12px;color:var(--ink-2);line-height:1.45;margin-top:2px;}
+.svc-ctrl{flex-shrink:0;display:flex;align-items:center;gap:16px;}
+.svc-switch{position:relative;width:42px;height:24px;border-radius:999px;background:#d9d3c5;transition:background .22s;flex-shrink:0;}
+.svc-switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.28);transition:transform .22s;}
+.svc.on .svc-switch{background:linear-gradient(180deg,var(--gold-2),var(--gold));}
+.svc.on .svc-switch::after{transform:translateX(18px);}
+.svc-price{font-size:14.5px;font-weight:700;color:var(--ink-1);min-width:48px;text-align:right;}
+.svc-incl-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9a9486;text-align:right;line-height:1.25;}
+
+.bld-secure{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#8a8479;margin-top:18px;}
+.bld-secure svg{width:15px;height:15px;flex-shrink:0;color:#a79c86;}
+.bld-help{display:flex;align-items:center;gap:16px;margin-top:18px;padding:18px 20px;border:1px solid #e6e0d2;border-radius:14px;background:#fffdf8;}
+.bld-help-ic{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#17130d;display:flex;align-items:center;justify-content:center;color:var(--gold);}
+.bld-help-ic svg{width:21px;height:21px;stroke-width:1.7;}
+.bld-help-tx{flex:1;min-width:0;}
+.bld-help-tx b{display:block;font-size:14px;color:var(--ink-1);}
+.bld-help-tx span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:2px;}
+.bld-help a{flex-shrink:0;font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--gold);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;}
+
 /* summary */
-.sumcard{position:sticky;top:96px;background:#15161a;border:1px solid var(--line-2);border-radius:18px;padding:clamp(24px,2.6vw,32px);color:var(--white);box-shadow:0 36px 70px -34px rgba(40,28,10,0.5);}
-.sumcard .eyebrow{display:flex;align-items:center;gap:8px;}
-.sumcard .eyebrow svg{width:14px;height:14px;}
-.sum-list{list-style:none;margin:20px 0;display:flex;flex-direction:column;gap:11px;max-height:230px;overflow-y:auto;}
-.sum-list li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--mist);}
-.sum-list li span:last-child{color:var(--white);font-weight:600;}
-.sum-empty{color:var(--mist-2)!important;font-style:italic;}
-.sum-total{border-top:1px solid var(--line);padding-top:20px;margin-top:4px;}
-.sum-total > span{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist-2);}
-.sum-amt{display:flex;align-items:baseline;gap:4px;margin-top:6px;font-family:var(--display);}
-.sum-amt b{font-size:clamp(40px,5vw,56px);font-weight:600;color:var(--gold);line-height:1;}
+.sumcard{position:sticky;top:96px;background:linear-gradient(168deg,#16130d,#0a0908);border:1px solid rgba(170,115,59,0.32);border-radius:20px;padding:clamp(22px,2.4vw,30px);color:var(--white);box-shadow:0 40px 80px -36px rgba(0,0,0,0.85);}
+.sum-head .eyebrow{display:flex;align-items:center;gap:8px;}
+.sum-head .eyebrow svg{width:15px;height:15px;}
+.sum-head p{font-size:13px;color:var(--mist);margin-top:7px;}
+.sum-list{list-style:none;margin:18px 0;display:flex;flex-direction:column;}
+.sum-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid rgba(255,255,255,0.07);}
+.sum-list li:first-child{border-top:none;}
+.sum-ic{flex-shrink:0;width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;color:var(--gold);}
+.sum-ic svg{width:16px;height:16px;stroke-width:1.7;}
+.sum-nm{flex:1;min-width:0;font-size:13.5px;color:var(--white);}
+.sum-pr{flex-shrink:0;font-size:13.5px;font-weight:700;color:var(--white);}
+.sum-total{border-top:1px solid rgba(255,255,255,0.12);padding-top:18px;}
+.sum-total > span{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--mist-2);}
+.sum-amt{display:flex;align-items:baseline;gap:5px;margin-top:7px;font-family:var(--display);}
+.sum-amt b{font-size:clamp(44px,5.4vw,58px);font-weight:600;color:var(--gold);line-height:1;}
 .sum-amt em{font-style:normal;font-size:15px;color:var(--mist);font-family:var(--sans);}
-.sumcard .btn{width:100%;margin-top:22px;}
-.sum-note{font-size:12.5px;color:var(--mist-2);text-align:center;margin-top:16px;}
-.sum-note a{color:var(--gold);}
+.sum-save{font-size:12.5px;color:var(--mist);margin-top:9px;}
+.sumcard .btn{width:100%;margin-top:20px;}
 
 /* ===== VALUE BAND ===== */
 .pval{background:var(--bg-2);border-top:1px solid var(--line);padding:clamp(56px,7vw,96px) 0;}
@@ -210,8 +232,11 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:560px){
-  .svc{flex-wrap:wrap;}
-  .svc-main{flex-basis:calc(100% - 110px);}
+  .svc{gap:10px;padding:12px 13px;}
+  .svc-status{width:18px;}
+  .svc-ctrl{gap:11px;}
+  .svc-icon{width:42px;height:42px;}
+  .bld-help{flex-wrap:wrap;gap:12px;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
@@ -288,114 +313,128 @@ section{position:relative;}
 
 <!-- HERO -->
 <section class="phero">
-    <div class="phero-bg"><img src="img/pricing-page-bg.webp" alt="" fetchpriority="high" decoding="async" width="1536" height="1024"></div>
+    <div class="phero-bg"><img src="img/pricing-page-bg.webp" alt="" fetchpriority="high" decoding="async" width="1625" height="968"></div>
     <div class="phero-scrim"></div>
     <div class="wrap">
-        <span class="eyebrow">Pricing</span>
-        <h1>Build your <em>growth system.</em></h1>
-        <p class="phero-sub">You choose. We build. You grow.</p>
-        <ul class="phero-badges">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fixed monthly pricing</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contracts</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built to scale with you</li>
-        </ul>
+        <div class="phero-panel">
+            <span class="eyebrow">Pricing</span>
+            <h1>Simple pricing. <em>Powerful results.</em></h1>
+            <p class="phero-sub">Choose only the tools your business needs. Everything works together. Everything scales.</p>
+            <ul class="phero-badges">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fixed monthly pricing</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contracts</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built to scale with you</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <!-- BUILDER -->
 <section class="builder-sec">
     <div class="wrap">
-        <header class="builder-head reveal">
-            <span class="eyebrow">Build your monthly plan</span>
-            <h2>Start with what you need. <em>Add what you want.</em></h2>
-            <p>Pick the services and we&rsquo;ll build the system around your business. Toggle anything on or off &mdash; your monthly price updates instantly.</p>
-        </header>
         <div class="builder">
-            <div class="bld-list">
-                <p class="bld-list-label">Add options to your plan</p>
+            <div class="bld-left reveal">
+                <header class="builder-head">
+                    <h2>Build Your Monthly Plan</h2>
+                    <p>Start with your website, then add only the systems your business actually needs.</p>
+                </header>
+                <p class="bld-list-label">Add systems to your plan</p>
 
-                <label class="svc" data-name="Website Foundation" data-price="99">
+                <div class="svc included" data-name="Website Foundation" data-price="99">
+                    <span class="svc-status"><span class="svc-incl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8.5h18"/></svg></span>
+                    <span class="svc-main"><b>Website Foundation</b><span>Your professional website, plus hosting, security and unlimited updates.</span></span>
+                    <span class="svc-ctrl"><span class="svc-incl-label">Always<br>included</span><span class="svc-price">$99</span></span>
+                </div>
+
+                <label class="svc on" data-name="AI Receptionist" data-price="99">
                     <input type="checkbox" checked>
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8.5h18"/></svg></span>
-                    <span class="svc-main"><b>Website Foundation</b><span>Your professional website &mdash; hosting, security, and unlimited edits, all handled.</span></span>
-                    <span class="svc-price">+$99</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
+                    <span class="svc-main"><b>AI Receptionist</b><span>Never miss another call. Answers, qualifies and books appointments 24/7.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$99</span></span>
                 </label>
 
-                <label class="svc" data-name="AI Receptionist" data-price="99">
+                <label class="svc on" data-name="Lead Qualification" data-price="69">
                     <input type="checkbox" checked>
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
-                    <span class="svc-main"><b>AI Receptionist</b><span>A 24/7 AI that answers calls and texts, books jobs, and never misses a lead.</span></span>
-                    <span class="svc-price">+$99</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span>
+                    <span class="svc-main"><b>Lead Qualification</b><span>Instantly responds, qualifies and routes leads so you never miss opportunities.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$69</span></span>
                 </label>
 
-                <label class="svc" data-name="Lead Qualification" data-price="69">
+                <label class="svc on" data-name="Review Engine" data-price="39">
                     <input type="checkbox" checked>
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span>
-                    <span class="svc-main"><b>Lead Qualification</b><span>AI qualifies and scores every lead so you only spend time on the real ones.</span></span>
-                    <span class="svc-price">+$69</span>
-                </label>
-
-                <label class="svc" data-name="Review Engine" data-price="39">
-                    <input type="checkbox" checked>
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5 6 .5-4.5 4 1.4 6L12 16l-5.4 3 1.4-6-4.5-4 6-.5z"/></svg></span>
-                    <span class="svc-main"><b>Review Engine</b><span>Automated review requests that grow your 5-star reputation on autopilot.</span></span>
-                    <span class="svc-price">+$39</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5 6 .5-4.5 4 1.4 6L12 16l-5.4 3 1.4-6-4.5-4 6-.5z"/></svg></span>
+                    <span class="svc-main"><b>Review Engine</b><span>Automate review requests and grow your 5-star Google reputation.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$39</span></span>
                 </label>
 
                 <label class="svc" data-name="Website AI Chat" data-price="69">
                     <input type="checkbox">
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
-                    <span class="svc-main"><b>Website AI Chat</b><span>An AI chat widget that answers questions and captures leads on your site.</span></span>
-                    <span class="svc-price">+$69</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
+                    <span class="svc-main"><b>Website AI Chat</b><span>An AI chat on your site that answers questions and captures leads.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$69</span></span>
                 </label>
 
                 <label class="svc" data-name="Appointment Assistant" data-price="49">
                     <input type="checkbox">
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/><path d="M9.5 14.5l1.8 1.8 3.5-3.8"/></svg></span>
-                    <span class="svc-main"><b>Appointment Assistant</b><span>Automated booking and reminders that fill your calendar and cut no-shows.</span></span>
-                    <span class="svc-price">+$49</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/><path d="M9.5 14.5l1.8 1.8 3.5-3.8"/></svg></span>
+                    <span class="svc-main"><b>Appointment Assistant</b><span>Reduce no-shows with text/email reminders and easy rescheduling.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$49</span></span>
                 </label>
 
                 <label class="svc" data-name="Quote Follow-up" data-price="59">
                     <input type="checkbox">
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
-                    <span class="svc-main"><b>Quote Follow-up</b><span>Automatic follow-ups on every quote so estimates turn into booked jobs.</span></span>
-                    <span class="svc-price">+$59</span>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
+                    <span class="svc-main"><b>Quote Follow-up</b><span>Automated follow-ups that turn more quotes into paying customers.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$59</span></span>
                 </label>
 
-                <label class="svc" data-name="Local SEO" data-price="149">
-                    <input type="checkbox">
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-                    <span class="svc-main"><b>Local SEO</b><span>Get found on Google in your area &mdash; maps, rankings, and local search.</span></span>
-                    <span class="svc-price">+$149</span>
+                <label class="svc on" data-name="Local SEO" data-price="149">
+                    <input type="checkbox" checked>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+                    <span class="svc-main"><b>Local SEO</b><span>Rank higher on Google and get found by more local customers.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$149</span></span>
                 </label>
 
-                <label class="svc" data-name="Google Ads Management" data-price="299">
-                    <input type="checkbox">
-                    <span class="svc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                    <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>
-                    <span class="svc-main"><b>Google Ads Management</b><span>Managed Google Ads that put you in front of ready-to-buy searchers.</span></span>
-                    <span class="svc-price">+$299</span>
+                <label class="svc on" data-name="Google Ads Management" data-price="299">
+                    <input type="checkbox" checked>
+                    <span class="svc-status"></span>
+                    <span class="svc-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg></span>
+                    <span class="svc-main"><b>Google Ads Management</b><span>Done-for-you Google Ads that drive high-quality leads, fast.</span></span>
+                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$299</span></span>
                 </label>
+
+                <div class="bld-secure">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                    All plans include hosting, security, backups and ongoing support.
+                </div>
+
+                <div class="bld-help">
+                    <span class="bld-help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></span>
+                    <span class="bld-help-tx"><b>Not sure what you need?</b><span>Book a free strategy session and we&rsquo;ll recommend the best systems for your business.</span></span>
+                    <a href="contact.html">Book a call <span class="arr">→</span></a>
+                </div>
             </div>
 
             <aside class="sumcard">
-                <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> Your growth system</span>
+                <div class="sum-head">
+                    <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg> Your growth system</span>
+                    <p>Here&rsquo;s your estimated monthly investment.</p>
+                </div>
                 <ul class="sum-list"></ul>
                 <div class="sum-total">
-                    <span>Estimated monthly payment</span>
+                    <span>Estimated monthly investment</span>
                     <div class="sum-amt">$<b id="sum-total">0</b><em>/month</em></div>
+                    <p class="sum-save">You save time. We grow your business.</p>
                 </div>
-                <a href="contact.html" class="btn btn-gold">Book a free strategy session <span class="arr">→</span></a>
-                <p class="sum-note">Not sure what you need? <a href="free-preview.html">Start with a free preview.</a></p>
+                <a href="contact.html" class="btn btn-gold">Book free strategy session <span class="arr">→</span></a>
             </aside>
         </div>
     </div>
@@ -499,13 +538,17 @@ mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM
 function recalc(){
   var total=0, html='';
   document.querySelectorAll('.svc').forEach(function(row){
-    var on=row.querySelector('input').checked;
-    row.classList.toggle('on', on);
-    if(on){ var p=+row.dataset.price; total+=p; html+='<li><span>'+row.dataset.name+'</span><span>$'+p+'</span></li>'; }
+    var input=row.querySelector('input');
+    var on = row.classList.contains('included') || (input && input.checked);
+    if(input) row.classList.toggle('on', input.checked);
+    if(on){
+      var p=+row.dataset.price; total+=p;
+      var icon=row.querySelector('.svc-icon').innerHTML;
+      html+='<li><span class="sum-ic">'+icon+'</span><span class="sum-nm">'+row.dataset.name+'</span><span class="sum-pr">$'+p+'</span></li>';
+    }
   });
   document.getElementById('sum-total').textContent=total;
-  var list=document.querySelector('.sum-list');
-  list.innerHTML = html || '<li class="sum-empty">Add services to build your plan.</li>';
+  document.querySelector('.sum-list').innerHTML=html;
 }
 document.querySelectorAll('.svc input').forEach(function(cb){cb.addEventListener('change',recalc);});
 recalc();
