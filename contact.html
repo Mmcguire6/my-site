@@ -57,8 +57,8 @@
   --display:'Fraunces','Playfair Display',Georgia,serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:clip;overflow-wrap:break-word;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 button{font-family:inherit;cursor:pointer;}
@@ -133,7 +133,7 @@ section{position:relative;}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .cf-field{margin-bottom:16px;}
 .cf-field label{display:block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist-2);margin-bottom:8px;}
-.cf-field input,.cf-field textarea{width:100%;background:#0c0b09;border:1px solid var(--line-2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:15px;color:var(--white);transition:border-color .2s,box-shadow .2s;resize:vertical;}
+.cf-field input,.cf-field textarea{width:100%;background:#0c0b09;border:1px solid var(--line-2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:16px;color:var(--white);transition:border-color .2s,box-shadow .2s;resize:vertical;}
 .cf-field input::placeholder,.cf-field textarea::placeholder{color:#6f6a60;}
 .cf-field input:focus,.cf-field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(170,115,59,0.16);}
 .cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
@@ -147,6 +147,16 @@ section{position:relative;}
 .cf-success strong{color:#dff3e6;}
 .cf-error{background:rgba(190,70,60,0.12);border:1px solid rgba(190,70,60,0.4);color:#e7c3bf;}
 .cf-error a{color:var(--gold-2);}
+.cf-plan{margin-bottom:20px;background:#100f0c;border:1px solid rgba(170,115,59,0.32);border-radius:12px;padding:16px 16px 14px;}
+.cf-plan-head{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.cf-plan-head svg{width:15px;height:15px;}
+.cf-plan-list{list-style:none;display:flex;flex-direction:column;}
+.cf-plan-list li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:13.5px;color:var(--white);padding:7px 0;border-top:1px solid rgba(255,255,255,0.07);}
+.cf-plan-list li:first-child{border-top:none;}
+.cf-plan-list li span{color:var(--mist-2);font-size:13px;flex-shrink:0;}
+.cf-plan-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;padding-top:12px;border-top:1px solid var(--line-2);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist-2);font-weight:700;}
+.cf-plan-total b{font-family:var(--display);font-size:22px;font-weight:600;color:var(--gold);letter-spacing:0;text-transform:none;}
+.cf-plan-note{font-size:12px;color:var(--mist-2);margin-top:10px;line-height:1.5;}
 
 /* ===== WHAT HAPPENS NEXT ===== */
 .next{background:var(--bg-2);padding:clamp(60px,7vw,104px) 0;border-bottom:1px solid var(--line);}
@@ -323,6 +333,12 @@ section{position:relative;}
                     <p class="cf-hp" aria-hidden="true">
                         <label>Don&rsquo;t fill this out: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
                     </p>
+                    <div class="cf-plan" id="cf-plan" hidden>
+                        <div class="cf-plan-head"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg> Your selected plan</div>
+                        <ul class="cf-plan-list" id="cf-plan-list"></ul>
+                        <div class="cf-plan-total"><span>Estimated total</span> <b><span id="cf-plan-amt">$0</span>/mo</b></div>
+                        <p class="cf-plan-note">We&rsquo;ll include this with your message so we build the right preview for you. Add anything else below.</p>
+                    </div>
                     <div class="cf-row">
                         <div class="cf-field">
                             <label for="cf-name">Name</label>
@@ -487,6 +503,25 @@ mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
+// Selected plan handed off from the pricing builder (?plan=Name:price|...&total=)
+(function(){
+  var q=new URLSearchParams(location.search), raw=q.get('plan');
+  if(!raw) return;
+  var items=raw.split('|').map(function(s){var i=s.lastIndexOf(':');return i>0?{name:s.slice(0,i),price:+s.slice(i+1)}:null;}).filter(Boolean);
+  if(!items.length) return;
+  var total=+q.get('total')||items.reduce(function(a,b){return a+(b.price||0);},0);
+  var box=document.getElementById('cf-plan'),list=document.getElementById('cf-plan-list'),amt=document.getElementById('cf-plan-amt');
+  function esc(t){return String(t).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  if(box&&list){
+    list.innerHTML=items.map(function(it){return '<li>'+esc(it.name)+' <span>$'+it.price+'/mo</span></li>';}).join('');
+    if(amt) amt.textContent='$'+total;
+    box.hidden=false;
+  }
+  window.__planText=items.map(function(it){return '• '+it.name+' — $'+it.price+'/mo';}).join('\n')+'\nEstimated total: $'+total+'/month';
+  var msg=document.getElementById('cf-message');
+  if(msg && !msg.value.trim()) msg.value='I built a plan on your pricing page (shown above) — I’d like a preview and to talk through next steps.';
+})();
+
 // Contact form — submits to Cloudflare Worker, which relays via Resend.
 var form=document.getElementById('cf-form');
 if(form){
@@ -500,6 +535,7 @@ if(form){
     if(submitBtn){submitBtn.disabled=true;submitBtn.dataset.originalLabel=submitBtn.dataset.originalLabel||submitBtn.innerHTML;submitBtn.textContent='Sending…';}
     var payload={};
     new FormData(form).forEach(function(value,key){payload[key]=value;});
+    if(window.__planText){ payload.plan=window.__planText; payload.message=(payload.message?payload.message+'\n\n':'')+'— Selected plan from pricing builder —\n'+window.__planText; }
     fetch('https://contact-form.mattmcguire.workers.dev',{
       method:'POST',
       headers:{'Content-Type':'application/json'},

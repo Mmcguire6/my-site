@@ -65,8 +65,8 @@
   --display:'Fraunces','Playfair Display',Georgia,serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:clip;overflow-wrap:break-word;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 button{font-family:inherit;cursor:pointer;}
@@ -238,6 +238,14 @@ section{position:relative;}
   .svc-icon{width:42px;height:42px;}
   .bld-help{flex-wrap:wrap;gap:12px;}
   .foot-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .svc{gap:10px;padding:12px 12px;}
+  .svc-icon{display:none;}
+  .svc-main b{overflow-wrap:anywhere;}
+  .svc-ctrl{gap:10px;}
+  .svc-price{min-width:0;}
+  .svc-incl-label{font-size:8.5px;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
 </style>
@@ -426,7 +434,7 @@ section{position:relative;}
                     <div class="sum-amt">$<b id="sum-total">0</b><em>/month</em></div>
                     <p class="sum-save">You save time. We grow your business.</p>
                 </div>
-                <a href="contact.html" class="btn btn-gold">Book free strategy session <span class="arr">→</span></a>
+                <a href="contact.html" id="plan-cta" class="btn btn-gold">Continue with this plan <span class="arr">→</span></a>
             </aside>
         </div>
     </div>
@@ -526,19 +534,22 @@ mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM
 
 /* pricing builder */
 function recalc(){
-  var total=0, html='';
+  var total=0, html='', parts=[];
   document.querySelectorAll('.svc').forEach(function(row){
     var input=row.querySelector('input');
     var on = row.classList.contains('included') || (input && input.checked);
     if(input) row.classList.toggle('on', input.checked);
     if(on){
       var p=+row.dataset.price; total+=p;
+      parts.push(row.dataset.name+':'+p);
       var icon=row.querySelector('.svc-icon').innerHTML;
       html+='<li><span class="sum-ic">'+icon+'</span><span class="sum-nm">'+row.dataset.name+'</span><span class="sum-pr">$'+p+'</span></li>';
     }
   });
   document.getElementById('sum-total').textContent=total;
   document.querySelector('.sum-list').innerHTML=html;
+  var cta=document.getElementById('plan-cta');
+  if(cta) cta.href='contact.html?plan='+encodeURIComponent(parts.join('|'))+'&total='+total;
 }
 document.querySelectorAll('.svc input').forEach(function(cb){cb.addEventListener('change',recalc);});
 recalc();
