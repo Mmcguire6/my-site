@@ -535,7 +535,7 @@ if(form){
     if(submitBtn){submitBtn.disabled=true;submitBtn.dataset.originalLabel=submitBtn.dataset.originalLabel||submitBtn.innerHTML;submitBtn.textContent='Sending…';}
     var payload={};
     new FormData(form).forEach(function(value,key){payload[key]=value;});
-    if(window.__planText){ payload.plan=window.__planText; payload.message=(payload.message?payload.message+'\n\n':'')+'— Selected plan from pricing builder —\n'+window.__planText; }
+    if(window.__planText){ payload.plan=window.__planText; }
     fetch('/api/contact',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
