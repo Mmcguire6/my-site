@@ -1,0 +1,105 @@
+/**
+ * Northern Peak Systems — contact form (Netlify Function)
+ * Receives the site's contact-form POST and relays it to
+ * matt@northernpeaksystems.ca via Resend.
+ *
+ * Lives on the same Netlify site as the form, so no CORS needed.
+ * Endpoint: /.netlify/functions/contact  (aliased to /api/contact in netlify.toml)
+ *
+ * Env vars (set in Netlify → Site settings → Environment variables):
+ *   RESEND_API_KEY  — required (re_...)
+ *   TO_EMAIL        — optional, defaults to matt@northernpeaksystems.ca
+ *   FROM_EMAIL      — optional, must be on a Resend-verified domain
+ */
+
+const esc = (s) =>
+  String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+
+function resp(statusCode, obj) {
+  return {
+    statusCode,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
+  };
+}
+
+exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") return resp(405, { error: "method_not_allowed" });
+
+  let data;
+  try {
+    data = JSON.parse(event.body || "{}");
+  } catch {
+    return resp(400, { error: "invalid_json" });
+  }
+
+  // Honeypot — bots fill this hidden field. Pretend success, send nothing.
+  if (data["bot-field"]) return resp(200, { ok: true });
+
+  const name = String(data.name || "").trim();
+  const email = String(data.email || "").trim();
+  const firm = String(data.firm || "").trim();
+  const message = String(data.message || "").trim();
+  const plan = String(data.plan || "").trim();
+
+  if (!name || !email || !message) return resp(400, { error: "missing_fields" });
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return resp(400, { error: "invalid_email" });
+
+  if (!process.env.RESEND_API_KEY) return resp(500, { error: "missing_api_key" });
+
+  const TO = process.env.TO_EMAIL || "matt@northernpeaksystems.ca";
+  const FROM = process.env.FROM_EMAIL || "Northern Peak Systems <noreply@northernpeaksystems.ca>";
+
+  const subject = `New enquiry — ${name}${firm ? " (" + firm + ")" : ""}`;
+
+  const text = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    firm ? `Business: ${firm}` : null,
+    plan ? `\nSelected plan:\n${plan}` : null,
+    ``,
+    `Message:`,
+    message,
+  ]
+    .filter((x) => x !== null)
+    .join("\n");
+
+  const html =
+    `<h2 style="margin:0 0 12px">New enquiry from the website</h2>` +
+    `<p style="margin:0 0 12px"><b>Name:</b> ${esc(name)}<br>` +
+    `<b>Email:</b> <a href="mailto:${esc(email)}">${esc(email)}</a>` +
+    (firm ? `<br><b>Business:</b> ${esc(firm)}` : "") +
+    `</p>` +
+    (plan
+      ? `<p style="margin:0 0 12px"><b>Selected plan</b><br>${esc(plan).replace(/\n/g, "<br>")}</p>`
+      : "") +
+    `<p style="margin:0"><b>Message</b><br>${esc(message).replace(/\n/g, "<br>")}</p>`;
+
+  let r;
+  try {
+    r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: FROM,
+        to: [TO],
+        reply_to: email, // hitting reply emails the lead back
+        subject,
+        text,
+        html,
+      }),
+    });
+  } catch (e) {
+    return resp(502, { error: "network_error", detail: String(e) });
+  }
+
+  if (!r.ok) {
+    const detail = await r.text();
+    return resp(502, { error: "send_failed", status: r.status, detail });
+  }
+
+  return resp(200, { ok: true });
+};

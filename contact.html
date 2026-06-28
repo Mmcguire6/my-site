@@ -536,7 +536,7 @@ if(form){
     var payload={};
     new FormData(form).forEach(function(value,key){payload[key]=value;});
     if(window.__planText){ payload.plan=window.__planText; payload.message=(payload.message?payload.message+'\n\n':'')+'— Selected plan from pricing builder —\n'+window.__planText; }
-    fetch('https://contact-form.mattmcguire.workers.dev',{
+    fetch('/api/contact',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(payload),
