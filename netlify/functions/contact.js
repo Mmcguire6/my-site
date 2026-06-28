@@ -91,7 +91,8 @@ exports.handler = async (event) => {
     .join("\n");
 
   const html =
-    `<h2 style="margin:0 0 12px">New enquiry from the website</h2>` +
+    `<div style="font-family:Georgia,'Times New Roman',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#aa733b;font-weight:700;margin:0 0 4px">Northern Peak Systems</div>` +
+    `<h2 style="font-family:Georgia,'Times New Roman',serif;margin:0 0 16px;font-size:21px;font-weight:600;color:#191713">New Contact Enquiry</h2>` +
     `<p style="margin:0 0 12px"><b>Name:</b> ${esc(name)}<br>` +
     `<b>Email:</b> <a href="mailto:${esc(email)}">${esc(email)}</a>` +
     (firm ? `<br><b>Business:</b> ${esc(firm)}` : "") +
