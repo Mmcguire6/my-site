@@ -2,6 +2,11 @@ __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
 **/img/_orig/
 **/img/src/
 campground/*/optimize-images.js
