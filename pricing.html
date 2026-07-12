@@ -7,14 +7,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-<title>Pricing · Build Your Growth System | Northern Peak Systems</title>
-<meta name="description" content="Build a monthly growth system that fits your business — website, AI automation, and SEO. Pick the services you want and see your price instantly. Fixed pricing, no long-term contracts.">
+<title>Simple Pricing · Website $97/mo or Growth System $297/mo | Northern Peak Systems</title>
+<meta name="description" content="Two simple plans, no surprises. Custom website built free — $97/month covers hosting, security, and updates. Or the full Business Growth System for $297/month flat. No setup fees, no contracts.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/pricing">
 <meta property="og:url" content="https://northernpeaksystems.ca/pricing">
-<meta property="og:title" content="Pricing · Build Your Growth System | Northern Peak Systems">
-<meta property="og:description" content="Pick the services you want and see your monthly price instantly. Fixed pricing, no long-term contracts.">
+<meta property="og:title" content="Simple Pricing | Northern Peak Systems">
+<meta property="og:description" content="Custom website built free — $97/month covers the care. Or the whole growth system for $297/month flat. No setup fees, no contracts.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -23,46 +23,57 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["ProfessionalService", "LocalBusiness"],
-      "@id": "https://northernpeaksystems.ca/#org",
-      "name": "Northern Peak Systems",
-      "url": "https://northernpeaksystems.ca/",
-      "logo": "https://northernpeaksystems.ca/favicon.png",
-      "email": "matt@northernpeaksystems.ca",
-      "priceRange": "$$",
-      "founder": { "@type": "Person", "name": "Matthew McGuire", "url": "https://northernpeaksystems.ca/about" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
-      "areaServed": { "@type": "Country", "name": "Canada" }
+      "@type": "Service",
+      "@id": "https://northernpeaksystems.ca/pricing#service",
+      "name": "Websites and Growth Systems for Local Business",
+      "provider": { "@id": "https://northernpeaksystems.ca/#org" },
+      "areaServed": { "@type": "Country", "name": "Canada" },
+      "url": "https://northernpeaksystems.ca/pricing",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Custom Website",
+          "price": "97",
+          "priceCurrency": "CAD",
+          "description": "Custom website designed and built free. $97/month covers hosting, security, unlimited edits, local SEO foundations, and founder-led support. No setup fees, no contracts."
+        },
+        {
+          "@type": "Offer",
+          "name": "Business Growth System",
+          "price": "297",
+          "priceCurrency": "CAD",
+          "description": "The website plus missed-call text-back, 5-star review funnel, automated lead follow-up, marketing campaigns, and CRM with appointment booking. $297/month flat, no setup fees, no contracts."
+        }
+      ]
     },
     {
-      "@type": "WebPage",
-      "@id": "https://northernpeaksystems.ca/pricing",
-      "url": "https://northernpeaksystems.ca/pricing",
-      "name": "Pricing · Build Your Growth System",
-      "isPartOf": { "@id": "https://northernpeaksystems.ca/#org" }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://northernpeaksystems.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://northernpeaksystems.ca/pricing" }
+      ]
     }
   ]
 }
 </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;1,144,500&display=swap" rel="stylesheet">
 
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/inter-400-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/inter-500-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter-600-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700-normal.woff2) format('woff2');}
-
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/inter-800-normal.woff2) format('woff2');}
 :root{
-  --bg:#0d0e10; --bg-2:#121316; --bg-3:#17181c; --bg-4:#1e2026;
-  --line:rgba(255,255,255,0.09); --line-2:rgba(255,255,255,0.14);
-  --gold:#aa733b; --gold-2:#c5894a; --gold-soft:rgba(170,115,59,0.13);
-  --white:#f4f1ea; --mist:#a8a298; --mist-2:#7c786f; --ink:#0d0e10;
-  --cream:#f4f1ea; --ink-1:#191713; --ink-2:#5f5a51;
+  --bg:#0a0a0c; --bg-2:#0f0f12; --card:#131317; --card-2:#17171c;
+  --line:rgba(255,255,255,0.08); --line-2:rgba(255,255,255,0.14);
+  --gold:#d2a24c; --gold-2:#e6be6e; --gold-deep:#a97c33;
+  --gold-line:rgba(210,162,76,0.28); --gold-soft:rgba(210,162,76,0.12);
+  --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c;
+  --cream:#f7f5f0; --ink:#16140f; --ink-2:#6f695d; --cream-line:#e8e2d4;
   --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --display:'Fraunces','Playfair Display',Georgia,serif;
+  --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;}
@@ -70,238 +81,202 @@ body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 button{font-family:inherit;cursor:pointer;}
-.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,52px);}
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
+.wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
 .gold{color:var(--gold);}
 section{position:relative;}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:17px 32px;border-radius:9px;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;border:1px solid transparent;white-space:nowrap;}
+h1,h2,h3{letter-spacing:-0.02em;}
+h1,h2{font-family:var(--display);}
+.h-lg{font-size:clamp(28px,3.4vw,46px);font-weight:800;line-height:1.08;margin-top:14px;}
+.lede{font-size:clamp(15px,1.25vw,17px);color:var(--mist);margin-top:16px;line-height:1.65;}
+.light{background:var(--cream);color:var(--ink);}
+.light .lede{color:var(--ink-2);}
+.sec{padding:clamp(64px,8vw,110px) 0;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:16px 30px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
 .btn .arr{transition:transform .22s;}
 .btn:hover .arr{transform:translateX(4px);}
-.btn-gold{background:linear-gradient(180deg,#b27e45,#a06d38);color:#fff;box-shadow:0 16px 40px -16px rgba(170,115,59,0.55);}
-.btn-gold:hover{background:linear-gradient(180deg,#c08749,#ad7640);transform:translateY(-2px);}
-.btn-ghost{background:#15171a;color:var(--white);border-color:var(--line-2);}
+.btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -14px rgba(210,162,76,0.5);}
+.btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);box-shadow:0 22px 48px -14px rgba(210,162,76,0.6);}
+.btn-line{background:transparent;color:var(--gold);border-color:var(--gold-line);}
+.btn-line:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px);}
+.btn-ghost{background:#17171c;color:var(--white);border-color:var(--line-2);}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
-.btn-dark{background:#15140f;color:#fff;}
-.btn-dark:hover{background:#000;transform:translateY(-2px);}
-
-/* ===== NAV ===== */
-.nav{position:sticky;top:0;z-index:50;background:rgba(13,14,16,0.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px;}
-.brand{flex-shrink:0;}
-.brand-logo{height:48px;width:auto;display:block;}
-.nav-links{display:flex;align-items:center;gap:30px;}
-.nav-links > a{font-size:15.5px;color:#dcd7cc;transition:color .18s;}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,0.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px;}
+.brand{display:inline-flex;flex-shrink:0;}
+.brand-logo{height:46px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links > a{font-size:15px;color:#d8d3c9;transition:color .18s;position:relative;padding:6px 0;}
 .nav-links > a:hover{color:var(--white);}
+.nav-links > a.on{color:var(--gold);}
+.nav-links > a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);border-radius:2px;}
 .nav-dd{position:relative;}
 .nav-dd::after{content:"";position:absolute;top:100%;left:-12px;right:-12px;height:16px;}
-.nav-dd-toggle{background:none;border:none;padding:0;font-family:inherit;font-size:15.5px;color:#dcd7cc;display:inline-flex;align-items:center;gap:5px;cursor:pointer;transition:color .18s;}
+.nav-dd-toggle{background:none;border:none;padding:6px 0;font-family:inherit;font-size:15px;color:#d8d3c9;display:inline-flex;align-items:center;gap:5px;cursor:pointer;transition:color .18s;}
 .nav-dd-toggle svg{width:10px;height:10px;transition:transform .2s;}
 .nav-dd:hover .nav-dd-toggle{color:var(--white);}
 .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg);}
-.nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(8px);min-width:188px;background:var(--bg-3);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:70;}
+.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:70;}
 .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
 .nav-dd-menu a{display:block;padding:9px 14px;font-size:13.5px;color:var(--mist);border-radius:7px;white-space:nowrap;transition:background .15s,color .15s;}
-.nav-dd-menu a:hover{background:var(--bg-4);color:var(--white);}
+.nav-dd-menu a:hover{background:rgba(255,255,255,0.05);color:var(--white);}
 .nav-dd-menu.cols{display:grid;grid-template-columns:1fr 1fr;min-width:300px;}
 .nav-dd-menu .dd-all{grid-column:1 / -1;color:var(--gold);border-top:1px solid var(--line);margin-top:5px;padding-top:11px;}
+.nav-dd-menu.mega{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}
+.mega-head{font-size:13.5px;font-weight:600;color:var(--ink);padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
+.nav-dd-menu a.mega-item{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.mega-item:hover{background:#f7f3ea;}
+.mega-item .mi{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);flex-shrink:0;}
+.mega-item .mi svg{width:18px;height:18px;stroke-width:1.7;}
+.mega-item b{display:block;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.3;}
+.mega-item span{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}
 .nav-cta{display:flex;align-items:center;gap:14px;}
+.nav-cta .btn{padding:13px 24px;}
 .nav-burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);align-items:center;justify-content:center;}
 .nav-burger svg{width:20px;height:20px;}
-@media(max-width:980px){.nav-links,.nav-cta .btn{display:none;}.nav-burger{display:inline-flex;}}
+@media(max-width:1120px){.nav-links,.nav-cta .btn{display:none;}.nav-burger{display:inline-flex;}}
 .mnav{position:fixed;inset:0;z-index:60;background:var(--bg);transform:translateY(-100%);transition:transform .4s cubic-bezier(.5,0,.1,1);display:flex;flex-direction:column;padding:24px clamp(22px,6vw,40px);overflow-y:auto;}
 .mnav.open{transform:translateY(0);}
 .mnav-top{display:flex;align-items:center;justify-content:space-between;height:50px;}
-.mnav-top .brand-logo{height:38px;}
 .mnav-close{width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);display:flex;align-items:center;justify-content:center;}
-.mnav-links{display:flex;flex-direction:column;gap:6px;margin-top:40px;}
-.mnav-links a{font-family:var(--display);font-size:clamp(26px,5.5vw,34px);color:var(--white);padding:8px 0;border-bottom:1px solid var(--line);}
-.mnav-links a .gold{font-style:italic;}
-.mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:16px;}
+.mnav-links{display:flex;flex-direction:column;gap:2px;margin-top:34px;}
+.mnav-links a{font-size:clamp(22px,4.6vw,28px);font-weight:700;color:var(--white);padding:9px 0;border-bottom:1px solid var(--line);}
+.mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:14px;}
 
-/* ===== HERO ===== */
-.phero{position:relative;overflow:hidden;min-height:84vh;display:flex;align-items:center;background:#000;padding:clamp(70px,10vh,120px) 0 clamp(56px,7vw,86px);}
-.phero-bg{position:absolute;inset:0;z-index:0;}
+/* hero */
+.phero{overflow:hidden;padding:clamp(48px,6vw,80px) 0 clamp(20px,3vw,36px);background:var(--bg);text-align:center;}
+.phero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.85;}
 .phero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
-@media(min-width:701px){.phero-bg img{object-fit:contain;object-position:center right;}}
-.phero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,11,13,0.9) 0%,rgba(10,11,13,0.62) 24%,rgba(10,11,13,0.18) 45%,rgba(10,11,13,0) 62%),linear-gradient(to top,var(--bg) 1%,transparent 42%);}
-.phero .wrap{position:relative;z-index:2;width:100%;}
-.phero-panel{max-width:600px;}
-.phero h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,4.8vw,62px);line-height:1.05;letter-spacing:-0.02em;margin-top:14px;}
-.phero h1 em{font-style:italic;color:var(--gold);}
-.phero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--mist);margin-top:18px;max-width:44ch;}
-.phero-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:30px;max-width:560px;}
-.phero-badges li{list-style:none;display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--white);}
-.phero-badges svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;}
+.phero .wrap{position:relative;z-index:2;}
+.phero h1{font-size:clamp(34px,4.2vw,56px);font-weight:800;line-height:1.06;margin:16px auto 14px;max-width:18ch;}
+.phero-sub{font-size:clamp(15px,1.25vw,17px);color:var(--mist);max-width:52ch;margin:0 auto;}
 
-/* ===== BUILDER ===== */
-.builder-sec{background:var(--cream);color:var(--ink-1);padding:clamp(58px,7vw,100px) 0;}
-.builder{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(24px,3vw,42px);align-items:start;}
-.bld-left{min-width:0;}
-.builder-head{margin-bottom:24px;}
-.builder-head h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.04;letter-spacing:-0.02em;color:var(--ink-1);}
-.builder-head p{font-size:15px;color:var(--ink-2);margin-top:11px;max-width:46ch;}
-.bld-list-label{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#9a9486;margin-bottom:14px;}
+/* plans */
+.plans{padding:clamp(30px,4vw,56px) 0 clamp(64px,8vw,100px);background:var(--bg);}
+.plans-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,30px);max-width:980px;margin:0 auto;align-items:stretch;}
+.plan{position:relative;background:linear-gradient(170deg,#16151a,#0e0d10);border:1px solid var(--line-2);border-radius:20px;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;}
+.plan.featured{border-color:var(--gold-line);box-shadow:0 0 90px -30px rgba(210,162,76,0.4),0 40px 80px -40px rgba(0,0,0,0.8);}
+.plan-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;border-radius:999px;padding:6px 16px;white-space:nowrap;}
+.plan-name{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
+.plan-price{display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;}
+.plan-price b{font-size:clamp(44px,4.4vw,60px);font-weight:800;line-height:1;color:var(--white);}
+.plan-price span{font-size:15px;color:var(--mist);}
+.plan-sub{font-size:13.5px;color:var(--mist);line-height:1.55;}
+.plan-checks{list-style:none;display:flex;flex-direction:column;gap:10px;margin:24px 0;}
+.plan-checks li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#e4dfd4;line-height:1.5;}
+.plan-checks svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+.plan-checks li.muted{color:var(--mist);}
+.plan .btn{width:100%;margin-top:auto;}
+.plan-note{text-align:center;font-size:12px;color:var(--mist-2);margin-top:12px;}
+.plans-foot{text-align:center;font-size:13.5px;color:var(--mist);margin-top:clamp(24px,3vw,36px);}
+.plans-foot a{color:var(--gold);}
+.plans-foot a:hover{color:var(--gold-2);}
+@media(max-width:820px){.plans-grid{grid-template-columns:1fr;max-width:520px;}}
 
-.svc{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid #e6e0d2;border-radius:14px;background:#fffdf8;cursor:pointer;margin-bottom:10px;transition:border-color .2s,background .2s,box-shadow .2s;}
-.svc input{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
-.svc.on{border-color:rgba(170,115,59,0.45);box-shadow:0 12px 26px -20px rgba(80,55,20,0.45);}
-.svc.included{cursor:default;}
-.svc-status{width:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-.svc-incl{width:22px;height:22px;border-radius:50%;background:#2e9e5b;display:flex;align-items:center;justify-content:center;color:#fff;}
-.svc-incl svg{width:12px;height:12px;}
-.svc-icon{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#17130d;display:flex;align-items:center;justify-content:center;color:var(--gold);}
-.svc-icon svg{width:23px;height:23px;stroke-width:1.7;}
-.svc-main{flex:1;min-width:0;}
-.svc-main b{display:block;font-size:14.5px;font-weight:700;color:var(--ink-1);letter-spacing:-0.005em;}
-.svc-main span{display:block;font-size:12px;color:var(--ink-2);line-height:1.45;margin-top:2px;}
-.svc-ctrl{flex-shrink:0;display:flex;align-items:center;gap:16px;}
-.svc-switch{position:relative;width:42px;height:24px;border-radius:999px;background:#d9d3c5;transition:background .22s;flex-shrink:0;}
-.svc-switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.28);transition:transform .22s;}
-.svc.on .svc-switch{background:linear-gradient(180deg,var(--gold-2),var(--gold));}
-.svc.on .svc-switch::after{transform:translateX(18px);}
-.svc-price{font-size:14.5px;font-weight:700;color:var(--ink-1);min-width:48px;text-align:right;}
-.svc-incl-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9a9486;text-align:right;line-height:1.25;}
+/* faq */
+.faq-grid{display:grid;grid-template-columns:0.8fr 1.5fr;gap:clamp(30px,4vw,64px);align-items:start;}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faq-list details{background:#fff;border:1px solid var(--cream-line);border-radius:13px;padding:2px 22px;}
+.faq-list summary{list-style:none;cursor:pointer;padding:17px 0;font-weight:700;font-size:15.5px;color:var(--ink);display:flex;justify-content:space-between;gap:16px;align-items:center;}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-list summary::after{content:"+";font-size:22px;color:var(--gold-deep);font-weight:400;flex-shrink:0;}
+.faq-list details[open] summary::after{content:"\2013";}
+.faq-list p{padding:0 0 18px;color:var(--ink-2);font-size:14px;line-height:1.7;}
+@media(max-width:900px){.faq-grid{grid-template-columns:1fr;}}
 
-.bld-secure{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#8a8479;margin-top:18px;}
-.bld-secure svg{width:15px;height:15px;flex-shrink:0;color:#a79c86;}
-.bld-help{display:flex;align-items:center;gap:16px;margin-top:18px;padding:18px 20px;border:1px solid #e6e0d2;border-radius:14px;background:#fffdf8;}
-.bld-help-ic{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#17130d;display:flex;align-items:center;justify-content:center;color:var(--gold);}
-.bld-help-ic svg{width:21px;height:21px;stroke-width:1.7;}
-.bld-help-tx{flex:1;min-width:0;}
-.bld-help-tx b{display:block;font-size:14px;color:var(--ink-1);}
-.bld-help-tx span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:2px;}
-.bld-help a{flex-shrink:0;font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--gold);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;}
+/* final cta */
+.fcta{background:radial-gradient(800px 340px at 50% 115%,rgba(210,162,76,0.18),transparent 70%),var(--bg);border-top:1px solid var(--line);text-align:center;padding:clamp(64px,8vw,104px) 0;}
+.fcta h2{font-size:clamp(28px,3.6vw,48px);font-weight:800;line-height:1.08;max-width:20ch;margin:0 auto;}
+.fcta p{font-size:clamp(15px,1.3vw,17px);color:var(--mist);margin:16px auto 28px;max-width:48ch;}
+.fcta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
 
-/* summary */
-.sumcard{position:sticky;top:96px;background:linear-gradient(168deg,#16130d,#0a0908);border:1px solid rgba(170,115,59,0.32);border-radius:20px;padding:clamp(22px,2.4vw,30px);color:var(--white);box-shadow:0 40px 80px -36px rgba(0,0,0,0.85);}
-.sum-head .eyebrow{display:flex;align-items:center;gap:8px;}
-.sum-head .eyebrow svg{width:15px;height:15px;}
-.sum-head p{font-size:13px;color:var(--mist);margin-top:7px;}
-.sum-list{list-style:none;margin:18px 0;display:flex;flex-direction:column;}
-.sum-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid rgba(255,255,255,0.07);}
-.sum-list li:first-child{border-top:none;}
-.sum-ic{flex-shrink:0;width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;color:var(--gold);}
-.sum-ic svg{width:16px;height:16px;stroke-width:1.7;}
-.sum-nm{flex:1;min-width:0;font-size:13.5px;color:var(--white);}
-.sum-pr{flex-shrink:0;font-size:13.5px;font-weight:700;color:var(--white);}
-.sum-total{border-top:1px solid rgba(255,255,255,0.12);padding-top:18px;}
-.sum-total > span{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--mist-2);}
-.sum-amt{display:flex;align-items:baseline;gap:5px;margin-top:7px;font-family:var(--display);}
-.sum-amt b{font-size:clamp(44px,5.4vw,58px);font-weight:600;color:var(--gold);line-height:1;}
-.sum-amt em{font-style:normal;font-size:15px;color:var(--mist);font-family:var(--sans);}
-.sum-save{font-size:12.5px;color:var(--mist);margin-top:9px;}
-.sumcard .btn{width:100%;margin-top:20px;}
-
-/* ===== FLAGSHIP: AI RECEPTIONIST ===== */
-.prx{background:var(--bg-2);border-top:1px solid var(--line);padding:clamp(58px,7vw,100px) 0;}
-.prx-head{max-width:660px;margin:0 auto;text-align:center;}
-.prx-head h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.05;letter-spacing:-0.02em;margin-top:12px;}
-.prx-head h2 em{font-style:italic;color:var(--gold);}
-.prx-head p{font-size:15.5px;color:var(--mist);margin-top:14px;}
-.prx-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,22px);max-width:1160px;margin:clamp(36px,4vw,52px) auto 0;align-items:stretch;}
-.prx-card{position:relative;background:linear-gradient(168deg,#16171b,#101115);border:1px solid var(--line-2);border-radius:20px;padding:clamp(26px,3vw,36px);display:flex;flex-direction:column;}
-.prx-card.feat{border-color:rgba(170,115,59,0.5);box-shadow:0 44px 84px -42px rgba(170,115,59,0.42);}
-.prx-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#fff;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap;}
-.prx-tier{font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);}
-.prx-price{display:flex;align-items:baseline;gap:6px;margin-top:14px;font-family:var(--display);}
-.prx-price b{font-size:clamp(40px,5vw,52px);font-weight:600;color:var(--white);line-height:1;}
-.prx-price em{font-style:normal;font-size:15px;color:var(--mist);font-family:var(--sans);}
-.prx-setup{font-size:13px;color:var(--mist);margin-top:9px;}
-.prx-mins{font-size:12.5px;color:var(--white);margin-top:5px;padding:7px 11px;background:rgba(255,255,255,0.05);border-radius:8px;display:inline-block;}
-.prx-feats{list-style:none;margin:22px 0 28px;display:flex;flex-direction:column;gap:11px;}
-.prx-feats li{display:flex;gap:11px;font-size:14px;color:#d7d2c7;line-height:1.45;}
-.prx-feats svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:1px;stroke-width:2.4;}
-.prx-card .btn{width:100%;margin-top:auto;}
-.prx-note{text-align:center;font-size:13.5px;color:var(--mist-2);margin-top:28px;}
-.prx-note a{color:var(--gold);}
-.prx-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 26px;margin-top:22px;}
-.prx-trust li{list-style:none;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--white);}
-.prx-trust svg{width:16px;height:16px;color:var(--gold);flex-shrink:0;stroke-width:2.4;}
-@media(max-width:980px){.prx-cards{grid-template-columns:1fr;max-width:460px;}}
-
-/* ===== VALUE BAND ===== */
-.pval{background:var(--bg-2);border-top:1px solid var(--line);padding:clamp(56px,7vw,96px) 0;}
-.pval-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);}
-.pval-item{text-align:center;padding:0 6px;}
-.pval-item svg{width:30px;height:30px;color:var(--gold);margin:0 auto 16px;stroke-width:1.6;}
-.pval-item b{display:block;font-family:var(--display);font-size:19px;font-weight:600;margin-bottom:8px;}
-.pval-item p{font-size:13px;color:var(--mist);line-height:1.6;}
-
-/* ===== CTA ===== */
-.pcta{background:var(--cream) url('img/landing-page-seeyourbusiness-bg.webp') center/cover no-repeat;color:var(--ink-1);padding:clamp(64px,8vw,110px) 0;text-align:center;}
-.pcta h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,5vw,58px);line-height:1.04;letter-spacing:-0.02em;color:var(--ink-1);max-width:16ch;margin:14px auto 0;}
-.pcta h2 em{font-style:italic;color:var(--gold);}
-.pcta p{font-size:clamp(15px,1.3vw,18px);color:var(--ink-2);margin:18px auto 32px;}
-.pcta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
-
-/* ===== FOOTER ===== */
-.foot{background:#0a0b0c;border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 40px;}
+/* footer */
+.foot{background:#060607;border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 40px;}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:clamp(30px,4vw,56px);}
-.foot-brand .brand-logo{height:56px;}
-.foot-copy{font-size:13px;color:var(--mist-2);line-height:1.7;margin-top:18px;}
+.foot-brand .brand-logo{height:52px;}
+.foot-copy{font-size:13px;color:var(--mist-2);line-height:1.7;margin-top:18px;max-width:32ch;}
 .foot-col h4{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist-2);margin-bottom:18px;font-weight:700;}
 .foot-col a{display:block;font-size:14px;color:var(--mist);padding:6px 0;transition:color .18s;}
 .foot-col a:hover{color:var(--gold);}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;margin-top:clamp(44px,5vw,64px);padding-top:26px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mist-2);}
-.foot-social{display:flex;gap:14px;}
+.foot-social{display:flex;gap:14px;align-items:center;}
 .foot-social a{width:36px;height:36px;border:1px solid var(--line-2);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--mist);transition:color .18s,border-color .18s;}
 .foot-social a:hover{color:var(--gold);border-color:var(--gold);}
 .foot-social svg{width:17px;height:17px;}
-
+@media(max-width:940px){.foot-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr;}}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
 .reveal.in{opacity:1;transform:none;}
-
-@media(max-width:880px){
-  .builder{grid-template-columns:1fr;}
-  .sumcard{position:static;}
-  .pval-grid{grid-template-columns:repeat(2,1fr);gap:34px 20px;}
-  .foot-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:560px){
-  .svc{gap:10px;padding:12px 13px;}
-  .svc-status{width:18px;}
-  .svc-ctrl{gap:11px;}
-  .svc-icon{width:42px;height:42px;}
-  .bld-help{flex-wrap:wrap;gap:12px;}
-  .foot-grid{grid-template-columns:1fr;}
-}
-@media(max-width:480px){
-  .svc{gap:10px;padding:12px 12px;}
-  .svc-icon{display:none;}
-  .svc-main b{overflow-wrap:anywhere;}
-  .svc-ctrl{gap:10px;}
-  .svc-price{min-width:0;}
-  .svc-incl-label{font-size:8.5px;}
-}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");</script>
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
+        <a href="/" class="brand" aria-label="Northern Peak Systems, home">
+            <img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391">
+        </a>
         <nav class="nav-links" aria-label="Primary">
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="pricing.html">Pricing</a>
+            <a href="/">Home</a>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu mega">
+                    <div class="mega-head">Systems &amp; Features</div>
+                    <div class="mega-grid">
+                        <a href="features/website.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+                            <div><b>Custom Website</b><span>A lead-generating website, built in days</span></div>
+                        </a>
+                        <a href="features/missed-call-text-back.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
+                            <div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div>
+                        </a>
+                        <a href="features/review-automation.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+                            <div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div>
+                        </a>
+                        <a href="features/lead-follow-up.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
+                            <div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div>
+                        </a>
+                        <a href="features/local-seo.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+                            <div><b>Local SEO</b><span>Actually get found on Google</span></div>
+                        </a>
+                        <a href="features/marketing-campaigns.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
+                            <div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div>
+                        </a>
+                        <a href="features/crm-and-booking.html" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span>
+                            <div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div>
+                        </a>
+                        <a href="/#included" class="mega-item">
+                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                            <div><b>Everything Included</b><span>See the whole system at a glance</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html" class="on">Pricing</a>
+            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu">
-                    <a href="about.html">About</a>
-                    <a href="how.html">How it works</a>
+                    <a href="work.html">Work</a>
+                    <a href="how.html">How we work</a>
                     <a href="faq.html">FAQ</a>
                     <a href="blog/">Blog</a>
                 </div>
             </div>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu cols">
                     <a href="locations/edmonton.html">Edmonton</a>
                     <a href="locations/calgary.html">Calgary</a>
@@ -317,30 +292,32 @@ section{position:relative;}
             <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="contact.html" class="btn btn-gold">Book a free demo <span class="arr">→</span></a>
-            <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+            <a href="contact.html" class="btn btn-line">Book a Call</a>
+            <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+            </button>
         </div>
     </div>
 </header>
 
-<!-- MOBILE MENU -->
-<div class="mnav" id="mnav" aria-hidden="true">
+<div class="mnav" id="mnav" inert>
     <div class="mnav-top">
         <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-        <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+        <button type="button" class="mnav-close" id="mclose" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="index.html"><span class="gold">Home</span></a>
-        <a href="work.html"><span class="gold">Work</span></a>
-        <a href="pricing.html"><span class="gold">Pricing</span></a>
-        <a href="about.html"><span class="gold">About</span></a>
-        <a href="how.html">How it <span class="gold">works</span></a>
-        <a href="locations.html"><span class="gold">Locations</span></a>
-        <a href="contact.html"><span class="gold">Contact</span></a>
+        <a href="/">Home</a>
+        <a href="/#included">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a free demo <span class="arr">→</span></a>
-        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
     </div>
 </div>
 
@@ -348,261 +325,147 @@ section{position:relative;}
 
 <!-- HERO -->
 <section class="phero">
-    <div class="phero-bg"><img src="img/pricing-page-bg.webp" alt="" fetchpriority="high" decoding="async" width="1625" height="968"></div>
-    <div class="phero-scrim"></div>
+    <div class="phero-bg" aria-hidden="true">
+        <img src="img/hero-bg.webp" alt="" fetchpriority="high" decoding="async" width="1648" height="954">
+    </div>
     <div class="wrap">
-        <div class="phero-panel">
-            <span class="eyebrow">Pricing</span>
-            <h1>Simple pricing. <em>Powerful results.</em></h1>
-            <p class="phero-sub">Start with our AI receptionist below &mdash; or build a complete website and growth system. Pick what you need; everything works together.</p>
-            <ul class="phero-badges">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fixed monthly pricing</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contracts</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built to scale with you</li>
-            </ul>
-        </div>
+        <span class="eyebrow">Simple pricing</span>
+        <h1>Two options. <span class="gold">No surprises.</span></h1>
+        <p class="phero-sub">We build your custom website free either way &mdash; you pick how much of the system you want behind it. No setup fees, no contracts, cancel anytime.</p>
     </div>
 </section>
 
-<!-- FLAGSHIP: AI RECEPTIONIST -->
-<section class="prx">
+<!-- PLANS -->
+<section class="plans">
     <div class="wrap">
-        <div class="prx-head reveal">
-            <span class="eyebrow">Flagship &middot; AI Voice</span>
-            <h2>The <em>AI Receptionist</em> for your phone</h2>
-            <p>A 24/7 AI that answers your calls, screens and qualifies every caller, books appointments, and texts you the lead &mdash; before it ever goes to voicemail. Flat monthly pricing: no per-call fees, no overage games, no contracts. Add it to the site you already have. <strong>Start with a free 2-week trial &mdash; no setup fee.</strong></p>
-        </div>
-        <div class="prx-cards">
-            <div class="prx-card reveal">
-                <span class="prx-tier">Starter</span>
-                <div class="prx-price">$<b>149</b><em>/month</em></div>
-                <div class="prx-setup">+ $250 one-time setup &amp; onboarding</div>
-                <div class="prx-mins">250 call minutes included &middot; $0.75/min after</div>
-                <ul class="prx-feats">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>After-hours + missed-call safety net</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Answers, captures the caller, texts you the lead</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Instant lead delivery &mdash; email + SMS</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Call recordings &amp; transcripts</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Known spam &amp; robocalls screened</li>
+        <div class="plans-grid">
+            <div class="plan reveal">
+                <p class="plan-name">Custom Website</p>
+                <div class="plan-price"><b>$97</b><span>/month</span></div>
+                <p class="plan-sub">Your custom website, designed and built free. The monthly covers the care.</p>
+                <ul class="plan-checks">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Custom website designed &amp; built &mdash; <b>free</b></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Hosting &amp; security included</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Unlimited edits &amp; updates</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Local SEO foundations built in</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Direct founder-led support</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Cancel anytime &mdash; keep your domain &amp; content</li>
                 </ul>
-                <a href="contact.html?plan=AI%20Receptionist%20Starter&amp;total=149" class="btn btn-ghost">Get started <span class="arr">&rarr;</span></a>
+                <a href="contact.html" class="btn btn-ghost">Book a Call <span class="arr">&rarr;</span></a>
+                <p class="plan-note">No setup fee &middot; No contract</p>
             </div>
-            <div class="prx-card feat reveal">
-                <span class="prx-badge">Most popular</span>
-                <span class="prx-tier">Core</span>
-                <div class="prx-price">$<b>249</b><em>/month</em></div>
-                <div class="prx-setup">+ $500 one-time setup &amp; onboarding</div>
-                <div class="prx-mins">500 call minutes included &middot; $0.75/min after</div>
-                <ul class="prx-feats">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 answering &mdash; warm, human, on the first ring</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Screens, qualifies &amp; schedules callbacks</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Instant lead delivery &mdash; email + SMS, with the recording</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Call recordings &amp; transcripts</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>After-hours + overflow coverage</li>
+            <div class="plan featured reveal">
+                <span class="plan-flag">Most Popular</span>
+                <p class="plan-name">Business Growth System</p>
+                <div class="plan-price"><b>$297</b><span>/month</span></div>
+                <p class="plan-sub">The website plus every system behind it &mdash; capturing, booking, and following up for you.</p>
+                <ul class="plan-checks">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg><b>Everything in Custom Website</b></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Missed-call text-back</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>5-star review funnel</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Automated lead follow-up</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Marketing campaigns</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>CRM &amp; appointment booking</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Google Business Profile optimization</li>
                 </ul>
-                <a href="contact.html?plan=AI%20Receptionist%20Core&amp;total=249" class="btn btn-gold">Get started <span class="arr">&rarr;</span></a>
-            </div>
-            <div class="prx-card reveal">
-                <span class="prx-tier">Pro</span>
-                <div class="prx-price">$<b>399</b><em>/month</em></div>
-                <div class="prx-setup">+ $500 one-time setup &amp; onboarding</div>
-                <div class="prx-mins">1,000 call minutes included &middot; $0.75/min after</div>
-                <ul class="prx-feats">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Everything in Core, plus:</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Live emergency escalation to your on-call line</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>CRM &amp; calendar integration</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custom intake scripting for your business</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority support</li>
-                </ul>
-                <a href="contact.html?plan=AI%20Receptionist%20Pro&amp;total=399" class="btn btn-ghost">Get started <span class="arr">&rarr;</span></a>
+                <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                <p class="plan-note">No setup fee &middot; No per-call fees &middot; No contract</p>
             </div>
         </div>
-        <p class="prx-note">Works with any website &mdash; no rebuild required. Already on a Website Foundation plan? <a href="contact.html">Ask about bundling.</a></p>
-        <ul class="prx-trust">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flat monthly pricing</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No per-call or transfer fees</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No contracts &mdash; cancel anytime</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>30-day money-back guarantee</li>
-        </ul>
+        <p class="plans-foot">Not sure which fits? <a href="contact.html">Book a call</a> and we&rsquo;ll tell you straight &mdash; or see <a href="/#included">everything in the system &rarr;</a></p>
     </div>
 </section>
 
-<!-- BUILDER -->
-<section class="builder-sec">
+<!-- FAQ -->
+<section class="light sec reveal">
     <div class="wrap">
-        <div class="builder">
-            <div class="bld-left reveal">
-                <header class="builder-head">
-                    <span class="eyebrow">Add-ons &middot; No website required</span>
-                    <h2>Build your growth stack</h2>
-                    <p>Add any of our automations and services &mdash; a website only if you actually need one. Your AI receptionist is priced separately, above.</p>
-                </header>
-                <p class="bld-list-label">Add systems to your plan</p>
-
-                <label class="svc on" data-name="Lead Qualification" data-price="69">
-                    <input type="checkbox" checked>
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span>
-                    <span class="svc-main"><b>Lead Qualification</b><span>Instantly responds, qualifies and routes leads so you never miss opportunities.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$69</span></span>
-                </label>
-
-                <label class="svc on" data-name="Review Engine" data-price="39">
-                    <input type="checkbox" checked>
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5 6 .5-4.5 4 1.4 6L12 16l-5.4 3 1.4-6-4.5-4 6-.5z"/></svg></span>
-                    <span class="svc-main"><b>Review Engine</b><span>Automate review requests and grow your 5-star Google reputation.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$39</span></span>
-                </label>
-
-                <label class="svc" data-name="Website AI Chat" data-price="69">
-                    <input type="checkbox">
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
-                    <span class="svc-main"><b>Website AI Chat</b><span>An AI chat on your existing site that answers questions and captures leads.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$69</span></span>
-                </label>
-
-                <label class="svc" data-name="Appointment Assistant" data-price="49">
-                    <input type="checkbox">
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/><path d="M9.5 14.5l1.8 1.8 3.5-3.8"/></svg></span>
-                    <span class="svc-main"><b>Appointment Assistant</b><span>Reduce no-shows with text/email reminders and easy rescheduling.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$49</span></span>
-                </label>
-
-                <label class="svc" data-name="Quote Follow-up" data-price="59">
-                    <input type="checkbox">
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
-                    <span class="svc-main"><b>Quote Follow-up</b><span>Automated follow-ups that turn more quotes into paying customers.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$59</span></span>
-                </label>
-
-                <label class="svc on" data-name="Local SEO" data-price="149">
-                    <input type="checkbox" checked>
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-                    <span class="svc-main"><b>Local SEO</b><span>Rank higher on Google and get found by more local customers.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$149</span></span>
-                </label>
-
-                <label class="svc" data-name="Website Foundation" data-price="99">
-                    <input type="checkbox">
-                    <span class="svc-status"></span>
-                    <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8.5h18"/></svg></span>
-                    <span class="svc-main"><b>Website Foundation</b><span>A professional website with hosting, security and unlimited updates &mdash; only if you want one.</span></span>
-                    <span class="svc-ctrl"><span class="svc-switch"></span><span class="svc-price">+$99</span></span>
-                </label>
-
-                <div class="bld-secure">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-                    Every service is fully set up, monitored, and supported &mdash; hosting included if you add a website.
-                </div>
-
-                <div class="bld-help">
-                    <span class="bld-help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></span>
-                    <span class="bld-help-tx"><b>Not sure what you need?</b><span>Book a free strategy session and we&rsquo;ll recommend the best systems for your business.</span></span>
-                    <a href="contact.html">Book a call <span class="arr">→</span></a>
-                </div>
+        <div class="faq-grid">
+            <div>
+                <span class="eyebrow">Pricing questions</span>
+                <h2 class="h-lg">Straight answers.</h2>
+                <p class="lede">More in the full FAQ.</p>
+                <a href="faq.html" class="btn btn-line" style="margin-top:24px;border-color:var(--gold-deep);color:var(--gold-deep);">View All FAQs <span class="arr">&rarr;</span></a>
             </div>
-
-            <aside class="sumcard">
-                <div class="sum-head">
-                    <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg> Your growth system</span>
-                    <p>Here&rsquo;s your estimated monthly investment.</p>
-                </div>
-                <ul class="sum-list"></ul>
-                <div class="sum-total">
-                    <span>Estimated monthly investment</span>
-                    <div class="sum-amt">$<b id="sum-total">0</b><em>/month</em></div>
-                    <p class="sum-save">You save time. We grow your business.</p>
-                </div>
-                <a href="contact.html" id="plan-cta" class="btn btn-gold">Continue with this plan <span class="arr">→</span></a>
-            </aside>
-        </div>
-    </div>
-</section>
-
-<!-- VALUE BAND -->
-<section class="pval">
-    <div class="wrap">
-        <div class="pval-grid">
-            <div class="pval-item reveal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <b>More leads</b>
-                <p>Systems that capture and follow up with every lead, day and night.</p>
-            </div>
-            <div class="pval-item reveal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                <b>Save time</b>
-                <p>Automation handles the busywork so you can run the business.</p>
-            </div>
-            <div class="pval-item reveal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
-                <b>Increase revenue</b>
-                <p>More booked jobs, better reviews, and a site built to convert.</p>
-            </div>
-            <div class="pval-item reveal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg>
-                <b>Hassle-free</b>
-                <p>One studio, one bill, founder-led. We handle the whole thing.</p>
+            <div class="faq-list">
+                <details>
+                    <summary>Is there really no setup fee?</summary>
+                    <p>Really. We design and build your website free, and you start paying the monthly when it goes live. No build invoice, no onboarding fee, no surprise line items.</p>
+                </details>
+                <details>
+                    <summary>What does the $97/month actually cover?</summary>
+                    <p>Everything that keeps your site alive and working: hosting, security, backups, unlimited edits and updates, the local SEO foundations, and direct support from the person who built it.</p>
+                </details>
+                <details>
+                    <summary>What's the difference between the two plans?</summary>
+                    <p>The $97 plan is the website, hosted and cared for. The $297 Business Growth System adds everything that captures and converts leads &mdash; missed-call text-back, the 5-star review funnel, automated follow-up, marketing campaigns, and CRM with appointment booking.</p>
+                </details>
+                <details>
+                    <summary>Can I start with the website and upgrade later?</summary>
+                    <p>Yes. The website plan is built on the same foundations, so upgrading to the full system later is a switch-on, not a rebuild.</p>
+                </details>
+                <details>
+                    <summary>What happens if I cancel?</summary>
+                    <p>You stop paying and keep your domain and any content you provided. Month to month means exactly that &mdash; stay because it works, not because you're locked in.</p>
+                </details>
+                <details>
+                    <summary>Are there per-call or usage fees?</summary>
+                    <p>No. Both plans are flat. We'd rather keep you for years at a fair rate than nickel-and-dime you for being busy.</p>
+                </details>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="pcta">
+<!-- FINAL CTA -->
+<section class="fcta reveal">
     <div class="wrap">
-        <span class="eyebrow">Take the next step</span>
-        <h2>Ready to <em>grow your business?</em></h2>
-        <p>Book a free strategy session, or drop your website and book a free demo &mdash; no cost, no catch.</p>
-        <div class="pcta-actions">
-            <a href="contact.html" class="btn btn-dark">Book a free strategy session <span class="arr">→</span></a>
-            <a href="contact.html" class="btn btn-gold">Book a free demo</a>
+        <h2>Stop losing customers. Start growing your business.</h2>
+        <p>A 20-minute call. We&rsquo;ll learn your business and tell you straight which plan fits.</p>
+        <div class="fcta-actions">
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="foot">
     <div class="wrap">
         <div class="foot-grid">
             <div class="foot-brand">
                 <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-copy">&copy; <span id="yr">2026</span> Northern Peak Systems<br>All rights reserved.</p>
-            </div>
-            <div class="foot-col">
-                <h4>Services</h4>
-                <a href="/#services">AI Receptionist</a>
-                <a href="/#services">AI Automations</a>
-                <a href="/#services">Custom Websites</a>
+                <p class="foot-copy">Growth systems that help service businesses capture more leads and grow on autopilot.</p>
             </div>
             <div class="foot-col">
                 <h4>Company</h4>
                 <a href="about.html">About</a>
+                <a href="how.html">How we work</a>
                 <a href="work.html">Work</a>
-                <a href="how.html">How it works</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="faq.html">FAQ</a>
+                <a href="blog/">Blog</a>
             </div>
             <div class="foot-col">
-                <h4>Get started</h4>
-                <a href="contact.html">Free demo</a>
+                <h4>Features</h4>
+                <a href="features/website.html">Websites</a>
+                <a href="features/missed-call-text-back.html">Missed Call Text-Back</a>
+                <a href="features/review-automation.html">Review Automation</a>
+                <a href="features/local-seo.html">Local SEO</a>
+                <a href="features/marketing-campaigns.html">Marketing Campaigns</a>
+            </div>
+            <div class="foot-col">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
                 <a href="locations.html">Locations</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
-                <a href="privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
-                <a href="terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
+                <a href="privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
+                <a href="terms.html" aria-label="Terms" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
             </div>
         </div>
     </div>
@@ -611,34 +474,12 @@ section{position:relative;}
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
-function openM(){mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-function closeM(){mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
+function openM(){mnav.classList.add('open');mnav.removeAttribute('inert');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeM(){mnav.classList.remove('open');mnav.setAttribute('inert','');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+burger.addEventListener('click',openM);
+mclose.addEventListener('click',closeM);
 mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
-
-/* pricing builder */
-function recalc(){
-  var total=0, html='', parts=[];
-  document.querySelectorAll('.svc').forEach(function(row){
-    var input=row.querySelector('input');
-    var on = row.classList.contains('included') || (input && input.checked);
-    if(input) row.classList.toggle('on', input.checked);
-    if(on){
-      var p=+row.dataset.price; total+=p;
-      parts.push(row.dataset.name+':'+p);
-      var icon=row.querySelector('.svc-icon').innerHTML;
-      html+='<li><span class="sum-ic">'+icon+'</span><span class="sum-nm">'+row.dataset.name+'</span><span class="sum-pr">$'+p+'</span></li>';
-    }
-  });
-  document.getElementById('sum-total').textContent=total;
-  document.querySelector('.sum-list').innerHTML=html;
-  var cta=document.getElementById('plan-cta');
-  if(cta) cta.href='contact.html?plan='+encodeURIComponent(parts.join('|'))+'&total='+total;
-}
-document.querySelectorAll('.svc input').forEach(function(cb){cb.addEventListener('change',recalc);});
-recalc();
-
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.14});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
 </body>

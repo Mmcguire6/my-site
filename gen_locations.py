@@ -44,11 +44,11 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
         ("st-albert", "St. Albert",
          "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website &mdash; and the kind of automation that answers fast &mdash; that looks like 2026. That's the gap Northern Peak Systems is built for."),
         ("sherwood-park", "Sherwood Park",
-         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website, AI automation that never misses a lead, and local SEO &mdash; without an enterprise build budget. From $99/month, no long-term contracts."),
+         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website, AI automation that never misses a lead, and local SEO &mdash; without an enterprise build budget. From $97/month, no long-term contracts."),
         ("leduc", "Leduc",
          "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once &mdash; and the system behind it needs to capture and follow up with every lead. Northern Peak Systems builds clean, fast, mobile-first sites with AI automation wired in, working on a phone in a parking lot just as well as on a desk in a downtown office."),
         ("spruce-grove", "Spruce Grove",
-         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. We build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The system &mdash; website, AI automation, and SEO &mdash; grows with the business, from $99/month with no long-term contract."),
+         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. We build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The system &mdash; website, AI automation, and SEO &mdash; grows with the business, from $97/month with no long-term contract."),
         ("airdrie", "Airdrie",
          "Airdrie has tripled in population in twenty years, and the small-business market is still catching up. Most Airdrie businesses are bootstrapping: solo trades, single-owner shops, two-person clinics. A custom website with AI automation and SEO &mdash; without an enterprise budget &mdash; is exactly the gap Northern Peak Systems fills."),
         ("red-deer", "Red Deer",
@@ -107,7 +107,6 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
 
 <style>
 {styles}
@@ -116,6 +115,19 @@ CITY_PAGE = """<!DOCTYPE html>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","wh3e6pv2u4");</script>
+<style id="nav-mega-css">
+.nav-dd-menu.mega{{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}}
+.mega-head{{font-size:13.5px;font-weight:600;color:#16140f;padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}}
+.mega-grid{{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}}
+.nav-dd-menu a.mega-item{{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}}
+.nav-dd-menu a.mega-item:hover{{background:#f7f3ea;}}
+.mega-item .mi{{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:#a97c33;flex-shrink:0;}}
+.mega-item .mi svg{{width:18px;height:18px;stroke-width:1.7;}}
+.mega-item b{{display:block;font-size:13.5px;font-weight:700;color:#16140f;line-height:1.3;}}
+.mega-item span{{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}}
+.nav-cta .btn-line{{background:transparent;color:#d2a24c;border:1px solid rgba(210,162,76,0.35);}}
+.nav-cta .btn-line:hover{{border-color:#d2a24c;color:#e6be6e;transform:translateY(-2px);}}
+</style>
 </head>
 <body>
 
@@ -126,20 +138,36 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap nav-inner">
         <a href="../index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
         <nav class="nav-links" aria-label="Primary">
-            <a href="../index.html">Home</a>
-            <a href="../work.html">Work</a>
-            <a href="../pricing.html">Pricing</a>
+            <a href="/">Home</a>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu mega">
+                    <div class="mega-head">Systems &amp; Features</div>
+                    <div class="mega-grid">
+                        <a href="../features/website.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><div><b>Custom Website</b><span>A lead-generating website, built in days</span></div></a>
+                        <a href="../features/missed-call-text-back.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div></a>
+                        <a href="../features/review-automation.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div></a>
+                        <a href="../features/lead-follow-up.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div></a>
+                        <a href="../features/local-seo.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><div><b>Local SEO</b><span>Actually get found on Google</span></div></a>
+                        <a href="../features/marketing-campaigns.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div></a>
+                        <a href="../features/crm-and-booking.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div></a>
+                        <a href="/#included" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Everything Included</b><span>See the whole system at a glance</span></div></a>
+                    </div>
+                </div>
+            </div>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu">
-                    <a href="../about.html">About</a>
-                    <a href="../how.html">How it works</a>
+                    <a href="../work.html">Work</a>
+                    <a href="../how.html">How we work</a>
                     <a href="../faq.html">FAQ</a>
                     <a href="../blog/">Blog</a>
                 </div>
             </div>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu cols">
                     <a href="../locations/edmonton.html">Edmonton</a>
                     <a href="../locations/calgary.html">Calgary</a>
@@ -155,7 +183,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <a href="../contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="../contact.html" class="btn btn-line">Book a Call</a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -168,18 +196,16 @@ CITY_PAGE = """<!DOCTYPE html>
         <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="../index.html"><span class="gold">Home</span></a>
-        <a href="../work.html"><span class="gold">Work</span></a>
-        <a href="../pricing.html"><span class="gold">Pricing</span></a>
-        <a href="../about.html"><span class="gold">About</span></a>
-        <a href="../how.html">How it <span class="gold">works</span></a>
-        <a href="../faq.html"><span class="gold">FAQ</span></a>
-        <a href="../locations.html"><span class="gold">Locations</span></a>
-        <a href="../contact.html"><span class="gold">Contact</span></a>
+        <a href="/">Home</a>
+        <a href="/#included">Products</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html">Work</a>
+        <a href="../locations.html">Locations</a>
+        <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
-        <a href="../contact.html" class="btn btn-ghost">Get in touch</a>
+        <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -192,10 +218,10 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">{name}, {province} &middot; Now accepting new projects</span>
         <h1>{name} <em>websites &amp; AI systems.</em></h1>
-        <p class="hhero-sub">Custom websites, AI automation, and SEO for {name} small businesses &mdash; built, connected, and supported by one founder-led team. From $99/month &middot; no long-term contracts.</p>
+        <p class="hhero-sub">Custom websites, AI automation, and SEO for {name} small businesses &mdash; built, connected, and supported by one founder-led team. From $97/month &middot; no long-term contracts.</p>
         <p class="hhero-lede">{intro}</p>
         <div class="hhero-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
             <a href="../work.html" class="btn btn-ghost">See selected work</a>
         </div>
     </div>
@@ -210,7 +236,7 @@ CITY_PAGE = """<!DOCTYPE html>
             Northern Peak Systems works with small businesses in {areas}. Most of our {name} clients are solo or small-team operations &mdash; trades, shops, clinics, studios, consultancies &mdash; that need a credible web presence and AI automation that actually works together, without spending the kind of money downtown agencies charge.
         </p>
         <p class="section-body">
-            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. Discovery happens over email, design happens in the browser as a working preview, and the finished system is hosted, connected, and supported by the same founder-led team that built it. There's no account-management layer, no offshore dev team, no hidden hand-offs &mdash; just one team, one connected system, and a website that does the work it's supposed to do.
+            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. It starts with a quick call, the build happens in days, and the finished system is hosted, connected, and supported by the same founder-led team that built it. There's no account-management layer, no offshore dev team, no hidden hand-offs &mdash; just one team, one connected system, and a website that does the work it's supposed to do.
         </p>
     </div>
 </section>
@@ -220,15 +246,15 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">Services in {name}</span>
         <h2 class="section-h">What's included in a {name} <em>system.</em></h2>
-        <p class="section-lede">Every {name} build runs on one simple plan from $99/month, no long-term contracts. No add-ons hidden behind a sales call, no pay-per-edit tickets, no surprise hosting bills.</p>
+        <p class="section-lede">Every {name} build runs on simple flat plans from $97/month, no long-term contracts. No add-ons hidden behind a sales call, no pay-per-edit tickets, no surprise hosting bills.</p>
         <ul class="svc-list">
             <li>
                 <h3>Custom website design in {name}</h3>
                 <p>Designed for your business specifically, not picked from a template gallery. Every {name} project is wireframed, styled, and refined for your brand's voice, customers, and competitive position.</p>
             </li>
             <li>
-                <h3>AI automation &amp; receptionist</h3>
-                <p>An AI receptionist that answers calls and texts, books jobs, and never misses a {name} lead &mdash; plus follow-ups, reminders, and nurture that run on autopilot behind the scenes.</p>
+                <h3>Automation that never misses a lead</h3>
+                <p>Missed calls get texted back in seconds, every {name} lead gets followed up automatically, appointments book themselves into your calendar, and five-star review requests go out without you lifting a finger.</p>
             </li>
             <li>
                 <h3>Hosting &amp; security</h3>
@@ -272,18 +298,18 @@ CITY_PAGE = """<!DOCTYPE html>
         <ol class="process-list">
             <li>
                 <span class="process-n">01</span>
-                <h3>Discovery</h3>
-                <p>You send a few sentences about your {name} business: what you do, who you serve, and what's not working with the current site (or the absence of one). You'll get back thoughts, a rough scope, and a simple monthly quote within one business day.</p>
+                <h3>Book a call</h3>
+                <p>A free 20-minute call. We learn about your {name} business &mdash; what you do, who you serve, and what's not working &mdash; and tell you straight which plan fits. No pressure, no obligation.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
-                <h3>Free working preview</h3>
-                <p>Within a week or two, you have a live URL with your actual content in a real design &mdash; not a mockup, not a Figma file, the real thing. We iterate on it together over email until it feels right for your {name} business. No cost, no obligation.</p>
+                <h3>We build everything</h3>
+                <p>Your custom website is designed and built at no charge, with the SEO foundation wired in &mdash; and if you choose the full system, the text-back, review, follow-up, and booking tools are connected around it. Built and tested in 7&ndash;10 days.</p>
             </li>
             <li>
                 <span class="process-n">03</span>
-                <h3>Build &amp; connect</h3>
-                <p>The site goes live on your domain, hosted with SSL, backups, and the SEO foundation already wired up &mdash; then we connect the AI automation, booking, and follow-up tools into one system. The whole {name} project usually takes three to five weeks end to end.</p>
+                <h3>Launch &amp; grow</h3>
+                <p>The site goes live on your domain, hosted with SSL and backups, and leads start landing on your phone. We walk you through everything on a short launch call.</p>
             </li>
             <li>
                 <span class="process-n">04</span>
@@ -301,10 +327,10 @@ CITY_PAGE = """<!DOCTYPE html>
         <h2 class="section-h">{name} pricing, <em>simplified.</em></h2>
         <div class="pricing-row">
             <div class="pricing-card">
-                <p class="pricing-card-name">Monthly plan</p>
-                <p class="pricing-card-price">from <strong>$99</strong>/mo</p>
+                <p class="pricing-card-name">Monthly plans</p>
+                <p class="pricing-card-price">from <strong>$97</strong>/mo</p>
                 <p class="pricing-card-sub">no long-term contracts</p>
-                <p class="pricing-card-body">Website, AI automation, SEO, hosting, edits, security, and direct founder-led support &mdash; all for one predictable monthly fee, with no big upfront cost. Stay because it works, not because you're locked in.</p>
+                <p class="pricing-card-body">We build your custom website free &mdash; $97/month covers hosting, security, edits, SEO, and founder-led support. Want the whole growth system (missed-call text-back, reviews, follow-up, booking)? That's $297/month flat. Stay because it works, not because you're locked in.</p>
             </div>
         </div>
         <p class="pricing-foot"><a href="../pricing.html" class="link-arrow">See full pricing details <span class="arr">→</span></a></p>
@@ -323,7 +349,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </div>
             <div class="faq-item">
                 <dt>How long does a build take in {name}?</dt>
-                <dd>From the first email to a live site is usually three to five weeks for most {name} businesses. Discovery happens over email, the free working preview goes up within a week or two, we iterate, the system connects, and it goes live on your domain. There's no in-person meeting required at any step, though you're welcome to schedule a call if you'd rather talk things through.</dd>
+                <dd>From the first call to a live site is usually 7&ndash;10 days for most {name} businesses. We learn your business on a short call, build the website and wire up the systems, and walk you through everything on a launch call. No in-person meeting required at any step.</dd>
             </div>
             <div class="faq-item">
                 <dt>What kinds of {name} businesses do you build for?</dt>
@@ -331,7 +357,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </div>
             <div class="faq-item">
                 <dt>How much does it cost in {name}?</dt>
-                <dd>Plans start from $99/month with no long-term contracts and no big upfront cost. That one fee covers your website, AI automation, SEO, hosting, edits, security, and direct founder-led support &mdash; for as long as you stay. You always keep your domain (registered in your business's name from day one) and any content you provided. Stay because it works, not because you're locked in.</dd>
+                <dd>Two simple plans, no long-term contracts, no big upfront cost. The website plan is $97/month &mdash; we build your custom site free, and the monthly covers hosting, security, edits, SEO, and direct founder-led support. The full Business Growth System &mdash; missed-call text-back, review automation, lead follow-up, and booking on top of the website &mdash; is $297/month flat. You always keep your domain and any content you provided. Stay because it works, not because you're locked in.</dd>
             </div>
         </dl>
     </div>
@@ -359,7 +385,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <h2>A modern {name} system that <em>matches your work.</em></h2>
         <p>Send a few sentences about your {name} business and we'll build you a free preview &mdash; no cost, no obligation, no catch.</p>
         <div class="hcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
             <a href="../pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>
@@ -399,7 +425,7 @@ CITY_PAGE = """<!DOCTYPE html>
         </div>
         <div class="foot-bottom">
             <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
-            <div class="foot-social">
+            <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="../privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
                 <a href="../terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
@@ -432,15 +458,16 @@ CITY_STYLES = """
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/inter-500-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter-600-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/inter-800-normal.woff2) format('woff2');}
 
 :root{
-  --bg:#0d0e10; --bg-2:#121316; --bg-3:#17181c; --bg-4:#1e2026;
+  --bg:#0a0a0c; --bg-2:#0f0f12; --bg-3:#131317; --bg-4:#17171c;
   --line:rgba(255,255,255,0.09); --line-2:rgba(255,255,255,0.14);
-  --gold:#aa733b; --gold-2:#c5894a; --gold-soft:rgba(170,115,59,0.13);
-  --white:#f4f1ea; --mist:#a8a298; --mist-2:#7c786f; --ink:#0d0e10;
-  --cream:#f4f1ea; --ink-1:#191713; --ink-2:#5f5a51;
+  --gold:#d2a24c; --gold-2:#e6be6e; --gold-soft:rgba(210,162,76,0.13);
+  --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c; --ink:#0a0a0c;
+  --cream:#f5f2ec; --ink-1:#16140f; --ink-2:#6f695d;
   --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --display:'Fraunces','Playfair Display',Georgia,serif;
+  --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
@@ -460,15 +487,15 @@ section{position:relative;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:17px 32px;border-radius:9px;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;border:1px solid transparent;white-space:nowrap;}
 .btn .arr{transition:transform .22s;}
 .btn:hover .arr{transform:translateX(4px);}
-.btn-gold{background:linear-gradient(180deg,#b27e45,#a06d38);color:#fff;box-shadow:0 16px 40px -16px rgba(170,115,59,0.55);}
-.btn-gold:hover{background:linear-gradient(180deg,#c08749,#ad7640);transform:translateY(-2px);}
+.btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -16px rgba(210,162,76,0.55);}
+.btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);}
 .btn-ghost{background:#15171a;color:var(--white);border-color:var(--line-2);}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
 .btn-dark{background:#15140f;color:#fff;}
 .btn-dark:hover{background:#000;transform:translateY(-2px);}
 
 /* ===== NAV ===== */
-.nav{position:sticky;top:0;z-index:50;background:rgba(13,14,16,0.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,0.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px;}
 .brand{flex-shrink:0;}
 .brand-logo{height:48px;width:auto;display:block;}
@@ -499,7 +526,7 @@ section{position:relative;}
 .mnav-close{width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);display:flex;align-items:center;justify-content:center;}
 .mnav-links{display:flex;flex-direction:column;gap:6px;margin-top:40px;}
 .mnav-links a{font-family:var(--display);font-size:clamp(26px,5.5vw,34px);color:var(--white);padding:8px 0;border-bottom:1px solid var(--line);}
-.mnav-links a .gold{font-style:italic;}
+.mnav-links a .gold{font-style:normal;}
 .mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:16px;}
 
 /* ===== HERO ===== */
@@ -508,8 +535,8 @@ section{position:relative;}
 .hhero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.5;}
 .hhero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,9,11,0.95) 0%,rgba(8,9,11,0.8) 45%,rgba(8,9,11,0.55) 100%),linear-gradient(to top,var(--bg) 1%,transparent 50%);}
 .hhero .wrap{position:relative;z-index:2;padding-top:clamp(64px,9vw,128px);padding-bottom:clamp(56px,8vw,110px);}
-.hhero h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,6.0vw,84px);line-height:1.02;letter-spacing:-0.02em;max-width:16ch;margin-top:14px;}
-.hhero h1 em{font-style:italic;color:var(--gold);}
+.hhero h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,6.0vw,84px);line-height:1.02;letter-spacing:-0.02em;max-width:16ch;margin-top:14px;}
+.hhero h1 em{font-style:normal;color:var(--gold);}
 .hhero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--white);margin:24px 0 18px;max-width:58ch;font-weight:500;}
 .hhero-lede{font-size:clamp(14.5px,1.2vw,16.5px);color:var(--mist);margin:0 0 34px;max-width:64ch;line-height:1.75;}
 .hhero-actions{display:flex;flex-wrap:wrap;gap:14px;}
@@ -518,30 +545,30 @@ section{position:relative;}
 .section{padding:clamp(64px,8vw,110px) 0;border-bottom:1px solid var(--line);}
 .section-dark{background:var(--bg);}
 .section-dark-2{background:var(--bg-2);}
-.section-h{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,52px);line-height:1.05;letter-spacing:-0.02em;margin:14px 0 24px;max-width:24ch;}
-.section-h em{font-style:italic;color:var(--gold);}
+.section-h{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,52px);line-height:1.05;letter-spacing:-0.02em;margin:14px 0 24px;max-width:24ch;}
+.section-h em{font-style:normal;color:var(--gold);}
 .section-lede{font-size:clamp(16px,1.3vw,18px);color:var(--mist);max-width:62ch;margin-bottom:48px;line-height:1.65;}
 .section-body{font-size:clamp(15px,1.1vw,16.5px);line-height:1.75;color:var(--mist);max-width:70ch;margin-bottom:22px;}
 
 /* SERVICES */
 .svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,2.4vw,34px);}
 .svc-list li{background:var(--bg-3);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.4vw,32px);transition:border-color .2s,transform .2s;}
-.svc-list li:hover{border-color:rgba(170,115,59,0.4);transform:translateY(-4px);}
-.svc-list h3{font-family:var(--display);font-size:21px;font-weight:600;color:var(--white);margin-bottom:10px;line-height:1.2;}
+.svc-list li:hover{border-color:rgba(210,162,76,0.4);transform:translateY(-4px);}
+.svc-list h3{font-family:var(--display);font-size:21px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2;}
 .svc-list p{font-size:14.5px;line-height:1.7;color:var(--mist);}
 
 /* PROCESS */
 .process-list{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,2.6vw,36px);}
 .process-list li{border-top:2px solid var(--gold);padding-top:22px;}
-.process-n{font-family:var(--display);font-size:14px;letter-spacing:0.16em;color:var(--gold);font-weight:600;display:block;margin-bottom:10px;}
-.process-list h3{font-family:var(--display);font-size:24px;font-weight:600;color:var(--white);margin-bottom:10px;line-height:1.2;}
+.process-n{font-family:var(--display);font-size:14px;letter-spacing:0.16em;color:var(--gold);font-weight:700;display:block;margin-bottom:10px;}
+.process-list h3{font-family:var(--display);font-size:24px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2;}
 .process-list p{font-size:15px;line-height:1.7;color:var(--mist);}
 
 /* PRICING */
 .pricing-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px;}
 .pricing-card{background:var(--bg-3);border:1px solid var(--line);border-radius:18px;padding:clamp(28px,3vw,40px);}
 .pricing-card-name{font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist-2);margin-bottom:16px;}
-.pricing-card-price{font-family:var(--display);font-size:clamp(34px,4.4vw,48px);font-weight:600;color:var(--white);line-height:1;}
+.pricing-card-price{font-family:var(--display);font-size:clamp(34px,4.4vw,48px);font-weight:700;color:var(--white);line-height:1;}
 .pricing-card-price strong{color:var(--gold);font-style:italic;font-weight:700;}
 .pricing-card-sub{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);margin:14px 0 22px;}
 .pricing-card-body{font-size:15px;line-height:1.7;color:var(--mist);}
@@ -552,7 +579,7 @@ section{position:relative;}
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:22px;max-width:78ch;}
 .faq-item{border-top:1px solid var(--line);padding-top:22px;}
-.faq-item dt{font-family:var(--display);font-size:clamp(20px,1.8vw,26px);font-weight:600;color:var(--white);line-height:1.25;margin-bottom:12px;letter-spacing:-0.012em;}
+.faq-item dt{font-family:var(--display);font-size:clamp(20px,1.8vw,26px);font-weight:700;color:var(--white);line-height:1.25;margin-bottom:12px;letter-spacing:-0.012em;}
 .faq-item dd{font-size:15.5px;line-height:1.75;color:var(--mist);margin-left:0;}
 
 /* NEARBY */
@@ -569,8 +596,8 @@ section{position:relative;}
 /* CTA */
 .hcta{background:var(--bg) url('../img/work-page-bottom-bg.webp') center/cover no-repeat;padding:clamp(64px,8vw,110px) 0;text-align:center;border-bottom:1px solid var(--line);}
 .hcta .eyebrow{justify-content:center;}
-.hcta h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,5vw,58px);line-height:1.04;letter-spacing:-0.02em;max-width:20ch;margin:14px auto 0;}
-.hcta h2 em{font-style:italic;color:var(--gold);}
+.hcta h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,58px);line-height:1.04;letter-spacing:-0.02em;max-width:20ch;margin:14px auto 0;}
+.hcta h2 em{font-style:normal;color:var(--gold);}
 .hcta p{font-size:clamp(15px,1.3vw,18px);color:var(--mist);margin:18px auto 32px;max-width:54ch;}
 .hcta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
 
@@ -616,7 +643,7 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
     studio_id = "https://northernpeaksystems.ca/#org"
     desc = (f"Connected business systems for {name} small businesses: custom websites, "
             f"AI automation, and SEO, built, connected, and supported by a founder-led team. "
-            f"From $99/month, no long-term contracts, no big upfront cost.")
+            f"From $97/month, no long-term contracts, no big upfront cost.")
 
     graph = [
         {
@@ -657,10 +684,17 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
             "offers": [
                 {
                     "@type": "Offer",
-                    "name": "Monthly plan",
-                    "price": "99",
+                    "name": "Website plan",
+                    "price": "97",
                     "priceCurrency": "CAD",
-                    "description": "From $99/month, no long-term contracts, no big upfront cost. Website, AI automation, SEO, hosting, edits, security, and founder-led support.",
+                    "description": "Custom website built free; $97/month covers hosting, security, edits, SEO, and founder-led support. No long-term contracts.",
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Business Growth System",
+                    "price": "297",
+                    "priceCurrency": "CAD",
+                    "description": "The website plus missed-call text-back, review automation, lead follow-up, marketing campaigns, and booking. $297/month flat, no setup fees, no contracts.",
                 },
             ],
         },
@@ -683,9 +717,9 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "name": f"How long does a website build take in {name}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": (f"From the first email to a live site is usually three to five weeks "
-                                 f"for most {name} businesses. Discovery is over email; the working preview goes "
-                                 f"up within a week or two; we iterate; the site polishes; it goes live."),
+                        "text": (f"From the first call to a live site is usually 7-10 days "
+                                 f"for most {name} businesses. We learn your business on a short call, "
+                                 f"build the website and systems, and walk you through everything at launch."),
                     },
                 },
                 {
@@ -704,10 +738,10 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
                     "name": f"How much does it cost in {name}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": ("Plans start from $99/month with no long-term contracts and no big upfront cost. "
-                                 "That one fee covers your website, AI automation, SEO, hosting, edits, security, "
-                                 "and direct founder-led support for as long as you stay. You always keep your domain "
-                                 "and any content you provided. Stay because it works, not because you're locked in."),
+                        "text": ("Two simple plans with no long-term contracts and no big upfront cost. "
+                                 "The website plan is $97/month — the custom site is built free, and the monthly covers "
+                                 "hosting, security, edits, SEO, and founder-led support. The full Business Growth System "
+                                 "is $297/month flat. You always keep your domain and any content you provided."),
                     },
                 },
             ],
@@ -735,7 +769,7 @@ def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     title = (f"{name} Websites &amp; AI Systems | Web Design, AI Automation &amp; SEO "
              f"| Northern Peak Systems")
     meta_desc = (f"Connected business systems for {name} small businesses: custom websites, "
-                 f"AI automation, and SEO. Founder-led, Edmonton-based, from $99/month with "
+                 f"AI automation, and SEO. Founder-led, Edmonton-based, from $97/month with "
                  f"no long-term contracts. Trades, shops, clinics, and professional services.")
 
     html = CITY_PAGE.format(
@@ -775,19 +809,18 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
 <title>Alberta Websites &amp; AI Systems for Edmonton, Calgary &amp; Area Businesses | Northern Peak Systems</title>
-<meta name="description" content="Northern Peak Systems builds connected business systems for Alberta small businesses: custom websites, AI automation, and SEO. Founder-led, Edmonton-based, from $99/month with no long-term contracts. Serving Canada &amp; the US.">
+<meta name="description" content="Northern Peak Systems builds connected business systems for Alberta small businesses: custom websites, AI automation, and SEO. Founder-led, Edmonton-based, from $97/month with no long-term contracts. Serving Canada &amp; the US.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/locations">
 <meta property="og:url" content="https://northernpeaksystems.ca/locations">
 <meta property="og:title" content="Alberta Websites &amp; AI Systems | Northern Peak Systems">
-<meta property="og:description" content="Custom websites, AI automation, and SEO for Alberta businesses in Edmonton, Calgary, and the surrounding region. Founder-led, from $99/month, no long-term contracts.">
+<meta property="og:description" content="Custom websites, AI automation, and SEO for Alberta businesses in Edmonton, Calgary, and the surrounding region. Founder-led, from $97/month, no long-term contracts.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
 
 <style>
 {styles_root}
@@ -795,7 +828,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 .loc-grid{{ padding: clamp(64px,8vw,110px) 0; background:var(--bg); border-bottom:1px solid var(--line); }}
 .prov-block{{ border-top:1px solid var(--line); padding:44px 0 36px; display:grid; grid-template-columns:0.9fr 2.1fr; gap:40px; scroll-margin-top:90px; }}
 .prov-block:first-of-type{{ border-top:none; padding-top:0; }}
-.prov-h{{ font-family:var(--display); font-weight:600; font-size:clamp(28px,3vw,40px); color:var(--white); letter-spacing:-0.016em; line-height:1.1; }}
+.prov-h{{ font-family:var(--display); font-weight:700; font-size:clamp(28px,3vw,40px); color:var(--white); letter-spacing:-0.016em; line-height:1.1; }}
 .prov-h em{{ font-style:italic; color:var(--gold); }}
 .prov-h-sub{{ font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--mist-2); margin-top:8px; }}
 .prov-cities{{ display:grid; grid-template-columns:repeat(2,1fr); gap:4px 28px; }}
@@ -809,6 +842,19 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}})(window,document,"clarity","script","wh3e6pv2u4");</script>
+<style id="nav-mega-css">
+.nav-dd-menu.mega{{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}}
+.mega-head{{font-size:13.5px;font-weight:600;color:#16140f;padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}}
+.mega-grid{{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}}
+.nav-dd-menu a.mega-item{{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}}
+.nav-dd-menu a.mega-item:hover{{background:#f7f3ea;}}
+.mega-item .mi{{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:#a97c33;flex-shrink:0;}}
+.mega-item .mi svg{{width:18px;height:18px;stroke-width:1.7;}}
+.mega-item b{{display:block;font-size:13.5px;font-weight:700;color:#16140f;line-height:1.3;}}
+.mega-item span{{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}}
+.nav-cta .btn-line{{background:transparent;color:#d2a24c;border:1px solid rgba(210,162,76,0.35);}}
+.nav-cta .btn-line:hover{{border-color:#d2a24c;color:#e6be6e;transform:translateY(-2px);}}
+</style>
 </head>
 <body>
 
@@ -819,20 +865,36 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap nav-inner">
         <a href="index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
         <nav class="nav-links" aria-label="Primary">
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="pricing.html">Pricing</a>
+            <a href="/">Home</a>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu mega">
+                    <div class="mega-head">Systems &amp; Features</div>
+                    <div class="mega-grid">
+                        <a href="features/website.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><div><b>Custom Website</b><span>A lead-generating website, built in days</span></div></a>
+                        <a href="features/missed-call-text-back.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div></a>
+                        <a href="features/review-automation.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div></a>
+                        <a href="features/lead-follow-up.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div></a>
+                        <a href="features/local-seo.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><div><b>Local SEO</b><span>Actually get found on Google</span></div></a>
+                        <a href="features/marketing-campaigns.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div></a>
+                        <a href="features/crm-and-booking.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div></a>
+                        <a href="/#included" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Everything Included</b><span>See the whole system at a glance</span></div></a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu">
-                    <a href="about.html">About</a>
-                    <a href="how.html">How it works</a>
+                    <a href="work.html">Work</a>
+                    <a href="how.html">How we work</a>
                     <a href="faq.html">FAQ</a>
                     <a href="blog/">Blog</a>
                 </div>
             </div>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu cols">
                     <a href="locations/edmonton.html">Edmonton</a>
                     <a href="locations/calgary.html">Calgary</a>
@@ -842,13 +904,13 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
                     <a href="locations/spruce-grove.html">Spruce Grove</a>
                     <a href="locations/airdrie.html">Airdrie</a>
                     <a href="locations/red-deer.html">Red Deer</a>
-                    <a href="locations.html" class="dd-all active">All locations &rarr;</a>
+                    <a href="locations.html" class="dd-all">All locations &rarr;</a>
                 </div>
             </div>
             <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-line">Book a Call</a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -861,18 +923,16 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="index.html"><span class="gold">Home</span></a>
-        <a href="work.html"><span class="gold">Work</span></a>
-        <a href="pricing.html"><span class="gold">Pricing</span></a>
-        <a href="about.html"><span class="gold">About</span></a>
-        <a href="how.html">How it <span class="gold">works</span></a>
-        <a href="faq.html"><span class="gold">FAQ</span></a>
-        <a href="locations.html"><span class="gold">Locations</span></a>
-        <a href="contact.html"><span class="gold">Contact</span></a>
+        <a href="/">Home</a>
+        <a href="/#included">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
-        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -886,9 +946,9 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <span class="eyebrow">Locations</span>
         <h1>Serving small businesses <em>across Alberta.</em></h1>
         <p class="hhero-sub">Northern Peak Systems is founder-led and based in Edmonton, building connected systems &mdash; custom websites, AI automation, and SEO &mdash; for businesses in Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer.</p>
-        <p class="hhero-lede">Our remote workflow handles businesses anywhere in Canada or the US. From $99/month &middot; no long-term contracts &middot; no big upfront cost.</p>
+        <p class="hhero-lede">Our remote workflow handles businesses anywhere in Canada or the US. From $97/month &middot; no long-term contracts &middot; no big upfront cost.</p>
         <div class="hhero-actions">
-            <a href="contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-ghost">See pricing</a>
         </div>
     </div>
@@ -907,7 +967,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <h2>Don't see your city? <em>We build everywhere.</em></h2>
         <p>If your business is anywhere in Canada or the US, send a few sentences about it and we'll build you a free preview &mdash; the remote workflow handles the rest.</p>
         <div class="hcta-actions">
-            <a href="contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>
@@ -947,7 +1007,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         </div>
         <div class="foot-bottom">
             <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
-            <div class="foot-social">
+            <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
                 <a href="terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
@@ -1023,6 +1083,13 @@ def build_sitemap() -> Path:
         ("contact", 0.8),
         ("blog/", 0.8),
         ("blog/why-is-my-website-so-slow", 0.7),
+        ("features/website", 0.75),
+        ("features/missed-call-text-back", 0.75),
+        ("features/review-automation", 0.75),
+        ("features/lead-follow-up", 0.7),
+        ("features/local-seo", 0.75),
+        ("features/marketing-campaigns", 0.7),
+        ("features/crm-and-booking", 0.7),
     ]
     urls = []
     for path, prio in main_pages:

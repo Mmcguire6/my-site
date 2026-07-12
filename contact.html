@@ -7,14 +7,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-<title>Contact · Get Your AI Receptionist | Northern Peak Systems</title>
-<meta name="description" content="Tell us about your business and what you're looking to achieve. We'll review your website, systems, and goals and send back a custom AI receptionist demo with recommendations — no obligation.">
+<title>Contact · Book a Call | Northern Peak Systems</title>
+<meta name="description" content="Tell us about your business and what you're looking to achieve. We'll review your website, systems, and goals and come back with recommendations and a clear plan — no obligation.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/contact">
 <meta property="og:url" content="https://northernpeaksystems.ca/contact">
 <meta property="og:title" content="Contact · Let's Build Your Growth System | Northern Peak Systems">
-<meta property="og:description" content="Tell us about your business and we'll send back a custom AI receptionist demo with recommendations — no obligation.">
+<meta property="og:description" content="Tell us about your business and we'll come back with recommendations and a clear plan — no obligation.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -39,22 +39,24 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
 
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/inter-400-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/inter-500-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter-600-normal.woff2) format('woff2');}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/inter-800-normal.woff2) format('woff2');}
 
 :root{
-  --bg:#0d0e10; --bg-2:#121316; --bg-3:#17181c; --bg-4:#1e2026;
-  --line:rgba(255,255,255,0.09); --line-2:rgba(255,255,255,0.14);
-  --gold:#aa733b; --gold-2:#c5894a; --gold-soft:rgba(170,115,59,0.13);
-  --white:#f4f1ea; --mist:#a8a298; --mist-2:#7c786f; --ink:#0d0e10;
-  --cream:#f4f1ea; --ink-1:#191713; --ink-2:#5f5a51;
+  --bg:#0a0a0c; --bg-2:#0f0f12; --bg-3:#131317; --bg-4:#17171c;
+  --line:rgba(255,255,255,0.10); --line-2:rgba(255,255,255,0.16);
+  --gold:#d2a24c; --gold-2:#e6be6e; --gold-soft:rgba(210,162,76,0.13);
+  --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c; --ink:#16140f;
+  --cream:#f5f2ec; --ink-1:#16140f; --ink-2:#6f695d;
   --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --display:'Fraunces','Playfair Display',Georgia,serif;
+  --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;}
@@ -70,13 +72,13 @@ section{position:relative;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:17px 32px;border-radius:9px;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;border:1px solid transparent;white-space:nowrap;}
 .btn .arr{transition:transform .22s;}
 .btn:hover .arr{transform:translateX(4px);}
-.btn-gold{background:linear-gradient(180deg,#b27e45,#a06d38);color:#fff;box-shadow:0 16px 40px -16px rgba(170,115,59,0.55);}
-.btn-gold:hover{background:linear-gradient(180deg,#c08749,#ad7640);transform:translateY(-2px);}
+.btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -16px rgba(210,162,76,0.55);}
+.btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);}
 .btn-ghost{background:#15171a;color:var(--white);border-color:var(--line-2);}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
 
 /* ===== NAV ===== */
-.nav{position:sticky;top:0;z-index:50;background:rgba(13,14,16,0.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,0.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px;}
 .brand{flex-shrink:0;}
 .brand-logo{height:48px;width:auto;display:block;}
@@ -106,7 +108,7 @@ section{position:relative;}
 .mnav-close{width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);display:flex;align-items:center;justify-content:center;}
 .mnav-links{display:flex;flex-direction:column;gap:6px;margin-top:40px;}
 .mnav-links a{font-family:var(--display);font-size:clamp(26px,5.5vw,34px);color:var(--white);padding:8px 0;border-bottom:1px solid var(--line);}
-.mnav-links a .gold{font-style:italic;}
+.mnav-links a .gold{font-style:normal;}
 .mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:16px;}
 
 /* ===== HERO / FORM ===== */
@@ -117,8 +119,8 @@ section{position:relative;}
 .chero .wrap{position:relative;z-index:2;padding-top:clamp(48px,6vw,84px);padding-bottom:clamp(48px,6vw,84px);}
 .chero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,64px);align-items:start;}
 .chero-left{position:relative;}
-.chero-left h1{font-family:var(--display);font-weight:600;font-size:clamp(44px,5.4vw,80px);line-height:1.0;letter-spacing:-0.02em;margin-top:14px;}
-.chero-left h1 em{font-style:italic;color:var(--gold);}
+.chero-left h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,5.4vw,80px);line-height:1.0;letter-spacing:-0.02em;margin-top:14px;}
+.chero-left h1 em{font-style:normal;color:var(--gold);}
 .chero-sub{font-size:clamp(15.5px,1.3vw,18px);color:var(--mist);margin:22px 0 28px;max-width:46ch;}
 .chero-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
 .chero-list li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--white);}
@@ -126,19 +128,19 @@ section{position:relative;}
 .chero-img{margin-top:clamp(28px,3vw,44px);border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/7;}
 .chero-img img{width:100%;height:100%;object-fit:cover;object-position:center;}
 
-.cform-card{background:linear-gradient(168deg,#15120d,#0c0b09);border:1px solid rgba(170,115,59,0.4);border-radius:20px;padding:clamp(26px,2.8vw,40px);box-shadow:0 40px 90px -44px rgba(0,0,0,0.85);}
-.cform-card h2{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,38px);line-height:1.05;letter-spacing:-0.02em;margin:10px 0 12px;}
-.cform-card h2 em{font-style:italic;color:var(--gold);}
+.cform-card{background:linear-gradient(168deg,#15120d,#0c0b09);border:1px solid rgba(210,162,76,0.4);border-radius:20px;padding:clamp(26px,2.8vw,40px);box-shadow:0 40px 90px -44px rgba(0,0,0,0.85);}
+.cform-card h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,2.8vw,38px);line-height:1.05;letter-spacing:-0.02em;margin:10px 0 12px;}
+.cform-card h2 em{font-style:normal;color:var(--gold);}
 .cform-sub{font-size:14px;color:var(--mist);margin-bottom:24px;}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .cf-field{margin-bottom:16px;}
 .cf-field label{display:block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist-2);margin-bottom:8px;}
 .cf-field input,.cf-field textarea{width:100%;background:#0c0b09;border:1px solid var(--line-2);border-radius:10px;padding:13px 14px;font-family:inherit;font-size:16px;color:var(--white);transition:border-color .2s,box-shadow .2s;resize:vertical;}
 .cf-field input::placeholder,.cf-field textarea::placeholder{color:#6f6a60;}
-.cf-field input:focus,.cf-field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(170,115,59,0.16);}
+.cf-field input:focus,.cf-field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(210,162,76,0.16);}
 .cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-.cf-submit{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#b27e45,#a06d38);color:#fff;border:none;border-radius:10px;padding:16px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s;margin-top:4px;}
-.cf-submit:hover{background:linear-gradient(180deg,#c08749,#ad7640);transform:translateY(-2px);}
+.cf-submit{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;border:none;border-radius:10px;padding:16px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s;margin-top:4px;}
+.cf-submit:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);}
 .cf-submit:disabled{opacity:0.7;cursor:default;transform:none;}
 .cf-foot{font-size:13px;color:var(--mist-2);margin-top:16px;text-align:center;}
 .cf-foot a{color:var(--gold);}
@@ -147,7 +149,7 @@ section{position:relative;}
 .cf-success strong{color:#dff3e6;}
 .cf-error{background:rgba(190,70,60,0.12);border:1px solid rgba(190,70,60,0.4);color:#e7c3bf;}
 .cf-error a{color:var(--gold-2);}
-.cf-plan{margin-bottom:20px;background:#100f0c;border:1px solid rgba(170,115,59,0.32);border-radius:12px;padding:16px 16px 14px;}
+.cf-plan{margin-bottom:20px;background:#100f0c;border:1px solid rgba(210,162,76,0.32);border-radius:12px;padding:16px 16px 14px;}
 .cf-plan-head{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
 .cf-plan-head svg{width:15px;height:15px;}
 .cf-plan-list{list-style:none;display:flex;flex-direction:column;}
@@ -155,35 +157,35 @@ section{position:relative;}
 .cf-plan-list li:first-child{border-top:none;}
 .cf-plan-list li span{color:var(--mist-2);font-size:13px;flex-shrink:0;}
 .cf-plan-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;padding-top:12px;border-top:1px solid var(--line-2);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist-2);font-weight:700;}
-.cf-plan-total b{font-family:var(--display);font-size:22px;font-weight:600;color:var(--gold);letter-spacing:0;text-transform:none;}
+.cf-plan-total b{font-family:var(--display);font-size:22px;font-weight:700;color:var(--gold);letter-spacing:0;text-transform:none;}
 .cf-plan-note{font-size:12px;color:var(--mist-2);margin-top:10px;line-height:1.5;}
 
 /* ===== WHAT HAPPENS NEXT ===== */
 .next{background:var(--bg-2);padding:clamp(60px,7vw,104px) 0;border-bottom:1px solid var(--line);}
 .next-head{max-width:680px;margin-bottom:clamp(44px,5vw,68px);}
-.next-head h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,4.2vw,56px);line-height:1.04;letter-spacing:-0.02em;margin-top:14px;}
-.next-head h2 em{font-style:italic;color:var(--gold);}
+.next-head h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4.2vw,56px);line-height:1.04;letter-spacing:-0.02em;margin-top:14px;}
+.next-head h2 em{font-style:normal;color:var(--gold);}
 .next-head p{font-size:15.5px;color:var(--mist);margin-top:14px;}
 .ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);position:relative;}
-.ngrid::before{content:"";position:absolute;top:27px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,transparent,#c5894a 6%,#caa05c 50%,#c5894a 94%,transparent);box-shadow:0 0 12px rgba(197,137,74,0.5);z-index:0;}
+.ngrid::before{content:"";position:absolute;top:27px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,transparent,#e6be6e 6%,#caa05c 50%,#e6be6e 94%,transparent);box-shadow:0 0 12px rgba(197,137,74,0.5);z-index:0;}
 .nstep{position:relative;z-index:1;text-align:center;padding:0 6px;}
-.nstep-num{width:54px;height:54px;border-radius:50%;background:#15120d;border:1.5px solid rgba(197,137,74,0.6);color:var(--gold-2);font-weight:700;font-size:21px;line-height:54px;text-align:center;margin:0 auto 24px;box-shadow:0 0 18px -6px rgba(170,115,59,0.55);}
+.nstep-num{width:54px;height:54px;border-radius:50%;background:#15120d;border:1.5px solid rgba(197,137,74,0.6);color:var(--gold-2);font-weight:700;font-size:21px;line-height:54px;text-align:center;margin:0 auto 24px;box-shadow:0 0 18px -6px rgba(210,162,76,0.55);}
 .nstep-ic{color:var(--gold-2);display:flex;justify-content:center;margin-bottom:14px;}
 .nstep-ic svg{width:36px;height:36px;stroke-width:1.6;}
-.nstep b{display:block;font-family:var(--display);font-size:22px;font-weight:600;color:var(--gold);margin-bottom:10px;}
+.nstep b{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--gold);margin-bottom:10px;}
 .nstep b em{font-style:italic;}
 .nstep p{font-size:13.5px;color:var(--mist);line-height:1.7;max-width:34ch;margin:0 auto;}
 
 /* ===== ELSEWHERE ===== */
 .else{background:var(--bg);padding:clamp(60px,7vw,100px) 0;border-bottom:1px solid var(--line);}
 .else-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(28px,4vw,60px);align-items:center;}
-.else-left h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,3.8vw,52px);line-height:1.04;letter-spacing:-0.02em;margin-top:12px;}
-.else-left h2 em{font-style:italic;color:var(--gold);}
+.else-left h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,3.8vw,52px);line-height:1.04;letter-spacing:-0.02em;margin-top:12px;}
+.else-left h2 em{font-style:normal;color:var(--gold);}
 .else-left p{font-size:15px;color:var(--mist);margin-top:16px;max-width:36ch;}
 .else-cards{display:flex;flex-direction:column;gap:14px;}
 .ecard{display:flex;align-items:center;gap:18px;padding:20px 24px;border:1px solid var(--line);border-radius:14px;background:var(--bg-3);transition:border-color .2s,transform .2s;}
-.ecard:hover{border-color:rgba(170,115,59,0.45);transform:translateX(4px);}
-.ecard-ic{flex-shrink:0;width:48px;height:48px;border-radius:50%;border:1px solid rgba(170,115,59,0.4);color:var(--gold-2);display:flex;align-items:center;justify-content:center;}
+.ecard:hover{border-color:rgba(210,162,76,0.45);transform:translateX(4px);}
+.ecard-ic{flex-shrink:0;width:48px;height:48px;border-radius:50%;border:1px solid rgba(210,162,76,0.4);color:var(--gold-2);display:flex;align-items:center;justify-content:center;}
 .ecard-ic svg{width:22px;height:22px;}
 .ecard-body{flex:1;min-width:0;}
 .ecard-body span{display:block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist-2);margin-bottom:4px;}
@@ -196,9 +198,9 @@ section{position:relative;}
 .ccta{background:var(--bg) url('img/work-page-bottom-bg.webp') center/cover no-repeat;padding:clamp(48px,6vw,84px) 0;}
 .ccta-inner{display:flex;align-items:center;justify-content:space-between;gap:clamp(24px,4vw,50px);flex-wrap:wrap;}
 .ccta-msg{display:flex;align-items:center;gap:20px;}
-.ccta-ic{flex-shrink:0;width:58px;height:58px;border-radius:14px;background:var(--gold-soft);border:1px solid rgba(170,115,59,0.35);color:var(--gold);display:flex;align-items:center;justify-content:center;}
+.ccta-ic{flex-shrink:0;width:58px;height:58px;border-radius:14px;background:var(--gold-soft);border:1px solid rgba(210,162,76,0.35);color:var(--gold);display:flex;align-items:center;justify-content:center;}
 .ccta-ic svg{width:28px;height:28px;}
-.ccta-msg h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,2.6vw,34px);line-height:1.1;letter-spacing:-0.02em;}
+.ccta-msg h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,34px);line-height:1.1;letter-spacing:-0.02em;}
 .ccta-msg p{font-size:14.5px;color:var(--mist);margin-top:6px;max-width:42ch;}
 
 /* ===== FOOTER ===== */
@@ -240,6 +242,19 @@ section{position:relative;}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");</script>
+<style id="nav-mega-css">
+.nav-dd-menu.mega{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}
+.mega-head{font-size:13.5px;font-weight:600;color:#16140f;padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
+.nav-dd-menu a.mega-item{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.mega-item:hover{background:#f7f3ea;}
+.mega-item .mi{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:#a97c33;flex-shrink:0;}
+.mega-item .mi svg{width:18px;height:18px;stroke-width:1.7;}
+.mega-item b{display:block;font-size:13.5px;font-weight:700;color:#16140f;line-height:1.3;}
+.mega-item span{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}
+.nav-cta .btn-line{background:transparent;color:#d2a24c;border:1px solid rgba(210,162,76,0.35);}
+.nav-cta .btn-line:hover{border-color:#d2a24c;color:#e6be6e;transform:translateY(-2px);}
+</style>
 </head>
 <body>
 
@@ -248,20 +263,36 @@ section{position:relative;}
     <div class="wrap nav-inner">
         <a href="index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
         <nav class="nav-links" aria-label="Primary">
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="pricing.html">Pricing</a>
+            <a href="/">Home</a>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu mega">
+                    <div class="mega-head">Systems &amp; Features</div>
+                    <div class="mega-grid">
+                        <a href="features/website.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><div><b>Custom Website</b><span>A lead-generating website, built in days</span></div></a>
+                        <a href="features/missed-call-text-back.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div></a>
+                        <a href="features/review-automation.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div></a>
+                        <a href="features/lead-follow-up.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div></a>
+                        <a href="features/local-seo.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><div><b>Local SEO</b><span>Actually get found on Google</span></div></a>
+                        <a href="features/marketing-campaigns.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div></a>
+                        <a href="features/crm-and-booking.html" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div></a>
+                        <a href="/#included" class="mega-item"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Everything Included</b><span>See the whole system at a glance</span></div></a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <div class="nav-dd">
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu">
-                    <a href="about.html">About</a>
-                    <a href="how.html">How it works</a>
+                    <a href="work.html">Work</a>
+                    <a href="how.html">How we work</a>
                     <a href="faq.html">FAQ</a>
                     <a href="blog/">Blog</a>
                 </div>
             </div>
             <div class="nav-dd">
-                <button class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu cols">
                     <a href="locations/edmonton.html">Edmonton</a>
                     <a href="locations/calgary.html">Calgary</a>
@@ -274,10 +305,10 @@ section{position:relative;}
                     <a href="locations.html" class="dd-all">All locations &rarr;</a>
                 </div>
             </div>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="contact.html" class="btn btn-gold">Book a free demo <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-line">Book a Call</a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -290,17 +321,16 @@ section{position:relative;}
         <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="index.html"><span class="gold">Home</span></a>
-        <a href="work.html"><span class="gold">Work</span></a>
-        <a href="pricing.html"><span class="gold">Pricing</span></a>
-        <a href="about.html"><span class="gold">About</span></a>
-        <a href="how.html">How it <span class="gold">works</span></a>
-        <a href="faq.html"><span class="gold">FAQ</span></a>
-        <a href="contact.html"><span class="gold">Contact</span></a>
+        <a href="/">Home</a>
+        <a href="/#included">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a free demo <span class="arr">→</span></a>
-        <a href="mailto:matt@northernpeaksystems.ca" class="btn btn-ghost">Email us</a>
+        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -314,8 +344,8 @@ section{position:relative;}
         <div class="chero-grid">
             <div class="chero-left">
                 <span class="eyebrow">&mdash; Get in touch</span>
-                <h1>Let&rsquo;s get your <em>AI receptionist</em> live.</h1>
-                <p class="chero-sub">Tell us about your business and what you&rsquo;re looking to achieve. We&rsquo;ll review your website, systems, and goals and send back a custom AI receptionist demo with recommendations and a clear plan.</p>
+                <h1>Let&rsquo;s get your <em>growth system</em> live.</h1>
+                <p class="chero-sub">Tell us about your business and what you&rsquo;re looking to achieve. We&rsquo;ll review your website, systems, and goals and come back with recommendations and a clear plan.</p>
                 <ul class="chero-list">
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>No obligation</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Custom demo built for your business</li>
@@ -337,7 +367,7 @@ section{position:relative;}
                         <div class="cf-plan-head"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg> Your selected plan</div>
                         <ul class="cf-plan-list" id="cf-plan-list"></ul>
                         <div class="cf-plan-total"><span>Estimated total</span> <b><span id="cf-plan-amt">$0</span>/mo</b></div>
-                        <p class="cf-plan-note">We&rsquo;ll include this with your message so we build the right demo for you. Add anything else below.</p>
+                        <p class="cf-plan-note">We&rsquo;ll include this with your message so we come prepared for your call. Add anything else below.</p>
                     </div>
                     <div class="cf-row">
                         <div class="cf-field">
@@ -377,7 +407,7 @@ section{position:relative;}
     <div class="wrap">
         <header class="next-head reveal">
             <span class="eyebrow">&mdash; What happens next</span>
-            <h2>From note to <em>live demo.</em></h2>
+            <h2>From note to <em>live system.</em></h2>
             <p>Here&rsquo;s what happens after you reach out &mdash; no mystery, no waiting in the dark.</p>
         </header>
         <div class="ngrid reveal">
@@ -390,14 +420,14 @@ section{position:relative;}
             <div class="nstep">
                 <div class="nstep-num">2</div>
                 <span class="nstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="M6.5 20v-5M11 20v-9M15.5 20v-6M20 20v-3.5"/></svg></span>
-                <b>A live <em>demo.</em></b>
-                <p>We&rsquo;ll set up a live AI receptionist tuned to your business &mdash; you call in and hear it answer, run a real intake, and book an appointment.</p>
+                <b>A real <em>conversation.</em></b>
+                <p>A free 20-minute call. We show you the system running and tell you straight which plan fits your business.</p>
             </div>
             <div class="nstep">
                 <div class="nstep-num">3</div>
                 <span class="nstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2c.9-.9 1-2.4.1-3.3a2.4 2.4 0 0 0-3.1.3z"/><path d="M9 12c1-4 4-8 10-8 0 6-4 9-8 10z"/><path d="M14.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg></span>
-                <b>Scope, deposit, <em>build.</em></b>
-                <p>If the demo lands, we&rsquo;ll configure it on your line &mdash; your intake, calendar, and CRM &mdash; and get you live. Flat monthly, no big upfront.</p>
+                <b>Approve, build, <em>go live.</em></b>
+                <p>If it&rsquo;s a fit, we build your website and wire up the system &mdash; your calendar, text-back, and follow-up &mdash; and get you live. Flat monthly, no setup fee.</p>
             </div>
         </div>
     </div>
@@ -440,11 +470,11 @@ section{position:relative;}
             <div class="ccta-msg">
                 <span class="ccta-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></span>
                 <div>
-                    <h2>Ready to hear your AI receptionist in action?</h2>
-                    <p>Book a free demo and get a custom plan built around your business.</p>
+                    <h2>Ready to see your growth system in action?</h2>
+                    <p>Book a call and get a custom plan built around your business.</p>
                 </div>
             </div>
-            <a href="contact.html" class="btn btn-gold">Book a free demo <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
         </div>
     </div>
 </section>
@@ -472,7 +502,7 @@ section{position:relative;}
             <div class="foot-col">
                 <h4>Services</h4>
                 <a href="index.html#services">Websites</a>
-                <a href="index.html#services">AI Receptionist</a>
+                <a href="features/missed-call-text-back.html">Missed Call Text-Back</a>
                 <a href="index.html#services">Custom Websites</a>
                 <a href="index.html#services">Local search</a>
             </div>
@@ -519,7 +549,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   }
   window.__planText=items.map(function(it){return '• '+it.name+' — $'+it.price+'/mo';}).join('\n')+'\nEstimated total: $'+total+'/month';
   var msg=document.getElementById('cf-message');
-  if(msg && !msg.value.trim()) msg.value='I built a plan on your pricing page (shown above) — I’d like a demo and to talk through next steps.';
+  if(msg && !msg.value.trim()) msg.value='I built a plan on your pricing page (shown above) — I’d like to book a call and talk through next steps.';
 })();
 
 // Contact form — submits to Cloudflare Worker, which relays via Resend.
