@@ -36,7 +36,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://northernpeaksystems.ca/" },
-        { "@type": "ListItem", "position": 2, "name": "What's included", "item": "https://northernpeaksystems.ca/#included" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://northernpeaksystems.ca/#features" },
         { "@type": "ListItem", "position": 3, "name": "Missed Call Text-Back", "item": "https://northernpeaksystems.ca/features/missed-call-text-back" }
       ]
     }
@@ -111,7 +111,7 @@ h1,h2{font-family:var(--display);}
 .light{background:var(--cream);color:var(--ink);}
 .light .lede{color:var(--ink-2);}
 .sec{padding:clamp(64px,8vw,110px) 0;}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:16px 30px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:12px 58px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
 .btn .arr{transition:transform .22s;}
 .btn:hover .arr{transform:translateX(4px);}
 .btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -14px rgba(210,162,76,0.5);}
@@ -135,25 +135,44 @@ h1,h2{font-family:var(--display);}
 .nav-dd-toggle svg{width:10px;height:10px;transition:transform .2s;}
 .nav-dd:hover .nav-dd-toggle{color:var(--white);}
 .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg);}
-.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:70;}
-.nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .18s ease .25s,transform .18s ease .25s,visibility 0s linear .45s;z-index:70;}
+.nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition-delay:0s,0s,0s;}
 .nav-dd-menu a{display:block;padding:9px 14px;font-size:13.5px;color:var(--mist);border-radius:7px;white-space:nowrap;transition:background .15s,color .15s;}
 .nav-dd-menu a:hover{background:rgba(255,255,255,0.05);color:var(--white);}
 .nav-dd-menu a.here{color:var(--gold);}
 .nav-dd-menu.cols{display:grid;grid-template-columns:1fr 1fr;min-width:300px;}
 .nav-dd-menu .dd-all{grid-column:1 / -1;color:var(--gold);border-top:1px solid var(--line);margin-top:5px;padding-top:11px;}
-.nav-dd-menu.mega{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}
-.mega-head{font-size:13.5px;font-weight:600;color:var(--ink);padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}
-.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
-.nav-dd-menu a.mega-item{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}
-.nav-dd-menu a.mega-item:hover{background:#f7f3ea;}
-.nav-dd-menu a.mega-item.here b{color:var(--gold-deep);}
-.mega-item .mi{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);flex-shrink:0;}
-.mega-item .mi svg{width:18px;height:18px;stroke-width:1.7;}
-.mega-item b{display:block;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.3;}
-.mega-item span{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}
+.nav-dd-static{position:static;}
+.nav-dd-static::after{display:none;}
+.nav-dd-menu.mega{top:100%;width:min(980px,calc(100vw - 28px));background:#101014;border:1px solid rgba(210,162,76,0.28);border-radius:0 0 18px 18px;padding:0;overflow:hidden;box-shadow:0 46px 90px -30px rgba(0,0,0,0.85);}
+.mega2-grid{display:grid;grid-template-columns:255px 1fr;}
+.mega2-rail{position:relative;background:#14110b url('/img/northern-peak-hero-bg.webp') bottom center/cover no-repeat;padding:22px 22px 150px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.mega2-rail::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#16120c 0%,rgba(22,18,12,0.82) 45%,rgba(22,18,12,0.1) 100%);}
+.mega2-rail > *{position:relative;z-index:1;}
+.m2-eyebrow{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d2a24c;}
+.m2-title{font-family:var(--display,inherit);font-size:24px;font-weight:800;color:#fff;line-height:1.12;letter-spacing:-0.01em;}
+.m2-title span{color:#d2a24c;}
+.mega2-rail p{font-size:12px;color:#cfc9bd;line-height:1.55;white-space:normal;}
+.m2-btn{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#d2a24c;border:1px solid rgba(210,162,76,0.5);border-radius:8px;padding:9px 14px;margin-top:4px;transition:border-color .15s,color .15s;}
+.m2-btn:hover{border-color:#d2a24c;color:#e6be6e;}
+.mega2-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);}
+.nav-dd-menu a.m2-card{display:block;background:#101014;padding:14px 16px;border-radius:0;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.m2-card:hover{background:#17171c;}
+.m2-card .ic{display:flex;width:30px;height:30px;border-radius:8px;background:rgba(210,162,76,0.12);border:1px solid rgba(210,162,76,0.3);align-items:center;justify-content:center;color:#d2a24c;margin-bottom:9px;}
+.m2-card .ic svg{width:15px;height:15px;}
+.m2-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;}
+.m2-card span{display:block;font-size:11px;color:#a9a49a;line-height:1.45;margin-top:3px;}
+.nav-dd-menu a.m2-card.here b{color:#d2a24c;}
+.m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.m2-foot .chk{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.m2-foot .chk svg{width:15px;height:15px;}
+.m2-foot b{display:block;font-size:12.5px;font-weight:700;color:#fff;}
+.m2-foot p{font-size:11px;color:#a9a49a;line-height:1.5;margin-top:3px;white-space:normal;}
+.m2-strip{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;}
+.m2-strip span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#7b766c;}
+.m2-strip svg{width:13px;height:13px;color:#d2a24c;}
 .nav-cta{display:flex;align-items:center;gap:14px;}
-.nav-cta .btn{padding:13px 24px;}
+.nav-cta .btn{padding:10px 32px;}
 .nav-burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);align-items:center;justify-content:center;}
 .nav-burger svg{width:20px;height:20px;}
 @media(max-width:1120px){.nav-links,.nav-cta .btn{display:none;}.nav-burger{display:inline-flex;}}
@@ -261,43 +280,33 @@ h1,h2{font-family:var(--display);}
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="/">Home</a>
-            <div class="nav-dd">
+            <div class="nav-dd nav-dd-static">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu mega">
-                    <div class="mega-head">Systems &amp; Features</div>
-                    <div class="mega-grid">
-                        <a href="/features/website.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
-                            <div><b>Custom Website</b><span>A lead-generating website, built in days</span></div>
-                        </a>
-                        <a href="/features/missed-call-text-back.html" class="mega-item here">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
-                            <div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div>
-                        </a>
-                        <a href="/features/review-automation.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-                            <div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div>
-                        </a>
-                        <a href="/features/lead-follow-up.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
-                            <div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div>
-                        </a>
-                        <a href="/features/local-seo.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                            <div><b>Local SEO</b><span>Actually get found on Google</span></div>
-                        </a>
-                        <a href="/features/marketing-campaigns.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
-                            <div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div>
-                        </a>
-                        <a href="/features/crm-and-booking.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span>
-                            <div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div>
-                        </a>
-                        <a href="/#included" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                            <div><b>Everything Included</b><span>See the whole system at a glance</span></div>
-                        </a>
+                    <div class="mega2-grid">
+                        <aside class="mega2-rail">
+                            <span class="m2-eyebrow">The Complete Solution</span>
+                            <div class="m2-title">Business <span>Growth</span> System</div>
+                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <a href="../how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
+                        </aside>
+                        <div class="mega2-cards">
+                        <a href="../features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
+                        <a href="../features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
+                        <a href="../features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
+                        <a href="../features/missed-call-text-back.html" class="m2-card here"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
+                        <a href="../features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
+                        <a href="../features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
+                        <a href="../features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
+                        <div class="m2-foot">
+                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <div>
+                                <b>Everything Working Together</b>
+                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
+                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -346,7 +355,7 @@ h1,h2{font-family:var(--display);}
     </div>
     <nav class="mnav-links" aria-label="Mobile">
         <a href="/">Home</a>
-        <a href="/#included">Products</a>
+        <a href="/#features">Products</a>
         <a href="../pricing.html">Pricing</a>
         <a href="../about.html">About</a>
         <a href="../work.html">Work</a>
@@ -368,7 +377,7 @@ h1,h2{font-family:var(--display);}
     <div class="wrap">
         <div class="fhero-grid">
             <div>
-                <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#included">What&rsquo;s included</a> &nbsp;/&nbsp; Missed Call Text-Back</p>
+                <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#features">Products</a> &nbsp;/&nbsp; Missed Call Text-Back</p>
                 <span class="eyebrow">Included · Missed Call Text-Back</span>
                 <h1>Miss a call? It <span class="gold">texts them back.</span></h1>
                 <p class="fhero-sub">Everyone misses calls. Few text back. Yours does — instantly — so the lead books with you instead of calling the next name on their list.</p>

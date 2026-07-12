@@ -53,7 +53,7 @@ def mega_items(p):
             f'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{icon}</svg></span>'
             f'<div><b>{label}</b><span>{desc}</span></div></a>')
     out.append(
-        '<a href="/#included" class="mega-item">'
+        '<a href="/pricing.html" class="mega-item">'
         '<span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
         'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
         '<path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
@@ -61,19 +61,50 @@ def mega_items(p):
     return "\n                        ".join(out)
 
 
+MEGA2_CARDS = [('website', 'website', 'Custom Website', 'Lead-generating websites built to convert visitors into customers.'), ('review-automation', 'reviews', '5-Star Review Funnel', 'Get more five-star reviews on autopilot and build instant trust.'), ('local-seo', 'seo', 'Local SEO', 'Show up at the top of Google when local customers are searching.'), ('missed-call-text-back', 'textback', 'Missed Call Text Back', 'Never miss another lead. We text back missed calls instantly.'), ('crm-and-booking', 'crm', 'CRM &amp; Booking', 'Manage leads, book jobs, and keep everything organized in one place.'), ('lead-follow-up', 'followup', 'Lead Follow-Up', 'Automated follow-ups via text so you stay top of mind and win more jobs.'), ('marketing-campaigns', 'marketing', 'Marketing Campaigns', 'One-click campaigns that bring past customers back and fill your pipeline.')]
+MEGA2_STRIP = [('website', 'Website'), ('search', 'SEO'), ('reviews', 'Reviews'), ('textback', 'Text Back'), ('crm', 'CRM'), ('followup', 'Follow-Up'), ('marketing', 'Marketing')]
+MEGA2_ICONS = {'website': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>', 'reviews': '<path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/>', 'seo': '<path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>', 'textback': '<path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/>', 'crm': '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/>', 'followup': '<path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/>', 'marketing': '<path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/>', 'check': '<path d="M20 6 9 17l-5-5"/>', 'search': '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'}
+
+def m2svg(name):
+    return ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+            'stroke-linecap="round" stroke-linejoin="round">' + MEGA2_ICONS[name] + '</svg>')
+
+def mega2_html(p):
+    cards = ''
+    for slug, ic, title, desc in MEGA2_CARDS:
+        cards += ('<a href="' + p + 'features/' + slug + '.html" class="m2-card">'
+                  '<span class="ic">' + m2svg(ic) + '</span><b>' + title + '</b><span>' + desc + '</span></a>\n                        ')
+    strip = ''.join('<span>' + m2svg(k) + lbl + '</span>' for k, lbl in MEGA2_STRIP)
+    chk = m2svg('check')
+    return f'''<div class="nav-dd-menu mega">
+                    <div class="mega2-grid">
+                        <aside class="mega2-rail">
+                            <span class="m2-eyebrow">The Complete Solution</span>
+                            <div class="m2-title">Business <span>Growth</span> System</div>
+                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <a href="{p}how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
+                        </aside>
+                        <div class="mega2-cards">
+                        {cards}<div class="m2-foot">
+                            <span class="chk">{chk}</span>
+                            <div>
+                                <b>Everything Working Together</b>
+                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
+                                <div class="m2-strip">{strip}</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>'''
+
 def nav_links(p):
     cities = "\n                    ".join(
         f'<a href="{p}locations/{slug}.html">{name}</a>' for slug, name in CITIES)
     return f'''<nav class="nav-links" aria-label="Primary">
             <a href="/">Home</a>
-            <div class="nav-dd">
+            <div class="nav-dd nav-dd-static">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products {CHEV}</button>
-                <div class="nav-dd-menu mega">
-                    <div class="mega-head">Systems &amp; Features</div>
-                    <div class="mega-grid">
-                        {mega_items(p)}
-                    </div>
-                </div>
+                {mega2_html(p)}
             </div>
             <a href="{p}pricing.html">Pricing</a>
             <a href="{p}about.html">About</a>
@@ -100,7 +131,7 @@ def nav_links(p):
 def mnav_links(p):
     return f'''<nav class="mnav-links" aria-label="Mobile">
         <a href="/">Home</a>
-        <a href="/#included">Products</a>
+        <a href="/#features">Products</a>
         <a href="{p}pricing.html">Pricing</a>
         <a href="{p}about.html">About</a>
         <a href="{p}work.html">Work</a>
@@ -116,15 +147,36 @@ def mnav_foot(p):
 
 # Self-contained styles for the mega menu + outline nav button on legacy pages.
 MEGA_CSS = '''<style id="nav-mega-css">
-.nav-dd-menu.mega{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}
-.mega-head{font-size:13.5px;font-weight:600;color:#16140f;padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}
-.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
-.nav-dd-menu a.mega-item{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}
-.nav-dd-menu a.mega-item:hover{background:#f7f3ea;}
-.mega-item .mi{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:#a97c33;flex-shrink:0;}
-.mega-item .mi svg{width:18px;height:18px;stroke-width:1.7;}
-.mega-item b{display:block;font-size:13.5px;font-weight:700;color:#16140f;line-height:1.3;}
-.mega-item span{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}
+.nav-dd-menu{transition:opacity .18s ease .25s,transform .18s ease .25s,visibility 0s linear .45s;}
+.nav-dd:hover .nav-dd-menu{transition-delay:0s,0s,0s;}
+.nav-dd-static{position:static;}
+.nav-dd-static::after{display:none;}
+.nav-dd-menu.mega{top:100%;width:min(980px,calc(100vw - 28px));background:#101014;border:1px solid rgba(210,162,76,0.28);border-radius:0 0 18px 18px;padding:0;overflow:hidden;box-shadow:0 46px 90px -30px rgba(0,0,0,0.85);}
+.mega2-grid{display:grid;grid-template-columns:255px 1fr;}
+.mega2-rail{position:relative;background:#14110b url('/img/northern-peak-hero-bg.webp') bottom center/cover no-repeat;padding:22px 22px 150px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.mega2-rail::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#16120c 0%,rgba(22,18,12,0.82) 45%,rgba(22,18,12,0.1) 100%);}
+.mega2-rail > *{position:relative;z-index:1;}
+.m2-eyebrow{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d2a24c;}
+.m2-title{font-family:var(--display,inherit);font-size:24px;font-weight:800;color:#fff;line-height:1.12;letter-spacing:-0.01em;}
+.m2-title span{color:#d2a24c;}
+.mega2-rail p{font-size:12px;color:#cfc9bd;line-height:1.55;white-space:normal;}
+.m2-btn{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#d2a24c;border:1px solid rgba(210,162,76,0.5);border-radius:8px;padding:9px 14px;margin-top:4px;transition:border-color .15s,color .15s;}
+.m2-btn:hover{border-color:#d2a24c;color:#e6be6e;}
+.mega2-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);}
+.nav-dd-menu a.m2-card{display:block;background:#101014;padding:14px 16px;border-radius:0;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.m2-card:hover{background:#17171c;}
+.m2-card .ic{display:flex;width:30px;height:30px;border-radius:8px;background:rgba(210,162,76,0.12);border:1px solid rgba(210,162,76,0.3);align-items:center;justify-content:center;color:#d2a24c;margin-bottom:9px;}
+.m2-card .ic svg{width:15px;height:15px;}
+.m2-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;}
+.m2-card span{display:block;font-size:11px;color:#a9a49a;line-height:1.45;margin-top:3px;}
+.m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.m2-foot .chk{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.m2-foot .chk svg{width:15px;height:15px;}
+.m2-foot b{display:block;font-size:12.5px;font-weight:700;color:#fff;}
+.m2-foot p{font-size:11px;color:#a9a49a;line-height:1.5;margin-top:3px;white-space:normal;}
+.m2-strip{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;}
+.m2-strip span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#7b766c;}
+.m2-strip svg{width:13px;height:13px;color:#d2a24c;}
 .nav-cta .btn-line{background:transparent;color:#d2a24c;border:1px solid rgba(210,162,76,0.35);}
 .nav-cta .btn-line:hover{border-color:#d2a24c;color:#e6be6e;transform:translateY(-2px);}
 </style>

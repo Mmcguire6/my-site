@@ -72,13 +72,17 @@
   --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;scrollbar-color:#2c2c32 var(--bg);}
 body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:clip;overflow-wrap:break-word;}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;opacity:0.032;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:280px 280px;}
+::selection{background:rgba(210,162,76,0.4);color:#fff;}
+.light ::selection{background:rgba(169,124,51,0.35);color:#16140f;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 button{font-family:inherit;cursor:pointer;}
 .wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
 .eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
+.light .eyebrow{color:var(--gold-deep);}
 .gold{color:var(--gold);}
 section{position:relative;}
 h1,h2,h3{letter-spacing:-0.02em;}
@@ -89,10 +93,13 @@ h1,h2{font-family:var(--display);}
 .light{background:var(--cream);color:var(--ink);}
 .light .lede{color:var(--ink-2);}
 .light .gold{color:var(--gold-deep);}
+.light.sec{margin:clamp(18px,2.4vw,34px) clamp(10px,1.8vw,32px);border-radius:clamp(22px,2.8vw,40px);overflow:hidden;box-shadow:0 0 34px -6px rgba(210,162,76,0.18),inset 0 1px 0 rgba(255,255,255,0.65),0 30px 80px -50px rgba(0,0,0,0.9);}
+.light.sec::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,rgba(210,162,76,0.85),rgba(210,162,76,0.3) 30%,rgba(210,162,76,0.07) 62%,rgba(210,162,76,0.03) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;z-index:5;}
+.glow{background:radial-gradient(900px 400px at 12% -6%,rgba(210,162,76,0.075),transparent 60%),radial-gradient(900px 400px at 88% 106%,rgba(210,162,76,0.06),transparent 60%);}
 .sec{padding:clamp(64px,8vw,110px) 0;}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:16px 30px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:12px 58px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
 .btn .arr{transition:transform .22s;}
 .btn:hover .arr{transform:translateX(4px);}
 .btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -14px rgba(210,162,76,0.5);}
@@ -120,25 +127,43 @@ h1,h2{font-family:var(--display);}
 .nav-dd-toggle svg{width:10px;height:10px;transition:transform .2s;}
 .nav-dd:hover .nav-dd-toggle{color:var(--white);}
 .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg);}
-.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:70;}
-.nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .18s ease .25s,transform .18s ease .25s,visibility 0s linear .45s;z-index:70;}
+.nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition-delay:0s,0s,0s;}
 .nav-dd-menu a{display:block;padding:9px 14px;font-size:13.5px;color:var(--mist);border-radius:7px;white-space:nowrap;transition:background .15s,color .15s;}
 .nav-dd-menu a:hover{background:rgba(255,255,255,0.05);color:var(--white);}
 .nav-dd-menu.cols{display:grid;grid-template-columns:1fr 1fr;min-width:300px;}
 .nav-dd-menu .dd-all{grid-column:1 / -1;color:var(--gold);border-top:1px solid var(--line);margin-top:5px;padding-top:11px;}
 /* products mega menu */
-.nav-dd-menu.mega{background:#fff;border-color:#e8e2d4;min-width:620px;padding:18px 20px 14px;box-shadow:0 30px 64px -24px rgba(0,0,0,0.5);}
-.mega-head{font-size:13.5px;font-weight:600;color:var(--ink);padding-bottom:12px;border-bottom:1px solid #ece5d6;margin-bottom:8px;}
-.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
-.nav-dd-menu a.mega-item{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;white-space:normal;transition:background .15s;}
-.nav-dd-menu a.mega-item:hover{background:#f7f3ea;}
-.mega-item .mi{width:38px;height:38px;border-radius:10px;background:#f7f3ea;border:1px solid #e8e2d4;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);flex-shrink:0;}
-.mega-item .mi svg{width:18px;height:18px;stroke-width:1.7;}
-.mega-item b{display:block;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.3;}
-.mega-item span{display:block;font-size:12px;color:#8a8478;line-height:1.45;margin-top:2px;}
-.nav-dd-menu.mega .dd-all{border-top:1px solid #ece5d6;color:var(--gold-deep);}
+.nav-dd-static{position:static;}
+.nav-dd-static::after{display:none;}
+.nav-dd-menu.mega{top:100%;width:min(980px,calc(100vw - 28px));background:#101014;border:1px solid rgba(210,162,76,0.28);border-radius:0 0 18px 18px;padding:0;overflow:hidden;box-shadow:0 46px 90px -30px rgba(0,0,0,0.85);}
+.mega2-grid{display:grid;grid-template-columns:255px 1fr;}
+.mega2-rail{position:relative;background:#14110b url('/img/northern-peak-hero-bg.webp') bottom center/cover no-repeat;padding:22px 22px 150px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.mega2-rail::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#16120c 0%,rgba(22,18,12,0.82) 45%,rgba(22,18,12,0.1) 100%);}
+.mega2-rail > *{position:relative;z-index:1;}
+.m2-eyebrow{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d2a24c;}
+.m2-title{font-family:var(--display,inherit);font-size:24px;font-weight:800;color:#fff;line-height:1.12;letter-spacing:-0.01em;}
+.m2-title span{color:#d2a24c;}
+.mega2-rail p{font-size:12px;color:#cfc9bd;line-height:1.55;white-space:normal;}
+.m2-btn{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#d2a24c;border:1px solid rgba(210,162,76,0.5);border-radius:8px;padding:9px 14px;margin-top:4px;transition:border-color .15s,color .15s;}
+.m2-btn:hover{border-color:#d2a24c;color:#e6be6e;}
+.mega2-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);}
+.nav-dd-menu a.m2-card{display:block;background:#101014;padding:14px 16px;border-radius:0;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.m2-card:hover{background:#17171c;}
+.m2-card .ic{display:flex;width:30px;height:30px;border-radius:8px;background:rgba(210,162,76,0.12);border:1px solid rgba(210,162,76,0.3);align-items:center;justify-content:center;color:#d2a24c;margin-bottom:9px;}
+.m2-card .ic svg{width:15px;height:15px;}
+.m2-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;}
+.m2-card span{display:block;font-size:11px;color:#a9a49a;line-height:1.45;margin-top:3px;}
+.m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.m2-foot .chk{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.m2-foot .chk svg{width:15px;height:15px;}
+.m2-foot b{display:block;font-size:12.5px;font-weight:700;color:#fff;}
+.m2-foot p{font-size:11px;color:#a9a49a;line-height:1.5;margin-top:3px;white-space:normal;}
+.m2-strip{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;}
+.m2-strip span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#7b766c;}
+.m2-strip svg{width:13px;height:13px;color:#d2a24c;}
 .nav-cta{display:flex;align-items:center;gap:14px;}
-.nav-cta .btn{padding:13px 24px;}
+.nav-cta .btn{padding:10px 32px;}
 .nav-burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);align-items:center;justify-content:center;}
 .nav-burger svg{width:20px;height:20px;}
 @media(max-width:1120px){
@@ -242,78 +267,41 @@ h1,h2{font-family:var(--display);}
   .wds-shot{order:2;max-width:680px;margin:0 auto;}
 }
 
-/* ===== FEATURES GRID ===== */
-.feat-head{text-align:center;max-width:640px;margin:0 auto clamp(36px,4.5vw,56px);}
-.feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
-.feat-card{background:#fff;border:1px solid var(--cream-line);border-radius:13px;padding:18px 16px;display:flex;gap:12px;align-items:flex-start;transition:transform .25s,box-shadow .25s,border-color .25s;}
-.feat-card:hover{transform:translateY(-4px);border-color:#dcc9a2;box-shadow:0 20px 40px -26px rgba(60,45,20,0.35);}
-.feat-card svg{width:22px;height:22px;color:var(--gold-deep);flex-shrink:0;margin-top:2px;stroke-width:1.6;}
-.feat-card b{display:block;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.3;}
-.feat-card span{display:block;font-size:12px;color:var(--ink-2);line-height:1.5;margin-top:4px;}
-@media(max-width:1180px){.feat-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:760px){.feat-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:480px){.feat-grid{grid-template-columns:1fr;}}
+/* ===== TRADES MARQUEE ===== */
+.trades{overflow:hidden;}
+.trades-head{text-align:center;max-width:640px;margin:0 auto clamp(28px,4vw,42px);}
+.trow{overflow:hidden;margin-top:16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.tmarquee{display:flex;width:max-content;animation:tslide 55s linear infinite;}
+.trow.rev .tmarquee{animation-direction:reverse;}
+.trow:hover .tmarquee{animation-play-state:paused;}
+@keyframes tslide{to{transform:translateX(-33.3333%);}}
+.tcard{position:relative;width:230px;height:290px;border-radius:16px;overflow:hidden;flex-shrink:0;margin-right:16px;background:#111;box-shadow:0 18px 36px -24px rgba(60,45,20,0.4);}
+.tcard img{width:100%;height:100%;object-fit:cover;}
+.tcard::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,12,0.88),rgba(10,10,12,0.05) 55%);}
+.tcard b{position:absolute;left:16px;right:12px;bottom:13px;z-index:2;color:#fff;font-family:var(--display);font-size:16.5px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;}
+.trades-note{text-align:center;font-size:13.5px;color:var(--ink-2);margin-top:clamp(22px,3vw,32px);}
+@media(max-width:700px){.tcard{width:170px;height:215px;}}
+@media(prefers-reduced-motion:reduce){.tmarquee{animation:none;}}
 
-/* ===== DEMO ===== */
-.demo-grid{display:grid;grid-template-columns:0.9fr auto 1.1fr;gap:clamp(28px,4vw,60px);align-items:center;}
-.phone{width:230px;background:linear-gradient(180deg,#17171c,#0e0e11);border:1px solid var(--line-2);border-radius:34px;padding:16px 16px 20px;box-shadow:0 40px 90px -40px rgba(0,0,0,0.9),0 0 60px -20px rgba(210,162,76,0.25);margin:0 auto;}
-.phone-notch{width:82px;height:5px;border-radius:3px;background:#2a2a30;margin:0 auto 22px;}
-.phone-logo{width:54px;height:54px;border-radius:50%;background:var(--gold-soft);border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
-.phone-logo img{width:30px;height:30px;object-fit:contain;}
-.phone-name{text-align:center;font-size:13.5px;font-weight:700;color:var(--white);}
-.phone-time{text-align:center;font-size:11.5px;color:var(--mist-2);margin-top:2px;font-variant-numeric:tabular-nums;}
-.phone-wave{display:flex;align-items:center;justify-content:center;gap:2.5px;height:44px;margin:18px 0;}
-.phone-wave i{width:3px;border-radius:2px;background:var(--gold);opacity:.85;animation:wave 1.2s ease-in-out infinite;}
-@keyframes wave{0%,100%{transform:scaleY(0.45);}50%{transform:scaleY(1);}}
-.phone-msg{font-size:11px;color:var(--mist);background:#1b1b21;border:1px solid var(--line);border-radius:10px;padding:9px 11px;line-height:1.45;}
-.phone-end{width:46px;height:46px;border-radius:50%;background:#c0392b;display:flex;align-items:center;justify-content:center;margin:18px auto 0;box-shadow:0 12px 26px -10px rgba(192,57,43,0.6);}
-.phone-end svg{width:20px;height:20px;color:#fff;transform:rotate(135deg);}
-.demo-cards{display:flex;flex-direction:column;gap:14px;}
-.demo-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;justify-content:space-between;transition:border-color .25s;}
-.demo-card:hover{border-color:var(--gold-line);}
-.demo-card .dtxt{flex:1;min-width:200px;}
-.demo-card b{display:block;font-size:15px;font-weight:700;color:var(--white);}
-.demo-card span{display:block;font-size:12.5px;color:var(--mist);margin-top:3px;line-height:1.5;}
-.demo-card .btn{padding:12px 20px;font-size:11.5px;}
-.demo-avail{font-size:11px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-top:6px;display:inline-block;}
-@media(max-width:1060px){.demo-grid{grid-template-columns:1fr;}.demo-head{text-align:center;max-width:560px;margin:0 auto;}}
-
-/* ===== INDUSTRIES ===== */
-.ind-grid{display:grid;grid-template-columns:0.8fr 1.7fr;gap:clamp(28px,4vw,60px);align-items:center;}
-.ind-row{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;}
-.ind{text-align:center;padding:14px 4px;border-radius:12px;transition:background .2s;}
-.ind:hover{background:#fff;}
-.ind svg{width:28px;height:28px;color:var(--ink);margin:0 auto 10px;stroke-width:1.5;}
-.ind span{font-size:12px;font-weight:600;color:var(--ink);display:block;line-height:1.3;}
-.ind em{font-style:normal;display:block;font-size:10.5px;color:var(--ink-2);margin-top:2px;}
-@media(max-width:1100px){.ind-grid{grid-template-columns:1fr;}.ind-row{grid-template-columns:repeat(5,1fr);gap:14px 8px;}}
-@media(max-width:640px){.ind-row{grid-template-columns:repeat(3,1fr);}}
-
-/* ===== PARTNER ===== */
-.part-grid{display:grid;grid-template-columns:0.85fr 1.6fr;gap:clamp(30px,4vw,64px);align-items:center;}
-.part-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.part-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;transition:border-color .25s,transform .25s;}
-.part-card:hover{border-color:var(--gold-line);transform:translateY(-4px);}
-.part-card svg{width:26px;height:26px;color:var(--gold);margin-bottom:14px;stroke-width:1.6;}
-.part-card b{display:block;font-size:14.5px;font-weight:700;color:var(--white);}
-.part-card span{display:block;font-size:12.5px;color:var(--mist);line-height:1.55;margin-top:5px;}
-@media(max-width:1000px){.part-grid{grid-template-columns:1fr;}}
-@media(max-width:700px){.part-cards{grid-template-columns:1fr 1fr;}}
-@media(max-width:460px){.part-cards{grid-template-columns:1fr;}}
-
-/* ===== STEPS ===== */
-.steps-grid{display:grid;grid-template-columns:0.75fr 1.7fr;gap:clamp(30px,4vw,64px);align-items:center;}
-.steps-row{display:flex;align-items:flex-start;gap:8px;}
-.step{flex:1;text-align:center;padding:0 8px;}
-.step .circ{position:relative;width:76px;height:76px;border-radius:50%;background:#fff;border:1px solid var(--cream-line);box-shadow:0 16px 34px -22px rgba(40,30,15,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
-.step .circ svg{width:32px;height:32px;color:var(--ink);stroke-width:1.5;}
-.step .num{position:absolute;top:-6px;right:-6px;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;border:3px solid var(--cream);}
-.step b{display:block;font-size:15.5px;font-weight:700;color:var(--ink);}
-.step p{font-size:12.5px;color:var(--ink-2);line-height:1.55;margin-top:6px;max-width:24ch;margin-left:auto;margin-right:auto;}
-.step-arr{margin-top:30px;color:#c9c0ab;flex-shrink:0;}
-.step-arr svg{width:22px;height:22px;}
-@media(max-width:1000px){.steps-grid{grid-template-columns:1fr;}}
-@media(max-width:640px){.steps-row{flex-direction:column;gap:28px;}.step-arr{display:none;}}
+/* ===== WORKING WITH US ===== */
+.wwu-head{text-align:center;max-width:660px;margin:0 auto clamp(38px,5vw,58px);}
+.wwu-row{display:flex;align-items:stretch;gap:clamp(14px,2.2vw,28px);max-width:1140px;margin:0 auto;}
+.wwu-step{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0;}
+.wwu-med{position:relative;height:clamp(240px,28vw,340px);width:100%;display:flex;align-items:flex-end;justify-content:center;margin-bottom:12px;}
+.wwu-med img{height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 26px 44px rgba(0,0,0,0.65));}
+.wwu-card .num{position:absolute;top:-15px;left:-11px;z-index:2;width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;border:3px solid var(--bg);}
+.wwu-card{position:relative;flex:1;background:var(--card);border-radius:16px;padding:18px 20px;width:100%;box-shadow:0 0 26px -8px rgba(210,162,76,0.14),0 22px 48px -28px rgba(0,0,0,0.85);}
+.wwu-card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(180deg,rgba(210,162,76,0.7),rgba(210,162,76,0.22) 38%,rgba(210,162,76,0.05) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;}
+.wwu-title{display:flex;align-items:center;gap:11px;}
+.wwu-title .ic{width:34px;height:34px;border-radius:50%;background:var(--gold-soft);border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;}
+.wwu-title .ic svg{width:16px;height:16px;stroke-width:1.7;}
+.wwu-title b{font-family:var(--display);font-size:16.5px;font-weight:800;color:var(--white);letter-spacing:-0.01em;}
+.wwu-card .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:9px 0 0 45px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+.wwu-card p{font-size:13px;color:var(--mist);line-height:1.6;margin-top:12px;}
+.wwu-arr{align-self:flex-start;margin-top:clamp(92px,11.5vw,136px);color:rgba(210,162,76,0.6);flex-shrink:0;}
+.wwu-arr svg{width:24px;height:24px;}
+.wwu-cta{text-align:center;margin-top:clamp(34px,4vw,48px);}
+@media(max-width:760px){.wwu-row{flex-direction:column;gap:34px;align-items:stretch;}.wwu-arr{display:none;}.wwu-step{align-items:center;}.wwu-card{max-width:420px;}}
 
 /* ===== PRICING ===== */
 .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4.5vw,70px);align-items:center;}
@@ -341,13 +329,91 @@ h1,h2{font-family:var(--display);}
 .faq-list p{padding:0 0 18px;color:var(--ink-2);font-size:14px;line-height:1.7;}
 @media(max-width:900px){.faq-grid{grid-template-columns:1fr;}}
 
+/* ===== ROI CALCULATOR ===== */
+#math{background:#f7f5f0 url('img/calculator-bg.webp') center/cover no-repeat;}
+#pricing{background:#0a0a0c url('img/pricing-homepage-bg.webp') center/cover no-repeat;}
+#working-with-us{background:#0a0a0c url('img/working-with-us-bg.webp') center/cover no-repeat;}
+.roi-top{display:grid;grid-template-columns:1fr auto 1.35fr;gap:clamp(26px,3.5vw,56px);align-items:start;max-width:1220px;margin:0 auto;}
+.roi-slider{margin-top:30px;}
+.roi-slider>label{font-size:14px;font-weight:700;color:var(--ink);}
+.roi-val{font-family:var(--display);font-size:clamp(42px,4.6vw,60px);font-weight:800;color:var(--ink);margin:4px 0 10px;letter-spacing:-0.02em;}
+#roi-job{width:100%;-webkit-appearance:none;appearance:none;height:9px;margin-top:6px;border-radius:5px;background:linear-gradient(90deg,#c2903c var(--fill,13%),#e6dfd0 var(--fill,13%));outline:none;}
+#roi-job::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);border:3px solid #fff;box-shadow:0 4px 14px rgba(60,45,20,0.4);cursor:pointer;}
+#roi-job::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);border:3px solid #fff;box-shadow:0 4px 14px rgba(60,45,20,0.4);cursor:pointer;}
+.roi-minmax{display:flex;justify-content:space-between;font-size:12.5px;color:#8a8478;margin-top:9px;}
+.roi-tip{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--cream-line);border-radius:14px;padding:16px 18px;margin-top:28px;font-size:13px;color:var(--ink-2);line-height:1.6;box-shadow:0 14px 30px -24px rgba(60,45,20,0.35);}
+.roi-tip b{color:var(--ink);}
+.roi-tip .ic{width:38px;height:38px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}
+.roi-tip .ic svg{width:18px;height:18px;}
+/* flow diagram */
+.roi-flow{display:flex;flex-direction:column;align-items:center;padding-top:6px;}
+.rf-node{display:flex;flex-direction:column;align-items:center;text-align:center;}
+.rf-ic{width:58px;height:58px;border-radius:50%;background:#fff;border:1px solid var(--cream-line);box-shadow:0 12px 26px -16px rgba(60,45,20,0.45);display:flex;align-items:center;justify-content:center;color:var(--gold-deep);}
+.rf-ic svg{width:24px;height:24px;stroke-width:1.7;}
+.rf-ic.dark{background:#141414;border-color:#141414;color:var(--gold);}
+.rf-node b{font-family:var(--display);font-size:16px;font-weight:800;color:var(--ink);margin-top:9px;line-height:1.2;}
+.rf-node b.pos{color:#1d8a4b;}
+.rf-node span{font-size:11.5px;color:#8a8478;margin-top:2px;max-width:14ch;line-height:1.35;}
+.rf-link{height:24px;border-left:2px dashed rgba(169,124,51,0.55);margin:9px 0 7px;}
+/* right column */
+.roi-right{display:flex;flex-direction:column;gap:14px;}
+.roi-out{position:relative;background:linear-gradient(170deg,#191712,#0e0d0b);border-radius:20px;padding:clamp(24px,2.6vw,36px);text-align:center;box-shadow:0 0 90px -30px rgba(210,162,76,0.35),0 40px 80px -40px rgba(0,0,0,0.55);}
+.roi-out::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,rgba(210,162,76,0.75),rgba(210,162,76,0.22) 38%,rgba(210,162,76,0.05) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;}
+.roi-out .rlabel{font-size:10.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
+.ro-need{font-family:var(--display);font-size:19px;font-weight:800;color:var(--white);margin-top:10px;}
+.ro-big{font-family:var(--display);font-size:clamp(74px,7.5vw,116px);font-weight:800;line-height:0.95;color:var(--gold-2);text-shadow:0 0 48px rgba(230,190,110,0.55);margin:6px 0 4px;}
+.ro-cust{font-family:var(--display);font-size:22px;font-weight:800;color:var(--white);line-height:1.1;}
+.ro-per{font-size:13px;color:var(--mist);}
+.ro-check{display:flex;gap:9px;align-items:center;justify-content:center;border-top:1px solid var(--line);margin-top:16px;padding-top:15px;font-size:13.5px;color:#d8d3c9;text-align:left;}
+.ro-check svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;}
+.ro-stats{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line);margin-top:15px;padding-top:13px;}
+.ro-stat{text-align:center;padding:0 6px;border-left:1px solid var(--line);}
+.ro-stat:first-child{border-left:none;}
+.ro-stat b{display:block;color:#4cbf78;font-size:16.5px;font-weight:800;}
+.ro-stat i{font-style:normal;display:block;font-size:11.5px;color:var(--white);font-weight:600;margin-top:1px;}
+.ro-stat span{display:block;font-size:10.5px;color:var(--mist-2);margin-top:1px;}
+.roi-mini{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.mini-card{background:#fff;border:1px solid var(--cream-line);border-radius:14px;padding:16px;box-shadow:0 14px 30px -22px rgba(60,45,20,0.3);}
+.mini-card h4{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px;}
+.mrow{font-size:12px;color:var(--ink-2);display:flex;justify-content:space-between;gap:8px;margin-bottom:6px;}
+.mrow b{color:var(--ink);white-space:nowrap;}
+.mbar{height:8px;border-radius:4px;background:#eee7d9;overflow:hidden;margin-bottom:12px;}
+.mbar i{display:block;height:100%;background:linear-gradient(90deg,#e0b360,#c2903c);border-radius:4px;transition:width .25s;}
+.roi-badge{display:flex;gap:9px;align-items:center;background:#faf3e2;border:1px solid #eadfc2;border-radius:10px;padding:9px 12px;font-size:11.5px;color:var(--ink-2);line-height:1.4;}
+.roi-badge svg{width:16px;height:16px;color:var(--gold-deep);flex-shrink:0;}
+.roi-badge b{color:var(--ink);}
+.mini-chart svg{width:100%;height:auto;display:block;}
+.roi-bottom{display:flex;align-items:center;justify-content:center;gap:12px 26px;margin-top:clamp(32px,4vw,46px);flex-wrap:wrap;}
+.roi-risk{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--ink-2);line-height:1.4;text-align:left;}
+.roi-risk svg{width:26px;height:26px;color:var(--gold-deep);flex-shrink:0;}
+@media(max-width:1100px){
+  .roi-top{grid-template-columns:1fr;}
+  .roi-flow{display:none;}
+}
+@media(max-width:640px){.roi-mini{grid-template-columns:1fr;}.ro-stats{grid-template-columns:1fr;}.ro-stat{border-left:none;border-top:1px solid var(--line);padding:8px 0;}.ro-stat:first-child{border-top:none;}}
+
+/* ===== GOLDEN SMOKE ===== */
+main{position:relative;}
+.smoke{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.smoke svg{width:100%;height:100%;display:block;}
+main > section{position:relative;z-index:1;}
+@media(max-width:760px){.smoke{display:none;}}
+
 /* ===== FINAL CTA ===== */
-.fcta{background:
-  radial-gradient(800px 340px at 50% 115%,rgba(210,162,76,0.18),transparent 70%),
-  var(--bg);border-top:1px solid var(--line);text-align:center;padding:clamp(72px,9vw,120px) 0;}
-.fcta h2{font-size:clamp(30px,4vw,54px);font-weight:800;line-height:1.08;max-width:18ch;margin:0 auto;}
-.fcta p{font-size:clamp(15px,1.3vw,17.5px);color:var(--mist);margin:18px auto 30px;max-width:46ch;}
-.fcta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+.fcta{background:#0a0a0c url('img/final-cta-homepage.webp') center bottom/cover no-repeat;border-top:1px solid var(--line);text-align:center;padding:clamp(72px,9vw,120px) 0 clamp(130px,15vw,210px);}
+.fcta h2{font-size:clamp(30px,4vw,54px);font-weight:800;line-height:1.08;max-width:20ch;margin:18px auto 0;}
+.fcta p{font-size:clamp(15px,1.3vw,17.5px);color:var(--mist);margin:18px auto 0;max-width:46ch;}
+.fcta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:6px;}
+.fcta-cols{display:grid;grid-template-columns:repeat(4,1fr);max-width:960px;margin:36px auto 34px;}
+.fcta-col{padding:6px 18px;border-left:1px solid var(--line);}
+.fcta-col:first-child{border-left:none;}
+.fcta-col svg{width:26px;height:26px;color:var(--gold);margin:0 auto 10px;stroke-width:1.6;display:block;}
+.fcta-col b{display:block;font-size:13.5px;color:var(--white);font-weight:700;line-height:1.3;}
+.fcta-col span{display:block;font-size:11.5px;color:var(--mist);line-height:1.5;margin-top:4px;}
+.fcta-mini{display:flex;justify-content:center;gap:10px 26px;flex-wrap:wrap;margin-top:18px;font-size:12.5px;color:var(--mist);}
+.fcta-mini span{display:inline-flex;align-items:center;gap:7px;}
+.fcta-mini svg{width:15px;height:15px;color:var(--gold);flex-shrink:0;}
+@media(max-width:760px){.fcta-cols{grid-template-columns:1fr 1fr;gap:20px 0;}.fcta-col:nth-child(3){border-left:none;}}
 
 /* ===== FOOTER ===== */
 .foot{background:#060607;border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 40px;}
@@ -396,43 +462,33 @@ h1,h2{font-family:var(--display);}
         </a>
         <nav class="nav-links" aria-label="Primary">
             <a href="/" class="on">Home</a>
-            <div class="nav-dd">
+            <div class="nav-dd nav-dd-static">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="nav-dd-menu mega">
-                    <div class="mega-head">Systems &amp; Features</div>
-                    <div class="mega-grid">
-                        <a href="features/website.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
-                            <div><b>Custom Website</b><span>A lead-generating website, built in days</span></div>
-                        </a>
-                        <a href="features/missed-call-text-back.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
-                            <div><b>Missed Call Text-Back</b><span>Automatically text back missed calls</span></div>
-                        </a>
-                        <a href="features/review-automation.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-                            <div><b>5-Star Review Funnel</b><span>Get more 5-star reviews on autopilot</span></div>
-                        </a>
-                        <a href="features/lead-follow-up.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span>
-                            <div><b>Lead Follow-Up</b><span>Automatically follow up with leads via text</span></div>
-                        </a>
-                        <a href="features/local-seo.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                            <div><b>Local SEO</b><span>Actually get found on Google</span></div>
-                        </a>
-                        <a href="features/marketing-campaigns.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
-                            <div><b>Marketing Campaigns</b><span>Keep your customers thinking about you</span></div>
-                        </a>
-                        <a href="features/crm-and-booking.html" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span>
-                            <div><b>CRM &amp; Booking</b><span>Every lead and appointment in one place</span></div>
-                        </a>
-                        <a href="#included" class="mega-item">
-                            <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                            <div><b>Everything Included</b><span>See the whole system at a glance</span></div>
-                        </a>
+                    <div class="mega2-grid">
+                        <aside class="mega2-rail">
+                            <span class="m2-eyebrow">The Complete Solution</span>
+                            <div class="m2-title">Business <span>Growth</span> System</div>
+                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <a href="how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
+                        </aside>
+                        <div class="mega2-cards">
+                        <a href="features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
+                        <a href="features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
+                        <a href="features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
+                        <a href="features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
+                        <a href="features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
+                        <a href="features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
+                        <a href="features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
+                        <div class="m2-foot">
+                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <div>
+                                <b>Everything Working Together</b>
+                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
+                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -482,7 +538,7 @@ h1,h2{font-family:var(--display);}
     </div>
     <nav class="mnav-links" aria-label="Mobile">
         <a href="/">Home</a>
-        <a href="#included">Products</a>
+        <a href="#features">Products</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="work.html">Work</a>
@@ -490,11 +546,29 @@ h1,h2{font-family:var(--display);}
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
 <main id="main">
+
+<div class="smoke" aria-hidden="true">
+<svg viewBox="0 0 1440 4600" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="smk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d2a24c" stop-opacity="0"/>
+      <stop offset="0.12" stop-color="#d2a24c" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#e6be6e" stop-opacity="0.75"/>
+      <stop offset="0.95" stop-color="#d2a24c" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#d2a24c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="smkblur" x="-60%" y="-10%" width="220%" height="120%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="smkcore" x="-60%" y="-10%" width="220%" height="120%"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <path d="M1180 780 C 980 1220, 470 1330, 360 1730 C 260 2090, 940 2190, 1070 2560 C 1190 2900, 430 3120, 500 3560 C 560 3930, 1080 4050, 990 4600" fill="none" stroke="url(#smk)" stroke-width="150" stroke-linecap="round" opacity="0.07" filter="url(#smkblur)"/>
+  <path d="M1180 780 C 980 1220, 470 1330, 360 1730 C 260 2090, 940 2190, 1070 2560 C 1190 2900, 430 3120, 500 3560 C 560 3930, 1080 4050, 990 4600" fill="none" stroke="url(#smk)" stroke-width="30" stroke-linecap="round" opacity="0.11" filter="url(#smkcore)"/>
+</svg>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -518,9 +592,9 @@ h1,h2{font-family:var(--display);}
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>CRM &amp; More</li>
                 </ul>
                 <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+                    <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
                 </div>
-                <p class="hero-note"><span class="stars" aria-hidden="true">★★★★★</span> <b>No setup fee</b> &middot; No contract &middot; Cancel anytime</p>
+                <p class="hero-note"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>No setup fee</b> &middot; No contract &middot; Cancel anytime</p>
             </div>
 
             <div class="hero-visual">
@@ -580,7 +654,7 @@ h1,h2{font-family:var(--display);}
 </section>
 
 <!-- 5-STAR REVIEW FUNNEL -->
-<section class="sec reveal">
+<section class="sec reveal glow">
     <div class="wrap">
         <div class="wds-grid">
             <div>
@@ -654,7 +728,7 @@ h1,h2{font-family:var(--display);}
 </section>
 
 <!-- LOCAL SEO -->
-<section class="sec reveal">
+<section class="sec reveal glow">
     <div class="wrap">
         <div class="wds-grid">
             <div>
@@ -690,131 +764,76 @@ h1,h2{font-family:var(--display);}
     </div>
 </section>
 
-<!-- FEATURES -->
-<section class="light sec reveal" id="included">
+<!-- TRADES -->
+<section class="trades light sec reveal">
     <div class="wrap">
-        <div class="feat-head">
-            <span class="eyebrow">Every system you need. All in one place.</span>
-            <h2 class="h-lg">One monthly price. The whole system.</h2>
-        </div>
-        <div class="feat-grid">
-            <a class="feat-card" href="features/website.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><div><b>Website</b><span>Beautiful, fast websites that convert visitors into customers.</span></div></a>
-            <a class="feat-card" href="features/missed-call-text-back.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg><div><b>Missed Call Text-Back</b><span>A missed call never becomes a lost customer.</span></div></a>
-            <a class="feat-card" href="features/lead-follow-up.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg><div><b>Lead Follow-Up</b><span>Every lead gets chased until they book &mdash; automatically.</span></div></a>
-            <a class="feat-card" href="features/review-automation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Review Automation</b><span>Get more 5-star reviews on autopilot.</span></div></a>
-            <a class="feat-card" href="features/local-seo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Google Business Profile</b><span>Show up when locals search &mdash; without touching it.</span></div></a>
-            <a class="feat-card" href="features/local-seo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><div><b>Local SEO</b><span>Rank higher on Google and get found by more local customers.</span></div></a>
-            <a class="feat-card" href="features/marketing-campaigns.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="12" height="18" rx="2"/><path d="M8 18h4"/></svg><div><b>SMS Marketing</b><span>Stay top-of-mind with automated text campaigns.</span></div></a>
-            <a class="feat-card" href="features/marketing-campaigns.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>Email Campaigns</b><span>Past customers come back and buy again.</span></div></a>
-            <a class="feat-card" href="features/crm-and-booking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2h11v-2M12 12v2"/></svg><div><b>Pipeline &amp; CRM</b><span>Know where every job stands, at a glance.</span></div></a>
-            <a class="feat-card" href="features/crm-and-booking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16M12 15l1.5 3H10z"/></svg><div><b>Appointment Booking</b><span>A fuller calendar and fewer no-shows.</span></div></a>
-            <div class="feat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.14-1.4l2.1-1.6-2-3.5-2.5 1a7 7 0 0 0-2.4-1.4L13.5 2h-3l-.56 2.6a7 7 0 0 0-2.4 1.4l-2.5-1-2 3.5 2.1 1.6A7 7 0 0 0 5 12c0 .48.05.94.14 1.4l-2.1 1.6 2 3.5 2.5-1a7 7 0 0 0 2.4 1.4l.56 2.6h3l.56-2.6a7 7 0 0 0 2.4-1.4l2.5 1 2-3.5-2.1-1.6c.09-.46.14-.92.14-1.4z"/></svg><div><b>Workflow Automations</b><span>Hours of busywork handled while you work.</span></div></div>
-            <div class="feat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg><div><b>Analytics Dashboard</b><span>See exactly what&rsquo;s working, in real time.</span></div></div>
-            <div class="feat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-3"/><path d="M14 4h6v6M20 4l-9 9"/></svg><div><b>Integrations</b><span>Connect with the number, calendar, and tools you already use.</span></div></div>
-            <div class="feat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4" height="7" rx="1.5"/><rect x="18" y="13" width="4" height="7" rx="1.5"/></svg><div><b>Unlimited Support</b><span>Real humans. Fast responses. Whenever you need us.</span></div></div>
+        <div class="trades-head">
+            <span class="eyebrow">Built for the trades</span>
+            <h2 class="h-lg">Trades that we <span class="gold">work with.</span></h2>
+            <p class="lede">If a ringing phone means money in your business, the system fits.</p>
         </div>
     </div>
+    <div class="trow"><div class="tmarquee"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div></div></div></div>
+    <div class="trow rev"><div class="tmarquee"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div></div></div></div>
+    <p class="trades-note">Don&rsquo;t see your trade? If your customers call, text, or search &mdash; it works for you too.</p>
 </section>
 
-<!-- INDUSTRIES -->
-<section class="light sec reveal" id="industries">
+<!-- WORKING WITH US -->
+<section class="sec reveal glow" id="working-with-us">
     <div class="wrap">
-        <div class="ind-grid">
-            <div>
-                <span class="eyebrow">Built for service businesses</span>
-                <h2 class="h-lg">We help businesses in every industry grow.</h2>
-                <p class="lede">Law firms are our specialty &mdash; and any local business where a missed call is a lost customer.</p>
-            </div>
-            <div class="ind-row">
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 6l6-2 6 2M4 10l2-4 2 4a2 2 0 0 1-4 0zM16 10l2-4 2 4a2 2 0 0 1-4 0zM8 21h8"/></svg><span>Law Firms</span><em>intake &amp; consults</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><span>HVAC</span><em>after-hours calls</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8M6 10v9h12v-9"/></svg><span>Roofing</span><em>quote requests</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5 10v9h14v-9M10 19v-5h4v5"/></svg><span>Real Estate</span><em>buyer calls</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5l-6 6 2.4 2.4 6-6a4 4 0 0 0 5-5.4l-2.6 2.6-2-2z"/></svg><span>Contractors</span><em>new leads</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h8v8a4 4 0 0 1-8 0zM12 8V5a3 3 0 0 1 6 0v3"/></svg><span>Plumbing</span><em>emergency jobs</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span>Electrical</span><em>service calls</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c2 0 2 1 5 1s3-1 5-1c3 0 3 4 2 8s-2 9-4 9-1-6-3-6-1 6-3 6-3-5-4-9 0-8 2-8z"/></svg><span>Dental &amp; Med Spa</span><em>bookings</em></div>
-                <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg><span>&amp; More</span><em>ask us</em></div>
-            </div>
+        <div class="wwu-head">
+            <span class="eyebrow">What working with us looks like</span>
+            <h2 class="h-lg">From first call to live in <span class="gold">7&ndash;10 days.</span></h2>
+            <p class="lede">No long projects, no homework, no tech skills needed. You talk, we build, you go live.</p>
         </div>
-    </div>
-</section>
-
-<!-- PARTNER -->
-<section class="sec reveal">
-    <div class="wrap">
-        <div class="part-grid">
-            <div>
-                <span class="eyebrow">Why Northern Peak Systems?</span>
-                <h2 class="h-lg">More than just software. A partner in your growth.</h2>
-                <p class="lede">One Alberta shop, end to end. You talk to the person who built it &mdash; and we&rsquo;ll tell you straight what it can and can&rsquo;t do.</p>
-            </div>
-            <div class="part-cards">
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M9 15l2 2 4-4"/></svg><b>No Contracts</b><span>Month to month. Cancel anytime &mdash; no long-term commitments.</span></div>
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5l-6 6 2.4 2.4 6-6a4 4 0 0 0 5-5.4l-2.6 2.6-2-2z"/></svg><b>Done-For-You</b><span>We set everything up and handle the heavy lifting.</span></div>
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Canadian Support</b><span>Real support from a real person in Edmonton, Alberta.</span></div>
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2v6h-6M3 12a9 9 0 0 1 15-6.7L17 8"/><path d="M7 22v-6h6M21 12a9 9 0 0 1-15 6.7L7 16"/></svg><b>Unlimited Updates</b><span>We constantly improve the system. It&rsquo;s all included.</span></div>
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><b>Built Around You</b><span>Customized to how your business actually runs.</span></div>
-                <div class="part-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg><b>Results Driven</b><span>Focused on getting you more leads and more revenue.</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- STEPS -->
-<section class="light sec reveal">
-    <div class="wrap">
-        <div class="steps-grid">
-            <div>
-                <span class="eyebrow">Simple process. Big results.</span>
-                <h2 class="h-lg">Get started in 3 simple steps.</h2>
-            </div>
-            <div class="steps-row">
-                <div class="step">
-                    <div class="circ"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></div>
-                    <b>Book Your Call</b>
-                    <p>A 20-minute demo call. We learn about your business and goals &mdash; no pressure.</p>
+        <div class="wwu-row">
+            <div class="wwu-step">
+                <div class="wwu-med">
+                    <img src="img/working-with-us-demo.webp" alt="" loading="lazy" decoding="async" width="1236" height="1236">
                 </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.14-1.4l2.1-1.6-2-3.5-2.5 1a7 7 0 0 0-2.4-1.4L13.5 2h-3l-.56 2.6a7 7 0 0 0-2.4 1.4l-2.5-1-2 3.5 2.1 1.6A7 7 0 0 0 5 12c0 .48.05.94.14 1.4l-2.1 1.6 2 3.5 2.5-1a7 7 0 0 0 2.4 1.4l.56 2.6h3l.56-2.6a7 7 0 0 0 2.4-1.4l2.5 1 2-3.5-2.1-1.6c.09-.46.14-.92.14-1.4z"/></svg></div>
-                    <b>We Build Everything</b>
-                    <p>Your website and every automation, set up, customized, and tested &mdash; in 7&ndash;10 days.</p>
+                <div class="wwu-card">
+                    <span class="num">01</span>
+                    <div class="wwu-title">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span>
+                        <b>The demo call</b>
+                    </div>
+                    <span class="tag">Free &middot; 20 minutes</span>
+                    <p>We learn your business and show you the system running. You decide &mdash; no pressure, no obligation.</p>
                 </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 3 4 7 4 10l2 3-3 1a3 3 0 0 1-6 0l-3-1 2-3c0-3 1-7 4-10z"/><circle cx="12" cy="10" r="1.6"/><path d="M9 20l-1.5 2M15 20l1.5 2"/></svg></div>
-                    <b>Launch &amp; Grow</b>
-                    <p>We launch your system on a 25-minute call, and you start seeing results.</p>
+            </div>
+            <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="wwu-step">
+                <div class="wwu-med">
+                    <img src="img/working-with-us-laptop.webp" alt="" loading="lazy" decoding="async" width="1147" height="1147">
+                </div>
+                <div class="wwu-card">
+                    <span class="num">02</span>
+                    <div class="wwu-title">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5l-6 6 2.4 2.4 6-6a4 4 0 0 0 5-5.4l-2.6 2.6-2-2z"/></svg></span>
+                        <b>We build your system</b>
+                    </div>
+                    <span class="tag">7&ndash;10 days</span>
+                    <p>Your website and every tool behind it &mdash; tailored to your business, connected, and tested. All done for you.</p>
+                </div>
+            </div>
+            <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="wwu-step">
+                <div class="wwu-med">
+                    <img src="img/working-with-us-rocketship.webp" alt="" loading="lazy" decoding="async" width="1129" height="1129">
+                </div>
+                <div class="wwu-card">
+                    <span class="num">03</span>
+                    <div class="wwu-title">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 3 4 7 4 10l2 3-3 1a3 3 0 0 1-6 0l-3-1 2-3c0-3 1-7 4-10z"/><circle cx="12" cy="10" r="1.6"/><path d="M9 20l-1.5 2M15 20l1.5 2"/></svg></span>
+                        <b>The launch call</b>
+                    </div>
+                    <span class="tag">Go live</span>
+                    <p>We walk you through your finished website, flip the switch together, and leads start landing on your phone.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- PRICING -->
-<section class="sec reveal" id="pricing">
-    <div class="wrap">
-        <div class="price-grid">
-            <div>
-                <span class="eyebrow">Simple pricing</span>
-                <h2 class="h-lg">Everything you need. One simple price.</h2>
-                <p class="lede">No per-call fees, no surprise invoices, no long-term contract &mdash; just one flat rate for the whole system.</p>
-                <ul class="price-checks">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No per-call fees</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No setup fees</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Keep your phone number</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Cancel anytime</li>
-                </ul>
-                <p style="margin-top:22px;font-size:13.5px;color:var(--mist);">Just need the website? We build it free &mdash; <b style="color:var(--white);font-weight:600;">$97/month</b> covers hosting, security, and updates. <a href="pricing.html" style="color:var(--gold);">See pricing &rarr;</a></p>
-            </div>
-            <div class="price-card">
-                <span class="plabel">Business Growth System</span>
-                <div class="price-num"><b>$297</b><span>/month</span></div>
-                <p class="price-sub">Everything included. Website, missed-call text-back, reviews, and every automation.</p>
-                <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
-                <p class="pnote">No setup fee &middot; No contract &middot; Cancel anytime</p>
-            </div>
+        <div class="wwu-cta">
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>
@@ -855,13 +874,161 @@ h1,h2{font-family:var(--display);}
     </div>
 </section>
 
+<!-- PRICING -->
+<section class="sec reveal glow" id="pricing">
+    <div class="wrap">
+        <div class="price-grid">
+            <div>
+                <span class="eyebrow">Simple pricing</span>
+                <h2 class="h-lg">Everything you need. One simple price.</h2>
+                <p class="lede">No per-call fees, no surprise invoices, no long-term contract &mdash; just one flat rate for the whole system.</p>
+                <ul class="price-checks">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No per-call fees</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No setup fees</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Keep your phone number</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Cancel anytime</li>
+                </ul>
+                <p style="margin-top:22px;font-size:13.5px;color:var(--mist);">Just need the website? We build it free &mdash; <b style="color:var(--white);font-weight:600;">$97/month</b> covers hosting, security, and updates. <a href="pricing.html" style="color:var(--gold);">See pricing &rarr;</a></p>
+            </div>
+            <div class="price-card">
+                <span class="plabel">Business Growth System</span>
+                <div class="price-num"><b>$297</b><span>/month</span></div>
+                <p class="price-sub">Everything included. Website, missed-call text-back, reviews, and every automation.</p>
+                <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+                <p class="pnote">No setup fee &middot; No contract &middot; Cancel anytime</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section class="light sec reveal" id="math">
+    <div class="wrap">
+        <div class="roi-top">
+            <div>
+                <span class="eyebrow">The math</span>
+                <h2 class="h-lg">The system pays for itself <span class="gold">fast.</span></h2>
+                <p class="lede">Move the slider and see how many jobs it takes to pay for everything.</p>
+                <div class="roi-slider">
+                    <label for="roi-job">Typical Job Value</label>
+                    <div class="roi-val">$<span id="rv">850</span></div>
+                    <input type="range" id="roi-job" min="100" max="10000" step="50" value="850">
+                    <div class="roi-minmax"><span>$100</span><span>$10,000</span></div>
+                </div>
+                <div class="roi-tip">
+                    <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 3.6 10.8c-.6.5-.6 1.2-.6 2.2H9c0-1-.0-1.7-.6-2.2A6 6 0 0 1 12 3z"/></svg></span>
+                    <p>Back-of-napkin math: $297 a month, divided by what a job is worth to you, rounded up. <b>No funny business.</b></p>
+                </div>
+            </div>
+            <div class="roi-flow" aria-hidden="true">
+                <div class="rf-node">
+                    <span class="rf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2M3 13h18"/></svg></span>
+                    <b>$<span id="fv">850</span></b>
+                    <span>Job Value</span>
+                </div>
+                <div class="rf-link"></div>
+                <div class="rf-node">
+                    <span class="rf-ic dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+                    <b>Pays for</b>
+                </div>
+                <div class="rf-link"></div>
+                <div class="rf-node">
+                    <span class="rf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.14-1.4l2.1-1.6-2-3.5-2.5 1a7 7 0 0 0-2.4-1.4L13.5 2h-3l-.56 2.6a7 7 0 0 0-2.4 1.4l-2.5-1-2 3.5 2.1 1.6A7 7 0 0 0 5 12c0 .48.05.94.14 1.4l-2.1 1.6 2 3.5 2.5-1a7 7 0 0 0 2.4 1.4l.56 2.6h3l.56-2.6a7 7 0 0 0 2.4-1.4l2.5 1 2-3.5-2.1-1.6c.09-.46.14-.92.14-1.4z"/></svg></span>
+                    <b>The Entire<br>Growth System</b>
+                </div>
+                <div class="rf-link"></div>
+                <div class="rf-node">
+                    <span class="rf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l5.5-5.5 3 3L20 9"/><path d="M15 9h5v5"/></svg></span>
+                    <b class="pos" id="fp">+$553</b>
+                    <span>Profit Per Job</span>
+                </div>
+            </div>
+            <div class="roi-right">
+                <div class="roi-out">
+                    <span class="rlabel">To pay for the whole system</span>
+                    <div class="ro-need">You only need</div>
+                    <div class="ro-big" id="rn">1</div>
+                    <div class="ro-cust" id="rc">new customer</div>
+                    <div class="ro-per">per month</div>
+                    <div class="ro-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg><span id="rline">One new customer pays for your entire system.</span></div>
+                    <div class="ro-stats">
+                        <div class="ro-stat"><b id="rs1">+$553</b><i>Profit</i><span>from customer #1</span></div>
+                        <div class="ro-stat"><b id="rs2">+$1,403</b><i>Profit</i><span>after customer #2</span></div>
+                        <div class="ro-stat"><b id="rs3">+$2,253</b><i>Profit</i><span>after customer #3</span></div>
+                    </div>
+                </div>
+                <div class="roi-mini">
+                    <div class="mini-card">
+                        <h4>Where your money goes</h4>
+                        <div class="mrow"><span>System Investment</span><b>$297/mo</b></div>
+                        <div class="mbar"><i id="mb1" style="width:35%"></i></div>
+                        <div class="mrow"><span>Value You Receive</span><b id="mv2">$850+/job</b></div>
+                        <div class="mbar"><i style="width:100%"></i></div>
+                        <div class="roi-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/></svg><span><b><span id="mroi">186%</span> ROI</b> from the very first job.</span></div>
+                    </div>
+                    <div class="mini-card mini-chart">
+                        <h4>Cumulative Profit Over Time</h4>
+                        <svg viewBox="0 0 300 150" aria-hidden="true">
+                            <polyline id="ch-line" points="30,120 110,95 190,70 270,45" fill="none" stroke="#c2903c" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle id="ch-d1" cx="30" cy="120" r="4" fill="#c2903c"/>
+                            <circle id="ch-d2" cx="110" cy="95" r="4" fill="#c2903c"/>
+                            <circle id="ch-d3" cx="190" cy="70" r="4" fill="#c2903c"/>
+                            <circle id="ch-d4" cx="270" cy="45" r="4" fill="#c2903c"/>
+                            <text id="ch-t1" x="30" y="106" text-anchor="middle" font-size="10" fill="#1d8a4b" font-weight="700">+$553</text>
+                            <text id="ch-t2" x="110" y="81" text-anchor="middle" font-size="10" fill="#1d8a4b" font-weight="700">+$1,106</text>
+                            <text id="ch-t3" x="190" y="56" text-anchor="middle" font-size="10" fill="#1d8a4b" font-weight="700">+$1,659</text>
+                            <text id="ch-t4" x="270" y="31" text-anchor="middle" font-size="10" fill="#1d8a4b" font-weight="700">+$2,212</text>
+                            <text x="30" y="143" text-anchor="middle" font-size="9.5" fill="#8a8478">Month 1</text>
+                            <text x="110" y="143" text-anchor="middle" font-size="9.5" fill="#8a8478">Month 2</text>
+                            <text x="190" y="143" text-anchor="middle" font-size="9.5" fill="#8a8478">Month 3</text>
+                            <text x="270" y="143" text-anchor="middle" font-size="9.5" fill="#8a8478">Month 4</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="roi-bottom">
+            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+            <div class="roi-risk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/><path d="M9 12l2 2 4-4"/></svg><span>Risk-free. No contracts.<br>Cancel anytime.</span></div>
+        </div>
+    </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="fcta reveal">
     <div class="wrap">
-        <h2>Stop losing customers. Start growing your business.</h2>
-        <p>Let&rsquo;s build a growth system that works while you sleep.</p>
+        <span class="eyebrow">The next step</span>
+        <h2>Stop wondering <span class="gold">where your next job</span> is coming from.</h2>
+        <p>We&rsquo;ll build the website, local SEO, review system, and automations that help more homeowners find your business and <span class="gold">choose you</span>.</p>
+        <div class="fcta-cols">
+            <div class="fcta-col">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <b>Professional Website</b>
+                <span>A site that builds trust and converts visitors.</span>
+            </div>
+            <div class="fcta-col">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+                <b>5-Star Reviews</b>
+                <span>Build credibility and stand out locally.</span>
+            </div>
+            <div class="fcta-col">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <b>Local SEO</b>
+                <span>Show up when local customers search.</span>
+            </div>
+            <div class="fcta-col">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></svg>
+                <b>Missed Call Text Back</b>
+                <span>Never miss a lead, day or night.</span>
+            </div>
+        </div>
         <div class="fcta-actions">
-            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>Book a Call <span class="arr">&rarr;</span></a>
+        </div>
+        <div class="fcta-mini">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20-minute strategy call</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/></svg>No obligation</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 9-7 9-7-9z"/></svg>Live in 7&ndash;10 days</span>
         </div>
     </div>
 </section>
@@ -926,6 +1093,45 @@ mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM
   var w=document.getElementById('wave');if(!w)return;
   var hs=[14,26,38,22,34,18,42,30,20,36,44,26,16,32,40,22,34,18,28,42,24,14,30,20];
   for(var i=0;i<hs.length;i++){var b=document.createElement('i');b.style.height=hs[i]+'px';b.style.animationDelay=(i*0.07)+'s';w.appendChild(b);}
+})();
+// payback calculator (per month)
+(function(){
+  var job=document.getElementById('roi-job');
+  if(!job)return;
+  var MONTH=297;
+  var el=function(id){return document.getElementById(id);};
+  function money(n){return Math.round(n).toLocaleString('en-CA');}
+  function signed(n){return (n>=0?'+$':'\u2212$')+money(Math.abs(n));}
+  function calc(){
+    var v=Math.max(1,parseFloat(job.value)||1);
+    job.style.setProperty('--fill',((v-100)/(10000-100)*100)+'%');
+    el('rv').textContent=money(v);
+    el('fv').textContent=money(v);
+    var profit=v-MONTH;
+    el('fp').textContent=signed(profit);
+    var n=Math.max(1,Math.ceil(MONTH/v));
+    el('rn').textContent=n;
+    el('rc').textContent=(n===1?'new customer':'new customers');
+    el('rline').textContent=(n===1?'One new customer pays for your entire system.':n+' new customers pay for your entire system.');
+    for(var k=1;k<=3;k++){el('rs'+k).textContent=signed(k*v-MONTH);}
+    el('mb1').style.width=Math.max(6,Math.min(100,MONTH/v*100))+'%';
+    el('mv2').textContent='$'+money(v)+'+/job';
+    el('mroi').textContent=(profit>0?Math.round(profit/MONTH*100):0)+'%';
+    var vals=[1,2,3,4].map(function(m){return m*(v-MONTH);});
+    var max=Math.max.apply(null,vals.map(Math.abs).concat([1]));
+    var xs=[30,110,190,270],pts=[];
+    for(var i=0;i<4;i++){
+      var y=125-Math.max(0,vals[i])/max*95;
+      pts.push(xs[i]+','+y.toFixed(1));
+      el('ch-d'+(i+1)).setAttribute('cy',y.toFixed(1));
+      var t=el('ch-t'+(i+1));
+      t.setAttribute('y',(y-13).toFixed(1));
+      t.textContent=signed(vals[i]);
+    }
+    el('ch-line').setAttribute('points',pts.join(' '));
+  }
+  job.addEventListener('input',calc);
+  calc();
 })();
 // reveal on scroll
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
