@@ -145,6 +145,9 @@ PAGES = [
     },
     {
         "slug": "website",
+        "custom": True,  # hand-built page; excluded from regeneration
+        "hero_art": True,
+        "hero_bg": "custom-websites-hero.webp",
         "label": "Website",
         "icon": "globe",
         "short": "A fast, hand-built website that converts visitors into leads.",
@@ -191,6 +194,7 @@ PAGES = [
     },
     {
         "slug": "review-automation",
+        "custom": True,
         "label": "Review Automation",
         "icon": "star",
         "short": "Get more 5-star Google reviews on autopilot.",
@@ -535,6 +539,12 @@ h1,h2{font-family:var(--display);}
 .fhero{overflow:hidden;padding:clamp(48px,6vw,84px) 0;background:var(--bg);}
 .fhero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.85;}
 .fhero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.fhero.fhero-art{display:flex;align-items:center;min-height:min(76vh,720px);}
+.fhero.fhero-art > .wrap{width:100%;}
+.fhero.fhero-art .fhero-bg{opacity:1;}
+.fhero.fhero-art .fhero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,0.82) 0%,rgba(10,10,12,0.55) 34%,rgba(10,10,12,0.12) 58%,rgba(10,10,12,0) 74%),linear-gradient(to top,rgba(10,10,12,0.9),rgba(10,10,12,0) 30%);}
+.fhero.fhero-art .fhero-grid{grid-template-columns:1fr;}
+.fhero.fhero-art .fhero-grid > div:first-child{max-width:600px;}
 .fhero .wrap{position:relative;z-index:2;}
 .fhero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(30px,4vw,70px);align-items:center;}
 .fhero h1{font-size:clamp(34px,4.2vw,56px);font-weight:800;line-height:1.06;margin:16px 0 14px;}
@@ -896,9 +906,9 @@ def page_html(page):
 <main id="main">
 
 <!-- HERO -->
-<section class="fhero">
+<section class="fhero%(hero_art_class)s">
     <div class="fhero-bg" aria-hidden="true">
-        <img src="../img/hero-bg.webp" alt="" fetchpriority="high" decoding="async" width="1648" height="954">
+        <img src="../img/%(hero_bg)s" alt="" fetchpriority="high" decoding="async" width="1648" height="954">
     </div>
     <div class="wrap">
         <div class="fhero-grid">
@@ -912,7 +922,7 @@ def page_html(page):
                 </div>
                 <p class="fhero-note"><b>Included in the $297/mo system</b> &middot; No setup fee &middot; Cancel anytime</p>
             </div>
-            <div aria-hidden="true">%(mock)s</div>
+%(hero_visual)s
         </div>
     </div>
 </section>
@@ -1003,6 +1013,10 @@ def page_html(page):
         "nav": nav_html(page["slug"]), "label": esc(page["label"]),
         "eyebrow": esc(page["eyebrow"]), "h1": page["h1"], "sub": esc(page["sub"]),
         "mock": page["mock"],
+        "hero_bg": page.get("hero_bg", "hero-bg.webp"),
+        "hero_art_class": " fhero-art" if page.get("hero_art") else "",
+        "hero_visual": ("" if page.get("hero_art")
+                        else '            <div aria-hidden="true">' + page["mock"] + '</div>'),
         "split_head": esc(page["split_head"]), "split_copy": esc(page["split_copy"]),
         "checks": "\n                ".join("<li>%s%s</li>" % (CHECK, esc(c)) for c in page["checks"]),
         "steps": steps_html(page), "faq": faq_html(page),
@@ -1015,6 +1029,8 @@ def page_html(page):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     for page in PAGES:
+        if page.get("custom"):
+            continue
         path = os.path.join(OUT_DIR, page["slug"] + ".html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(page_html(page))

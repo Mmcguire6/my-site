@@ -238,7 +238,7 @@ def patch_gen_locations() -> None:
 
 ROOT_PAGES = ["about.html", "how.html", "faq.html", "contact.html", "work.html",
               "locations.html", "privacy.html", "terms.html", "404.html"]
-SUB_PAGES = ["blog/index.html", "blog/why-is-my-website-so-slow.html"]
+SUB_PAGES = ["blog/index.html", "blog/why-is-my-website-so-slow.html", "features/website.html"]
 
 
 def main():

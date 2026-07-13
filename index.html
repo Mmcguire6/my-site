@@ -445,6 +445,13 @@ main > section{position:relative;z-index:1;}
   .reveal{opacity:1;transform:none;transition:none;}
   .sys-card,.sys-hub,.phone-wave i{animation:none;}
 }
+/* mobile: lighter hero + stats so visitors reach content faster */
+@media(max-width:700px){
+  .hero-checks li:nth-child(2),.hero-checks li:nth-child(4),.hero-checks li:nth-child(n+7){display:none;}
+}
+@media(max-width:540px){
+  .stat:nth-child(2),.stat:nth-child(5){display:none;}
+}
 </style>
 
 <!-- Analytics -->
@@ -573,7 +580,7 @@ main > section{position:relative;z-index:1;}
 <!-- HERO -->
 <section class="hero">
     <div class="hero-bg" aria-hidden="true">
-        <img src="img/northern-peak-hero-bg.webp" alt="" fetchpriority="high" decoding="async" width="1536" height="1024">
+        <img src="img/northern-peak-hero-bg.webp" srcset="img/northern-peak-hero-bg-m.webp 900w, img/northern-peak-hero-bg.webp 1536w" sizes="100vw" alt="" fetchpriority="high" decoding="async" width="1536" height="1024">
     </div>
     <div class="wrap">
         <div class="hero-grid">
@@ -598,7 +605,7 @@ main > section{position:relative;z-index:1;}
             </div>
 
             <div class="hero-visual">
-                <img src="img/hero-image.webp" alt="Diagram of the Northern Peak growth system: missed calls texted back, appointments booked, leads followed up, reviews requested and posted to Google, and customers returning" fetchpriority="high" decoding="async" width="1536" height="1024">
+                <img src="img/hero-image.webp" srcset="img/hero-image-m.webp 720w, img/hero-image.webp 1536w" sizes="(max-width: 1120px) 90vw, 600px" alt="Diagram of the Northern Peak growth system: missed calls texted back, appointments booked, leads followed up, reviews requested and posted to Google, and customers returning" fetchpriority="high" decoding="async" width="1536" height="1024">
             </div>
         </div>
     </div>
@@ -621,7 +628,7 @@ main > section{position:relative;z-index:1;}
     <div class="wrap">
         <div class="wds-grid">
             <div class="wds-shot">
-                <img src="img/summit-home-work.webp" alt="Custom construction-company website design shown on a laptop and a phone" loading="lazy" decoding="async" width="1536" height="1024">
+                <img src="img/summit-home-work.webp" srcset="img/summit-home-work-m.webp 720w, img/summit-home-work.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="Custom construction-company website design shown on a laptop and a phone" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
             <div>
                 <span class="eyebrow">01 / Custom Websites</span>
@@ -684,7 +691,7 @@ main > section{position:relative;z-index:1;}
                 </div>
             </div>
             <div class="wds-shot">
-                <img src="img/summit-review.webp" class="faded" alt="Phone showing a review request with five gold stars and a 5.0 Google review card" loading="lazy" decoding="async" width="1536" height="1024">
+                <img src="img/summit-review.webp" srcset="img/summit-review-m.webp 720w, img/summit-review.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" class="faded" alt="Phone showing a review request with five gold stars and a 5.0 Google review card" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
         </div>
     </div>
@@ -695,7 +702,7 @@ main > section{position:relative;z-index:1;}
     <div class="wrap">
         <div class="wds-grid">
             <div class="wds-shot">
-                <img src="img/summit-missed-call.webp" class="faded" alt="A missed call on a phone triggering an instant automated text-back message" loading="lazy" decoding="async" width="1536" height="1024">
+                <img src="img/summit-missed-call.webp" srcset="img/summit-missed-call-m.webp 720w, img/summit-missed-call.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" class="faded" alt="A missed call on a phone triggering an instant automated text-back message" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
             <div>
                 <span class="eyebrow">03 / Missed Call Text-Back</span>
@@ -758,7 +765,7 @@ main > section{position:relative;z-index:1;}
                 </div>
             </div>
             <div class="wds-shot">
-                <img src="img/summit-localseo.webp" class="faded" alt="Phone showing a Google search for a local roofing contractor with a top-ranked business profile, map pin, and rising chart" loading="lazy" decoding="async" width="1536" height="1024">
+                <img src="img/summit-localseo.webp" srcset="img/summit-localseo-m.webp 720w, img/summit-localseo.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" class="faded" alt="Phone showing a Google search for a local roofing contractor with a top-ranked business profile, map pin, and rising chart" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
         </div>
     </div>
@@ -789,7 +796,7 @@ main > section{position:relative;z-index:1;}
         <div class="wwu-row">
             <div class="wwu-step">
                 <div class="wwu-med">
-                    <img src="img/working-with-us-demo.webp" alt="" loading="lazy" decoding="async" width="1236" height="1236">
+                    <img src="img/working-with-us-demo.webp" srcset="img/working-with-us-demo-m.webp 680w, img/working-with-us-demo.webp 1236w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1236" height="1236">
                 </div>
                 <div class="wwu-card">
                     <span class="num">01</span>
@@ -804,7 +811,7 @@ main > section{position:relative;z-index:1;}
             <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
             <div class="wwu-step">
                 <div class="wwu-med">
-                    <img src="img/working-with-us-laptop.webp" alt="" loading="lazy" decoding="async" width="1147" height="1147">
+                    <img src="img/working-with-us-laptop.webp" srcset="img/working-with-us-laptop-m.webp 680w, img/working-with-us-laptop.webp 1147w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1147" height="1147">
                 </div>
                 <div class="wwu-card">
                     <span class="num">02</span>
@@ -819,7 +826,7 @@ main > section{position:relative;z-index:1;}
             <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
             <div class="wwu-step">
                 <div class="wwu-med">
-                    <img src="img/working-with-us-rocketship.webp" alt="" loading="lazy" decoding="async" width="1129" height="1129">
+                    <img src="img/working-with-us-rocketship.webp" srcset="img/working-with-us-rocketship-m.webp 680w, img/working-with-us-rocketship.webp 1129w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1129" height="1129">
                 </div>
                 <div class="wwu-card">
                     <span class="num">03</span>
