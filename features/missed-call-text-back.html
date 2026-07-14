@@ -16,7 +16,11 @@
 <meta property="og:title" content="Missed Call Text-Back for Local Business | Northern Peak Systems">
 <meta property="og:description" content="Every missed call gets an instant text-back, so the lead books with you instead of calling the next name on the list. Works 24/7, after hours and weekends. Part of the $297/mo Business Growth System.">
 <meta property="og:site_name" content="Northern Peak Systems">
+<meta property="og:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
 
 <script type="application/ld+json">
 {
@@ -271,6 +275,79 @@ h1,h2{font-family:var(--display);}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
 .reveal.in{opacity:1;transform:none;}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* ===== missed call design ===== */
+.light .eyebrow{color:var(--gold-deep);}
+.light .gold{color:var(--gold-deep);}
+.light.sec{position:relative;margin:clamp(18px,2.4vw,34px) clamp(10px,1.8vw,32px);border-radius:clamp(22px,2.8vw,40px);overflow:hidden;box-shadow:0 0 34px -6px rgba(210,162,76,0.18),inset 0 1px 0 rgba(255,255,255,0.65),0 30px 80px -50px rgba(0,0,0,0.9);}
+.light.sec::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,rgba(210,162,76,0.85),rgba(210,162,76,0.3) 30%,rgba(210,162,76,0.07) 62%,rgba(210,162,76,0.03) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;z-index:5;}
+/* hero */
+.mch{position:relative;overflow:hidden;background-color:#0a0a0c;background-image:linear-gradient(90deg,rgba(10,10,12,0.9) 0%,rgba(10,10,12,0.62) 44%,rgba(10,10,12,0.24) 100%),url('../img/missed-call-hero-bg.webp');background-size:cover,cover;background-position:center,center;background-repeat:no-repeat;padding:clamp(48px,5.5vw,84px) 0 clamp(40px,5vw,68px);}
+.mch::after{content:"";position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,rgba(10,10,12,0.85),transparent);pointer-events:none;}
+.mch-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr 0.94fr;gap:clamp(30px,4vw,64px);align-items:center;}
+.mch h1{font-family:var(--display);font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.07;color:var(--white);margin:18px 0 18px;}
+.mch-sub{font-size:clamp(14.5px,1.3vw,17px);color:#d8d3c9;line-height:1.7;max-width:42ch;}
+.mch-actions{margin:26px 0 8px;}
+.mch-note{display:block;font-size:12.5px;color:var(--mist);margin-top:12px;}
+.mch-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.14);}
+.mch-badges span{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;color:var(--white);}
+.mch-badges svg{width:18px;height:18px;color:var(--gold);stroke-width:1.8;flex-shrink:0;}
+.mch-vis{position:relative;display:flex;justify-content:center;}
+.mch-vis img{width:min(440px,92%);height:auto;filter:drop-shadow(0 44px 80px rgba(0,0,0,0.85));}
+.mch-note2{position:absolute;bottom:16%;right:max(-6px,2%);width:min(150px,26%);color:var(--gold);text-align:center;}
+.mch-note2 svg{width:44px;height:44px;display:block;margin:0 auto 4px 14px;}
+.mch-note2 span{display:block;font-family:'Segoe Script','Bradley Hand',cursive;font-size:16.5px;line-height:1.4;transform:rotate(-4deg);}
+/* why it matters */
+.mcw{padding:clamp(56px,7vw,96px) 0;}
+.mcw-split{display:grid;grid-template-columns:minmax(250px,0.8fr) 1.35fr;gap:clamp(26px,3.5vw,60px);align-items:center;}
+.mcw h2{font-family:var(--display);font-size:clamp(26px,2.9vw,40px);font-weight:800;color:var(--ink);line-height:1.12;margin-top:12px;}
+.mcw-copy p{font-size:14.5px;color:var(--ink-2);line-height:1.7;margin-top:14px;max-width:40ch;}
+.mcw-list{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,18px);}
+.mcw-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--cream-line);border-radius:13px;padding:15px 18px;box-shadow:0 18px 40px -30px rgba(60,45,20,0.35);}
+.mcw-item svg{width:20px;height:20px;color:var(--gold-deep);stroke-width:1.8;flex-shrink:0;}
+.mcw-item span{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.45;}
+/* how it works + faq */
+.mcp{position:relative;padding:clamp(64px,8vw,104px) 0 clamp(44px,5vw,70px);background:radial-gradient(ellipse 50% 55% at 50% 0%,rgba(210,162,76,0.07),transparent 70%),#0a0a0c;}
+.mcp-split{display:grid;grid-template-columns:minmax(250px,0.72fr) 1.5fr;gap:clamp(26px,4vw,64px);align-items:center;}
+.mcp h2{font-family:var(--display);font-size:clamp(26px,3vw,42px);font-weight:800;color:var(--white);line-height:1.1;margin-top:12px;}
+.mcp-copy p{font-size:14.5px;color:var(--mist);line-height:1.7;margin-top:14px;max-width:34ch;}
+.mcp-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,34px);}
+.mcp-step{position:relative;text-align:center;}
+.mcp-step:not(:last-child)::after{content:"\2192";position:absolute;left:100%;top:26px;width:clamp(16px,2.2vw,34px);display:flex;align-items:center;justify-content:center;color:rgba(210,162,76,0.75);font-size:22px;}
+.mcp-ic{position:relative;width:76px;height:76px;border-radius:50%;background:#141118;border:1px solid rgba(210,162,76,0.4);display:inline-flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 0 30px rgba(210,162,76,0.14);}
+.mcp-ic svg{width:28px;height:28px;color:var(--gold);stroke-width:1.7;}
+.mcp-ic i{position:absolute;top:-3px;right:-3px;width:24px;height:24px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;font-style:normal;font-size:12px;font-weight:800;font-family:var(--display);display:flex;align-items:center;justify-content:center;}
+.mcp-step b{display:block;font-family:var(--display);font-size:16.5px;font-weight:800;color:var(--white);line-height:1.3;}
+.mcp-step p{font-size:13px;color:var(--mist);line-height:1.65;margin-top:8px;max-width:26ch;margin-left:auto;margin-right:auto;}
+.mcq{padding:clamp(56px,7vw,96px) 0;}
+.mcq h2{font-family:var(--display);font-size:clamp(28px,3.4vw,44px);font-weight:800;color:var(--ink);margin:12px 0 10px;}
+.mcq-sub{font-size:14px;color:var(--ink-2);margin-bottom:24px;}
+.mcq .faq-list details{background:#fff;border-color:var(--cream-line);box-shadow:0 18px 40px -30px rgba(60,45,20,0.35);}
+.mcq .faq-list summary{color:var(--ink);}
+.mcq .faq-list p{color:#55503f;}
+.light .btn-line{color:var(--gold-deep);border-color:rgba(169,124,51,0.45);}
+.light .btn-line:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
+/* final cta */
+.mcc{position:relative;background:#0a0a0c url('../img/missed-call-hero-bg.webp') center/cover no-repeat;padding:clamp(72px,9vw,130px) 0;text-align:center;}
+.mcc::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,0.88) 0%,rgba(10,10,12,0.55) 60%,rgba(10,10,12,0.75) 100%);pointer-events:none;}
+.mcc .wrap{position:relative;z-index:1;}
+.mcc h2{font-family:var(--display);font-size:clamp(30px,3.8vw,50px);font-weight:800;color:var(--white);line-height:1.12;max-width:22ch;margin:0 auto;}
+.mcc p{font-size:clamp(14.5px,1.25vw,16.5px);color:#d8d3c9;margin:16px auto 26px;max-width:44ch;}
+.mcc-note{display:block;font-size:12.5px;color:var(--mist);margin-top:14px;}
+@media(max-width:1000px){
+  .mch-grid{grid-template-columns:1fr;}
+  .mch-vis{max-width:480px;margin:0 auto;}
+  .mcw-split{grid-template-columns:1fr;}
+  .mcw-copy p{max-width:56ch;}
+  .mcp-split{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .mcw-list{grid-template-columns:1fr;}
+  .mcp-row{grid-template-columns:1fr;gap:30px;}
+  .mcp-step::after{display:none !important;}
+  .mch-note2{display:none;}
+}
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -300,7 +377,7 @@ h1,h2{font-family:var(--display);}
                         <a href="../features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
                         <a href="../features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
                         <a href="../features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="../features/missed-call-text-back.html" class="m2-card here"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
+                        <a href="../features/missed-call-text-back.html" class="m2-card here"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text-Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
                         <a href="../features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
                         <a href="../features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
                         <a href="../features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
@@ -376,88 +453,77 @@ h1,h2{font-family:var(--display);}
 <main id="main">
 
 <!-- HERO -->
-<section class="fhero">
-    <div class="fhero-bg" aria-hidden="true">
-        <img src="../img/hero-bg.webp" alt="" fetchpriority="high" decoding="async" width="1648" height="954">
-    </div>
+<section class="mch">
     <div class="wrap">
-        <div class="fhero-grid">
-            <div>
+        <div class="mch-grid">
+            <div class="mch-copy">
                 <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#features">Products</a> &nbsp;/&nbsp; Missed Call Text-Back</p>
-                <span class="eyebrow">Included · Missed Call Text-Back</span>
-                <h1>Miss a call? It <span class="gold">texts them back.</span></h1>
-                <p class="fhero-sub">Everyone misses calls. Few text back. Yours does — instantly — so the lead books with you instead of calling the next name on their list.</p>
-                <div class="fhero-actions">
+                <span class="eyebrow">Missed Call Text-Back</span>
+                <h1>Never miss a call.<br><span class="gold">Never lose a lead.</span></h1>
+                <p class="mch-sub">When you can&rsquo;t answer, we text them instantly. Capture more leads, book more jobs, and stay ahead of your competition.</p>
+                <div class="mch-actions">
                     <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                    <span class="mch-note">No setup fee &middot; Cancel anytime</span>
                 </div>
-                <p class="fhero-note"><b>Included in the $297/mo system</b> &middot; No setup fee &middot; Cancel anytime</p>
+                <div class="mch-badges">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Instant Response</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>100% Automated</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Works 24/7</span>
+                </div>
             </div>
-            <div aria-hidden="true">
-<div class="mock">
-  <div class="mcard note">
-    <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg> Missed call · 7:52 PM</div>
-    <p>Caller hung up before voicemail.</p>
-  </div>
-  <div class="mcard note">
-    <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg> Auto text-back · 7:52 PM</div>
-    <p>Sorry we missed you! Want us to book you in? Reply here and we’ll help.</p>
-  </div>
-  <div class="mcard note">
-    <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg> Reply · 7:53 PM</div>
-    <p>Yes please — anything Friday?</p>
-  </div>
-</div></div>
+            <div class="mch-vis">
+                <img src="../img/missed-call-illustration.webp" srcset="../img/missed-call-illustration-m.webp 600w, ../img/missed-call-illustration.webp 1164w" sizes="(max-width: 1000px) 92vw, min(440px, 38vw)" alt="Phone showing a missed call from (780) 555-0147 and an instant text-back from Your Business: Hey! Thanks for calling. We&rsquo;re a little busy right now but we got your call. How can we help?" fetchpriority="high" decoding="async" width="1164" height="1351">
+                <div class="mch-note2" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M52 50 C 42 36, 30 24, 14 12"/><path d="M26 16 L12 10 L18 24"/></svg><span>Instant reply.<br>Happy lead.</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SPLIT -->
-<section class="light sec reveal">
+<!-- WHY IT MATTERS -->
+<section class="mcw light sec reveal">
     <div class="wrap">
-        <div class="split">
-            <div>
-                <span class="eyebrow">Why it matters</span>
-                <h2 class="h-lg">The lead doesn’t wait. Neither should your reply.</h2>
-                <p class="lede">When a call slips — after hours, busy day, bad timing — the system fires a text within seconds. The conversation starts before your competitor’s phone even rings, and every reply lands in one inbox with an alert to your phone.</p>
+        <div class="mcw-split">
+            <div class="mcw-copy">
+                <span class="eyebrow">Why It Matters</span>
+                <h2>Most leads call when you can&rsquo;t answer.</h2>
+                <p>If they don&rsquo;t get a response, they call your competitor. Our missed call text back turns every missed call into a conversation.</p>
             </div>
-            <ul class="split-checks">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Instant text the moment a call slips</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Runs 24/7 — after hours and weekends</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Turns a missed call into a booking</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Custom message written for your business</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Replies alert your phone immediately</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Keeps the lead from moving on to a competitor</li>
-            </ul>
+            <div class="mcw-list">
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><span>Instant text the moment a call is missed</span></div>
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Runs 24/7 &mdash; after hours and weekends</span></div>
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Turns missed calls into booked jobs</span></div>
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Custom message written for your business</span></div>
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span>Replies alert your phone immediately</span></div>
+                <div class="mcw-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/><path d="M9.2 11.7l2 2 3.6-4"/></svg><span>Keeps the lead from moving on to a competitor</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- STEPS -->
-<section class="sec reveal">
+<!-- HOW IT WORKS -->
+<section class="mcp reveal">
     <div class="wrap">
-        <div class="steps-grid">
-            <div>
-                <span class="eyebrow">How it works</span>
-                <h2 class="h-lg">Running for you in 7&ndash;10 days.</h2>
-                <p class="lede">Set up as part of your system build &mdash; we wire it around your business, then walk you through it on the launch call.</p>
+        <div class="mcp-split">
+            <div class="mcp-copy">
+                <span class="eyebrow">How It Works</span>
+                <h2>Simple, fast, and automatic.</h2>
+                <p>We set it up, you get more leads. It&rsquo;s that easy.</p>
             </div>
-            <div class="steps-row">
-                <div class="step">
-                    <div class="circ"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></div>
-                    <b>A call slips through</b>
-                    <p>After hours, on the job, on the other line — the system sees the missed call instantly.</p>
+            <div class="mcp-row">
+                <div class="mcp-step">
+                    <span class="mcp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg><i>1</i></span>
+                    <b>They call</b>
+                    <p>A potential customer calls your business but you don&rsquo;t answer.</p>
                 </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></div>
-                    <b>The text goes out in seconds</b>
-                    <p>A friendly, custom message that acknowledges the miss and starts the conversation.</p>
+                <div class="mcp-step">
+                    <span class="mcp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.35 8.5 8.5 0 0 1-3.7-.85L3 21l2-5.3a8.38 8.38 0 0 1-.85-3.7 8.5 8.5 0 0 1 8.35-9A8.5 8.5 0 0 1 21 11.5z"/></svg><i>2</i></span>
+                    <b>We text instantly</b>
+                    <p>Our system sends an immediate, custom text letting them know you got their call.</p>
                 </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></div>
-                    <b>The lead stays yours</b>
-                    <p>They reply, you get alerted, and the booking happens with you — not the next name on their list.</p>
+                <div class="mcp-step">
+                    <span class="mcp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><i>3</i></span>
+                    <b>You get more jobs</b>
+                    <p>They reply, you respond, and now you have a new opportunity.</p>
                 </div>
             </div>
         </div>
@@ -465,59 +531,41 @@ h1,h2{font-family:var(--display);}
 </section>
 
 <!-- FAQ -->
-<section class="sec reveal" style="padding-top:0;">
+<section class="mcq light sec reveal">
     <div class="wrap">
         <div class="faq-grid">
             <div>
                 <span class="eyebrow">Questions?</span>
-                <h2 class="h-lg">Straight answers.</h2>
-                <p class="lede">More in the full FAQ.</p>
-                <a href="../faq.html" class="btn btn-ghost" style="margin-top:24px;">View All FAQs <span class="arr">&rarr;</span></a>
+                <h2>Straight answers.</h2>
+                <p class="mcq-sub">More in the full FAQ.</p>
+                <a href="../faq.html" class="btn btn-line">View All FAQs <span class="arr">&rarr;</span></a>
             </div>
             <div class="faq-list">
                 <details>
                     <summary>How fast does the text go out?</summary>
-                    <p>Within seconds of the missed call — day or night, automatically.</p>
+                    <p>Within seconds of the missed call. The lead is still holding their phone when your message lands &mdash; which is exactly why it works.</p>
                 </details>
                 <details>
                     <summary>Can I customize the message?</summary>
-                    <p>Yes. We write it with you during the build so it sounds like your business, not a bot.</p>
+                    <p>Yes. We write it with you during the build so it sounds like your business, not a bot &mdash; and you can change it anytime.</p>
                 </details>
                 <details>
                     <summary>Does it work with my existing number?</summary>
-                    <p>Yes — it runs on the number you already have. Nothing changes for your customers.</p>
+                    <p>Yes &mdash; it runs on the number you already have. Nothing changes for your customers, and you don&rsquo;t have to reprint a thing.</p>
                 </details>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CROSS-LINKS -->
-<section class="light sec reveal">
-    <div class="wrap">
-        <div class="xlink-head">
-            <span class="eyebrow">One system. Everything works together.</span>
-            <h2 class="h-lg">The rest of your growth system.</h2>
-        </div>
-        <div class="xlink-grid">
-            <a class="xlink" href="/features/website.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><div><b>Website</b><span>A fast, hand-built website that converts visitors into leads.</span></div></a>
-            <a class="xlink" href="/features/review-automation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Review Automation</b><span>Get more 5-star Google reviews on autopilot.</span></div></a>
-            <a class="xlink" href="/features/lead-follow-up.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg><div><b>Lead Follow-Up</b><span>Automated SMS &amp; email follow-up that converts more leads.</span></div></a>
-            <a class="xlink" href="/features/local-seo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><div><b>Local SEO</b><span>Rank higher on Google and get found by local customers.</span></div></a>
-            <a class="xlink" href="/features/marketing-campaigns.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg><div><b>Marketing Campaigns</b><span>One-click SMS &amp; email campaigns that bring customers back.</span></div></a>
-            <a class="xlink" href="/features/crm-and-booking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg><div><b>CRM &amp; Booking</b><span>One pipeline for every lead, plus booking synced to your calendar.</span></div></a>
-        </div>
-    </div>
-</section>
 
 <!-- FINAL CTA -->
-<section class="fcta reveal">
+<section class="mcc reveal">
     <div class="wrap">
         <h2>Try it: call, hang up, watch the text arrive.</h2>
         <p>Book a call and watch the text-back fire in real time.</p>
-        <div class="fcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
-        </div>
+        <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <span class="mcc-note">No setup fee &middot; Cancel anytime</span>
     </div>
 </section>
 
@@ -540,11 +588,13 @@ h1,h2{font-family:var(--display);}
             </div>
             <div class="foot-col">
                 <h4>Features</h4>
-                <a href="/features/missed-call-text-back.html">Missed Call Text-Back</a>
-                <a href="/features/website.html">Website</a>
-                <a href="/features/review-automation.html">Review Automation</a>
-                <a href="/features/lead-follow-up.html">Lead Follow-Up</a>
+                <a href="/features/website.html">Custom Websites</a>
+                <a href="/features/review-automation.html">5-Star Review Funnel</a>
                 <a href="/features/local-seo.html">Local SEO</a>
+                <a href="/features/missed-call-text-back.html">Missed Call Text-Back</a>
+                <a href="/features/crm-and-booking.html">CRM &amp; Booking</a>
+                <a href="/features/lead-follow-up.html">Lead Follow-Up</a>
+                <a href="/features/marketing-campaigns.html">Marketing Campaigns</a>
             </div>
             <div class="foot-col">
                 <h4>Support</h4>

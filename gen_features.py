@@ -97,6 +97,7 @@ PARKED_PAGES = [
 PAGES = [
     {
         "slug": "missed-call-text-back",
+        "custom": True,  # hand-built page; excluded from regeneration
         "label": "Missed Call Text-Back",
         "icon": "phone",
         "short": "Instantly respond to missed calls by text, 24/7.",
@@ -288,6 +289,7 @@ PAGES = [
     },
     {
         "slug": "local-seo",
+        "custom": True,  # hand-built page; excluded from regeneration
         "label": "Local SEO",
         "icon": "search",
         "short": "Rank higher on Google and get found by local customers.",
@@ -381,6 +383,7 @@ PAGES = [
     },
     {
         "slug": "crm-and-booking",
+        "custom": True,  # hand-built page; excluded from regeneration
         "label": "CRM & Booking",
         "icon": "cal",
         "short": "One pipeline for every lead, plus booking synced to your calendar.",

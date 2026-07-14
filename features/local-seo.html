@@ -16,7 +16,11 @@
 <meta property="og:title" content="Local SEO &amp; Google Business Profile for Alberta Small Business | Northern Peak Systems">
 <meta property="og:description" content="On-site SEO, technical foundations, and a fully optimized Google Business Profile — built in from launch so local customers actually find you. Included in the $297/mo system.">
 <meta property="og:site_name" content="Northern Peak Systems">
+<meta property="og:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
 
 <script type="application/ld+json">
 {
@@ -271,6 +275,113 @@ h1,h2{font-family:var(--display);}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
 .reveal.in{opacity:1;transform:none;}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* ===== local seo design ===== */
+.light .eyebrow{color:var(--gold-deep);}
+.light .gold{color:var(--gold-deep);}
+.light .btn-line{color:var(--gold-deep);border-color:rgba(169,124,51,0.45);}
+.light .btn-line:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
+.light.sec{position:relative;margin:clamp(18px,2.4vw,34px) clamp(10px,1.8vw,32px);border-radius:clamp(22px,2.8vw,40px);overflow:hidden;box-shadow:0 0 34px -6px rgba(210,162,76,0.18),inset 0 1px 0 rgba(255,255,255,0.65),0 30px 80px -50px rgba(0,0,0,0.9);}
+.light.sec::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,rgba(210,162,76,0.85),rgba(210,162,76,0.3) 30%,rgba(210,162,76,0.07) 62%,rgba(210,162,76,0.03) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;z-index:5;}
+/* hero */
+.lsh{position:relative;overflow:hidden;background-color:#0a0a0c;background-image:linear-gradient(90deg,rgba(10,10,12,0.9) 0%,rgba(10,10,12,0.66) 42%,rgba(10,10,12,0.28) 100%),url('../img/local-seo-hero-bg.webp');background-size:cover,cover;background-position:center,center;background-repeat:no-repeat;padding:clamp(48px,5.5vw,84px) 0 clamp(48px,5.5vw,80px);}
+.lsh::after{content:"";position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,rgba(10,10,12,0.85),transparent);pointer-events:none;}
+.lsh-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr 0.92fr;gap:clamp(30px,4.5vw,70px);align-items:center;}
+.lsh-pin{display:inline-flex;align-items:center;gap:11px;margin-top:14px;}
+.lsh-pin .pic{width:30px;height:30px;border-radius:50%;border:1px solid rgba(210,162,76,0.5);background:rgba(210,162,76,0.08);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lsh-pin .pic svg{width:14px;height:14px;color:var(--gold);stroke-width:2;}
+.lsh h1{font-family:var(--display);font-size:clamp(36px,4.4vw,58px);font-weight:800;line-height:1.06;color:var(--white);margin:18px 0 16px;}
+.lsh-sub{font-size:clamp(14.5px,1.25vw,16.5px);color:#d8d3c9;line-height:1.65;max-width:44ch;}
+.lsh-row{display:grid;grid-template-columns:repeat(4,1fr);margin:28px 0 30px;max-width:660px;}
+.lsh-col{padding:2px 16px;border-left:1px solid rgba(255,255,255,0.16);}
+.lsh-col:first-child{border-left:none;padding-left:0;}
+.lsh-col svg{width:22px;height:22px;color:var(--gold);stroke-width:1.7;margin-bottom:10px;display:block;}
+.lsh-col b{display:block;font-family:var(--display);font-size:13.5px;font-weight:800;color:var(--white);line-height:1.35;}
+.lsh-col p{font-size:11.5px;color:var(--mist);line-height:1.5;margin-top:5px;}
+.lsh-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;}
+.lsh-link{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);}
+.lsh-vis{position:relative;display:flex;justify-content:flex-start;}
+.lsh-vis img{width:min(390px,74%);height:auto;border-radius:26px;box-shadow:0 50px 110px -40px rgba(0,0,0,0.95),0 0 90px 26px rgba(8,8,10,0.5);}
+.lsh-note{position:absolute;bottom:46%;left:min(390px,74%);width:min(150px,24%);margin-left:10px;color:var(--gold);text-align:center;}
+.lsh-note svg{width:44px;height:44px;display:block;margin:0 auto 4px 14px;}
+.lsh-note span{display:block;font-family:'Segoe Script','Bradley Hand',cursive;font-size:16.5px;line-height:1.35;transform:rotate(-4deg);}
+/* why matters */
+.lsw{padding:clamp(56px,7vw,96px) 0;}
+.lsw-split{display:grid;grid-template-columns:minmax(240px,0.68fr) 1.9fr;gap:clamp(26px,3.5vw,56px);align-items:center;}
+.lsw h2{font-family:var(--display);font-size:clamp(26px,2.9vw,40px);font-weight:800;color:var(--ink);line-height:1.12;margin-top:12px;}
+.lsw-copy p{font-size:14.5px;color:var(--ink-2);line-height:1.7;margin-top:14px;max-width:34ch;}
+.lsw-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,22px);}
+.lsw-card{background:#fff;border:1px solid var(--cream-line);border-radius:16px;padding:22px 18px;box-shadow:0 24px 50px -34px rgba(60,45,20,0.3);}
+.lsw-card svg{width:26px;height:26px;color:var(--gold-deep);stroke-width:1.7;margin-bottom:14px;}
+.lsw-card b{display:block;font-family:var(--display);font-size:27px;font-weight:800;color:var(--ink);}
+.lsw-card p{font-size:12.5px;color:#55503f;line-height:1.6;margin-top:8px;}
+.lsw-card span{display:block;font-size:11px;color:var(--ink-2);margin-top:12px;}
+/* what we optimize */
+.lso{position:relative;padding:clamp(64px,8vw,110px) 0;background:radial-gradient(ellipse 50% 55% at 50% 0%,rgba(210,162,76,0.07),transparent 70%),#0a0a0c;}
+.lso-head{text-align:center;max-width:720px;margin:0 auto clamp(38px,5vw,60px);}
+.lso-head h2{font-family:var(--display);font-size:clamp(26px,3vw,40px);font-weight:800;color:var(--white);margin-top:12px;}
+.lso-row{display:grid;grid-template-columns:repeat(6,1fr);}
+.lso-col{text-align:center;padding:6px clamp(12px,1.6vw,24px);border-left:1px solid var(--line);}
+.lso-col:first-child{border-left:none;}
+.lso-col svg{width:30px;height:30px;color:var(--gold);stroke-width:1.6;margin:0 auto 14px;display:block;}
+.lso-col b{display:block;font-family:var(--display);font-size:15px;font-weight:800;color:var(--white);line-height:1.35;}
+.lso-col p{font-size:12.5px;color:var(--mist);line-height:1.6;margin-top:8px;}
+/* process */
+.lsp{padding:clamp(56px,7vw,96px) 0;}
+.lsp-head{text-align:center;max-width:720px;margin:0 auto clamp(38px,5vw,60px);}
+.lsp-head h2{font-family:var(--display);font-size:clamp(26px,3vw,40px);font-weight:800;color:var(--ink);margin-top:12px;}
+.lsp-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,30px);}
+.lsp-step{position:relative;text-align:center;}
+.lsp-step:not(:last-child)::after{content:"\2192";position:absolute;left:100%;top:26px;width:clamp(16px,2vw,30px);display:flex;align-items:center;justify-content:center;color:rgba(169,124,51,0.85);font-size:22px;}
+.lsp-ic{position:relative;width:76px;height:76px;border-radius:50%;background:#17150f;display:inline-flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 18px 36px -16px rgba(60,45,20,0.55);}
+.lsp-ic svg{width:28px;height:28px;color:var(--gold);stroke-width:1.7;}
+.lsp-ic i{position:absolute;top:-3px;right:-3px;width:24px;height:24px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;font-style:normal;font-size:12px;font-weight:800;font-family:var(--display);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px -3px rgba(60,45,20,0.5);}
+.lsp-step b{display:block;font-family:var(--display);font-size:16.5px;font-weight:800;color:var(--ink);line-height:1.3;}
+.lsp-step p{font-size:13.5px;color:#55503f;line-height:1.65;margin-top:8px;max-width:24ch;margin-left:auto;margin-right:auto;}
+/* faq */
+.lsq{position:relative;padding:clamp(64px,8vw,110px) 0;background:radial-gradient(ellipse 44% 60% at 8% 50%,rgba(210,162,76,0.06),transparent 70%),#0a0a0c;}
+.lsq h2{font-family:var(--display);font-size:clamp(28px,3.4vw,44px);font-weight:800;color:var(--white);margin:12px 0 24px;}
+/* final cta */
+.lsc{position:relative;background:#0a0a0c url('../img/local-seo-finalcta-bg.webp') center/cover no-repeat;padding:clamp(70px,9vw,130px) 0;}
+.lsc::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,0.85) 0%,rgba(10,10,12,0.55) 55%,rgba(10,10,12,0.3) 100%);pointer-events:none;}
+.lsc::after{content:"";position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(to bottom,#0a0a0c,transparent);pointer-events:none;}
+.lsc-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr auto;gap:clamp(24px,4vw,60px);align-items:center;}
+.lsc h2{font-family:var(--display);font-size:clamp(30px,3.8vw,50px);font-weight:800;color:var(--white);line-height:1.1;}
+.lsc .lede{max-width:46ch;color:#d8d3c9;}
+.lsc-right{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.lsc-note{font-size:12.5px;color:var(--mist);}
+@media(max-width:1100px){
+  .lsw-cards{grid-template-columns:1fr 1fr;}
+  .lso-row{grid-template-columns:repeat(3,1fr);gap:30px 0;}
+  .lso-col:nth-child(3n+1){border-left:none;}
+}
+@media(max-width:1000px){
+  .lsh-grid{grid-template-columns:1fr;}
+  .lsh-vis{max-width:460px;margin:0 auto;}
+}
+@media(max-width:900px){
+  .lsw-split{grid-template-columns:1fr;}
+  .lsw-copy p{max-width:56ch;}
+  .lsp-row{grid-template-columns:1fr 1fr;gap:34px 20px;}
+  .lsp-step::after{display:none !important;}
+  .lsc-grid{grid-template-columns:1fr;}
+  .lsc-right{align-items:flex-start;}
+}
+@media(max-width:700px){
+  .lsh-row{grid-template-columns:1fr 1fr;gap:22px 0;}
+  .lsh-col:nth-child(3){border-left:none;padding-left:0;}
+  .lso-row{grid-template-columns:1fr 1fr;}
+  .lso-col:nth-child(3n+1){border-left:1px solid var(--line);}
+  .lso-col:nth-child(2n+1){border-left:none;}
+}
+@media(max-width:520px){
+  .lsw-cards{grid-template-columns:1fr;}
+  .lsp-row{grid-template-columns:1fr;}
+  .lso-row{grid-template-columns:1fr;}
+  .lso-col{border-left:none !important;}
+  .lsh-note{display:none;}
+}
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -300,7 +411,7 @@ h1,h2{font-family:var(--display);}
                         <a href="../features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
                         <a href="../features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
                         <a href="../features/local-seo.html" class="m2-card here"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="../features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
+                        <a href="../features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text-Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
                         <a href="../features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
                         <a href="../features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
                         <a href="../features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
@@ -376,146 +487,141 @@ h1,h2{font-family:var(--display);}
 <main id="main">
 
 <!-- HERO -->
-<section class="fhero">
-    <div class="fhero-bg" aria-hidden="true">
-        <img src="../img/hero-bg.webp" alt="" fetchpriority="high" decoding="async" width="1648" height="954">
-    </div>
+<section class="lsh">
     <div class="wrap">
-        <div class="fhero-grid">
-            <div>
+        <div class="lsh-grid">
+            <div class="lsh-copy">
                 <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#features">Products</a> &nbsp;/&nbsp; Local SEO</p>
-                <span class="eyebrow">Included · Local SEO</span>
-                <h1>Get found by the customers <span class="gold">already searching.</span></h1>
-                <p class="fhero-sub">On-site SEO and a fully optimized Google Business Profile, built in from day one — so when someone nearby searches for what you do, you’re the one they find.</p>
-                <div class="fhero-actions">
+                <span class="lsh-pin"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="eyebrow">Local SEO for Trades</span></span>
+                <h1>Be the business<br>locals <span class="gold">find first.</span></h1>
+                <p class="lsh-sub">We optimize your Google presence so local customers find you before your competitors &mdash; and choose you.</p>
+                <div class="lsh-row">
+                    <div class="lsh-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Show up in local searches</b><p>Get found when customers search near them.</p></div>
+                    <div class="lsh-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><b>Build trust with 5-star reviews</b><p>Stronger reviews mean more clicks, calls, and bookings.</p></div>
+                    <div class="lsh-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg><b>Rank above competitors</b><p>Better rankings put you in front &mdash; not behind.</p></div>
+                    <div class="lsh-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg><b>More calls. More jobs.</b><p>Turn visibility into real, revenue-driving work.</p></div>
+                </div>
+                <div class="lsh-actions">
                     <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                    <a href="../how.html" class="lsh-link">See how it works <span class="arr">&rarr;</span></a>
                 </div>
-                <p class="fhero-note"><b>Included in the $297/mo system</b> &middot; No setup fee &middot; Cancel anytime</p>
             </div>
-            <div aria-hidden="true">
-<div class="mock">
-  <div class="mcard">
-    <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Local ranking</div>
-    <div class="krow"><span>“your service + your city”</span><b>Climbing</b></div>
-    <div class="krow"><span>Google profile</span><b>Optimized</b></div>
-    <div class="krow"><span>Site speed</span><b>Fast</b></div>
-    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg> Found by local customers</div>
-  </div>
-  <div class="mcard note">
-    <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Google Business Profile</div>
-    <p>Complete, accurate, photo-rich, and connected to your review engine — the profile customers trust.</p>
-  </div>
-</div></div>
+            <div class="lsh-vis">
+                <img src="../img/local-seo-hero-illustration.webp" srcset="../img/local-seo-hero-illustration-m.webp 600w, ../img/local-seo-hero-illustration.webp 1079w" sizes="(max-width: 1000px) 86vw, min(420px, 36vw)" alt="Google map pack showing Your Business ranked first with 5.0 stars in Edmonton local search results" fetchpriority="high" decoding="async" width="1079" height="1457">
+                <div class="lsh-note" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M52 50 C 42 36, 30 24, 14 12"/><path d="M26 16 L12 10 L18 24"/></svg><span>Your business<br>at the top.</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SPLIT -->
-<section class="light sec reveal">
+<!-- WHY LOCAL SEO MATTERS -->
+<section class="lsw light sec reveal">
     <div class="wrap">
-        <div class="split">
-            <div>
-                <span class="eyebrow">Why it matters</span>
-                <h2 class="h-lg">Local search is where the buying happens.</h2>
-                <p class="lede">People searching “near me” aren’t browsing — they’re hiring. We build the technical foundations into your site from launch, optimize your Google Business Profile, and keep both aligned with what your customers actually search for.</p>
+        <div class="lsw-split">
+            <div class="lsw-copy">
+                <span class="eyebrow">Why Local SEO Matters</span>
+                <h2>Local searches drive real results.</h2>
+                <p>Your next customer is searching right now. We make sure they find you &mdash; not your competitor.</p>
             </div>
-            <ul class="split-checks">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>On-site SEO built into every page we ship</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Google Business Profile set up and optimized</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Fast, mobile-first site — Google rewards it</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Local keywords for your city and services</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Reviews feed your ranking (see Review Automation)</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Honest scope: no backlink schemes, no snake oil</li>
-            </ul>
+            <div class="lsw-cards">
+                <div class="lsw-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7.5" r="3.5"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><b>78%</b><p>of local mobile searches result in an offline purchase.</p><span>Source: Google</span></div>
+                <div class="lsw-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><b>46%</b><p>of all Google searches have local intent.</p><span>Source: Google</span></div>
+                <div class="lsw-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><b>87%</b><p>of people read reviews for local businesses.</p><span>Source: BrightLocal</span></div>
+                <div class="lsw-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg><b>2.7x</b><p>more likely to be considered reputable with a complete Google Business Profile.</p><span>Source: Google</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- STEPS -->
-<section class="sec reveal">
+<!-- WHAT WE OPTIMIZE -->
+<section class="lso reveal">
     <div class="wrap">
-        <div class="steps-grid">
-            <div>
-                <span class="eyebrow">How it works</span>
-                <h2 class="h-lg">Running for you in 7&ndash;10 days.</h2>
-                <p class="lede">Set up as part of your system build &mdash; we wire it around your business, then walk you through it on the launch call.</p>
+        <div class="lso-head">
+            <span class="eyebrow">What We Optimize</span>
+            <h2>We build your local presence from the ground up.</h2>
+        </div>
+        <div class="lso-row">
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.7-5h14.6L21 9"/><path d="M3 9h18"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg><b>Google Business Profile</b><p>We optimize every detail to help you rank higher in local searches and stand out.</p></div>
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><b>Local Keyword Targeting</b><p>We target the right keywords so your business shows up for the searches that matter.</p></div>
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><b>Review Strategy</b><p>We generate more 5-star reviews and manage responses to build trust and credibility.</p></div>
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Local Citations</b><p>We build and clean up your listings across top directories to strengthen your authority.</p></div>
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg><b>On-Page &amp; Website SEO</b><p>We optimize your site for local search and conversions so more visitors become customers.</p></div>
+            <div class="lso-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 16v-5"/><path d="M12 16V8"/><path d="M16 16v-3"/></svg><b>Tracking &amp; Reporting</b><p>Transparent reporting so you can see your rankings rise and calls increase.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="lsp light sec reveal">
+    <div class="wrap">
+        <div class="lsp-head">
+            <span class="eyebrow">How It Works</span>
+            <h2>A simple process. Real growth.</h2>
+        </div>
+        <div class="lsp-row">
+            <div class="lsp-step">
+                <span class="lsp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><i>1</i></span>
+                <b>Discover &amp; Audit</b>
+                <p>We analyze your current presence and uncover opportunities.</p>
             </div>
-            <div class="steps-row">
-                <div class="step">
-                    <div class="circ"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-                    <b>Foundations at launch</b>
-                    <p>Clean code, fast loads, proper structure, and local keywords — baked into the build, not bolted on.</p>
-                </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-                    <b>Profile optimization</b>
-                    <p>Your Google Business Profile gets completed, categorized, and connected to your reviews.</p>
-                </div>
-                <div class="step-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-                <div class="step">
-                    <div class="circ"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-                    <b>Compounding gains</b>
-                    <p>New reviews and content keep the profile fresh — the signals Google’s local results reward.</p>
-                </div>
+            <div class="lsp-step">
+                <span class="lsp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><i>2</i></span>
+                <b>Optimize &amp; Build</b>
+                <p>We optimize your profile, website, and listings to establish a strong local foundation.</p>
+            </div>
+            <div class="lsp-step">
+                <span class="lsp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><i>3</i></span>
+                <b>Rank &amp; Attract</b>
+                <p>You climb the local rankings and start getting more calls and inquiries.</p>
+            </div>
+            <div class="lsp-step">
+                <span class="lsp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg><i>4</i></span>
+                <b>Grow &amp; Dominate</b>
+                <p>We continuously improve your visibility so you stay ahead of competitors.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- FAQ -->
-<section class="sec reveal" style="padding-top:0;">
+<section class="lsq reveal">
     <div class="wrap">
         <div class="faq-grid">
             <div>
                 <span class="eyebrow">Questions?</span>
-                <h2 class="h-lg">Straight answers.</h2>
-                <p class="lede">More in the full FAQ.</p>
-                <a href="../faq.html" class="btn btn-ghost" style="margin-top:24px;">View All FAQs <span class="arr">&rarr;</span></a>
+                <h2>Straight answers.</h2>
+                <a href="../faq.html" class="btn btn-line">View All FAQs <span class="arr">&rarr;</span></a>
             </div>
             <div class="faq-list">
                 <details>
-                    <summary>Do you guarantee first-page rankings?</summary>
-                    <p>No — and be wary of anyone who does. We build the real foundations and we’ll tell you straight what’s realistic for your market.</p>
+                    <summary>How long until I see results?</summary>
+                    <p>Most businesses see early movement &mdash; more profile views and calls &mdash; within the first several weeks as your presence gets cleaned up. Bigger ranking gains typically build over three to six months, and they compound: the longer your local SEO runs, the harder it is for competitors to catch you.</p>
                 </details>
                 <details>
-                    <summary>Is this included or an add-on?</summary>
-                    <p>The on-site SEO and Google Business Profile optimization are included in the $297. No surprise line items.</p>
+                    <summary>Do you guarantee #1 rankings?</summary>
+                    <p>No &mdash; and you should be careful with anyone who does. Google decides rankings, not us. What we do promise is measurable improvement in your visibility, calls, and leads, with transparent reporting so you can see exactly what&rsquo;s working.</p>
                 </details>
                 <details>
-                    <summary>How long until I see movement?</summary>
-                    <p>Local results usually take weeks to months depending on competition. Reviews are the fastest lever — which is why the review engine is part of the same system.</p>
+                    <summary>Is this a one-time setup or ongoing?</summary>
+                    <p>Local SEO is ongoing. Rankings need fresh reviews, updated listings, and continuous optimization to hold &mdash; if the work stops, you slip. We handle it month to month, and you can cancel anytime.</p>
                 </details>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- CROSS-LINKS -->
-<section class="light sec reveal">
-    <div class="wrap">
-        <div class="xlink-head">
-            <span class="eyebrow">One system. Everything works together.</span>
-            <h2 class="h-lg">The rest of your growth system.</h2>
-        </div>
-        <div class="xlink-grid">
-            <a class="xlink" href="/features/missed-call-text-back.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg><div><b>Missed Call Text-Back</b><span>Instantly respond to missed calls by text, 24/7.</span></div></a>
-            <a class="xlink" href="/features/website.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><div><b>Website</b><span>A fast, hand-built website that converts visitors into leads.</span></div></a>
-            <a class="xlink" href="/features/review-automation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Review Automation</b><span>Get more 5-star Google reviews on autopilot.</span></div></a>
-            <a class="xlink" href="/features/lead-follow-up.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg><div><b>Lead Follow-Up</b><span>Automated SMS &amp; email follow-up that converts more leads.</span></div></a>
-            <a class="xlink" href="/features/marketing-campaigns.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg><div><b>Marketing Campaigns</b><span>One-click SMS &amp; email campaigns that bring customers back.</span></div></a>
-            <a class="xlink" href="/features/crm-and-booking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg><div><b>CRM &amp; Booking</b><span>One pipeline for every lead, plus booking synced to your calendar.</span></div></a>
         </div>
     </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="fcta reveal">
+<section class="lsc reveal">
     <div class="wrap">
-        <h2>Be the business local searchers find first.</h2>
-        <p>Book a call and we’ll look at your local market together.</p>
-        <div class="fcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <div class="lsc-grid">
+            <div>
+                <h2>More visibility.<br>More calls. More jobs.</h2>
+                <p class="lede">Let&rsquo;s get your business in front of more local customers and keep your schedule full.</p>
+            </div>
+            <div class="lsc-right">
+                <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                <span class="lsc-note">No setup fee &middot; Cancel anytime</span>
+            </div>
         </div>
     </div>
 </section>
@@ -539,11 +645,13 @@ h1,h2{font-family:var(--display);}
             </div>
             <div class="foot-col">
                 <h4>Features</h4>
-                <a href="/features/missed-call-text-back.html">Missed Call Text-Back</a>
-                <a href="/features/website.html">Website</a>
-                <a href="/features/review-automation.html">Review Automation</a>
-                <a href="/features/lead-follow-up.html">Lead Follow-Up</a>
+                <a href="/features/website.html">Custom Websites</a>
+                <a href="/features/review-automation.html">5-Star Review Funnel</a>
                 <a href="/features/local-seo.html">Local SEO</a>
+                <a href="/features/missed-call-text-back.html">Missed Call Text-Back</a>
+                <a href="/features/crm-and-booking.html">CRM &amp; Booking</a>
+                <a href="/features/lead-follow-up.html">Lead Follow-Up</a>
+                <a href="/features/marketing-campaigns.html">Marketing Campaigns</a>
             </div>
             <div class="foot-col">
                 <h4>Support</h4>
