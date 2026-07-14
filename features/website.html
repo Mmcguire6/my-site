@@ -263,7 +263,9 @@ h1,h2{font-family:var(--display);}
 /* tablet & phone: HTML copy + mockup-only crop */
 @media(max-width:900px){
   .cwh{padding:clamp(40px,7vw,72px) 0 clamp(28px,5vw,48px);}
-  .cwh-copy{max-width:560px;margin-bottom:18px;}
+  .cwh-grid{display:flex;flex-direction:column;}
+  .cwh-art{order:-1;margin-bottom:22px;}
+  .cwh-copy{max-width:560px;}
 }
 @media(max-width:560px){
   .cwh-copy{margin-bottom:10px;}
