@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Senior UKG / Workforce Central Consulting — OT Solutions</title>
+<meta name="description" content="Senior UKG / Workforce Central consultants with 25+ years on the platform — implementation resources, data hub &amp; analytics, healthcare configuration, and steady hands through the Workforce Central sunset and migration era." />
+<link rel="canonical" href="https://otsolutions.ca/kronos-expertise" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OT Solutions" />
+<meta property="og:url" content="https://otsolutions.ca/kronos-expertise" />
+<meta property="og:title" content="Senior UKG / Workforce Central Consulting — OT Solutions" />
+<meta property="og:description" content="Senior UKG / Workforce Central consultants — implementation, data hub & analytics, healthcare configuration. 25+ years." />
+<meta property="og:image" content="https://otsolutions.ca/assets/hero.jpg" />
+
+<link rel="icon" type="image/png" href="assets/logo-mark-navy.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=11" />
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"UKG / Workforce Central Consulting","provider":{"@type":"ProfessionalService","name":"OT Solutions","@id":"https://otsolutions.ca/#org"},"serviceType":"UKG / Kronos Workforce Central implementation, configuration, and reporting","areaServed":["Canada","United States"],"url":"https://otsolutions.ca/kronos-expertise"}
+</script>
+
+<style>
+  /* ───── Kronos / UKG expertise page section styles ───── */
+
+  /* PAGE HEAD */
+  .page-head { padding: clamp(56px, 9vw, 120px) 0 clamp(48px, 7vw, 88px); border-bottom: 1px solid var(--rule); }
+  .page-head-title { font-size: clamp(44px, 6.5vw, 92px); margin: 20px 0 28px; }
+  .page-head-lede { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.5; color: var(--ink-2); max-width: 60ch; margin: 0; }
+
+  /* THREE PILLARS */
+  .ukg-pillars-head { display: grid; grid-template-columns: 1fr; gap: 16px; padding-bottom: clamp(40px, 5vw, 64px); }
+  .ukg-pillars-title { font-size: clamp(32px, 4.2vw, 60px); margin: 8px 0 0; }
+  .ukg-pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+  .ukg-pillar { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg); padding: clamp(32px, 3.5vw, 44px); transition: background 240ms ease; }
+  .ukg-pillar:hover { background: var(--bg-2); }
+  .ukg-pillar-n { display: block; font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 24px; }
+  .ukg-pillar-title { font-family: var(--serif); font-size: clamp(23px, 2.3vw, 30px); line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 16px; font-weight: 400; }
+  .ukg-pillar-body { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 42ch; }
+
+  /* TENURE STAT BLOCK */
+  .ukg-tenure-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
+  .ukg-tenure-title { font-size: clamp(32px, 4.2vw, 60px); margin: 20px 0 24px; }
+  .ukg-tenure-lede { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: var(--ink-2); max-width: 52ch; margin: 0; }
+  .ukg-tenure-stat { border: 1px solid var(--rule); background: var(--bg-2); padding: clamp(36px, 4vw, 52px); display: flex; flex-direction: column; align-items: flex-start; }
+  .ukg-tenure-num { font-family: var(--serif); font-size: clamp(72px, 9vw, 128px); line-height: 0.9; letter-spacing: -0.02em; color: var(--ink); }
+  .ukg-tenure-label { font-size: 12px; letter-spacing: 0.04em; line-height: 1.45; color: var(--ink-3); margin-top: 18px; max-width: 24ch; }
+  .ukg-tenure-divider { width: 100%; height: 1px; background: var(--rule); margin: 28px 0; }
+  .ukg-tenure-since { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+
+  @media (max-width: 880px) {
+    .ukg-pillars-grid { grid-template-columns: 1fr; }
+    .ukg-tenure-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .ukg-pillar { padding: 28px 24px; }
+  }
+
+  /* SUNSET / MIGRATION CLOCK */
+  .ukg-clock { border-bottom: 1px solid var(--rule); }
+  .ukg-clock-head { max-width: 62ch; padding-bottom: clamp(36px, 4.5vw, 56px); }
+  .ukg-clock-title { font-size: clamp(30px, 4vw, 56px); margin: 18px 0 20px; }
+  .ukg-clock-lede { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: var(--ink-2); margin: 0; }
+  .ukg-dates { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); margin-bottom: clamp(40px, 5vw, 64px); }
+  .ukg-date { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: clamp(24px, 3vw, 36px); background: var(--bg); }
+  .ukg-date-when { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); color: var(--ink); }
+  .ukg-date-what { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 12px 0 10px; }
+  .ukg-date-note { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+  .ukg-clock-roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px); }
+  .ukg-role h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 1.9vw, 26px); line-height: 1.2; color: var(--ink); margin: 0 0 12px; }
+  .ukg-role p { font-size: 14px; line-height: 1.65; color: var(--ink-2); margin: 0; }
+  .ukg-role-fig { font-family: var(--serif); font-style: italic; font-size: 34px; line-height: 1; color: var(--gold); display: block; margin-bottom: 14px; }
+
+  /* EXPANDED PILLAR ROWS */
+  .ukg-pillar-rows { border-top: 1px solid var(--rule); }
+  .ukg-prow { display: grid; grid-template-columns: 140px 1.1fr 1fr; gap: clamp(24px, 3.5vw, 56px); padding: clamp(36px, 4.5vw, 60px) 0; border-bottom: 1px solid var(--rule); }
+  .ukg-prow-n { font-family: var(--serif); font-style: italic; font-size: 38px; line-height: 1; color: var(--gold); }
+  .ukg-prow-title { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; color: var(--ink); margin: 0 0 14px; }
+  .ukg-prow-body { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); margin: 0; max-width: 46ch; }
+  .ukg-prow-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; align-content: start; }
+  .ukg-prow-list li { font-family: var(--mono); font-size: 12px; line-height: 1.5; color: var(--ink-2); padding-left: 18px; position: relative; }
+  .ukg-prow-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 11px; }
+
+  /* MODULE COVERAGE */
+  .ukg-mods-head { padding-bottom: clamp(32px, 4vw, 48px); max-width: 62ch; }
+  .ukg-mods-title { font-size: clamp(28px, 3.6vw, 52px); margin: 14px 0 0; }
+  .ukg-mods { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+  .ukg-mod { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: clamp(20px, 2.4vw, 30px); background: var(--bg); transition: background 200ms ease; }
+  .ukg-mod:hover { background: var(--bg-2); }
+  .ukg-mod b { display: block; font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.005em; }
+  .ukg-mod p { font-size: 12.5px; line-height: 1.55; color: var(--ink-3); margin: 8px 0 0; }
+
+  /* INDUSTRIES */
+  .ukg-inds { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-left: 1px solid var(--rule); }
+  .ukg-ind { border-right: 1px solid var(--rule); padding: 8px clamp(18px, 2.4vw, 32px); }
+  .ukg-ind b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); color: var(--ink); margin-bottom: 10px; }
+  .ukg-ind p { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+
+  /* ENGAGEMENT STEPS */
+  .ukg-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px); border-top: 1px solid var(--rule); padding-top: clamp(36px, 4.5vw, 56px); }
+  .ukg-step-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px; }
+  .ukg-step b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 1.9vw, 25px); color: var(--ink); margin-bottom: 10px; }
+  .ukg-step p { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+
+  @media (max-width: 960px) {
+    .ukg-dates { grid-template-columns: 1fr; }
+    .ukg-clock-roles { grid-template-columns: 1fr; }
+    .ukg-prow { grid-template-columns: 1fr; gap: 18px; }
+    .ukg-prow-list { margin-top: 6px; }
+    .ukg-mods { grid-template-columns: 1fr 1fr; }
+    .ukg-inds { grid-template-columns: 1fr 1fr; gap: 28px 0; }
+    .ukg-steps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .ukg-mods { grid-template-columns: 1fr; }
+    .ukg-inds { grid-template-columns: 1fr; }
+    .ukg-prow-list { grid-template-columns: 1fr; }
+  }
+
+  /* PAGE HERO — dark specialist opening */
+  .ukg-hero { position: relative; overflow: hidden; color: oklch(0.97 0.008 250);
+    background: var(--navy-3) url('assets/final-cta-bg.jpg') right center / cover no-repeat; }
+  .ukg-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to right, oklch(0.14 0.05 258 / 0.92) 0%, oklch(0.14 0.05 258 / 0.6) 45%, oklch(0.14 0.05 258 / 0.15) 75%, transparent 100%); }
+  .ukg-hero-wrap { position: relative; z-index: 1; padding-top: clamp(72px, 10vw, 140px); padding-bottom: clamp(64px, 9vw, 120px); }
+  .ukg-hero-text { max-width: 64ch; }
+  .ukg-hero .eyebrow { color: var(--gold); }
+  .ukg-hero-title { font-size: clamp(44px, 6.5vw, 92px); margin: 20px 0 26px; color: oklch(0.97 0.008 250); }
+  .ukg-hero-title em { color: var(--accent); }
+  .ukg-hero-lede { font-size: clamp(16.5px, 1.4vw, 20px); line-height: 1.55; color: oklch(0.84 0.02 250); max-width: 58ch; margin: 0 0 32px; }
+  .ukg-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-hero-solid { background: linear-gradient(180deg, #ffffff, oklch(0.88 0.012 250)); color: oklch(0.18 0.05 258); font-weight: 600;
+    box-shadow: 0 6px 18px -8px oklch(0 0 0 / 0.5), inset 0 1px 0 #fff; border-radius: 4px; }
+  .btn-hero-solid:hover { background: #ffffff; transform: translateY(-1px); }
+  .btn-hero-ghost { background: oklch(1 0 0 / 0.06); color: oklch(0.95 0.01 250); border: 1px solid oklch(1 0 0 / 0.25); border-radius: 4px;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  .btn-hero-ghost:hover { border-color: oklch(1 0 0 / 0.6); background: oklch(1 0 0 / 0.1); }
+  .ukg-hero-facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 36px; padding-top: 22px;
+    border-top: 1px solid oklch(1 0 0 / 0.16); }
+  .ukg-hero-facts span { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.72 0.03 250); }
+
+  /* Today card — the urgent one */
+  .ukg-date-today { background: var(--navy-3); }
+  .ukg-date-today .ukg-date-when { color: oklch(0.97 0.008 250); }
+  .ukg-date-today .ukg-date-note { color: oklch(0.78 0.025 250); }
+
+  /* dark module band inherits dark-section tokens; give tiles a touch more line */
+  .ukg-modules.dark-section .ukg-mod:hover { background: var(--bg-2); }
+
+  /* CTA — particle continuity with the homepage */
+  .cta { background: var(--navy-3) url('assets/final-cta-bg.jpg') right center / cover no-repeat; position: relative; overflow: hidden; }
+  .cta::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to right, oklch(0.14 0.05 258 / 0.9) 0%, oklch(0.14 0.05 258 / 0.55) 40%, transparent 70%); }
+  .cta .wrap { position: relative; z-index: 1; }
+
+  @media (max-width: 760px) {
+    .ukg-hero-facts { gap: 8px 18px; }
+  }
+</style>
+
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="OT Solutions home">
+            <span class="nav-mark" aria-hidden="true">
+                <img src="assets/logo-mark-navy.png" alt="" />
+            </span>
+            <span class="nav-words">
+                <span class="nav-name">OT Solutions</span>
+                <span class="nav-tag">Putting Data In Your Hands</span>
+            </span>
+        </a>
+        <nav class="nav-links hide-sm" aria-label="Primary">
+            <a href="kronos-expertise.html" aria-current="page">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">
+            Connect <span class="arrow">→</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" hidden>
+        <nav class="nav-mobile-links" aria-label="Mobile navigation">
+            <a href="kronos-expertise.html" aria-current="page">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-mobile-cta">Connect <span class="arrow">&rarr;</span></a>
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- PAGE HERO -->
+<section class="ukg-hero">
+    <div class="wrap ukg-hero-wrap">
+        <div class="ukg-hero-text reveal">
+            <span class="eyebrow no-rule">Specialist practice &middot; UKG consulting</span>
+            <h1 class="display h1 ukg-hero-title">
+                Senior UKG /<br />
+                <em>Workforce Central</em> consultants.
+            </h1>
+            <p class="ukg-hero-lede">
+                Twenty-five years on the UKG / Kronos Workforce Central platform &mdash; implementation resources, data hub and analytics configuration, and healthcare-vertical builds delivered by senior consultants who&rsquo;ve seen most of what the platform can do.
+            </p>
+            <div class="ukg-hero-actions">
+                <a href="contact.html" class="btn btn-hero-solid">Connect with us <span class="arrow">→</span></a>
+                <a href="#deliver" class="btn btn-hero-ghost">What we deliver</a>
+            </div>
+            <div class="ukg-hero-facts" aria-hidden="true">
+                <span>25+ years on the platform</span>
+                <span>Since 2000</span>
+                <span>Healthcare &middot; Retail &middot; Transit &middot; Industrial</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- THE SUNSET CLOCK -->
+<section class="section ukg-clock tinted-section">
+    <div class="wrap">
+        <div class="ukg-clock-head">
+            <span class="eyebrow">The platform moment</span>
+            <h2 class="display h2 ukg-clock-title reveal">
+                Workforce Central is sunsetting.<br />
+                The knowledge <em>can&rsquo;t.</em>
+            </h2>
+            <p class="ukg-clock-lede reveal">
+                UKG has ended engineering on Workforce Central, and the clock is running on support. Moving to UKG Pro Workforce Management is a reimplementation, not an upgrade &mdash; your rules, your structures, and your integrations all get rebuilt. Whoever does that work needs to know what your current build actually does.
+            </p>
+        </div>
+        <div class="ukg-dates reveal-stagger">
+            <div class="ukg-date">
+                <div class="ukg-date-when">Dec 31, 2025</div>
+                <div class="ukg-date-what">Engineering &amp; cloud support ended</div>
+                <p class="ukg-date-note">Product engineering stopped and support ended for Workforce Central in UKG&rsquo;s cloud. No new fixes are coming.</p>
+            </div>
+            <div class="ukg-date">
+                <div class="ukg-date-when">Mar 31, 2027</div>
+                <div class="ukg-date-what">On-premise support ends</div>
+                <p class="ukg-date-note">Organizations running Workforce Central on-premise have a hard deadline &mdash; and migrations regularly take a year or more.</p>
+            </div>
+            <div class="ukg-date ukg-date-today">
+                <div class="ukg-date-when">Today</div>
+                <div class="ukg-date-what">The window that matters</div>
+                <p class="ukg-date-note">Between now and cutover, the system still has to run payroll-perfect every single pay period. That doesn&rsquo;t pause for a migration.</p>
+            </div>
+        </div>
+        <div class="ukg-clock-roles reveal-stagger">
+            <div class="ukg-role">
+                <span class="ukg-role-fig" aria-hidden="true">a.</span>
+                <h3>Keep Workforce Central steady to the end.</h3>
+                <p>Senior support for the platform you&rsquo;re still running &mdash; pay rule changes, fixes, interfaces, and reporting &mdash; so operations hold while the future gets built.</p>
+            </div>
+            <div class="ukg-role">
+                <span class="ukg-role-fig" aria-hidden="true">b.</span>
+                <h3>Document what your build actually does.</h3>
+                <p>Twenty-five years of accumulated configuration doesn&rsquo;t live in the manuals. We map the pay rules, accruals, interfaces, and reports your migration team needs as their source of truth.</p>
+            </div>
+            <div class="ukg-role">
+                <span class="ukg-role-fig" aria-hidden="true">c.</span>
+                <h3>Validate the new build against the old truth.</h3>
+                <p>Side-by-side testing of totals, accruals, and schedules against what Workforce Central calculates today &mdash; plus reporting continuity, so history survives the move.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE DELIVER — EXPANDED PILLARS -->
+<section id="deliver" class="section ukg-pillars">
+    <div class="wrap">
+        <header class="ukg-pillars-head">
+            <span class="eyebrow">What we deliver</span>
+            <h2 class="display h2 ukg-pillars-title reveal">
+                Three focus areas, <em>one platform.</em>
+            </h2>
+        </header>
+
+        <div class="ukg-pillar-rows">
+            <article class="ukg-prow reveal">
+                <span class="ukg-prow-n" aria-hidden="true">01</span>
+                <div>
+                    <h3 class="ukg-prow-title">Implementation Resources</h3>
+                    <p class="ukg-prow-body">Senior implementation hands when your project needs them &mdash; supplementing your team or running the work end-to-end. Configuration and build, integration, cutover support, and the post-go-live stabilization phase where projects are actually won or lost.</p>
+                </div>
+                <ul class="ukg-prow-list">
+                    <li>Pay rules &amp; work rules configuration</li>
+                    <li>Accrual &amp; attendance policies</li>
+                    <li>Scheduling setup &amp; forecasting</li>
+                    <li>Interfaces to payroll, HR &amp; ERP</li>
+                    <li>Cutover &amp; parallel testing</li>
+                    <li>Post-go-live stabilization</li>
+                </ul>
+            </article>
+
+            <article class="ukg-prow reveal">
+                <span class="ukg-prow-n" aria-hidden="true">02</span>
+                <div>
+                    <h3 class="ukg-prow-title">Data Hub &amp; Analytics</h3>
+                    <p class="ukg-prow-body">Workforce Central produces some of the most valuable operational data in your business &mdash; if someone makes it usable. We configure and build against UKG&rsquo;s data hub: dashboards line managers actually open, executive reporting leadership actually trusts, and the data engineering underneath that makes both reliable.</p>
+                </div>
+                <ul class="ukg-prow-list">
+                    <li>Operational dashboards for managers</li>
+                    <li>Executive labor reporting</li>
+                    <li>Custom report creation</li>
+                    <li>Overtime &amp; absence analytics</li>
+                    <li>Reliable data feeds &amp; engineering</li>
+                    <li>Historical data continuity</li>
+                </ul>
+            </article>
+
+            <article class="ukg-prow reveal">
+                <span class="ukg-prow-n" aria-hidden="true">03</span>
+                <div>
+                    <h3 class="ukg-prow-title">Healthcare Configuration</h3>
+                    <p class="ukg-prow-body">Healthcare is where Workforce Central configuration gets genuinely hard: 24/7 clinical scheduling, pay rule complexity that compounds across differentials and on-call, and the regulatory reporting that comes with running a clinical workforce. We&rsquo;ve built and maintained these environments for large healthcare organizations.</p>
+                </div>
+                <ul class="ukg-prow-list">
+                    <li>Shift differentials, on-call &amp; charge pay</li>
+                    <li>24/7 clinical scheduling</li>
+                    <li>Certification &amp; credential tracking</li>
+                    <li>Regulatory &amp; compliance reports</li>
+                    <li>Nurse &amp; clinical staff self-scheduling</li>
+                    <li>Union &amp; multi-agreement rules</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PLATFORM COVERAGE -->
+<section class="section ukg-modules dark-section">
+    <div class="wrap">
+        <div class="ukg-mods-head">
+            <span class="eyebrow">Where we work on the platform</span>
+            <h2 class="display h2 ukg-mods-title reveal">Across the Workforce Central <em>suite.</em></h2>
+        </div>
+        <div class="ukg-mods reveal-stagger">
+            <div class="ukg-mod"><b>Timekeeper</b><p>Time capture, totals, and the pay rule engine at the heart of the platform.</p></div>
+            <div class="ukg-mod"><b>Scheduler</b><p>Core and healthcare scheduling &mdash; coverage, self-scheduling, and staffing to demand.</p></div>
+            <div class="ukg-mod"><b>Attendance &amp; Leave</b><p>Attendance policies, points, and leave administration that hold up to audit.</p></div>
+            <div class="ukg-mod"><b>Accruals</b><p>Accrual policies and balances &mdash; the calculations everyone notices when they&rsquo;re wrong.</p></div>
+            <div class="ukg-mod"><b>Activities</b><p>Labor tracking against work performed for costing and productivity.</p></div>
+            <div class="ukg-mod"><b>Integrations</b><p>Interfaces between Workforce Central and payroll, HR, and ERP systems.</p></div>
+            <div class="ukg-mod"><b>Data Hub &amp; Analytics</b><p>Reporting, dashboards, and the data layer that turns punches into insight.</p></div>
+            <div class="ukg-mod"><b>Device &amp; clock support</b><p>The physical and virtual time-capture layer where the data begins.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section ukg-industries">
+    <div class="wrap">
+        <div class="ukg-mods-head">
+            <span class="eyebrow">Where we&rsquo;ve worked</span>
+            <h2 class="display h2 ukg-mods-title reveal">Complex workforces are <em>the job.</em></h2>
+        </div>
+        <div class="ukg-inds reveal-stagger">
+            <div class="ukg-ind"><b>Healthcare</b><p>Round-the-clock clinical workforces, compounding pay rules, and reporting that regulators read.</p></div>
+            <div class="ukg-ind"><b>Retail</b><p>High-volume hourly workforces where scheduling accuracy shows up directly in labor cost.</p></div>
+            <div class="ukg-ind"><b>Transit &amp; public operations</b><p>24/7 coverage requirements, bid schedules, and union agreements with long memories.</p></div>
+            <div class="ukg-ind"><b>Industrial &amp; manufacturing</b><p>Plants and crews with shift patterns, premiums, and ERP integrations that have to reconcile.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- TENURE STAT BLOCK --><!-- TENURE STAT BLOCK -->
+<section class="section ukg-tenure">
+    <div class="wrap">
+        <div class="ukg-tenure-grid">
+            <div class="ukg-tenure-text reveal">
+                <span class="eyebrow">Tenure</span>
+                <h2 class="display h2 ukg-tenure-title">
+                    Twenty-five years<br />
+                    on the <em>same platform.</em>
+                </h2>
+                <p class="lede ukg-tenure-lede">
+                    OT Solutions has been delivering on Kronos / UKG Workforce Central since 2000 — long enough to have seen multiple major platform shifts, and the patterns of what holds up and what doesn&rsquo;t.
+                </p>
+            </div>
+            <div class="ukg-tenure-stat reveal">
+                <div class="ukg-tenure-num">25+</div>
+                <div class="mono ukg-tenure-label">years on UKG / Workforce Central</div>
+                <div class="ukg-tenure-divider"></div>
+                <div class="ukg-tenure-since mono">since 2000</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW ENGAGEMENTS START -->
+<section class="section ukg-start tinted-section">
+    <div class="wrap">
+        <div class="ukg-mods-head">
+            <span class="eyebrow">How engagements start</span>
+            <h2 class="display h2 ukg-mods-title reveal">Senior help, without <em>the runway.</em></h2>
+        </div>
+        <div class="ukg-steps reveal-stagger" style="border-top: 0; padding-top: 0;">
+            <div class="ukg-step">
+                <span class="ukg-step-k">Step one</span>
+                <b>Tell us where you are.</b>
+                <p>Your platform version, your timeline, and where it hurts &mdash; a stalled project, a reporting gap, a migration on the horizon, or a build nobody fully understands anymore.</p>
+            </div>
+            <div class="ukg-step">
+                <span class="ukg-step-k">Step two</span>
+                <b>A senior review, not a sales cycle.</b>
+                <p>A senior consultant looks at your current state and tells you straight what&rsquo;s realistic &mdash; what to fix, what to leave, and what it will actually take.</p>
+            </div>
+            <div class="ukg-step">
+                <span class="ukg-step-k">Step three</span>
+                <b>Embedded and delivering.</b>
+                <p>We plug in as an extension of your team &mdash; on the piece you need or the whole delivery &mdash; and stay through stabilization, not just go-live.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="wrap">
+        <div class="cta-inner cta-inner-split">
+            <div class="cta-text reveal">
+                <span class="eyebrow no-rule cta-eyebrow">Connect with us</span>
+                <h2 class="display cta-title">
+                    Need a senior UKG<br />
+                    <em>consultant?</em>
+                </h2>
+                <p class="cta-lede">
+                    Tell us about your platform, your timeline, and where you&rsquo;re stuck. We&rsquo;ll be straight about what&rsquo;s realistic.
+                </p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary cta-btn-primary">Contact us <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <aside class="cta-meta">
+                <div class="cta-meta-row">
+                    <span class="mono cta-meta-key">Phone</span>
+                    <a href="tel:+17802435796" class="cta-meta-val">+1 (780) 243&ndash;5796</a>
+                </div>
+                <div class="cta-meta-row">
+                    <span class="mono cta-meta-key">Email</span>
+                    <a href="mailto:OTSolutions@shaw.ca" class="cta-meta-val">OTSolutions@shaw.ca</a>
+                </div>
+                <div class="cta-meta-row">
+                    <span class="mono cta-meta-key">Since</span>
+                    <span class="cta-meta-val">2000 · 25+ years</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <div class="footer-mark" aria-hidden="true">
+                        <img src="assets/logo-mark-navy.png" alt="" />
+                    </div>
+                    <div class="footer-name">OT Solutions</div>
+                </div>
+                <p class="footer-blurb">
+                    A data consulting firm helping organizations modernize, analyze, and activate their data to drive business transformation.
+                </p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Services</h4>
+                    <ul>
+                        <li><a href="kronos-expertise.html">UKG Consulting</a></li>
+                        <li><a href="services.html">Platform Modernization</a></li>
+                        <li><a href="services.html">Analytics &amp; BI</a></li>
+                        <li><a href="services.html">Governance &amp; Quality</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Contact</h4>
+                    <ul>
+                        <li><a href="tel:+17802435796">+1 (780) 243&ndash;5796</a></li>
+                        <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+                        <li class="muted">Sherwood Park, AB · Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="mono">© <span id="footer-year">2026</span> OT Solutions Inc. — All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

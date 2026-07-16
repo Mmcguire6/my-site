@@ -3,11 +3,24 @@ const { useState, useEffect } = React;
 
 function Nav({ onContactClick }) {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  useEffect(() => {
+    document.body.classList.toggle('nav-open', open);
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    const onResize = () => { if (window.innerWidth > 760) setOpen(false); };
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
+    return () => {
+      document.body.classList.remove('nav-open');
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [open]);
 
   const links = [
     { href: '#services', label: 'Services' },
@@ -35,6 +48,32 @@ function Nav({ onContactClick }) {
           ))}
         </nav>
         <a href="#contact" className="btn btn-primary nav-cta" onClick={onContactClick}>
+          Connect <span className="arrow">→</span>
+        </a>
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="nav-mobile"
+          onClick={() => setOpen(o => !o)}
+        >
+          <span className="nav-toggle-bar"></span>
+          <span className="nav-toggle-bar"></span>
+          <span className="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <div className="nav-mobile" id="nav-mobile" hidden={!open}>
+        <nav className="nav-mobile-links" aria-label="Mobile navigation">
+          {links.map(l => (
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+          ))}
+        </nav>
+        <a
+          href="#contact"
+          className="btn btn-primary nav-mobile-cta"
+          onClick={(e) => { setOpen(false); if (onContactClick) onContactClick(e); }}
+        >
           Connect <span className="arrow">→</span>
         </a>
       </div>

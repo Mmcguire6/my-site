@@ -3,11 +3,53 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>OT Solutions — Smarter Data. Stronger Decisions.</title>
+
+<title>OT Solutions — Senior UKG Consulting · Smarter Data. Stronger Decisions.</title>
+<meta name="description" content="OT Solutions is a senior UKG / Workforce Central consultancy in Sherwood Park, Alberta — 25+ years of implementation, data hub analytics, and healthcare configuration, plus data platform modernization, analytics, and governance. Since 2000." />
+<link rel="canonical" href="https://otsolutions.ca/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OT Solutions" />
+<meta property="og:url" content="https://otsolutions.ca/" />
+<meta property="og:title" content="OT Solutions — Senior UKG Consulting · Smarter Data. Stronger Decisions." />
+<meta property="og:description" content="A senior UKG / Workforce Central consultancy — 25+ years of implementation, data hub analytics, and healthcare configuration. Senior consultants since 2000." />
+<meta property="og:image" content="https://otsolutions.ca/assets/hero.jpg" />
+
+<link rel="icon" type="image/png" href="assets/logo-mark-navy.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="styles.css?v=11" />
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://otsolutions.ca/#org",
+  "name": "OT Solutions",
+  "legalName": "OT Solutions Inc.",
+  "description": "Senior UKG / Workforce Central consultancy in Sherwood Park, Alberta — implementation resources, data hub & analytics, and healthcare configuration, plus data platform modernization and governance for enterprise clients since 2000.",
+  "url": "https://otsolutions.ca/",
+  "logo": "https://otsolutions.ca/assets/logo-mark-navy.png",
+  "image": "https://otsolutions.ca/assets/hero.jpg",
+  "telephone": "+1-780-243-5796",
+  "email": "OTSolutions@shaw.ca",
+  "foundingDate": "2000",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sherwood Park",
+    "addressRegion": "AB",
+    "addressCountry": "CA"
+  },
+  "areaServed": ["Canada", "United States", "Bermuda", "Europe", "Asia"],
+  "knowsAbout": ["UKG", "Kronos Workforce Central", "Data platform modernization", "Analytics & BI", "Data governance", "ERP & CRM integration"],
+  "sameAs": []
+}
+</script>
+
 <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
         c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -15,24 +57,642 @@
         y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "wh3e6pv2u4");
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+  /* ───── Homepage section styles ───── */
+
+  /* HERO — split: full-bleed image with overlay text on the left */
+  .hero { padding: 0; }
+  .hero .btn { border-radius: 4px; }
+  .hero-split { position: relative; overflow: hidden; margin-top: -1px; }
+  .hero-s-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-s-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-s-veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right,
+      var(--bg) 0%,
+      var(--bg) 30%,
+      color-mix(in oklch, var(--bg) 88%, transparent) 46%,
+      color-mix(in oklch, var(--bg) 30%, transparent) 66%,
+      transparent 86%);
+  }
+  .hero-s-wrap {
+    position: relative; z-index: 1;
+    min-height: clamp(520px, 72vh, 760px);
+    display: flex; align-items: center;
+    padding-top: clamp(48px, 8vw, 96px);
+    padding-bottom: clamp(48px, 8vw, 96px);
+  }
+  .hero-s-text { max-width: 56ch; }
+  .hero-s-title { margin: 24px 0 24px; }
+  .hero-s-lede { margin: 0 0 32px; max-width: 50ch; }
+  .hero-s-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-s-ghost {
+    background: color-mix(in oklch, var(--bg) 70%, transparent);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* LOGOS — trusted by (marquee) */
+  .logos { padding: clamp(48px, 7vw, 88px) 0 clamp(40px, 6vw, 72px); border-top: 1px solid var(--rule); }
+  .logos-head { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 44px); }
+  .logos-blurb { font-size: 14px; color: var(--ink-3); line-height: 1.5; margin: 0; }
+  .logos-marquee { overflow: hidden; position: relative;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); }
+  .logos-track { display: flex; align-items: center; width: max-content;
+    animation: logos-scroll 70s linear infinite; }
+  .logos-marquee:hover .logos-track { animation-play-state: paused; }
+  @keyframes logos-scroll { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .logos-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; row-gap: 28px; }
+    .logo-item { margin-right: 0; }
+    .logos-track { gap: 28px 52px; }
+    .logos-track[aria-hidden] { display: none; }
+  }
+  .logo-item { display: inline-flex; align-items: center; flex-shrink: 0; margin-right: clamp(52px, 6vw, 88px); }
+  .logo-item img { height: 30px; width: auto; display: block;
+    filter: grayscale(1) brightness(0.55) opacity(0.75); transition: filter 240ms ease; }
+  .logo-item:hover img { filter: grayscale(0) brightness(1) opacity(1); }
+  .logo-item img[alt="Ralph Lauren"] { height: 20px; }
+  .logo-item img[alt="Tractor Supply Company"] { height: 34px; }
+  .logo-item.logo-word { font-family: var(--serif); font-size: 23px; letter-spacing: -0.01em;
+    color: var(--ink-2); white-space: nowrap; transition: color 240ms ease; }
+  .logo-item.logo-word:hover { color: var(--ink); }
+  .logo-item.logo-more { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+
+
+
+  /* SERVICES — expandable accordion */
+  .services-head { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; padding-bottom: 56px; }
+  .services-title { margin-top: 20px; }
+  .services-lede { margin: 0; }
+  .svc-acc { border-top: 1px solid var(--rule); }
+  .svc-item { border-bottom: 1px solid var(--rule); }
+  .svc-head {
+    width: 100%; display: grid; grid-template-columns: 150px 1fr 44px; align-items: center; gap: 24px;
+    padding: 26px 0; background: none; border: 0; cursor: pointer; text-align: left;
+    font: inherit; color: inherit;
+  }
+  .svc-head:hover .svc-title { color: var(--accent); }
+  .svc-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .svc-n { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); }
+  .svc-title { margin: 0; transition: color 200ms ease; }
+  .svc-icon { position: relative; width: 24px; height: 24px; justify-self: end; margin-right: 6px;
+    transition: transform 480ms cubic-bezier(.2,.7,.2,1); }
+  .svc-icon::before, .svc-icon::after {
+    content: ""; position: absolute; top: 50%; left: 50%; background: var(--ink-2);
+    transition: background 240ms ease;
+  }
+  .svc-icon::before { width: 24px; height: 1px; transform: translate(-50%, -50%); }
+  .svc-icon::after { width: 1px; height: 24px; transform: translate(-50%, -50%); }
+  .svc-head:hover .svc-icon::before, .svc-head:hover .svc-icon::after { background: var(--accent); }
+  .svc-item.open .svc-icon { transform: rotate(45deg); }
+  .svc-item.open .svc-icon::before, .svc-item.open .svc-icon::after { background: var(--ink); }
+  .svc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 420ms cubic-bezier(.2,.7,.2,1); }
+  .svc-item.open .svc-body { grid-template-rows: 1fr; }
+  .svc-body-inner { overflow: hidden; }
+  .svc-body-grid { display: grid; grid-template-columns: 150px 1fr auto; gap: 24px; padding: 4px 0 36px; }
+  .svc-card-blurb { margin: 0 0 24px; font-size: 14px; line-height: 1.6; max-width: 52ch; }
+  .svc-card-bullets { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .svc-card-bullets li { font-family: var(--mono); font-size: 12px; color: var(--ink-2); padding-left: 18px; position: relative; }
+  .svc-card-bullets li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 1px; background: var(--ink-3); }
+  .svc-card-link {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--ink);
+    text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 3px; transition: border-color 200ms ease;
+  }
+  .svc-card-link:hover { border-bottom-color: var(--ink); }
+  .svc-card-link:hover .arrow { transform: translateX(3px); }
+  .svc-card-link .arrow { transition: transform 200ms ease; }
+  .svc-featured-stat { text-align: right; border-left: 1px solid var(--rule); padding-left: clamp(28px, 3.5vw, 52px); align-self: center; }
+  .svc-featured-num { font-family: var(--serif); font-size: clamp(48px, 5.5vw, 78px); line-height: 1; color: var(--accent); }
+  .svc-featured-label { margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); max-width: 20ch; }
+  .svc-featured-since { margin-top: 14px; font-size: 11px; letter-spacing: 0.08em; color: var(--ink-3); padding-top: 12px; border-top: 1px solid var(--rule); display: inline-block; }
+  @media (max-width: 860px) {
+    .svc-head { grid-template-columns: 1fr 40px; }
+    .svc-head .svc-n { display: none; }
+    .svc-body-grid { grid-template-columns: 1fr; }
+    .svc-body-grid > .svc-spacer { display: none; }
+    .svc-featured-stat { text-align: left; border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 20px; }
+  }
+
+  /* WHY US — dark band */
+  .why-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: stretch; }
+  .why-title { margin: 20px 0 24px; }
+  .why-lede { margin: 32px 0 56px; }
+  .why-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+  .why-point { display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .why-point-num { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); padding-top: 4px; }
+  .why-point-label { font-size: 16px; font-weight: 500; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 6px; }
+  .why-point-body { margin: 0; font-size: 14px; line-height: 1.6; max-width: 48ch; }
+  .why-right { display: flex; }
+  .why-image { width: 100%; align-self: stretch; overflow: hidden; background: var(--bg-3); border: 1px solid var(--rule); }
+  .why-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .why-caption { display: flex; gap: 24px; margin-top: 16px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* TRACK RECORD */
+  .track-head { display: grid; grid-template-columns: 1.4fr 1fr; column-gap: 48px; row-gap: 24px; padding-bottom: 64px; }
+  .track-head .eyebrow { grid-column: 1 / -1; }
+  .track-title { margin: 0; }
+  .track-lede { margin: 0; align-self: end; }
+  .track-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .track-item {
+    display: grid; grid-template-columns: 220px 1fr 240px; gap: 48px; padding: 40px 0;
+    border-bottom: 1px solid var(--rule); align-items: start; position: relative;
+    transition: background 200ms ease;
+  }
+  .track-item:hover { background: var(--bg-2); }
+  .track-item-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+  .track-item-n { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); }
+  .track-item-kicker { font-size: 12px; letter-spacing: 0.06em; color: var(--ink); text-transform: uppercase; }
+  .track-item-title { font-family: var(--serif); font-size: clamp(24px, 2.6vw, 34px); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 14px; color: var(--ink); font-weight: 400; }
+  .track-item-blurb { margin: 0; font-size: 15px; line-height: 1.6; max-width: 56ch; }
+  .track-item-stat { text-align: right; padding-top: 8px; }
+  .track-item-stat-num { font-family: var(--serif); font-size: clamp(48px, 5vw, 72px); line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+  .track-item-stat-label { margin-top: 8px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* TESTIMONIALS */
+  .t-head { display: grid; grid-template-columns: 1.4fr 1fr; column-gap: 48px; row-gap: 20px; padding-bottom: 56px; }
+  .t-head .eyebrow { grid-column: 1 / -1; }
+  .t-title { margin: 0; }
+  .t-lede { margin: 0; align-self: end; }
+  .t-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .t-card {
+    margin: 0; padding: 48px 40px 36px; background: var(--bg-2); border: 1px solid var(--rule);
+    position: relative; display: flex; flex-direction: column; gap: 28px;
+    transition: transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms ease;
+  }
+  .t-card:hover { transform: translateY(-3px); box-shadow: 0 24px 48px -28px oklch(0.18 0.04 250 / 0.25); }
+  .t-mark { position: absolute; top: 24px; left: 32px; font-family: var(--serif); font-size: 96px; line-height: 1; color: var(--accent); opacity: 0.5; }
+  .t-quote { font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; letter-spacing: -0.005em; margin: 0; color: var(--ink); padding-top: 36px; text-wrap: pretty; }
+  .t-cap { padding-top: 24px; border-top: 1px solid var(--rule); }
+  .t-cap-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+  .t-cap-meta { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* HERO meta strip */
+  .hero-meta { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .hero-meta-row { display: flex; gap: 16px; flex-wrap: wrap; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+  @media (max-width: 980px) {
+    .logos-row { grid-template-columns: 1fr; gap: 24px; }
+    .track-head { grid-template-columns: 1fr; }
+    .track-item { grid-template-columns: 1fr; gap: 16px; }
+    .track-item-stat { text-align: left; }
+  }
+  @media (max-width: 880px) {
+    .hero-s-veil { background: linear-gradient(to bottom, color-mix(in oklch, var(--bg) 30%, transparent) 0%, color-mix(in oklch, var(--bg) 88%, transparent) 100%); }
+    .hero-s-wrap { min-height: 560px; }
+    .services-head { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-right { position: static; }
+    .t-head { grid-template-columns: 1fr; }
+    .t-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── preview redesign additions ── */
+  .svc-panel { background: color-mix(in oklch, var(--bg) 42%, var(--bg-2)); border: 1px solid var(--rule-soft); border-radius: 16px;
+    padding: clamp(6px, 1.5vw, 14px) clamp(18px, 3vw, 44px); box-shadow: 0 24px 60px -55px oklch(0.2 0.06 255 / 0.3); }
+  .svc-panel .svc-acc { border-top: none; }
+  .svc-panel .svc-item:last-child { border-bottom: none; }
+  .svc-card-bullets li { padding-left: 22px; }
+  .svc-card-bullets li::before { content: "✓"; width: auto; height: auto; top: 0; background: none;
+    color: var(--accent); font-size: 12px; line-height: 1.6; }
+  .why-point-fig { font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 0.9;
+    color: var(--gold); min-width: 58px; flex-shrink: 0; padding-top: 2px; letter-spacing: -0.02em; }
+  .track-item-ic { width: 50px; height: 50px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--rule);
+    display: inline-flex; align-items: center; justify-content: center; color: var(--ink-2); margin-bottom: 12px; }
+  .track-item-ic svg { width: 20px; height: 20px; }
+  .track-item-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .btn-silver { background: linear-gradient(180deg, #ffffff, oklch(0.88 0.012 250)); color: oklch(0.18 0.05 258); font-weight: 600;
+    box-shadow: 0 6px 18px -8px oklch(0 0 0 / 0.5), inset 0 1px 0 #fff; }
+  .btn-silver:hover { background: #ffffff; transform: translateY(-1px); box-shadow: 0 10px 26px -10px oklch(0 0 0 / 0.6); }
+  .cta { position: relative; overflow: hidden;
+    background: var(--navy-3) url('assets/final-cta-bg.jpg') right center / cover no-repeat; }
+  .cta::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to right, oklch(0.14 0.05 258 / 0.9) 0%, oklch(0.14 0.05 258 / 0.55) 40%, transparent 70%); }
+  .cta .wrap { position: relative; z-index: 1; }
+  .footer-brand-row { display: flex; align-items: center; gap: 14px; }
+  .footer-brand-row .footer-mark { margin-bottom: 0; }
+  .footer-brand-row .footer-name { margin: 0; }
+</style>
 </head>
 <body>
-<div id="root"></div>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="OT Solutions home">
+            <span class="nav-mark" aria-hidden="true">
+                <img src="assets/logo-mark-navy.png" alt="" />
+            </span>
+            <span class="nav-words">
+                <span class="nav-name">OT Solutions</span>
+                <span class="nav-tag">Putting Data In Your Hands</span>
+            </span>
+        </a>
+        <nav class="nav-links hide-sm" aria-label="Primary">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">
+            Connect <span class="arrow">→</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" hidden>
+        <nav class="nav-mobile-links" aria-label="Mobile navigation">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-mobile-cta">Connect <span class="arrow">&rarr;</span></a>
+    </div>
+</header>
 
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="sections/Nav.jsx"></script>
-<script type="text/babel" src="sections/Hero.jsx"></script>
-<script type="text/babel" src="sections/Logos.jsx"></script>
-<script type="text/babel" src="sections/Services.jsx"></script>
-<script type="text/babel" src="sections/WhyUs.jsx"></script>
-<script type="text/babel" src="sections/TrackRecord.jsx"></script>
-<script type="text/babel" src="sections/Testimonials.jsx"></script>
-<script type="text/babel" src="sections/CTA.jsx"></script>
-<script type="text/babel" src="sections/Footer.jsx"></script>
-<script type="text/babel" src="app.jsx"></script>
+<main id="main-content">
+
+<!-- HERO -->
+<section id="top" class="hero hero-split">
+    <div class="hero-s-bg" aria-hidden="true">
+        <img src="assets/hero.jpg" alt="" />
+        <div class="hero-s-veil"></div>
+    </div>
+    <div class="wrap hero-s-wrap">
+        <div class="hero-s-text reveal">
+            <span class="eyebrow">Data strategy. Real impact.</span>
+            <h1 class="display h1 hero-s-title">
+                Smarter data.<br />
+                Stronger <em>decisions.</em>
+            </h1>
+            <p class="lede hero-s-lede">
+                OT Solutions is a senior UKG / Workforce Central consultancy trusted by leaders in healthcare, retail, and industrial organizations to turn workforce data into a competitive edge.
+            </p>
+            <div class="hero-s-actions">
+                <a href="services.html" class="btn btn-primary">Our services <span class="arrow">→</span></a>
+                <a href="contact.html" class="btn btn-ghost hero-s-ghost">Connect with us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+    <div class="wrap">
+        <div class="logos-head">
+            <span class="eyebrow no-rule">Trusted by</span>
+        </div>
+    </div>
+    <div class="logos-marquee">
+        <div class="logos-track">
+            <span class="logo-item"><img src="assets/logos/ukg.svg" alt="UKG" /></span>
+            <span class="logo-item logo-word">Cedars-Sinai</span>
+            <span class="logo-item"><img src="assets/logos/ralph-lauren.svg" alt="Ralph Lauren" /></span>
+            <span class="logo-item logo-word">New York Transit</span>
+            <span class="logo-item"><img src="assets/logos/petsmart.svg" alt="PetSmart" /></span>
+            <span class="logo-item logo-word">Discount Tire</span>
+            <span class="logo-item"><img src="assets/logos/luxottica.svg" alt="Luxottica" /></span>
+            <span class="logo-item logo-word">Huntington Health</span>
+            <span class="logo-item"><img src="assets/logos/tractor-supply.svg" alt="Tractor Supply Company" /></span>
+            <span class="logo-item logo-word">Lehigh Cement</span>
+            <span class="logo-item logo-word">APS</span>
+            <span class="logo-item logo-word">DKS Data</span>
+            <span class="logo-item logo-more">+ many more</span>
+            <span aria-hidden="true" class="logo-item"><img src="assets/logos/ukg.svg" alt="UKG" /></span>
+            <span aria-hidden="true" class="logo-item logo-word">Cedars-Sinai</span>
+            <span aria-hidden="true" class="logo-item"><img src="assets/logos/ralph-lauren.svg" alt="Ralph Lauren" /></span>
+            <span aria-hidden="true" class="logo-item logo-word">New York Transit</span>
+            <span aria-hidden="true" class="logo-item"><img src="assets/logos/petsmart.svg" alt="PetSmart" /></span>
+            <span aria-hidden="true" class="logo-item logo-word">Discount Tire</span>
+            <span aria-hidden="true" class="logo-item"><img src="assets/logos/luxottica.svg" alt="Luxottica" /></span>
+            <span aria-hidden="true" class="logo-item logo-word">Huntington Health</span>
+            <span aria-hidden="true" class="logo-item"><img src="assets/logos/tractor-supply.svg" alt="Tractor Supply Company" /></span>
+            <span aria-hidden="true" class="logo-item logo-word">Lehigh Cement</span>
+            <span aria-hidden="true" class="logo-item logo-word">APS</span>
+            <span aria-hidden="true" class="logo-item logo-word">DKS Data</span>
+            <span aria-hidden="true" class="logo-item logo-more">+ many more</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="section services tinted-section">
+    <div class="wrap">
+        <header class="services-head">
+            <div>
+                <span class="eyebrow">Our services</span>
+                <h2 class="display h2 services-title reveal">
+                    End-to-end data solutions <em>built for impact.</em>
+                </h2>
+            </div>
+            <p class="lede services-lede reveal">
+                From strategy to implementation, we help you harness the power of your data — practically and with measurable results.
+            </p>
+        </header>
+
+        <div class="svc-panel reveal">
+        <div class="svc-acc">
+        <div class="svc-item open">
+            <button class="svc-head" type="button" aria-expanded="true" aria-controls="svc-body-1">
+                <span class="mono svc-n">01</span>
+                <span class="h3 svc-title">UKG / Workforce Central Consulting</span>
+                <span class="svc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc-body" id="svc-body-1">
+                <div class="svc-body-inner">
+                    <div class="svc-body-grid">
+                        <span class="svc-spacer" aria-hidden="true"></span>
+                        <div>
+                            <p class="body svc-card-blurb">Performance-driven advisory for every area of UKG / Workforce Central &mdash; senior implementation resources, data hub &amp; analytics configuration, and healthcare-vertical builds that improve operational outcomes and unlock value from your workforce data.</p>
+                            <ul class="svc-card-bullets"><li>Implementation resources</li><li>Data hub &amp; analytics</li><li>Healthcare configuration</li></ul>
+                            <a href="kronos-expertise.html" class="svc-card-link">Explore UKG consulting <span class="arrow">→</span></a>
+                        </div>
+                        <div class="svc-featured-stat" aria-hidden="true">
+                            <div class="svc-featured-num">25+</div>
+                            <div class="mono svc-featured-label">years on UKG / Workforce Central</div>
+                            <div class="svc-featured-since mono">since 2000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svc-item">
+            <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-body-2">
+                <span class="mono svc-n">02</span>
+                <span class="h3 svc-title">Data Strategy &amp; Roadmaps</span>
+                <span class="svc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc-body" id="svc-body-2">
+                <div class="svc-body-inner">
+                    <div class="svc-body-grid">
+                        <span class="svc-spacer" aria-hidden="true"></span>
+                        <div>
+                            <p class="body svc-card-blurb">Build a roadmap for data success aligned with your business goals &mdash; from current-state assessment to a multi-year delivery plan.</p>
+                            <ul class="svc-card-bullets"><li>Maturity &amp; gap assessment</li><li>Capability roadmaps</li><li>Investment cases</li></ul>
+                            <a href="services.html" class="svc-card-link">Learn more <span class="arrow">→</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svc-item">
+            <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-body-3">
+                <span class="mono svc-n">03</span>
+                <span class="h3 svc-title">Data Platform Modernization</span>
+                <span class="svc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc-body" id="svc-body-3">
+                <div class="svc-body-inner">
+                    <div class="svc-body-grid">
+                        <span class="svc-spacer" aria-hidden="true"></span>
+                        <div>
+                            <p class="body svc-card-blurb">Modernize your data infrastructure for scale, performance, and agility. Migrate confidently from legacy stacks to cloud-native foundations.</p>
+                            <ul class="svc-card-bullets"><li>Cloud migration</li><li>Architecture &amp; integration</li><li>ERP / CRM interfaces</li></ul>
+                            <a href="services.html" class="svc-card-link">Learn more <span class="arrow">→</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svc-item">
+            <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-body-4">
+                <span class="mono svc-n">04</span>
+                <span class="h3 svc-title">Analytics &amp; BI Enablement</span>
+                <span class="svc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc-body" id="svc-body-4">
+                <div class="svc-body-inner">
+                    <div class="svc-body-grid">
+                        <span class="svc-spacer" aria-hidden="true"></span>
+                        <div>
+                            <p class="body svc-card-blurb">Turn raw data into insight with advanced analytics and intuitive dashboards your operators and executives will actually use.</p>
+                            <ul class="svc-card-bullets"><li>Executive dashboards</li><li>Self-serve enablement</li><li>Embedded analytics</li></ul>
+                            <a href="services.html" class="svc-card-link">Learn more <span class="arrow">→</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svc-item">
+            <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-body-5">
+                <span class="mono svc-n">05</span>
+                <span class="h3 svc-title">Data Governance &amp; Quality</span>
+                <span class="svc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc-body" id="svc-body-5">
+                <div class="svc-body-inner">
+                    <div class="svc-body-grid">
+                        <span class="svc-spacer" aria-hidden="true"></span>
+                        <div>
+                            <p class="body svc-card-blurb">Ensure trusted, secure, and compliant data across your organization &mdash; with practical controls that don&rsquo;t slow delivery down.</p>
+                            <ul class="svc-card-bullets"><li>Stewardship models</li><li>Quality monitoring</li><li>Compliance frameworks</li></ul>
+                            <a href="services.html" class="svc-card-link">Learn more <span class="arrow">→</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.querySelectorAll('.svc-head').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        var itm = btn.closest('.svc-item');
+        var open = itm.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+});
+</script>
+
+<!-- WHY US -->
+<section id="why" class="section why dark-section">
+    <div class="wrap">
+        <div class="why-grid">
+            <div class="why-left">
+                <span class="eyebrow">Why OT Solutions</span>
+                <h2 class="display h2 why-title reveal">
+                    Deep expertise.<br />
+                    A <em>client-first</em> approach.
+                </h2>
+                <p class="lede why-lede reveal">
+                    Our team brings decades of experience delivering complex data solutions that drive real business value — quietly, on time, and on budget.
+                </p>
+                <ul class="why-points reveal-stagger">
+                    <li class="why-point">
+                        <span class="why-point-fig" aria-hidden="true">01</span>
+                        <div><div class="why-point-label">Proven Expertise</div><p class="body why-point-body">Senior consultants with real-world experience and a track record of successful outcomes.</p></div>
+                    </li>
+                    <li class="why-point">
+                        <span class="why-point-fig" aria-hidden="true">02</span>
+                        <div><div class="why-point-label">Clear Communication</div><p class="body why-point-body">We translate data and tech into clarity, so you can make confident decisions.</p></div>
+                    </li>
+                    <li class="why-point">
+                        <span class="why-point-fig" aria-hidden="true">03</span>
+                        <div><div class="why-point-label">Outcome Focused</div><p class="body why-point-body">We align every solution with your strategic priorities and deliver measurable results.</p></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="why-right">
+                <div class="why-image reveal">
+                    <img src="assets/why-ot.jpg" alt="OT Solutions team meeting in a glass-walled boardroom overlooking the city" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRACK RECORD -->
+<section class="section track">
+    <div class="wrap">
+        <header class="track-head">
+            <span class="eyebrow">Proven track record</span>
+            <h2 class="display h2 track-title reveal">
+                Proven across complex<br />
+                <em>enterprise environments.</em>
+            </h2>
+            <p class="lede track-lede reveal">
+                Senior consultants delivering measurable results on the systems large organizations rely on every day.
+            </p>
+        </header>
+        <ol class="track-list reveal-stagger">
+            <li class="track-item">
+                <div class="track-item-meta"><span class="track-item-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><span class="mono track-item-n">01</span><span class="mono track-item-kicker">Enterprise Delivery</span></div>
+                <div class="track-item-body"><h3 class="display track-item-title">Multimillion-dollar projects, delivered.</h3><p class="body track-item-blurb">Supported enterprise initiatives at APS with reduced timelines and budgets — consistently exceeding executive expectations.</p></div>
+                <div class="track-item-stat"><div class="track-item-stat-num">$M+</div><div class="mono track-item-stat-label">in delivered initiatives</div></div>
+            </li>
+            <li class="track-item">
+                <div class="track-item-meta"><span class="track-item-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M6.8 7.4L10.5 16M17.2 7.4L13.5 16M7.2 6h9.6"/></svg></span><span class="mono track-item-n">02</span><span class="mono track-item-kicker">Systems Integration</span></div>
+                <div class="track-item-body"><h3 class="display track-item-title">ERP &amp; CRM integration experience.</h3><p class="body track-item-blurb">Delivered interface and support work across SAP, Microsoft, and other industry-specific business systems for global manufacturers.</p></div>
+                <div class="track-item-stat"><div class="track-item-stat-num">SAP</div><div class="mono track-item-stat-label">Microsoft · industry stacks</div></div>
+            </li>
+            <li class="track-item">
+                <div class="track-item-meta"><span class="track-item-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3 7-9V6l-7-3-7 3v7c0 6 7 9 7 9z"/></svg></span><span class="mono track-item-n">03</span><span class="mono track-item-kicker">Long-Tenured Expertise</span></div>
+                <div class="track-item-body"><h3 class="display track-item-title">25+ years of trusted consulting.</h3><p class="body track-item-blurb">Long-running data and systems expertise across industrial, manufacturing, and workforce environments — since 2000.</p></div>
+                <div class="track-item-stat"><div class="track-item-stat-num">25+</div><div class="mono track-item-stat-label">years, since 2000</div></div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section testimonials">
+    <div class="wrap">
+        <header class="t-head">
+            <span class="eyebrow">Client endorsements</span>
+            <h2 class="display h2 t-title reveal">In their <em>own words.</em></h2>
+            <p class="lede t-lede reveal">Senior leaders who’ve worked alongside our consultants on multimillion-dollar enterprise initiatives.</p>
+        </header>
+        <div class="t-grid reveal-stagger">
+            <figure class="t-card">
+                <span class="t-mark" aria-hidden="true">“</span>
+                <blockquote class="t-quote">OT Solutions contractors are exceptional in their ability to think outside the box and complete tasks others would find impossible. Their technical skills are second to none. They helped me take a number of multimillion-dollar projects at APS to places the executive never expected. With their help I over-delivered while reducing timelines and budget significantly — they made me look very good.</blockquote>
+                <figcaption class="t-cap"><div class="t-cap-name">David Dickson</div><div class="t-cap-meta mono">DKS Data · on enterprise delivery at APS</div></figcaption>
+            </figure>
+            <figure class="t-card">
+                <span class="t-mark" aria-hidden="true">“</span>
+                <blockquote class="t-quote">OT Solutions contractors provided design, development, and ongoing support for a variety of business system interfaces and user interfaces for ERP and CRM systems. The technical platform was predominantly Microsoft, with business system solutions from SAP and other industry-specific software. In short, I could not be happier to endorse and recommend OT Solutions for I.T. development solutions.</blockquote>
+                <figcaption class="t-cap"><div class="t-cap-name">Sherryl O’Connor</div><div class="t-cap-meta mono">Lehigh Inland · on ERP &amp; CRM delivery at Lehigh Cement</div></figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta">
+    <div class="wrap">
+        <div class="cta-inner">
+            <div class="cta-text reveal">
+                <span class="eyebrow no-rule cta-eyebrow">Connect with us</span>
+                <h2 class="display cta-title">
+                    Ready to unlock the<br />
+                    power of your <em>data?</em>
+                </h2>
+                <p class="cta-lede">Let’s talk about how we can help you solve challenges, uncover opportunities, and achieve real impact.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-silver cta-btn-primary">Connect With Us <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <div class="footer-mark" aria-hidden="true">
+                        <img src="assets/logo-mark-navy.png" alt="" />
+                    </div>
+                    <div class="footer-name">OT Solutions</div>
+                </div>
+                <p class="footer-blurb">
+                    A data consulting firm helping organizations modernize, analyze, and activate their data to drive business transformation.
+                </p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Services</h4>
+                    <ul>
+                        <li><a href="kronos-expertise.html">UKG Consulting</a></li>
+                        <li><a href="services.html">Platform Modernization</a></li>
+                        <li><a href="services.html">Analytics &amp; BI</a></li>
+                        <li><a href="services.html">Governance &amp; Quality</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Contact</h4>
+                    <ul>
+                        <li><a href="tel:+17802435796">+1 (780) 243&ndash;5796</a></li>
+                        <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+                        <li class="muted">Sherwood Park, AB · Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="mono">© <span id="footer-year">2026</span> OT Solutions Inc. — All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
