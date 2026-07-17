@@ -56,148 +56,52 @@
 </script>
 
 <style>
-  /* ───── Contact page section styles ───── */
+  /* ───── Contact (ot mock) ───── */
+  .ct-hero { border-bottom: 1px solid var(--rule); }
+  .ct-hero .wrap { padding-top: clamp(36px, 4.4vw, 62px); padding-bottom: clamp(36px, 4.4vw, 62px); }
+  .ct-hero-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
+  .ct-hero .eyebrow { color: var(--gold); font-size: 13px; letter-spacing: 0.16em; }
+  .ct-hero .eyebrow::before { background: var(--gold-rule); }
+  .ct-hero-title { font-size: clamp(36px, 4.6vw, 62px); margin: 16px 0 20px; line-height: 1.08; }
+  .ct-hero-title em { color: var(--accent-ink); }
+  .ct-hero-lede { font-size: clamp(15.5px, 1.35vw, 18.5px); line-height: 1.6; color: var(--ink-2); max-width: 44ch; margin: 0; }
+  .ct-photo { position: relative; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 26px 56px -36px oklch(0.14 0.05 258 / 0.5); }
+  .ct-photo img { width: 100%; height: auto; display: block; }
+  .ct-photo-mail { position: absolute; right: 0; bottom: 0; width: 37%; height: 40%; }
 
-  /* PAGE HEAD */
-  .page-head { padding: clamp(56px, 8vw, 104px) 0 clamp(40px, 5vw, 64px); border-bottom: 1px solid var(--rule); }
-  .page-head-tight { padding-bottom: clamp(40px, 5vw, 64px); }
-  .page-head .eyebrow { color: var(--gold); }
-  .page-head .eyebrow::before { background: var(--gold-rule); }
-  .page-head-title { font-size: clamp(40px, 6vw, 88px); margin: 20px 0 24px; max-width: 18ch; }
-  .page-head-lede { max-width: 60ch; margin: 0; }
+  /* direct contacts */
+  .ct-direct { background: var(--bg-2); border-bottom: 1px solid var(--rule); }
+  .ct-direct .wrap { padding-top: clamp(34px, 4vw, 56px); padding-bottom: clamp(34px, 4vw, 56px);
+    display: grid; grid-template-columns: 0.8fr 1fr 1fr; gap: clamp(24px, 3.4vw, 60px); align-items: start; }
+  .ct-direct h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); color: var(--ink); margin: 0; }
+  .ct-person + .ct-person { border-left: 1px solid var(--rule); padding-left: clamp(24px, 3.4vw, 60px); }
+  .ct-person h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(21px, 2.1vw, 28px); color: var(--ink); margin: 0 0 5px; }
+  .ct-role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ink); display: block; margin-bottom: 16px; }
+  .ct-lines { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .ct-lines a { font-size: 15px; color: var(--ink-2); }
+  .ct-lines a:hover { color: var(--accent-ink); }
+  .ct-btn { border: 1.5px solid var(--ink); color: var(--ink); font-weight: 600; border-radius: 6px; }
+  .ct-btn:hover { background: var(--ink); color: var(--bg); }
 
-  /* IMAGE + FORM SPLIT */
-  .contact-split-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
-  .contact-split-image { position: relative; margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--rule); background: var(--bg-3); position: sticky; top: 96px; }
-  .contact-split-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .contact-split .eyebrow { color: var(--gold); }
-  .contact-split .eyebrow::before { background: var(--gold-rule); }
-  .contact-split-title { font-size: clamp(30px, 3.6vw, 52px); margin: 20px 0 16px; }
-  .contact-split-lede { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: var(--ink-2); margin: 0 0 36px; max-width: 52ch; }
+  /* notes strip */
+  .ct-notes { border-bottom: 1px solid var(--rule); }
+  .ct-notes .wrap { padding-top: clamp(32px, 3.8vw, 52px); padding-bottom: clamp(32px, 3.8vw, 52px);
+    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 72px); align-items: start; }
+  .ct-note + .ct-note { border-left: 1px solid var(--rule); padding-left: clamp(28px, 4vw, 72px); }
+  .ct-note h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.3vw, 30px); color: var(--ink); margin: 0 0 10px; }
+  .ct-note p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0 0 10px; max-width: 46ch; }
+  .ct-note .fine { font-size: 13.5px; color: var(--ink-3); margin: 14px 0 0; }
+  .ct-note .btn { margin-top: 8px; }
+  .ct-btn-ghost { border: 1.5px solid var(--rule); color: var(--ink); font-weight: 600; border-radius: 6px; }
+  .ct-btn-ghost:hover { border-color: var(--ink); }
 
-  /* CONTACT FORM */
-  .cf { display: flex; flex-direction: column; gap: 20px; }
-  .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .cf-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .cf-field { display: flex; flex-direction: column; gap: 8px; }
-  .cf-field label {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-  }
-  .cf-optional { text-transform: none; letter-spacing: 0; color: var(--ink-4); }
-  .cf-field input,
-  .cf-field textarea {
-    font-family: var(--sans);
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--ink);
-    background: var(--bg);
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    padding: 13px 15px;
-    width: 100%;
-    transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .cf-field textarea { resize: vertical; min-height: 132px; }
-  .cf-field input::placeholder,
-  .cf-field textarea::placeholder { color: var(--ink-4); }
-  .cf-field input:hover,
-  .cf-field textarea:hover { border-color: var(--ink-4); }
-  .cf-field input:focus,
-  .cf-field textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 22%, transparent);
-    background: var(--bg);
-  }
-  .cf-field input:focus-visible,
-  .cf-field textarea:focus-visible {
-    outline: 2px solid transparent;
-  }
-  .cf-submit { margin-top: 4px; align-self: flex-start; border-radius: 4px; padding: 13px 26px; }
-
-  /* FORM STATE MESSAGES */
-  .cf-success,
-  .cf-error {
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 16px 18px;
-    border-radius: 4px;
-    border: 1px solid;
-  }
-  .cf-success[hidden],
-  .cf-error[hidden] { display: none; }
-  .cf-success {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    color: oklch(0.42 0.12 155);
-    background: oklch(0.95 0.05 155);
-    border-color: oklch(0.80 0.10 155);
-  }
-  .cf-success strong { font-weight: 600; color: oklch(0.36 0.13 155); }
-  .cf-error {
-    color: oklch(0.46 0.16 25);
-    background: oklch(0.95 0.04 25);
-    border-color: oklch(0.82 0.12 25);
-  }
-  .cf-error a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-  [data-theme="dark"] .cf-success { color: oklch(0.86 0.12 155); background: oklch(0.26 0.06 155); border-color: oklch(0.40 0.09 155); }
-  [data-theme="dark"] .cf-success strong { color: oklch(0.92 0.13 155); }
-  [data-theme="dark"] .cf-error { color: oklch(0.86 0.13 25); background: oklch(0.28 0.07 25); border-color: oklch(0.46 0.12 25); }
-
-  /* DIRECT CONTACTS */
-  .contact-direct .eyebrow { color: var(--gold); }
-  .contact-direct .eyebrow::before { background: var(--gold-rule); }
-  .contact-direct-head { margin-bottom: clamp(40px, 5vw, 56px); }
-  .contact-direct-title { font-size: clamp(30px, 3.6vw, 52px); margin: 20px 0 0; }
-  .contact-direct-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-  }
-  .contact-direct-card { background: var(--bg-2); padding: clamp(28px, 3vw, 40px); transition: background 240ms ease; }
-  .contact-direct-card:hover { background: var(--bg); }
-  .contact-direct-name { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 6px; }
-  .contact-direct-role { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 24px; }
-  .contact-direct-channels { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; border-top: 1px solid var(--rule); padding-top: 22px; }
-  .contact-direct-channels li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: baseline; }
-  .contact-channel-key { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
-  .contact-channel-val { font-size: 15px; color: var(--ink); transition: color 200ms ease; word-break: break-word; }
-  a.contact-channel-val:hover { color: var(--accent-ink); }
-
-  /* OFFICE META */
-  .contact-direct-meta {
-    list-style: none;
-    margin: clamp(40px, 5vw, 56px) 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-  }
-  .contact-direct-meta li { background: var(--bg-2); padding: 24px 28px; display: flex; flex-direction: column; gap: 8px; }
-  .contact-direct-meta-key { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
-  .contact-direct-meta-val { font-size: 15px; line-height: 1.4; color: var(--ink); }
-
-  @media (max-width: 880px) {
-    .contact-split-grid { grid-template-columns: 1fr; }
-    .contact-split-image { aspect-ratio: 16 / 10; position: static; top: auto; }
-    .contact-direct-grid { grid-template-columns: 1fr; }
-    .contact-direct-meta { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 760px) {
-    .cf-row { grid-template-columns: 1fr; }
-    .cf-submit { align-self: stretch; justify-content: center; }
+  @media (max-width: 960px) {
+    .ct-hero-grid { grid-template-columns: 1fr; }
+    .ct-direct .wrap { grid-template-columns: 1fr; gap: 26px; }
+    .ct-person + .ct-person { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 24px; }
+    .ct-notes .wrap { grid-template-columns: 1fr; }
+    .ct-note + .ct-note { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 26px; }
   }
 </style>
 </head>
@@ -219,7 +123,7 @@
             <a href="index.html">Home</a>
             <a href="kronos-expertise.html">UKG Consulting</a>
             <div class="nav-dd">
-            <a href="services.html">Services <span class="dd-caret" aria-hidden="true"></span></a>
+            <a>Services <span class="dd-caret" aria-hidden="true"></span></a>
             <div class="nav-dd-panel">
                 <div class="wrap dd-grid">
                     <a class="dd-feature" href="kronos-expertise.html">
@@ -232,12 +136,10 @@
                     <div class="dd-left">
                         <div class="dd-lhead">
                             <span class="dd-k">Our services</span>
-                            <a class="dd-all" href="services.html">View all services <span class="arrow">→</span></a>
                         </div>
                         <div class="dd-list">
                             <a href="data-platforms.html"><span class="dd-n">02</span><span><b>Data Platforms &amp; Integration</b><span class="d">Systems connected into one foundation.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
                             <a href="analytics-bi.html"><span class="dd-n">03</span><span><b>Analytics &amp; BI Enablement</b><span class="d">Reporting people actually use and trust.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
-                            <a href="data-governance.html"><span class="dd-n">04</span><span><b>Data Governance &amp; Quality</b><span class="d">Reliable data without slowing delivery.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -260,11 +162,9 @@
         <nav class="nav-mobile-links" aria-label="Mobile navigation">
             <a href="index.html">Home</a>
             <a href="kronos-expertise.html">UKG Consulting</a>
-            <a href="services.html">Services</a>
             <a class="nav-mobile-sub" href="kronos-expertise.html">UKG / Workforce Central</a>
             <a class="nav-mobile-sub" href="data-platforms.html">Data Platforms &amp; Integration</a>
             <a class="nav-mobile-sub" href="analytics-bi.html">Analytics &amp; BI</a>
-            <a class="nav-mobile-sub" href="data-governance.html">Governance &amp; Quality</a>
             <a href="about-us.html">About</a>
             <a href="references.html">References</a>
             <a href="contact.html" aria-current="page">Contact</a>
@@ -276,147 +176,61 @@
 
 <main id="main-content">
 
-<!-- PAGE HEAD -->
-<section class="page-head page-head-tight">
+<!-- HERO -->
+<section class="ct-hero">
     <div class="wrap">
-        <span class="eyebrow">Contact</span>
-        <h1 class="display h1 page-head-title">
-            Tell us what<br />
-            you&rsquo;re <em>working through.</em>
-        </h1>
-        <p class="lede page-head-lede">
-            We respond within one business day. Honest answers about what&rsquo;s realistic, what your timeline should be, and whether we&rsquo;re the right fit.
-        </p>
-    </div>
-</section>
-
-<!-- IMAGE + FORM (50/50) -->
-<section class="section contact-split">
-    <div class="wrap">
-        <div class="contact-split-grid">
-            <figure class="contact-split-image reveal">
-                <img src="assets/why-ot.jpg" alt="OT Solutions team in a working session" />
-            </figure>
-
-            <div class="contact-split-form reveal">
-                <span class="eyebrow">Send a message</span>
-                <h2 class="display h2 contact-split-title">
-                    Brief is fine. <em>We&rsquo;ll follow up.</em>
-                </h2>
-                <p class="contact-split-lede">
-                    A few sentences about what you&rsquo;re working on or where you&rsquo;re stuck. We&rsquo;ll be in touch within one business day.
-                </p>
-
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    class="cf cf-page"
-                    id="contact-form"
-                >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p class="cf-hp" aria-hidden="true">
-                        <label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-                    </p>
-
-                    <div class="cf-row">
-                        <div class="cf-field">
-                            <label for="cf-name">Name</label>
-                            <input type="text" id="cf-name" name="name" required autocomplete="name" />
-                        </div>
-                        <div class="cf-field">
-                            <label for="cf-email">Email</label>
-                            <input type="email" id="cf-email" name="email" required autocomplete="email" />
-                        </div>
-                    </div>
-                    <div class="cf-row">
-                        <div class="cf-field">
-                            <label for="cf-company">Company</label>
-                            <input type="text" id="cf-company" name="company" autocomplete="organization" />
-                        </div>
-                        <div class="cf-field">
-                            <label for="cf-phone">Phone <span class="cf-optional">(optional)</span></label>
-                            <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
-                        </div>
-                    </div>
-                    <div class="cf-field">
-                        <label for="cf-message">How can we help?</label>
-                        <textarea id="cf-message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary cf-submit">
-                        Send message <span class="arrow">→</span>
-                    </button>
-
-                    <div class="cf-success" hidden>
-                        <strong>Thanks — message received.</strong>
-                        <span>We&rsquo;ll be in touch within one business day.</span>
-                    </div>
-                    <div class="cf-error" hidden>
-                        Something went wrong sending the message. Please email <a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a> directly.
-                    </div>
-                </form>
+        <div class="ct-hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">Contact.</span>
+                <h1 class="display ct-hero-title">Bring us the problem you&rsquo;re <em>working through.</em></h1>
+                <p class="ct-hero-lede">Whether it involves UKG, workforce data or reporting, a short email or direct call is enough to begin.</p>
+            </div>
+            <div class="ct-photo reveal">
+                <img src="assets/contact-hero-photo.jpg" alt="Consultant working through UKG workforce system architecture and data integration flow diagrams" width="707" height="446" />
+                <a class="ct-photo-mail" href="mailto:OTSolutions@shaw.ca" aria-label="Email OT Solutions"></a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- DIRECT CONTACTS + OFFICE META -->
-<section class="section contact-direct tinted-section">
+<!-- DIRECT CONTACTS -->
+<section class="ct-direct">
     <div class="wrap">
-        <header class="contact-direct-head">
-            <span class="eyebrow">Direct lines</span>
-            <h2 class="display h2 contact-direct-title">
-                Or reach out <em>directly.</em>
-            </h2>
-        </header>
-
-        <div class="contact-direct-grid reveal-stagger">
-            <div class="contact-direct-card">
-                <p class="contact-direct-name">Tom Olthoff</p>
-                <p class="mono contact-direct-role">Director</p>
-                <ul class="contact-direct-channels">
-                    <li>
-                        <span class="mono contact-channel-key">Phone</span>
-                        <a href="tel:+17809740124" class="contact-channel-val">(780) 974&ndash;0124</a>
-                    </li>
-                    <li>
-                        <span class="mono contact-channel-key">Email</span>
-                        <a href="mailto:OTSolutions@shaw.ca" class="contact-channel-val">OTSolutions@shaw.ca</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="contact-direct-card">
-                <p class="contact-direct-name">Ariel Dinel</p>
-                <p class="mono contact-direct-role">Account Executive</p>
-                <ul class="contact-direct-channels">
-                    <li>
-                        <span class="mono contact-channel-key">Phone</span>
-                        <a href="tel:+17802435796" class="contact-channel-val">(780) 243&ndash;5796</a>
-                    </li>
-                    <li>
-                        <span class="mono contact-channel-key">Email</span>
-                        <a href="mailto:AO.OTSolutions@shaw.ca" class="contact-channel-val">AO.OTSolutions@shaw.ca</a>
-                    </li>
-                </ul>
-            </div>
+        <h2 class="reveal">Direct contacts.</h2>
+        <div class="ct-person reveal">
+            <h3>Tom Olthoff</h3>
+            <span class="ct-role">Director</span>
+            <ul class="ct-lines">
+                <li><a href="tel:+17809740124">(780) 974&ndash;0124</a></li>
+                <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+            </ul>
+            <a href="mailto:OTSolutions@shaw.ca" class="btn ct-btn">Email Tom</a>
         </div>
+        <div class="ct-person reveal">
+            <h3>Ariel Dinel</h3>
+            <span class="ct-role">Account Executive</span>
+            <ul class="ct-lines">
+                <li><a href="tel:+17802435796">(780) 243&ndash;5796</a></li>
+                <li><a href="mailto:AO.OTSolutions@shaw.ca">AO.OTSolutions@shaw.ca</a></li>
+            </ul>
+            <a href="mailto:AO.OTSolutions@shaw.ca" class="btn ct-btn">Email Ariel</a>
+        </div>
+    </div>
+</section>
 
-        <ul class="contact-direct-meta reveal">
-            <li>
-                <span class="mono contact-direct-meta-key">Office</span>
-                <span class="contact-direct-meta-val">Sherwood Park, Alberta &middot; Canada</span>
-            </li>
-            <li>
-                <span class="mono contact-direct-meta-key">Working globally</span>
-                <span class="contact-direct-meta-val">Canada &middot; USA &middot; Bermuda &middot; Europe &middot; Asia</span>
-            </li>
-            <li>
-                <span class="mono contact-direct-meta-key">Since</span>
-                <span class="contact-direct-meta-val">2000 &middot; 25+ years</span>
-            </li>
-        </ul>
+<!-- NOTES -->
+<section class="ct-notes">
+    <div class="wrap">
+        <div class="ct-note reveal">
+            <h2>A little context is enough.</h2>
+            <p>Tell us which system is involved, what needs to change and any important timing constraints.</p>
+            <p class="fine">You do not need a formal brief.</p>
+        </div>
+        <div class="ct-note reveal">
+            <h2>Looking for client perspective?</h2>
+            <p>Read what senior leaders have said about working with OT Solutions.</p>
+            <a href="references.html" class="btn ct-btn-ghost">View references <span class="arrow">→</span></a>
+        </div>
     </div>
 </section>
 
@@ -441,9 +255,8 @@
                     <h4 class="footer-col-h">Services</h4>
                     <ul>
                         <li><a href="kronos-expertise.html">UKG Consulting</a></li>
-                        <li><a href="services.html">Platform Modernization</a></li>
-                        <li><a href="services.html">Analytics &amp; BI</a></li>
-                        <li><a href="services.html">Governance &amp; Quality</a></li>
+                        <li><a href="data-platforms.html">Platform Modernization</a></li>
+                        <li><a href="analytics-bi.html">Analytics &amp; BI</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
