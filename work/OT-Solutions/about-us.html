@@ -34,101 +34,59 @@
 </script>
 
 <style>
-  /* ───── About page section styles ───── */
+  /* ───── About (ot mock) ───── */
+  .au-hero { background: var(--bg-2); border-bottom: 1px solid var(--rule); }
+  .au-hero .wrap { padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(40px, 5vw, 72px); }
+  .au-hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(32px, 4.5vw, 80px); align-items: center; }
+  .au-hero .eyebrow { color: var(--accent-ink); font-size: 13px; }
+  .au-hero .eyebrow::before { background: var(--accent); }
+  .au-hero-title { font-size: clamp(38px, 4.8vw, 64px); margin: 16px 0 22px; line-height: 1.05; }
+  .au-hero-lede { font-size: clamp(15.5px, 1.35vw, 18px); line-height: 1.65; color: var(--ink-2); max-width: 52ch; margin: 0 0 28px; }
+  .au-btn { background: var(--navy-3); color: #fff; font-weight: 600; border-radius: 6px; }
+  .au-btn:hover { background: oklch(0.24 0.06 258); transform: translateY(-1px); }
 
-  /* HERO — split: text left, photo + overlay card right */
-  .why-hero { padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 8vw, 104px); border-bottom: 1px solid var(--rule); }
-  .why-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
-  .why-hero-crumb { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 20px; }
-  .why-hero-title { font-size: clamp(40px, 5.5vw, 76px); margin: 20px 0 24px; }
-  .why-hero-lede { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--ink-2); max-width: 52ch; margin: 0 0 32px; }
-  .why-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .why-hero .btn { border-radius: 4px; }
-  .why-hero-image { position: relative; margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--rule); background: var(--bg-3); }
-  .why-hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .why-hero-image-veil { position: absolute; inset: 0; background: linear-gradient(to top, color-mix(in oklch, var(--navy-3) 55%, transparent), transparent 55%); pointer-events: none; }
-  .why-hero-overlay { position: absolute; left: 20px; right: 20px; bottom: 20px; padding: 22px 24px; background: color-mix(in oklch, var(--navy-3) 78%, transparent); backdrop-filter: saturate(140%) blur(6px); -webkit-backdrop-filter: saturate(140%) blur(6px); border: 1px solid oklch(1 0 0 / 0.14); }
-  .why-hero-overlay-key { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.13 78); margin: 0 0 10px; }
-  .why-hero-overlay-quote { font-family: var(--serif); font-size: clamp(20px, 2vw, 26px); line-height: 1.2; letter-spacing: -0.01em; color: oklch(0.97 0.01 250); margin: 0; }
-  .why-hero-overlay-quote em { font-style: italic; color: var(--accent); }
+  /* hero flow diagram */
+  .au-flow { text-align: center; }
+  .au-flow-row { display: grid; grid-template-columns: 1fr auto 1.2fr auto 1fr; gap: clamp(10px, 1.4vw, 24px); align-items: start; }
+  .au-node svg { width: clamp(56px, 5.5vw, 84px); height: clamp(56px, 5.5vw, 84px); color: var(--ink); stroke-width: 1.2; margin: 0 auto 14px; display: block; }
+  .au-node b { display: block; font-family: var(--mono); font-size: clamp(11px, 1vw, 13.5px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); line-height: 1.5; }
+  .au-node .sub { display: flex; justify-content: center; gap: 10px; margin-top: 12px; font-size: clamp(11px, 0.95vw, 13px); color: var(--ink-2); }
+  .au-node .sub i { font-style: normal; color: var(--ink-4); }
+  .au-flow-arr { color: var(--ink); font-size: clamp(20px, 2vw, 28px); padding-top: clamp(18px, 2vw, 30px); }
+  .au-flow-cap { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.5vw, 20px); color: var(--ink); margin-top: clamp(26px, 3vw, 40px); }
 
-  /* TRUST STRIP (shared svc-trust visual language) */
-  .svc-trust { padding: clamp(40px, 5vw, 64px) 0; border-bottom: 1px solid var(--rule); background: var(--bg-2); }
-  .svc-trust-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-  .svc-trust-cell { background: var(--bg-2); padding: 28px 24px; }
-  .svc-trust-num { font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); line-height: 1; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 10px; }
-  .svc-trust-label { font-size: 13px; line-height: 1.45; color: var(--ink-3); margin: 0; }
+  /* pillars */
+  .au-pillars { border-bottom: 1px solid var(--rule); }
+  .au-pillars .wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; padding-top: clamp(30px, 3.6vw, 52px); padding-bottom: clamp(30px, 3.6vw, 52px); }
+  .au-pillar { text-align: center; padding: 0 clamp(14px, 2vw, 36px); border-left: 1px solid var(--rule); }
+  .au-pillar:first-child { border-left: none; }
+  .au-pillar h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.3vw, 31px); color: var(--ink); margin: 0 0 8px; }
+  .au-pillar p { font-size: clamp(13.5px, 1.15vw, 15.5px); color: var(--ink-2); margin: 0; line-height: 1.5; }
 
-  /* REASONS — intro + 3 numbered cards */
-  .why-reasons { padding: clamp(72px, 10vw, 140px) 0; border-top: 1px solid var(--rule); }
-  .why-reasons-head { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(40px, 5vw, 80px); align-items: end; padding-bottom: 56px; }
-  .why-reasons-title { font-size: clamp(32px, 4vw, 56px); margin-top: 20px; }
-  .why-reasons-lede { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: var(--ink-2); margin: 0; }
-  .why-reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
-  .why-reason-card { position: relative; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg); padding: 36px; transition: background 240ms ease; }
-  .why-reason-card::before { content: ""; position: absolute; top: -1px; left: -1px; right: -1px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
-  .why-reason-card:hover { background: var(--bg-2); }
-  .why-reason-card:hover::before { transform: scaleX(1); }
-  .why-reason-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-  .why-reason-n { font-size: 11px; letter-spacing: 0.1em; color: var(--gold); }
-  .why-reason-rule { flex: 1; height: 1px; background: var(--rule); }
-  .why-reason-title { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 28px); line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 12px; font-weight: 400; }
-  .why-reason-body { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+  /* navy statement band */
+  .au-band { background: var(--navy-3); color: oklch(0.96 0.008 250); }
+  .au-band .wrap { padding-top: clamp(40px, 5vw, 68px); padding-bottom: clamp(40px, 5vw, 68px);
+    display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 3vw, 56px); align-items: center; }
+  .au-band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.9vw, 40px); line-height: 1.2; color: oklch(0.97 0.008 250); margin: 0 0 12px; max-width: 26ch; }
+  .au-band p { font-size: clamp(14px, 1.2vw, 16.5px); color: oklch(0.82 0.02 250); margin: 0; }
+  .au-band-btn { border: 1.5px solid oklch(1 0 0 / 0.7); color: #fff; font-weight: 600; border-radius: 6px; }
+  .au-band-btn:hover { background: oklch(1 0 0 / 0.1); border-color: #fff; }
 
-  /* DIFFERENTIATORS — dark band, text + check list */
-  .why-diff { background: var(--navy-3); color: oklch(0.95 0.01 250); padding: clamp(72px, 9vw, 120px) 0; --gold: oklch(0.82 0.13 78); --gold-rule: oklch(0.68 0.11 78); }
-  .why-diff .eyebrow { color: var(--gold); }
-  .why-diff .eyebrow::before { background: var(--gold-rule); }
-  .why-diff-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
-  .why-diff-title { font-size: clamp(30px, 3.6vw, 52px); color: oklch(0.97 0.01 250); margin: 20px 0 20px; }
-  .why-diff-lede { font-size: 16px; line-height: 1.6; color: oklch(0.80 0.02 250); margin: 0; max-width: 46ch; }
-  .why-diff-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid oklch(1 0 0 / 0.12); }
-  .why-diff-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px solid oklch(1 0 0 / 0.12); font-size: 15px; line-height: 1.5; color: oklch(0.90 0.02 250); }
-  .why-diff .svc-check { color: var(--accent); font-size: 14px; line-height: 1.5; flex-shrink: 0; }
+  /* bottom CTA strip */
+  .au-cta { border-bottom: 1px solid var(--rule); }
+  .au-cta .wrap { padding-top: clamp(22px, 2.6vw, 36px); padding-bottom: clamp(22px, 2.6vw, 36px);
+    display: flex; gap: 18px 28px; align-items: center; justify-content: center; flex-wrap: wrap; }
+  .au-cta p { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); color: var(--ink); margin: 0; }
 
-  /* CAPABILITY — visualization + 3 numbered items */
-  .why-cap { padding: clamp(72px, 10vw, 140px) 0; border-top: 1px solid var(--rule); }
-  .why-cap-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(40px, 6vw, 88px); align-items: center; }
-  .why-cap-viz { position: relative; overflow: hidden; border: 1px solid var(--rule); background: var(--bg-3); aspect-ratio: 4 / 5; }
-  .why-cap-viz-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .why-cap-viz-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, color-mix(in oklch, var(--navy-3) 30%, transparent), color-mix(in oklch, var(--navy-3) 60%, transparent)); }
-  .why-cap-viz-frame { position: absolute; inset: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; gap: 16px; justify-content: center; }
-
-  /* Shared ecosystem mini-diagram (used inside the viz frame) */
-  .svc-ecosystem-pane { background: color-mix(in oklch, var(--bg) 92%, transparent); border: 1px solid var(--rule); padding: 18px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
-  .svc-ecosystem-pane-key { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 14px; }
-  .svc-ecosystem-pane-bars { display: flex; gap: 10px; align-items: flex-end; height: 52px; }
-  .svc-ecosystem-bar { flex: 1; border-radius: 2px; }
-  .svc-ecosystem-bar-gold { background: var(--gold); height: 100%; }
-  .svc-ecosystem-bar-ink { background: var(--ink); height: 70%; }
-  .svc-ecosystem-bar-mid { background: var(--accent); height: 45%; }
-  .svc-ecosystem-pane-rows { display: flex; flex-direction: column; gap: 8px; }
-  .svc-ecosystem-row { height: 8px; background: var(--accent); border-radius: 2px; opacity: 0.85; }
-  .svc-ecosystem-row-100 { width: 100%; }
-  .svc-ecosystem-row-80 { width: 80%; }
-  .svc-ecosystem-row-60 { width: 60%; }
-  .svc-ecosystem-pane-blocks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .svc-ecosystem-pane-blocks span { aspect-ratio: 1; background: var(--bg-3); border: 1px solid var(--rule); border-radius: 3px; }
-
-  .why-cap-title { font-size: clamp(30px, 3.6vw, 52px); margin: 20px 0 20px; }
-  .why-cap-lede { font-size: 16px; line-height: 1.6; color: var(--ink-2); margin: 0 0 36px; max-width: 56ch; }
-  .why-cap-list { list-style: none; margin: 0; padding: 0; counter-reset: cap; display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
-  .why-cap-item { position: relative; padding: 22px 0 22px 52px; border-bottom: 1px solid var(--rule); counter-increment: cap; }
-  .why-cap-item::before { content: counter(cap, decimal-leading-zero); position: absolute; left: 0; top: 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--gold); }
-  .why-cap-item-title { font-size: 15px; font-weight: 500; color: var(--ink); margin: 0 0 6px; }
-  .why-cap-item-body { font-size: 14px; line-height: 1.55; color: var(--ink-3); margin: 0; }
-
-  @media (max-width: 880px) {
-    .why-hero-grid { grid-template-columns: 1fr; }
-    .why-hero-image { aspect-ratio: 16 / 10; }
-    .why-reasons-head { grid-template-columns: 1fr; gap: 24px; }
-    .why-reasons-grid { grid-template-columns: 1fr; }
-    .why-diff-grid { grid-template-columns: 1fr; gap: 32px; }
-    .why-cap-grid { grid-template-columns: 1fr; }
-    .why-cap-viz { aspect-ratio: 16 / 11; }
+  @media (max-width: 960px) {
+    .au-hero-grid { grid-template-columns: 1fr; }
+    .au-pillars .wrap { grid-template-columns: 1fr; gap: 26px; }
+    .au-pillar { border-left: none; padding: 0; }
+    .au-band .wrap { grid-template-columns: 1fr; }
   }
-  @media (max-width: 760px) {
-    .svc-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) {
+    .au-flow-row { grid-template-columns: 1fr; gap: 14px; }
+    .au-flow-arr { transform: rotate(90deg); padding: 0; }
   }
 </style>
 
@@ -220,236 +178,74 @@
 
 <main id="main-content">
 
-<!-- HERO — split with photo + overlay "Core belief" card -->
-<section class="why-hero">
-    <div class="wrap why-hero-grid">
-        <div class="why-hero-text">
-            <p class="mono why-hero-crumb">Home / Why Us</p>
-            <span class="eyebrow">Why OT Solutions</span>
-            <h1 class="display why-hero-title">
-                Data expertise built on experience, clarity, <em>and execution.</em>
-            </h1>
-            <p class="why-hero-lede">
-                Since 2000, OT Solutions has helped organizations turn complex data environments into practical systems for reporting, decision-making, and long-term business value.
-            </p>
-            <div class="why-hero-actions">
-                <a href="contact.html" class="btn btn-primary">Connect with us <span class="arrow">→</span></a>
-            </div>
-        </div>
-        <figure class="why-hero-image">
-            <img src="assets/about-hero.jpg" alt="OT Solutions consulting session — laptops, planning notes, collaborative work" />
-            <div class="why-hero-image-veil" aria-hidden="true"></div>
-            <div class="why-hero-overlay">
-                <p class="mono why-hero-overlay-key">Core belief</p>
-                <p class="why-hero-overlay-quote">
-                    Better data should make the business <em>easier to run.</em>
-                </p>
-            </div>
-        </figure>
-    </div>
-</section>
-
-<!-- TRUST STRIP -->
-<section class="svc-trust">
+<!-- HERO -->
+<section class="au-hero">
     <div class="wrap">
-        <ul class="svc-trust-grid reveal-stagger">
-            <li class="svc-trust-cell">
-                <div class="svc-trust-num">Since 2000</div>
-                <p class="svc-trust-label">Data consulting experience</p>
-            </li>
-            <li class="svc-trust-cell">
-                <div class="svc-trust-num">25+</div>
-                <p class="svc-trust-label">Years delivering solutions</p>
-            </li>
-            <li class="svc-trust-cell">
-                <div class="svc-trust-num">5 Regions</div>
-                <p class="svc-trust-label">Canada, USA, Bermuda, Europe, and Asia</p>
-            </li>
-            <li class="svc-trust-cell">
-                <div class="svc-trust-num">Senior</div>
-                <p class="svc-trust-label">Consultant-led delivery</p>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- REASONS — 3 numbered cards -->
-<section id="why" class="why-reasons">
-    <div class="wrap">
-        <header class="why-reasons-head">
-            <div class="why-reasons-head-left">
-                <span class="eyebrow">Why choose us</span>
-                <h2 class="display why-reasons-title">
-                    Not just data work. <em>Business-focused data consulting.</em>
-                </h2>
+        <div class="au-hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">About OT Solutions</span>
+                <h1 class="display au-hero-title">Technical roots. Workforce data <em>focus.</em></h1>
+                <p class="au-hero-lede">OT Solutions is an established IT and data consultancy with roots in application development, ERP and business intelligence. Today, we specialize in senior UKG consulting, workforce data engineering and Power BI reporting.</p>
+                <a href="contact.html" class="btn au-btn">Start a conversation</a>
             </div>
-            <p class="why-reasons-lede">
-                OT Solutions combines technical data expertise with a clear understanding of business operations. The result is practical, maintainable work that supports decisions instead of creating another layer of complexity.
-            </p>
-        </header>
-
-        <div class="why-reasons-grid reveal-stagger">
-            <article class="why-reason-card">
-                <div class="why-reason-meta">
-                    <span class="mono why-reason-n">01</span>
-                    <span class="why-reason-rule" aria-hidden="true"></span>
-                </div>
-                <h3 class="why-reason-title">Experience that goes beyond reporting</h3>
-                <p class="why-reason-body">OT Solutions has been helping organizations work with data since 2000, bringing decades of practical delivery experience across strategy, infrastructure, integration, and business intelligence.</p>
-            </article>
-            <article class="why-reason-card">
-                <div class="why-reason-meta">
-                    <span class="mono why-reason-n">02</span>
-                    <span class="why-reason-rule" aria-hidden="true"></span>
-                </div>
-                <h3 class="why-reason-title">Senior-led consulting from start to finish</h3>
-                <p class="why-reason-body">Engagements are guided by experienced consultants who understand both the business problem and the technical environment required to solve it properly.</p>
-            </article>
-            <article class="why-reason-card">
-                <div class="why-reason-meta">
-                    <span class="mono why-reason-n">03</span>
-                    <span class="why-reason-rule" aria-hidden="true"></span>
-                </div>
-                <h3 class="why-reason-title">Solutions built around real operations</h3>
-                <p class="why-reason-body">The work is designed around how your organization actually runs — the systems, teams, workflows, and reporting needs that shape day-to-day decisions.</p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- DIFFERENTIATORS — dark band, vertical check list -->
-<section class="why-diff">
-    <div class="wrap why-diff-grid">
-        <div class="why-diff-text">
-            <span class="eyebrow">Differentiators</span>
-            <h2 class="display why-diff-title">
-                Why organizations <em>choose OT Solutions.</em>
-            </h2>
-            <p class="why-diff-lede">
-                The value is not only in building dashboards or connecting systems. It is in knowing how to shape data work around the decisions, workflows, and outcomes the business actually needs.
-            </p>
-        </div>
-
-        <ul class="why-diff-list reveal-stagger">
-            <li class="why-diff-item">
-                <span class="svc-check" aria-hidden="true">&#10003;</span>
-                <span>We understand both business and data</span>
-            </li>
-            <li class="why-diff-item">
-                <span class="svc-check" aria-hidden="true">&#10003;</span>
-                <span>We work across complex system environments</span>
-            </li>
-            <li class="why-diff-item">
-                <span class="svc-check" aria-hidden="true">&#10003;</span>
-                <span>We focus on usable, maintainable solutions</span>
-            </li>
-            <li class="why-diff-item">
-                <span class="svc-check" aria-hidden="true">&#10003;</span>
-                <span>We connect strategy with implementation</span>
-            </li>
-            <li class="why-diff-item">
-                <span class="svc-check" aria-hidden="true">&#10003;</span>
-                <span>We help teams move from fragmented data to trusted reporting</span>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- COMPLEXITY — visualization + 3 capability cards -->
-<section id="approach" class="why-cap">
-    <div class="wrap why-cap-grid">
-        <div class="why-cap-viz" aria-hidden="true">
-            <img class="why-cap-viz-bg" src="assets/about-complexity.jpg" alt="" />
-            <div class="why-cap-viz-overlay"></div>
-            <div class="why-cap-viz-frame">
-                <div class="svc-ecosystem-pane svc-ecosystem-pane-decision">
-                    <p class="mono svc-ecosystem-pane-key">Business decisions</p>
-                    <div class="svc-ecosystem-pane-bars">
-                        <span class="svc-ecosystem-bar svc-ecosystem-bar-gold"></span>
-                        <span class="svc-ecosystem-bar svc-ecosystem-bar-ink"></span>
-                        <span class="svc-ecosystem-bar svc-ecosystem-bar-mid"></span>
+            <div class="au-flow reveal" aria-hidden="true">
+                <div class="au-flow-row">
+                    <div class="au-node">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19"/><path d="M5.2 6.3h.01M7.4 6.3h.01M9.6 6.3h.01"/></svg>
+                        <b>Applications<br />&amp; ERP</b>
+                    </div>
+                    <span class="au-flow-arr">→</span>
+                    <div class="au-node">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="2.8"/><path d="M4 5.5v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8V5.5"/><path d="M4 9.8v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8V9.8"/><path d="M4 14.1v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8v-4.3"/></svg>
+                        <b>UKG &amp;<br />Workforce Data</b>
+                        <span class="sub">Integrate <i>&middot;</i> Validate <i>&middot;</i> Model</span>
+                    </div>
+                    <span class="au-flow-arr">→</span>
+                    <div class="au-node">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="4.4" height="7.5" rx="0.8"/><rect x="9.8" y="9" width="4.4" height="11.5" rx="0.8"/><rect x="16.6" y="4" width="4.4" height="16.5" rx="0.8"/></svg>
+                        <b>Power BI<br />Reporting</b>
                     </div>
                 </div>
-                <div class="svc-ecosystem-pane svc-ecosystem-pane-reporting">
-                    <p class="mono svc-ecosystem-pane-key">Reporting clarity</p>
-                    <div class="svc-ecosystem-pane-rows">
-                        <span class="svc-ecosystem-row svc-ecosystem-row-100"></span>
-                        <span class="svc-ecosystem-row svc-ecosystem-row-80"></span>
-                        <span class="svc-ecosystem-row svc-ecosystem-row-60"></span>
-                    </div>
-                </div>
-                <div class="svc-ecosystem-pane svc-ecosystem-pane-infra">
-                    <p class="mono svc-ecosystem-pane-key">Systems &amp; infrastructure</p>
-                    <div class="svc-ecosystem-pane-blocks">
-                        <span></span><span></span><span></span><span></span>
-                    </div>
-                </div>
+                <p class="au-flow-cap">Broad technical experience, applied to workforce data.</p>
             </div>
-        </div>
-
-        <div class="why-cap-text">
-            <span class="eyebrow">Clarity from complexity</span>
-            <h2 class="display why-cap-title">
-                Built for organizations that need clarity from <em>complex data environments.</em>
-            </h2>
-            <p class="why-cap-lede">
-                We work across legacy systems, modern infrastructure, and business reporting layers to create a connected data environment that leadership can rely on.
-            </p>
-
-            <ol class="why-cap-list reveal-stagger">
-                <li class="why-cap-item">
-                    <h3 class="why-cap-item-title">Business clarity</h3>
-                    <p class="why-cap-item-body">Define what data needs to support before choosing the technical path.</p>
-                </li>
-                <li class="why-cap-item">
-                    <h3 class="why-cap-item-title">Technical execution</h3>
-                    <p class="why-cap-item-body">Design and build infrastructure, reporting, and integration solutions that can scale.</p>
-                </li>
-                <li class="why-cap-item">
-                    <h3 class="why-cap-item-title">Long-term usefulness</h3>
-                    <p class="why-cap-item-body">Create systems that teams can actually adopt, maintain, and improve over time.</p>
-                </li>
-            </ol>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-    <div class="wrap">
-        <div class="cta-inner cta-inner-split">
-            <div class="cta-text reveal">
-                <span class="eyebrow no-rule cta-eyebrow">Connect with us</span>
-                <h2 class="display cta-title">
-                    Ready to unlock the<br />
-                    power of your <em>data?</em>
-                </h2>
-                <p class="cta-lede">
-                    Let&rsquo;s build smarter solutions and drive meaningful results — together.
-                </p>
-                <div class="cta-actions">
-                    <a href="contact.html" class="btn btn-primary cta-btn-primary">Contact us <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <aside class="cta-meta">
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Phone</span>
-                    <a href="tel:+17802435796" class="cta-meta-val">+1 (780) 243&ndash;5796</a>
-                </div>
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Email</span>
-                    <a href="mailto:OTSolutions@shaw.ca" class="cta-meta-val">OTSolutions@shaw.ca</a>
-                </div>
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Office</span>
-                    <span class="cta-meta-val">Sherwood Park, Alberta · Canada</span>
-                </div>
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Since</span>
-                    <span class="cta-meta-val">2000 · 25+ years</span>
-                </div>
-            </aside>
+<!-- PILLARS -->
+<section class="au-pillars">
+    <div class="wrap reveal-stagger">
+        <div class="au-pillar">
+            <h2>Senior UKG Consulting</h2>
+            <p>Optimize complex UKG environments.</p>
         </div>
+        <div class="au-pillar">
+            <h2>Data Engineering</h2>
+            <p>Build reliable workforce data foundations.</p>
+        </div>
+        <div class="au-pillar">
+            <h2>Power BI Reporting</h2>
+            <p>Create reporting leaders can trust.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STATEMENT BAND -->
+<section class="au-band">
+    <div class="wrap">
+        <div class="reveal">
+            <h2>We understand the platform, the data underneath it, and the decisions it needs to support.</h2>
+            <p>Application development and ERP roots. UKG and workforce-data specialization.</p>
+        </div>
+        <a href="references.html" class="btn au-band-btn">See our references</a>
+    </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="au-cta">
+    <div class="wrap reveal">
+        <p>Have a UKG or workforce-data problem to solve?</p>
+        <a href="contact.html" class="btn au-btn">Talk to a consultant</a>
     </div>
 </section>
 

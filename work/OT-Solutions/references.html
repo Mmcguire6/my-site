@@ -29,56 +29,99 @@
 </script>
 
 <style>
-  /* ───── References page section styles ───── */
+  /* ───── References (ot mock) ───── */
+  .rf-hero { border-bottom: 1px solid var(--rule); }
+  .rf-hero .wrap { padding-top: clamp(38px, 4.6vw, 66px); padding-bottom: clamp(38px, 4.6vw, 66px); }
+  .rf-hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 4vw, 70px); align-items: center; }
+  .rf-hero .eyebrow { color: var(--gold); font-size: 13px; }
+  .rf-hero .eyebrow::before { background: var(--gold-rule); }
+  .rf-hero-title { font-size: clamp(32px, 3.9vw, 52px); margin: 16px 0 18px; line-height: 1.12; }
+  .rf-hero-title em { display: block; color: var(--accent-ink); }
+  .rf-hero-lede { font-size: clamp(14.5px, 1.25vw, 17px); line-height: 1.65; color: var(--ink-2); max-width: 46ch; margin: 0; }
 
-  /* PAGE HEAD */
-  .page-head { padding: clamp(56px, 9vw, 112px) 0 clamp(40px, 6vw, 72px); border-bottom: 1px solid var(--rule); }
-  .page-head .eyebrow { color: var(--gold); }
-  .page-head .eyebrow::before { background: var(--gold-rule); }
-  .page-head-title { font-size: clamp(48px, 7vw, 100px); margin: 22px 0 24px; }
-  .page-head-lede { max-width: 52ch; margin: 0; }
+  /* hero documents illustration */
+  .rf-art { text-align: center; }
+  .rf-scene { position: relative; height: clamp(200px, 22vw, 280px); }
+  .rf-doc { position: absolute; background: var(--bg); border: 1px solid var(--rule); border-radius: 8px;
+    box-shadow: 0 18px 40px -26px oklch(0.14 0.05 258 / 0.4); padding: 20px 18px; }
+  .rf-doc-1 { width: 42%; height: 88%; left: 22%; top: 2%; transform: rotate(-4deg); }
+  .rf-doc-2 { width: 40%; height: 80%; left: 46%; top: 12%; transform: rotate(5deg); }
+  .rf-line { height: 5px; border-radius: 3px; background: var(--rule); margin-bottom: 11px; }
+  .rf-line.b { background: oklch(0.62 0.14 245 / 0.65); }
+  .rf-line.s { width: 62%; }
+  .rf-mark { position: absolute; left: 4%; top: 28%; font-family: var(--serif); font-size: clamp(72px, 8vw, 110px);
+    line-height: 0.5; color: var(--accent); }
+  .rf-dots { position: absolute; width: 88px; height: 88px;
+    background-image: radial-gradient(oklch(0.55 0.05 250 / 0.5) 1.3px, transparent 1.3px); background-size: 11px 11px; }
+  .rf-dots-1 { right: 0; top: 0; }
+  .rf-dots-2 { right: 10%; bottom: 4%; }
+  .rf-art-cap { display: flex; justify-content: center; gap: 8px 14px; flex-wrap: wrap; margin-top: 18px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; color: var(--ink-3); }
+  .rf-art-cap i { font-style: normal; color: var(--ink-4); }
 
-  /* TESTIMONIALS — match homepage cards */
-  .testimonials { border-top: 0; }
-  .t-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .t-card {
-    margin: 0; padding: 48px 40px 36px; background: var(--bg-2); border: 1px solid var(--rule);
-    position: relative; display: flex; flex-direction: column; gap: 28px;
-    transition: transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms ease;
-  }
-  .t-card:hover { transform: translateY(-3px); box-shadow: 0 24px 48px -28px oklch(0.18 0.04 250 / 0.25); }
-  .t-mark { position: absolute; top: 24px; left: 32px; font-family: var(--serif); font-size: 96px; line-height: 1; color: var(--accent); opacity: 0.5; }
-  .t-quote { font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; letter-spacing: -0.005em; margin: 0; color: var(--ink); padding-top: 36px; text-wrap: pretty; }
-  .t-cap { padding-top: 24px; border-top: 1px solid var(--rule); }
-  .t-cap-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
-  .t-cap-meta { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  /* reference bands */
+  .rf-band .wrap { padding-top: clamp(38px, 4.6vw, 64px); padding-bottom: clamp(38px, 4.6vw, 64px); }
+  .rf-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(28px, 3.6vw, 60px); align-items: center; }
+  .rf-grid-flip { grid-template-columns: 1.2fr 0.8fr; }
+  .rf-info { position: relative; }
+  .rf-grid > .rf-info { border-right: 1px solid var(--rule); padding-right: clamp(24px, 3vw, 48px); }
+  .rf-grid-flip > .rf-info { border-right: none; border-left: 1px solid var(--rule); padding-left: clamp(24px, 3vw, 48px); }
+  .rf-k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px; }
+  .rf-info h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 2.9vw, 40px); color: var(--ink); margin: 0 0 6px; }
+  .rf-sub { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 1.6vw, 22px); color: var(--accent-ink); display: block; margin-bottom: 22px; }
+  .rf-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
+  .rf-points li { display: flex; gap: 13px; align-items: center; font-size: 14px; color: var(--ink-2); }
+  .rf-points svg { width: 26px; height: 26px; color: var(--accent); stroke-width: 1.5; flex-shrink: 0; }
+  .rf-qmark { font-family: var(--serif); font-size: 54px; line-height: 0.5; color: var(--accent); display: block; margin-bottom: 18px; }
+  .rf-quote { font-family: var(--serif); font-size: clamp(17.5px, 1.7vw, 23px); line-height: 1.45; color: var(--ink); margin: 0 0 20px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 20px; }
+  .rf-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .rf-meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
 
-  /* LOGOS — trusted by */
-  .logos { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--rule); }
-  .logos-row { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
-  .logos-label .eyebrow { margin-bottom: 16px; color: var(--gold); }
-  .logos-label .eyebrow::before { background: var(--gold-rule); }
-  .logos-blurb { font-size: 14px; color: var(--ink-3); line-height: 1.5; margin: 0; max-width: 24ch; }
-  .logos-list { display: grid; grid-template-columns: repeat(5, 1fr); border-left: 1px solid var(--rule); }
-  .logo-card {
-    padding: 8px 20px; border-right: 1px solid var(--rule); min-height: 88px;
-    display: flex; flex-direction: column; justify-content: center;
-    transition: background 200ms ease;
-  }
-  .logo-card:hover { background: var(--bg); }
-  .logo-name { font-family: var(--serif); font-size: 22px; line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); }
-  .logo-meta { margin-top: 8px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  /* experience strip */
+  .rf-exp { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .rf-exp .wrap { padding-top: clamp(30px, 3.6vw, 50px); padding-bottom: clamp(30px, 3.6vw, 50px); }
+  .rf-exp h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.3vw, 31px); color: var(--ink); margin: 0 0 6px; }
+  .rf-exp-sub { font-size: 14px; color: var(--ink-2); margin: 0 0 clamp(22px, 2.6vw, 34px); }
+  .rf-exp-row { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .rf-exp-item { border-left: 1px solid var(--rule); padding: 4px clamp(12px, 1.6vw, 26px); }
+  .rf-exp-item:first-child { border-left: none; padding-left: 0; }
+  .rf-exp-item b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(16px, 1.5vw, 20px); color: var(--ink); margin-bottom: 5px; }
+  .rf-exp-item span { font-size: 12.5px; color: var(--ink-3); }
 
-  @media (max-width: 880px) {
-    .t-grid { grid-template-columns: 1fr; }
-    .logos-row { grid-template-columns: 1fr; gap: 24px; }
-    .logos-list { grid-template-columns: repeat(2, 1fr); border-left: 0; border-top: 1px solid var(--rule); }
-    .logo-card { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-  }
-  @media (max-width: 760px) {
-    .t-card { padding: 40px 28px 32px; }
-    .t-mark { left: 22px; font-size: 80px; }
-    .logos-list { grid-template-columns: 1fr; }
+  /* navy request band */
+  .rf-req { background: var(--navy-3); color: oklch(0.96 0.008 250); }
+  .rf-req .wrap { padding-top: clamp(36px, 4.4vw, 60px); padding-bottom: clamp(36px, 4.4vw, 60px);
+    display: grid; grid-template-columns: 1.2fr auto auto; gap: clamp(24px, 3.5vw, 64px); align-items: center; }
+  .rf-req h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 2.6vw, 36px); line-height: 1.2; color: oklch(0.97 0.008 250); margin: 0 0 10px; max-width: 24ch; }
+  .rf-req p { font-size: 14px; line-height: 1.55; color: oklch(0.8 0.02 250); margin: 0; max-width: 40ch; }
+  .rf-req-ic { position: relative; }
+  .rf-req-ic svg { width: clamp(64px, 6vw, 92px); height: clamp(64px, 6vw, 92px); color: oklch(0.9 0.01 250); stroke-width: 1.1; }
+  .rf-req-ic::before, .rf-req-ic::after { content: ""; position: absolute; width: 40px; height: 60px;
+    background-image: radial-gradient(oklch(1 0 0 / 0.35) 1.2px, transparent 1.2px); background-size: 10px 10px; top: 50%; transform: translateY(-50%); }
+  .rf-req-ic::before { left: -48px; }
+  .rf-req-ic::after { right: -48px; }
+  .rf-req-btn { border: 1.5px solid oklch(1 0 0 / 0.75); color: #fff; font-weight: 600; border-radius: 6px; white-space: nowrap; }
+  .rf-req-btn:hover { background: oklch(1 0 0 / 0.1); border-color: #fff; }
+
+  /* bottom CTA strip */
+  .rf-cta { border-bottom: 1px solid var(--rule); }
+  .rf-cta .wrap { padding-top: clamp(22px, 2.6vw, 36px); padding-bottom: clamp(22px, 2.6vw, 36px);
+    display: flex; gap: 18px 26px; align-items: center; justify-content: center; flex-wrap: wrap; }
+  .rf-cta svg { width: 40px; height: 40px; color: var(--accent); stroke-width: 1.4; }
+  .rf-cta p { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); color: var(--ink); margin: 0; }
+  .rf-btn-navy { background: var(--navy-3); color: #fff; font-weight: 600; border-radius: 6px; }
+  .rf-btn-navy:hover { background: oklch(0.24 0.06 258); transform: translateY(-1px); }
+
+  @media (max-width: 960px) {
+    .rf-hero-grid, .rf-grid, .rf-grid-flip { grid-template-columns: 1fr; }
+    .rf-grid > .rf-info { border-right: none; padding-right: 0; }
+    .rf-grid-flip > .rf-info { border-left: none; padding-left: 0; }
+    .rf-grid-flip > .rf-info { order: -1; }
+    .rf-exp-row { grid-template-columns: 1fr 1fr; gap: 18px 0; }
+    .rf-exp-item:nth-child(odd) { border-left: none; padding-left: 0; }
+    .rf-req .wrap { grid-template-columns: 1fr; }
+    .rf-req-ic { display: none; }
   }
 </style>
 
@@ -170,110 +213,125 @@
 
 <main id="main-content">
 
-<!-- PAGE HEAD -->
-<section class="page-head">
+<!-- HERO -->
+<section class="rf-hero">
     <div class="wrap">
-        <span class="eyebrow">Client endorsements</span>
-        <h1 class="display h1 page-head-title">
-            In their<br />
-            <em>own words.</em>
-        </h1>
-        <p class="lede page-head-lede">
-            Senior leaders who&rsquo;ve worked alongside our consultants on multimillion-dollar enterprise initiatives.
-        </p>
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section testimonials">
-    <div class="wrap">
-        <div class="t-grid reveal-stagger">
-            <figure class="t-card">
-                <span class="t-mark" aria-hidden="true">&ldquo;</span>
-                <blockquote class="t-quote">OT Solutions contractors are exceptional in their ability to think outside the box and complete tasks others would find impossible. Their technical skills are second to none. They helped me take a number of multimillion-dollar projects at APS to places the executive never expected. With their help I over-delivered while reducing timelines and budget significantly — they made me look very good.</blockquote>
-                <figcaption class="t-cap">
-                    <div class="t-cap-name">David Dickson</div>
-                    <div class="t-cap-meta mono">DKS Data &middot; on enterprise delivery at APS</div>
-                </figcaption>
-            </figure>
-            <figure class="t-card">
-                <span class="t-mark" aria-hidden="true">&ldquo;</span>
-                <blockquote class="t-quote">OT Solutions contractors provided design, development, and ongoing support for a variety of business system interfaces and user interfaces for ERP and CRM systems. The technical platform was predominantly Microsoft, with business system solutions from SAP and other industry-specific software. In short, I could not be happier to endorse and recommend OT Solutions for I.T. development solutions.</blockquote>
-                <figcaption class="t-cap">
-                    <div class="t-cap-name">Sherryl O&rsquo;Connor</div>
-                    <div class="t-cap-meta mono">Lehigh Inland &middot; on ERP &amp; CRM delivery at Lehigh Cement</div>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-</section>
-
-<!-- LOGOS -->
-<section class="logos tinted-section">
-    <div class="wrap">
-        <div class="logos-row">
-            <div class="logos-label">
-                <span class="eyebrow no-rule">Trusted by</span>
-                <p class="logos-blurb">Senior consultants delivering on the systems large organizations rely on every day.</p>
+        <div class="rf-hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">Client references</span>
+                <h1 class="display rf-hero-title">Trusted on complex systems. <em>Recommended by the people responsible for them.</em></h1>
+                <p class="rf-hero-lede">Senior leaders describe what it was like to work with OT Solutions across enterprise delivery, application development and systems integration.</p>
             </div>
-            <div class="logos-list reveal-stagger">
-                <div class="logo-card">
-                    <div class="logo-name">APS</div>
-                    <div class="logo-meta mono">Enterprise delivery</div>
+            <div class="rf-art reveal" aria-hidden="true">
+                <div class="rf-scene">
+                    <span class="rf-dots rf-dots-1"></span>
+                    <span class="rf-dots rf-dots-2"></span>
+                    <div class="rf-doc rf-doc-1">
+                        <div class="rf-line s"></div>
+                        <div class="rf-line"></div>
+                        <div class="rf-line"></div>
+                        <div class="rf-line s"></div>
+                        <div class="rf-line"></div>
+                    </div>
+                    <div class="rf-doc rf-doc-2">
+                        <div class="rf-line b s"></div>
+                        <div class="rf-line"></div>
+                        <div class="rf-line"></div>
+                        <div class="rf-line s"></div>
+                    </div>
+                    <span class="rf-mark">&ldquo;</span>
                 </div>
-                <div class="logo-card">
-                    <div class="logo-name">DKS Data</div>
-                    <div class="logo-meta mono">Strategic partnership</div>
-                </div>
-                <div class="logo-card">
-                    <div class="logo-name">Lehigh Cement</div>
-                    <div class="logo-meta mono">ERP &amp; CRM systems</div>
-                </div>
-                <div class="logo-card">
-                    <div class="logo-name">Lehigh Inland</div>
-                    <div class="logo-meta mono">Industrial systems</div>
-                </div>
-                <div class="logo-card">
-                    <div class="logo-name">UKG / Workforce Central</div>
-                    <div class="logo-meta mono">25+ years</div>
-                </div>
+                <div class="rf-art-cap">Enterprise delivery <i>&middot;</i> ERP &amp; CRM <i>&middot;</i> Systems integration</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<!-- REFERENCE 01 -->
+<section class="rf-band tinted-section">
     <div class="wrap">
-        <div class="cta-inner cta-inner-split">
-            <div class="cta-text reveal">
-                <span class="eyebrow no-rule cta-eyebrow">Connect with us</span>
-                <h2 class="display cta-title">
-                    Ready to be the<br />
-                    <em>next reference?</em>
-                </h2>
-                <p class="cta-lede">
-                    Let&rsquo;s build smarter solutions and drive meaningful results — together.
-                </p>
-                <div class="cta-actions">
-                    <a href="contact.html" class="btn btn-primary cta-btn-primary">Contact us <span class="arrow">→</span></a>
-                </div>
+        <div class="rf-grid reveal">
+            <div class="rf-info">
+                <span class="rf-k">Reference 01</span>
+                <h2>APS / DKS Data</h2>
+                <span class="rf-sub">Enterprise systems delivery</span>
+                <ul class="rf-points">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="13" height="16" rx="1.5"/><path d="M6.5 16v-4M9.5 16v-7M12.5 16v-2.5"/><path d="M19 8h2v12h-8"/></svg>Multimillion-dollar initiatives</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M2.5 20v-1a6.5 6.5 0 0 1 13 0v1"/><circle cx="17.5" cy="9" r="2.6"/><path d="M16 14.6a5 5 0 0 1 5.5 4.9v.5"/></svg>Executive-level project delivery</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg>Complex project completion</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6l-2.5 2.5-2.5-2.5z"/></svg>Senior consulting support</li>
+                </ul>
             </div>
-            <aside class="cta-meta">
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Phone</span>
-                    <a href="tel:+17802435796" class="cta-meta-val">+1 (780) 243&ndash;5796</a>
-                </div>
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Email</span>
-                    <a href="mailto:OTSolutions@shaw.ca" class="cta-meta-val">OTSolutions@shaw.ca</a>
-                </div>
-                <div class="cta-meta-row">
-                    <span class="mono cta-meta-key">Office</span>
-                    <span class="cta-meta-val">Sherwood Park, Alberta · Canada</span>
-                </div>
-            </aside>
+            <div>
+                <span class="rf-qmark">&ldquo;</span>
+                <blockquote class="rf-quote">OT Solutions contractors are exceptional in their ability to think outside the box and complete tasks others would find impossible. Their technical skills are second to none. They helped me take a number of multimillion-dollar projects at APS to places the executive never expected. With their help I over-delivered while reducing timelines and budget significantly &mdash; they made me look very good.</blockquote>
+                <div class="rf-name">David Dickson</div>
+                <div class="rf-meta">DKS Data &middot; On enterprise delivery at APS</div>
+            </div>
         </div>
+    </div>
+</section>
+
+<!-- REFERENCE 02 -->
+<section class="rf-band">
+    <div class="wrap">
+        <div class="rf-grid rf-grid-flip reveal">
+            <div>
+                <span class="rf-qmark">&ldquo;</span>
+                <blockquote class="rf-quote">OT Solutions contractors provided design, development, and ongoing support for a variety of business system interfaces and user interfaces for ERP and CRM systems. The technical platform was predominantly Microsoft, with business system solutions from SAP and other industry-specific software. In short, I could not be happier to endorse and recommend OT Solutions for I.T. development solutions.</blockquote>
+                <div class="rf-name">Sherryl O&rsquo;Connor</div>
+                <div class="rf-meta">Lehigh Inland &middot; On ERP &amp; CRM delivery at Lehigh Cement</div>
+            </div>
+            <div class="rf-info">
+                <span class="rf-k">Reference 02</span>
+                <h2>Lehigh Cement</h2>
+                <span class="rf-sub">ERP, CRM and interface development</span>
+                <ul class="rf-points">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3.5a1.9 1.9 0 0 1 3.8 0V5H17a1.5 1.5 0 0 1 1.5 1.5v3.2h1.6a1.9 1.9 0 0 1 0 3.8H18.5v3.9A1.5 1.5 0 0 1 17 19h-3.2v1.5a1.9 1.9 0 0 1-3.8 0V19H6.5A1.5 1.5 0 0 1 5 17.5v-3.2H3.5a1.9 1.9 0 0 1 0-3.8H5V6.5A1.5 1.5 0 0 1 6.5 5H10z"/></svg>SAP and third-party integrations</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4"/><path d="M21 7H8"/><path d="M7 13l-4 4 4 4"/><path d="M3 17h13"/></svg>Business-system interfaces</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13.5 5l-3 14"/></svg>Custom platform development</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4" height="6.5" rx="1.6"/><rect x="17.5" y="13" width="4" height="6.5" rx="1.6"/><path d="M19.5 19.5v1a2 2 0 0 1-2 2H13"/></svg>Ongoing technical support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE STRIP -->
+<section class="rf-exp tinted-section">
+    <div class="wrap">
+        <div class="reveal">
+            <h2>Experience across complex environments.</h2>
+            <p class="rf-exp-sub">A history of senior consulting across enterprise, industrial and workforce systems.</p>
+        </div>
+        <div class="rf-exp-row reveal-stagger">
+            <div class="rf-exp-item"><b>APS</b><span>Enterprise delivery</span></div>
+            <div class="rf-exp-item"><b>DKS Data</b><span>Strategic partnership</span></div>
+            <div class="rf-exp-item"><b>Lehigh Cement</b><span>ERP &amp; CRM systems</span></div>
+            <div class="rf-exp-item"><b>Lehigh Inland</b><span>Industrial systems</span></div>
+            <div class="rf-exp-item"><b>UKG / Workforce Central</b><span>Workforce technology</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- REQUEST BAND -->
+<section class="rf-req">
+    <div class="wrap">
+        <div class="reveal">
+            <h2>Evaluating a specific UKG, data engineering or reporting engagement?</h2>
+            <p>Additional references can be provided where relevant to the work you are considering.</p>
+        </div>
+        <div class="rf-req-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a1.6 1.6 0 0 0-1.6 1.6v16.8A1.6 1.6 0 0 0 6 22h12a1.6 1.6 0 0 0 1.6-1.6V7.5z"/><path d="M14 2v5.5h5.6"/><path d="M8 12h8M8 15.5h5"/><circle cx="15.5" cy="17.5" r="3.4"/><path d="M14.2 17.6l1 1 1.8-2"/></svg></div>
+        <a href="contact.html" class="btn rf-req-btn">Request a relevant reference <span class="arrow">→</span></a>
+    </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="rf-cta">
+    <div class="wrap reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.5a8 8 0 0 1-8 7.6 8.6 8.6 0 0 1-3.5-.7L4 21l1.3-4.2A7.5 7.5 0 0 1 3.6 12a8 8 0 0 1 8.7-7.5A8 8 0 0 1 21 12.5z"/><path d="M8.5 12h.01M12.3 12h.01M16.1 12h.01"/></svg>
+        <p>Ready to discuss the problem your team is working through?</p>
+        <a href="contact.html" class="btn rf-btn-navy">Start a conversation <span class="arrow">→</span></a>
     </div>
 </section>
 
