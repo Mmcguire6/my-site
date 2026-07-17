@@ -39,20 +39,21 @@
   /* ───── UKG Consulting (ot mock) ───── */
 
   /* HERO */
-  .uk-hero { padding: clamp(18px, 2.4vw, 34px) 0 clamp(40px, 5vw, 68px); border-bottom: 1px solid var(--rule); }
-  .uk-hero-grid { display: grid; grid-template-columns: 0.86fr 1.14fr; gap: clamp(22px, 2.8vw, 44px); align-items: center; }
+  .uk-hero { border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .uk-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .uk-hero-text { align-self: center;
+    padding: clamp(40px, 6vw, 92px) clamp(28px, 4vw, 64px) clamp(40px, 6vw, 92px) max(var(--gutter), calc(50vw - var(--max) / 2 + var(--gutter))); }
   .uk-hero .eyebrow { color: var(--gold); }
   .uk-hero .eyebrow, .uk-case .eyebrow { font-size: 13px; }
-  .uk-hero .eyebrow::before { background: var(--gold-rule); }
-  .uk-hero-title { font-size: clamp(38px, 4.8vw, 66px); margin: 18px 0 20px; }
-  .uk-hero-lede { font-size: clamp(16px, 1.45vw, 19px); line-height: 1.6; color: var(--ink-2); max-width: 46ch; margin: 0 0 28px; }
+  .uk-hero .eyebrow::before { background: var(--gold-rule); width: 3px; height: 15px; }
+  .uk-hero-title { font-size: clamp(38px, 5vw, 68px); margin: 20px 0 22px; }
+  .uk-hero-lede { font-size: clamp(16px, 1.45vw, 19px); line-height: 1.6; color: var(--ink-2); max-width: 42ch; margin: 0 0 30px; }
   .uk-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
   .uk-hero-actions .btn { border-radius: 6px; }
-  .uk-hero-trust { display: flex; gap: 8px 16px; flex-wrap: wrap; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .uk-hero-trust { display: flex; gap: 8px 16px; flex-wrap: wrap; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--rule); }
   .uk-hero-trust span { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
-
-  .uk-hero-art img { width: 100%; height: auto; display: block; border-radius: 14px;
-    border: 1px solid var(--rule); box-shadow: 0 26px 56px -38px oklch(0.14 0.05 258 / 0.4); }
+  .uk-hero-art { position: relative; border-bottom: 3px solid var(--navy-3); }
+  .uk-hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* platform map + health rail */
   .uk-vis { display: grid; grid-template-columns: 1.55fr 0.85fr; gap: 14px; align-items: stretch; }
@@ -260,6 +261,9 @@
   }
   @media (max-width: 960px) {
     .uk-hero-grid, .uk-case-grid, .uk-quote-grid { grid-template-columns: 1fr; }
+    .uk-hero-text { align-self: auto; padding: clamp(28px, 7vw, 44px) var(--gutter) clamp(24px, 5vw, 34px); }
+    .uk-hero-art { border-bottom: none; }
+    .uk-hero-art img { height: auto; }
     .uk-cards { grid-template-columns: 1fr; }
     .uk-how { grid-template-columns: 1fr 1fr; gap: 28px 12px; }
     .uk-how::before { display: none; }
@@ -353,29 +357,27 @@
 
 <!-- HERO -->
 <section class="uk-hero">
-    <div class="wrap">
-        <div class="uk-hero-grid">
-            <div class="reveal">
-                <span class="eyebrow">UKG Consulting</span>
-                <h1 class="display uk-hero-title">Make UKG work the way your <em>organization does.</em></h1>
-                <p class="uk-hero-lede">Senior UKG specialists helping complex workforce environments run reliably &mdash; from configuration and integrations to data, reporting and optimization.</p>
-                <div class="uk-hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Talk to a UKG consultant <span class="arrow">→</span></a>
-                    <a href="index.html#services" class="btn btn-ghost">Explore our services</a>
-                </div>
-                <div class="uk-hero-trust">
-                    <span>25+ years</span><span>&middot;</span><span>UKG Pro WFM</span><span>&middot;</span><span>Workforce Central</span><span>&middot;</span><span>Healthcare expertise</span>
-                </div>
+    <div class="uk-hero-grid">
+        <div class="uk-hero-text reveal">
+            <span class="eyebrow">Senior UKG Consulting</span>
+            <h1 class="display uk-hero-title">Make UKG work for your organization.</h1>
+            <p class="uk-hero-lede">Senior specialists helping complex organizations strengthen UKG, workforce data and reporting.</p>
+            <div class="uk-hero-actions">
+                <a href="contact.html" class="btn btn-primary">Talk to a UKG consultant <span class="arrow">→</span></a>
+                <a href="#capabilities" class="btn btn-ghost">View our capabilities</a>
             </div>
-            <div class="uk-hero-art reveal" aria-hidden="true">
-                <img src="assets/ukg-consulting-hero-illustration.png" alt="" width="1188" height="880" />
+            <div class="uk-hero-trust">
+                <span>25+ years of enterprise IT</span><span>&middot;</span><span>Senior UKG expertise</span><span>&middot;</span><span>Complex workforce environments</span>
             </div>
+        </div>
+        <div class="uk-hero-art reveal" aria-hidden="true">
+            <img src="assets/ukg-consultancy-hero-img.png" alt="" width="815" height="460" />
         </div>
     </div>
 </section>
 
 <!-- ECOSYSTEM BAND -->
-<section class="ux dark-section">
+<section id="capabilities" class="ux dark-section">
     <div class="wrap">
         <div class="ux-inner">
             <div class="ux-label reveal">Deep expertise across the UKG ecosystem</div>
