@@ -334,7 +334,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after { transform: scaleX(1); }
+/* Active tab: persistent accent underline marks the current page */
 .nav-links a[aria-current="page"] { color: var(--ink); }
+.nav-links a[aria-current="page"]::after {
+  transform: scaleX(1);
+  height: 2px;
+  background: var(--accent);
+}
 .nav-cta { border-radius: 4px; }
 
 /* Hamburger toggle button (mobile only) */
@@ -382,7 +388,12 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(
 }
 .nav-mobile-links a:active,
 .nav-mobile-links a[aria-current="page"] { color: var(--accent-ink); }
-.nav-mobile-links a[aria-current="page"] { font-weight: 500; }
+/* Active tab: accent bar on the current page's row */
+.nav-mobile-links a[aria-current="page"] {
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--accent);
+  padding-left: 14px;
+}
 .nav-mobile-cta {
   margin-top: 22px;
   width: 100%;

@@ -28,6 +28,20 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 760 && !navDrawer.hidden) setMenu(false); });
   }
 
+  // ── Active nav: mark the current page in both desktop + mobile menus ──
+  var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  if (here === '') here = 'index.html';
+  var serviceSubpages = ['data-platforms.html', 'analytics-bi.html'];
+  document.querySelectorAll('.nav-links > a[href], .nav-mobile-links a[href]').forEach(function (a) {
+    var href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
+    if (href && href === here) a.setAttribute('aria-current', 'page');
+  });
+  // on a Services sub-page, also light up the "Services" dropdown trigger
+  if (serviceSubpages.indexOf(here) !== -1) {
+    var ddTrigger = document.querySelector('.nav-dd > a');
+    if (ddTrigger) ddTrigger.setAttribute('aria-current', 'page');
+  }
+
   // ── Footer year ──
   var yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -117,9 +131,13 @@
   var ScrollTrigger = window.ScrollTrigger;
   gsap.registerPlugin(ScrollTrigger);
 
-  // ── Lenis smooth scroll ──
+  // ── Lenis smooth scroll (pointer-fine only) ──
+  // On touch devices Lenis doesn't smooth touch scroll anyway, and driving
+  // ScrollTrigger through it desyncs reveals (sections pop in late / blank).
+  // Skipping it there lets ScrollTrigger use native scroll, so reveals fire on time.
+  var isTouch = window.matchMedia('(pointer: coarse)').matches;
   var lenis = null;
-  if (typeof window.Lenis !== 'undefined') {
+  if (typeof window.Lenis !== 'undefined' && !isTouch) {
     document.documentElement.style.scrollBehavior = 'auto';
     lenis = new window.Lenis({
       duration: 1.1,
@@ -150,13 +168,16 @@
   gsap.set('.reveal, .reveal-stagger > *', { transition: 'none' });
 
   // ── Reveals ──
+  // reveal as the section enters from the bottom edge — earlier start avoids
+  // staring at a blank band before it animates in, especially on mobile
+  var revealStart = 'top 94%';
   gsap.utils.toArray('.reveal').forEach(function (el) {
     gsap.fromTo(el, { autoAlpha: 0, y: 28 },
-      { autoAlpha: 1, y: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 86%' } });
+      { autoAlpha: 1, y: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: revealStart } });
   });
   gsap.utils.toArray('.reveal-stagger').forEach(function (group) {
     gsap.fromTo(group.children, { autoAlpha: 0, y: 24 },
-      { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.09, scrollTrigger: { trigger: group, start: 'top 86%' } });
+      { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.09, scrollTrigger: { trigger: group, start: revealStart } });
   });
 
   // ── Parallax homepage hero background ──
@@ -181,4 +202,6 @@
 
   setProgress(window.scrollY || 0);
   ScrollTrigger.refresh();
+  // recompute trigger positions once images/fonts settle so reveals stay on-time
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
 })();
