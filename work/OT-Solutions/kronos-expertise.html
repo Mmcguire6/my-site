@@ -136,31 +136,26 @@
   .uk-out { border-top: 1px solid var(--rule-soft); padding-top: 14px; font-size: 12px; line-height: 1.55; color: var(--ink-2); }
   .uk-out b { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 5px; }
 
-  /* DIAGNOSTIC TABLE */
-  .uk-diag-title { text-align: center; font-size: clamp(26px, 3.2vw, 44px); margin: 0 0 clamp(36px, 4.4vw, 54px); }
-  .uk-diag { background: transparent; border: none; border-radius: 0; padding: 0; box-shadow: none; }
-  .uk-diag-head { display: grid; grid-template-columns: 1.15fr 1.15fr 1fr 1fr; gap: clamp(14px, 2vw, 30px);
-    padding-bottom: 10px; }
-  .uk-diag-head span { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-ink); }
-  .uk-drow { display: grid; grid-template-columns: 1.15fr 1.15fr 1fr 1fr; gap: clamp(14px, 2vw, 30px);
-    padding: clamp(12px, 1.6vw, 20px) 0; align-items: center; }
-  .uk-drow .uk-cell:last-child { border-left: 1px solid var(--rule); padding-left: clamp(14px, 2vw, 26px); }
-  .uk-sym { display: flex; gap: 12px; align-items: flex-start; background: var(--bg); border: 1px solid var(--rule-soft);
-    border-radius: 10px; padding: 14px 16px; box-shadow: 0 8px 18px -14px oklch(0.2 0.04 255 / 0.3); }
-  .uk-sym svg { width: 20px; height: 20px; color: var(--accent); stroke-width: 1.5; flex-shrink: 0; margin-top: 1px; }
-  .uk-sym b { display: block; font-size: 14.5px; font-weight: 600; color: var(--ink); line-height: 1.35; }
-  .uk-sym span { display: block; font-size: 12.5px; color: var(--ink-3); line-height: 1.5; margin-top: 4px; }
-  .uk-appr { display: flex; gap: 14px; align-items: center; background: var(--bg); border: 1px solid var(--rule-soft);
-    border-radius: 10px; padding: 14px 16px; position: relative;
-    box-shadow: 0 8px 18px -14px oklch(0.2 0.04 255 / 0.3); }
-  .uk-drow:not(:last-child) .uk-appr::after { content: "↓"; position: absolute; left: 50%; transform: translateX(-50%);
-    bottom: -34px; color: var(--accent-ink); font-size: 18px; line-height: 1; }
-  .uk-appr .arr-in { position: absolute; left: clamp(-24px, -1.6vw, -12px); top: 50%; transform: translateY(-50%);
-    color: var(--accent-ink); font-size: 14px; }
-  .uk-appr svg { width: 32px; height: 32px; color: var(--accent); stroke-width: 1.4; flex-shrink: 0; }
-  .uk-appr b { display: block; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
-  .uk-appr span { display: block; font-size: 12.5px; color: var(--ink-2); line-height: 1.5; margin-top: 3px; }
-  .uk-cell { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); }
+  /* PROBLEMS WE SOLVE — plain-language problem → outcome cards */
+  .uk-solve-head { text-align: center; max-width: 640px; margin: 0 auto clamp(34px, 4.2vw, 52px); }
+  .uk-solve-title { font-size: clamp(26px, 3.2vw, 44px); margin: 12px 0 16px; }
+  .uk-solve-lede { font-size: clamp(15px, 1.3vw, 17px); line-height: 1.6; color: var(--ink-2); margin: 0 auto; max-width: 54ch; }
+  .uk-solve-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 24px); }
+  .uk-solve-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 14px;
+    padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column;
+    box-shadow: 0 12px 30px -22px oklch(0.2 0.04 255 / 0.35); transition: transform 260ms cubic-bezier(.2,.7,.2,1), box-shadow 260ms ease; }
+  .uk-solve-card:hover { transform: translateY(-3px); box-shadow: 0 22px 46px -28px oklch(0.2 0.04 255 / 0.4); }
+  .uk-solve-ic { width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--rule); background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .uk-solve-ic svg { width: 22px; height: 22px; color: var(--accent); stroke-width: 1.5; }
+  .uk-solve-card h3 { font-size: clamp(17px, 1.7vw, 21px); font-weight: 600; letter-spacing: -0.01em;
+    color: var(--ink); margin: 0 0 8px; line-height: 1.25; }
+  .uk-solve-card > p { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin: 0 0 20px; }
+  .uk-solve-out { margin-top: auto; border-top: 1px solid var(--rule-soft); padding-top: 14px;
+    display: flex; align-items: baseline; gap: 10px; }
+  .uk-solve-out b { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); flex-shrink: 0; }
+  .uk-solve-out span { font-size: 14.5px; line-height: 1.5; color: var(--ink); font-weight: 500; }
 
   /* HOW WE WORK */
   .uk-how-title { text-align: center; font-size: clamp(26px, 3.2vw, 44px); margin: 0 0 clamp(40px, 5vw, 58px); position: relative; padding-bottom: 18px; }
@@ -234,11 +229,6 @@
 
   @media (max-width: 1080px) {
     .uk-vis { grid-template-columns: 1fr; }
-    .uk-diag-head { display: none; }
-    .uk-drow { grid-template-columns: 1fr; gap: 12px; }
-    .uk-drow:not(:last-child) .uk-appr::after { display: none; }
-    .uk-appr .arr-in { display: none; }
-    .uk-drow .uk-cell:last-child { border-left: none; padding-left: 0; }
   }
   @media (max-width: 960px) {
     .uk-hero-grid, .uk-case-grid, .uk-quote-grid { grid-template-columns: 1fr; }
@@ -255,6 +245,7 @@
   @media (max-width: 600px) {
     .uk-map-grid { grid-template-columns: 1fr; }
     .uk-core { margin: 0 auto; }
+    .uk-solve-grid { grid-template-columns: 1fr; }
     .uk-how { grid-template-columns: 1fr; }
     .uk-ba { grid-template-columns: 1fr; }
     .ux-row { grid-template-columns: 1fr 1fr; }
@@ -385,40 +376,37 @@
     </div>
 </section>
 
-<!-- DIAGNOSTIC -->
-<section class="section uk-diag-sec tinted-section">
+<!-- PROBLEMS WE SOLVE -->
+<section class="section uk-solve-sec tinted-section">
     <div class="wrap">
-        <h2 class="display h2 uk-diag-title reveal">When UKG gets complicated, we find <em>what&rsquo;s underneath.</em></h2>
-        <div class="uk-diag reveal">
-            <div class="uk-diag-head">
-                <span>Symptoms you&rsquo;re seeing</span>
-                <span>Our diagnostic approach</span>
-                <span>What&rsquo;s underneath</span>
-                <span>How we help</span>
+        <div class="uk-solve-head reveal">
+            <h2 class="display h2 uk-solve-title">When UKG gets complicated, <em>we make it simple.</em></h2>
+            <p class="uk-solve-lede">Most UKG frustrations come down to a handful of everyday problems. Here&rsquo;s what they feel like &mdash; and what changes once we step in.</p>
+        </div>
+        <div class="uk-solve-grid reveal-stagger">
+            <div class="uk-solve-card">
+                <div class="uk-solve-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+                <h3>Upgrades feel risky</h3>
+                <p>Every new release brings the same worry &mdash; what might break, what needs re-testing, and what quietly stops working.</p>
+                <div class="uk-solve-out"><b>Outcome</b><span>Upgrades become planned, routine and low-risk.</span></div>
             </div>
-            <div class="uk-drow">
-                <div class="uk-sym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><div><b>An upgrade introduces risk</b><span>New versions create uncertainty and potential disruption.</span></div></div>
-                <div class="uk-appr"><span class="arr-in">→</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M7 6c4 1 3 5 5 6s5 1 5 5" stroke-dasharray="3 2.5"/></svg><div><b>Trace</b><span>Map the end-to-end flow of data, rules and processes.</span></div></div>
-                <div class="uk-cell">Unknown dependencies, customizations and untested impacts.</div>
-                <div class="uk-cell">Upgrade readiness, impact analysis and safe execution.</div>
+            <div class="uk-solve-card">
+                <div class="uk-solve-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg></div>
+                <h3>No one trusts the numbers</h3>
+                <p>Reports disagree with each other and definitions vary, so leaders hesitate to act on what they&rsquo;re seeing.</p>
+                <div class="uk-solve-out"><b>Outcome</b><span>One set of numbers your whole team relies on.</span></div>
             </div>
-            <div class="uk-drow">
-                <div class="uk-sym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg><div><b>Reporting is slow or difficult to trust</b><span>Stakeholders lack confidence in numbers and definitions.</span></div></div>
-                <div class="uk-appr"><span class="arr-in">→</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><div><b>Isolate</b><span>Pinpoint the break, gap or misconfiguration.</span></div></div>
-                <div class="uk-cell">Inconsistent data models, definitions or transformation logic.</div>
-                <div class="uk-cell">Reporting strategy, data modeling and governed metrics.</div>
+            <div class="uk-solve-card">
+                <div class="uk-solve-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg></div>
+                <h3>Everything needs a workaround</h3>
+                <p>Manual steps and one-off fixes pile up until they&rsquo;re simply how the work gets done.</p>
+                <div class="uk-solve-out"><b>Outcome</b><span>Configuration that fits how you actually work.</span></div>
             </div>
-            <div class="uk-drow">
-                <div class="uk-sym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg><div><b>Configuration creates recurring exceptions</b><span>Workarounds and manual steps become the norm.</span></div></div>
-                <div class="uk-appr"><span class="arr-in">→</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><div><b>Validate</b><span>Test with evidence, measure the impact.</span></div></div>
-                <div class="uk-cell">Missing controls, weak validation and poor data quality.</div>
-                <div class="uk-cell">Configuration design, exception management and automation.</div>
-            </div>
-            <div class="uk-drow">
-                <div class="uk-sym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><path d="M8 12h8"/></svg><div><b>Interfaces fail or systems fall out of sync</b><span>Data gaps, duplicates and delays impact operations.</span></div></div>
-                <div class="uk-appr"><span class="arr-in">→</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6l-2.5 2.5-2.5-2.5z"/></svg><div><b>Resolve</b><span>Fix the root cause and prevent recurrence.</span></div></div>
-                <div class="uk-cell">Interface mappings, change management and monitoring gaps.</div>
-                <div class="uk-cell">Interface remediation, monitoring and reconciliation.</div>
+            <div class="uk-solve-card">
+                <div class="uk-solve-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><path d="M8 12h8"/></svg></div>
+                <h3>Systems drift out of sync</h3>
+                <p>Integrations quietly fail, data doubles up, and small gaps grow into real operational headaches.</p>
+                <div class="uk-solve-out"><b>Outcome</b><span>Connections that stay accurate and dependable.</span></div>
             </div>
         </div>
     </div>
