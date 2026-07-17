@@ -34,59 +34,89 @@
 </script>
 
 <style>
-  /* ───── About (ot mock) ───── */
-  .au-hero { background: var(--bg-2); border-bottom: 1px solid var(--rule); }
-  .au-hero .wrap { padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(40px, 5vw, 72px); }
-  .au-hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(32px, 4.5vw, 80px); align-items: center; }
-  .au-hero .eyebrow { color: var(--accent-ink); font-size: 13px; }
-  .au-hero .eyebrow::before { background: var(--accent); }
-  .au-hero-title { font-size: clamp(38px, 4.8vw, 64px); margin: 16px 0 22px; line-height: 1.05; }
-  .au-hero-lede { font-size: clamp(15.5px, 1.35vw, 18px); line-height: 1.65; color: var(--ink-2); max-width: 52ch; margin: 0 0 28px; }
+  /* ───── About (redesign) ───── */
+
+  /* HERO — light, full-bleed photo right + caption */
+  .au-hero { border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .au-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .au-hero-text { display: flex; flex-direction: column; justify-content: center;
+    padding: clamp(40px, 5.5vw, 84px) clamp(28px, 4vw, 64px) clamp(40px, 5.5vw, 84px) max(var(--gutter), calc(50vw - var(--max) / 2 + var(--gutter))); }
+  .au-hero .eyebrow, .au-evo .eyebrow { color: var(--gold); }
+  .au-hero .eyebrow::before, .au-evo .eyebrow::before { background: var(--gold-rule); width: 3px; height: 15px; }
+  .au-hero-title { font-size: clamp(34px, 4.4vw, 60px); margin: 20px 0 22px; color: var(--ink); line-height: 1.05; }
+  .au-hero-text p { font-size: clamp(15px, 1.3vw, 17px); line-height: 1.65; color: var(--ink-2); margin: 0 0 16px; max-width: 48ch; }
+  .au-hero-text .au-btn { margin-top: 16px; align-self: flex-start; }
   .au-btn { background: var(--navy-3); color: #fff; font-weight: 600; border-radius: 6px; }
   .au-btn:hover { background: oklch(0.24 0.06 258); transform: translateY(-1px); }
+  .au-hero-media { display: flex; flex-direction: column; }
+  .au-hero-art { flex: 1; position: relative; overflow: hidden; min-height: 360px; border-bottom: 1px solid var(--rule); }
+  .au-hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 35% center; display: block; }
+  .au-hero-cap { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.3vw, 18px);
+    color: var(--ink-2); text-align: center; margin: 0; padding: clamp(16px, 2vw, 22px) clamp(20px, 3vw, 40px); }
 
-  /* hero flow diagram */
-  .au-flow { text-align: center; }
-  .au-flow-row { display: grid; grid-template-columns: 1fr auto 1.2fr auto 1fr; gap: clamp(10px, 1.4vw, 24px); align-items: start; }
-  .au-node svg { width: clamp(56px, 5.5vw, 84px); height: clamp(56px, 5.5vw, 84px); color: var(--ink); stroke-width: 1.2; margin: 0 auto 14px; display: block; }
-  .au-node b { display: block; font-family: var(--mono); font-size: clamp(11px, 1vw, 13.5px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); line-height: 1.5; }
-  .au-node .sub { display: flex; justify-content: center; gap: 10px; margin-top: 12px; font-size: clamp(11px, 0.95vw, 13px); color: var(--ink-2); }
-  .au-node .sub i { font-style: normal; color: var(--ink-4); }
-  .au-flow-arr { color: var(--ink); font-size: clamp(20px, 2vw, 28px); padding-top: clamp(18px, 2vw, 30px); }
-  .au-flow-cap { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.5vw, 20px); color: var(--ink); margin-top: clamp(26px, 3vw, 40px); }
+  /* STATS BAND */
+  .au-stats { border-bottom: 1px solid var(--rule); background: var(--bg-2); }
+  .au-stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr);
+    padding-top: clamp(30px, 3.6vw, 48px); padding-bottom: clamp(30px, 3.6vw, 48px); }
+  .au-stat { text-align: center; padding: 0 clamp(14px, 2vw, 32px); border-left: 1px solid var(--rule); }
+  .au-stat:first-child { border-left: none; }
+  .au-stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(19px, 2vw, 27px);
+    letter-spacing: 0.02em; color: var(--ink); margin-bottom: 8px; }
+  .au-stat span { font-size: clamp(12.5px, 1vw, 14px); line-height: 1.5; color: var(--ink-3); }
 
-  /* pillars */
-  .au-pillars { border-bottom: 1px solid var(--rule); }
-  .au-pillars .wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; padding-top: clamp(30px, 3.6vw, 52px); padding-bottom: clamp(30px, 3.6vw, 52px); }
-  .au-pillar { text-align: center; padding: 0 clamp(14px, 2vw, 36px); border-left: 1px solid var(--rule); }
-  .au-pillar:first-child { border-left: none; }
-  .au-pillar h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.3vw, 31px); color: var(--ink); margin: 0 0 8px; }
-  .au-pillar p { font-size: clamp(13.5px, 1.15vw, 15.5px); color: var(--ink-2); margin: 0; line-height: 1.5; }
+  /* OUR EVOLUTION */
+  .au-evo .wrap { padding-top: clamp(48px, 6vw, 84px); padding-bottom: clamp(48px, 6vw, 84px); }
+  .au-evo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 72px); align-items: start;
+    margin-top: clamp(18px, 2.4vw, 30px); }
+  .au-evo-title { font-size: clamp(26px, 3vw, 40px); color: var(--ink); margin: 14px 0 0; line-height: 1.14; max-width: 16ch; }
+  .au-evo-copy { font-size: clamp(15px, 1.3vw, 17px); line-height: 1.7; color: var(--ink-2); margin: 0 0 clamp(22px, 2.6vw, 30px); }
+  .au-evo-flow { display: flex; align-items: center; gap: clamp(10px, 1.4vw, 18px); flex-wrap: wrap;
+    padding-bottom: clamp(18px, 2.2vw, 26px); border-bottom: 1px solid var(--rule); margin-bottom: clamp(18px, 2.2vw, 24px); }
+  .au-evo-node { font-family: var(--mono); font-size: clamp(11px, 1vw, 12.5px); letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink); font-weight: 600; line-height: 1.4; }
+  .au-evo-arr { color: var(--accent); font-size: 16px; flex-shrink: 0; }
+  .au-evo-quote { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5;
+    color: var(--ink); margin: 0; padding-left: clamp(16px, 2vw, 22px); border-left: 3px solid var(--gold); }
 
-  /* navy statement band */
-  .au-band { background: var(--navy-3); color: oklch(0.96 0.008 250); }
-  .au-band .wrap { padding-top: clamp(40px, 5vw, 68px); padding-bottom: clamp(40px, 5vw, 68px);
-    display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 3vw, 56px); align-items: center; }
-  .au-band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.9vw, 40px); line-height: 1.2; color: oklch(0.97 0.008 250); margin: 0 0 12px; max-width: 26ch; }
-  .au-band p { font-size: clamp(14px, 1.2vw, 16.5px); color: oklch(0.82 0.02 250); margin: 0; }
-  .au-band-btn { border: 1.5px solid oklch(1 0 0 / 0.7); color: #fff; font-weight: 600; border-radius: 6px; }
-  .au-band-btn:hover { background: oklch(1 0 0 / 0.1); border-color: #fff; }
+  /* FOCUS — 3 columns */
+  .au-focus { border-top: 1px solid var(--rule); background: var(--bg-2); }
+  .au-focus .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px);
+    padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(40px, 5vw, 64px); }
+  .au-focus-col { padding-left: clamp(24px, 3vw, 48px); border-left: 1px solid var(--rule); }
+  .au-focus-col:first-child { border-left: none; padding-left: 0; }
+  .au-focus-col h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 1.6vw, 21px);
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink); margin: 0 0 14px; }
+  .au-focus-col p { font-size: clamp(13.5px, 1.15vw, 15px); line-height: 1.6; color: var(--ink-2); margin: 0 0 16px; }
+  .au-focus-link { display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--accent-ink); }
+  .au-focus-link .arrow { transition: transform 200ms ease; display: inline-block; }
+  .au-focus-link:hover .arrow { transform: translateX(3px); }
 
-  /* bottom CTA strip */
-  .au-cta { border-bottom: 1px solid var(--rule); }
-  .au-cta .wrap { padding-top: clamp(22px, 2.6vw, 36px); padding-bottom: clamp(22px, 2.6vw, 36px);
-    display: flex; gap: 18px 28px; align-items: center; justify-content: center; flex-wrap: wrap; }
-  .au-cta p { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); color: var(--ink); margin: 0; }
+  /* CLOSING CTA */
+  .au-cta { background: var(--navy-3); color: oklch(0.96 0.008 250); }
+  .au-cta .wrap { display: flex; align-items: center; justify-content: space-between; gap: 18px 40px; flex-wrap: wrap;
+    padding-top: clamp(38px, 4.6vw, 60px); padding-bottom: clamp(38px, 4.6vw, 60px); }
+  .au-cta h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.8vw, 38px);
+    color: oklch(0.97 0.008 250); margin: 0; max-width: 22ch; line-height: 1.15; }
+  .au-cta-btn { background: #fff; color: var(--navy-3); font-weight: 600; border-radius: 6px; white-space: nowrap; }
+  .au-cta-btn:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
   @media (max-width: 960px) {
     .au-hero-grid { grid-template-columns: 1fr; }
-    .au-pillars .wrap { grid-template-columns: 1fr; gap: 26px; }
-    .au-pillar { border-left: none; padding: 0; }
-    .au-band .wrap { grid-template-columns: 1fr; }
+    .au-hero-text { padding: clamp(28px, 7vw, 44px) var(--gutter) clamp(24px, 5vw, 32px); }
+    .au-hero-art { min-height: 0; border-bottom: none; }
+    .au-hero-art img { height: auto; }
+    .au-stats .wrap { grid-template-columns: 1fr 1fr; gap: 26px 0; }
+    .au-stat { border-left: none; }
+    .au-stat:nth-child(even) { border-left: 1px solid var(--rule); }
+    .au-evo-grid { grid-template-columns: 1fr; gap: 22px; }
+    .au-evo-title { max-width: none; }
+    .au-focus .wrap { grid-template-columns: 1fr; gap: 28px; }
+    .au-focus-col { border-left: none; padding-left: 0; }
+    .au-cta .wrap { flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 600px) {
-    .au-flow-row { grid-template-columns: 1fr; gap: 14px; }
-    .au-flow-arr { transform: rotate(90deg); padding: 0; }
+    .au-stats .wrap { grid-template-columns: 1fr; gap: 22px; }
+    .au-stat, .au-stat:nth-child(even) { border-left: none; }
   }
 </style>
 
@@ -178,72 +208,78 @@
 
 <!-- HERO -->
 <section class="au-hero">
-    <div class="wrap">
-        <div class="au-hero-grid">
-            <div class="reveal">
-                <span class="eyebrow">About OT Solutions</span>
-                <h1 class="display au-hero-title">Technical roots. Workforce data <em>focus.</em></h1>
-                <p class="au-hero-lede">OT Solutions is an established IT and data consultancy with roots in application development, ERP and business intelligence. Today, we specialize in senior UKG consulting, workforce data engineering and Power BI reporting.</p>
-                <a href="contact.html" class="btn au-btn">Start a conversation</a>
-            </div>
-            <div class="au-flow reveal" aria-hidden="true">
-                <div class="au-flow-row">
-                    <div class="au-node">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19"/><path d="M5.2 6.3h.01M7.4 6.3h.01M9.6 6.3h.01"/></svg>
-                        <b>Applications<br />&amp; ERP</b>
-                    </div>
-                    <span class="au-flow-arr">→</span>
-                    <div class="au-node">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="2.8"/><path d="M4 5.5v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8V5.5"/><path d="M4 9.8v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8V9.8"/><path d="M4 14.1v4.3c0 1.55 3.58 2.8 8 2.8s8-1.25 8-2.8v-4.3"/></svg>
-                        <b>UKG &amp;<br />Workforce Data</b>
-                        <span class="sub">Integrate <i>&middot;</i> Validate <i>&middot;</i> Model</span>
-                    </div>
-                    <span class="au-flow-arr">→</span>
-                    <div class="au-node">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="4.4" height="7.5" rx="0.8"/><rect x="9.8" y="9" width="4.4" height="11.5" rx="0.8"/><rect x="16.6" y="4" width="4.4" height="16.5" rx="0.8"/></svg>
-                        <b>Power BI<br />Reporting</b>
-                    </div>
-                </div>
-                <p class="au-flow-cap">Broad technical experience, applied to workforce data.</p>
-            </div>
+    <div class="au-hero-grid">
+        <div class="au-hero-text reveal">
+            <span class="eyebrow">About OT Solutions</span>
+            <h1 class="display au-hero-title">Built on technical depth. Focused on workforce performance.</h1>
+            <p>OT Solutions is an established Canadian IT and data consultancy. For more than 25 years, we have helped organizations improve the systems, data and reporting behind their operations.</p>
+            <p>Today, our work is focused on senior UKG consulting, workforce data engineering and Power BI reporting.</p>
+            <a href="contact.html" class="btn au-btn">Talk to our team <span class="arrow">→</span></a>
+        </div>
+        <div class="au-hero-media reveal">
+            <div class="au-hero-art"><img src="assets/ot-about-hero.png" alt="Senior OT Solutions consultants reviewing workforce reporting together at a boardroom table." width="2912" height="1472" /></div>
+            <p class="au-hero-cap">Senior-led consulting across UKG, workforce data and reporting.</p>
         </div>
     </div>
 </section>
 
-<!-- PILLARS -->
-<section class="au-pillars">
+<!-- STATS -->
+<section class="au-stats">
     <div class="wrap reveal-stagger">
-        <div class="au-pillar">
-            <h2>Senior UKG Consulting</h2>
-            <p>Optimize complex UKG environments.</p>
-        </div>
-        <div class="au-pillar">
-            <h2>Data Engineering</h2>
-            <p>Build reliable workforce data foundations.</p>
-        </div>
-        <div class="au-pillar">
-            <h2>Power BI Reporting</h2>
-            <p>Create reporting leaders can trust.</p>
-        </div>
+        <div class="au-stat"><b>25+ Years</b><span>Technical consulting experience</span></div>
+        <div class="au-stat"><b>Senior-Led</b><span>Experienced practitioners</span></div>
+        <div class="au-stat"><b>Canada-Based</b><span>Serving Canadian and international clients</span></div>
+        <div class="au-stat"><b>Enterprise Focus</b><span>Complex workforce environments</span></div>
     </div>
 </section>
 
-<!-- STATEMENT BAND -->
-<section class="au-band">
+<!-- OUR EVOLUTION -->
+<section class="au-evo">
     <div class="wrap">
-        <div class="reveal">
-            <h2>We understand the platform, the data underneath it, and the decisions it needs to support.</h2>
-            <p>Application development and ERP roots. UKG and workforce-data specialization.</p>
+        <span class="eyebrow reveal">Our evolution</span>
+        <div class="au-evo-grid">
+            <h2 class="display au-evo-title reveal">A consultancy built through changing technology.</h2>
+            <div class="reveal">
+                <p class="au-evo-copy">OT Solutions began with application development, ERP systems and business intelligence. As enterprise systems evolved, our work increasingly moved toward the information connecting them &mdash; particularly workforce systems, data and reporting.</p>
+                <div class="au-evo-flow">
+                    <span class="au-evo-node">Application<br />Development &amp; ERP</span>
+                    <span class="au-evo-arr">→</span>
+                    <span class="au-evo-node">Enterprise<br />Data &amp; BI</span>
+                    <span class="au-evo-arr">→</span>
+                    <span class="au-evo-node">UKG &amp;<br />Workforce Data</span>
+                </div>
+                <p class="au-evo-quote">We understand how configuration, integrations, data and reporting affect one another across the organization.</p>
+            </div>
         </div>
-        <a href="references.html" class="btn au-band-btn">See our references</a>
     </div>
 </section>
 
-<!-- CTA STRIP -->
+<!-- FOCUS -->
+<section class="au-focus">
+    <div class="wrap reveal-stagger">
+        <div class="au-focus-col">
+            <h3>Senior UKG Consulting</h3>
+            <p>Optimize complex UKG environments with proven configuration, governance and process expertise.</p>
+            <a href="kronos-expertise.html" class="au-focus-link">Learn more <span class="arrow">→</span></a>
+        </div>
+        <div class="au-focus-col">
+            <h3>Workforce Data Engineering</h3>
+            <p>Design and build reliable workforce data foundations that connect systems and drive decisions.</p>
+            <a href="data-platforms.html" class="au-focus-link">Learn more <span class="arrow">→</span></a>
+        </div>
+        <div class="au-focus-col">
+            <h3>Power BI Reporting</h3>
+            <p>Deliver trusted, actionable reporting that helps leaders see performance and drive results.</p>
+            <a href="analytics-bi.html" class="au-focus-link">Learn more <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- CLOSING CTA -->
 <section class="au-cta">
     <div class="wrap reveal">
-        <p>Have a UKG or workforce-data problem to solve?</p>
-        <a href="contact.html" class="btn au-btn">Talk to a consultant</a>
+        <h2>Ready to strengthen the systems behind your workforce?</h2>
+        <a href="contact.html" class="btn au-cta-btn">Talk to our team <span class="arrow">→</span></a>
     </div>
 </section>
 
