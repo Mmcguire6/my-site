@@ -56,52 +56,80 @@
 </script>
 
 <style>
-  /* ───── Contact (ot mock) ───── */
-  .ct-hero { border-bottom: 1px solid var(--rule); }
-  .ct-hero .wrap { padding-top: clamp(36px, 4.4vw, 62px); padding-bottom: clamp(36px, 4.4vw, 62px); }
-  .ct-hero-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
-  .ct-hero .eyebrow { color: var(--gold); font-size: 13px; letter-spacing: 0.16em; }
+  /* ───── Contact (redesign) ───── */
+
+  /* HERO — light, full-bleed photo right + caption */
+  .ct-hero { border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .ct-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .ct-hero-text { display: flex; flex-direction: column; justify-content: center;
+    padding: clamp(40px, 5.5vw, 84px) clamp(28px, 4vw, 64px) clamp(40px, 5.5vw, 84px) max(var(--gutter), calc(50vw - var(--max) / 2 + var(--gutter))); }
+  .ct-hero .eyebrow { color: var(--gold); }
   .ct-hero .eyebrow::before { background: var(--gold-rule); }
-  .ct-hero-title { font-size: clamp(36px, 4.6vw, 62px); margin: 16px 0 20px; line-height: 1.08; }
-  .ct-hero-title em { color: var(--accent-ink); }
-  .ct-hero-lede { font-size: clamp(15.5px, 1.35vw, 18.5px); line-height: 1.6; color: var(--ink-2); max-width: 44ch; margin: 0; }
-  .ct-photo { position: relative; border-radius: 10px; overflow: hidden;
-    box-shadow: 0 26px 56px -36px oklch(0.14 0.05 258 / 0.5); }
-  .ct-photo img { width: 100%; height: auto; display: block; }
-  .ct-photo-mail { position: absolute; right: 0; bottom: 0; width: 37%; height: 40%; }
+  .ct-hero-title { font-size: clamp(34px, 4.6vw, 62px); margin: 20px 0 22px; color: var(--ink); line-height: 1.06; }
+  .ct-hero-lede { font-size: clamp(15.5px, 1.35vw, 18px); line-height: 1.62; color: var(--ink-2); max-width: 44ch; margin: 0 0 14px; }
+  .ct-hero-fine { font-size: 14px; line-height: 1.6; color: var(--ink-3); margin: 0 0 30px; max-width: 46ch; }
+  .ct-hero-actions { display: flex; align-items: center; gap: 14px 26px; flex-wrap: wrap; }
+  .ct-btn-solid { background: var(--navy-3); color: #fff; font-weight: 600; border-radius: 6px; }
+  .ct-btn-solid:hover { background: oklch(0.24 0.06 258); transform: translateY(-1px); }
+  .ct-hero-call { font-size: 15px; font-weight: 600; color: var(--ink); border-bottom: 2px solid var(--gold-rule);
+    padding-bottom: 3px; transition: border-color 200ms ease; }
+  .ct-hero-call:hover { border-color: var(--gold); }
+  .ct-hero-media { display: flex; flex-direction: column; }
+  .ct-hero-art { flex: 1; position: relative; overflow: hidden; min-height: 340px; border-bottom: 1px solid var(--rule); }
+  .ct-hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .ct-hero-cap { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.3vw, 18px);
+    color: var(--ink-2); text-align: center; margin: 0; padding: clamp(16px, 2vw, 22px) clamp(20px, 3vw, 40px); }
 
-  /* direct contacts */
-  .ct-direct { background: var(--bg-2); border-bottom: 1px solid var(--rule); }
-  .ct-direct .wrap { padding-top: clamp(34px, 4vw, 56px); padding-bottom: clamp(34px, 4vw, 56px);
-    display: grid; grid-template-columns: 0.8fr 1fr 1fr; gap: clamp(24px, 3.4vw, 60px); align-items: start; }
-  .ct-direct h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.6vw, 34px); color: var(--ink); margin: 0; }
-  .ct-person + .ct-person { border-left: 1px solid var(--rule); padding-left: clamp(24px, 3.4vw, 60px); }
-  .ct-person h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(21px, 2.1vw, 28px); color: var(--ink); margin: 0 0 5px; }
-  .ct-role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ink); display: block; margin-bottom: 16px; }
-  .ct-lines { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-  .ct-lines a { font-size: 15px; color: var(--ink-2); }
+  /* NAVY CONTACT BAND */
+  .ct-band { background: var(--navy-3); color: oklch(0.96 0.008 250); }
+  .ct-band .wrap { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: clamp(20px, 3vw, 40px);
+    padding-top: clamp(26px, 3vw, 38px); padding-bottom: clamp(26px, 3vw, 38px); align-items: center; }
+  .ct-band-item { padding-left: clamp(20px, 3vw, 44px); border-left: 1px solid oklch(1 0 0 / 0.18); }
+  .ct-band-item:first-child { padding-left: 0; border-left: none; }
+  .ct-band-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 8px; }
+  .ct-band-v { font-family: var(--serif); font-size: clamp(18px, 1.9vw, 26px); color: oklch(0.97 0.008 250); }
+  a.ct-band-v { transition: color 200ms ease; }
+  a.ct-band-v:hover { color: var(--accent); }
+  .ct-band-note { display: flex; align-items: flex-start; gap: 12px; }
+  .ct-band-note svg { width: 30px; height: 30px; color: var(--gold); stroke-width: 1.4; flex-shrink: 0; }
+  .ct-band-note p { font-size: 13.5px; line-height: 1.55; color: oklch(0.84 0.02 250); margin: 0; }
+
+  /* DIRECT CONTACTS */
+  .ct-direct .wrap { padding-top: clamp(48px, 6vw, 82px); padding-bottom: clamp(48px, 6vw, 82px); }
+  .ct-direct-grid { display: grid; grid-template-columns: 0.8fr 1fr 1fr; gap: clamp(28px, 4vw, 60px); align-items: start; }
+  .ct-direct-head .eyebrow { color: var(--gold); }
+  .ct-direct-head .eyebrow::before { background: var(--gold-rule); }
+  .ct-direct-title { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 2.8vw, 38px); color: var(--ink); margin: 14px 0 0; line-height: 1.12; }
+  .ct-person + .ct-person { border-left: 1px solid var(--rule); padding-left: clamp(24px, 3.4vw, 56px); }
+  .ct-person h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.2vw, 30px); color: var(--ink); margin: 0 0 5px; }
+  .ct-role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px; }
+  .ct-person-desc { font-size: 14px; line-height: 1.55; color: var(--ink-3); margin: 0 0 18px; max-width: 34ch; }
+  .ct-lines { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  .ct-lines li { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); }
+  .ct-lines svg { width: 16px; height: 16px; color: var(--gold); stroke-width: 1.6; flex-shrink: 0; }
+  .ct-lines a { color: var(--ink-2); transition: color 200ms ease; }
   .ct-lines a:hover { color: var(--accent-ink); }
-  .ct-btn { border: 1.5px solid var(--ink); color: var(--ink); font-weight: 600; border-radius: 6px; }
-  .ct-btn:hover { background: var(--ink); color: var(--bg); }
+  .ct-btn { background: var(--navy-3); color: #fff; font-weight: 600; border-radius: 6px; }
+  .ct-btn:hover { background: oklch(0.24 0.06 258); transform: translateY(-1px); }
 
-  /* notes strip */
-  .ct-notes { border-bottom: 1px solid var(--rule); }
-  .ct-notes .wrap { padding-top: clamp(32px, 3.8vw, 52px); padding-bottom: clamp(32px, 3.8vw, 52px);
-    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 72px); align-items: start; }
-  .ct-note + .ct-note { border-left: 1px solid var(--rule); padding-left: clamp(28px, 4vw, 72px); }
-  .ct-note h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.3vw, 30px); color: var(--ink); margin: 0 0 10px; }
-  .ct-note p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0 0 10px; max-width: 46ch; }
-  .ct-note .fine { font-size: 13.5px; color: var(--ink-3); margin: 14px 0 0; }
-  .ct-note .btn { margin-top: 8px; }
-  .ct-btn-ghost { border: 1.5px solid var(--rule); color: var(--ink); font-weight: 600; border-radius: 6px; }
-  .ct-btn-ghost:hover { border-color: var(--ink); }
+  /* TRUST ROW */
+  .ct-trust { border-top: 1px solid var(--rule); margin-top: clamp(40px, 5vw, 60px); padding-top: clamp(28px, 3.4vw, 40px);
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); }
+  .ct-trust-item { display: flex; align-items: center; gap: 12px; }
+  .ct-trust-item svg { width: 30px; height: 30px; color: var(--gold); stroke-width: 1.4; flex-shrink: 0; }
+  .ct-trust-item span { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 20px); color: var(--ink); }
 
   @media (max-width: 960px) {
     .ct-hero-grid { grid-template-columns: 1fr; }
-    .ct-direct .wrap { grid-template-columns: 1fr; gap: 26px; }
-    .ct-person + .ct-person { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 24px; }
-    .ct-notes .wrap { grid-template-columns: 1fr; }
-    .ct-note + .ct-note { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 26px; }
+    .ct-hero-text { padding: clamp(28px, 7vw, 44px) var(--gutter) clamp(24px, 5vw, 32px); }
+    .ct-hero-art { min-height: 0; border-bottom: none; }
+    .ct-hero-art img { height: auto; }
+    .ct-band .wrap { grid-template-columns: 1fr; gap: 20px; }
+    .ct-band-item { padding-left: 0; border-left: none; padding-top: 20px; border-top: 1px solid oklch(1 0 0 / 0.18); }
+    .ct-band-item:first-child { padding-top: 0; border-top: none; }
+    .ct-direct-grid { grid-template-columns: 1fr; gap: 30px; }
+    .ct-person + .ct-person { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
+    .ct-trust { grid-template-columns: 1fr; gap: 18px; }
   }
 </style>
 </head>
@@ -178,17 +206,38 @@
 
 <!-- HERO -->
 <section class="ct-hero">
-    <div class="wrap">
-        <div class="ct-hero-grid">
-            <div class="reveal">
-                <span class="eyebrow">Contact.</span>
-                <h1 class="display ct-hero-title">Bring us the problem you&rsquo;re <em>working through.</em></h1>
-                <p class="ct-hero-lede">Whether it involves UKG, workforce data or reporting, a short email or direct call is enough to begin.</p>
+    <div class="ct-hero-grid">
+        <div class="ct-hero-text reveal">
+            <span class="eyebrow">Contact OT Solutions</span>
+            <h1 class="display ct-hero-title">Let&rsquo;s talk about what your organization needs.</h1>
+            <p class="ct-hero-lede">Whether you are improving UKG, strengthening workforce data or building reporting leaders can trust, a short conversation is enough to begin.</p>
+            <p class="ct-hero-fine">No formal brief required. Start with the challenge you are working through.</p>
+            <div class="ct-hero-actions">
+                <a href="mailto:OTSolutions@shaw.ca" class="btn ct-btn-solid">Email OT Solutions <span class="arrow">→</span></a>
+                <a href="tel:+17809740124" class="ct-hero-call">Call (780) 974&ndash;0124</a>
             </div>
-            <div class="ct-photo reveal">
-                <img src="assets/contact-hero-photo.jpg" alt="Consultant working through UKG workforce system architecture and data integration flow diagrams" width="707" height="446" />
-                <a class="ct-photo-mail" href="mailto:OTSolutions@shaw.ca" aria-label="Email OT Solutions"></a>
-            </div>
+        </div>
+        <div class="ct-hero-media reveal">
+            <div class="ct-hero-art"><img src="assets/contact-hero.png" alt="An OT Solutions consultant discussing workforce systems with a client across a boardroom table." width="2644" height="1600" /></div>
+            <p class="ct-hero-cap">Direct access to experienced consultants.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT BAND -->
+<section class="ct-band">
+    <div class="wrap reveal">
+        <div class="ct-band-item">
+            <span class="ct-band-k">Email</span>
+            <a class="ct-band-v" href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a>
+        </div>
+        <div class="ct-band-item">
+            <span class="ct-band-k">Phone</span>
+            <a class="ct-band-v" href="tel:+17809740124">+1 (780) 974&ndash;0124</a>
+        </div>
+        <div class="ct-band-item ct-band-note">
+            <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M383 277.8l98.1-53.4-22.6-9.3c-4.2-1.7-6.9-6.4-6.9-11.9v-.1c0-2.7 .7-5.4 1.9-7.6l19.4-46.9-45.3 9.6c-5 1.1-9.9-1.6-11.2-6.1l-.1-.3-8.8-30.6-35.7 41.2c-6.5 7.5-18 1.9-17.2-8.4l6.9-88.7-27.6 16.1c-4.6 2.7-10.4 .9-12.9-4l-.1-.2L256 16l-40.3 71.4-.1 .2c-2.5 4.9-8.3 6.7-12.9 4l-27.6-16.1 6.9 88.7c.8 10.3-10.7 15.9-17.2 8.4l-35.7-41.2-8.8 30.6-.1 .3c-1.3 4.5-6.2 7.2-11.2 6.1l-45.3-9.6 19.4 46.9c1.2 2.2 1.9 4.9 1.9 7.6v.1c0 5.5-2.7 10.2-6.9 11.9l-22.6 9.3L129 277.8c6.7 3.6 9.5 12.6 6.3 20.2l-6 14.2 84.2-7.2c6.1-.5 11.3 4.5 11 10.9l-2.6 55.9L256 337l27.9 34.8-2.6-55.9c-.3-6.4 4.9-11.4 11-10.9l84.2 7.2-6-14.2c-3.2-7.6-.4-16.6 6.3-20.2z"/></svg>
+            <p>Canadian-based. Supporting organizations across Canada and internationally.</p>
         </div>
     </div>
 </section>
@@ -196,40 +245,36 @@
 <!-- DIRECT CONTACTS -->
 <section class="ct-direct">
     <div class="wrap">
-        <h2 class="reveal">Direct contacts.</h2>
-        <div class="ct-person reveal">
-            <h3>Tom Olthoff</h3>
-            <span class="ct-role">Director</span>
-            <ul class="ct-lines">
-                <li><a href="tel:+17809740124">(780) 974&ndash;0124</a></li>
-                <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
-            </ul>
-            <a href="mailto:OTSolutions@shaw.ca" class="btn ct-btn">Email Tom</a>
+        <div class="ct-direct-grid">
+            <div class="ct-direct-head reveal">
+                <span class="eyebrow">Direct contacts</span>
+                <h2 class="ct-direct-title">Speak with the right person.</h2>
+            </div>
+            <div class="ct-person reveal">
+                <h3>Tom Olthoff</h3>
+                <span class="ct-role">Director</span>
+                <p class="ct-person-desc">UKG consulting, workforce data and technical delivery.</p>
+                <ul class="ct-lines">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+17809740124">(780) 974&ndash;0124</a></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+                </ul>
+                <a href="mailto:OTSolutions@shaw.ca" class="btn ct-btn">Email Tom <span class="arrow">→</span></a>
+            </div>
+            <div class="ct-person reveal">
+                <h3>Ariel Dinel</h3>
+                <span class="ct-role">Account Executive</span>
+                <p class="ct-person-desc">New engagements, project needs and general inquiries.</p>
+                <ul class="ct-lines">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+17802435796">(780) 243&ndash;5796</a></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><a href="mailto:AO.OTSolutions@shaw.ca">AO.OTSolutions@shaw.ca</a></li>
+                </ul>
+                <a href="mailto:AO.OTSolutions@shaw.ca" class="btn ct-btn">Email Ariel <span class="arrow">→</span></a>
+            </div>
         </div>
-        <div class="ct-person reveal">
-            <h3>Ariel Dinel</h3>
-            <span class="ct-role">Account Executive</span>
-            <ul class="ct-lines">
-                <li><a href="tel:+17802435796">(780) 243&ndash;5796</a></li>
-                <li><a href="mailto:AO.OTSolutions@shaw.ca">AO.OTSolutions@shaw.ca</a></li>
-            </ul>
-            <a href="mailto:AO.OTSolutions@shaw.ca" class="btn ct-btn">Email Ariel</a>
-        </div>
-    </div>
-</section>
-
-<!-- NOTES -->
-<section class="ct-notes">
-    <div class="wrap">
-        <div class="ct-note reveal">
-            <h2>A little context is enough.</h2>
-            <p>Tell us which system is involved, what needs to change and any important timing constraints.</p>
-            <p class="fine">You do not need a formal brief.</p>
-        </div>
-        <div class="ct-note reveal">
-            <h2>Looking for client perspective?</h2>
-            <p>Read what senior leaders have said about working with OT Solutions.</p>
-            <a href="references.html" class="btn ct-btn-ghost">View references <span class="arrow">→</span></a>
+        <div class="ct-trust reveal-stagger">
+            <div class="ct-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Senior-led conversations</span></div>
+            <div class="ct-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Clear next steps</span></div>
+            <div class="ct-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg><span>No unnecessary sales process</span></div>
         </div>
     </div>
 </section>
