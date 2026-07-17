@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Analytics &amp; BI Enablement — OT Solutions</title>
+<meta name="description" content="Governed metrics, semantic models and reporting experiences teams actually use — executive dashboards, self-service BI with guardrails, and reporting strategy from senior consultants. Since 2000." />
+<link rel="canonical" href="https://otsolutions.ca/analytics-bi" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OT Solutions" />
+<meta property="og:url" content="https://otsolutions.ca/analytics-bi" />
+<meta property="og:title" content="Analytics &amp; BI Enablement — OT Solutions" />
+<meta property="og:description" content="Turn trusted data into decisions people can act on — governed metrics, semantic models, and reporting that lasts." />
+<meta property="og:image" content="https://otsolutions.ca/assets/hero.jpg" />
+
+<link rel="icon" type="image/png" href="assets/logo-mark-navy.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=11" />
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Analytics & BI Enablement","provider":{"@type":"ProfessionalService","name":"OT Solutions","@id":"https://otsolutions.ca/#org"},"serviceType":"Executive dashboards, semantic models, governed metrics, and self-service BI enablement","areaServed":["Canada","United States"],"url":"https://otsolutions.ca/analytics-bi"}
+</script>
+
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+<style>
+  /* ───── Analytics & BI (ot mock) ───── */
+  .abX { }
+  /* HERO dark */
+  .ab-hero { color: oklch(0.96 0.008 250); background: oklch(0.15 0.05 258); position: relative; overflow: hidden; }
+  .ab-hero .wrap { padding-top: clamp(44px, 5.5vw, 80px); padding-bottom: clamp(44px, 5.5vw, 80px); }
+  .ab-hero-grid { display: grid; grid-template-columns: 0.78fr 1.22fr; gap: clamp(30px, 4vw, 60px); align-items: center; }
+  .ab-hero .eyebrow { color: var(--gold); }
+  .ab-hero .eyebrow::before { background: var(--gold-rule); }
+  .ab-hero-title { font-size: clamp(32px, 4vw, 54px); margin: 18px 0 20px; color: oklch(0.97 0.008 250); }
+  .ab-hero-lede { font-size: clamp(14.5px, 1.25vw, 17px); line-height: 1.6; color: oklch(0.8 0.02 250); max-width: 42ch; margin: 0 0 26px; }
+  .ab-hero-actions { display: flex; gap: 12px 22px; flex-wrap: wrap; align-items: center; }
+  .btn-blue { background: var(--accent); color: #fff; font-weight: 600; border-radius: 6px; }
+  .btn-blue:hover { background: oklch(0.46 0.16 245); transform: translateY(-1px); }
+  .ab-hero-link { font-size: 13.5px; font-weight: 600; color: oklch(0.85 0.03 250); display: inline-flex; align-items: center; gap: 7px; }
+  .ab-hero-trust { display: flex; gap: 8px 16px; flex-wrap: wrap; margin-top: 28px; padding-top: 18px; border-top: 1px solid oklch(1 0 0 / 0.14); }
+  .ab-hero-trust span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0.03 250); }
+
+  /* decision intelligence dashboard */
+  .ab-di { background: oklch(0.18 0.055 258); border: 1px solid oklch(1 0 0 / 0.14); border-radius: 14px; overflow: hidden;
+    box-shadow: 0 34px 70px -40px oklch(0 0 0 / 0.7); display: grid; grid-template-columns: 1.6fr 0.85fr; }
+  .ab-di-main { padding: clamp(14px, 1.8vw, 22px); border-right: 1px solid oklch(1 0 0 / 0.1); min-width: 0; }
+  .ab-di-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .ab-di-head b { font-size: 13px; font-weight: 600; color: oklch(0.96 0.008 250); }
+  .ab-di-head span { font-family: var(--mono); font-size: 8.5px; color: oklch(0.62 0.03 250); }
+  .ab-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px; }
+  .ab-kpi { background: oklch(0.15 0.05 258); border: 1px solid oklch(1 0 0 / 0.1); border-radius: 8px; padding: 10px 11px; min-width: 0; }
+  .ab-kpi .k { display: block; font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0.03 250); margin-bottom: 5px; white-space: nowrap; }
+  .ab-kpi .v { font-size: 17px; font-weight: 600; color: oklch(0.97 0.008 250); letter-spacing: -0.01em; }
+  .ab-kpi .d { display: block; font-family: var(--mono); font-size: 7.5px; margin-top: 3px; }
+  .ab-good { color: oklch(0.7 0.16 150); } .ab-bad { color: oklch(0.68 0.16 25); }
+  .ab-kpi svg { width: 100%; height: 16px; margin-top: 6px; display: block; }
+  .ab-fore { background: oklch(0.15 0.05 258); border: 1px solid oklch(1 0 0 / 0.1); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+  .ab-fore-h { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .ab-fore-h .k { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0.03 250); }
+  .ab-fore-h .v { font-size: 16px; font-weight: 600; color: oklch(0.97 0.008 250); }
+  .ab-fore-h .d { font-family: var(--mono); font-size: 7.5px; color: oklch(0.7 0.16 150); margin-left: 6px; }
+  .ab-fore svg { width: 100%; height: 74px; display: block; }
+  .ab-chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .ab-chip { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 7.5px; line-height: 1.4;
+    color: oklch(0.72 0.03 250); border: 1px solid oklch(1 0 0 / 0.1); border-radius: 7px; padding: 7px 9px; }
+  .ab-chip svg { width: 12px; height: 12px; color: var(--accent); stroke-width: 1.7; flex-shrink: 0; }
+  .ab-chip b { color: oklch(0.9 0.01 250); display: block; }
+  .ab-di-side { padding: clamp(14px, 1.8vw, 20px); background: oklch(0.16 0.052 258); }
+  .ab-di-side-h { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600;
+    color: oklch(0.95 0.01 250); padding-bottom: 10px; border-bottom: 1px solid oklch(1 0 0 / 0.1); margin-bottom: 10px; }
+  .ab-meta { font-family: var(--mono); font-size: 8px; line-height: 1.5; color: oklch(0.62 0.03 250); margin-bottom: 8px; }
+  .ab-meta b { color: oklch(0.85 0.02 250); display: block; font-weight: 500; }
+  .ab-lin-h { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 12px 0 8px; }
+  .ab-lin { list-style: none; margin: 0; padding: 0 0 0 5px; border-left: 1px dashed oklch(0.52 0.16 245 / 0.5); }
+  .ab-lin li { font-family: var(--mono); font-size: 8px; color: oklch(0.78 0.02 250); padding: 4px 0 4px 12px; position: relative; }
+  .ab-lin li::before { content: ""; position: absolute; left: -3px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+  /* badges */
+  .ab-badges { border-bottom: 1px solid var(--rule); }
+  .ab-badges .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 2.4vw, 38px);
+    padding-top: clamp(24px, 2.8vw, 38px); padding-bottom: clamp(24px, 2.8vw, 38px); }
+  .ab-badge { display: flex; gap: 12px; align-items: flex-start; }
+  .ab-badge svg { width: 26px; height: 26px; color: var(--accent); stroke-width: 1.4; flex-shrink: 0; margin-top: 2px; }
+  .ab-badge b { display: block; font-size: 14px; font-weight: 600; color: var(--ink); }
+  .ab-badge p { font-size: 11.5px; line-height: 1.5; color: var(--ink-3); margin: 3px 0 0; }
+
+  /* layered stack */
+  .ab-stack-grid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(30px, 4vw, 60px); align-items: center; }
+  .ab-stack-title { font-size: clamp(24px, 3vw, 38px); margin: 0 0 14px; }
+  .ab-stack-copy { font-size: 14px; line-height: 1.65; color: var(--ink-2); margin: 0; max-width: 34ch; }
+  .ab-stack { position: relative; }
+  .ab-float { width: 190px; background: var(--bg); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px;
+    box-shadow: 0 18px 40px -26px oklch(0.14 0.05 258 / 0.55); margin: 0 auto 18px; }
+  .ab-float .k { font-family: var(--mono); font-size: 8px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); display: block; margin-bottom: 4px; }
+  .ab-float .v { font-size: 20px; font-weight: 600; color: var(--ink); }
+  .ab-float .d { font-family: var(--mono); font-size: 8px; color: oklch(0.55 0.14 150); display: block; margin-top: 2px; }
+  .ab-layers { display: flex; flex-direction: column; gap: 10px; }
+  .ab-layer { display: grid; grid-template-columns: 1.25fr 1fr; gap: 18px; align-items: center; }
+  .ab-plane { transform: skewX(-10deg); border: 1px solid; border-radius: 8px; padding: 13px 20px; background: var(--bg);
+    display: flex; align-items: center; gap: 14px; }
+  .ab-plane > * { transform: skewX(10deg); }
+  .ab-plane svg { width: 22px; height: 22px; stroke-width: 1.5; flex-shrink: 0; }
+  .ab-plane b { display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .ab-plane span { display: block; font-size: 11px; color: var(--ink-2); line-height: 1.45; margin-top: 3px; }
+  .ab-l1 { border-color: oklch(0.52 0.16 245 / 0.55); } .ab-l1 svg, .ab-l1 b { color: var(--accent-ink); }
+  .ab-l2 { border-color: oklch(0.52 0.16 245 / 0.4); } .ab-l2 svg, .ab-l2 b { color: var(--accent-ink); }
+  .ab-l3 { border-color: oklch(0.62 0.17 150 / 0.5); } .ab-l3 svg, .ab-l3 b { color: oklch(0.45 0.13 150); }
+  .ab-l4 { border-color: var(--gold-rule); } .ab-l4 svg, .ab-l4 b { color: var(--gold); }
+  .ab-call { font-size: 12px; line-height: 1.5; color: var(--ink-2); position: relative; padding-left: 20px; }
+  .ab-call::before { content: "—"; position: absolute; left: 0; color: var(--ink-4); }
+
+  /* what we enable — 2x2 */
+  .ab-en-title { font-size: clamp(26px, 3.2vw, 42px); margin: 0 0 clamp(32px, 4vw, 48px); }
+  .ab-en-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 2.6vw, 36px); }
+  .ab-en { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 18px; background: var(--bg); border: 1px solid var(--rule);
+    border-radius: 14px; padding: clamp(18px, 2.2vw, 28px); }
+  .ab-en-vis { background: var(--navy-3); border-radius: 10px; padding: 14px; color: oklch(0.9 0.01 250); min-width: 0; align-self: start; }
+  .ab-en-vis .vh { font-family: var(--mono); font-size: 8px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0.03 250); display: block; margin-bottom: 8px; }
+  .ab-en-n { font-family: var(--mono); font-size: 11px; color: var(--gold); display: block; margin-bottom: 8px; }
+  .ab-en h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); color: var(--ink); margin: 0 0 8px; line-height: 1.15; }
+  .ab-en > div > p { font-size: 12.5px; line-height: 1.55; color: var(--ink-2); margin: 0 0 12px; }
+  .ab-en ul { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .ab-en li { font-family: var(--mono); font-size: 10px; color: var(--ink-2); padding-left: 14px; position: relative; }
+  .ab-en li::before { content: ""; position: absolute; left: 0; top: 6px; width: 6px; height: 1px; background: var(--accent); }
+  .ab-en .out { font-size: 11.5px; line-height: 1.5; color: var(--ink-2); border-top: 1px solid var(--rule-soft); padding-top: 10px; }
+  .ab-en .out b { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 3px; }
+  .ab-mini-num { font-size: 15px; font-weight: 600; color: #fff; }
+  .ab-mini-line { width: 100%; height: 30px; display: block; }
+  .ab-donut { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+  .ab-donut svg { width: 44px; height: 44px; flex-shrink: 0; }
+  .ab-donut ul { list-style: none; margin: 0; padding: 0; font-family: var(--mono); font-size: 7.5px; color: oklch(0.75 0.02 250); }
+  .ab-donut li { padding: 1.5px 0; }
+  .ab-donut i { display: inline-block; width: 6px; height: 6px; border-radius: 2px; margin-right: 5px; }
+  .ab-model { font-family: var(--mono); font-size: 7.5px; }
+  .ab-model-row { display: flex; align-items: center; gap: 5px; margin: 5px 0; }
+  .ab-node { border: 1px solid oklch(1 0 0 / 0.25); border-radius: 5px; padding: 4px 7px; color: oklch(0.85 0.02 250); white-space: nowrap; }
+  .ab-node-hub { border-color: var(--accent); background: oklch(0.52 0.16 245 / 0.2); color: #fff; }
+  .ab-marr { color: oklch(0.55 0.05 250); }
+  .ab-list-mock { font-family: var(--mono); font-size: 8px; }
+  .ab-lrow { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid oklch(1 0 0 / 0.08); color: oklch(0.85 0.02 250); }
+  .ab-cert { color: oklch(0.7 0.16 150); font-size: 7px; }
+  .ab-btn-mock { margin-top: 8px; background: var(--accent); color: #fff; text-align: center; border-radius: 5px; padding: 6px; font-size: 8px; }
+  .ab-land { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; font-family: var(--mono); font-size: 7.5px; text-align: center; }
+  .ab-land b { display: block; color: oklch(0.85 0.02 250); margin-bottom: 6px; font-size: 8px; }
+  .ab-land i { display: block; width: 6px; height: 6px; border-radius: 50%; margin: 4px auto; }
+
+  /* governed layer dark */
+  .ab-gov { color: oklch(0.95 0.01 250); }
+  .ab-gov-title { font-size: clamp(24px, 3vw, 40px); color: oklch(0.97 0.008 250); margin: 0 0 clamp(30px, 3.6vw, 46px); }
+  .ab-gov-grid { display: grid; grid-template-columns: 0.85fr 1.5fr 0.85fr; gap: clamp(16px, 2vw, 30px); align-items: center; }
+  .ab-gov-k { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; text-align: center; }
+  .ab-frag-k { color: oklch(0.68 0.16 25); } .ab-out-k { color: oklch(0.7 0.16 150); } .ab-layer-k { color: var(--accent); }
+  .ab-warnlist, .ab-oklist { display: flex; flex-direction: column; gap: 7px; }
+  .ab-wchip { display: flex; align-items: center; gap: 8px; border: 1px solid oklch(0.68 0.16 25 / 0.35); background: oklch(0.68 0.16 25 / 0.07);
+    border-radius: 7px; padding: 8px 10px; font-size: 10.5px; line-height: 1.4; color: oklch(0.85 0.02 250); }
+  .ab-wchip svg { width: 13px; height: 13px; color: oklch(0.68 0.16 25); stroke-width: 1.7; flex-shrink: 0; }
+  .ab-okchip { display: flex; align-items: center; gap: 8px; border: 1px solid oklch(0.7 0.16 150 / 0.35); background: oklch(0.7 0.16 150 / 0.07);
+    border-radius: 7px; padding: 8px 10px; font-size: 10.5px; line-height: 1.4; color: oklch(0.88 0.02 250); }
+  .ab-okchip svg { width: 13px; height: 13px; color: oklch(0.7 0.16 150); stroke-width: 1.7; flex-shrink: 0; }
+  .ab-glayer { border: 1px solid oklch(0.52 0.16 245 / 0.5); border-radius: 12px; padding: clamp(16px, 2vw, 26px); background: oklch(0.17 0.053 258); }
+  .ab-glayer-row { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: start; gap: 4px; }
+  .ab-gstep { text-align: center; }
+  .ab-gstep .circ { width: 46px; height: 46px; border-radius: 50%; border: 1px solid oklch(1 0 0 / 0.3); background: oklch(1 0 0 / 0.05);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; }
+  .ab-gstep svg { width: 20px; height: 20px; color: var(--accent); stroke-width: 1.5; }
+  .ab-gstep b { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.95 0.01 250); margin-bottom: 4px; }
+  .ab-gstep span { font-size: 9px; line-height: 1.4; color: oklch(0.68 0.03 250); display: block; }
+  .ab-garr { color: oklch(0.55 0.05 250); font-size: 12px; padding-top: 16px; }
+  .ab-gfoot { border-top: 1px solid oklch(1 0 0 / 0.12); margin-top: 14px; padding-top: 10px; text-align: center;
+    font-family: var(--mono); font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.7 0.03 250); }
+  .ab-gfoot b { color: var(--gold); }
+
+  /* adoption steps */
+  .ab-adopt-title { font-size: clamp(26px, 3.2vw, 42px); margin: 0 0 clamp(36px, 4.4vw, 54px); }
+  .ab-adopt { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; position: relative; }
+  .ab-adopt::before { content: ""; position: absolute; top: 13px; left: 10%; right: 10%; border-top: 1px dashed var(--gold-rule); }
+  .ab-astep { padding: 0 6px; position: relative; }
+  .ab-astep .num { width: 26px; height: 26px; border-radius: 50%; background: var(--gold); color: oklch(0.2 0.06 255); font-family: var(--mono);
+    font-size: 11px; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 1; margin-bottom: 12px; }
+  .ab-astep b.t { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; }
+  .ab-astep > p { font-size: 12px; line-height: 1.5; color: var(--ink-2); margin: 0 0 10px; }
+  .ab-astep .dk { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 6px; }
+  .ab-astep ul { list-style: none; margin: 0; padding: 0; }
+  .ab-astep li { font-size: 11.5px; color: var(--ink-2); padding: 2.5px 0 2.5px 14px; position: relative; }
+  .ab-astep li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--ink-4); }
+
+  /* same truth */
+  .ab-truth-grid { display: grid; grid-template-columns: 0.8fr 1.4fr; gap: clamp(28px, 3.6vw, 56px); align-items: center; }
+  .ab-truth-title { font-size: clamp(24px, 3vw, 38px); margin: 0 0 14px; }
+  .ab-truth-copy { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 22px; max-width: 32ch; }
+  .ab-cert-card { background: var(--bg); border: 1.5px solid var(--gold-rule); border-radius: 12px; padding: 16px 18px; max-width: 230px;
+    box-shadow: 0 20px 44px -30px oklch(0.72 0.13 75 / 0.5); }
+  .ab-cert-card .ck { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+    border: 1px solid var(--gold-rule); border-radius: 999px; padding: 3px 8px; display: inline-block; margin-bottom: 10px; }
+  .ab-cert-card .m { font-family: var(--mono); font-size: 9px; color: var(--ink-3); display: block; }
+  .ab-cert-card .v { font-size: 26px; font-weight: 600; color: var(--ink); }
+  .ab-cert-card .d { font-family: var(--mono); font-size: 8.5px; color: oklch(0.55 0.14 150); display: block; margin: 3px 0 8px; }
+  .ab-cert-card .own { font-family: var(--mono); font-size: 8px; color: var(--ink-3); border-top: 1px solid var(--rule-soft); padding-top: 8px; display: block; }
+  .ab-views { display: flex; flex-direction: column; gap: 12px; }
+  .ab-view { display: grid; grid-template-columns: 44px 1fr 1fr; gap: 14px; align-items: center; background: var(--bg);
+    border: 1px solid var(--rule); border-radius: 12px; padding: 14px 18px; }
+  .ab-view-ic { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rule); background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center; }
+  .ab-view-ic svg { width: 18px; height: 18px; color: var(--accent); stroke-width: 1.5; }
+  .ab-view b { display: block; font-size: 13px; font-weight: 600; color: var(--accent-ink); }
+  .ab-view .sub { display: block; font-size: 10.5px; color: var(--ink-3); margin-top: 2px; }
+  .ab-view svg.viz { width: 100%; height: 40px; display: block; }
+
+  /* case */
+  .ab-case { color: oklch(0.95 0.01 250); }
+  .ab-case-grid { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: clamp(28px, 3.6vw, 56px); align-items: center; }
+  .ab-case .eyebrow { color: var(--gold); }
+  .ab-case .eyebrow::before { background: var(--gold-rule); }
+  .ab-case-title { font-size: clamp(24px, 3vw, 40px); color: oklch(0.97 0.008 250); margin: 14px 0 24px; }
+  .ab-ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; }
+  .ab-ba-col .bk { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+  .ab-ba-col .bs { font-size: 10px; color: oklch(0.68 0.03 250); display: block; margin-bottom: 10px; }
+  .ab-reps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; }
+  .ab-rep { border: 1px solid oklch(1 0 0 / 0.18); border-radius: 7px; padding: 8px; text-align: center; font-family: var(--mono); }
+  .ab-rep .rk { font-size: 6.5px; color: oklch(0.62 0.03 250); display: block; margin-bottom: 3px; }
+  .ab-rep .rv { font-size: 13px; font-weight: 600; color: oklch(0.95 0.01 250); }
+  .ab-manual { display: flex; align-items: center; gap: 8px; border: 1px solid oklch(1 0 0 / 0.15); border-radius: 7px; padding: 8px 10px;
+    font-family: var(--mono); font-size: 8px; line-height: 1.4; color: oklch(0.75 0.02 250); }
+  .ab-manual svg { width: 14px; height: 14px; color: oklch(0.68 0.16 25); stroke-width: 1.6; flex-shrink: 0; }
+  .ab-ba-arr { color: oklch(0.6 0.05 250); font-size: 16px; }
+  .ab-model-card { border: 1px solid var(--accent); background: oklch(0.52 0.16 245 / 0.12); border-radius: 9px; padding: 10px 12px;
+    font-family: var(--mono); font-size: 9px; color: #fff; margin-bottom: 8px; text-align: center; }
+  .ab-model-card span { display: block; font-size: 7.5px; color: oklch(0.75 0.03 250); margin-top: 2px; }
+  .ab-outs2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .ab-out2 { border: 1px solid oklch(1 0 0 / 0.18); border-radius: 7px; padding: 8px; text-align: center;
+    font-family: var(--mono); font-size: 7.5px; color: oklch(0.85 0.02 250); }
+  .ab-bens { display: flex; flex-direction: column; gap: 12px; }
+  .ab-ben { display: flex; gap: 12px; align-items: flex-start; }
+  .ab-ben svg { width: 22px; height: 22px; color: var(--accent); stroke-width: 1.5; flex-shrink: 0; margin-top: 1px; }
+  .ab-ben b { display: block; font-size: 13.5px; font-weight: 600; color: oklch(0.96 0.008 250); }
+  .ab-ben p { font-size: 11.5px; line-height: 1.5; color: oklch(0.72 0.03 250); margin: 2px 0 0; }
+  .ab-bens .btn { margin-top: 8px; align-self: flex-start; }
+
+  /* quote strip */
+  .ab-q-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
+  .ab-q { font-family: var(--serif); font-size: clamp(21px, 2.3vw, 30px); line-height: 1.25; color: var(--ink); margin: 0 0 12px; }
+  .ab-q-sub { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 44ch; }
+  .ab-q-stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .ab-q-stat { text-align: center; padding: 6px clamp(8px, 1.2vw, 18px); border-left: 1px solid var(--rule); }
+  .ab-q-stat:first-child { border-left: none; }
+  .ab-q-stat svg { width: 24px; height: 24px; color: var(--accent); stroke-width: 1.4; margin: 0 auto 8px; display: block; }
+  .ab-q-stat b { display: block; font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+  .ab-q-stat p { font-size: 10.5px; line-height: 1.5; color: var(--ink-3); margin: 0; }
+
+  /* CTA */
+  .ab-cta { padding: 0; background: var(--navy-3) url('assets/final-cta-bg.jpg') right center / cover no-repeat; position: relative; overflow: hidden; }
+  .ab-cta::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, oklch(0.14 0.05 258 / 0.88), oklch(0.14 0.05 258 / 0.45) 60%, transparent); pointer-events: none; }
+  .ab-cta .wrap { position: relative; z-index: 1; }
+  .ab-cta-band { padding: clamp(48px, 6vw, 84px) 0; display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 3vw, 48px); align-items: center; }
+  .ab-cta h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 46px); color: oklch(0.97 0.008 250); margin: 0 0 10px; line-height: 1.12; }
+  .ab-cta p { font-size: 14.5px; color: oklch(0.8 0.02 250); margin: 0; }
+
+  @media (max-width: 1080px) {
+    .ab-di { grid-template-columns: 1fr; }
+    .ab-di-side { border-top: 1px solid oklch(1 0 0 / 0.1); }
+  }
+  @media (max-width: 960px) {
+    .ab-hero-grid, .ab-stack-grid, .ab-truth-grid, .ab-case-grid, .ab-q-grid { grid-template-columns: 1fr; }
+    .ab-en-grid { grid-template-columns: 1fr; }
+    .ab-gov-grid { grid-template-columns: 1fr; }
+    .ab-adopt { grid-template-columns: 1fr 1fr; gap: 26px 14px; }
+    .ab-adopt::before { display: none; }
+    .ab-badges .wrap { grid-template-columns: 1fr 1fr; }
+    .ab-q-stats { grid-template-columns: 1fr 1fr; gap: 18px 0; }
+    .ab-q-stat:nth-child(3) { border-left: none; }
+    .ab-cta-band { grid-template-columns: 1fr; }
+    .ab-view { grid-template-columns: 44px 1fr; }
+    .ab-view svg.viz { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) {
+    .ab-kpis { grid-template-columns: 1fr 1fr; }
+    .ab-chips { grid-template-columns: 1fr 1fr; }
+    .ab-layer { grid-template-columns: 1fr; gap: 8px; }
+    .ab-en { grid-template-columns: 1fr; }
+    .ab-adopt { grid-template-columns: 1fr; }
+    .ab-badges .wrap { grid-template-columns: 1fr; }
+    .ab-ba { grid-template-columns: 1fr; }
+    .ab-ba-arr { transform: rotate(90deg); text-align: center; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="OT Solutions home">
+            <span class="nav-mark" aria-hidden="true">
+                <img src="assets/logo-mark-navy.png" alt="" />
+            </span>
+            <span class="nav-words">
+                <span class="nav-name">OT Solutions</span>
+                <span class="nav-tag">Putting Data In Your Hands</span>
+            </span>
+        </a>
+        <nav class="nav-links hide-sm" aria-label="Primary">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <div class="nav-dd">
+            <a href="services.html">Services <span class="dd-caret" aria-hidden="true"></span></a>
+            <div class="nav-dd-panel">
+                <div class="wrap dd-grid">
+                    <a class="dd-feature" href="kronos-expertise.html">
+                        <span class="dd-k">01 &middot; Primary practice</span>
+                        <span class="dd-feature-t">UKG / Workforce Central Consulting</span>
+                        <span class="dd-feature-d">Implementation resources, data hub &amp; analytics, and healthcare configuration.</span>
+                        <span class="dd-feature-s">25+ years on the platform &middot; since 2000</span>
+                        <span class="dd-feature-go">Explore UKG consulting <span class="arrow">→</span></span>
+                    </a>
+                    <div class="dd-left">
+                        <div class="dd-lhead">
+                            <span class="dd-k">Our services</span>
+                            <a class="dd-all" href="services.html">View all services <span class="arrow">→</span></a>
+                        </div>
+                        <div class="dd-list">
+                            <a href="data-platforms.html"><span class="dd-n">02</span><span><b>Data Platforms &amp; Integration</b><span class="d">Systems connected into one foundation.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                            <a href="analytics-bi.html"><span class="dd-n">03</span><span><b>Analytics &amp; BI Enablement</b><span class="d">Reporting people actually use and trust.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                            <a href="data-governance.html"><span class="dd-n">04</span><span><b>Data Governance &amp; Quality</b><span class="d">Reliable data without slowing delivery.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">
+            Connect <span class="arrow">→</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" hidden>
+        <nav class="nav-mobile-links" aria-label="Mobile navigation">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a class="nav-mobile-sub" href="kronos-expertise.html">UKG / Workforce Central</a>
+            <a class="nav-mobile-sub" href="data-platforms.html">Data Platforms &amp; Integration</a>
+            <a class="nav-mobile-sub" href="analytics-bi.html">Analytics &amp; BI</a>
+            <a class="nav-mobile-sub" href="data-governance.html">Governance &amp; Quality</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-mobile-cta">Connect <span class="arrow">&rarr;</span></a>
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="ab-hero">
+    <div class="wrap">
+        <div class="ab-hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">Analytics &amp; BI Enablement</span>
+                <h1 class="display ab-hero-title">Turn trusted data into decisions people can <em>act on.</em></h1>
+                <p class="ab-hero-lede">OT Solutions builds governed metrics, semantic models and reporting experiences that teams actually use &mdash; so every decision is backed by the same trusted numbers.</p>
+                <div class="ab-hero-actions">
+                    <a href="contact.html" class="btn btn-blue">Talk to an analytics consultant <span class="arrow">→</span></a>
+                    <a href="#enable" class="ab-hero-link">Explore our approach <span class="arrow">→</span></a>
+                </div>
+                <div class="ab-hero-trust">
+                    <span>Since 2000</span><span>&middot;</span><span>Canadian consulting</span><span>&middot;</span><span>Senior-led delivery</span>
+                </div>
+            </div>
+            <div class="ab-di reveal" aria-hidden="true">
+                <div class="ab-di-main">
+                    <div class="ab-di-head"><b>Decision Intelligence</b><span>Date range: May 1 &ndash; May 31</span></div>
+                    <div class="ab-kpis">
+                        <div class="ab-kpi"><span class="k">Revenue vs plan</span><span class="v">$42.8M</span><span class="d ab-good">&#8593; 6.8% vs plan</span><svg viewBox="0 0 80 16" preserveAspectRatio="none" fill="none"><polyline points="2,12 16,9 30,11 44,6 58,8 78,3" stroke="oklch(0.52 0.16 245)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="ab-kpi"><span class="k">Labour cost %</span><span class="v">28.6%</span><span class="d ab-good">&#8595; 1.3 pp vs plan</span><svg viewBox="0 0 80 16" preserveAspectRatio="none" fill="none"><polyline points="2,12 16,9 30,11 44,6 58,8 78,3" stroke="oklch(0.52 0.16 245)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="ab-kpi"><span class="k">Workforce capacity</span><span class="v">92.4%</span><span class="d ab-good">&#8593; 2.1 pp vs plan</span><svg viewBox="0 0 80 16" preserveAspectRatio="none" fill="none"><polyline points="2,12 16,9 30,11 44,6 58,8 78,3" stroke="oklch(0.52 0.16 245)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="ab-kpi"><span class="k">Exceptions</span><span class="v">12</span><span class="d ab-good">&#8595; 7 vs prior period</span><svg viewBox="0 0 80 16" preserveAspectRatio="none" fill="none"><polyline points="2,12 16,9 30,11 44,6 58,8 78,3" stroke="oklch(0.52 0.16 245)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    </div>
+                    <div class="ab-fore">
+                        <div class="ab-fore-h"><span class="k">Forecast (month end)</span><span><span class="v">$44.7M</span><span class="d">&#8593; 4.5% vs plan</span></span></div>
+                        <svg viewBox="0 0 400 74" preserveAspectRatio="none" fill="none">
+                            <path d="M4 62 C 60 58, 100 52, 150 46 S 260 34, 320 24 S 380 14, 396 10" stroke="oklch(0.52 0.16 245)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 62 C 60 58, 100 52, 150 46 S 260 34, 320 24 S 380 14, 396 10 V 74 H 4 Z" fill="oklch(0.52 0.16 245 / 0.12)"/>
+                            <path d="M4 64 C 70 62, 130 58, 200 52 S 330 40, 396 32" stroke="oklch(0.7 0.03 250)" stroke-width="1.2" stroke-dasharray="4 3"/>
+                        </svg>
+                    </div>
+                    <div class="ab-chips">
+                        <div class="ab-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg><div>Shared definition<b>Revenue</b></div></div>
+                        <div class="ab-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-2.5L17 22l-1.5-7.5"/></svg><div>Certified model<b>Finance v3.2</b></div></div>
+                        <div class="ab-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v5h-5"/></svg><div>Data refreshed<b>2 hrs ago</b></div></div>
+                        <div class="ab-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/><path d="M12 12v4"/></svg><div>Owner assigned<b>Finance Lead</b></div></div>
+                    </div>
+                </div>
+                <div class="ab-di-side">
+                    <div class="ab-di-side-h">Labour Cost %</div>
+                    <div class="ab-meta"><b>Definition</b>Total labour cost as a percentage of total revenue.</div>
+                    <div class="ab-meta"><b>Owner</b>Finance Operations</div>
+                    <div class="ab-meta"><b>Source</b>ERP &middot; Payroll &middot; Time</div>
+                    <div class="ab-meta"><b>Refresh cadence</b>Every 2 hours</div>
+                    <div class="ab-lin-h">Lineage</div>
+                    <ul class="ab-lin">
+                        <li>Payroll transactions</li>
+                        <li>Time &amp; attendance</li>
+                        <li>Labour cost</li>
+                        <li>Total revenue</li>
+                        <li>Labour cost %</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BADGES -->
+<section class="ab-badges">
+    <div class="wrap reveal-stagger">
+        <div class="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><div><b>25+ years</b><p>delivering data solutions that last</p></div></div>
+        <div class="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><div><b>Senior-led delivery</b><p>experienced consultants, practical outcomes</p></div></div>
+        <div class="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg><div><b>Power BI &amp; enterprise BI</b><p>platform-agnostic, outcome-focused</p></div></div>
+        <div class="ab-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M17 11l2 2 4-4.5"/></svg><div><b>From assessment to adoption</b><p>end-to-end enablement that sticks</p></div></div>
+    </div>
+</section>
+
+<!-- LAYERED STACK -->
+<section class="section ab-stack-sec tinted-section">
+    <div class="wrap">
+        <div class="ab-stack-grid">
+            <div class="reveal">
+                <h2 class="display h2 ab-stack-title">A trusted report has more underneath <em>than a chart.</em></h2>
+                <p class="ab-stack-copy">We build the four foundations that turn numbers into decisions.</p>
+            </div>
+            <div class="ab-stack reveal" aria-hidden="true">
+                <div class="ab-float"><span class="k">Labour cost %</span><span class="v">28.6%</span><span class="d">&#8595; 1.3 pp vs plan (29.9%)</span></div>
+                <div class="ab-layers">
+                    <div class="ab-layer">
+                        <div class="ab-plane ab-l1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><b>Business definition</b><span>One agreed meaning and owner</span></div></div>
+                        <div class="ab-call">Aligned language across the organization.</div>
+                    </div>
+                    <div class="ab-layer">
+                        <div class="ab-plane ab-l2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg><div><b>Semantic model</b><span>Reusable measures and agreed logic</span></div></div>
+                        <div class="ab-call">Consistent calculations at scale.</div>
+                    </div>
+                    <div class="ab-layer">
+                        <div class="ab-plane ab-l3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div><b>Reporting experience</b><span>Role-based views built around decisions</span></div></div>
+                        <div class="ab-call">Relevant insights that drive action.</div>
+                    </div>
+                    <div class="ab-layer">
+                        <div class="ab-plane ab-l4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg><div><b>Operating model</b><span>Refresh, support, adoption and continuous improvement</span></div></div>
+                        <div class="ab-call">Trusted reports, continuously improved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE ENABLE -->
+<section id="enable" class="section ab-en-sec">
+    <div class="wrap">
+        <h2 class="display h2 ab-en-title reveal">What we <em>enable.</em></h2>
+        <div class="ab-en-grid reveal-stagger">
+            <article class="ab-en">
+                <div class="ab-en-vis" aria-hidden="true">
+                    <span class="vh">Revenue vs plan</span>
+                    <span class="ab-mini-num">$42.8M</span>
+                    <svg class="ab-mini-line" viewBox="0 0 160 30" preserveAspectRatio="none" fill="none"><polyline points="2,24 30,20 60,22 90,14 120,16 158,6" stroke="oklch(0.52 0.16 245)" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    <div class="ab-donut">
+                        <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="13" fill="none" stroke="oklch(1 0 0 / 0.12)" stroke-width="6"/><circle cx="18" cy="18" r="13" fill="none" stroke="oklch(0.52 0.16 245)" stroke-width="6" stroke-dasharray="50 82" transform="rotate(-90 18 18)"/><circle cx="18" cy="18" r="13" fill="none" stroke="oklch(0.7 0.12 245)" stroke-width="6" stroke-dasharray="23 82" stroke-dashoffset="-50" transform="rotate(-90 18 18)"/><circle cx="18" cy="18" r="13" fill="none" stroke="oklch(0.72 0.13 75)" stroke-width="6" stroke-dasharray="8 82" stroke-dashoffset="-73" transform="rotate(-90 18 18)"/></svg>
+                        <ul><li><i style="background:oklch(0.52 0.16 245)"></i>Products &middot; 62%</li><li><i style="background:oklch(0.7 0.12 245)"></i>Services &middot; 28%</li><li><i style="background:oklch(0.72 0.13 75)"></i>Other &middot; 10%</li></ul>
+                    </div>
+                </div>
+                <div>
+                    <span class="ab-en-n">01</span>
+                    <h3>Executive Dashboards &amp; KPIs</h3>
+                    <p>Clear, decision-ready views that focus on what matters most.</p>
+                    <ul><li>KPI design</li><li>Executive scorecards</li><li>Variance &amp; trend analysis</li></ul>
+                    <div class="out"><b>Outcome</b>Confident decisions backed by trusted performance.</div>
+                </div>
+            </article>
+            <article class="ab-en">
+                <div class="ab-en-vis" aria-hidden="true">
+                    <span class="vh">Certified semantic model &middot; Finance v3.2</span>
+                    <div class="ab-model">
+                        <div class="ab-model-row"><span class="ab-node">Orders</span><span class="ab-marr">→</span><span class="ab-node ab-node-hub">Revenue</span><span class="ab-marr">→</span><span class="ab-node">Gross revenue</span></div>
+                        <div class="ab-model-row"><span class="ab-node">Returns</span><span class="ab-marr">→</span><span class="ab-marr" style="visibility:hidden">→</span><span class="ab-marr" style="visibility:hidden">→</span><span class="ab-marr">→</span><span class="ab-node">Net revenue</span></div>
+                        <div class="ab-model-row"><span class="ab-node">Adjustments</span><span class="ab-marr">→</span><span class="ab-marr" style="visibility:hidden">→</span><span class="ab-marr" style="visibility:hidden">→</span><span class="ab-marr">→</span><span class="ab-node">Revenue %</span></div>
+                    </div>
+                </div>
+                <div>
+                    <span class="ab-en-n">02</span>
+                    <h3>Semantic Models &amp; Shared Metrics</h3>
+                    <p>One governed model. Many reports. No conflicting numbers.</p>
+                    <ul><li>Metric definition</li><li>Semantic modeling</li><li>Calculation governance</li></ul>
+                    <div class="out"><b>Outcome</b>One version of the truth across every report.</div>
+                </div>
+            </article>
+            <article class="ab-en">
+                <div class="ab-en-vis" aria-hidden="true">
+                    <span class="vh">Explore metrics</span>
+                    <div class="ab-list-mock">
+                        <div class="ab-lrow"><span>Revenue</span><span class="ab-cert">CERTIFIED</span></div>
+                        <div class="ab-lrow"><span>Labour cost %</span><span class="ab-cert">CERTIFIED</span></div>
+                        <div class="ab-lrow"><span>Headcount</span><span class="ab-cert">CERTIFIED</span></div>
+                        <div class="ab-lrow"><span>Overtime hours</span><span class="ab-cert">CERTIFIED</span></div>
+                        <div class="ab-btn-mock">Create report</div>
+                    </div>
+                </div>
+                <div>
+                    <span class="ab-en-n">03</span>
+                    <h3>Self-Service BI with Guardrails</h3>
+                    <p>Empower teams to explore confidently within governed boundaries.</p>
+                    <ul><li>Certified datasets</li><li>Row-level security</li><li>Approval workflows</li></ul>
+                    <div class="out"><b>Outcome</b>Faster answers without compromising trust.</div>
+                </div>
+            </article>
+            <article class="ab-en">
+                <div class="ab-en-vis" aria-hidden="true">
+                    <span class="vh">Report landscape</span>
+                    <div class="ab-land">
+                        <div><b>Keep</b><i style="background:oklch(0.7 0.16 150)"></i><i style="background:oklch(0.7 0.16 150)"></i><i style="background:oklch(0.7 0.16 150)"></i><i style="background:oklch(0.7 0.16 150)"></i></div>
+                        <div><b>Consolidate</b><i style="background:oklch(0.72 0.13 75)"></i><i style="background:oklch(0.72 0.13 75)"></i><i style="background:oklch(0.72 0.13 75)"></i></div>
+                        <div><b>Retire</b><i style="background:oklch(0.6 0.19 25)"></i><i style="background:oklch(0.6 0.19 25)"></i><i style="background:oklch(0.6 0.19 25)"></i></div>
+                    </div>
+                </div>
+                <div>
+                    <span class="ab-en-n">04</span>
+                    <h3>Reporting Strategy &amp; Rationalization</h3>
+                    <p>Right reports, right audience, right cost.</p>
+                    <ul><li>Inventory &amp; assessment</li><li>Report rationalization</li><li>Roadmap &amp; governance</li></ul>
+                    <div class="out"><b>Outcome</b>Lower cost, higher impact from your reporting.</div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- GOVERNED LAYER -->
+<section class="section ab-gov dark-section">
+    <div class="wrap">
+        <h2 class="display h2 ab-gov-title reveal">When every report tells a <em>different story.</em></h2>
+        <div class="ab-gov-grid reveal">
+            <div>
+                <span class="ab-gov-k ab-frag-k">Fragmented today</span>
+                <div class="ab-warnlist">
+                    <div class="ab-wchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Conflicting KPI values across reports</div>
+                    <div class="ab-wchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Spreadsheets and manual reconciliation</div>
+                    <div class="ab-wchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Stale dashboards and delayed data</div>
+                    <div class="ab-wchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Duplicate reports and wasted effort</div>
+                    <div class="ab-wchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Analyst bottlenecks slow the business</div>
+                </div>
+            </div>
+            <div>
+                <span class="ab-gov-k ab-layer-k">OT Solutions governed analytics layer</span>
+                <div class="ab-glayer">
+                    <div class="ab-glayer-row">
+                        <div class="ab-gstep"><span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><b>Define</b><span>Agree on meaning and ownership.</span></div>
+                        <span class="ab-garr">⇢</span>
+                        <div class="ab-gstep"><span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg></span><b>Model</b><span>Build governed semantic models.</span></div>
+                        <span class="ab-garr">⇢</span>
+                        <div class="ab-gstep"><span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-2.5L17 22l-1.5-7.5"/></svg></span><b>Certify</b><span>Validate, certify and publish.</span></div>
+                        <span class="ab-garr">⇢</span>
+                        <div class="ab-gstep"><span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><b>Enable</b><span>Deliver experiences and empower users.</span></div>
+                    </div>
+                    <div class="ab-gfoot"><b>Governance &amp; quality</b> &nbsp; Standards &middot; Lineage &middot; Access &middot; Monitoring &middot; Ownership</div>
+                </div>
+            </div>
+            <div>
+                <span class="ab-gov-k ab-out-k">Business outcomes</span>
+                <div class="ab-oklist">
+                    <div class="ab-okchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>One version of key metrics</div>
+                    <div class="ab-okchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Faster answers, less manual work</div>
+                    <div class="ab-okchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Trusted, timely refreshes</div>
+                    <div class="ab-okchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Governed self-service at scale</div>
+                    <div class="ab-okchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Clearer insights, better decisions</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ADOPTION -->
+<section class="section ab-adopt-sec">
+    <div class="wrap">
+        <h2 class="display h2 ab-adopt-title reveal">Built for adoption, <em>not just launch.</em></h2>
+        <div class="ab-adopt reveal-stagger">
+            <div class="ab-astep"><span class="num">01</span><b class="t">Align</b><p>Understand decisions, metrics and data.</p><span class="dk">Deliverables</span><ul><li>Metric dictionary</li><li>Decision map</li><li>Data &amp; report inventory</li></ul></div>
+            <div class="ab-astep"><span class="num">02</span><b class="t">Build</b><p>Design and build governed models and reports.</p><span class="dk">Deliverables</span><ul><li>Semantic model</li><li>Priority dashboards</li><li>Security &amp; access model</li></ul></div>
+            <div class="ab-astep"><span class="num">03</span><b class="t">Validate</b><p>Validate results and build confidence.</p><span class="dk">Deliverables</span><ul><li>Business validation</li><li>Reconciliation results</li><li>Certified metrics</li></ul></div>
+            <div class="ab-astep"><span class="num">04</span><b class="t">Embed</b><p>Enable users and sustain value.</p><span class="dk">Deliverables</span><ul><li>Training &amp; enablement</li><li>Ownership model</li><li>Support &amp; monitoring</li></ul></div>
+        </div>
+    </div>
+</section>
+
+<!-- SAME TRUTH -->
+<section class="section ab-truth-sec tinted-section">
+    <div class="wrap">
+        <div class="ab-truth-grid">
+            <div class="reveal">
+                <h2 class="display h2 ab-truth-title">The same truth, shaped for <em>every decision.</em></h2>
+                <p class="ab-truth-copy">One governed metric can power many views &mdash; each tailored to the audience and decision they support.</p>
+                <div class="ab-cert-card" aria-hidden="true">
+                    <span class="ck">Certified metric</span>
+                    <span class="m">Labour Cost %</span>
+                    <span class="v">28.6%</span>
+                    <span class="d">&#8595; 1.3 pp vs plan (29.9%)</span>
+                    <span class="own">Owner: Finance Operations</span>
+                </div>
+            </div>
+            <div class="ab-views reveal-stagger" aria-hidden="true">
+                <div class="ab-view">
+                    <span class="ab-view-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></span>
+                    <div><b>Executive view</b><span class="sub">Strategic oversight and performance &middot; 28.6% vs plan by region</span></div>
+                    <svg class="viz" viewBox="0 0 200 40" preserveAspectRatio="none" fill="none"><polyline points="4,32 40,28 80,30 120,20 160,22 196,12" stroke="oklch(0.52 0.16 245)" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="ab-view">
+                    <span class="ab-view-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg></span>
+                    <div><b>Operations view</b><span class="sub">Manage performance and take action &middot; by department vs plan</span></div>
+                    <svg class="viz" viewBox="0 0 200 40" fill="none"><rect x="8" y="8" width="110" height="6" rx="3" fill="oklch(0.52 0.16 245 / 0.8)"/><rect x="8" y="18" width="88" height="6" rx="3" fill="oklch(0.52 0.16 245 / 0.55)"/><rect x="8" y="28" width="132" height="6" rx="3" fill="oklch(0.72 0.13 75 / 0.8)"/></svg>
+                </div>
+                <div class="ab-view">
+                    <span class="ab-view-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg></span>
+                    <div><b>Analyst view</b><span class="sub">Deep dive and root-cause analysis &middot; drivers of change</span></div>
+                    <svg class="viz" viewBox="0 0 200 40" fill="none"><rect x="10" y="22" width="14" height="14" rx="2" fill="oklch(0.52 0.16 245)"/><rect x="34" y="16" width="14" height="20" rx="2" fill="oklch(0.52 0.16 245 / 0.75)"/><rect x="58" y="26" width="14" height="10" rx="2" fill="oklch(0.52 0.16 245 / 0.55)"/><rect x="82" y="10" width="14" height="26" rx="2" fill="oklch(0.72 0.13 75)"/><circle cx="130" cy="16" r="2.5" fill="oklch(0.52 0.16 245)"/><circle cx="146" cy="24" r="2.5" fill="oklch(0.52 0.16 245 / 0.7)"/><circle cx="160" cy="12" r="2.5" fill="oklch(0.72 0.13 75)"/><circle cx="176" cy="20" r="2.5" fill="oklch(0.52 0.16 245 / 0.5)"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASE -->
+<section class="section ab-case dark-section">
+    <div class="wrap">
+        <div class="ab-case-grid">
+            <div class="reveal">
+                <span class="eyebrow">Analytics in practice</span>
+                <h2 class="display h2 ab-case-title">From conflicting reports to one governed view <em>of performance.</em></h2>
+                <div class="ab-ba" aria-hidden="true">
+                    <div class="ab-ba-col">
+                        <span class="bk" style="color: oklch(0.68 0.16 25);">Before</span>
+                        <span class="bs">Multiple numbers. No confidence.</span>
+                        <div class="ab-reps">
+                            <div class="ab-rep"><span class="rk">Report A &middot; Labour cost %</span><span class="rv">31.2%</span></div>
+                            <div class="ab-rep"><span class="rk">Report B &middot; Labour cost %</span><span class="rv">29.4%</span></div>
+                            <div class="ab-rep"><span class="rk">Report C &middot; Labour cost %</span><span class="rv">28.1%</span></div>
+                        </div>
+                        <div class="ab-manual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Manual reconciliation &mdash; hours spent every week</div>
+                    </div>
+                    <span class="ab-ba-arr">→</span>
+                    <div class="ab-ba-col">
+                        <span class="bk" style="color: var(--gold);">After</span>
+                        <span class="bs">One certified metric. Trusted insight.</span>
+                        <div class="ab-model-card">Certified Semantic Model<span>Finance v3.2</span></div>
+                        <div class="ab-outs2">
+                            <div class="ab-out2">Executive dashboard</div>
+                            <div class="ab-out2">Operations report</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ab-bens reveal-stagger">
+                <div class="ab-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg><div><b>Shared KPI definitions</b><p>Everyone works from the same truth.</p></div></div>
+                <div class="ab-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 12h8M12 8v8"/></svg><div><b>Less manual reconciliation</b><p>Automation replaces spreadsheet fixes.</p></div></div>
+                <div class="ab-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Faster reporting cycles</b><p>From days to hours.</p></div></div>
+                <div class="ab-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/><path d="M12 12v4"/></svg><div><b>Clear ownership</b><p>Accountable metrics, accountable outcomes.</p></div></div>
+                <a href="references.html" class="btn btn-blue">See our references <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE STRIP -->
+<section class="section ab-q-sec">
+    <div class="wrap">
+        <div class="ab-q-grid">
+            <div class="reveal">
+                <p class="ab-q">&ldquo;The best dashboard is the one the business trusts enough to use.&rdquo;</p>
+                <p class="ab-q-sub">We combine strategy, governance and enablement to build reporting that lasts.</p>
+            </div>
+            <div class="ab-q-stats reveal-stagger">
+                <div class="ab-q-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><b>Senior consultants</b><p>Deep experience in analytics, BI and data governance.</p></div>
+                <div class="ab-q-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 0 1 4 9 13.5 13.5 0 0 1-4 9 13.5 13.5 0 0 1-4-9 13.5 13.5 0 0 1 4-9z"/></svg><b>Multi-region delivery</b><p>Serving Canadian, U.S. and international organizations.</p></div>
+                <div class="ab-q-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3 7-9V6l-7-3-7 3v7c0 6 7 9 7 9z"/><path d="M9 11.5l2 2 4-4.5"/></svg><b>Enterprise reporting</b><p>Designed for scale, security and auditability.</p></div>
+                <div class="ab-q-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M17 11l2 2 4-4.5"/></svg><b>Practical enablement</b><p>We train, transfer and support &mdash; not just deliver.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="ab-cta">
+    <div class="wrap">
+        <div class="ab-cta-band">
+            <div class="reveal">
+                <h2>Ready to make reporting easier <em>to trust?</em></h2>
+                <p>Let&rsquo;s build the foundations for confident, data-driven decisions.</p>
+            </div>
+            <a href="contact.html" class="btn btn-blue">Talk to an analytics consultant <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <div class="footer-mark" aria-hidden="true">
+                        <img src="assets/logo-mark-navy.png" alt="" />
+                    </div>
+                    <div class="footer-name">OT Solutions</div>
+                </div>
+                <p class="footer-blurb">
+                    A data consulting firm helping organizations modernize, analyze, and activate their data to drive business transformation.
+                </p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Services</h4>
+                    <ul>
+                        <li><a href="kronos-expertise.html">UKG Consulting</a></li>
+                        <li><a href="services.html">Platform Modernization</a></li>
+                        <li><a href="services.html">Analytics &amp; BI</a></li>
+                        <li><a href="services.html">Governance &amp; Quality</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Contact</h4>
+                    <ul>
+                        <li><a href="tel:+17802435796">+1 (780) 243&ndash;5796</a></li>
+                        <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+                        <li class="muted">Sherwood Park, AB · Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="mono">© <span id="footer-year">2026</span> OT Solutions Inc. — All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

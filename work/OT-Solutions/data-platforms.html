@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Data Platforms &amp; Integration — OT Solutions</title>
+<meta name="description" content="OT Solutions connects ERP, CRM, workforce and legacy systems into a governed data platform — integration and interfaces, warehouse architecture, and reliable pipelines. Senior consultants since 2000." />
+<link rel="canonical" href="https://otsolutions.ca/data-platforms" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OT Solutions" />
+<meta property="og:url" content="https://otsolutions.ca/data-platforms" />
+<meta property="og:title" content="Data Platforms &amp; Integration — OT Solutions" />
+<meta property="og:description" content="Connect every system. Build one source of truth — integration, architecture, and pipelines from senior consultants." />
+<meta property="og:image" content="https://otsolutions.ca/assets/hero.jpg" />
+
+<link rel="icon" type="image/png" href="assets/logo-mark-navy.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=11" />
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Data Platforms & Integration","provider":{"@type":"ProfessionalService","name":"OT Solutions","@id":"https://otsolutions.ca/#org"},"serviceType":"Systems integration, data platform architecture, and data pipelines","areaServed":["Canada","United States"],"url":"https://otsolutions.ca/data-platforms"}
+</script>
+
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wh3e6pv2u4");
+</script>
+<style>
+  /* ───── Data Platforms & Integration (mock design) ───── */
+  .dpX { --line: oklch(1 0 0 / 0.16); }
+
+  /* HERO */
+  .dp-hero { position: relative; overflow: hidden; color: oklch(0.96 0.008 250);
+    background:
+      linear-gradient(oklch(1 0 0 / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.03) 1px, transparent 1px),
+      oklch(0.15 0.05 258);
+    background-size: 36px 36px, 36px 36px, auto; }
+  .dp-hero .wrap { padding-top: clamp(48px, 6vw, 88px); padding-bottom: clamp(48px, 6vw, 88px); }
+  .dp-hero-grid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(26px, 3.2vw, 52px); align-items: center; }
+  .dp-hero .eyebrow { color: var(--gold); }
+  .dp-hero .eyebrow::before { background: var(--gold-rule); }
+  .dp-hero-title { font-size: clamp(34px, 4.2vw, 58px); margin: 18px 0 22px; color: oklch(0.97 0.008 250); }
+  .dp-hero-title em { color: var(--accent); }
+  .dp-hero-lede { font-size: clamp(15.5px, 1.3vw, 18px); line-height: 1.6; color: oklch(0.8 0.02 250); max-width: 44ch; margin: 0 0 28px; }
+  .dp-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-hero-solid { background: linear-gradient(180deg, #fff, oklch(0.88 0.012 250)); color: oklch(0.18 0.05 258); font-weight: 600;
+    border-radius: 6px; box-shadow: 0 6px 18px -8px oklch(0 0 0 / 0.5), inset 0 1px 0 #fff; }
+  .btn-hero-solid:hover { background: #fff; transform: translateY(-1px); }
+  .btn-hero-ghost { background: oklch(1 0 0 / 0.06); color: oklch(0.95 0.01 250); border: 1px solid oklch(1 0 0 / 0.25); border-radius: 6px; }
+  .btn-hero-ghost:hover { border-color: oklch(1 0 0 / 0.55); }
+  .dp-hero .btn-hero-solid { background: var(--accent); color: #fff;
+    box-shadow: 0 10px 24px -10px oklch(0.52 0.16 245 / 0.6); }
+  .dp-hero .btn-hero-solid:hover { background: oklch(0.46 0.16 245); }
+  .dp-hero-trust { display: flex; align-items: center; gap: 10px 18px; flex-wrap: wrap; margin-top: 30px; padding-top: 20px; border-top: 1px solid oklch(1 0 0 / 0.15); }
+  .dp-hero-trust::before { content: ""; width: 28px; height: 2px; border-radius: 1px; background: var(--gold); flex-shrink: 0; }
+  .dp-hero-trust span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0.03 250); }
+
+  /* hero flow diagram */
+  .dp-hero-art img { width: 100%; height: auto; display: block; border-radius: 14px;
+    border: 1px solid oklch(1 0 0 / 0.14); box-shadow: 0 34px 70px -40px oklch(0 0 0 / 0.7); }
+  .dp-flowmap { position: relative; }
+  .dp-fm-cols { display: grid; grid-template-columns: 1fr 1.15fr 0.9fr 1fr; gap: clamp(10px, 1.4vw, 20px); align-items: center; }
+  .dp-fm-k { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.62 0.03 250);
+    text-align: center; display: block; margin-bottom: 10px; }
+  .dp-chipcol { display: flex; flex-direction: column; gap: 9px; }
+  .dp-chip { display: flex; align-items: center; gap: 8px; border: 1px solid oklch(1 0 0 / 0.22); background: oklch(1 0 0 / 0.05);
+    border-radius: 8px; padding: 9px 11px; font-size: 11.5px; font-weight: 600; color: oklch(0.94 0.01 250); }
+  .dp-chip .lg { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.06em; background: oklch(1 0 0 / 0.12);
+    border-radius: 4px; padding: 3px 6px; color: oklch(0.9 0.01 250); }
+  .dp-valid { border: 1px solid oklch(0.52 0.16 245 / 0.65); background: oklch(0.52 0.16 245 / 0.1); border-radius: 12px;
+    padding: 14px 16px; }
+  .dp-valid-h { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; color: oklch(0.95 0.01 250);
+    padding-bottom: 9px; margin-bottom: 9px; border-bottom: 1px solid oklch(0.52 0.16 245 / 0.35); }
+  .dp-valid-h svg { width: 14px; height: 14px; color: var(--accent); stroke-width: 1.8; }
+  .dp-valid li { list-style: none; font-family: var(--mono); font-size: 10px; color: oklch(0.82 0.02 250); padding: 3.5px 0 3.5px 16px; position: relative; }
+  .dp-valid li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-size: 9px; }
+  .dp-valid ul { margin: 0; padding: 0; }
+  .dp-db { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .dp-db svg { width: 64px; height: 64px; color: var(--accent); stroke-width: 1.2; }
+  .dp-db span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: oklch(0.75 0.03 250); text-align: center; }
+  .dp-status { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: clamp(16px, 2vw, 24px);
+    border: 1px solid oklch(1 0 0 / 0.18); border-radius: 10px; padding: 12px 16px; background: oklch(1 0 0 / 0.04); }
+  .dp-stat { display: flex; align-items: center; gap: 9px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
+    text-transform: uppercase; color: oklch(0.9 0.01 250); }
+  .dp-stat + .dp-stat { border-left: 1px solid oklch(1 0 0 / 0.15); padding-left: 16px; }
+  .dp-stat svg { width: 14px; height: 14px; color: var(--accent); stroke-width: 1.6; flex-shrink: 0; }
+  .dp-stat b { color: oklch(0.62 0.17 150); font-weight: 600; }
+
+  /* TRUST BADGES */
+  .dp-badges { border-bottom: 1px solid var(--rule); }
+  .dp-badges .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 2.5vw, 40px);
+    padding-top: clamp(26px, 3vw, 40px); padding-bottom: clamp(26px, 3vw, 40px); }
+  .dp-badge { display: flex; gap: 13px; align-items: flex-start; }
+  .dp-badge svg { width: 38px; height: 38px; color: var(--accent); stroke-width: 1.4; flex-shrink: 0; margin-top: 2px; }
+  .dp-badge b { display: block; font-size: 14.5px; font-weight: 600; color: var(--ink); }
+  .dp-badge p { font-size: 12px; line-height: 1.5; color: var(--ink-3); margin: 3px 0 0; }
+
+  /* FRAGMENTED -> TRUSTED */
+  .dp-mid-title { text-align: center; font-size: clamp(26px, 3.2vw, 44px); margin: 0 0 clamp(38px, 4.6vw, 56px); }
+  .dp-mid { display: grid; grid-template-columns: minmax(150px, 0.85fr) clamp(30px, 4vw, 60px) 1.9fr clamp(30px, 4vw, 60px) minmax(165px, 0.95fr);
+    gap: 0 4px; align-items: center; }
+  .dp-mid-k { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
+    display: block; margin-bottom: 12px; }
+  .dp-mid-center .dp-mid-k { text-align: center; }
+  .dp-link { width: 100%; height: 190px; display: block; align-self: center; }
+  .dp-link path { fill: none; stroke: oklch(0.72 0.015 250); stroke-width: 1.5; stroke-dasharray: 2 5; stroke-linecap: round; }
+  .dp-link-blue path { stroke: var(--accent); stroke-width: 2; stroke-dasharray: none; }
+  .dp-frag { display: flex; flex-direction: column; gap: 9px; }
+  .dp-frag-chip { display: flex; align-items: center; justify-content: space-between; background: var(--bg); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 11px 14px; font-size: 12.5px; font-weight: 600; color: var(--ink);
+    box-shadow: 0 8px 18px -12px oklch(0.2 0.04 255 / 0.3); }
+  .dp-dots { display: flex; gap: 5px; }
+  .dp-dot { width: 7px; height: 7px; border-radius: 50%; }
+  .dp-layer { background: var(--bg); border: 1px solid var(--rule); border-radius: 16px;
+    padding: clamp(20px, 2.4vw, 30px) clamp(18px, 2.4vw, 32px);
+    box-shadow: 0 24px 54px -36px oklch(0.14 0.05 258 / 0.5); }
+  .dp-layer-row { display: flex; align-items: flex-start; gap: 6px; }
+  .dp-step { text-align: center; flex: 0 0 auto; }
+  .dp-step svg { width: 24px; height: 24px; color: var(--accent); stroke-width: 1.6; margin: 0 auto 8px; display: block; }
+  .dp-step span { font-size: 11.5px; font-weight: 500; color: var(--ink); display: block; }
+  .dp-step-dash { flex: 1 1 auto; border-top: 2px dotted oklch(0.78 0.015 250); margin-top: 12px; min-width: 10px; }
+  .dp-layer-foot { text-align: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-ink); margin-top: 18px; }
+  .dp-layer-foot i { font-style: normal; color: var(--ink-4); padding: 0 8px; }
+  .dp-gov { display: flex; flex-direction: column; gap: 10px; }
+  .dp-gov-chip { display: flex; align-items: center; gap: 10px; background: var(--bg); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 11px 13px; font-size: 12.5px; font-weight: 600; color: var(--ink);
+    box-shadow: 0 8px 18px -12px oklch(0.2 0.04 255 / 0.3); }
+  .dp-gov-chip svg { width: 16px; height: 16px; color: var(--accent); stroke-width: 1.7; flex-shrink: 0; }
+  .dp-gov-chip .dp-dot { margin-left: auto; flex-shrink: 0; }
+  .dp-outs { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); margin-top: clamp(38px, 4.6vw, 56px); }
+  .dp-out { background: var(--bg); border: 1px solid var(--rule); border-radius: 12px; padding: clamp(18px, 2.2vw, 26px);
+    display: grid; grid-template-columns: 56px 1fr; gap: 8px 16px; align-items: center;
+    box-shadow: 0 10px 24px -18px oklch(0.2 0.04 255 / 0.3); }
+  .dp-out-ic { width: 56px; height: 56px; border: 1px solid var(--rule); border-radius: 12px; background: var(--bg);
+    display: flex; align-items: center; justify-content: center; grid-row: 1 / 3; align-self: center; }
+  .dp-out-ic svg { width: 28px; height: 28px; color: var(--accent); stroke-width: 1.5; }
+  .dp-out b { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+  .dp-out p { grid-column: 2; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+
+  /* WHAT WE BUILD — dark alternating rows */
+  .dp-build { position: relative; color: oklch(0.95 0.01 250); background: #01112d; }
+  .dp-build-title { font-size: clamp(28px, 3.4vw, 46px); color: oklch(0.97 0.008 250); margin: 0 0 clamp(30px, 3.6vw, 44px); }
+  .dp-brow { display: grid; gap: clamp(18px, 2.4vw, 40px); align-items: center;
+    border: 1px solid oklch(1 0 0 / 0.18); border-radius: 12px;
+    padding: clamp(18px, 2.2vw, 30px) clamp(18px, 2.4vw, 34px); margin-bottom: 16px; }
+  .dp-brow-a { grid-template-columns: 1.1fr 0.55fr 1.35fr; }
+  .dp-brow-b { grid-template-columns: 1.35fr 1.1fr; }
+  .dp-brow-c { grid-template-columns: 1fr 0.55fr 1.05fr 0.6fr; }
+  .dp-img { width: 100%; height: auto; display: block; }
+  .dp-brow-head { display: flex; gap: 16px; align-items: baseline; margin-bottom: 10px; }
+  .dp-brow-n { font-family: var(--serif); font-size: clamp(30px, 2.8vw, 40px); color: var(--gold); flex-shrink: 0; line-height: 1; }
+  .dp-brow h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.4vw, 33px); color: oklch(0.97 0.008 250); margin: 0; }
+  .dp-brow p { font-size: 15.5px; line-height: 1.65; color: oklch(0.8 0.02 250); margin: 0; max-width: 48ch; }
+  .dp-brow-b .dp-tags, .dp-brow-c .dp-tags { margin-top: 16px; }
+  .dp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dp-tags-v { display: flex; flex-direction: column; gap: 9px; align-items: stretch; }
+  .dp-tags-v .dp-tag { text-align: center; }
+  .dp-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; border: 1px solid oklch(1 0 0 / 0.25);
+    border-radius: 6px; padding: 8px 13px; color: oklch(0.88 0.02 250); }
+  .dp-checks { display: flex; flex-direction: column; gap: 14px; }
+  .dp-check { display: flex; gap: 10px; align-items: center; font-size: 14.5px; font-weight: 500; color: oklch(0.92 0.01 250); }
+  .dp-check svg { width: 20px; height: 20px; color: oklch(0.7 0.16 150); stroke-width: 1.8; flex-shrink: 0; }
+
+  /* PROCESS */
+  .dp-proc-title { text-align: center; font-size: clamp(26px, 3.2vw, 44px); margin: 0 0 clamp(40px, 5vw, 60px); }
+  .dp-proc { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; position: relative; }
+  .dp-proc::before { content: ""; position: absolute; top: 14px; left: 10%; right: 10%; height: 2px; background: var(--accent); }
+  .dp-pstep { text-align: center; position: relative; padding: 0 8px; }
+  .dp-pstep .num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--mono);
+    font-size: 12px; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 1; margin-bottom: 14px; }
+  .dp-pstep svg { width: 58px; height: 58px; padding: 16px; box-sizing: border-box; color: var(--ink); stroke-width: 1.5;
+    background: var(--bg); border: 1px solid var(--rule-soft); border-radius: 50%;
+    box-shadow: 0 10px 22px -12px oklch(0.2 0.04 255 / 0.45); margin: 0 auto 12px; display: block; }
+  .dp-pstep b { display: block; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 7px; }
+  .dp-pstep p { font-size: 12px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+
+  /* QUOTE + STATS */
+  .dp-proof { display: grid; grid-template-columns: 0.95fr 1.35fr; gap: clamp(24px, 3vw, 48px); align-items: center; }
+  .dp-quote-mark { font-family: var(--serif); font-size: 64px; line-height: 0.6; color: var(--gold); display: block; margin-bottom: 12px; }
+  .dp-quote { font-family: var(--serif); font-size: clamp(30px, 3.3vw, 46px); line-height: 1.15; color: var(--ink); margin: 0 0 18px; }
+  .dp-proof-copy { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin: 0; max-width: 52ch; }
+  .dp-proofcard { border: 1px solid var(--rule); border-radius: 14px; padding: clamp(16px, 1.9vw, 26px); background: var(--bg); text-align: center; }
+  .dp-proofrow { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 1.8vw, 26px); }
+  .dp-proofstat { text-align: center; border-left: 1px solid var(--rule); padding-left: clamp(12px, 1.5vw, 20px); }
+  .dp-proofstat:first-child { border-left: none; padding-left: 0; }
+  .dp-proofstat svg { width: 32px; height: 32px; color: var(--accent); stroke-width: 1.5; margin: 0 auto 9px; display: block; }
+  .dp-proofstat b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .dp-proofstat p { font-size: 13px; line-height: 1.5; color: var(--ink-3); margin: 4px 0 0; }
+  .dp-proofcard .btn-refs { margin-top: 16px; border: 1.5px solid var(--accent); color: var(--accent-ink); border-radius: 8px; font-weight: 600; padding-top: 10px; padding-bottom: 10px; }
+  .dp-proofcard .btn-refs:hover { background: color-mix(in oklch, var(--accent) 8%, transparent); }
+
+  /* CTA */
+  .dp-cta { padding: 0; background: var(--navy-3) url('assets/final-cta-bg.jpg') right center / cover no-repeat;
+    position: relative; overflow: hidden; }
+  .dp-cta::before { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to right, oklch(0.14 0.05 258 / 0.88), oklch(0.14 0.05 258 / 0.45) 60%, transparent); pointer-events: none; }
+  .dp-cta .wrap { position: relative; z-index: 1; }
+  .dp-cta-band { padding: clamp(48px, 6vw, 84px) 0; display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 3vw, 48px); align-items: center; }
+  .dp-cta h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 46px); color: oklch(0.97 0.008 250); margin: 0 0 10px; line-height: 1.1; }
+  .dp-cta h2 em { font-style: italic; color: var(--accent); }
+  .dp-cta p { font-size: 14.5px; color: oklch(0.8 0.02 250); margin: 0; }
+
+  @media (max-width: 1000px) {
+    .dp-hero-grid { grid-template-columns: 1fr; }
+    .dp-badges .wrap { grid-template-columns: 1fr 1fr; }
+    .dp-mid { grid-template-columns: 1fr; gap: 20px; }
+    .dp-link { display: none; }
+    .dp-brow, .dp-brow-a, .dp-brow-b, .dp-brow-c { grid-template-columns: 1fr; }
+    .dp-brow-b img { order: 2; }
+    .dp-brow-b div { order: 1; }
+    .dp-tags-v { flex-direction: row; flex-wrap: wrap; }
+    .dp-proc { grid-template-columns: repeat(3, 1fr); gap: 24px 10px; }
+    .dp-proc::before { display: none; }
+    .dp-proof { grid-template-columns: 1fr; }
+    .dp-proofrow { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .dp-proofstat { border-left: none; padding-left: 0; }
+    .dp-cta-band { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .dp-fm-cols { grid-template-columns: 1fr; }
+    .dp-status { grid-template-columns: 1fr; }
+    .dp-badges .wrap { grid-template-columns: 1fr; }
+    .dp-layer-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 6px; }
+    .dp-step-dash { display: none; }
+    .dp-proc { grid-template-columns: 1fr; }
+    .dp-etl { grid-template-columns: 1fr; }
+    .dp-etl-arr { transform: rotate(90deg); text-align: center; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav" id="site-nav">
+    <div class="wrap nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="OT Solutions home">
+            <span class="nav-mark" aria-hidden="true">
+                <img src="assets/logo-mark-navy.png" alt="" />
+            </span>
+            <span class="nav-words">
+                <span class="nav-name">OT Solutions</span>
+                <span class="nav-tag">Putting Data In Your Hands</span>
+            </span>
+        </a>
+        <nav class="nav-links hide-sm" aria-label="Primary">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <div class="nav-dd">
+            <a href="services.html">Services <span class="dd-caret" aria-hidden="true"></span></a>
+            <div class="nav-dd-panel">
+                <div class="wrap dd-grid">
+                    <a class="dd-feature" href="kronos-expertise.html">
+                        <span class="dd-k">01 &middot; Primary practice</span>
+                        <span class="dd-feature-t">UKG / Workforce Central Consulting</span>
+                        <span class="dd-feature-d">Implementation resources, data hub &amp; analytics, and healthcare configuration.</span>
+                        <span class="dd-feature-s">25+ years on the platform &middot; since 2000</span>
+                        <span class="dd-feature-go">Explore UKG consulting <span class="arrow">→</span></span>
+                    </a>
+                    <div class="dd-left">
+                        <div class="dd-lhead">
+                            <span class="dd-k">Our services</span>
+                            <a class="dd-all" href="services.html">View all services <span class="arrow">→</span></a>
+                        </div>
+                        <div class="dd-list">
+                            <a href="data-platforms.html"><span class="dd-n">02</span><span><b>Data Platforms &amp; Integration</b><span class="d">Systems connected into one foundation.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                            <a href="analytics-bi.html"><span class="dd-n">03</span><span><b>Analytics &amp; BI Enablement</b><span class="d">Reporting people actually use and trust.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                            <a href="data-governance.html"><span class="dd-n">04</span><span><b>Data Governance &amp; Quality</b><span class="d">Reliable data without slowing delivery.</span></span><span class="dd-go" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-cta">
+            Connect <span class="arrow">→</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" hidden>
+        <nav class="nav-mobile-links" aria-label="Mobile navigation">
+            <a href="kronos-expertise.html">UKG Consulting</a>
+            <a href="services.html">Services</a>
+            <a class="nav-mobile-sub" href="kronos-expertise.html">UKG / Workforce Central</a>
+            <a class="nav-mobile-sub" href="data-platforms.html">Data Platforms &amp; Integration</a>
+            <a class="nav-mobile-sub" href="analytics-bi.html">Analytics &amp; BI</a>
+            <a class="nav-mobile-sub" href="data-governance.html">Governance &amp; Quality</a>
+            <a href="about-us.html">About</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+        <a href="contact.html" class="btn btn-primary nav-mobile-cta">Connect <span class="arrow">&rarr;</span></a>
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="dp-hero">
+    <div class="wrap">
+        <div class="dp-hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">Data Platforms &amp; Integration</span>
+                <h1 class="display dp-hero-title">Connect every system. Build <em>one source of truth.</em></h1>
+                <p class="dp-hero-lede">OT Solutions connects ERP, CRM, workforce, finance and legacy systems into a governed data platform. Clean, validated, and trusted data &mdash; ready for reporting, analytics and operational decisions.</p>
+                <div class="dp-hero-actions">
+                    <a href="#build" class="btn btn-hero-solid">Explore our approach <span class="arrow">→</span></a>
+                    <a href="contact.html" class="btn btn-hero-ghost">Talk to a platform consultant</a>
+                </div>
+                <div class="dp-hero-trust">
+                    <span>Canada</span><span>&middot;</span><span>US</span><span>&middot;</span><span>International clients</span>
+                </div>
+            </div>
+            <div class="dp-hero-art reveal" aria-hidden="true">
+                <img src="assets/ot-solutions-data-platforms-hero-illustration.png" alt="" width="1409" height="752" />
+                <div class="dp-status">
+                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 12l4-3"/></svg>Data quality <b>98.7%</b></div>
+                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Pipeline health <b>all systems normal</b></div>
+                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Last refresh <b>2 min ago</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class="dp-badges">
+    <div class="wrap reveal-stagger">
+        <div class="dp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><div><b>25+ years</b><p>helping organizations modernize data and reporting</p></div></div>
+        <div class="dp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 0 1 4 9 13.5 13.5 0 0 1-4 9 13.5 13.5 0 0 1-4-9 13.5 13.5 0 0 1 4-9z"/></svg><div><b>5 regions</b><p>delivery across Canada, the US, and international clients</p></div></div>
+        <div class="dp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><b>Senior-led delivery</b><p>consultants with deep hands-on experience across industries</p></div></div>
+        <div class="dp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3 7-9V6l-7-3-7 3v7c0 6 7 9 7 9z"/><path d="M9 11.5l2 2 4-4.5"/></svg><div><b>Built for live operations</b><p>platforms that support daily business with confidence</p></div></div>
+    </div>
+</section>
+
+<!-- FRAGMENTED TO TRUSTED -->
+<section class="section dp-mid-sec tinted-section">
+    <div class="wrap">
+        <h2 class="display h2 dp-mid-title reveal">From fragmented systems to a platform <em>the business can trust.</em></h2>
+        <div class="dp-mid reveal">
+            <div class="dp-mid-col">
+                <span class="dp-mid-k">Disconnected &amp; fragmented</span>
+                <div class="dp-frag">
+                    <div class="dp-frag-chip">UKG<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
+                    <div class="dp-frag-chip">SAP<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
+                    <div class="dp-frag-chip">CRM<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.72 0.13 75)"></span></span></div>
+                    <div class="dp-frag-chip">Legacy<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
+                </div>
+            </div>
+            <svg class="dp-link" viewBox="0 0 56 190" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M2 24 C 30 24, 24 95, 54 95" />
+                <path d="M2 71 C 30 71, 24 95, 54 95" />
+                <path d="M2 119 C 30 119, 24 95, 54 95" />
+                <path d="M2 166 C 30 166, 24 95, 54 95" />
+            </svg>
+            <div class="dp-mid-col dp-mid-center">
+                <span class="dp-mid-k">OT integration layer</span>
+                <div class="dp-layer">
+                    <div class="dp-layer-row">
+                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 21h16"/></svg><span>Ingest</span></div>
+                        <span class="dp-step-dash"></span>
+                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><span>Validate</span></div>
+                        <span class="dp-step-dash"></span>
+                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg><span>Standardize</span></div>
+                        <span class="dp-step-dash"></span>
+                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg><span>Reconcile</span></div>
+                        <span class="dp-step-dash"></span>
+                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><span>Monitor</span></div>
+                    </div>
+                    <div class="dp-layer-foot">Governed<i>&middot;</i>Secure<i>&middot;</i>Auditable</div>
+                </div>
+            </div>
+            <svg class="dp-link dp-link-blue" viewBox="0 0 56 190" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M2 95 C 30 95, 24 32, 54 32" />
+                <path d="M2 95 C 30 95, 24 95, 54 95" />
+                <path d="M2 95 C 30 95, 24 158, 54 158" />
+            </svg>
+            <div class="dp-mid-col">
+                <span class="dp-mid-k">Governed &amp; reliable</span>
+                <div class="dp-gov">
+                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg>BI &amp; Reporting<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
+                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg>Finance &amp; Ops<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
+                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Payroll &amp; HR<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-outs reveal-stagger">
+            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 14l3-3 3 2 4-5"/></svg></span><b>Reliable reporting</b><p>Trusted data you can stand behind at quarter-end and every day.</p></div>
+            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V7"/><path d="M7 12l5-5 5 5"/><path d="M20 17a8 8 0 1 0-16 0"/></svg></span><b>Faster decisions</b><p>Timely, accurate insights that drive better business outcomes.</p></div>
+            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M12 12v4M10 14h4"/></svg></span><b>Less manual work</b><p>Automated flows, validation and reconciliation reduce busywork.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section id="build" class="section dp-build">
+    <div class="wrap">
+        <h2 class="display h2 dp-build-title reveal">What we build.</h2>
+        <div>
+            <article class="dp-brow dp-brow-a reveal">
+                <div>
+                    <div class="dp-brow-head"><span class="dp-brow-n">01</span><h3>Integration &amp; Interfaces</h3></div>
+                    <p>Connect ERP, CRM, workforce and other systems through secure, resilient integrations with built-in validation, error handling and monitoring.</p>
+                </div>
+                <div class="dp-tags-v"><span class="dp-tag">API &amp; file feeds</span><span class="dp-tag">Error handling</span><span class="dp-tag">Reconciliation</span><span class="dp-tag">Monitoring</span></div>
+                <img class="dp-img" src="assets/data-platforms-integrtation&amp;interfaces.png" alt="" loading="lazy" aria-hidden="true" />
+            </article>
+            <article class="dp-brow dp-brow-b reveal">
+                <img class="dp-img" src="assets/data-platforms-platform&amp;warehouse.png" alt="" loading="lazy" aria-hidden="true" />
+                <div>
+                    <div class="dp-brow-head"><span class="dp-brow-n">02</span><h3>Platform &amp; Warehouse Architecture</h3></div>
+                    <p>Design modern, scalable data platforms and warehouses that organize data for performance, security and self-service analytics.</p>
+                    <div class="dp-tags"><span class="dp-tag">Cloud &amp; hybrid</span><span class="dp-tag">Security &amp; access</span><span class="dp-tag">Modeling</span><span class="dp-tag">Performance</span></div>
+                </div>
+            </article>
+            <article class="dp-brow dp-brow-c reveal">
+                <div>
+                    <div class="dp-brow-head"><span class="dp-brow-n">03</span><h3>Legacy Modernization</h3></div>
+                    <p>Migrate and modernize legacy systems and data without disrupting operations &mdash; unlocking value from decades of business data.</p>
+                </div>
+                <div class="dp-tags-v"><span class="dp-tag">Migration planning</span><span class="dp-tag">Data conversion</span><span class="dp-tag">System decoupling</span><span class="dp-tag">Change management</span></div>
+                <img class="dp-img" src="assets/data-platforms-legacy-modernization.png" alt="" loading="lazy" aria-hidden="true" />
+                <div class="dp-checks">
+                    <div class="dp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Improved performance</div>
+                    <div class="dp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Lower risk</div>
+                    <div class="dp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>Future ready</div>
+                </div>
+            </article>
+            <article class="dp-brow dp-brow-b reveal">
+                <img class="dp-img" src="assets/data-platforms-etl.png" alt="" loading="lazy" aria-hidden="true" />
+                <div>
+                    <div class="dp-brow-head"><span class="dp-brow-n">04</span><h3>Pipelines &amp; Data Movement</h3></div>
+                    <p>Build reliable data pipelines that move the right data to the right place &mdash; on time, every time.</p>
+                    <div class="dp-tags"><span class="dp-tag">ETL / ELT</span><span class="dp-tag">Scheduling</span><span class="dp-tag">Orchestration</span><span class="dp-tag">Recovery &amp; replay</span></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section dp-proc-sec">
+    <div class="wrap">
+        <h2 class="display h2 dp-proc-title reveal">Built to work <em>in the real world.</em></h2>
+        <div class="dp-proc reveal-stagger">
+            <div class="dp-pstep"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><b>Discover</b><p>Understand your systems, data and business goals. Map sources, gaps and opportunities.</p></div>
+            <div class="dp-pstep"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><b>Design</b><p>Architect the right solution. Define data models, integrations, security and controls.</p></div>
+            <div class="dp-pstep"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3"/><path d="M13 5l-2 14"/></svg><b>Build</b><p>Build integrations and pipelines with quality, reusability and automation.</p></div>
+            <div class="dp-pstep"><span class="num">4</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><b>Validate</b><p>Test, reconcile and validate. Ensure data quality, handle errors and document everything.</p></div>
+            <div class="dp-pstep"><span class="num">5</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg><b>Operate</b><p>Monitor, support and optimize. Keep your platform healthy and your data trusted.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE + STATS -->
+<section class="section dp-proof-sec tinted-section">
+    <div class="wrap">
+        <div class="dp-proof">
+            <div class="reveal">
+                <span class="dp-quote-mark" aria-hidden="true">&ldquo;</span>
+                <p class="dp-quote">The platform only matters if the business can rely on it.</p>
+                <p class="dp-proof-copy">That&rsquo;s why we focus on data quality, governance and reliability &mdash; so your reports are trusted, your team is confident, and your operations run smoothly.</p>
+            </div>
+            <div class="dp-proofcard reveal">
+                <div class="dp-proofrow">
+                    <div class="dp-proofstat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><b>25+ years</b><p>of data and reporting experience</p></div>
+                    <div class="dp-proofstat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 0 1 4 9 13.5 13.5 0 0 1-4 9 13.5 13.5 0 0 1-4-9 13.5 13.5 0 0 1 4-9z"/></svg><b>Multi-region</b><p>delivery across Canada, US and globally</p></div>
+                    <div class="dp-proofstat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg><b>Enterprise systems</b><p>UKG, SAP, CRM, finance, and more</p></div>
+                    <div class="dp-proofstat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3 7-9V6l-7-3-7 3v7c0 6 7 9 7 9z"/><path d="M9 11.5l2 2 4-4.5"/></svg><b>Proven results</b><p>real outcomes for real organizations</p></div>
+                </div>
+                <a href="references.html" class="btn btn-refs">See our references <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="dp-cta">
+    <div class="wrap">
+        <div class="dp-cta-band">
+            <div class="reveal">
+                <h2>Ready to make your systems <em>work as one?</em></h2>
+                <p>Let&rsquo;s build a platform your business can trust.</p>
+            </div>
+            <a href="contact.html" class="btn btn-hero-solid">Start a conversation <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <div class="footer-mark" aria-hidden="true">
+                        <img src="assets/logo-mark-navy.png" alt="" />
+                    </div>
+                    <div class="footer-name">OT Solutions</div>
+                </div>
+                <p class="footer-blurb">
+                    A data consulting firm helping organizations modernize, analyze, and activate their data to drive business transformation.
+                </p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Services</h4>
+                    <ul>
+                        <li><a href="kronos-expertise.html">UKG Consulting</a></li>
+                        <li><a href="services.html">Platform Modernization</a></li>
+                        <li><a href="services.html">Analytics &amp; BI</a></li>
+                        <li><a href="services.html">Governance &amp; Quality</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-h">Contact</h4>
+                    <ul>
+                        <li><a href="tel:+17802435796">+1 (780) 243&ndash;5796</a></li>
+                        <li><a href="mailto:OTSolutions@shaw.ca">OTSolutions@shaw.ca</a></li>
+                        <li class="muted">Sherwood Park, AB · Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="mono">© <span id="footer-year">2026</span> OT Solutions Inc. — All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
