@@ -39,63 +39,37 @@
   /* ───── Data Platforms & Integration (mock design) ───── */
   .dpX { --line: oklch(1 0 0 / 0.16); }
 
-  /* HERO */
-  .dp-hero { position: relative; overflow: hidden; color: oklch(0.96 0.008 250);
-    background:
-      linear-gradient(oklch(1 0 0 / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(1 0 0 / 0.03) 1px, transparent 1px),
-      oklch(0.15 0.05 258);
-    background-size: 36px 36px, 36px 36px, auto; }
-  .dp-hero .wrap { padding-top: clamp(48px, 6vw, 88px); padding-bottom: clamp(48px, 6vw, 88px); }
-  .dp-hero-grid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(26px, 3.2vw, 52px); align-items: center; }
+  /* HERO — light, full-bleed photo right */
+  .dp-hero { border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .dp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .dp-hero-text { display: flex; flex-direction: column;
+    padding: clamp(40px, 5.5vw, 84px) clamp(28px, 4vw, 64px) clamp(30px, 3.6vw, 48px) max(var(--gutter), calc(50vw - var(--max) / 2 + var(--gutter))); }
+  .dp-hero-main { flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .dp-hero .eyebrow { color: var(--gold); }
-  .dp-hero .eyebrow::before { background: var(--gold-rule); }
-  .dp-hero-title { font-size: clamp(34px, 4.2vw, 58px); margin: 18px 0 22px; color: oklch(0.97 0.008 250); }
-  .dp-hero-title em { color: var(--accent); }
-  .dp-hero-lede { font-size: clamp(15.5px, 1.3vw, 18px); line-height: 1.6; color: oklch(0.8 0.02 250); max-width: 44ch; margin: 0 0 28px; }
+  .dp-hero .eyebrow::before { background: var(--gold-rule); width: 3px; height: 15px; }
+  .dp-hero-title { font-size: clamp(38px, 5vw, 66px); margin: 20px 0 22px; color: var(--ink); line-height: 1.04; }
+  .dp-hero-lede { font-size: clamp(15.5px, 1.35vw, 18px); line-height: 1.62; color: var(--ink-2); max-width: 42ch; margin: 0 0 30px; }
   .dp-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .dp-hero-actions .btn { border-radius: 6px; }
+  .dp-hero-trust { display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; margin-top: clamp(30px, 4vw, 46px); }
+  .dp-hero-trust::before { content: ""; width: 26px; height: 2px; border-radius: 1px; background: var(--gold); flex-shrink: 0; }
+  .dp-hero-trust span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .dp-hero-media { display: flex; flex-direction: column; }
+  .dp-hero-art { flex: 1; position: relative; overflow: hidden; min-height: 340px; }
+  .dp-hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .dp-hero-axis { padding: clamp(20px, 2.6vw, 30px) clamp(24px, 3vw, 48px) clamp(22px, 3vw, 32px); }
+  .dp-hero-axis-track { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--navy-3); }
+  .dp-axis-node { position: relative; text-align: center; padding-top: 16px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+  .dp-axis-node::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 9px; background: var(--navy-3); }
+
+  /* hero/CTA solid + ghost buttons */
   .btn-hero-solid { background: linear-gradient(180deg, #fff, oklch(0.88 0.012 250)); color: oklch(0.18 0.05 258); font-weight: 600;
     border-radius: 6px; box-shadow: 0 6px 18px -8px oklch(0 0 0 / 0.5), inset 0 1px 0 #fff; }
   .btn-hero-solid:hover { background: #fff; transform: translateY(-1px); }
   .btn-hero-ghost { background: oklch(1 0 0 / 0.06); color: oklch(0.95 0.01 250); border: 1px solid oklch(1 0 0 / 0.25); border-radius: 6px; }
   .btn-hero-ghost:hover { border-color: oklch(1 0 0 / 0.55); }
-  .dp-hero .btn-hero-solid { background: var(--accent); color: #fff;
-    box-shadow: 0 10px 24px -10px oklch(0.52 0.16 245 / 0.6); }
-  .dp-hero .btn-hero-solid:hover { background: oklch(0.46 0.16 245); }
-  .dp-hero-trust { display: flex; align-items: center; gap: 10px 18px; flex-wrap: wrap; margin-top: 30px; padding-top: 20px; border-top: 1px solid oklch(1 0 0 / 0.15); }
-  .dp-hero-trust::before { content: ""; width: 28px; height: 2px; border-radius: 1px; background: var(--gold); flex-shrink: 0; }
-  .dp-hero-trust span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0.03 250); }
-
-  /* hero flow diagram */
-  .dp-hero-art img { width: 100%; height: auto; display: block; border-radius: 14px;
-    border: 1px solid oklch(1 0 0 / 0.14); box-shadow: 0 34px 70px -40px oklch(0 0 0 / 0.7); }
-  .dp-flowmap { position: relative; }
-  .dp-fm-cols { display: grid; grid-template-columns: 1fr 1.15fr 0.9fr 1fr; gap: clamp(10px, 1.4vw, 20px); align-items: center; }
-  .dp-fm-k { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.62 0.03 250);
-    text-align: center; display: block; margin-bottom: 10px; }
-  .dp-chipcol { display: flex; flex-direction: column; gap: 9px; }
-  .dp-chip { display: flex; align-items: center; gap: 8px; border: 1px solid oklch(1 0 0 / 0.22); background: oklch(1 0 0 / 0.05);
-    border-radius: 8px; padding: 9px 11px; font-size: 11.5px; font-weight: 600; color: oklch(0.94 0.01 250); }
-  .dp-chip .lg { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.06em; background: oklch(1 0 0 / 0.12);
-    border-radius: 4px; padding: 3px 6px; color: oklch(0.9 0.01 250); }
-  .dp-valid { border: 1px solid oklch(0.52 0.16 245 / 0.65); background: oklch(0.52 0.16 245 / 0.1); border-radius: 12px;
-    padding: 14px 16px; }
-  .dp-valid-h { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; color: oklch(0.95 0.01 250);
-    padding-bottom: 9px; margin-bottom: 9px; border-bottom: 1px solid oklch(0.52 0.16 245 / 0.35); }
-  .dp-valid-h svg { width: 14px; height: 14px; color: var(--accent); stroke-width: 1.8; }
-  .dp-valid li { list-style: none; font-family: var(--mono); font-size: 10px; color: oklch(0.82 0.02 250); padding: 3.5px 0 3.5px 16px; position: relative; }
-  .dp-valid li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-size: 9px; }
-  .dp-valid ul { margin: 0; padding: 0; }
-  .dp-db { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .dp-db svg { width: 64px; height: 64px; color: var(--accent); stroke-width: 1.2; }
-  .dp-db span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: oklch(0.75 0.03 250); text-align: center; }
-  .dp-status { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: clamp(16px, 2vw, 24px);
-    border: 1px solid oklch(1 0 0 / 0.18); border-radius: 10px; padding: 12px 16px; background: oklch(1 0 0 / 0.04); }
-  .dp-stat { display: flex; align-items: center; gap: 9px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
-    text-transform: uppercase; color: oklch(0.9 0.01 250); }
-  .dp-stat + .dp-stat { border-left: 1px solid oklch(1 0 0 / 0.15); padding-left: 16px; }
-  .dp-stat svg { width: 14px; height: 14px; color: var(--accent); stroke-width: 1.6; flex-shrink: 0; }
-  .dp-stat b { color: oklch(0.62 0.17 150); font-weight: 600; }
 
   /* TRUST BADGES */
   .dp-badges { border-bottom: 1px solid var(--rule); }
@@ -214,6 +188,11 @@
 
   @media (max-width: 1000px) {
     .dp-hero-grid { grid-template-columns: 1fr; }
+    .dp-hero-text { padding: clamp(28px, 7vw, 44px) var(--gutter) clamp(18px, 5vw, 28px); }
+    .dp-hero-main { justify-content: flex-start; }
+    .dp-hero-art { min-height: 0; }
+    .dp-hero-art img { height: auto; }
+    .dp-hero-axis { padding-left: var(--gutter); padding-right: var(--gutter); }
     .dp-badges .wrap { grid-template-columns: 1fr 1fr; }
     .dp-mid { grid-template-columns: 1fr; gap: 20px; }
     .dp-link { display: none; }
@@ -228,9 +207,10 @@
     .dp-proofstat { border-left: none; padding-left: 0; }
     .dp-cta-band { grid-template-columns: 1fr; }
   }
+  @media (max-width: 760px) {
+    .dp-outs { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
-    .dp-fm-cols { grid-template-columns: 1fr; }
-    .dp-status { grid-template-columns: 1fr; }
     .dp-badges .wrap { grid-template-columns: 1fr; }
     .dp-layer-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 6px; }
     .dp-step-dash { display: none; }
@@ -313,26 +293,28 @@
 
 <!-- HERO -->
 <section class="dp-hero">
-    <div class="wrap">
-        <div class="dp-hero-grid">
-            <div class="reveal">
+    <div class="dp-hero-grid">
+        <div class="dp-hero-text reveal">
+            <div class="dp-hero-main">
                 <span class="eyebrow">Data Platforms &amp; Integration</span>
-                <h1 class="display dp-hero-title">Connect every system. Build <em>one source of truth.</em></h1>
-                <p class="dp-hero-lede">OT Solutions connects ERP, CRM, workforce, finance and legacy systems into a governed data platform. Clean, validated, and trusted data &mdash; ready for reporting, analytics and operational decisions.</p>
+                <h1 class="display dp-hero-title">Bring your business data together.</h1>
+                <p class="dp-hero-lede">We connect workforce, finance and operational systems into one governed foundation &mdash; giving your teams trusted data for reporting and better decisions.</p>
                 <div class="dp-hero-actions">
-                    <a href="#build" class="btn btn-hero-solid">Explore our approach <span class="arrow">→</span></a>
-                    <a href="contact.html" class="btn btn-hero-ghost">Talk to a platform consultant</a>
-                </div>
-                <div class="dp-hero-trust">
-                    <span>Canada</span><span>&middot;</span><span>US</span><span>&middot;</span><span>International clients</span>
+                    <a href="#build" class="btn btn-primary">Explore our approach <span class="arrow">→</span></a>
+                    <a href="contact.html" class="btn btn-ghost">Talk to a platform consultant</a>
                 </div>
             </div>
-            <div class="dp-hero-art reveal" aria-hidden="true">
-                <img src="assets/ot-solutions-data-platforms-hero-illustration.png" alt="" width="1409" height="752" />
-                <div class="dp-status">
-                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 12l4-3"/></svg>Data quality <b>98.7%</b></div>
-                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Pipeline health <b>all systems normal</b></div>
-                    <div class="dp-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Last refresh <b>2 min ago</b></div>
+            <div class="dp-hero-trust">
+                <span>Connected systems</span><span>&middot;</span><span>Governed data</span><span>&middot;</span><span>Trusted reporting</span>
+            </div>
+        </div>
+        <div class="dp-hero-media reveal">
+            <div class="dp-hero-art"><img src="assets/data-platforms-hero.png" alt="" width="851" height="466" /></div>
+            <div class="dp-hero-axis" aria-hidden="true">
+                <div class="dp-hero-axis-track">
+                    <div class="dp-axis-node">Workforce</div>
+                    <div class="dp-axis-node">Finance</div>
+                    <div class="dp-axis-node">Operations</div>
                 </div>
             </div>
         </div>
