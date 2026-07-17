@@ -80,48 +80,41 @@
   .dp-badge b { display: block; font-size: 14.5px; font-weight: 600; color: var(--ink); }
   .dp-badge p { font-size: 12px; line-height: 1.5; color: var(--ink-3); margin: 3px 0 0; }
 
-  /* FRAGMENTED -> TRUSTED */
-  .dp-mid-title { text-align: center; font-size: clamp(26px, 3.2vw, 44px); margin: 0 0 clamp(38px, 4.6vw, 56px); }
-  .dp-mid { display: grid; grid-template-columns: minmax(150px, 0.85fr) clamp(30px, 4vw, 60px) 1.9fr clamp(30px, 4vw, 60px) minmax(165px, 0.95fr);
-    gap: 0 4px; align-items: center; }
-  .dp-mid-k { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
-    display: block; margin-bottom: 12px; }
-  .dp-mid-center .dp-mid-k { text-align: center; }
-  .dp-link { width: 100%; height: 190px; display: block; align-self: center; }
-  .dp-link path { fill: none; stroke: oklch(0.72 0.015 250); stroke-width: 1.5; stroke-dasharray: 2 5; stroke-linecap: round; }
-  .dp-link-blue path { stroke: var(--accent); stroke-width: 2; stroke-dasharray: none; }
-  .dp-frag { display: flex; flex-direction: column; gap: 9px; }
-  .dp-frag-chip { display: flex; align-items: center; justify-content: space-between; background: var(--bg); border: 1px solid var(--rule);
-    border-radius: 10px; padding: 11px 14px; font-size: 12.5px; font-weight: 600; color: var(--ink);
-    box-shadow: 0 8px 18px -12px oklch(0.2 0.04 255 / 0.3); }
-  .dp-dots { display: flex; gap: 5px; }
-  .dp-dot { width: 7px; height: 7px; border-radius: 50%; }
-  .dp-layer { background: var(--bg); border: 1px solid var(--rule); border-radius: 16px;
-    padding: clamp(20px, 2.4vw, 30px) clamp(18px, 2.4vw, 32px);
-    box-shadow: 0 24px 54px -36px oklch(0.14 0.05 258 / 0.5); }
-  .dp-layer-row { display: flex; align-items: flex-start; gap: 6px; }
-  .dp-step { text-align: center; flex: 0 0 auto; }
-  .dp-step svg { width: 24px; height: 24px; color: var(--accent); stroke-width: 1.6; margin: 0 auto 8px; display: block; }
-  .dp-step span { font-size: 11.5px; font-weight: 500; color: var(--ink); display: block; }
-  .dp-step-dash { flex: 1 1 auto; border-top: 2px dotted oklch(0.78 0.015 250); margin-top: 12px; min-width: 10px; }
-  .dp-layer-foot { text-align: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--accent-ink); margin-top: 18px; }
-  .dp-layer-foot i { font-style: normal; color: var(--ink-4); padding: 0 8px; }
-  .dp-gov { display: flex; flex-direction: column; gap: 10px; }
-  .dp-gov-chip { display: flex; align-items: center; gap: 10px; background: var(--bg); border: 1px solid var(--rule);
-    border-radius: 10px; padding: 11px 13px; font-size: 12.5px; font-weight: 600; color: var(--ink);
-    box-shadow: 0 8px 18px -12px oklch(0.2 0.04 255 / 0.3); }
-  .dp-gov-chip svg { width: 16px; height: 16px; color: var(--accent); stroke-width: 1.7; flex-shrink: 0; }
-  .dp-gov-chip .dp-dot { margin-left: auto; flex-shrink: 0; }
-  .dp-outs { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); margin-top: clamp(38px, 4.6vw, 56px); }
-  .dp-out { background: var(--bg); border: 1px solid var(--rule); border-radius: 12px; padding: clamp(18px, 2.2vw, 26px);
-    display: grid; grid-template-columns: 56px 1fr; gap: 8px 16px; align-items: center;
-    box-shadow: 0 10px 24px -18px oklch(0.2 0.04 255 / 0.3); }
-  .dp-out-ic { width: 56px; height: 56px; border: 1px solid var(--rule); border-radius: 12px; background: var(--bg);
-    display: flex; align-items: center; justify-content: center; grid-row: 1 / 3; align-self: center; }
-  .dp-out-ic svg { width: 28px; height: 28px; color: var(--accent); stroke-width: 1.5; }
-  .dp-out b { font-size: 14.5px; font-weight: 600; color: var(--ink); }
-  .dp-out p { grid-column: 2; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+  /* CONNECTED DATA FOUNDATION */
+  .dp-found-head { text-align: center; max-width: 760px; margin: 0 auto clamp(34px, 4.2vw, 54px); }
+  .dp-found-head .eyebrow { color: var(--gold); }
+  .dp-found-head .eyebrow::before { background: var(--gold-rule); width: 3px; height: 15px; }
+  .dp-found-title { font-size: clamp(30px, 4vw, 56px); color: var(--ink); margin: 14px 0 22px; line-height: 1.05; }
+  .dp-found-lede { font-size: clamp(15px, 1.3vw, 17px); line-height: 1.7; color: var(--ink-2); margin: 0 auto; max-width: 62ch; }
+  .dp-found-lede + .dp-found-lede { margin-top: 14px; }
+
+  .dp-steps { display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--rule); border-radius: 16px 16px 0 0; overflow: hidden; background: var(--bg);
+    box-shadow: 0 24px 54px -42px oklch(0.14 0.05 258 / 0.4); }
+  .dp-step-card { display: flex; flex-direction: column; padding: clamp(24px, 2.6vw, 34px) clamp(20px, 2vw, 30px);
+    border-left: 1px solid var(--rule); }
+  .dp-step-card:first-child { border-left: none; }
+  .dp-step-head { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; margin-bottom: clamp(18px, 2.2vw, 26px); }
+  .dp-step-n { font-family: var(--serif); font-size: clamp(34px, 3.4vw, 46px); color: var(--gold); line-height: 0.85; }
+  .dp-step-head h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(18px, 1.8vw, 23px); color: var(--ink); margin: 0 0 8px; line-height: 1.2; }
+  .dp-step-head p { font-size: 13.5px; line-height: 1.6; color: var(--ink-3); margin: 0; }
+  .dp-step-img { margin-top: auto; border-radius: 10px; overflow: hidden; border: 1px solid var(--rule-soft); aspect-ratio: 4 / 3; background: var(--bg-2); }
+  .dp-step-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .dp-result { background: var(--navy-3); color: oklch(0.96 0.008 250); border-radius: 0 0 16px 16px;
+    display: flex; align-items: center; gap: 14px clamp(20px, 3vw, 40px); flex-wrap: wrap;
+    padding: clamp(22px, 2.6vw, 30px) clamp(24px, 3vw, 44px); }
+  .dp-result-k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+    flex-shrink: 0; border-right: 1px solid oklch(1 0 0 / 0.2); padding-right: clamp(18px, 3vw, 40px); }
+  .dp-result p { font-family: var(--serif); font-size: clamp(18px, 2vw, 27px); color: oklch(0.97 0.008 250); margin: 0; line-height: 1.25; }
+
+  .dp-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 48px); margin-top: clamp(36px, 4.4vw, 54px); }
+  .dp-benefit { display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: start;
+    padding-left: clamp(20px, 2.4vw, 40px); border-left: 1px solid var(--rule); }
+  .dp-benefit:first-child { border-left: none; padding-left: 0; }
+  .dp-benefit svg { width: 38px; height: 38px; color: var(--gold); stroke-width: 1.4; flex-shrink: 0; }
+  .dp-benefit b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 1.6vw, 21px); color: var(--ink); margin-bottom: 6px; }
+  .dp-benefit p { font-size: 13px; line-height: 1.6; color: var(--ink-3); margin: 0; }
 
   /* WHAT WE BUILD — dark alternating rows */
   .dp-build { position: relative; color: oklch(0.95 0.01 250); background: #01112d; }
@@ -194,8 +187,6 @@
     .dp-hero-art img { height: auto; }
     .dp-hero-axis { padding-left: var(--gutter); padding-right: var(--gutter); }
     .dp-badges .wrap { grid-template-columns: 1fr 1fr; }
-    .dp-mid { grid-template-columns: 1fr; gap: 20px; }
-    .dp-link { display: none; }
     .dp-brow, .dp-brow-a, .dp-brow-b, .dp-brow-c { grid-template-columns: 1fr; }
     .dp-brow-b img { order: 2; }
     .dp-brow-b div { order: 1; }
@@ -208,12 +199,16 @@
     .dp-cta-band { grid-template-columns: 1fr; }
   }
   @media (max-width: 760px) {
-    .dp-outs { grid-template-columns: 1fr; }
+    .dp-steps { grid-template-columns: 1fr; }
+    .dp-step-card { border-left: none; border-top: 1px solid var(--rule); }
+    .dp-step-card:first-child { border-top: none; }
+    .dp-result { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .dp-result-k { border-right: none; padding-right: 0; }
+    .dp-benefits { grid-template-columns: 1fr; gap: 26px; }
+    .dp-benefit { border-left: none; padding-left: 0; }
   }
   @media (max-width: 640px) {
     .dp-badges .wrap { grid-template-columns: 1fr; }
-    .dp-layer-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 6px; }
-    .dp-step-dash { display: none; }
     .dp-proc { grid-template-columns: 1fr; }
     .dp-etl { grid-template-columns: 1fr; }
     .dp-etl-arr { transform: rotate(90deg); text-align: center; }
@@ -331,61 +326,55 @@
     </div>
 </section>
 
-<!-- FRAGMENTED TO TRUSTED -->
-<section class="section dp-mid-sec tinted-section">
+<!-- CONNECTED DATA FOUNDATION -->
+<section class="section dp-found-sec tinted-section">
     <div class="wrap">
-        <h2 class="display h2 dp-mid-title reveal">From fragmented systems to a platform <em>the business can trust.</em></h2>
-        <div class="dp-mid reveal">
-            <div class="dp-mid-col">
-                <span class="dp-mid-k">Disconnected &amp; fragmented</span>
-                <div class="dp-frag">
-                    <div class="dp-frag-chip">UKG<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
-                    <div class="dp-frag-chip">SAP<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
-                    <div class="dp-frag-chip">CRM<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.72 0.13 75)"></span></span></div>
-                    <div class="dp-frag-chip">Legacy<span class="dp-dots"><span class="dp-dot" style="background:oklch(0.8 0.01 250)"></span><span class="dp-dot" style="background:oklch(0.6 0.19 25)"></span></span></div>
+        <div class="dp-found-head reveal">
+            <span class="eyebrow">A connected data foundation</span>
+            <h2 class="display dp-found-title">One reliable view of your business.</h2>
+            <p class="dp-found-lede">Important information often lives across workforce, finance and operational systems. When those systems do not agree, reporting takes longer and leaders are left questioning the numbers.</p>
+            <p class="dp-found-lede">OT Solutions brings that information together, improves its quality and creates a dependable foundation for reporting and decision-making.</p>
+        </div>
+        <div class="dp-steps reveal">
+            <div class="dp-step-card">
+                <div class="dp-step-head">
+                    <span class="dp-step-n">01</span>
+                    <div><h3>Your information is spread across systems.</h3><p>Workforce, finance and operational information often lives in different places.</p></div>
                 </div>
+                <div class="dp-step-img"><img src="assets/platform-01.png" alt="File folders labelled Workforce, Finance and Operations, kept separately." width="1566" height="2752" loading="lazy" /></div>
             </div>
-            <svg class="dp-link" viewBox="0 0 56 190" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M2 24 C 30 24, 24 95, 54 95" />
-                <path d="M2 71 C 30 71, 24 95, 54 95" />
-                <path d="M2 119 C 30 119, 24 95, 54 95" />
-                <path d="M2 166 C 30 166, 24 95, 54 95" />
-            </svg>
-            <div class="dp-mid-col dp-mid-center">
-                <span class="dp-mid-k">OT integration layer</span>
-                <div class="dp-layer">
-                    <div class="dp-layer-row">
-                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 21h16"/></svg><span>Ingest</span></div>
-                        <span class="dp-step-dash"></span>
-                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><span>Validate</span></div>
-                        <span class="dp-step-dash"></span>
-                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg><span>Standardize</span></div>
-                        <span class="dp-step-dash"></span>
-                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg><span>Reconcile</span></div>
-                        <span class="dp-step-dash"></span>
-                        <div class="dp-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><span>Monitor</span></div>
-                    </div>
-                    <div class="dp-layer-foot">Governed<i>&middot;</i>Secure<i>&middot;</i>Auditable</div>
+            <div class="dp-step-card">
+                <div class="dp-step-head">
+                    <span class="dp-step-n">02</span>
+                    <div><h3>We bring it together.</h3><p>OT Solutions connects, organizes and checks the information for accuracy.</p></div>
                 </div>
+                <div class="dp-step-img"><img src="assets/platform-02.png" alt="Workforce, finance and operations reports being aligned side by side." width="3116" height="1344" loading="lazy" /></div>
             </div>
-            <svg class="dp-link dp-link-blue" viewBox="0 0 56 190" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M2 95 C 30 95, 24 32, 54 32" />
-                <path d="M2 95 C 30 95, 24 95, 54 95" />
-                <path d="M2 95 C 30 95, 24 158, 54 158" />
-            </svg>
-            <div class="dp-mid-col">
-                <span class="dp-mid-k">Governed &amp; reliable</span>
-                <div class="dp-gov">
-                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg>BI &amp; Reporting<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
-                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg>Finance &amp; Ops<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
-                    <div class="dp-gov-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Payroll &amp; HR<span class="dp-dot" style="background:oklch(0.62 0.17 150)"></span></div>
+            <div class="dp-step-card">
+                <div class="dp-step-head">
+                    <span class="dp-step-n">03</span>
+                    <div><h3>Your teams get clarity.</h3><p>Leaders work from consistent reporting and a shared view of performance.</p></div>
                 </div>
+                <div class="dp-step-img"><img src="assets/platform-03.png" alt="A single executive performance brief summarising the combined data." width="3430" height="1248" loading="lazy" /></div>
             </div>
         </div>
-        <div class="dp-outs reveal-stagger">
-            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 14l3-3 3 2 4-5"/></svg></span><b>Reliable reporting</b><p>Trusted data you can stand behind at quarter-end and every day.</p></div>
-            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V7"/><path d="M7 12l5-5 5 5"/><path d="M20 17a8 8 0 1 0-16 0"/></svg></span><b>Faster decisions</b><p>Timely, accurate insights that drive better business outcomes.</p></div>
-            <div class="dp-out"><span class="dp-out-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M12 12v4M10 14h4"/></svg></span><b>Less manual work</b><p>Automated flows, validation and reconciliation reduce busywork.</p></div>
+        <div class="dp-result reveal">
+            <span class="dp-result-k">The result</span>
+            <p>Less time finding and correcting information. More confidence using it.</p>
+        </div>
+        <div class="dp-benefits reveal-stagger">
+            <div class="dp-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div><b>Reporting people trust</b><p>Give leaders consistent numbers with a clear understanding of where the information came from.</p></div>
+            </div>
+            <div class="dp-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <div><b>Less manual preparation</b><p>Reduce spreadsheets, repeated corrections and time spent combining information by hand.</p></div>
+            </div>
+            <div class="dp-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20V7"/></svg>
+                <div><b>Better-informed decisions</b><p>Make workforce and operational decisions using timely information everyone understands.</p></div>
+            </div>
         </div>
     </div>
 </section>
