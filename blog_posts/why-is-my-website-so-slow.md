@@ -1,7 +1,8 @@
 ---
 title: Why Is My Website So Slow? (And What It's Quietly Costing You)
 slug: why-is-my-website-so-slow
-description: A slow website costs you customers and Google rankings. Here's what actually makes small-business sites slow, how to test yours in two minutes, and how to fix it for good.
+title_tag: Why Is My Website So Slow? (What It Costs You)
+description: A slow website costs you customers and rankings. Here's what makes small-business sites slow, how to test yours, and how to fix it.
 keyword: why is my website slow
 category: Performance
 date: 2026-06-08

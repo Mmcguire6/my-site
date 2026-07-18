@@ -1,13 +1,14 @@
 ---
 title: What a Small-Business Website Should Cost in Alberta (2026 Price Guide)
 slug: small-business-website-cost-alberta
-description: Small-business websites in 2026 run from $0 to $35,000 — a useless range if you just want a fair price. Here's what you actually pay, what drives the cost, and where the money quietly leaks.
+title_tag: What a Small-Business Website Costs in Alberta
+description: Small-business websites run from $0 to $35,000. Here's what you actually pay in Alberta, what drives the cost, and where the money quietly leaks.
 keyword: small business website cost
 category: Websites
 date: 2026-07-10
 read_time: 8
-cta_title: See what <em>$99/month</em> actually gets you?
-cta_body: We build fast, hand-coded websites for Alberta small businesses from $99/month — no big upfront bill, no page-builder bloat, and the growth system built in. Send a few sentences about your business and you'll get back a working preview before you pay a cent.
+cta_title: See what <em>$97/month</em> actually gets you?
+cta_body: We build fast, hand-coded websites for Alberta small businesses from $97/month — no big upfront bill, no page-builder bloat, and the growth system built in. Send a few sentences about your business and you'll get back a working preview before you pay a cent.
 ---
 
 Ask what a small-business website costs and you'll get a straight answer: somewhere between **$0 and $35,000.** Useless, right? That range is technically true and completely unhelpful when you're just trying to figure out what's fair to pay for your shop, trade, or clinic here in Alberta.
@@ -21,7 +22,7 @@ There are really four ways to get a website, and they land at very different pri
 - **Do it yourself on a builder (Wix, Squarespace, GoDaddy):** roughly **$200 to $600 a year** including hosting. Cheapest on paper. You supply all the time, the design, and the copy — and these platforms are often slow and hard to rank.
 - **Hire a freelancer:** about **$1,500 to $8,000** one-time for a custom small-business site. Quality swings wildly with the person.
 - **Hire an agency:** **$6,000 to $35,000+** for strategy, custom design, and development. Great work at the top end; a lot of markup and bloat at the low end.
-- **Managed monthly (design-build-host on a subscription):** from around **$99/month,** which spreads the cost and rolls hosting, updates, and support into one predictable bill instead of a big upfront hit.
+- **Managed monthly (design-build-host on a subscription):** from around **$97/month,** which spreads the cost and rolls hosting, updates, and support into one predictable bill instead of a big upfront hit.
 
 Most professional builds land somewhere between **$3,000 and $15,000** if you're paying upfront — but the number swings hard based on what's actually in the site.
 
@@ -59,13 +60,13 @@ The goal isn't the lowest price or the highest. It's the best **return:** a fast
 
 For most local businesses — a trade, a clinic, a shop — you don't need a $15,000 agency build or a slow DIY template. You need a fast, hand-coded site with real pages for your services and towns, built to convert and easy to keep current.
 
-That's the whole idea behind our **$99/month** approach: a professionally built, fast, local-first website with hosting, updates, and the growth system rolled in — no five-figure upfront bill, and no page-builder tax dragging it down. You see a working preview before you pay anything, so you're never guessing what you're buying.
+That's the whole idea behind our **$97/month** approach: a professionally built, fast, local-first website with hosting, updates, and the growth system rolled in — no five-figure upfront bill, and no page-builder tax dragging it down. You see a working preview before you pay anything, so you're never guessing what you're buying.
 
 ## Frequently asked questions
 
 ### How much does a small-business website cost in 2026?
 
-Most professional builds land between **$3,000 and $15,000** if you pay upfront, though the full range runs from about $200/year for a DIY builder to $35,000+ at a full-service agency. Managed monthly options start around **$99/month** and spread the cost with hosting and support included. What you pay depends mostly on custom design, number of pages, functionality, and whether speed and SEO are done properly.
+Most professional builds land between **$3,000 and $15,000** if you pay upfront, though the full range runs from about $200/year for a DIY builder to $35,000+ at a full-service agency. Managed monthly options start around **$97/month** and spread the cost with hosting and support included. What you pay depends mostly on custom design, number of pages, functionality, and whether speed and SEO are done properly.
 
 ### Why are website quotes so different for the same thing?
 
@@ -81,4 +82,4 @@ It can work for a very simple presence, but for a business that needs leads it u
 
 ### How much should an Alberta contractor or small business pay?
 
-Enough for a fast, clear, well-ranked site — and not a dollar for bloat. For most local Alberta businesses that means either a mid-range custom build (roughly $3,000–$8,000 done well) or a managed monthly plan from around **$99/month** that avoids the big upfront bill. The right number is whatever brings in more work than it costs; the wrong one is a bargain site that pulls in nothing.
+Enough for a fast, clear, well-ranked site — and not a dollar for bloat. For most local Alberta businesses that means either a mid-range custom build (roughly $3,000–$8,000 done well) or a managed monthly plan from around **$97/month** that avoids the big upfront bill. The right number is whatever brings in more work than it costs; the wrong one is a bargain site that pulls in nothing.

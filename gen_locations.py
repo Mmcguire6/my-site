@@ -780,11 +780,9 @@ def nearby_links_html(nearby_slugs: list[str]) -> str:
 
 def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     extras = EXTRAS.get(slug, {"areas": "the surrounding region", "nearby": []})
-    title = (f"{name} Websites &amp; AI Systems | Web Design, AI Automation &amp; SEO "
-             f"| Northern Peak Systems")
-    meta_desc = (f"Connected business systems for {name} small businesses: custom websites, "
-                 f"AI automation, and SEO. Founder-led, Edmonton-based, from $97/month with "
-                 f"no long-term contracts. Trades, shops, clinics, and professional services.")
+    title = f"{name} Web Design &amp; SEO | Northern Peak Systems"
+    meta_desc = (f"Custom websites, AI automation, and local SEO for {name} small businesses "
+                 f"— founder-led, from $97/month, no long-term contracts.")
 
     html = CITY_PAGE.format(
         slug=slug,
@@ -822,8 +820,8 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-<title>Alberta Websites &amp; AI Systems for Edmonton, Calgary &amp; Area Businesses | Northern Peak Systems</title>
-<meta name="description" content="Northern Peak Systems builds connected business systems for Alberta small businesses: custom websites, AI automation, and SEO. Founder-led, Edmonton-based, from $97/month with no long-term contracts. Serving Canada &amp; the US.">
+<title>Alberta Web Design &amp; Local SEO | Northern Peak Systems</title>
+<meta name="description" content="Custom websites, AI automation, and local SEO for small businesses across Alberta — Edmonton, Calgary, Red Deer and beyond. From $97/month, no contracts.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/locations">
@@ -985,6 +983,19 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <section class="loc-grid">
     <div class="wrap">
 {prov_blocks}
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <span class="eyebrow">Why local</span>
+        <h2 class="section-h">A web partner that actually <em>knows Alberta.</em></h2>
+        <p class="section-body">
+            Most Alberta small businesses don't need a big-agency retainer or a slow, template-heavy website &mdash; they need a fast site that ranks in their own town and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed-call text-back, booking, reviews, and follow-up, all founder-led from right here in Edmonton.
+        </p>
+        <p class="section-body">
+            Because we're local and remote-capable, you get the same connected system whether you're a contractor in Red Deer, a clinic in Calgary, or a shop in St. Albert &mdash; built to load fast, rank for &ldquo;your service + your city,&rdquo; and turn visitors into booked jobs. Flat pricing from $97/month, no long-term contracts, and a free working preview before you decide.
+        </p>
     </div>
 </section>
 

@@ -1,7 +1,8 @@
 ---
 title: 7 Reasons Your Business Isn't Showing Up on Google Maps (and How to Fix Each One)
 slug: why-isnt-my-business-on-google-maps
-description: The top 3 spots on Google Maps take the majority of local clicks. If your business isn't one of them, here are the 7 reasons why — and exactly how to fix each one.
+title_tag: 7 Reasons You're Not Showing on Google Maps
+description: The top 3 Google Maps spots take most local clicks. If you're not one of them, here are 7 reasons why — and how to fix each.
 keyword: why isn't my business showing up on google maps
 category: Local SEO
 date: 2026-07-16

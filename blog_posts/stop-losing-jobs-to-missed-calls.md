@@ -1,7 +1,8 @@
 ---
 title: 5 Ways to Stop Losing Jobs to Missed Calls (and What Each One Costs You)
 slug: stop-losing-jobs-to-missed-calls
-description: Around 62% of calls to home-service businesses go unanswered, and most callers never try again. Here's what every missed call costs a contractor — and 5 proven ways to stop the leak.
+title_tag: 5 Ways to Stop Losing Jobs to Missed Calls
+description: Around 62% of calls to home-service businesses go unanswered. Here's what every missed call costs you — and 5 proven ways to stop the leak.
 keyword: missed calls small business
 category: Lead Generation
 date: 2026-07-02

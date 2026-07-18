@@ -1,7 +1,8 @@
 ---
 title: 6 Reasons Your Business Needs Online Booking (Not Just a Phone Number)
 slug: online-booking-small-business-alberta
-description: Roughly 4 in 10 booking requests for local businesses come in after hours. Here are 6 reasons phone-only booking is costing you jobs, and how to fix each one.
+title_tag: 6 Reasons Your Business Needs Online Booking
+description: Roughly 4 in 10 booking requests come in after hours. Here are 6 reasons phone-only booking is costing you jobs — and how to fix it.
 keyword: online booking for small business
 category: Lead Generation
 date: 2026-07-18

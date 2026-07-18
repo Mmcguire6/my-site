@@ -1,13 +1,14 @@
 ---
 title: 7 Reasons Your Contractor Website Isn't Getting Leads (and How to Fix Each One)
 slug: contractor-website-not-getting-leads
-description: The average contractor website turns just 1-2% of visitors into leads. Here are the 7 reasons yours isn't getting calls — with the real cost of each, and exactly how to fix it.
+title_tag: 7 Reasons Your Contractor Website Gets No Leads
+description: The average contractor website turns just 1-2% of visitors into leads. Here are 7 reasons yours isn't getting calls — and how to fix each one.
 keyword: contractor website not getting leads
 category: Lead Generation
 date: 2026-06-24
 read_time: 9
 cta_title: Want a site that <em>turns visitors into customers?</em>
-cta_body: We build fast, clear websites for Alberta trades and local service businesses — sites that load in a blink, read in seconds, and make it dead-simple to call or book, from $99/month. Send a few sentences about your business and you'll get back a working preview, no commitment.
+cta_body: We build fast, clear websites for Alberta trades and local service businesses — sites that load in a blink, read in seconds, and make it dead-simple to call or book, from $97/month. Send a few sentences about your business and you'll get back a working preview, no commitment.
 ---
 
 The average contractor website turns just **1 to 2% of its visitors into a lead.** The other 98% look once and leave — most of them in under ten seconds — and you never even know they were there.

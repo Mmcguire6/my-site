@@ -465,12 +465,12 @@ def write_post(p: dict) -> Path:
             for q, a in p["faqs"])
         faq_html = f"""<section class="post-faq"><div class="wrap"><p class="eyebrow">FAQ</p><h2>Frequently asked questions</h2><dl>{items}</dl></div></section>"""
 
-    head = HEAD.format(title=html.escape(p["title"]) + " | Northern Peak Systems",
+    head = HEAD.format(title=html.escape(p.get("title_tag", p["title"] + " | Northern Peak Systems")),
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        ld_json=post_schema(p, url), styles=BLOG_CSS)
     cta_eyebrow = p.get("cta_eyebrow", "See it first")
     cta_title = p.get("cta_title", "Want a site that's <em>fast by default?</em>")
-    cta_body = p.get("cta_body", "Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $99/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.")
+    cta_body = p.get("cta_body", "Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $97/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.")
     cover_svg = COVER_ICONS.get(p.get("category", "").strip(), COVER_ICONS["_default"])
     body = f"""{nav_html()}
 <main id="main">
