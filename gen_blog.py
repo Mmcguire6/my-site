@@ -298,7 +298,95 @@ BLOG_CSS = CITY_STYLES + """
 .post-card:hover h2{color:var(--gold-2);}
 .post-card p{font-size:16px;line-height:1.6;color:var(--mist);max-width:62ch;margin:0 0 14px;}
 .post-card-meta{font-size:12.5px;letter-spacing:.02em;color:var(--mist-2);}
+
+/* ============================================================
+   LIGHT EDITORIAL THEME — post + index pages sit light between
+   the dark nav and dark footer. More air, warmer paper, imagery.
+   ============================================================ */
+:root{--ink:#191b1f;--body:#42454c;--muted:#7a7e87;--paper:#fdfcfa;--paper-2:#f7f5f1;--paper-3:#f4f1ea;--gline:#e6e1d8;--glink:#a76f2c;--glink-hi:#875619;}
+main#main{background:var(--paper);}
+
+/* hero (light) */
+.bhero{background:var(--paper-2);border-bottom:1px solid var(--gline);}
+.bhero-bg,.bhero-scrim{display:none;}
+.bhero .wrap{max-width:860px;padding-top:clamp(52px,6.5vw,92px);padding-bottom:clamp(26px,3vw,38px);}
+.bhero .eyebrow{color:var(--glink);}
+.bhero h1{color:var(--ink);margin:18px 0 20px;}
+.bhero h1 em{color:var(--gold);}
+.post-meta{color:var(--muted);}
+.post-meta span + span::before{color:#c2bcae;}
+
+/* featured cover band (imagery) */
+.bcover{background:var(--paper-2);}
+.bcover .wrap{max-width:1080px;padding-top:clamp(20px,2.6vw,34px);padding-bottom:4px;}
+.bcover-inner{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/6;min-height:200px;
+  background:#0e1526;border:1px solid var(--gline);box-shadow:0 34px 70px -46px rgba(18,24,40,.55);
+  display:flex;align-items:center;justify-content:center;}
+.bcover-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;}
+.bcover-inner::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg,rgba(12,18,34,.9),rgba(12,18,34,.4)),radial-gradient(75% 130% at 88% 92%,rgba(197,137,74,.42),transparent 60%);}
+.bcover-cat{position:absolute;left:clamp(20px,3vw,34px);top:clamp(16px,2.4vw,26px);z-index:2;
+  font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,231,206,.9);}
+.bcover-ic{position:relative;z-index:2;color:rgba(246,234,210,.92);display:inline-flex;}
+.bcover-ic svg{width:clamp(52px,7vw,96px);height:clamp(52px,7vw,96px);stroke-width:1.1;}
+
+/* body (light + airy) */
+.post-body{background:var(--paper);padding:clamp(52px,6.5vw,96px) 0 clamp(56px,7vw,104px);}
+.post-body .wrap{max-width:720px;}
+.post-body p,.post-body li{color:var(--body);line-height:1.85;}
+.post-body > p:first-of-type{color:var(--ink);}
+.post-body h2{color:var(--ink);margin:clamp(48px,6vw,72px) 0 18px;}
+.post-body h3{color:var(--glink);margin:40px 0 12px;}
+.post-body strong{color:var(--ink);}
+.post-body em{color:var(--body);}
+.post-body a{color:var(--glink);border-bottom-color:rgba(167,111,44,.32);}
+.post-body a:hover{color:var(--glink-hi);border-bottom-color:var(--glink-hi);}
+.post-body ol li::before{color:var(--glink);}
+.post-body blockquote p{color:var(--ink);}
+.post-body code{background:var(--paper-3);border-color:var(--gline);color:var(--glink-hi);}
+
+/* faq (light tint) */
+.post-faq{background:var(--paper-3);border-top:1px solid var(--gline);}
+.post-faq .eyebrow{color:var(--glink);}
+.post-faq h2{color:var(--ink);}
+.faq-q{border-top-color:#e2ddd2;}
+.faq-q dt{color:var(--ink);}
+.faq-q dd{color:#4a4d54;}
+.faq-q dd a{color:var(--glink);}
+.faq-q dd a:hover{color:var(--glink-hi);}
+
+/* cta (warm light band, gold button pops) */
+.post-cta{background:#f6efe1;border-top:1px solid #ece0cb;}
+.post-cta .eyebrow{color:var(--glink);}
+.post-cta h2{color:var(--ink);}
+.post-cta h2 em{color:var(--gold);}
+.post-cta p{color:#4a4d54;}
+.post-back{color:var(--muted);}
+.post-back:hover{color:var(--glink-hi);}
+
+/* index (light) */
+.blog-hero{background:var(--paper);}
+.blog-hero .eyebrow{color:var(--glink);}
+.blog-hero h1{color:var(--ink);}
+.blog-hero h1 em{color:var(--gold);}
+.blog-hero .lede{color:#4a4d54;}
+.post-list{background:var(--paper);}
+.post-card{border-top-color:var(--gline);}
+.post-card:last-child{border-bottom-color:var(--gline);}
+.post-card-cat{color:var(--glink);}
+.post-card h2{color:var(--ink);}
+.post-card:hover h2{color:var(--glink-hi);}
+.post-card p{color:#4a4d54;}
+.post-card-meta{color:var(--muted);}
 """
+
+COVER_ICONS = {
+    "Performance": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 14l4.5-4.5"/><circle cx="12" cy="14" r="1.4"/></svg>',
+    "Lead Generation": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>',
+    "Local SEO": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-10.2A6.5 6.5 0 0 1 18.5 10.8C18.5 15.3 12 21 12 21z"/><circle cx="12" cy="10.6" r="2.4"/></svg>',
+    "Websites": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18"/><path d="M6.2 6.7h.01M8.5 6.7h.01"/></svg>',
+    "_default": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>',
+}
 
 HEAD = """<!DOCTYPE html>
 <html lang="en">
@@ -380,6 +468,10 @@ def write_post(p: dict) -> Path:
     head = HEAD.format(title=html.escape(p["title"]) + " | Northern Peak Systems",
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        ld_json=post_schema(p, url), styles=BLOG_CSS)
+    cta_eyebrow = p.get("cta_eyebrow", "See it first")
+    cta_title = p.get("cta_title", "Want a site that's <em>fast by default?</em>")
+    cta_body = p.get("cta_body", "Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $99/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.")
+    cover_svg = COVER_ICONS.get(p.get("category", "").strip(), COVER_ICONS["_default"])
     body = f"""{nav_html()}
 <main id="main">
 <article>
@@ -392,15 +484,20 @@ def write_post(p: dict) -> Path:
         <p class="post-meta"><span>{pretty_date(p['date'])}</span><span>{p['read_time']} min read</span><span>By {AUTHOR}</span></p>
     </div>
 </header>
+<section class="bcover"><div class="wrap"><div class="bcover-inner">
+    <img src="../img/work-hero-bg.webp" alt="" loading="lazy" decoding="async">
+    <span class="bcover-cat">{html.escape(p.get('category','Article'))}</span>
+    <span class="bcover-ic" aria-hidden="true">{cover_svg}</span>
+</div></div></section>
 <div class="post-body"><div class="wrap">
 {p['body_html']}
 </div></div>
 </article>
 {faq_html}
 <section class="post-cta"><div class="wrap">
-    <p class="eyebrow">See it first</p>
-    <h2>Want a site that's <em>fast by default?</em></h2>
-    <p>Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $99/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.</p>
+    <p class="eyebrow">{cta_eyebrow}</p>
+    <h2>{cta_title}</h2>
+    <p>{cta_body}</p>
     <div class="post-cta-actions">
         <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
         <a href="index.html" class="post-back">← Back to blog</a>

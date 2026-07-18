@@ -46,16 +46,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northernpeaksystems.ca/blog/</loc>
-    <lastmod>2026-07-14</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://northernpeaksystems.ca/blog/why-is-my-website-so-slow</loc>
-    <lastmod>2026-07-14</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://northernpeaksystems.ca/features/website</loc>
     <lastmod>2026-07-14</lastmod>
     <priority>0.75</priority>
@@ -129,5 +119,35 @@
     <loc>https://northernpeaksystems.ca/locations/red-deer</loc>
     <lastmod>2026-07-14</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/why-isnt-my-business-on-google-maps.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/small-business-website-cost-alberta.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/stop-losing-jobs-to-missed-calls.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/contractor-website-not-getting-leads.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northernpeaksystems.ca/blog/why-is-my-website-so-slow.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
