@@ -160,6 +160,22 @@ h1,h2{font-family:var(--display);}
 .m2-card .ic svg{width:15px;height:15px;}
 .m2-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;}
 .m2-card span{display:block;font-size:11px;color:#a9a49a;line-height:1.45;margin-top:3px;}
+.nav-dd-menu .m2-card.soon{display:block;background:#101014;padding:14px 16px;white-space:normal;cursor:default;}
+.m2-card.soon .ic{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:#7b766c;}
+.m2-card.soon b{color:#cfc9bd;}
+.m2-card .m2-soon{display:inline-block;margin:0 0 0 6px;padding:2px 7px;border:1px solid rgba(210,162,76,0.4);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;line-height:1.4;color:#d2a24c;vertical-align:1px;}
+/* Solutions mega (industries): smaller two-column layout */
+.nav-dd-menu.mega.mega-sm{width:min(800px,calc(100vw - 28px));}
+.mega3-grid{display:grid;grid-template-columns:250px 1fr;}
+.mega3-rail{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:24px 22px;background:linear-gradient(180deg,#17130c 0%,#101014 100%);border-right:1px solid rgba(255,255,255,0.07);}
+.mega3-rail .m2-title{font-size:20px;}
+.mega3-rail p{font-size:12px;line-height:1.55;color:#cfc9bd;white-space:normal;}
+.mega3-items{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);}
+.nav-dd-menu a.m3-item{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;border-radius:0;background:#101014;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.m3-item:hover{background:#17171c;}
+.m3-item svg{flex:none;width:22px;height:22px;margin-top:1px;color:#d2a24c;}
+.m3-item b{display:block;font-size:13px;font-weight:700;line-height:1.3;color:#fff;}
+.m3-item span span{display:block;margin-top:3px;font-size:11px;line-height:1.45;color:#a9a49a;}
 .m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
 .m2-foot .chk{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .m2-foot .chk svg{width:15px;height:15px;}
@@ -639,32 +655,35 @@ main > section{position:relative;z-index:1;}
                             <a href="how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
                         </aside>
                         <div class="mega2-cards">
-                        <a href="features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
-                        <a href="features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
-                        <a href="features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text-Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
-                        <a href="features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
-                        <a href="features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
-                        <a href="features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
-                        <div class="m2-foot">
-                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <div>
-                                <b>Everything Working Together</b>
-                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
-                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
-                            </div>
-                        </div>
+                        <a href="features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Websites &amp; SEO</b><span>Get discovered online and turn website visitors into new opportunities.</span></a>
+                        <a href="features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><b>Lead Management</b><span>Capture inquiries, manage conversations, and keep every opportunity organized.</span></a>
+                        <a href="features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><b>Automated Follow-Up</b><span>Respond to missed calls, follow up with leads, and recover outstanding estimates.</span></a>
+                        <a href="features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><b>Reputation Management</b><span>Generate Google reviews and build trust with future customers.</span></a>
+                        <a href="features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span><b>Customer Retention</b><span>Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span></a>
+                        <div class="m2-card soon" aria-disabled="true"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><b>Revenue Insights <span class="m2-soon">Coming soon</span></b><span>Track opportunities, appointments, and revenue across your customer journey.</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="nav-dd">
+            <div class="nav-dd nav-dd-static">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-                <div class="nav-dd-menu">
-                    <a href="features/missed-call-text-back.html">Capture every call</a>
-                    <a href="features/lead-follow-up.html">Convert more estimates</a>
-                    <a href="features/review-automation.html">Get more 5-star reviews</a>
-                    <a href="features/local-seo.html">Get found on Google</a>
+                <div class="nav-dd-menu mega mega-sm">
+                    <div class="mega3-grid">
+                        <aside class="mega3-rail">
+                            <span class="m2-eyebrow">Built for your industry</span>
+                            <div class="m2-title">Technology that understands <span>your business.</span></div>
+                            <p>Purpose-built revenue systems for the trades.</p>
+                            <a href="#trades" class="m2-btn">Explore All Industries <span class="arr">&rarr;</span></a>
+                        </aside>
+                        <div class="mega3-items">
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8a3 3 0 0 1 3 3v2h3a2 2 0 0 1 2 2v3h-4v-2h-2a2 2 0 0 1-2-2v-1h-8z"/><path d="M8 8V5h4"/><path d="M18 21.5a1.2 1.2 0 0 1-2.4 0c0-.7 1.2-2 1.2-2s1.2 1.3 1.2 2z"/></svg><span><b>Plumbing</b><span>Capture emergency calls, follow up on estimates, and generate repeat business.</span></span></a>
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c0-2.5.6-4.6 2.6-4.6 1.4 0 2 1.4 1.3 2.6-.8 1.3-2.4 1.8-3.9 2M13.6 12c2.5 0 4.6.6 4.6 2.6 0 1.4-1.4 2-2.6 1.3-1.3-.8-1.8-2.4-2-3.9M12 13.6c0 2.5-.6 4.6-2.6 4.6-1.4 0-2-1.4-1.3-2.6.8-1.3 2.4-1.8 3.9-2M10.4 12c-2.5 0-4.6-.6-4.6-2.6 0-1.4 1.4-2 2.6-1.3 1.3.8 1.8 2.4 2 3.9"/></svg><span><b>HVAC</b><span>Convert service inquiries and automate seasonal maintenance reminders.</span></span></a>
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span><b>Electrical</b><span>Manage new inquiries, follow up on quotes, and build customer relationships.</span></span></a>
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M16 6.3V4h2.5v4.2"/><path d="M10 20v-5h4v5"/></svg><span><b>Roofing</b><span>Recover outstanding estimates and collect reviews from completed projects.</span></span></a>
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M8 15h8a4 4 0 0 0 .6-7.96A5 5 0 0 0 7.4 7.04 4 4 0 0 0 8 15z"/></svg><span><b>Landscaping</b><span>Capture seasonal demand and reactivate previous customers.</span></span></a>
+                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18v-3a7 7 0 0 1 14 0v3"/><path d="M10 8.3V5.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2.8"/><path d="M12 11v3"/></svg><span><b>General Contractors</b><span>Organize inquiries, follow up on proposals, and stay connected with customers.</span></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="pricing.html">Pricing</a>
@@ -706,7 +725,7 @@ main > section{position:relative;z-index:1;}
     </div>
     <nav class="mnav-links" aria-label="Mobile">
         <a href="#features">Platform</a>
-        <a href="features/missed-call-text-back.html">Solutions</a>
+        <a href="#trades">Solutions</a>
         <a href="pricing.html">Pricing</a>
         <a href="how.html">How it works</a>
         <a href="blog/">Blog</a>
@@ -988,7 +1007,7 @@ main > section{position:relative;z-index:1;}
 </section>
 
 <!-- TRADES -->
-<section class="trades light sec reveal">
+<section class="trades light sec reveal" id="trades">
     <div class="wrap">
         <div class="trades-head">
             <span class="eyebrow">Built for the trades</span>
