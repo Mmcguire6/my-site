@@ -164,18 +164,43 @@ h1,h2{font-family:var(--display);}
 .m2-card.soon .ic{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:#7b766c;}
 .m2-card.soon b{color:#cfc9bd;}
 .m2-card .m2-soon{display:inline-block;margin:0 0 0 6px;padding:2px 7px;border:1px solid rgba(210,162,76,0.4);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;line-height:1.4;color:#d2a24c;vertical-align:1px;}
-/* Solutions mega (industries): smaller two-column layout */
-.nav-dd-menu.mega.mega-sm{width:min(800px,calc(100vw - 28px));}
-.mega3-grid{display:grid;grid-template-columns:250px 1fr;}
-.mega3-rail{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:24px 22px;background:linear-gradient(180deg,#17130c 0%,#101014 100%);border-right:1px solid rgba(255,255,255,0.07);}
-.mega3-rail .m2-title{font-size:20px;}
-.mega3-rail p{font-size:12px;line-height:1.55;color:#cfc9bd;white-space:normal;}
-.mega3-items{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);}
-.nav-dd-menu a.m3-item{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;border-radius:0;background:#101014;white-space:normal;transition:background .15s;}
-.nav-dd-menu a.m3-item:hover{background:#17171c;}
-.m3-item svg{flex:none;width:22px;height:22px;margin-top:1px;color:#d2a24c;}
-.m3-item b{display:block;font-size:13px;font-weight:700;line-height:1.3;color:#fff;}
-.m3-item span span{display:block;margin-top:3px;font-size:11px;line-height:1.45;color:#a9a49a;}
+/* Solutions mega v2 (mockup, compact): rail, 2x3 industry photo cards, "don't see your industry" strip */
+.nav-dd-menu.mega.mega-ind{width:min(1080px,calc(100vw - 48px));border-radius:16px;border-color:rgba(210,162,76,0.22);}
+.ix-grid{display:grid;grid-template-columns:330px 1fr;}
+.ix-rail{display:flex;flex-direction:column;align-items:flex-start;padding:26px 24px 22px;background:linear-gradient(180deg,rgba(18,17,16,0.97) 0%,rgba(24,20,15,0.92) 50%,rgba(28,22,16,0.6) 100%),url('/img/northern-peak-hero-bg.webp') right bottom/cover no-repeat;border-right:1px solid rgba(255,255,255,0.07);}
+.ix-title{margin-top:8px;font-family:var(--display);font-size:24px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#fff;}
+.ix-title span{display:block;color:var(--gold-2);}
+.ix-rail p{margin-top:9px;font-size:12.5px;line-height:1.55;color:#d6d0c4;white-space:normal;}
+.nav-dd-menu a.ix-btn{display:inline-flex;margin:16px 0 18px;padding:10px 20px;border-radius:8px;color:#181207;font-size:13.5px;}
+.nav-dd-menu a.ix-btn:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);color:#181207;}
+.ix-feats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);width:100%;margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);}
+.ix-feats li{display:flex;flex-direction:column;gap:8px;padding:0 10px;border-left:1px solid rgba(255,255,255,0.1);font-size:11px;line-height:1.38;color:#cfc9bd;white-space:normal;}
+.ix-feats li:first-child{padding-left:0;border-left:0;}
+.ix-fic,.ix-ic{display:grid;place-items:center;flex:none;border:1px solid rgba(210,162,76,0.35);background:linear-gradient(180deg,#2a2216,#15120d);color:var(--gold-2);}
+.ix-fic{width:30px;height:30px;border-radius:8px;}
+.ix-fic svg{width:16px;height:16px;}
+.ix-main{display:flex;flex-direction:column;gap:12px;padding:14px;background:#0c0c0f;}
+.ix-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.nav-dd-menu a.ix-card{display:flex;align-items:stretch;padding:0;border:1px solid rgba(255,255,255,0.09);border-radius:10px;overflow:hidden;background:#111114;white-space:normal;color:inherit;transition:border-color .18s,background .18s;}
+.nav-dd-menu a.ix-card:hover{border-color:rgba(210,162,76,0.45);background:#15151a;color:inherit;}
+.ix-body{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;padding:14px 10px 14px 16px;}
+.ix-head{display:flex;align-items:center;gap:8px;}
+.ix-ic{width:30px;height:30px;border-radius:8px;}
+.ix-ic svg{width:16px;height:16px;}
+.ix-head b{font-size:14px;font-weight:700;line-height:1.2;color:#fff;}
+.ix-desc{font-size:12px;line-height:1.45;color:#a9a49a;}
+.ix-go{flex:none;align-self:center;display:grid;place-items:center;width:26px;height:26px;margin-right:14px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.45);color:#fff;transition:background .18s,border-color .18s,color .18s;}
+.ix-go svg{width:11px;height:11px;}
+.ix-card:hover .ix-go{background:var(--gold);border-color:var(--gold);color:#181207;}
+.ix-more{display:flex;align-items:center;gap:14px;padding:12px 4px 2px;border-top:1px solid rgba(255,255,255,0.08);}
+.ix-more .ix-ic{width:32px;height:32px;border-radius:8px;}
+.ix-more .ix-ic svg{width:17px;height:17px;}
+.ix-more-h small{display:block;font-size:9.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);}
+.ix-more-h b{display:block;margin-top:2px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap;}
+.ix-more p{flex:1;min-width:0;padding:0 14px;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);font-size:11.5px;line-height:1.45;color:#a9a49a;white-space:normal;}
+.nav-dd-menu a.ix-more-btn{flex:none;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid rgba(210,162,76,0.55);border-radius:8px;font-size:12.5px;font-weight:600;color:var(--gold-2);white-space:nowrap;}
+.nav-dd-menu a.ix-more-btn:hover{border-color:var(--gold);background:rgba(210,162,76,0.08);color:var(--gold-2);}
+.ix-more-btn svg{width:13px;height:13px;}
 /* Platform mega menu v2 (mockup design, compact size) */
 .nav-dd-menu.mega.mega-xl{width:min(1080px,calc(100vw - 48px));border-radius:16px;border-color:rgba(210,162,76,0.22);}
 .mx-grid{display:grid;grid-template-columns:330px 1fr;}
@@ -701,21 +726,34 @@ main > section{position:relative;z-index:1;}
             </div>
             <div class="nav-dd nav-dd-static">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-                <div class="nav-dd-menu mega mega-sm">
-                    <div class="mega3-grid">
-                        <aside class="mega3-rail">
-                            <span class="m2-eyebrow">Built for your industry</span>
-                            <div class="m2-title">Technology that understands <span>your business.</span></div>
-                            <p>Purpose-built revenue systems for the trades.</p>
-                            <a href="#trades" class="m2-btn">Explore All Industries <span class="arr">&rarr;</span></a>
+                <div class="nav-dd-menu mega mega-ind">
+                    <div class="ix-grid">
+                        <aside class="ix-rail">
+                            <span class="mx-eyebrow">Built for your industry</span>
+                            <div class="ix-title">Built for the trades. <span>Designed for growth.</span></div>
+                            <p>Whether you&rsquo;re a one-truck operation or managing a growing crew, The Peak System helps you capture opportunities, follow up with customers, and turn more inquiries into paying jobs.</p>
+                            <a href="#trades" class="btn btn-gold btn-tc ix-btn">Explore All Industries <span class="arr">&rarr;</span></a>
+                            <ul class="ix-feats">
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Industry-specific workflows</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Scalable for any size business</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Built for the entire home-service industry</li>
+                            </ul>
                         </aside>
-                        <div class="mega3-items">
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8a3 3 0 0 1 3 3v2h3a2 2 0 0 1 2 2v3h-4v-2h-2a2 2 0 0 1-2-2v-1h-8z"/><path d="M8 8V5h4"/><path d="M18 21.5a1.2 1.2 0 0 1-2.4 0c0-.7 1.2-2 1.2-2s1.2 1.3 1.2 2z"/></svg><span><b>Plumbing</b><span>Capture emergency calls, follow up on estimates, and generate repeat business.</span></span></a>
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c0-2.5.6-4.6 2.6-4.6 1.4 0 2 1.4 1.3 2.6-.8 1.3-2.4 1.8-3.9 2M13.6 12c2.5 0 4.6.6 4.6 2.6 0 1.4-1.4 2-2.6 1.3-1.3-.8-1.8-2.4-2-3.9M12 13.6c0 2.5-.6 4.6-2.6 4.6-1.4 0-2-1.4-1.3-2.6.8-1.3 2.4-1.8 3.9-2M10.4 12c-2.5 0-4.6-.6-4.6-2.6 0-1.4 1.4-2 2.6-1.3 1.3.8 1.8 2.4 2 3.9"/></svg><span><b>HVAC</b><span>Convert service inquiries and automate seasonal maintenance reminders.</span></span></a>
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span><b>Electrical</b><span>Manage new inquiries, follow up on quotes, and build customer relationships.</span></span></a>
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M16 6.3V4h2.5v4.2"/><path d="M10 20v-5h4v5"/></svg><span><b>Roofing</b><span>Recover outstanding estimates and collect reviews from completed projects.</span></span></a>
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M8 15h8a4 4 0 0 0 .6-7.96A5 5 0 0 0 7.4 7.04 4 4 0 0 0 8 15z"/></svg><span><b>Landscaping</b><span>Capture seasonal demand and reactivate previous customers.</span></span></a>
-                        <a href="#trades" class="m3-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18v-3a7 7 0 0 1 14 0v3"/><path d="M10 8.3V5.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2.8"/><path d="M12 11v3"/></svg><span><b>General Contractors</b><span>Organize inquiries, follow up on proposals, and stay connected with customers.</span></span></a>
+                        <div class="ix-main">
+                            <div class="ix-cards">
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8a3 3 0 0 1 3 3v2h3a2 2 0 0 1 2 2v3h-4v-2h-2a2 2 0 0 1-2-2v-1h-8z"/><path d="M8 8V5h4"/><path d="M18 21.5a1.2 1.2 0 0 1-2.4 0c0-.7 1.2-2 1.2-2s1.2 1.3 1.2 2z"/></svg></span><b>Plumbing</b></span><span class="ix-desc">Capture emergency calls, follow up on estimates, and generate repeat business.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c0-2.5.6-4.6 2.6-4.6 1.4 0 2 1.4 1.3 2.6-.8 1.3-2.4 1.8-3.9 2M13.6 12c2.5 0 4.6.6 4.6 2.6 0 1.4-1.4 2-2.6 1.3-1.3-.8-1.8-2.4-2-3.9M12 13.6c0 2.5-.6 4.6-2.6 4.6-1.4 0-2-1.4-1.3-2.6.8-1.3 2.4-1.8 3.9-2M10.4 12c-2.5 0-4.6-.6-4.6-2.6 0-1.4 1.4-2 2.6-1.3 1.3.8 1.8 2.4 2 3.9"/></svg></span><b>HVAC</b></span><span class="ix-desc">Convert service inquiries and automate seasonal maintenance reminders.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><b>Electrical</b></span><span class="ix-desc">Manage new inquiries, follow up on quotes, and build customer relationships.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M16 6.3V4h2.5v4.2"/><path d="M10 20v-5h4v5"/></svg></span><b>Roofing</b></span><span class="ix-desc">Recover outstanding estimates and collect reviews from completed projects.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M8 15h8a4 4 0 0 0 .6-7.96A5 5 0 0 0 7.4 7.04 4 4 0 0 0 8 15z"/></svg></span><b>Landscaping</b></span><span class="ix-desc">Capture seasonal demand and reactivate previous customers.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18v-3a7 7 0 0 1 14 0v3"/><path d="M10 8.3V5.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2.8"/><path d="M12 11v3"/></svg></span><b>General Contractors</b></span><span class="ix-desc">Organize inquiries, follow up on proposals, and stay connected with customers.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            </div>
+                            <div class="ix-more">
+                                <span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                                <span class="ix-more-h"><small>Built for every trade</small><b>Don&rsquo;t see your industry?</b></span>
+                                <p>If your customers call, text, or search, it works for you too, from concrete and painting to pest control and pool services.</p>
+                                <a href="#trades" class="ix-more-btn">Explore All Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            </div>
                         </div>
                     </div>
                 </div>
