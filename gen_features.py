@@ -716,7 +716,7 @@ def nav_html(current_slug):
             <a href="../contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-line">Book a Call</a>
+            <a href="../contact.html" class="btn btn-line">Book a Demo</a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -741,7 +741,7 @@ def nav_html(current_slug):
         <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>""" % {"chev": DD_CHEVRON, "feats": features_dd(current_slug)}
 
@@ -922,7 +922,7 @@ def page_html(page):
                 <h1>%(h1)s</h1>
                 <p class="fhero-sub">%(sub)s</p>
                 <div class="fhero-actions">
-                    <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                    <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
                 </div>
                 <p class="fhero-note"><b>Included in the $297/mo system</b> &middot; No setup fee &middot; Cancel anytime</p>
             </div>
@@ -999,7 +999,7 @@ def page_html(page):
         <h2>%(cta)s</h2>
         <p>%(cta_sub)s</p>
         <div class="fcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+            <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>

@@ -286,7 +286,7 @@ section{position:relative;}
 .nav,.mnav{--bg:#0a0a0c; --bg-2:#0f0f12; --card:#131317; --card-2:#17171c; --line:rgba(255,255,255,0.08); --line-2:rgba(255,255,255,0.14); --gold:#d2a24c; --gold-2:#e6be6e; --gold-deep:#a97c33; --gold-line:rgba(210,162,76,0.28); --gold-soft:rgba(210,162,76,0.12); --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c; --cream:#f7f5f0; --ink:#16140f; --ink-2:#6f695d; --cream-line:#e8e2d4; --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif; --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
-.nav .wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
+.nav .wrap,.foot .wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
 .nav .btn,.mnav .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:12px 58px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
 .nav .btn .arr,.mnav .btn .arr{transition:transform .22s;}
 .nav .btn:hover .arr,.mnav .btn:hover .arr{transform:translateX(4px);}
@@ -428,7 +428,20 @@ section{position:relative;}
 .mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:14px;}
 .nav .wrap,.hero-v3 .wrap{max-width:1660px;}
 .nav .btn-tc,.mnav .btn-tc{text-transform:none;letter-spacing:0;font-size:clamp(15px,1.05vw,18px);padding:clamp(15px,1.15vw,20px) clamp(28px,3vw,52px);border-radius:8px;}
+.foot{background:#060607;border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 40px;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:clamp(30px,4vw,56px);}
 .foot-brand .brand-logo{height:52px;}
+.foot-copy{font-size:13px;color:var(--mist-2);line-height:1.7;margin-top:18px;max-width:32ch;}
+.foot-col h4{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist-2);margin-bottom:18px;font-weight:700;}
+.foot-col a{display:block;font-size:14px;color:var(--mist);padding:6px 0;transition:color .18s;}
+.foot-col a:hover{color:var(--gold);}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;margin-top:clamp(44px,5vw,64px);padding-top:26px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mist-2);}
+.foot-social{display:flex;gap:14px;align-items:center;}
+.foot-social a{width:36px;height:36px;border:1px solid var(--line-2);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--mist);transition:color .18s,border-color .18s;}
+.foot-social a:hover{color:var(--gold);border-color:var(--gold);}
+.foot-social svg{width:17px;height:17px;}
+@media(max-width:940px){.foot-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr;}}
 .nav-login{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--white);border:1px solid var(--line-2);border-radius:9px;padding:9px 22px;transition:border-color .18s,color .18s;margin-right:2px;}
 .nav-login:hover{border-color:var(--gold);color:var(--gold);}
 @media(max-width:1120px){.nav-login{display:none;}}
@@ -476,12 +489,12 @@ section{position:relative;}
                         <aside class="ix-rail">
                             <span class="mx-eyebrow">Built for your industry</span>
                             <div class="ix-title">Built for the trades. <span>Designed for growth.</span></div>
-                            <p>Whether you&rsquo;re a one-truck operation or managing a growing crew, The Peak System helps you capture opportunities, follow up with customers, and turn more inquiries into paying jobs.</p>
+                            <p>Built for owner-operators who run the business from their own phone. The Peak System catches the calls you miss, follows up on every lead and estimate, and turns more inquiries into paying jobs.</p>
                             <a href="index.html#trades" class="btn btn-gold btn-tc ix-btn">Explore All Industries <span class="arr">&rarr;</span></a>
                             <ul class="ix-feats">
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Industry-specific workflows</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Scalable for any size business</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Built for the entire home-service industry</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Messages written for your trade</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Built for 1&ndash;5 truck operations</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Founder-led, based in Alberta</li>
                             </ul>
                         </aside>
                         <div class="ix-main">
@@ -496,7 +509,7 @@ section{position:relative;}
                             <div class="ix-more">
                                 <span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
                                 <span class="ix-more-h"><small>Built for every trade</small><b>Don&rsquo;t see your industry?</b></span>
-                                <p>If your customers call, text, or search, it works for you too, from concrete and painting to pest control and pool services.</p>
+                                <p>If you run the business from your own phone and your customers call, text, or search, it works for you too.</p>
                                 <a href="index.html#trades" class="ix-more-btn">Explore All Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                             </div>
                         </div>
@@ -510,14 +523,12 @@ section{position:relative;}
                     <a href="how.html">How it works</a>
                     <a href="blog/">Blog</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="locations.html">Locations</a>
                 </div>
             </div>
             <div class="nav-dd">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Company <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
                 <div class="nav-dd-menu">
                     <a href="about.html">About</a>
-                    <a href="work.html">Our work</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
@@ -584,42 +595,41 @@ section{position:relative;}
     <div class="wrap">
         <div class="foot-grid">
             <div class="foot-brand">
-                <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-blurb">We build websites, AI automations, and SEO systems that help small businesses attract more leads, save time, and grow.</p>
-                <p class="foot-loc">Edmonton, AB &nbsp;&middot;&nbsp; Serving Canada &amp; the US</p>
+                <span class="brand"><img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
+                <p class="foot-copy">Websites, follow-up and reviews for Alberta trades. One flat monthly price, no contract.</p>
             </div>
             <div class="foot-col">
-                <h4>Site</h4>
+                <h4>Platform</h4>
+                <a href="features/website.html">Websites &amp; SEO</a>
+                <a href="features/crm-and-booking.html">Lead Management</a>
+                <a href="features/lead-follow-up.html">Automated Follow-Up</a>
+                <a href="features/review-automation.html">Reputation Management</a>
+                <a href="features/marketing-campaigns.html">Customer Retention</a>
+            </div>
+            <div class="foot-col">
+                <h4>Company</h4>
                 <a href="about.html">About</a>
-                <a href="work.html">Work</a>
+                <a href="how.html">How it works</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="faq.html">FAQ</a>
-                <a href="locations.html">All locations</a>
+                <a href="blog/">Blog</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="foot-col">
-                <h4>Features</h4>
-                <a href="features/website.html">Custom Websites</a>
-                <a href="features/review-automation.html">5-Star Review Funnel</a>
-                <a href="features/local-seo.html">Local SEO</a>
-                <a href="features/missed-call-text-back.html">Missed Call Text-Back</a>
-                <a href="features/crm-and-booking.html">CRM &amp; Booking</a>
-                <a href="features/lead-follow-up.html">Lead Follow-Up</a>
-                <a href="features/marketing-campaigns.html">Marketing Campaigns</a>
-            </div>
-            <div class="foot-col">
-                <h4>Let&rsquo;s connect</h4>
-                <a href="https://app.northernpeaksystems.ca/" class="foot-login">Client Login</a>
-                <div class="foot-contact">
-                    <a href="mailto:matt@northernpeaksystems.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>matt@northernpeaksystems.ca</a>
-                    <a href="tel:+15872005649"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>(587) 200-5649</a>
-                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Edmonton, Alberta</span>
-                </div>
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="locations.html">Service areas</a>
+                <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
+                <a href="https://app.northernpeaksystems.ca/">Client Login</a>
+                <a href="contact.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>&copy; <span id="yr">2026</span> Northern Peak Systems. All rights reserved.</span>
-            <span class="fb-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta</span>
+            <div class="foot-social">
+                <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
+                <a href="privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
+                <a href="terms.html" aria-label="Terms" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
+            </div>
         </div>
     </div>
 </footer>

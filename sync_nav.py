@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Sync the site-wide header to every page, using index.html as the single source of truth.
+"""Sync the site-wide header and footer to every page, using index.html as the single source of truth.
 
 What gets copied from index.html:
   - the desktop header   <header class="nav"> ... </header>
   - the mobile menu      <div class="mnav" id="mnav"> ... </div>
+  - the footer           <footer class="foot"> ... </footer>
   - every CSS rule the header needs (nav, dropdowns, mobile menu, header buttons,
     the header's CSS variables and its heading font), injected into each page as
     <style id="nav-sync-css"> just before </head> so it overrides older nav styles
@@ -11,7 +12,7 @@ What gets copied from index.html:
 Links and images are rewritten for each page's folder depth, and links to homepage
 anchors (#trades, #features) become index.html#... on other pages.
 
-Usage:  edit the header in index.html, then run   python sync_nav.py
+Usage:  edit the header or footer in index.html, then run   python sync_nav.py
 The generators (gen_blog.py, gen_features.py, gen_locations.py) call apply_nav() on
 their output, so regenerated pages keep the current header too.
 """
@@ -27,7 +28,7 @@ ROOT_PAGES = ["404.html", "about.html", "book.html", "contact.html", "faq.html",
               "locations.html", "pricing.html", "privacy.html", "terms.html", "work.html"]
 SUB_DIRS = ["features", "locations", "blog"]
 
-NAV_SELECTOR = re.compile(r"\.(?:nav|brand|mnav|mega|m2-|mx-|ix-|m3-)|btn-tc")
+NAV_SELECTOR = re.compile(r"\.(?:nav|brand|mnav|mega|m2-|mx-|ix-|m3-|foot)|btn-tc")
 BTN_SELECTOR = re.compile(r"^\.btn(?:-gold|-line|-tc)?(?::hover)?(?:\s+\.arr)?$")
 
 
@@ -53,6 +54,13 @@ def _matching_div(html, start):
 def _header_span(html):
     s = html.index('<header class="nav">')
     return s, html.index("</header>", s) + len("</header>")
+
+
+def _footer_span(html):
+    s = html.find('<footer class="foot">')
+    if s == -1:
+        return None
+    return s, html.index("</footer>", s) + len("</footer>")
 
 
 def _mnav_span(html):
@@ -106,8 +114,8 @@ def _nav_css(index_html):
             scoped = _scope_btn(st)
             if scoped:
                 keep.append(scoped)
-            elif st.startswith(".wrap{"):  # header uses the homepage's container padding on every page
-                keep.append(".nav " + st)
+            elif st.startswith(".wrap{"):  # header + footer use the homepage's container on every page
+                keep.append(".nav .wrap,.foot .wrap" + st[len(".wrap"):])
             elif NAV_SELECTOR.search(st.split("{", 1)[0]):
                 keep.append(st)
     return "\n".join(keep)
@@ -118,7 +126,8 @@ def _source():
     html = SOURCE.read_text(encoding="utf-8").replace("\r\n", "\n")
     hs, he = _header_span(html)
     ms, me = _mnav_span(html)
-    return html[hs:he], html[ms:me], _nav_css(html)
+    fs, fe = _footer_span(html)
+    return html[hs:he], html[ms:me], _nav_css(html), html[fs:fe]
 
 
 # ---------------------------------------------------------------- per-page
@@ -144,8 +153,8 @@ def _mark_active(header, page):
 
 
 def apply_nav(html, depth=0, page=None):
-    """Return `html` with the header, mobile menu and nav CSS replaced by index.html's."""
-    header, mnav, css = _source()
+    """Return `html` with the header, mobile menu, footer and their CSS replaced by index.html's."""
+    header, mnav, css, footer = _source()
     nl = "\r\n" if "\r\n" in html else "\n"
     header = _mark_active(_relink(header, depth), page)
     mnav = _relink(mnav, depth)
@@ -157,6 +166,9 @@ def apply_nav(html, depth=0, page=None):
     html = html[:hs] + fit(header) + html[he:]
     ms, me = _mnav_span(html)
     html = html[:ms] + fit(mnav) + html[me:]
+    span = _footer_span(html)
+    if span:
+        html = html[:span[0]] + fit(_relink(footer, depth)) + html[span[1]:]
 
     tag = f'<style id="{CSS_ID}">{nl}{fit(css)}{nl}</style>'
     existing = re.search(r'<style id="%s">.*?</style>' % CSS_ID, html, re.S)

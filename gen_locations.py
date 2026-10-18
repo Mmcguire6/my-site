@@ -198,7 +198,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <a href="../contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-line">Book a Call</a>
+            <a href="../contact.html" class="btn btn-line">Book a Demo</a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -220,7 +220,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -236,7 +236,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <p class="hhero-sub">Custom websites, AI automation, and SEO for {name} small businesses &mdash; built, connected, and supported by one founder-led team. From $97/month &middot; no long-term contracts.</p>
         <p class="hhero-lede">{intro}</p>
         <div class="hhero-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+            <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="../work.html" class="btn btn-ghost">See selected work</a>
         </div>
     </div>
@@ -400,7 +400,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <h2>A modern {name} system that <em>matches your work.</em></h2>
         <p>Send a few sentences about your {name} business and we'll build you a free preview &mdash; no cost, no obligation, no catch.</p>
         <div class="hcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+            <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="../pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>
@@ -937,7 +937,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="contact.html" class="btn btn-line">Book a Call</a>
+            <a href="contact.html" class="btn btn-line">Book a Demo</a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -959,7 +959,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -975,7 +975,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <p class="hhero-sub">Northern Peak Systems is founder-led and based in Edmonton, building connected systems &mdash; custom websites, AI automation, and SEO &mdash; for businesses in Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer.</p>
         <p class="hhero-lede">Our remote workflow handles businesses anywhere in Canada or the US. From $97/month &middot; no long-term contracts &middot; no big upfront cost.</p>
         <div class="hhero-actions">
-            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-ghost">See pricing</a>
         </div>
     </div>
@@ -1007,7 +1007,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <h2>Don't see your city? <em>We build everywhere.</em></h2>
         <p>If your business is anywhere in Canada or the US, send a few sentences about it and we'll build you a free preview &mdash; the remote workflow handles the rest.</p>
         <div class="hcta-actions">
-            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>

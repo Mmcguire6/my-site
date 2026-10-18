@@ -7,15 +7,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-<title>Local Business Websites &amp; Growth Systems | Northern Peak Systems</title>
-<meta name="description" content="We build your website and the growth system behind it — text-back, booking, reviews, and lead follow-up. Flat pricing, done-for-you, local Alberta team.">
+<title>Websites &amp; Follow-Up for Alberta Trades | Northern Peak Systems</title>
+<meta name="description" content="A website plus missed-call text-back, lead and estimate follow-up, booking and review requests for Alberta trades. $297/month, no contract, live in 7–10 days.">
 
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/">
 <meta property="og:url" content="https://northernpeaksystems.ca/">
-<meta property="og:title" content="Local Business Websites &amp; Growth Systems | Northern Peak Systems">
-<meta property="og:description" content="We build your website and the growth system behind it — text-back, booking, reviews, and lead follow-up. Flat pricing, done-for-you, local Alberta team.">
+<meta property="og:title" content="Websites &amp; Follow-Up for Alberta Trades | Northern Peak Systems">
+<meta property="og:description" content="A website plus missed-call text-back, lead and estimate follow-up, booking and review requests for Alberta trades. $297/month, no contract, live in 7–10 days.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -34,7 +34,7 @@
       "url": "https://northernpeaksystems.ca/",
       "logo": "https://northernpeaksystems.ca/favicon.png",
       "image": "https://northernpeaksystems.ca/favicon.png",
-      "description": "Northern Peak Systems builds AI automation, custom websites, and SEO for small businesses across Canada and the US — founder-led, all-inclusive.",
+      "description": "Northern Peak Systems builds websites with missed-call text-back, lead and estimate follow-up, booking and review requests for trades businesses in Alberta. Founder-led, $297/month, no contract.",
       "email": "matt@northernpeaksystems.ca",
       "priceRange": "$$",
       "founder": { "@type": "Person", "name": "Matthew McGuire", "url": "https://northernpeaksystems.ca/about" },
@@ -44,7 +44,7 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO and Local Search", "description": "Technical SEO, Google Business, and local-search foundations built in from launch." } }
       ],
       "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
-      "areaServed": { "@type": "Country", "name": "Canada" }
+      "areaServed": { "@type": "AdministrativeArea", "name": "Alberta" }
     },
     {
       "@type": "WebSite",
@@ -295,6 +295,36 @@ h1,h2{font-family:var(--display);}
 .hv3-pillars svg{flex:none;width:clamp(28px,2.1vw,38px);height:clamp(28px,2.1vw,38px);color:var(--gold);}
 .hv3-pillars b{display:block;font-size:clamp(13px,0.95vw,17px);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--white);}
 .hv3-pillars span{display:block;max-width:16ch;margin-top:3px;font-size:clamp(12.5px,0.85vw,15px);line-height:1.45;color:#bdb7ac;}
+/* 01 demo tabs (missed call / estimate follow-up) */
+.txd-tabs{display:flex;flex-direction:column;align-items:center;gap:18px;width:100%;}
+.txd-tablist{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--cream-line);border-radius:999px;background:#fff;box-shadow:0 10px 26px -18px rgba(60,45,20,0.4);}
+.txd-tab{padding:9px 18px;border:0;border-radius:999px;background:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:background .2s,color .2s;}
+.txd-tab:hover{color:var(--ink);}
+.txd-tab[aria-selected="true"]{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;}
+.txd-tab:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px;}
+.txd-panel[hidden]{display:none !important;}
+/* 05 customer retention */
+.ret-head{max-width:640px;}
+.ret-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(26px,3vw,40px);}
+.ret-card{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid var(--cream-line);border-radius:16px;background:#fff;box-shadow:0 20px 44px -30px rgba(60,45,20,0.35);}
+.ret-card b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:17px;font-weight:700;color:var(--ink);}
+.ret-card p{font-size:14.5px;line-height:1.55;color:var(--ink-2);}
+.ret-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid var(--gold-line);background:var(--gold-soft);color:var(--gold-deep);}
+.ret-ic svg{width:22px;height:22px;}
+.ret-card.soon{background:#fbfaf6;}
+.ret-card.soon .ret-ic{color:var(--ink-2);border-color:var(--cream-line);background:#f1ede4;}
+.ret-soon{padding:2px 9px;border:1px solid var(--gold-line);border-radius:999px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-deep);}
+.ret-cta{margin-top:clamp(24px,3vw,36px);}
+/* who it's for */
+.fit-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,4vw,64px);align-items:center;}
+.fit-trades{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.fit-trades li{padding:7px 14px;border:1px solid var(--line-2);border-radius:999px;font-size:13.5px;color:#e4dfd4;}
+.fit-not{padding:clamp(22px,2.6vw,34px);border:1px solid var(--gold-line);border-radius:18px;background:rgba(255,255,255,0.03);}
+.fit-not b{display:block;font-size:19px;font-weight:700;color:var(--white);}
+.fit-not ul{margin:14px 0 0;padding-left:20px;color:var(--mist);font-size:15px;line-height:1.6;}
+.fit-not li+li{margin-top:6px;}
+.fit-not p{margin-top:14px;font-size:14px;color:var(--mist);}
+@media(max-width:900px){.ret-grid{grid-template-columns:1fr;}.fit-grid{grid-template-columns:1fr;}}
 .hv3-band{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,0.12);background:rgba(10,10,12,0.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
 .hv3-band-inner{display:flex;align-items:center;min-height:clamp(84px,6.8vw,122px);}
 .hv3-band-label,.hv3-band-tag{margin:0;font-size:clamp(10.5px,0.75vw,13px);font-weight:600;line-height:1.7;letter-spacing:0.3em;text-transform:uppercase;color:#9d978c;}
@@ -731,12 +761,12 @@ main > section{position:relative;z-index:1;}
                         <aside class="ix-rail">
                             <span class="mx-eyebrow">Built for your industry</span>
                             <div class="ix-title">Built for the trades. <span>Designed for growth.</span></div>
-                            <p>Whether you&rsquo;re a one-truck operation or managing a growing crew, The Peak System helps you capture opportunities, follow up with customers, and turn more inquiries into paying jobs.</p>
+                            <p>Built for owner-operators who run the business from their own phone. The Peak System catches the calls you miss, follows up on every lead and estimate, and turns more inquiries into paying jobs.</p>
                             <a href="#trades" class="btn btn-gold btn-tc ix-btn">Explore All Industries <span class="arr">&rarr;</span></a>
                             <ul class="ix-feats">
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Industry-specific workflows</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Scalable for any size business</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Built for the entire home-service industry</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Messages written for your trade</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Built for 1&ndash;5 truck operations</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Founder-led, based in Alberta</li>
                             </ul>
                         </aside>
                         <div class="ix-main">
@@ -751,7 +781,7 @@ main > section{position:relative;z-index:1;}
                             <div class="ix-more">
                                 <span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
                                 <span class="ix-more-h"><small>Built for every trade</small><b>Don&rsquo;t see your industry?</b></span>
-                                <p>If your customers call, text, or search, it works for you too, from concrete and painting to pest control and pool services.</p>
+                                <p>If you run the business from your own phone and your customers call, text, or search, it works for you too.</p>
                                 <a href="#trades" class="ix-more-btn">Explore All Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                             </div>
                         </div>
@@ -765,14 +795,12 @@ main > section{position:relative;z-index:1;}
                     <a href="how.html">How it works</a>
                     <a href="blog/">Blog</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="locations.html">Locations</a>
                 </div>
             </div>
             <div class="nav-dd">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Company <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
                 <div class="nav-dd-menu">
                     <a href="about.html">About</a>
-                    <a href="work.html">Our work</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
@@ -842,7 +870,6 @@ main > section{position:relative;z-index:1;}
             <p class="hv3-sub">A complete system to capture leads, follow up automatically, turn more estimates into booked jobs, and bring customers back.</p>
             <div class="hv3-actions">
                 <a href="how.html" class="btn btn-gold btn-tc">See How It Works <span class="arr">&rarr;</span></a>
-                <a href="#txd-review" class="btn btn-ghost-light btn-tc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Watch Video (2 min)</a>
             </div>
             <ul class="hv3-pillars">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4v8a3 3 0 0 0 6 0V3h4v8a7 7 0 0 1-14 0z"/><path d="M5 7h4M15 7h4"/></svg><div><b>Capture</b><span>Every opportunity</span></div></li>
@@ -867,49 +894,120 @@ main > section{position:relative;z-index:1;}
     </div>
 </section>
 
-<!-- WEBSITE DESIGN -->
+<!-- 01 / AUTOMATED FOLLOW-UP -->
 <section class="light sec reveal" id="features">
     <div class="wrap">
         <div class="wds-grid">
             <div class="wds-shot">
-                <img src="img/summit-home-work.webp" srcset="img/summit-home-work-m.webp 720w, img/summit-home-work.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="Custom construction-company website design shown on a laptop and a phone" loading="lazy" decoding="async" width="1536" height="1024">
+                <div class="txd-tabs" data-txd-tabs>
+                    <div class="txd-tablist" role="tablist" aria-label="Follow-up demos">
+                        <button type="button" class="txd-tab" role="tab" id="tab-missed" aria-controls="panel-missed" aria-selected="true">Missed call</button>
+                        <button type="button" class="txd-tab" role="tab" id="tab-quote" aria-controls="panel-quote" aria-selected="false" tabindex="-1">Estimate follow-up</button>
+                    </div>
+                    <div class="txd-panel" id="panel-missed" role="tabpanel" aria-labelledby="tab-missed">
+                        <!-- Animated missed-call text-back demo (Summit Yard demo account). Script at the end of <body>. -->
+                        <figure class="txd" id="txd-missed" role="img" aria-label="Demo of what a customer sees: their call to Summit Yard and Landscape goes unanswered, and in the same minute they get a text saying sorry we missed you, can we help with a quote. They ask about a patio and book a free estimate from a link.">
+                            <ol class="txd-steps" aria-hidden="true">
+                                <li><span class="n">1</span><span><b>Call goes unanswered</b><small>You&rsquo;re on a job</small></span></li>
+                                <li><span class="n">2</span><span><b>Texted back</b><small>Same minute</small></span></li>
+                                <li><span class="n">3</span><span><b>Estimate booked</b><small>While you work</small></span></li>
+                            </ol>
+                            <div class="txd-col" aria-hidden="true">
+                                <div class="txd-phone">
+                            <div class="txd-screen">
+                                <div class="txd-island"></div>
+                                <div class="txd-status"><span class="txd-clock">2:14</span><span class="txd-batt"></span></div>
+                                <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
+                                        <div class="txd-thread">
+                                            <p class="txd-meta" data-i="1">Today 2:14 PM</p>
+                                            <div class="txd-msg txd-in" data-i="2">Sorry we missed you &mdash; this is Summit Yard &amp; Landscape. Can we help with a quote?</div>
+                                            <div class="txd-msg txd-out" data-i="3">Yes please! Looking at a new backyard patio.</div>
+                                            <div class="txd-msg txd-in" data-i="4">Great &mdash; grab a time for a free estimate here:<span class="txd-link">Book your free estimate<small>Pick a time that works &rarr;</small></span></div>
+                                            <div class="txd-msg txd-in" data-i="5"><span class="txd-ok">&#10003;</span> You&rsquo;re booked: free estimate, Thu 10:00 AM. Reply here if anything changes.</div>
+                                            <div class="txd-typing"><i></i><i></i><i></i></div>
+                                        </div>
+                                        <div class="txd-call">
+                                            <span class="txd-av">SY</span>
+                                            <span class="txd-call-name">Summit Yard &amp; Landscape</span>
+                                            <span class="txd-call-state">calling&hellip;</span>
+                                            <span class="txd-call-end"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .3-1A11.4 11.4 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="txd-cap">Demo account &middot; what your customer sees</p>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="txd-panel" id="panel-quote" role="tabpanel" aria-labelledby="tab-quote" hidden>
+                        <!-- Animated estimate follow-up demo (Summit Yard demo account). Script at the end of <body>. -->
+                        <figure class="txd" id="txd-quote" role="img" aria-label="Demo of what a customer sees after getting a quote: the quote arrives by text, a friendly check-in follows a few days later and again a week later, the customer replies YES, and the job is booked.">
+                            <ol class="txd-steps" aria-hidden="true">
+                                <li><span class="n">1</span><span><b>Quote sent</b><small>Monday</small></span></li>
+                                <li><span class="n">2</span><span><b>First check-in</b><small>3 days later</small></span></li>
+                                <li><span class="n">3</span><span><b>Second check-in</b><small>A week later</small></span></li>
+                                <li><span class="n">4</span><span><b>Job won</b><small>They reply YES</small></span></li>
+                            </ol>
+                            <div class="txd-col" aria-hidden="true">
+                                <div class="txd-phone">
+                                    <div class="txd-screen">
+                                        <div class="txd-island"></div>
+                                        <div class="txd-status"><span class="txd-clock">3:12</span><span class="txd-batt"></span></div>
+                                        <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
+                                        <div class="txd-thread">
+                                            <p class="txd-meta" data-i="1">Monday 3:12 PM</p>
+                                            <div class="txd-msg txd-in" data-i="2">Your patio quote from Summit Yard &amp; Landscape is ready: $8,400.<span class="txd-link">View your quote<small>Opens the PDF</small></span></div>
+                                            <p class="txd-meta" data-i="3">Thursday 10:00 AM</p>
+                                            <div class="txd-msg txd-in" data-i="4">Just checking in on your patio quote. Any questions? Happy to walk you through the options.</div>
+                                            <p class="txd-meta" data-i="5">Next Monday 10:00 AM</p>
+                                            <div class="txd-msg txd-in" data-i="6">Still thinking it over? Reply YES and we&rsquo;ll lock in a start date, or ask us anything.</div>
+                                            <div class="txd-msg txd-out" data-i="7">YES</div>
+                                            <div class="txd-msg txd-in" data-i="8"><span class="txd-ok">&#10003;</span> You&rsquo;re booked in! We&rsquo;ll call today to confirm your start date.</div>
+                                            <div class="txd-typing"><i></i><i></i><i></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="txd-cap">Demo account &middot; what your customer sees</p>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
             </div>
             <div>
-                <span class="eyebrow">01 / Custom Websites</span>
-                <h2 class="h-lg">A website that gets your <span class="gold">phone ringing.</span></h2>
-                <p class="lede">Hand-built for your business &mdash; and wired so every lead lands on your phone as a text.</p>
+                <span class="eyebrow">01 / Automated Follow-Up</span>
+                <h2 class="h-lg">Every call answered. <span class="gold">Every estimate chased.</span></h2>
+                <p class="lede">When you can&rsquo;t pick up, the customer hears from you in seconds. When a quote goes quiet, the follow-up goes out on its own.</p>
                 <div class="wout">
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Leads Go Straight to Your Phone</b>
-                        <p>Every form, button, and chat starts a text conversation &mdash; no lead buried in an inbox nobody checks.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Missed Calls Texted Back</b>
+                        <p>The moment a call slips by, the customer gets a text from your business &mdash; before they dial the next name on their list.</p>
                     </div>
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Actually Get Found Online</b>
-                        <p>Local SEO is built into every page from day one, so customers searching nearby find you &mdash; not just your competitors.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Every Lead Followed Up</b>
+                        <p>New inquiries get followed up by text until they book or tell you no.</p>
                     </div>
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Looks Perfect on Every Phone</b>
-                        <p>Most of your visitors arrive on mobile, so we design for the small screen first &mdash; fast, clean, and easy to tap.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Estimates That Don&rsquo;t Go Cold</b>
+                        <p>Quotes get a friendly check-in a few days later, then again, so the job doesn&rsquo;t slip away.</p>
                     </div>
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Hand-Coded, Not a Template</b>
-                        <p>No page builders, no bloat &mdash; a custom site that loads instantly and looks like your business, not everyone else&rsquo;s.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Works Nights and Weekends</b>
+                        <p>After hours, on the job, on holidays &mdash; it never takes a day off.</p>
                     </div>
                 </div>
                 <div class="blurb-cta">
-                    <a href="features/website.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+                    <a href="features/lead-follow-up.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 5-STAR REVIEW FUNNEL -->
+<!-- 02 / REPUTATION MANAGEMENT -->
 <section class="sec reveal glow">
     <div class="wrap">
         <div class="wds-grid">
             <div>
-                <span class="eyebrow">02 / 5-Star Reviews</span>
+                <span class="eyebrow">02 / Reputation Management</span>
                 <h2 class="h-lg">Turn happy customers into <span class="gold">five-star reviews.</span></h2>
                 <p class="lede">Your best customers rarely leave a review on their own. The system asks for you &mdash; and keeps asking politely until it&rsquo;s done.</p>
                 <div class="wout">
@@ -973,123 +1071,120 @@ main > section{position:relative;z-index:1;}
     </div>
 </section>
 
-<!-- MISSED CALL TEXT-BACK -->
+<!-- 03 / WEBSITES & SEO -->
 <section class="light sec reveal">
     <div class="wrap">
         <div class="wds-grid">
             <div class="wds-shot">
-                <!-- Animated missed-call text-back demo (Summit Yard demo account). Script at the end of <body>. -->
-                <figure class="txd" id="txd-missed" role="img" aria-label="Demo of what a customer sees: their call to Summit Yard and Landscape goes unanswered, and in the same minute they get a text saying sorry we missed you, can we help with a quote. They ask about a patio and book a free estimate from a link.">
-                    <ol class="txd-steps" aria-hidden="true">
-                        <li><span class="n">1</span><span><b>Call goes unanswered</b><small>You&rsquo;re on a job</small></span></li>
-                        <li><span class="n">2</span><span><b>Texted back</b><small>Same minute</small></span></li>
-                        <li><span class="n">3</span><span><b>Estimate booked</b><small>While you work</small></span></li>
-                    </ol>
-                    <div class="txd-col" aria-hidden="true">
-                        <div class="txd-phone">
-                    <div class="txd-screen">
-                        <div class="txd-island"></div>
-                        <div class="txd-status"><span class="txd-clock">2:14</span><span class="txd-batt"></span></div>
-                        <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
-                                <div class="txd-thread">
-                                    <p class="txd-meta" data-i="1">Today 2:14 PM</p>
-                                    <div class="txd-msg txd-in" data-i="2">Sorry we missed you &mdash; this is Summit Yard &amp; Landscape. Can we help with a quote?</div>
-                                    <div class="txd-msg txd-out" data-i="3">Yes please! Looking at a new backyard patio.</div>
-                                    <div class="txd-msg txd-in" data-i="4">Great &mdash; grab a time for a free estimate here:<span class="txd-link">Book your free estimate<small>Pick a time that works &rarr;</small></span></div>
-                                    <div class="txd-msg txd-in" data-i="5"><span class="txd-ok">&#10003;</span> You&rsquo;re booked: free estimate, Thu 10:00 AM. Reply here if anything changes.</div>
-                                    <div class="txd-typing"><i></i><i></i><i></i></div>
-                                </div>
-                                <div class="txd-call">
-                                    <span class="txd-av">SY</span>
-                                    <span class="txd-call-name">Summit Yard &amp; Landscape</span>
-                                    <span class="txd-call-state">calling&hellip;</span>
-                                    <span class="txd-call-end"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .3-1A11.4 11.4 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="txd-cap">Demo account &middot; what your customer sees</p>
-                    </div>
-                </figure>
+                <img src="img/summit-home-work.webp" srcset="img/summit-home-work-m.webp 720w, img/summit-home-work.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="Custom construction-company website design shown on a laptop and a phone" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
             <div>
-                <span class="eyebrow">03 / Missed Call Text-Back</span>
-                <h2 class="h-lg">Miss a call? It <span class="gold">texts them back.</span></h2>
-                <p class="lede">You can&rsquo;t answer every call. The system makes sure a missed one never turns into lost work.</p>
+                <span class="eyebrow">03 / Websites &amp; SEO</span>
+                <h2 class="h-lg">A website that gets your <span class="gold">phone ringing.</span></h2>
+                <p class="lede">Hand-built for your business, set up to rank locally, and wired so every lead lands on your phone.</p>
                 <div class="wout">
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>The Text Goes Out in Seconds</b>
-                        <p>The moment a call slips by, the customer hears from your business &mdash; before they can dial the next name on their list.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Leads Go Straight to Your Phone</b>
+                        <p>Every form, button, and chat starts a text conversation &mdash; no lead buried in an inbox nobody checks.</p>
                     </div>
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Works Nights and Weekends</b>
-                        <p>After hours, on the job, on holidays &mdash; it never takes a day off.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Sounds Like You, Not a Robot</b>
-                        <p>We write the message with you, so it reads like your business talking &mdash; friendly and professional.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Missed Calls Become Bookings</b>
-                        <p>The text starts a conversation, and the conversation ends in a booked job &mdash; with you, not a competitor.</p>
-                    </div>
-                </div>
-                <div class="blurb-cta">
-                    <a href="features/missed-call-text-back.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- LOCAL SEO -->
-<section class="sec reveal glow">
-    <div class="wrap">
-        <div class="wds-grid">
-            <div>
-                <span class="eyebrow">04 / Local SEO</span>
-                <h2 class="h-lg">Get found by the customers <span class="gold">already searching.</span></h2>
-                <p class="lede">When someone nearby Googles what you do, you want to be the name they see. We build that in from day one.</p>
-                <div class="wout">
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Show Up When It Matters</b>
-                        <p>Your website is built to rank for the searches customers in your area actually type.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Actually Get Found Online</b>
+                        <p>Local SEO is built into every page from day one, so customers searching nearby find you &mdash; not just your competitors.</p>
                     </div>
                     <div class="wout-item">
                         <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Your Google Profile, Handled</b>
                         <p>Set up, filled out, and kept current &mdash; photos, hours, services, and all.</p>
                     </div>
                     <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Reviews Boost Your Ranking</b>
-                        <p>Every five-star review the system collects pushes you higher in local search results.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Honest Work, No Gimmicks</b>
-                        <p>No ranking guarantees, no snake oil &mdash; just the real foundations, done right.</p>
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Hand-Coded, Not a Template</b>
+                        <p>No page builders, no bloat &mdash; a custom site that loads fast and looks like your business, not everyone else&rsquo;s.</p>
                     </div>
                 </div>
                 <div class="blurb-cta">
-                    <a href="features/local-seo.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+                    <a href="features/website.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
                 </div>
-            </div>
-            <div class="wds-shot">
-                <img src="img/summit-localseo.webp" srcset="img/summit-localseo-m.webp 720w, img/summit-localseo.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" class="faded" alt="Phone showing a Google search for a local roofing contractor with a top-ranked business profile, map pin, and rising chart" loading="lazy" decoding="async" width="1536" height="1024">
             </div>
         </div>
     </div>
 </section>
 
-<!-- TRADES -->
-<section class="trades light sec reveal" id="trades">
+<!-- 04 / LEAD MANAGEMENT -->
+<section class="sec reveal glow">
     <div class="wrap">
-        <div class="trades-head">
-            <span class="eyebrow">Built for the trades</span>
-            <h2 class="h-lg">Trades that we <span class="gold">work with.</span></h2>
-            <p class="lede">If a ringing phone means money in your business, the system fits.</p>
+        <div class="wds-grid">
+            <div>
+                <span class="eyebrow">04 / Lead Management</span>
+                <h2 class="h-lg">Every lead in <span class="gold">one place.</span></h2>
+                <p class="lede">Calls, texts and web inquiries land in one inbox on your phone, so nothing gets lost in a voicemail or an email you never opened.</p>
+                <div class="wout">
+                    <div class="wout-item">
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>One Inbox for Every Lead</b>
+                        <p>Calls, texts and form submissions in one conversation per customer.</p>
+                    </div>
+                    <div class="wout-item">
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Book Jobs on the Spot</b>
+                        <p>Send a booking link and the appointment lands on your calendar.</p>
+                    </div>
+                    <div class="wout-item">
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Every Customer&rsquo;s History</b>
+                        <p>See past jobs, quotes and conversations before you call back.</p>
+                    </div>
+                    <div class="wout-item">
+                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Run It From Your Phone</b>
+                        <p>Reply, book and follow up from the app, wherever the job is.</p>
+                    </div>
+                </div>
+                <div class="blurb-cta">
+                    <a href="features/crm-and-booking.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="wds-shot">
+                <img src="img/crm-booking-illustration.webp" srcset="img/crm-booking-illustration-m.webp 760w, img/crm-booking-illustration.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="The Peak System dashboard showing new leads, the job pipeline and today&rsquo;s schedule, with the inbox open on a phone" loading="lazy" decoding="async" width="1536" height="1024">
+            </div>
         </div>
     </div>
-    <div class="trow"><div class="tmarquee"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/landscapers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Landscapers</b></div><div class="tcard"><img src="img/trades/plumbers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Plumbers</b></div><div class="tcard"><img src="img/trades/electricians.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Electricians</b></div><div class="tcard"><img src="img/trades/roofers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Roofers</b></div><div class="tcard"><img src="img/trades/painters.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Painters</b></div><div class="tcard"><img src="img/trades/contractors.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>General Contractors</b></div></div></div></div>
-    <div class="trow rev"><div class="tmarquee"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div></div><div style="display:contents" aria-hidden="true"><div class="tcard"><img src="img/trades/cleaners.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Cleaners</b></div><div class="tcard"><img src="img/trades/movers.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Movers</b></div><div class="tcard"><img src="img/trades/pressure-washing.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Pressure Washing</b></div><div class="tcard"><img src="img/trades/decks-fences.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Decks &amp; Fences</b></div><div class="tcard"><img src="img/trades/tree-service.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Tree Service</b></div><div class="tcard"><img src="img/trades/renovations.webp" alt="" loading="lazy" decoding="async" width="480" height="600"><b>Renovations</b></div></div></div></div>
-    <p class="trades-note">Don&rsquo;t see your trade? If your customers call, text, or search &mdash; it works for you too.</p>
+</section>
+
+<!-- 05 / CUSTOMER RETENTION -->
+<section class="light sec reveal">
+    <div class="wrap">
+        <div class="ret-head">
+            <span class="eyebrow">05 / Customer Retention</span>
+            <h2 class="h-lg">Bring past customers <span class="gold">back.</span></h2>
+            <p class="lede">Your next job is often a customer you&rsquo;ve already done work for. The system keeps in touch so they call you first.</p>
+        </div>
+        <div class="ret-grid">
+            <div class="ret-card"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><b>Reactivation campaigns</b><p>A friendly text to customers you haven&rsquo;t heard from in a while, sent when you want more work.</p></div>
+            <div class="ret-card"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M12 13v3l2 1"/></svg></span><b>Seasonal maintenance reminders</b><p>Furnace tune-ups, AC checks and spring clean-ups, sent before the season starts.</p></div>
+            <div class="ret-card soon"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><b>Referrals <span class="ret-soon">Coming soon</span></b><p>Turn happy customers into word-of-mouth with a simple referral ask.</p></div>
+        </div>
+        <div class="blurb-cta ret-cta">
+            <a href="features/marketing-campaigns.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- WHO IT'S FOR (anchor #trades is used by the Solutions menu) -->
+<section class="sec reveal glow" id="trades">
+    <div class="wrap">
+        <div class="fit-grid">
+            <div>
+                <span class="eyebrow">Who it&rsquo;s for</span>
+                <h2 class="h-lg">Built for owner-operators who <span class="gold">answer their own phone.</span></h2>
+                <p class="lede">One to five trucks, anywhere in Alberta. You quote the jobs, you do the jobs, and your cell is the business line.</p>
+                <ul class="fit-trades"><li>Plumbing</li><li>HVAC</li><li>Electrical</li><li>Roofing</li><li>Landscaping</li><li>General contractors</li></ul>
+            </div>
+            <div class="fit-not">
+                <b>Not for you if&hellip;</b>
+                <ul>
+                    <li>You have a full-time receptionist or office team answering a dedicated line</li>
+                    <li>You&rsquo;re a franchise or a multi-location company</li>
+                    <li>You want someone to manage your Google Ads</li>
+                </ul>
+                <p>We&rsquo;ll tell you that on the call and point you somewhere better.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- WORKING WITH US -->
@@ -1102,9 +1197,6 @@ main > section{position:relative;z-index:1;}
         </div>
         <div class="wwu-row">
             <div class="wwu-step">
-                <div class="wwu-med">
-                    <img src="img/working-with-us-demo.webp" srcset="img/working-with-us-demo-m.webp 680w, img/working-with-us-demo.webp 1236w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1236" height="1236">
-                </div>
                 <div class="wwu-card">
                     <span class="num">01</span>
                     <div class="wwu-title">
@@ -1117,9 +1209,6 @@ main > section{position:relative;z-index:1;}
             </div>
             <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
             <div class="wwu-step">
-                <div class="wwu-med">
-                    <img src="img/working-with-us-laptop.webp" srcset="img/working-with-us-laptop-m.webp 680w, img/working-with-us-laptop.webp 1147w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1147" height="1147">
-                </div>
                 <div class="wwu-card">
                     <span class="num">02</span>
                     <div class="wwu-title">
@@ -1132,9 +1221,6 @@ main > section{position:relative;z-index:1;}
             </div>
             <div class="wwu-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
             <div class="wwu-step">
-                <div class="wwu-med">
-                    <img src="img/working-with-us-rocketship.webp" srcset="img/working-with-us-rocketship-m.webp 680w, img/working-with-us-rocketship.webp 1129w" sizes="(max-width: 760px) 78vw, 340px" alt="" loading="lazy" decoding="async" width="1129" height="1129">
-                </div>
                 <div class="wwu-card">
                     <span class="num">03</span>
                     <div class="wwu-title">
@@ -1147,7 +1233,7 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
         <div class="wwu-cta">
-            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>
@@ -1165,7 +1251,7 @@ main > section{position:relative;z-index:1;}
             <div class="faq-list">
                 <details>
                     <summary>What do I actually get for $297?</summary>
-                    <p>A custom-built website plus the whole automation system &mdash; missed-call text-back, booking, review engine, lead follow-up, and marketing &mdash; hosted, set up, and supported. One price, everything in. No setup fee.</p>
+                    <p>A custom-built website plus the system behind it &mdash; missed-call text-back, lead and estimate follow-up, booking, review requests, and reactivation campaigns &mdash; hosted, set up, and supported. No setup fee.</p>
                 </details>
                 <details>
                     <summary>Do I have to sign a contract?</summary>
@@ -1177,7 +1263,7 @@ main > section{position:relative;z-index:1;}
                 </details>
                 <details>
                     <summary>How long does setup take?</summary>
-                    <p>7&ndash;10 days from your intake to launch. We build the website and wire up every automation around your business, then walk you through it on a short launch call.</p>
+                    <p>7&ndash;10 days from your intake to launch. We build the website and set up your follow-up, booking, and review requests, then walk you through it on a short launch call.</p>
                 </details>
                 <details>
                     <summary>When will I see results?</summary>
@@ -1207,8 +1293,8 @@ main > section{position:relative;z-index:1;}
             <div class="price-card">
                 <span class="plabel">Peak System</span>
                 <div class="price-num"><b>$297</b><span>/month</span></div>
-                <p class="price-sub">Everything included. Website, missed-call text-back, reviews, and every automation.</p>
-                <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">→</span></a>
+                <p class="price-sub">Website, missed-call text-back, lead and estimate follow-up, booking, and review requests.</p>
+                <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
                 <p class="pnote">No setup fee &middot; No contract &middot; Cancel anytime</p>
             </div>
         </div>
@@ -1248,7 +1334,7 @@ main > section{position:relative;z-index:1;}
                 <div class="rf-link"></div>
                 <div class="rf-node">
                     <span class="rf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.14-1.4l2.1-1.6-2-3.5-2.5 1a7 7 0 0 0-2.4-1.4L13.5 2h-3l-.56 2.6a7 7 0 0 0-2.4 1.4l-2.5-1-2 3.5 2.1 1.6A7 7 0 0 0 5 12c0 .48.05.94.14 1.4l-2.1 1.6 2 3.5 2.5-1a7 7 0 0 0 2.4 1.4l.56 2.6h3l.56-2.6a7 7 0 0 0 2.4-1.4l2.5 1 2-3.5-2.1-1.6c.09-.46.14-.92.14-1.4z"/></svg></span>
-                    <b>The Entire<br>Growth System</b>
+                    <b>The Peak<br>System</b>
                 </div>
                 <div class="rf-link"></div>
                 <div class="rf-node">
@@ -1302,7 +1388,7 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
         <div class="roi-bottom">
-            <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
             <div class="roi-risk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/><path d="M9 12l2 2 4-4"/></svg><span>Risk-free. No contracts.<br>Cancel anytime.</span></div>
         </div>
     </div>
@@ -1313,31 +1399,31 @@ main > section{position:relative;z-index:1;}
     <div class="wrap">
         <span class="eyebrow">The next step</span>
         <h2>Stop wondering <span class="gold">where your next job</span> is coming from.</h2>
-        <p>We&rsquo;ll build the website, local SEO, review system, and automations that help more homeowners find your business and <span class="gold">choose you</span>.</p>
+        <p>We&rsquo;ll build your website and set up the follow-up, booking, and review requests that help more homeowners find you and <span class="gold">choose you</span>.</p>
         <div class="fcta-cols">
             <div class="fcta-col">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                <b>Professional Website</b>
-                <span>A site that builds trust and converts visitors.</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+                <b>Websites &amp; SEO</b>
+                <span>Get found and turn visitors into calls.</span>
             </div>
             <div class="fcta-col">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>
-                <b>5-Star Reviews</b>
-                <span>Build credibility and stand out locally.</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+                <b>Automated Follow-Up</b>
+                <span>Missed calls and estimates followed up.</span>
             </div>
             <div class="fcta-col">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-                <b>Local SEO</b>
-                <span>Show up when local customers search.</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+                <b>Reputation Management</b>
+                <span>More 5-star Google reviews.</span>
             </div>
             <div class="fcta-col">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></svg>
-                <b>Missed Call Text-Back</b>
-                <span>Never miss a lead, day or night.</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+                <b>Lead Management</b>
+                <span>Every lead in one place.</span>
             </div>
         </div>
         <div class="fcta-actions">
-            <a href="contact.html" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>Book a Call <span class="arr">&rarr;</span></a>
+            <a href="contact.html" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>Book a Demo <span class="arr">&rarr;</span></a>
         </div>
         <div class="fcta-mini">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15-minute strategy call</span>
@@ -1354,38 +1440,36 @@ main > section{position:relative;z-index:1;}
     <div class="wrap">
         <div class="foot-grid">
             <div class="foot-brand">
-                <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-copy">Growth systems that help service businesses capture more leads and grow on autopilot.</p>
+                <span class="brand"><img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
+                <p class="foot-copy">Websites, follow-up and reviews for Alberta trades. One flat monthly price, no contract.</p>
+            </div>
+            <div class="foot-col">
+                <h4>Platform</h4>
+                <a href="features/website.html">Websites &amp; SEO</a>
+                <a href="features/crm-and-booking.html">Lead Management</a>
+                <a href="features/lead-follow-up.html">Automated Follow-Up</a>
+                <a href="features/review-automation.html">Reputation Management</a>
+                <a href="features/marketing-campaigns.html">Customer Retention</a>
             </div>
             <div class="foot-col">
                 <h4>Company</h4>
                 <a href="about.html">About</a>
                 <a href="how.html">How it works</a>
-                <a href="work.html">Work</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="blog/">Blog</a>
-            </div>
-            <div class="foot-col">
-                <h4>Features</h4>
-                <a href="features/website.html">Custom Websites</a>
-                <a href="features/review-automation.html">5-Star Review Funnel</a>
-                <a href="features/local-seo.html">Local SEO</a>
-                <a href="features/missed-call-text-back.html">Missed Call Text-Back</a>
-                <a href="features/crm-and-booking.html">CRM &amp; Booking</a>
-                <a href="features/lead-follow-up.html">Lead Follow-Up</a>
-                <a href="features/marketing-campaigns.html">Marketing Campaigns</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="foot-col">
                 <h4>Support</h4>
                 <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
-                <a href="locations.html">Locations</a>
+                <a href="locations.html">Service areas</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
                 <a href="https://app.northernpeaksystems.ca/">Client Login</a>
+                <a href="contact.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
@@ -1473,7 +1557,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     var cfg=build(d);
     if(reduce){cfg.reset();cfg.final();return;}
     var running=false,inView=false;
-    function run(){d.timers=[];cfg.timeline.forEach(function(t){d.later(t[0],t[1]);});d.later(cfg.loop,run);}
+    function run(){d.timers=[];cfg.timeline.forEach(function(t){d.later(t[0],t[1]);});d.later(cfg.loop,function(){if(root.txdLoopEnd&&root.txdLoopEnd()){stop();return;}run();});}
     function start(){if(running||document.hidden||!inView)return;running=true;run();}
     function stop(){running=false;d.timers.forEach(clearTimeout);d.timers=[];}
     new IntersectionObserver(function(es){inView=es[0].isIntersecting;inView?start():stop();},{threshold:0.25}).observe(root);
@@ -1510,6 +1594,42 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
       final:function(){d.showAll();d.clock.textContent='10:00';d.step(4);}};
   });
 
+  var quote=document.getElementById('txd-quote');
+  if(quote)demo(quote,function(d){
+    function reset(){d.clear();d.clock.textContent='3:12';d.step(1);}
+    return {reset:reset,loop:17400,
+      final:function(){d.showAll();d.clock.textContent='10:02';d.step(4);},
+      timeline:[
+        [0,reset],
+        [400,function(){d.show(1);}],
+        [900,function(){d.typingOn(true);}],
+        [2000,function(){d.typingOn(false);d.show(2);}],
+        [4600,function(){d.show(3);d.clock.textContent='10:00';d.typingOn(true);d.step(2);}],
+        [5800,function(){d.typingOn(false);d.show(4);}],
+        [8300,function(){d.show(5);d.typingOn(true);d.step(3);}],
+        [9500,function(){d.typingOn(false);d.show(6);}],
+        [11500,function(){d.show(7);}],
+        [12200,function(){d.typingOn(true);}],
+        [13300,function(){d.typingOn(false);d.show(8);d.clock.textContent='10:02';d.step(4);}],
+        [16800,function(){d.screen.classList.add('fade');}]
+      ]};
+  });
+
+  // demo tabs: click or arrow keys to switch; auto-advance after each loop until the visitor picks one
+  [].forEach.call(document.querySelectorAll('[data-txd-tabs]'),function(box){
+    var tabs=[].slice.call(box.querySelectorAll('[role="tab"]')),picked=false,cur=0;
+    function select(i,focus){
+      cur=(i+tabs.length)%tabs.length;
+      tabs.forEach(function(t,k){var on=k===cur;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});
+      if(focus)tabs[cur].focus();
+    }
+    tabs.forEach(function(t,k){
+      t.addEventListener('click',function(){picked=true;select(k);});
+      t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();picked=true;select(cur+(e.key==='ArrowRight'?1:-1),true);}});
+      var fig=document.getElementById(t.getAttribute('aria-controls')).querySelector('.txd');
+      if(fig)fig.txdLoopEnd=function(){if(picked)return false;select(cur+1);return true;};
+    });
+  });
   var missed=document.getElementById('txd-missed');
   if(missed)demo(missed,function(d){
     var call=d.q('.txd-call'),state=d.q('.txd-call-state');
