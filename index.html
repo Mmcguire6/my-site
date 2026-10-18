@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-<title>Websites &amp; Follow-Up for Alberta Trades | Northern Peak Systems</title>
+<title>Digital Marketing Solutions for Home Service Businesses | Northern Peak Systems</title>
 <meta name="description" content="A website plus missed-call text-back, lead and estimate follow-up, booking and review requests for Alberta trades. $297/month, no contract, live in 7–10 days.">
 
 
@@ -34,7 +34,7 @@
       "url": "https://northernpeaksystems.ca/",
       "logo": "https://northernpeaksystems.ca/favicon.png",
       "image": "https://northernpeaksystems.ca/favicon.png",
-      "description": "Northern Peak Systems builds websites with missed-call text-back, lead and estimate follow-up, booking and review requests for trades businesses in Alberta. Founder-led, $297/month, no contract.",
+      "description": "Northern Peak Systems builds websites with missed-call text-back, lead and estimate follow-up, booking and review requests for trades businesses. Founder-led, $297/month, no contract.",
       "email": "matt@northernpeaksystems.ca",
       "priceRange": "$$",
       "founder": { "@type": "Person", "name": "Matthew McGuire", "url": "https://northernpeaksystems.ca/about" },
@@ -66,6 +66,8 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/inter-800-normal.woff2) format('woff2');}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/playfair-display-500-normal.woff2) format('woff2');}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/caveat-500-normal.woff2) format('woff2');}
 
 :root{
   --bg:#0a0a0c; --bg-2:#0f0f12; --card:#131317; --card-2:#17171c;
@@ -345,14 +347,321 @@ h1,h2{font-family:var(--display);}
 .hv3-pillars svg{flex:none;width:clamp(28px,2.1vw,38px);height:clamp(28px,2.1vw,38px);color:var(--gold);}
 .hv3-pillars b{display:block;font-size:clamp(13px,0.95vw,17px);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--white);}
 .hv3-pillars span{display:block;max-width:16ch;margin-top:3px;font-size:clamp(12.5px,0.85vw,15px);line-height:1.45;color:#bdb7ac;}
-/* 01 demo tabs (missed call / estimate follow-up) */
-.txd-tabs{display:flex;flex-direction:column;align-items:center;gap:18px;width:100%;}
-.txd-tablist{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--cream-line);border-radius:999px;background:#fff;box-shadow:0 10px 26px -18px rgba(60,45,20,0.4);}
-.txd-tab{padding:9px 18px;border:0;border-radius:999px;background:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:background .2s,color .2s;}
-.txd-tab:hover{color:var(--ink);}
-.txd-tab[aria-selected="true"]{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;}
-.txd-tab:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px;}
-.txd-panel[hidden]{display:none !important;}
+/* 01 + 02 Convert sections (mockups): copy left; the demo sits on a fixed 1000px-wide stage that scales down to
+   its column (script below); small screens show the timeline cards only. cv-* is shared, mcr-* / efu-* are the stages. */
+.cv-wrap{max-width:1660px;}
+.cv-grid{display:grid;grid-template-columns:minmax(0,32fr) minmax(0,68fr);gap:clamp(28px,3vw,56px);align-items:center;}
+.cv-copy{container-type:inline-size;}
+.cv-eyebrow{font-size:13px;line-height:1.75;}
+.cv-eyebrow span{display:block;}
+.cv-copy .cv-title{font-size:clamp(30px,10cqi,60px);line-height:1.04;letter-spacing:-0.03em;}
+.cv-title .gold{display:block;background:linear-gradient(180deg,#dcae58,#b98630);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.cv-copy .lede{max-width:46ch;}
+.cv-list{list-style:none;display:grid;gap:16px;margin:26px 0 30px;}
+.cv-list li{display:flex;align-items:center;gap:18px;}
+.cv-tile{flex:none;display:grid;place-items:center;width:60px;height:60px;border:1px solid var(--cream-line);border-radius:14px;background:#fff;color:var(--gold-deep);box-shadow:0 12px 26px -20px rgba(60,45,20,0.45);}
+.cv-tile svg{width:27px;height:27px;}
+.cv-list b{display:block;font-size:17px;font-weight:700;color:var(--ink);}
+.cv-list li > div > span{display:block;margin-top:3px;font-size:15px;line-height:1.5;color:var(--ink-2);}
+.cv-btn{padding:17px clamp(22px,8cqi,40px);font-size:clamp(12px,3.6cqi,13.5px);letter-spacing:0.07em;}
+.cv-note{margin-top:14px;font-size:12.5px;color:var(--ink-2);}
+.cv-visual{min-width:0;}
+.cv-fit{position:relative;width:100%;height:var(--cv-h,auto);}
+.mcr-stage{height:650px;}
+.cv-stage{position:relative;width:1000px;margin:0 auto;transform-origin:top left;font-family:-apple-system,BlinkMacSystemFont,'Inter',system-ui,sans-serif;}
+.mcr-lines{position:absolute;inset:0;width:100%;height:100%;}
+.mcr-dash{fill:none;stroke:rgba(194,144,60,0.75);stroke-width:1.5;stroke-dasharray:4 4;}
+.mcr-ah{fill:#c2903c;}
+/* phone: incoming call that rings out */
+.mcr-phone{position:absolute;left:0;top:69px;z-index:2;}
+.mcr-stage .txd-phone{width:248px;height:512px;padding:10px;border-radius:42px;}
+.mcr-stage .txd-screen{border-radius:33px;}
+.mcr-stage .mcr-call{background:radial-gradient(130% 60% at 50% 20%,#2a2419 0%,#0e0e11 62%,#09090b 100%);}
+.cv-sb{display:flex;align-items:center;gap:5px;}
+.cv-sb svg{width:15px;height:11px;}
+.mcr-caller{display:flex;flex-direction:column;align-items:center;padding:36px 8px 0;text-align:center;}
+.mcr-av{position:relative;display:grid;place-items:center;width:72px;height:72px;border-radius:50%;border:2px solid #d2a24c;background:radial-gradient(circle at 50% 35%,#2b2418,#121110);}
+.mcr-av svg{width:44px;height:44px;}
+.mcr-av::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(210,162,76,0.55);opacity:0;}
+.mcr-call.ringing .mcr-av::after{animation:txdRing 1.4s ease-out infinite;}
+.mcr-caller b{margin-top:18px;font-size:15.5px;font-weight:600;line-height:1.25;white-space:nowrap;color:#f5f2ec;}
+.mcr-loc{margin-top:4px;font-size:12.5px;color:#a9a49a;}
+.mcr-missed{margin-top:10px;padding:3px 10px;border-radius:999px;background:rgba(229,72,77,0.18);font-size:11.5px;font-weight:600;color:#ff9f9f;opacity:0;transform:translateY(4px);transition:opacity .35s,transform .35s;}
+.mcr-call.missed .mcr-missed{opacity:1;transform:none;}
+.mcr-keys{position:absolute;left:0;right:0;bottom:40px;display:grid;grid-template-columns:1fr 1fr;row-gap:20px;justify-items:center;transition:opacity .4s;}
+.mcr-call.missed .mcr-keys{opacity:.5;}
+.mcr-key{display:flex;flex-direction:column;align-items:center;gap:7px;font-size:10.5px;color:#e9e5dc;}
+.mcr-key i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.14);}
+.mcr-key svg{width:18px;height:18px;}
+.mcr-decline i,.mcr-accept i{width:56px;height:56px;color:#fff;}
+.mcr-decline i{background:#eb4d4b;}
+.mcr-accept i{background:#30c35b;}
+.mcr-decline svg,.mcr-accept svg{width:24px;height:24px;fill:currentColor;stroke:none;}
+.mcr-decline svg{transform:rotate(135deg);}
+.mcr-call.ringing .mcr-accept i{animation:mcrPulse 1.4s ease-in-out infinite;}
+@keyframes mcrPulse{0%,100%{box-shadow:0 0 0 0 rgba(48,195,91,0.5);}50%{box-shadow:0 0 0 10px rgba(48,195,91,0);}}
+/* numbered timeline cards */
+.mcr-steps{list-style:none;position:absolute;left:292px;top:0;width:282px;display:grid;row-gap:20px;}
+.mcr-card{position:relative;z-index:3;padding:14px 14px 14px 26px;border:1px solid rgba(255,255,255,0.08);border-radius:16px;background:linear-gradient(180deg,#151518,#0d0d10);box-shadow:0 24px 46px -24px rgba(20,16,10,0.7);transition:opacity .45s,transform .45s,box-shadow .45s;}
+.mcr-card:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-20px;width:10px;height:20px;transform:translateX(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Cpath d='M5 2v10' stroke='%23c2903c' stroke-width='1.5' stroke-dasharray='3 3'/%3E%3Cpath d='M1.5 12.5h7L5 17z' fill='%23c2903c'/%3E%3C/svg%3E") no-repeat;}
+.mcr-card.dim{opacity:.35;transform:translateY(6px);}
+.mcr-card.on{box-shadow:0 0 0 1px rgba(210,162,76,0.6),0 24px 46px -24px rgba(20,16,10,0.7);}
+.mcr-n{position:absolute;left:-16px;top:18px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(180deg,#e7bd6a,#c48f38);box-shadow:0 0 0 4px var(--cream),0 8px 18px -8px rgba(169,124,51,0.8);font-size:14px;font-weight:800;color:#181207;}
+.mcr-card-h{display:flex;align-items:center;gap:10px;}
+.mcr-card-h b{flex:1;min-width:0;font-size:13.5px;font-weight:700;color:#fff;white-space:nowrap;}
+.mcr-card-h time{font-size:10.5px;color:#8e8a82;white-space:nowrap;}
+.mcr-ic{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;}
+.mcr-ic svg{width:16px;height:16px;}
+.mcr-ic-dark{border:1px solid rgba(210,162,76,0.4);background:#1b1812;color:var(--gold-2);}
+.mcr-ic-green{background:#2fa45a;color:#fff;}
+.mcr-ic-blue{background:#1a7cf2;color:#fff;}
+.mcr-ic-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;}
+.mcr-card-b{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin-top:9px;padding-left:38px;font-size:12px;line-height:1.45;color:#cfc9bd;}
+.mcr-card-b strong{font-weight:600;color:#f2efe9;}
+.mcr-bub{margin:0;padding:8px 11px;border-radius:14px;font-size:12px;line-height:1.42;}
+.mcr-bub-in{border-bottom-left-radius:5px;background:#26262b;color:#f2efe9;}
+.mcr-bub-out{border-bottom-right-radius:5px;background:#1a7cf2;color:#fff;}
+.mcr-pill{display:flex;align-items:center;gap:8px;align-self:stretch;margin-top:8px;padding:6px 10px;border-radius:8px;font-style:normal;font-size:12px;font-weight:600;}
+.mcr-pill i{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;color:#fff;}
+.mcr-pill svg{width:10px;height:10px;}
+.mcr-pill-red{background:rgba(229,72,77,0.18);color:#ffb4b4;}
+.mcr-pill-red i{background:#e5484d;}
+.mcr-pill-red svg{transform:rotate(135deg);}
+.mcr-pill-green{background:rgba(47,164,90,0.2);color:#a6e3b8;}
+.mcr-pill-green i{background:#2fa45a;}
+/* CRM conversation */
+.mcr-crm{position:absolute;left:600px;top:66px;width:400px;height:392px;display:grid;grid-template-columns:116px 1fr;border:1px solid rgba(255,255,255,0.08);border-radius:18px;background:#0e0e11;box-shadow:0 0 0 1px rgba(210,162,76,0.18),0 40px 80px -36px rgba(20,16,10,0.75);overflow:hidden;}
+.cv-side{padding:16px 8px;border-right:1px solid rgba(255,255,255,0.07);background:#121215;}
+.cv-side img{display:block;width:96px;height:auto;margin:2px 0 16px 4px;}
+.cv-side ul{list-style:none;display:grid;gap:2px;}
+.cv-side li{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:11.5px;color:#cfc9bd;}
+.cv-side li svg{flex:none;width:14px;height:14px;color:#a9a49a;}
+.cv-side li.on{background:rgba(210,162,76,0.14);color:var(--gold-2);}
+.cv-side li.on svg{color:var(--gold-2);}
+.mcr-conv{display:flex;flex-direction:column;min-width:0;}
+.mcr-conv-h{flex:none;display:flex;align-items:center;gap:8px;padding:12px 10px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.mcr-conv-av{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,var(--gold-2),var(--gold));font-size:11px;font-weight:700;color:#16140f;}
+.mcr-conv-h div{flex:1;min-width:0;}
+.mcr-conv-h b{display:block;font-size:11.5px;font-weight:600;color:#f5f2ec;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mcr-conv-h div span{display:block;font-size:10.5px;color:#8e8a82;}
+.mcr-tools{flex:none;display:flex;gap:3px;}
+.mcr-tools i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);color:#cfc9bd;}
+.mcr-tools svg{width:10px;height:10px;}
+.mcr-stage .mcr-thread{gap:4px;padding:14px 12px 10px;}
+.mcr-stage.fade .mcr-thread{opacity:0;}
+.mcr-msg{max-width:86%;padding:9px 11px;border-radius:14px;font-size:11.5px;line-height:1.45;}
+.mcr-in{align-self:flex-start;border-bottom-left-radius:5px;background:#26262b;color:#f2efe9;}
+.mcr-out{align-self:flex-end;border-bottom-right-radius:5px;background:#1a7cf2;color:#fff;}
+.mcr-t{align-self:flex-start;margin:0 0 8px 4px;font-size:9.5px;color:#77736b;}
+.mcr-t-r{align-self:flex-end;margin:0 4px 8px 0;}
+.mcr-input{flex:none;display:flex;align-items:center;gap:8px;margin:0 10px 12px;}
+.mcr-plus{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,0.14);font-size:15px;line-height:1;color:#cfc9bd;}
+.mcr-field{flex:1;display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-radius:999px;background:#1c1c20;font-size:11px;color:#77736b;}
+.mcr-field svg{width:13px;height:13px;color:#cfc9bd;}
+/* "new opportunity" toast under the CRM */
+.mcr-notif{position:absolute;left:600px;top:482px;z-index:3;width:400px;display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid rgba(210,162,76,0.45);border-radius:16px;background:#fff;box-shadow:0 24px 50px -28px rgba(60,45,20,0.5);font-family:var(--sans);transition:opacity .45s,transform .45s;}
+.mcr-notif.dim{opacity:0;transform:translateY(10px);}
+.mcr-notif-ic{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,#e7bd6a,#c48f38);color:#181207;}
+.mcr-notif-ic svg{width:20px;height:20px;}
+.mcr-notif div{flex:1;min-width:0;}
+.mcr-notif b{display:block;font-size:14.5px;font-weight:700;color:var(--ink);}
+.mcr-notif div span{display:block;margin-top:2px;font-size:12px;line-height:1.45;color:var(--ink-2);}
+.mcr-notif > svg{flex:none;width:18px;height:18px;color:var(--ink);}
+@media(max-width:1279px){.cv-grid{grid-template-columns:1fr;}.cv-copy{max-width:640px;}}
+/* dark variant (02) */
+.cv-dark .cv-title .gold{background-image:linear-gradient(180deg,#f0c776,#c99a45);}
+.cv-dark .cv-tile{border-color:rgba(210,162,76,0.45);background:linear-gradient(180deg,#1f1a12,#121110);color:var(--gold-2);box-shadow:none;}
+.cv-dark .cv-list b{color:var(--white);}
+.cv-dark .cv-list li > div > span{color:#bdb7ac;}
+.cv-dark .cv-note{color:var(--mist-2);}
+@media(max-width:860px){
+  .cv-fit{height:auto;}
+  .cv-stage{width:auto;max-width:440px;transform:none !important;}
+  .mcr-stage{height:auto;}
+  .mcr-lines,.mcr-phone,.mcr-crm{display:none;}
+  .mcr-steps{position:static;width:auto;padding-left:16px;}
+  .mcr-notif{position:relative;left:auto;top:auto;width:auto;margin:20px 0 0 16px;}
+}
+@media(prefers-reduced-motion:reduce){.mcr-call.ringing .mcr-av::after,.mcr-call.ringing .mcr-accept i{animation:none;}}
+/* 02 Estimate Follow-Up: dark band with ridges + gold light; opportunities board, phone, four-step timeline */
+.cv-dark{background:radial-gradient(760px 380px at 78% -4%,rgba(210,162,76,0.13),transparent 70%),radial-gradient(900px 400px at 8% 104%,rgba(210,162,76,0.05),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 300' preserveAspectRatio='none'%3E%3Cpath d='M0 300V190l120-70 90 50 120-100 120 90 110-50 140 90 120-110 130 90 130-120 120 90 120-50 130 70 150-60v190z' fill='%23111013'/%3E%3Cpath d='M0 300v-60l150-60 110 50 140-80 120 70 140-50 140 80 140-90 140 70 140-50 140 60 120-50 120 40v70z' fill='%230d0d0f'/%3E%3C/svg%3E") center bottom/100% 38% no-repeat,var(--bg);}
+.efu-stage{height:652px;}
+.efu-dash{position:absolute;left:0;top:0;width:846px;height:480px;display:grid;grid-template-columns:150px 1fr;border:1px solid rgba(255,255,255,0.09);border-radius:18px;background:#0d0d10;box-shadow:0 0 0 1px rgba(210,162,76,0.16),0 40px 90px -40px rgba(0,0,0,0.9);overflow:hidden;}
+.efu-dash .cv-side{padding:18px 10px;}
+.efu-dash .cv-side img{width:112px;margin:0 0 18px 6px;}
+.efu-dash .cv-side li{gap:9px;padding:6.5px 9px;}
+.efu-main{display:flex;flex-direction:column;min-width:0;padding:18px 60px 0 20px;}
+.efu-top{display:flex;align-items:center;gap:8px;}
+.efu-h{flex:1;font-size:18px;font-weight:700;letter-spacing:-0.01em;color:#fff;}
+.efu-search,.efu-sel{display:flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:8px;font-size:10.5px;color:#77736b;}
+.efu-search{justify-content:space-between;width:160px;white-space:nowrap;}
+.efu-sel{font-weight:600;color:#f2efe9;}
+.efu-search svg{width:12px;height:12px;color:#cfc9bd;}
+.efu-sel svg{width:11px;height:11px;}
+.efu-new{padding:8px 12px;border-radius:8px;background:linear-gradient(180deg,#e0b360,#c2903c);font-size:10.5px;font-weight:700;color:#181207;white-space:nowrap;}
+.efu-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:16px;}
+.efu-stat{display:flex;flex-direction:column;gap:3px;padding:11px 10px;border:1px solid rgba(255,255,255,0.08);border-radius:10px;background:#151518;transition:border-color .35s,background .35s;}
+.efu-stat span{font-size:10px;font-weight:600;color:#d8d3c9;white-space:nowrap;transition:color .35s;}
+.efu-stat b{font-size:20px;font-weight:700;line-height:1.15;color:#fff;transition:color .35s;}
+.efu-stat em{font-style:normal;font-size:11px;color:#a9a49a;}
+.efu-stat.sel{border-color:rgba(210,162,76,0.85);background:rgba(210,162,76,0.1);}
+.efu-stat.sel span,.efu-stat.sel b{color:var(--gold-2);}
+.efu-stat.efu-green b{color:#3fcf72;}
+.efu-stat.efu-teal b{color:#36d3a4;}
+.efu-table{margin-top:14px;font-size:11.5px;}
+.efu-th,.efu-tr{display:grid;grid-template-columns:24px minmax(0,1.7fr) minmax(0,0.7fr) minmax(0,1.15fr) minmax(0,1fr);align-items:center;column-gap:10px;padding:0 10px;}
+.efu-th{padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.07);font-size:10.5px;color:#a9a49a;}
+.efu-tr{height:50px;border:1px solid transparent;border-bottom-color:rgba(255,255,255,0.06);color:#f2efe9;}
+.efu-tr.sel{border-color:rgba(210,162,76,0.8);border-radius:8px;background:rgba(210,162,76,0.05);}
+.efu-cb{display:grid;place-items:center;width:14px;height:14px;border:1.5px solid rgba(255,255,255,0.35);border-radius:3px;color:#181207;}
+.efu-cb.on{border-color:var(--gold);background:var(--gold);}
+.efu-cb svg{width:10px;height:10px;}
+.efu-who{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:9px;align-items:center;}
+.efu-av{grid-row:span 2;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;font-style:normal;font-size:10px;font-weight:700;}
+.efu-av1{background:#8f8f97;color:#fff;}.efu-av2{background:#ece8e0;color:#222;}.efu-av3{background:#6f6f77;color:#fff;}.efu-av4{background:#e2ddd4;color:#222;}.efu-av5{background:#e9b7b1;color:#3a1f1c;}
+.efu-who b{font-size:11.5px;font-weight:600;color:#fff;white-space:nowrap;}
+.efu-who small{font-size:10.5px;color:#a9a49a;white-space:nowrap;}
+.efu-amt{font-weight:700;}
+.efu-pill{display:inline-block;padding:4px 9px;border-radius:5px;font-style:normal;font-size:10px;font-weight:600;white-space:nowrap;}
+.efu-pill-gold{background:linear-gradient(180deg,#e7bd6a,#c9973f);color:#181207;}
+.efu-pill-blue{background:#1f6fe5;color:#fff;}
+.efu-pill-green{background:#2fb35f;color:#fff;}
+.efu-act{display:flex;flex-direction:column;font-size:10.5px;line-height:1.35;color:#cfc9bd;}
+.efu-act small{font-size:10.5px;color:#8e8a82;}
+.efu-stat.bump,.efu-tr.bump{animation:efuBump .9s ease-out;}
+@keyframes efuBump{from{box-shadow:0 0 0 0 rgba(210,162,76,0.55);}to{box-shadow:0 0 0 10px rgba(210,162,76,0);}}
+.efu-phone{position:absolute;left:796px;top:52px;z-index:4;}
+.efu-stage .txd-phone{width:204px;height:454px;padding:8px;border-radius:36px;}
+.efu-stage .txd-screen{border-radius:29px;}
+.efu-stage .txd-island{top:7px;width:60px;height:18px;}
+.efu-stage .txd-status{height:36px;padding:0 18px 4px;font-size:10.5px;}
+.efu-stage .cv-sb svg{width:12px;height:9px;}
+.efu-stage .txd-batt{width:19px;height:10px;}
+.efu-head{position:relative;}
+.efu-back{position:absolute;left:12px;top:9px;font-size:22px;line-height:1;color:#3d8bf5;}
+.efu-stage .txd-av{width:32px;height:32px;font-size:11.5px;}
+.efu-stage .txd-name{font-size:10.5px;}
+.efu-stage .txd-thread{gap:4px;padding:8px 9px 10px;}
+.efu-stage .txd-meta{margin:2px 0 4px;font-size:9.5px;}
+.efu-stage .txd-msg{max-width:86%;padding:7px 10px;border-radius:15px;font-size:10.5px;line-height:1.4;}
+.efu-stage .txd-out{background:#1a7cf2;color:#fff;font-weight:400;}
+.efu-stage .txd-typing{padding:9px 11px;}
+.efu-t{align-self:flex-start;margin:0 0 6px 4px;font-size:9px;color:#77736b;}
+.efu-t-r{align-self:flex-end;margin:0 4px 6px 0;}
+.efu-input{flex:none;display:flex;align-items:center;gap:7px;margin:0 9px 12px;}
+.efu-plus{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#1c1c20;font-size:14px;line-height:1;color:#cfc9bd;}
+.efu-field{flex:1;display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:10.5px;color:#77736b;}
+.efu-field svg{width:11px;height:11px;color:#a9a49a;}
+.efu-steps{list-style:none;position:absolute;left:12px;top:518px;width:988px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:36px;}
+.efu-step{position:relative;display:flex;align-items:flex-start;gap:10px;padding:16px 14px 14px 16px;border:1px solid rgba(210,162,76,0.3);border-radius:14px;background:linear-gradient(180deg,#141416,#0d0d0f);box-shadow:0 24px 46px -26px rgba(0,0,0,0.8);transition:opacity .45s,transform .45s,border-color .45s,box-shadow .45s;}
+.efu-step:not(:last-child)::after{content:"";position:absolute;top:50%;right:-31px;width:26px;height:12px;margin-top:-6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='12'%3E%3Cpath d='M1 6h21' stroke='%23d2a24c' stroke-width='1.6'/%3E%3Cpath d='M18 1.5 23.5 6 18 10.5' fill='none' stroke='%23d2a24c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;}
+.efu-step.dim{opacity:.38;transform:translateY(6px);}
+.efu-step.on{border-color:rgba(210,162,76,0.7);box-shadow:0 0 22px -6px rgba(210,162,76,0.35),0 24px 46px -26px rgba(0,0,0,0.8);}
+.efu-n{position:absolute;left:-12px;top:-12px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,#e7bd6a,#c48f38);box-shadow:0 0 0 3px var(--bg);font-size:13px;font-weight:800;color:#181207;}
+.efu-ic{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#1c1c20;color:#f2efe9;}
+.efu-ic svg{width:19px;height:19px;}
+.efu-ic-green{background:rgba(47,179,95,0.16);color:#3fcf72;}
+.efu-ic-check svg{width:22px;height:22px;}
+.efu-step b{display:block;font-size:13.5px;font-weight:700;color:#fff;}
+.efu-step small{display:block;margin-top:2px;font-size:11px;color:#a9a49a;}
+.efu-step small.efu-ok{font-weight:600;color:#3fcf72;}
+.efu-step p{margin-top:6px;font-size:11.5px;line-height:1.45;color:#cfc9bd;}
+@media(max-width:860px){
+  .efu-stage{height:auto;}
+  .efu-dash,.efu-phone{display:none;}
+  .efu-steps{position:static;width:auto;grid-template-columns:1fr;row-gap:28px;padding:12px 0 0 12px;}
+  .efu-step:not(:last-child)::after{top:auto;right:auto;left:50%;bottom:-20px;margin:0 0 0 -13px;transform:rotate(90deg);}
+}
+@media(prefers-reduced-motion:reduce){.efu-stat.bump,.efu-tr.bump{animation:none;}}
+/* 03 Websites & SEO: laptop + phone with the demo site; the phone's quote form fills in, then the pipeline cards light up */
+.wsx-stage{height:500px;}
+#websites .cv-title{font-size:clamp(28px,9.2cqi,56px);}
+.wsx-lines{position:absolute;inset:0;width:100%;height:100%;}
+.wsx-lines path{fill:none;stroke:#c9973f;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.wsx-lines .ah{fill:#c9973f;stroke:none;}
+.wsx-devfit{position:absolute;left:0;top:0;width:690px;height:500px;}
+.wsx-devices{position:relative;width:690px;height:500px;transform-origin:top left;}
+.wsx-lid{position:absolute;left:52px;top:10px;width:586px;height:412px;padding:12px 12px 20px;border:1px solid #2c2c31;border-radius:18px 18px 6px 6px;background:#0c0c0e;box-shadow:0 30px 60px -30px rgba(40,30,15,0.55);}
+.wsx-base{position:absolute;left:0;top:420px;width:690px;height:18px;border-radius:2px 2px 16px 16px;background:linear-gradient(180deg,#a3a5ab 0%,#5b5d63 40%,#2a2b2f 100%);box-shadow:0 26px 34px -18px rgba(40,30,15,0.6);}
+.wsx-base::before{content:"";position:absolute;left:50%;top:0;width:120px;height:7px;transform:translateX(-50%);border-radius:0 0 8px 8px;background:#3d3e43;}
+.wsx-site,.wsx-m{display:flex;flex-direction:column;overflow:hidden;background:#0b0b0d;color:#fff;font-family:var(--sans);}
+.wsx-site{height:100%;border-radius:4px;}
+.wsx-nav{flex:none;display:flex;align-items:center;gap:16px;height:46px;padding:0 22px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.wsx-logo{display:flex;align-items:center;gap:7px;margin-right:auto;}
+.wsx-logo i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1.5px solid #d2a24c;background:#15130f;}
+.wsx-logo i svg{width:17px;height:17px;}
+.wsx-logo b{display:block;font-size:12.5px;font-weight:700;line-height:1;letter-spacing:0.16em;}
+.wsx-logo small{display:block;margin-top:2px;font-size:4.8px;letter-spacing:0.2em;color:#cfc9bd;}
+.wsx-links{display:flex;gap:15px;font-size:8px;color:#e9e5dc;}
+.wsx-links span:first-child{position:relative;}
+.wsx-links span:first-child::after{content:"";position:absolute;left:0;right:0;bottom:-17px;height:1.5px;background:#d2a24c;}
+.wsx-cta,.wsx-btns span:first-child,.wsx-send{background:linear-gradient(180deg,#e7bd6a,#c9973f);color:#181207;font-weight:700;}
+.wsx-cta{padding:6px 10px;border-radius:4px;font-size:7.5px;}
+.wsx-hero{flex:none;height:240px;padding:36px 24px 0;background:linear-gradient(90deg,#0b0b0d 0%,rgba(11,11,13,0.9) 34%,rgba(11,11,13,0.2) 62%,rgba(11,11,13,0) 80%),url(img/wsx-house.webp) right center/auto 100% no-repeat,#0b0b0d;}
+.wsx-eyebrow{display:block;font-size:7px;font-weight:700;letter-spacing:0.14em;color:#e0b360;}
+.wsx-h{display:block;margin-top:8px;font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:500;line-height:1.12;color:#fff;}
+.wsx-sub{max-width:250px;margin-top:9px;font-size:8.5px;line-height:1.5;color:#ddd8cf;}
+.wsx-btns{display:flex;gap:8px;margin-top:14px;}
+.wsx-btns span{padding:7px 18px;border-radius:4px;font-size:7.5px;font-weight:700;}
+.wsx-btns span:last-child{border:1px solid rgba(255,255,255,0.7);color:#fff;}
+.wsx-svc{flex:1;display:grid;grid-template-columns:repeat(4,1fr);padding-right:118px;background:#0f0f12;}
+.wsx-svc span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-left:1px solid rgba(255,255,255,0.07);font-size:8px;font-weight:600;color:#f2efe9;}
+.wsx-svc span:first-child{border-left:0;}
+.wsx-svc svg{width:20px;height:20px;color:#e0b360;}
+.wsx-phone{position:absolute;left:512px;top:66px;z-index:3;}
+.wsx-stage .txd-phone{width:178px;height:432px;padding:7px;border-radius:30px;}
+.light .wsx-stage .txd-phone{box-shadow:0 0 0 1px rgba(210,162,76,0.25),0 36px 70px -28px rgba(40,30,15,0.65);}
+.wsx-stage .txd-screen{border-radius:24px;}
+.wsx-stage .txd-island{top:7px;width:52px;height:15px;}
+.wsx-m-nav{flex:none;display:flex;align-items:center;justify-content:space-between;padding:24px 12px 8px;}
+.wsx-m-nav .wsx-logo{gap:5px;}
+.wsx-m-nav .wsx-logo i{width:19px;height:19px;border-width:1px;}
+.wsx-m-nav .wsx-logo i svg{width:12px;height:12px;}
+.wsx-m-nav .wsx-logo b{font-size:9.5px;}
+.wsx-m-nav .wsx-logo small{font-size:3.8px;}
+.wsx-burger{position:relative;width:12px;height:9px;border-top:1.5px solid #fff;border-bottom:1.5px solid #fff;}
+.wsx-burger::after{content:"";position:absolute;left:0;right:0;top:2.25px;height:1.5px;background:#fff;}
+.wsx-m-hero{flex:none;padding:6px 12px 8px;}
+.wsx-m .wsx-eyebrow{font-size:5.5px;}
+.wsx-m .wsx-h{margin-top:5px;font-size:13.5px;}
+.wsx-m .wsx-sub{max-width:none;margin-top:5px;font-size:6.5px;}
+.wsx-m-photo{flex:none;height:58px;background:linear-gradient(180deg,#0b0b0d 0%,rgba(11,11,13,0) 45%),url(img/wsx-house.webp) center 45%/cover;}
+.wsx-form{position:relative;flex:none;margin:-14px 7px 0;padding:10px 10px 11px;border-radius:9px;background:#fff;color:#16140f;box-shadow:0 -8px 20px rgba(0,0,0,0.35);}
+.wsx-form > b{display:block;font-size:9px;font-weight:700;}
+.wsx-field{display:block;margin-top:6px;}
+.wsx-field small{display:block;font-size:5.5px;color:#6f695d;}
+.wsx-in{display:flex;align-items:center;justify-content:space-between;gap:4px;min-height:17px;margin-top:2px;padding:3px 6px;border:1px solid #e3ded3;border-radius:4px;font-size:6.5px;line-height:1.4;color:#16140f;transition:border-color .2s;}
+.wsx-in.typing{border-color:#d2a24c;}
+.wsx-in svg{flex:none;width:8px;height:8px;color:#6f695d;}
+.wsx-area .wsx-in{align-items:flex-start;min-height:34px;}
+.wsx-v:empty::before{content:attr(data-ph);color:#b3ada2;}
+.wsx-in.typing .wsx-v::after{content:"";display:inline-block;width:1px;height:8px;margin-left:1px;vertical-align:-1px;background:#16140f;animation:txdBlink 1s steps(1) infinite;}
+.wsx-send{display:flex;align-items:center;justify-content:center;margin-top:9px;padding:7px;border-radius:5px;font-size:7.5px;transition:transform .15s,filter .15s,background .3s;}
+.wsx-send.pressed{transform:scale(.95);filter:brightness(.9);}
+.wsx-send-b,.wsx-form.sent .wsx-send-a{display:none;}
+.wsx-form.sent .wsx-send-b{display:inline;}
+.wsx-form.sent .wsx-send{background:#2fa45a;color:#fff;}
+.wsx-flow{position:absolute;left:714px;top:0;width:286px;}
+.wsx-cards{list-style:none;display:grid;row-gap:24px;}
+.wsx-card{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:12px;padding:14px;border:1px solid var(--cream-line);border-radius:14px;background:#fff;box-shadow:0 18px 36px -24px rgba(60,45,20,0.4);transition:opacity .45s,transform .45s,box-shadow .45s,border-color .45s;}
+.wsx-card:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-24px;width:10px;height:24px;transform:translateX(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='24'%3E%3Cpath d='M5 3v14' stroke='%23c2903c' stroke-width='1.5'/%3E%3Cpath d='M1.5 15.5 5 20.5l3.5-5' fill='none' stroke='%23c2903c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;}
+.wsx-card.dim{opacity:.4;transform:translateY(6px);}
+.wsx-card.on{border-color:rgba(210,162,76,0.6);box-shadow:0 0 0 1px rgba(210,162,76,0.3),0 18px 36px -24px rgba(60,45,20,0.4);}
+.wsx-ic{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;color:#fff;}
+.wsx-ic svg{width:20px;height:20px;}
+.wsx-ic-green{background:linear-gradient(180deg,#3cc46d,#26a055);}
+.wsx-ic-gold{background:linear-gradient(180deg,#e7bd6a,#c48f38);}
+.wsx-card b{display:block;padding-right:48px;font-size:13px;font-weight:700;color:var(--ink);}
+.wsx-card div span{display:block;margin-top:3px;font-size:11.5px;line-height:1.45;color:var(--ink-2);}
+.wsx-card time{position:absolute;right:14px;top:16px;font-size:10px;color:var(--ink-2);}
+.wsx-note{margin:24px 0 0 36px;font-family:'Caveat',cursive;font-size:21px;font-weight:500;line-height:1.1;color:var(--gold-deep);transform:rotate(-4deg);transform-origin:left center;}
+@media(max-width:860px){
+  .wsx-stage{height:auto;}
+  .wsx-lines{display:none;}
+  .wsx-devfit{position:relative;width:auto;height:auto;}
+  .wsx-flow{position:static;width:auto;margin-top:28px;}
+  .wsx-note{margin:22px 0 0;text-align:center;transform:none;}
+}
 /* 05 customer retention */
 .ret-head{max-width:640px;}
 .ret-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(26px,3vw,40px);}
@@ -965,108 +1274,249 @@ main > section{position:relative;z-index:1;}
     </div>
 </section>
 
-<!-- 01 / AUTOMATED FOLLOW-UP -->
+<!-- 01 / CONVERT: MISSED CALL RECOVERY -->
 <section class="light sec reveal" id="features">
-    <div class="wrap">
-        <div class="wds-grid">
-            <div class="wds-shot">
-                <div class="txd-tabs" data-txd-tabs>
-                    <div class="txd-tablist" role="tablist" aria-label="Follow-up demos">
-                        <button type="button" class="txd-tab" role="tab" id="tab-missed" aria-controls="panel-missed" aria-selected="true">Missed call</button>
-                        <button type="button" class="txd-tab" role="tab" id="tab-quote" aria-controls="panel-quote" aria-selected="false" tabindex="-1">Estimate follow-up</button>
-                    </div>
-                    <div class="txd-panel" id="panel-missed" role="tabpanel" aria-labelledby="tab-missed">
-                        <!-- Animated missed-call text-back demo (Summit Yard demo account). Script at the end of <body>. -->
-                        <figure class="txd" id="txd-missed" role="img" aria-label="Demo of what a customer sees: their call to Summit Yard and Landscape goes unanswered, and in the same minute they get a text saying sorry we missed you, can we help with a quote. They ask about a patio and book a free estimate from a link.">
-                            <ol class="txd-steps" aria-hidden="true">
-                                <li><span class="n">1</span><span><b>Call goes unanswered</b><small>You&rsquo;re on a job</small></span></li>
-                                <li><span class="n">2</span><span><b>Texted back</b><small>Same minute</small></span></li>
-                                <li><span class="n">3</span><span><b>Estimate booked</b><small>While you work</small></span></li>
-                            </ol>
-                            <div class="txd-col" aria-hidden="true">
-                                <div class="txd-phone">
-                            <div class="txd-screen">
-                                <div class="txd-island"></div>
-                                <div class="txd-status"><span class="txd-clock">2:14</span><span class="txd-batt"></span></div>
-                                <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
-                                        <div class="txd-thread">
-                                            <p class="txd-meta" data-i="1">Today 2:14 PM</p>
-                                            <div class="txd-msg txd-in" data-i="2">Sorry we missed you &mdash; this is Summit Yard &amp; Landscape. Can we help with a quote?</div>
-                                            <div class="txd-msg txd-out" data-i="3">Yes please! Looking at a new backyard patio.</div>
-                                            <div class="txd-msg txd-in" data-i="4">Great &mdash; grab a time for a free estimate here:<span class="txd-link">Book your free estimate<small>Pick a time that works &rarr;</small></span></div>
-                                            <div class="txd-msg txd-in" data-i="5"><span class="txd-ok">&#10003;</span> You&rsquo;re booked: free estimate, Thu 10:00 AM. Reply here if anything changes.</div>
-                                            <div class="txd-typing"><i></i><i></i><i></i></div>
-                                        </div>
-                                        <div class="txd-call">
-                                            <span class="txd-av">SY</span>
-                                            <span class="txd-call-name">Summit Yard &amp; Landscape</span>
-                                            <span class="txd-call-state">calling&hellip;</span>
-                                            <span class="txd-call-end"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .3-1A11.4 11.4 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>
-                                        </div>
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">01 / Convert<span>Missed Call Recovery</span></span>
+                <h2 class="h-lg cv-title">Miss the call. <span class="gold">Not the opportunity.</span></h2>
+                <p class="lede">When you&rsquo;re on a jobsite or finished for the day, The Peak System automatically texts missed callers, starts a conversation, and keeps their inquiry organized.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><b>Instant Missed-Call Recovery</b><span>Customers receive a text when you can&rsquo;t answer.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><div><b>Turn Inquiries Into Conversations</b><span>Start a real conversation within seconds.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>Every Opportunity Organized</b><span>Customer responses and opportunities are added to your pipeline automatically.</span></div></li>
+                </ul>
+                <a href="features/missed-call-text-back.html" class="btn btn-gold cv-btn">Explore Missed Call Recovery <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
+            </div>
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage mcr-stage" id="txd-mcr" role="img" aria-label="Demo of missed-call recovery: a call to Summit Yard and Landscape is missed at 2:34 PM, an automatic text goes out at 2:35, the customer replies at 2:37 asking when someone can come take a look, and at 2:38 Sarah Mitchell is added to the pipeline as a new opportunity.">
+                        <svg class="mcr-lines" viewBox="0 0 1000 650" aria-hidden="true">
+                            <path class="mcr-dash" d="M248 140H262M262 34V214M262 34H271M262 214H271M574 418H586M574 575H586M586 300V575M586 300H593M586 521H593"/>
+                            <path class="mcr-ah" d="M271 30l6 4-6 4zM271 210l6 4-6 4zM593 296l6 4-6 4zM593 517l6 4-6 4z"/>
+                        </svg>
+                        <div class="mcr-phone">
+                            <div class="txd-phone">
+                                <div class="txd-screen mcr-call ringing">
+                                    <div class="txd-island"></div>
+                                    <div class="txd-status"><span class="txd-clock">2:34</span><span class="cv-sb"><svg viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="currentColor" stroke="none"/></svg><span class="txd-batt"></span></span></div>
+                                    <div class="mcr-caller">
+                                        <span class="mcr-av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 38 17 15l6.5 9.5L31 13l14 25z" fill="#d6a74e"/><path d="M17 15l-4.3 7 2.8-1.3 1.6 1.7 1.9-1.8 2.6 1.4zM31 13l-3.8 6.4 2.3-1.1 1.5 1.5 1.7-1.6 2.2 1.1z" fill="#f6efe0"/></svg></span>
+                                        <b>Summit Yard &amp; Landscape</b>
+                                        <span class="mcr-loc">Calgary, AB</span>
+                                        <span class="mcr-missed">Missed call</span>
+                                    </div>
+                                    <div class="mcr-keys">
+                                        <span class="mcr-key"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i>Message</span>
+                                        <span class="mcr-key"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="7"/><path d="M12 10v3l2 2M5 3 2 6M22 6l-3-3"/></svg></i>Remind Me</span>
+                                        <span class="mcr-key mcr-decline"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>Decline</span>
+                                        <span class="mcr-key mcr-accept"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>Accept</span>
                                     </div>
                                 </div>
-                                <p class="txd-cap">Demo account &middot; what your customer sees</p>
                             </div>
-                        </figure>
-                    </div>
-                    <div class="txd-panel" id="panel-quote" role="tabpanel" aria-labelledby="tab-quote" hidden>
-                        <!-- Animated estimate follow-up demo (Summit Yard demo account). Script at the end of <body>. -->
-                        <figure class="txd" id="txd-quote" role="img" aria-label="Demo of what a customer sees after getting a quote: the quote arrives by text, a friendly check-in follows a few days later and again a week later, the customer replies YES, and the job is booked.">
-                            <ol class="txd-steps" aria-hidden="true">
-                                <li><span class="n">1</span><span><b>Quote sent</b><small>Monday</small></span></li>
-                                <li><span class="n">2</span><span><b>First check-in</b><small>3 days later</small></span></li>
-                                <li><span class="n">3</span><span><b>Second check-in</b><small>A week later</small></span></li>
-                                <li><span class="n">4</span><span><b>Job won</b><small>They reply YES</small></span></li>
-                            </ol>
-                            <div class="txd-col" aria-hidden="true">
-                                <div class="txd-phone">
-                                    <div class="txd-screen">
-                                        <div class="txd-island"></div>
-                                        <div class="txd-status"><span class="txd-clock">3:12</span><span class="txd-batt"></span></div>
-                                        <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
-                                        <div class="txd-thread">
-                                            <p class="txd-meta" data-i="1">Monday 3:12 PM</p>
-                                            <div class="txd-msg txd-in" data-i="2">Your patio quote from Summit Yard &amp; Landscape is ready: $8,400.<span class="txd-link">View your quote<small>Opens the PDF</small></span></div>
-                                            <p class="txd-meta" data-i="3">Thursday 10:00 AM</p>
-                                            <div class="txd-msg txd-in" data-i="4">Just checking in on your patio quote. Any questions? Happy to walk you through the options.</div>
-                                            <p class="txd-meta" data-i="5">Next Monday 10:00 AM</p>
-                                            <div class="txd-msg txd-in" data-i="6">Still thinking it over? Reply YES and we&rsquo;ll lock in a start date, or ask us anything.</div>
-                                            <div class="txd-msg txd-out" data-i="7">YES</div>
-                                            <div class="txd-msg txd-in" data-i="8"><span class="txd-ok">&#10003;</span> You&rsquo;re booked in! We&rsquo;ll call today to confirm your start date.</div>
-                                            <div class="txd-typing"><i></i><i></i><i></i></div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <ol class="mcr-steps">
+                            <li class="mcr-card dim" data-c="1"><span class="mcr-n">1</span><div class="mcr-card-h"><span class="mcr-ic mcr-ic-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 2 6 6M22 2l-6 6"/><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><b>Missed Call Detected</b><time>2:34 PM</time></div><div class="mcr-card-b"><strong>Summit Yard &amp; Landscape</strong><span>(403) 555-0187</span><span>Calgary, AB</span><em class="mcr-pill mcr-pill-red"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>Call missed</em></div></li>
+                            <li class="mcr-card dim" data-c="2"><span class="mcr-n">2</span><div class="mcr-card-h"><span class="mcr-ic mcr-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><b>Automated Text Sent</b><time>2:35 PM</time></div><div class="mcr-card-b"><p class="mcr-bub mcr-bub-in">Hi! Thanks for reaching out to Summit Yard &amp; Landscape. Sorry we missed your call. Are you looking to get a quote?</p></div></li>
+                            <li class="mcr-card dim" data-c="3"><span class="mcr-n">3</span><div class="mcr-card-h"><span class="mcr-ic mcr-ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><b>Customer Responds</b><time>2:37 PM</time></div><div class="mcr-card-b"><p class="mcr-bub mcr-bub-out">Yes, that would be great! When could someone come take a look?</p></div></li>
+                            <li class="mcr-card dim" data-c="4"><span class="mcr-n">4</span><div class="mcr-card-h"><span class="mcr-ic mcr-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><b>Opportunity Created</b><time>2:38 PM</time></div><div class="mcr-card-b"><strong>Sarah Mitchell</strong><span>Landscaping Estimate</span><em class="mcr-pill mcr-pill-green"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Added to pipeline</em></div></li>
+                        </ol>
+                        <div class="mcr-crm">
+                            <aside class="cv-side">
+                                <img src="img/nps-logo-white-notag.webp" alt="" width="1432" height="312" loading="lazy" decoding="async">
+                                <ul>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</li>
+                                    <li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Conversations</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/></svg>Opportunities</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Calendar</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Contacts</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Automation</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Reputation</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Reporting</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</li>
+                                </ul>
+                            </aside>
+                            <div class="mcr-conv">
+                                <div class="mcr-conv-h"><span class="mcr-conv-av">SY</span><div><b>Summit Yard &amp; Landscape</b><span>(403) 555-0187</span></div><span class="mcr-tools"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></i></span></div>
+                                <div class="txd-thread mcr-thread">
+                                    <div class="mcr-msg mcr-in" data-i="1">Hi! Thanks for reaching out to Summit Yard &amp; Landscape. Sorry we missed your call. Are you looking to get a quote?</div>
+                                    <p class="mcr-t" data-i="2">2:35 PM</p>
+                                    <div class="mcr-msg mcr-out" data-i="3">Yes, that would be great! When could someone come take a look?</div>
+                                    <p class="mcr-t mcr-t-r" data-i="4">2:37 PM</p>
+                                    <div class="txd-typing"><i></i><i></i><i></i></div>
                                 </div>
-                                <p class="txd-cap">Demo account &middot; what your customer sees</p>
+                                <div class="mcr-input"><span class="mcr-plus">+</span><span class="mcr-field">Type a message...<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></span></div>
                             </div>
-                        </figure>
+                        </div>
+                        <div class="mcr-notif dim" data-c="5"><span class="mcr-notif-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>New Opportunity Added</b><span>Sarah Mitchell has been added to your pipeline.</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></div>
                     </div>
                 </div>
             </div>
-            <div>
-                <span class="eyebrow">01 / Automated Follow-Up</span>
-                <h2 class="h-lg">Every call answered. <span class="gold">Every estimate chased.</span></h2>
-                <p class="lede">When you can&rsquo;t pick up, the customer hears from you in seconds. When a quote goes quiet, the follow-up goes out on its own.</p>
-                <div class="wout">
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Missed Calls Texted Back</b>
-                        <p>The moment a call slips by, the customer gets a text from your business &mdash; before they dial the next name on their list.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Every Lead Followed Up</b>
-                        <p>New inquiries get followed up by text until they book or tell you no.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Estimates That Don&rsquo;t Go Cold</b>
-                        <p>Quotes get a friendly check-in a few days later, then again, so the job doesn&rsquo;t slip away.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Works Nights and Weekends</b>
-                        <p>After hours, on the job, on holidays &mdash; it never takes a day off.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 02 / CONVERT: ESTIMATE FOLLOW-UP -->
+<section class="sec reveal cv-dark" id="estimate-follow-up">
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">02 / Convert<span>Estimate Follow-Up</span></span>
+                <h2 class="h-lg cv-title">The estimate is sent. <span class="gold">The follow&#8209;up isn&rsquo;t forgotten.</span></h2>
+                <p class="lede">Turn more outstanding estimates into paying jobs with timely, automated follow-ups that keep your business top of mind.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 8.5h8M8 12h5"/></svg></span><div><b>Automated Follow-Up Sequences</b><span>Send friendly reminders at the right time.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>More Estimates Turned Into Jobs</b><span>Recover opportunities that would otherwise go cold.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Track Every Estimate</b><span>See exactly where each quote stands in your pipeline.</span></div></li>
+                </ul>
+                <a href="features/lead-follow-up.html" class="btn btn-gold cv-btn">Explore Estimate Follow-Up <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
+            </div>
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage efu-stage" id="txd-efu" role="img" aria-label="Demo of estimate follow-up: Sarah Mitchell&rsquo;s $8,400 backyard landscaping estimate is emailed on Monday, October 12. Three days later a friendly text reminder goes out automatically, she replies that the estimate looks good and to book it, and the job moves to won, ready for scheduling.">
+                        <div class="efu-dash">
+                            <aside class="cv-side">
+                                <img src="img/nps-logo-white-notag.webp" alt="" width="1432" height="312" loading="lazy" decoding="async">
+                                <ul>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Dashboard</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Conversations</li>
+                                    <li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/></svg>Opportunities</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Contacts</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Calendar</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>Estimates</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg>Payments</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Automation</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Reputation</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Reporting</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</li>
+                                </ul>
+                            </aside>
+                            <div class="efu-main">
+                                <div class="efu-top"><b class="efu-h">Opportunities</b><span class="efu-search">Search opportunities...<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span class="efu-sel">Estimates<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span><span class="efu-new">+ New Opportunity</span></div>
+                                <div class="efu-stats">
+                                    <div class="efu-stat"><span>New Estimate</span><b>8</b><em>$62,400</em></div>
+                                    <div class="efu-stat sel" data-s="await"><span>Awaiting Response</span><b>6</b><em>$48,900</em></div>
+                                    <div class="efu-stat" data-s="fu"><span>Follow-Up</span><b>4</b><em>$31,750</em></div>
+                                    <div class="efu-stat efu-green" data-s="acc"><span>Estimate Accepted</span><b>5</b><em>$72,200</em></div>
+                                    <div class="efu-stat efu-teal"><span>Won</span><b>12</b><em>$186,300</em></div>
+                                </div>
+                                <div class="efu-table">
+                                    <div class="efu-th"><span></span><span>Contact / Project</span><span>Estimate</span><span>Stage</span><span>Last Activity</span></div>
+                                    <div class="efu-tr sel"><i class="efu-cb on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i><span class="efu-who"><i class="efu-av efu-av1">SM</i><b>Sarah Mitchell</b><small>Backyard Landscaping</small></span><span class="efu-amt">$8,400</span><span><em class="efu-pill efu-pill-gold">Awaiting Response</em></span><span class="efu-act">Estimate sent<small>3 days ago</small></span></div>
+                                    <div class="efu-tr"><i class="efu-cb"></i><span class="efu-who"><i class="efu-av efu-av2">DW</i><b>David Wilson</b><small>Deck &amp; Railing</small></span><span class="efu-amt">$4,200</span><span><em class="efu-pill efu-pill-blue">Follow-Up</em></span><span class="efu-act">Follow-up sent<small>1 day ago</small></span></div>
+                                    <div class="efu-tr"><i class="efu-cb"></i><span class="efu-who"><i class="efu-av efu-av3">JC</i><b>James Carter</b><small>Yard Renovation</small></span><span class="efu-amt">$12,500</span><span><em class="efu-pill efu-pill-gold">Awaiting Response</em></span><span class="efu-act">Estimate sent<small>5 days ago</small></span></div>
+                                    <div class="efu-tr"><i class="efu-cb"></i><span class="efu-who"><i class="efu-av efu-av4">ER</i><b>Emily Roberts</b><small>Retaining Wall</small></span><span class="efu-amt">$6,800</span><span><em class="efu-pill efu-pill-blue">Follow-Up</em></span><span class="efu-act">Follow-up sent<small>2 days ago</small></span></div>
+                                    <div class="efu-tr"><i class="efu-cb"></i><span class="efu-who"><i class="efu-av efu-av5">MT</i><b>Michael Thompson</b><small>Concrete Patio</small></span><span class="efu-amt">$9,300</span><span><em class="efu-pill efu-pill-green">Estimate Accepted</em></span><span class="efu-act">Accepted<small>3 hours ago</small></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="efu-phone">
+                            <div class="txd-phone">
+                                <div class="txd-screen">
+                                    <div class="txd-island"></div>
+                                    <div class="txd-status"><span class="txd-clock">2:14</span><span class="cv-sb"><svg viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="currentColor" stroke="none"/></svg><span class="txd-batt"></span></span></div>
+                                    <div class="txd-head efu-head"><span class="efu-back" aria-hidden="true">&lsaquo;</span><span class="txd-av">SM</span><span class="txd-name">Sarah Mitchell</span></div>
+                                    <div class="txd-thread">
+                                        <p class="txd-meta" data-i="1">Today 2:14 PM</p>
+                                        <div class="txd-msg txd-in" data-i="2">Hi Sarah! Just checking in on the landscaping estimate we sent over. Do you have any questions or is there anything else you&rsquo;d like us to adjust?</div>
+                                        <p class="efu-t" data-i="3">2:14 PM</p>
+                                        <div class="txd-msg txd-out" data-i="4">Hey! Sorry for the delay. The estimate looks good. Let&rsquo;s go ahead and book it.</div>
+                                        <p class="efu-t efu-t-r" data-i="5">2:28 PM</p>
+                                        <div class="txd-typing"><i></i><i></i><i></i></div>
+                                    </div>
+                                    <div class="efu-input"><span class="efu-plus">+</span><span class="efu-field">iMessage<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="efu-steps">
+                            <li class="efu-step dim" data-c="1"><span class="efu-n">1</span><span class="efu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><div><b>Estimate Sent</b><small>Mon, Oct 12</small><p>Estimate emailed to Sarah Mitchell.</p></div></li>
+                            <li class="efu-step dim" data-c="2"><span class="efu-n">2</span><span class="efu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><div><b>Follow-Up Sent</b><small>3 days later</small><p>Friendly text reminder sent automatically.</p></div></li>
+                            <li class="efu-step dim" data-c="3"><span class="efu-n">3</span><span class="efu-ic efu-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg></span><div><b>Customer Responds</b><small>Today</small><p>&ldquo;The estimate looks good. Let&rsquo;s go ahead and book it.&rdquo;</p></div></li>
+                            <li class="efu-step dim" data-c="4"><span class="efu-n">4</span><span class="efu-ic efu-ic-green efu-ic-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Estimate Accepted</b><small class="efu-ok">Added to pipeline</small><p>Job moved to won and ready for scheduling.</p></div></li>
+                        </ol>
                     </div>
                 </div>
-                <div class="blurb-cta">
-                    <a href="features/lead-follow-up.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 03 / ATTRACT: WEBSITES & SEO -->
+<section class="light sec reveal" id="websites">
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">03 / Attract<span>Websites &amp; SEO</span></span>
+                <h2 class="h-lg cv-title">Your website is where <span class="gold">the system begins.</span></h2>
+                <p class="lede">Beautiful, high-performance websites built to turn visitors into opportunities &mdash; with every inquiry connected directly to The Peak System.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 9 5 12 1.8-5.2L21 14z"/><path d="M7.2 2.2 8 5.1M5.1 8l-2.9-.8M14 4.1 12 6M6 12l-1.9 2"/></svg></span><div><b>Built for Home Service Businesses</b><span>Designed to convert visitors into real inquiries.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 13l2-2 1.6 1.4L14 9.5"/></svg></span><div><b>Optimized for Local Search</b><span>Rank higher on Google and get found in your area.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><div><b>Connected to Your Pipeline</b><span>Every form, call and chat goes straight into The Peak System.</span></div></li>
+                </ul>
+                <a href="features/website.html" class="btn btn-gold cv-btn">Explore Websites &amp; SEO <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
+            </div>
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage wsx-stage" id="txd-wsx" role="img" aria-label="Demo: the Summit Yard and Landscape website on a laptop and a phone. A visitor named Sarah Mitchell fills in the free-quote form. At 2:14 PM the inquiry is received and added to the pipeline; at 2:15 an automated text goes out and a follow-up task is set for tomorrow morning.">
+                        <svg class="wsx-lines" viewBox="0 0 1000 500" aria-hidden="true">
+                            <path d="M690 236H700M700 45V371M700 45H708M700 158H708M700 269H708M700 371H708"/>
+                            <path class="ah" d="M708 41l6 4-6 4zM708 154l6 4-6 4zM708 265l6 4-6 4zM708 367l6 4-6 4z"/>
+                            <path d="M744 446C722 446 709 432 710 404M705 411l5-8 5 8"/>
+                        </svg>
+                        <div class="wsx-devfit">
+                            <div class="wsx-devices">
+                                <div class="wsx-lid">
+                                    <div class="wsx-site">
+                                        <div class="wsx-nav"><span class="wsx-logo"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 38 17 15l6.5 9.5L31 13l14 25z" fill="#d6a74e"/><path d="M17 15l-4.3 7 2.8-1.3 1.6 1.7 1.9-1.8 2.6 1.4zM31 13l-3.8 6.4 2.3-1.1 1.5 1.5 1.7-1.6 2.2 1.1z" fill="#f6efe0"/></svg></i><span><b>SUMMIT</b><small>YARD &amp; LANDSCAPE</small></span></span><span class="wsx-links"><span>Home</span><span>Services</span><span>Projects</span><span>About</span><span>Contact</span></span><span class="wsx-cta">Get a Free Quote</span></div>
+                                        <div class="wsx-hero">
+                                            <span class="wsx-eyebrow">CALGARY LANDSCAPING EXPERTS</span>
+                                            <b class="wsx-h">Outdoor Spaces<br>Built for Everyday Living</b>
+                                            <p class="wsx-sub">Custom landscaping, patios, retaining walls and outdoor living spaces designed to last.</p>
+                                            <span class="wsx-btns"><span>Get a Free Quote</span><span>View Our Work</span></span>
+                                        </div>
+                                        <div class="wsx-svc"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7M9 22h6M12 3a4 4 0 0 1 4 4 4 4 0 0 1 1 7.6H7A4 4 0 0 1 8 7a4 4 0 0 1 4-4z"/></svg>Custom Landscaping</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>Patios &amp; Decks</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 9.7h20M2 14.3h20M8 5v4.7M16 5v4.7M12 9.7v4.6M6 14.3V19M18 14.3V19"/></svg>Retaining Walls</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.7.8-2.8 1.8-3.8.2 1.3.8 2 1.7 2.3C11 7.5 11.5 5 12 3z"/><path d="M5 21h14M7.5 18 6 21M16.5 18l1.5 3"/></svg>Outdoor Living</span></div>
+                                    </div>
+                                </div>
+                                <div class="wsx-base"></div>
+                                <div class="wsx-phone">
+                                    <div class="txd-phone">
+                                        <div class="txd-screen wsx-m">
+                                            <div class="txd-island"></div>
+                                            <div class="wsx-m-nav"><span class="wsx-logo"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 38 17 15l6.5 9.5L31 13l14 25z" fill="#d6a74e"/><path d="M17 15l-4.3 7 2.8-1.3 1.6 1.7 1.9-1.8 2.6 1.4zM31 13l-3.8 6.4 2.3-1.1 1.5 1.5 1.7-1.6 2.2 1.1z" fill="#f6efe0"/></svg></i><span><b>SUMMIT</b><small>YARD &amp; LANDSCAPE</small></span></span><span class="wsx-burger"></span></div>
+                                            <div class="wsx-m-hero">
+                                                <span class="wsx-eyebrow">CALGARY LANDSCAPING EXPERTS</span>
+                                                <b class="wsx-h">Outdoor Spaces<br>Built for Everyday Living</b>
+                                                <p class="wsx-sub">Custom landscaping, patios, retaining walls and outdoor living spaces designed to last.</p>
+                                            </div>
+                                            <div class="wsx-m-photo"></div>
+                                            <div class="wsx-form">
+                                                <b>Get a Free Quote</b>
+                                                <span class="wsx-field"><small>Full name</small><span class="wsx-in"><span class="wsx-v" data-ph="Your name" data-v="Sarah Mitchell"></span></span></span>
+                                                <span class="wsx-field"><small>Phone number</small><span class="wsx-in"><span class="wsx-v" data-ph="(000) 000-0000" data-v="(403) 555-0187"></span></span></span>
+                                                <span class="wsx-field"><small>Service needed</small><span class="wsx-in"><span class="wsx-v" data-ph="Choose a service" data-v="Landscaping"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></span>
+                                                <span class="wsx-field wsx-area"><small>Project details</small><span class="wsx-in"><span class="wsx-v" data-ph="Tell us about your project" data-v="Interested in a backyard renovation. Can you provide a quote?"></span></span></span>
+                                                <span class="wsx-send"><span class="wsx-send-a">Send Inquiry &rarr;</span><span class="wsx-send-b">&#10003; Inquiry sent</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wsx-flow">
+                            <ol class="wsx-cards">
+                            <li class="wsx-card dim" data-c="1"><span class="wsx-ic wsx-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><div><b>New Inquiry Received</b><span>Sarah Mitchell</span><span>Submitted from your website.</span></div><time>2:14 PM</time></li>
+                            <li class="wsx-card dim" data-c="2"><span class="wsx-ic wsx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 18a5 5 0 0 1 10 0"/></svg></span><div><b>Added to Pipeline</b><span>New lead automatically created in The Peak System.</span></div><time>2:14 PM</time></li>
+                            <li class="wsx-card dim" data-c="3"><span class="wsx-ic wsx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 8.5h8M8 12h5"/></svg></span><div><b>Automated Text Sent</b><span>Hi Sarah! Thanks for reaching out to Summit Yard &amp; Landscape&hellip;</span></div><time>2:15 PM</time></li>
+                            <li class="wsx-card dim" data-c="4"><span class="wsx-ic wsx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15.5l2 2 4-4"/></svg></span><div><b>Follow-Up Task Created</b><span>Reminder set for tomorrow morning.</span></div><time>2:15 PM</time></li>
+                            </ol>
+                            <p class="wsx-note">From website visitor<br>to opportunity &mdash; automatically.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1137,43 +1587,6 @@ main > section{position:relative;z-index:1;}
                         <p class="txd-cap">Demo account &middot; what your customer sees</p>
                     </div>
                 </figure>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 03 / WEBSITES & SEO -->
-<section class="light sec reveal">
-    <div class="wrap">
-        <div class="wds-grid">
-            <div class="wds-shot">
-                <img src="img/summit-home-work.webp" srcset="img/summit-home-work-m.webp 720w, img/summit-home-work.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="Custom construction-company website design shown on a laptop and a phone" loading="lazy" decoding="async" width="1536" height="1024">
-            </div>
-            <div>
-                <span class="eyebrow">03 / Websites &amp; SEO</span>
-                <h2 class="h-lg">A website that gets your <span class="gold">phone ringing.</span></h2>
-                <p class="lede">Hand-built for your business, set up to rank locally, and wired so every lead lands on your phone.</p>
-                <div class="wout">
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Leads Go Straight to Your Phone</b>
-                        <p>Every form, button, and chat starts a text conversation &mdash; no lead buried in an inbox nobody checks.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Actually Get Found Online</b>
-                        <p>Local SEO is built into every page from day one, so customers searching nearby find you &mdash; not just your competitors.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Your Google Profile, Handled</b>
-                        <p>Set up, filled out, and kept current &mdash; photos, hours, services, and all.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Hand-Coded, Not a Template</b>
-                        <p>No page builders, no bloat &mdash; a custom site that loads fast and looks like your business, not everyone else&rsquo;s.</p>
-                    </div>
-                </div>
-                <div class="blurb-cta">
-                    <a href="features/website.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
-                </div>
             </div>
         </div>
     </div>
@@ -1610,7 +2023,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
 <script>
-// text-message demos: hero = review request + reminder, section 03 = missed-call text-back
+// demos: 01 = missed-call recovery, 02 = estimate follow-up, 03 = website inquiry, plus the review request + reminder
 (function(){
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function demo(root,build){
@@ -1665,59 +2078,119 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
       final:function(){d.showAll();d.clock.textContent='10:00';d.step(4);}};
   });
 
-  var quote=document.getElementById('txd-quote');
-  if(quote)demo(quote,function(d){
-    function reset(){d.clear();d.clock.textContent='3:12';d.step(1);}
-    return {reset:reset,loop:17400,
-      final:function(){d.showAll();d.clock.textContent='10:02';d.step(4);},
+  // 01 missed-call recovery: the call rings out, the timeline cards light up in step and the reply lands in the CRM
+  var mcr=document.getElementById('txd-mcr');
+  if(mcr)demo(mcr,function(d){
+    var cs=mcr.querySelectorAll('[data-c]'),call=d.q('.mcr-call');
+    function lit(n){cs[n-1].classList.remove('dim');cs[n-1].classList.add('on');}
+    function missed(){call.classList.remove('ringing');call.classList.add('missed');}
+    function reset(){d.clear();mcr.classList.remove('fade');call.classList.remove('missed');call.classList.add('ringing');for(var k=0;k<cs.length;k++){cs[k].classList.add('dim');cs[k].classList.remove('on');}}
+    return {reset:reset,loop:13600,
+      final:function(){missed();d.showAll();for(var k=1;k<=cs.length;k++)lit(k);},
       timeline:[
         [0,reset],
-        [400,function(){d.show(1);}],
-        [900,function(){d.typingOn(true);}],
-        [2000,function(){d.typingOn(false);d.show(2);}],
-        [4600,function(){d.show(3);d.clock.textContent='10:00';d.typingOn(true);d.step(2);}],
-        [5800,function(){d.typingOn(false);d.show(4);}],
-        [8300,function(){d.show(5);d.typingOn(true);d.step(3);}],
-        [9500,function(){d.typingOn(false);d.show(6);}],
-        [11500,function(){d.show(7);}],
-        [12200,function(){d.typingOn(true);}],
-        [13300,function(){d.typingOn(false);d.show(8);d.clock.textContent='10:02';d.step(4);}],
-        [16800,function(){d.screen.classList.add('fade');}]
+        [3200,function(){missed();lit(1);}],
+        [4300,function(){lit(2);d.typingOn(true);}],
+        [5300,function(){d.typingOn(false);d.show(1);d.show(2);}],
+        [7000,function(){lit(3);d.show(3);d.show(4);}],
+        [8500,function(){lit(4);}],
+        [9300,function(){lit(5);}],
+        [12800,function(){mcr.classList.add('fade');}]
       ]};
   });
 
-  // demo tabs: click or arrow keys to switch; auto-advance after each loop until the visitor picks one
-  [].forEach.call(document.querySelectorAll('[data-txd-tabs]'),function(box){
-    var tabs=[].slice.call(box.querySelectorAll('[role="tab"]')),picked=false,cur=0;
-    function select(i,focus){
-      cur=(i+tabs.length)%tabs.length;
-      tabs.forEach(function(t,k){var on=k===cur;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});
-      if(focus)tabs[cur].focus();
+  // 02 estimate follow-up: the check-in goes out, Sarah says yes; her row and the stage totals update in step
+  var efu=document.getElementById('txd-efu');
+  if(efu)demo(efu,function(d){
+    var cs=efu.querySelectorAll('[data-c]'),row=d.q('.efu-tr.sel'),pill=row.querySelector('.efu-pill'),act=row.querySelector('.efu-act'),stats={};
+    [].forEach.call(efu.querySelectorAll('.efu-stat[data-s]'),function(s){stats[s.getAttribute('data-s')]=s;});
+    var STAGES={
+      await:{pill:'Awaiting Response',cls:'gold',act:'Estimate sent',when:'3 days ago',n:{await:[6,'$48,900'],fu:[4,'$31,750'],acc:[5,'$72,200']}},
+      fu:{pill:'Follow-Up',cls:'blue',act:'Follow-up sent',when:'Just now',n:{await:[5,'$40,500'],fu:[5,'$40,150'],acc:[5,'$72,200']}},
+      acc:{pill:'Estimate Accepted',cls:'green',act:'Accepted',when:'Just now',n:{await:[5,'$40,500'],fu:[4,'$31,750'],acc:[6,'$80,600']}}
+    };
+    function bump(el){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}
+    function stage(key,quiet){
+      var s=STAGES[key];
+      pill.className='efu-pill efu-pill-'+s.cls;pill.textContent=s.pill;
+      act.firstChild.nodeValue=s.act;act.lastChild.textContent=s.when;
+      for(var k in stats){
+        var el=stats[k],b=el.querySelector('b'),changed=b.textContent!==String(s.n[k][0]);
+        b.textContent=s.n[k][0];el.querySelector('em').textContent=s.n[k][1];el.classList.toggle('sel',k===key);
+        if(changed&&!quiet)bump(el);
+      }
+      if(!quiet)bump(row);
     }
-    tabs.forEach(function(t,k){
-      t.addEventListener('click',function(){picked=true;select(k);});
-      t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();picked=true;select(cur+(e.key==='ArrowRight'?1:-1),true);}});
-      var fig=document.getElementById(t.getAttribute('aria-controls')).querySelector('.txd');
-      if(fig)fig.txdLoopEnd=function(){if(picked)return false;select(cur+1);return true;};
-    });
-  });
-  var missed=document.getElementById('txd-missed');
-  if(missed)demo(missed,function(d){
-    var call=d.q('.txd-call'),state=d.q('.txd-call-state');
-    function reset(){d.clear();call.classList.remove('off','ended');state.textContent='calling…';d.clock.textContent='2:14';d.step(1);}
-    return {reset:reset,loop:15200,
-      final:function(){call.classList.add('off');d.showAll();d.step(3);},
+    function lit(n){cs[n-1].classList.remove('dim');cs[n-1].classList.add('on');}
+    function reset(){d.clear();for(var k=0;k<cs.length;k++){cs[k].classList.add('dim');cs[k].classList.remove('on');}stage('await',true);d.clock.textContent='2:14';}
+    return {reset:reset,loop:12600,
+      final:function(){d.showAll();for(var k=1;k<=cs.length;k++)lit(k);stage('acc',true);d.clock.textContent='2:28';},
       timeline:[
         [0,reset],
-        [2200,function(){state.textContent='No answer';call.classList.add('ended');}],
-        [3300,function(){call.classList.add('off');d.show(1);d.typingOn(true);d.step(2);}],
-        [4500,function(){d.typingOn(false);d.show(2);}],
-        [6700,function(){d.show(3);}],
-        [7600,function(){d.typingOn(true);}],
-        [8700,function(){d.typingOn(false);d.show(4);}],
-        [10700,function(){d.show(5);d.step(3);}],
-        [14600,function(){d.screen.classList.add('fade');}]
+        [500,function(){lit(1);}],
+        [1900,function(){lit(2);d.show(1);d.typingOn(true);}],
+        [2900,function(){d.typingOn(false);d.show(2);d.show(3);stage('fu');}],
+        [5400,function(){d.clock.textContent='2:28';d.show(4);d.show(5);lit(3);}],
+        [7000,function(){lit(4);stage('acc');}],
+        [11800,function(){d.screen.classList.add('fade');}]
       ]};
+  });
+
+  // 03 websites: a visitor fills in the quote form on the phone, then the inquiry runs down the pipeline cards
+  var wsx=document.getElementById('txd-wsx');
+  if(wsx)demo(wsx,function(d){
+    var cs=wsx.querySelectorAll('[data-c]'),form=d.q('.wsx-form'),send=d.q('.wsx-send'),vals=wsx.querySelectorAll('.wsx-v');
+    function lit(n){cs[n-1].classList.remove('dim');cs[n-1].classList.add('on');}
+    function type(i,step){
+      var el=vals[i],box=el.parentNode,v=el.getAttribute('data-v');
+      box.classList.add('typing');
+      for(var c=1;c<=v.length;c++)(function(n){d.later(n*step,function(){el.textContent=v.slice(0,n);});})(c);
+      d.later(v.length*step+250,function(){box.classList.remove('typing');});
+    }
+    function reset(){
+      for(var k=0;k<cs.length;k++){cs[k].classList.add('dim');cs[k].classList.remove('on');}
+      for(k=0;k<vals.length;k++){vals[k].textContent='';vals[k].parentNode.classList.remove('typing');}
+      form.classList.remove('sent');send.classList.remove('pressed');
+    }
+    return {reset:reset,loop:13000,
+      final:function(){for(var k=0;k<vals.length;k++)vals[k].textContent=vals[k].getAttribute('data-v');form.classList.add('sent');for(k=1;k<=cs.length;k++)lit(k);},
+      timeline:[
+        [0,reset],
+        [500,function(){type(0,55);}],
+        [1600,function(){type(1,50);}],
+        [2600,function(){vals[2].textContent=vals[2].getAttribute('data-v');}],
+        [3100,function(){type(3,28);}],
+        [5200,function(){send.classList.add('pressed');}],
+        [5500,function(){send.classList.remove('pressed');form.classList.add('sent');lit(1);}],
+        [6500,function(){lit(2);}],
+        [7600,function(){lit(3);}],
+        [8700,function(){lit(4);}]
+      ]};
+  });
+
+  // 03 on phones the laptop + phone pair scales to the column (the cards and lines are laid out separately)
+  [].forEach.call(document.querySelectorAll('.wsx-devfit'),function(box){
+    var dev=box.firstElementChild,mq=window.matchMedia('(max-width: 860px)');
+    function fit(){
+      var k=mq.matches?Math.min(1,box.clientWidth/dev.offsetWidth):1;
+      dev.style.transform=k<1?'scale('+k+')':'';
+      box.style.height=mq.matches?Math.round(dev.offsetHeight*k)+'px':'';
+    }
+    fit();
+    if(window.ResizeObserver)new ResizeObserver(fit).observe(box);else window.addEventListener('resize',fit);
+  });
+
+  // 01-03 stages: scale each fixed-size stage down to its column; small screens get the timeline-only layout
+  [].forEach.call(document.querySelectorAll('.cv-fit'),function(box){
+    var stage=box.querySelector('.cv-stage'),mq=window.matchMedia('(max-width: 860px)');
+    function fit(){
+      if(mq.matches){stage.style.transform='';box.style.setProperty('--cv-h','auto');return;}
+      var k=Math.min(1,box.clientWidth/stage.offsetWidth);
+      stage.style.transform='scale('+k+')';
+      box.style.setProperty('--cv-h',Math.round(stage.offsetHeight*k)+'px');
+    }
+    fit();
+    if(window.ResizeObserver)new ResizeObserver(fit).observe(box);else window.addEventListener('resize',fit);
   });
 })();
 </script>
