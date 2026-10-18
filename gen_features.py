@@ -7,6 +7,7 @@ Edit PAGES below and re-run to regenerate. All copy must stay 100% factual —
 product-truth claims only, no invented stats or testimonials.
 """
 import os
+from sync_nav import apply_nav  # header comes from index.html
 
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "features")
 
@@ -1036,7 +1037,7 @@ def main():
             continue
         path = os.path.join(OUT_DIR, page["slug"] + ".html")
         with open(path, "w", encoding="utf-8") as f:
-            f.write(page_html(page))
+            f.write(apply_nav(page_html(page), depth=1))
         print("wrote", path)
 
 

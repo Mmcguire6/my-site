@@ -20,6 +20,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from datetime import date
+from sync_nav import apply_nav  # header comes from index.html
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "locations"
@@ -803,7 +804,7 @@ def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
         1,
     )
     path = OUT / f"{slug}.html"
-    path.write_text(html, encoding="utf-8")
+    path.write_text(apply_nav(html, depth=1), encoding="utf-8")
     return path
 
 
@@ -1097,7 +1098,7 @@ def build_locations_index() -> Path:
         prov_blocks="\n".join(blocks),
     )
     path = ROOT / "locations.html"
-    path.write_text(html, encoding="utf-8")
+    path.write_text(apply_nav(html, depth=0, page="locations.html"), encoding="utf-8")
     return path
 
 

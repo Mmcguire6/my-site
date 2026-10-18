@@ -287,98 +287,276 @@ section{position:relative;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Book a Call | Northern Peak Systems","url":"https://northernpeaksystems.ca/book","description":"Book a free 15-minute intro call with Northern Peak Systems.","provider":{"@type":"LocalBusiness","name":"Northern Peak Systems","email":"matt@northernpeaksystems.ca","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"}}}
 </script>
+<style id="nav-sync-css">
+.nav,.mnav{--bg:#0a0a0c; --bg-2:#0f0f12; --card:#131317; --card-2:#17171c; --line:rgba(255,255,255,0.08); --line-2:rgba(255,255,255,0.14); --gold:#d2a24c; --gold-2:#e6be6e; --gold-deep:#a97c33; --gold-line:rgba(210,162,76,0.28); --gold-soft:rgba(210,162,76,0.12); --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c; --cream:#f7f5f0; --ink:#16140f; --ink-2:#6f695d; --cream-line:#e8e2d4; --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif; --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
+.nav .wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
+.nav .btn,.mnav .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:12px 58px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
+.nav .btn .arr,.mnav .btn .arr{transition:transform .22s;}
+.nav .btn:hover .arr,.mnav .btn:hover .arr{transform:translateX(4px);}
+.nav .btn-gold,.mnav .btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -14px rgba(210,162,76,0.5);}
+.nav .btn-gold:hover,.mnav .btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);box-shadow:0 22px 48px -14px rgba(210,162,76,0.6);}
+.nav .btn-line,.mnav .btn-line{background:transparent;color:var(--gold);border-color:var(--gold-line);}
+.nav .btn-line:hover,.mnav .btn-line:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px);}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,0.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px;}
+.brand{display:inline-flex;flex-shrink:0;}
+.brand-logo{height:46px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links > a{font-size:15px;color:#d8d3c9;transition:color .18s;position:relative;padding:6px 0;}
+.nav-links > a:hover{color:var(--white);}
+.nav-links > a.on{color:var(--gold);}
+.nav-links > a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);border-radius:2px;}
+.nav-dd{position:relative;}
+.nav-dd::after{content:"";position:absolute;top:100%;left:-12px;right:-12px;height:16px;}
+.nav-dd-toggle{background:none;border:none;padding:6px 0;font-family:inherit;font-size:15px;color:#d8d3c9;display:inline-flex;align-items:center;gap:5px;cursor:pointer;transition:color .18s;}
+.nav-dd-toggle svg{width:10px;height:10px;transition:transform .2s;}
+.nav-dd:hover .nav-dd-toggle{color:var(--white);}
+.nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg);}
+.nav-dd-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:190px;background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:1px;box-shadow:0 26px 54px -22px rgba(0,0,0,0.85);opacity:0;visibility:hidden;transition:opacity .18s ease .25s,transform .18s ease .25s,visibility 0s linear .45s;z-index:70;}
+.nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition-delay:0s,0s,0s;}
+.nav-dd-menu a{display:block;padding:9px 14px;font-size:13.5px;color:var(--mist);border-radius:7px;white-space:nowrap;transition:background .15s,color .15s;}
+.nav-dd-menu a:hover{background:rgba(255,255,255,0.05);color:var(--white);}
+.nav-dd-menu.cols{display:grid;grid-template-columns:1fr 1fr;min-width:300px;}
+.nav-dd-menu .dd-all{grid-column:1 / -1;color:var(--gold);border-top:1px solid var(--line);margin-top:5px;padding-top:11px;}
+.nav-dd-static{position:static;}
+.nav-dd-static::after{display:none;}
+.nav-dd-menu.mega{top:100%;width:min(980px,calc(100vw - 28px));background:#101014;border:1px solid rgba(210,162,76,0.28);border-radius:0 0 18px 18px;padding:0;overflow:hidden;box-shadow:0 46px 90px -30px rgba(0,0,0,0.85);}
+.mega2-grid{display:grid;grid-template-columns:255px 1fr;}
+.mega2-rail{position:relative;background:#14110b url('/img/northern-peak-hero-bg.webp') bottom center/cover no-repeat;padding:22px 22px 150px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.mega2-rail::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#16120c 0%,rgba(22,18,12,0.82) 45%,rgba(22,18,12,0.1) 100%);}
+.mega2-rail > *{position:relative;z-index:1;}
+.m2-eyebrow{font-size:9.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#d2a24c;}
+.m2-title{font-family:var(--display,inherit);font-size:24px;font-weight:800;color:#fff;line-height:1.12;letter-spacing:-0.01em;}
+.m2-title span{color:#d2a24c;}
+.mega2-rail p{font-size:12px;color:#cfc9bd;line-height:1.55;white-space:normal;}
+.m2-btn{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#d2a24c;border:1px solid rgba(210,162,76,0.5);border-radius:8px;padding:9px 14px;margin-top:4px;transition:border-color .15s,color .15s;}
+.m2-btn:hover{border-color:#d2a24c;color:#e6be6e;}
+.mega2-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);}
+.nav-dd-menu a.m2-card{display:block;background:#101014;padding:14px 16px;border-radius:0;white-space:normal;transition:background .15s;}
+.nav-dd-menu a.m2-card:hover{background:#17171c;}
+.m2-card .ic{display:flex;width:30px;height:30px;border-radius:8px;background:rgba(210,162,76,0.12);border:1px solid rgba(210,162,76,0.3);align-items:center;justify-content:center;color:#d2a24c;margin-bottom:9px;}
+.m2-card .ic svg{width:15px;height:15px;}
+.m2-card b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;}
+.m2-card span{display:block;font-size:11px;color:#a9a49a;line-height:1.45;margin-top:3px;}
+.nav-dd-menu .m2-card.soon{display:block;background:#101014;padding:14px 16px;white-space:normal;cursor:default;}
+.m2-card.soon .ic{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:#7b766c;}
+.m2-card.soon b{color:#cfc9bd;}
+.m2-card .m2-soon{display:inline-block;margin:0 0 0 6px;padding:2px 7px;border:1px solid rgba(210,162,76,0.4);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;line-height:1.4;color:#d2a24c;vertical-align:1px;}
+.nav-dd-menu.mega.mega-ind{width:min(1080px,calc(100vw - 48px));border-radius:16px;border-color:rgba(210,162,76,0.22);}
+.ix-grid{display:grid;grid-template-columns:330px 1fr;}
+.ix-rail{display:flex;flex-direction:column;align-items:flex-start;padding:26px 24px 22px;background:linear-gradient(180deg,rgba(18,17,16,0.97) 0%,rgba(24,20,15,0.92) 50%,rgba(28,22,16,0.6) 100%),url('/img/northern-peak-hero-bg.webp') right bottom/cover no-repeat;border-right:1px solid rgba(255,255,255,0.07);}
+.ix-title{margin-top:8px;font-family:var(--display);font-size:24px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#fff;}
+.ix-title span{display:block;color:var(--gold-2);}
+.ix-rail p{margin-top:9px;font-size:12.5px;line-height:1.55;color:#d6d0c4;white-space:normal;}
+.nav-dd-menu a.ix-btn{display:inline-flex;margin:16px 0 18px;padding:10px 20px;border-radius:8px;color:#181207;font-size:13.5px;}
+.nav-dd-menu a.ix-btn:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);color:#181207;}
+.ix-feats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);width:100%;margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);}
+.ix-feats li{display:flex;flex-direction:column;gap:8px;padding:0 10px;border-left:1px solid rgba(255,255,255,0.1);font-size:11px;line-height:1.38;color:#cfc9bd;white-space:normal;}
+.ix-feats li:first-child{padding-left:0;border-left:0;}
+.ix-fic,.ix-ic{display:grid;place-items:center;flex:none;border:1px solid rgba(210,162,76,0.35);background:linear-gradient(180deg,#2a2216,#15120d);color:var(--gold-2);}
+.ix-fic{width:30px;height:30px;border-radius:8px;}
+.ix-fic svg{width:16px;height:16px;}
+.ix-main{display:flex;flex-direction:column;gap:12px;padding:14px;background:#0c0c0f;}
+.ix-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.nav-dd-menu a.ix-card{display:flex;align-items:stretch;padding:0;border:1px solid rgba(255,255,255,0.09);border-radius:10px;overflow:hidden;background:#111114;white-space:normal;color:inherit;transition:border-color .18s,background .18s;}
+.nav-dd-menu a.ix-card:hover{border-color:rgba(210,162,76,0.45);background:#15151a;color:inherit;}
+.ix-body{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;padding:14px 10px 14px 16px;}
+.ix-head{display:flex;align-items:center;gap:8px;}
+.ix-ic{width:30px;height:30px;border-radius:8px;}
+.ix-ic svg{width:16px;height:16px;}
+.ix-head b{font-size:14px;font-weight:700;line-height:1.2;color:#fff;}
+.ix-desc{font-size:12px;line-height:1.45;color:#a9a49a;}
+.ix-go{flex:none;align-self:center;display:grid;place-items:center;width:26px;height:26px;margin-right:14px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.45);color:#fff;transition:background .18s,border-color .18s,color .18s;}
+.ix-go svg{width:11px;height:11px;}
+.ix-card:hover .ix-go{background:var(--gold);border-color:var(--gold);color:#181207;}
+.ix-more{display:flex;align-items:center;gap:14px;padding:12px 4px 2px;border-top:1px solid rgba(255,255,255,0.08);}
+.ix-more .ix-ic{width:32px;height:32px;border-radius:8px;}
+.ix-more .ix-ic svg{width:17px;height:17px;}
+.ix-more-h small{display:block;font-size:9.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);}
+.ix-more-h b{display:block;margin-top:2px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap;}
+.ix-more p{flex:1;min-width:0;padding:0 14px;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);font-size:11.5px;line-height:1.45;color:#a9a49a;white-space:normal;}
+.nav-dd-menu a.ix-more-btn{flex:none;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid rgba(210,162,76,0.55);border-radius:8px;font-size:12.5px;font-weight:600;color:var(--gold-2);white-space:nowrap;}
+.nav-dd-menu a.ix-more-btn:hover{border-color:var(--gold);background:rgba(210,162,76,0.08);color:var(--gold-2);}
+.ix-more-btn svg{width:13px;height:13px;}
+.nav-dd-menu.mega.mega-xl{width:min(1080px,calc(100vw - 48px));border-radius:16px;border-color:rgba(210,162,76,0.22);}
+.mx-grid{display:grid;grid-template-columns:330px 1fr;}
+.mx-rail{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:26px 24px 0;overflow:hidden;background:radial-gradient(90% 60% at 40% 92%,#2a2013 0%,rgba(42,32,19,0) 70%),linear-gradient(180deg,#121110 0%,#18140f 55%,#1c1610 100%);border-right:1px solid rgba(255,255,255,0.07);}
+.mx-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);}
+.mx-title{margin-top:8px;font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#fff;}
+.mx-title span{color:var(--gold-2);}
+.mx-rail p{max-width:30ch;margin-top:8px;font-size:13px;line-height:1.5;color:#d6d0c4;white-space:normal;}
+.nav-dd-menu a.mx-btn{display:inline-flex;margin-top:16px;margin-bottom:14px;padding:10px 20px;border-radius:8px;color:#181207;font-size:13.5px;}
+.nav-dd-menu a.mx-btn:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);color:#181207;}
+.mx-shot{display:block;width:calc(100% + 24px);max-width:none;height:auto;margin-top:auto;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%);mask-image:linear-gradient(180deg,transparent 0%,#000 22%);}
+.mx-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.nav-dd-menu a.mx-card{display:flex;flex-direction:column;align-items:flex-start;padding:20px 20px 18px;border-radius:0;background:#0f0f12;white-space:normal;color:inherit;transition:background .18s;}
+.nav-dd-menu a.mx-card:hover{background:#16161b;}
+.mx-top{display:flex;align-items:flex-start;justify-content:space-between;width:100%;}
+.mx-ic{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid rgba(210,162,76,0.35);background:linear-gradient(180deg,#2a2216,#15120d);color:var(--gold-2);}
+.mx-ic svg{width:19px;height:19px;}
+.mx-go{display:grid;place-items:center;width:26px;height:26px;margin-top:4px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.45);color:#fff;transition:background .18s,border-color .18s,color .18s;}
+.mx-go svg{width:12px;height:12px;}
+.mx-card:hover .mx-go{background:var(--gold);border-color:var(--gold);color:#181207;}
+.mx-card b{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:12px;font-size:15px;font-weight:700;line-height:1.25;color:#fff;}
+.mx-badge{padding:2px 8px;border:1px solid rgba(210,162,76,0.65);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-2);}
+.mx-desc{margin-top:5px;font-size:12.5px;line-height:1.45;color:#a9a49a;}
+.mx-more{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:600;color:var(--gold-2);}
+.mx-more svg{width:13px;height:13px;transition:transform .2s;}
+.mx-card:hover .mx-more svg{transform:translateX(3px);}
+.nav-dd-static > .nav-dd-toggle{position:relative;}
+.nav-dd-static > .nav-dd-toggle::after{content:"";position:absolute;left:0;right:0;bottom:-15px;height:3px;border-radius:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s;}
+.nav-dd-static:hover > .nav-dd-toggle{color:var(--gold-2);}
+.nav-dd-static:hover > .nav-dd-toggle::after{transform:scaleX(1);}
+.nav-dd:hover > .nav-dd-toggle svg{transform:rotate(180deg);}
+.nav-dd-toggle svg{transition:transform .2s;}
+.m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.m2-foot .chk{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.m2-foot .chk svg{width:15px;height:15px;}
+.m2-foot b{display:block;font-size:12.5px;font-weight:700;color:#fff;}
+.m2-foot p{font-size:11px;color:#a9a49a;line-height:1.5;margin-top:3px;white-space:normal;}
+.m2-strip{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;}
+.m2-strip span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#7b766c;}
+.m2-strip svg{width:13px;height:13px;color:#d2a24c;}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.nav-cta .btn{padding:10px 32px;}
+.nav-burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);align-items:center;justify-content:center;}
+.nav-burger svg{width:20px;height:20px;}
+@media(max-width:1120px){.nav-links,.nav-cta .btn{display:none;}.nav-burger{display:inline-flex;}}
+.mnav{position:fixed;inset:0;z-index:60;background:var(--bg);transform:translateY(-100%);transition:transform .4s cubic-bezier(.5,0,.1,1);display:flex;flex-direction:column;padding:24px clamp(22px,6vw,40px);overflow-y:auto;}
+.mnav.open{transform:translateY(0);}
+.mnav-top{display:flex;align-items:center;justify-content:space-between;height:50px;}
+.mnav-close{width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:transparent;color:var(--white);display:flex;align-items:center;justify-content:center;}
+.mnav-links{display:flex;flex-direction:column;gap:2px;margin-top:34px;}
+.mnav-links a{font-size:clamp(24px,5vw,30px);font-weight:700;color:var(--white);padding:10px 0;border-bottom:1px solid var(--line);}
+.mnav-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:14px;}
+.nav .wrap,.hero-v3 .wrap{max-width:1660px;}
+.nav .btn-tc,.mnav .btn-tc{text-transform:none;letter-spacing:0;font-size:clamp(15px,1.05vw,18px);padding:clamp(15px,1.15vw,20px) clamp(28px,3vw,52px);border-radius:8px;}
+.foot-brand .brand-logo{height:52px;}
+.nav-login{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--white);border:1px solid var(--line-2);border-radius:9px;padding:9px 22px;transition:border-color .18s,color .18s;margin-right:2px;}
+.nav-login:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:1120px){.nav-login{display:none;}}
+.nav-login{gap:8px;padding:8px 4px;border:0;font-size:15px;font-weight:500;letter-spacing:0;text-transform:none;}
+.nav-login svg{width:20px;height:20px;}
+.nav-login:hover{color:var(--gold-2);}
+.nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav">
     <div class="wrap nav-inner">
-        <a href="index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
+        <a href="/" class="brand" aria-label="Northern Peak Systems, home">
+            <img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312">
+        </a>
         <nav class="nav-links" aria-label="Primary">
-            <a href="/">Home</a>
             <div class="nav-dd nav-dd-static">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu mega">
-                    <div class="mega2-grid">
-                        <aside class="mega2-rail">
-                            <span class="m2-eyebrow">The Complete Solution</span>
-                            <div class="m2-title">The <span>Peak</span> System</div>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="nav-dd-menu mega mega-xl">
+                    <div class="mx-grid">
+                        <aside class="mx-rail">
+                            <span class="mx-eyebrow">The complete solution</span>
+                            <div class="mx-title">The <span>Peak System</span></div>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
-                            <a href="how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
+                            <a href="how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
+                            <img src="img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
-                        <div class="mega2-cards">
-                        <a href="features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
-                        <a href="features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
-                        <a href="features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text-Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
-                        <a href="features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
-                        <a href="features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
-                        <a href="features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
-                        <div class="m2-foot">
-                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <div>
-                                <b>Everything Working Together</b>
-                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
-                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
-                            </div>
+                        <div class="mx-cards">
+                            <a href="features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Automated Follow-Up</b><span class="mx-desc">Respond to missed calls, follow up with leads, and recover outstanding estimates.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="contact.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Revenue Insights <span class="mx-badge">Coming soon</span></b><span class="mx-desc">Track opportunities, appointments, and revenue across your customer journey.</span><span class="mx-more">Get notified <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-dd nav-dd-static">
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="nav-dd-menu mega mega-ind">
+                    <div class="ix-grid">
+                        <aside class="ix-rail">
+                            <span class="mx-eyebrow">Built for your industry</span>
+                            <div class="ix-title">Built for the trades. <span>Designed for growth.</span></div>
+                            <p>Whether you&rsquo;re a one-truck operation or managing a growing crew, The Peak System helps you capture opportunities, follow up with customers, and turn more inquiries into paying jobs.</p>
+                            <a href="index.html#trades" class="btn btn-gold btn-tc ix-btn">Explore All Industries <span class="arr">&rarr;</span></a>
+                            <ul class="ix-feats">
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Industry-specific workflows</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Scalable for any size business</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Built for the entire home-service industry</li>
+                            </ul>
+                        </aside>
+                        <div class="ix-main">
+                            <div class="ix-cards">
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8a3 3 0 0 1 3 3v2h3a2 2 0 0 1 2 2v3h-4v-2h-2a2 2 0 0 1-2-2v-1h-8z"/><path d="M8 8V5h4"/><path d="M18 21.5a1.2 1.2 0 0 1-2.4 0c0-.7 1.2-2 1.2-2s1.2 1.3 1.2 2z"/></svg></span><b>Plumbing</b></span><span class="ix-desc">Capture emergency calls, follow up on estimates, and generate repeat business.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c0-2.5.6-4.6 2.6-4.6 1.4 0 2 1.4 1.3 2.6-.8 1.3-2.4 1.8-3.9 2M13.6 12c2.5 0 4.6.6 4.6 2.6 0 1.4-1.4 2-2.6 1.3-1.3-.8-1.8-2.4-2-3.9M12 13.6c0 2.5-.6 4.6-2.6 4.6-1.4 0-2-1.4-1.3-2.6.8-1.3 2.4-1.8 3.9-2M10.4 12c-2.5 0-4.6-.6-4.6-2.6 0-1.4 1.4-2 2.6-1.3 1.3.8 1.8 2.4 2 3.9"/></svg></span><b>HVAC</b></span><span class="ix-desc">Convert service inquiries and automate seasonal maintenance reminders.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><b>Electrical</b></span><span class="ix-desc">Manage new inquiries, follow up on quotes, and build customer relationships.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M16 6.3V4h2.5v4.2"/><path d="M10 20v-5h4v5"/></svg></span><b>Roofing</b></span><span class="ix-desc">Recover outstanding estimates and collect reviews from completed projects.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M8 15h8a4 4 0 0 0 .6-7.96A5 5 0 0 0 7.4 7.04 4 4 0 0 0 8 15z"/></svg></span><b>Landscaping</b></span><span class="ix-desc">Capture seasonal demand and reactivate previous customers.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                                <a href="index.html#trades" class="ix-card"><span class="ix-body"><span class="ix-head"><span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18v-3a7 7 0 0 1 14 0v3"/><path d="M10 8.3V5.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2.8"/><path d="M12 11v3"/></svg></span><b>General Contractors</b></span><span class="ix-desc">Organize inquiries, follow up on proposals, and stay connected with customers.</span></span><span class="ix-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            </div>
+                            <div class="ix-more">
+                                <span class="ix-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                                <span class="ix-more-h"><small>Built for every trade</small><b>Don&rsquo;t see your industry?</b></span>
+                                <p>If your customers call, text, or search, it works for you too, from concrete and painting to pest control and pool services.</p>
+                                <a href="index.html#trades" class="ix-more-btn">Explore All Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <a href="pricing.html">Pricing</a>
-            <a href="about.html">About</a>
             <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
                 <div class="nav-dd-menu">
-                    <a href="work.html">Work</a>
-                    <a href="how.html">How we work</a>
-                    <a href="faq.html">FAQ</a>
+                    <a href="how.html">How it works</a>
                     <a href="blog/">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="locations.html">Locations</a>
                 </div>
             </div>
             <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu cols">
-                    <a href="locations/edmonton.html">Edmonton</a>
-                    <a href="locations/calgary.html">Calgary</a>
-                    <a href="locations/st-albert.html">St. Albert</a>
-                    <a href="locations/sherwood-park.html">Sherwood Park</a>
-                    <a href="locations/leduc.html">Leduc</a>
-                    <a href="locations/spruce-grove.html">Spruce Grove</a>
-                    <a href="locations/airdrie.html">Airdrie</a>
-                    <a href="locations/red-deer.html">Red Deer</a>
-                    <a href="locations.html" class="dd-all">All locations &rarr;</a>
+                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Company <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+                <div class="nav-dd-menu">
+                    <a href="about.html">About</a>
+                    <a href="work.html">Our work</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
-            <a href="contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="https://app.northernpeaksystems.ca/" class="nav-login">Login</a>
-            <a href="contact.html" class="btn btn-line">Book a Call</a>
-            <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+            <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
+            <a href="contact.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+            </button>
         </div>
     </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div class="mnav" id="mnav" aria-hidden="true">
+<div class="mnav" id="mnav" inert>
     <div class="mnav-top">
-        <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-        <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+        <span class="brand"><img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
+        <button type="button" class="mnav-close" id="mclose" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="/">Home</a>
-        <a href="/#features">Products</a>
+        <a href="index.html#features">Platform</a>
+        <a href="index.html#trades">Solutions</a>
         <a href="pricing.html">Pricing</a>
+        <a href="how.html">How it works</a>
+        <a href="blog/">Blog</a>
         <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="locations.html">Locations</a>
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
         <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 

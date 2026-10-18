@@ -16,6 +16,7 @@ from __future__ import annotations
 import re, json, html
 from pathlib import Path
 from datetime import date
+from sync_nav import apply_nav  # header comes from index.html
 
 from gen_locations import CITY_STYLES
 
@@ -507,7 +508,7 @@ def write_post(p: dict) -> Path:
 {NAV_SCRIPT}
 </body></html>"""
     out = OUT / f"{p['slug']}.html"
-    out.write_text(head + body, encoding="utf-8")
+    out.write_text(apply_nav(head + body, depth=1), encoding="utf-8")
     return out
 
 def write_index(posts: list) -> Path:
@@ -540,7 +541,7 @@ def write_index(posts: list) -> Path:
 {NAV_SCRIPT}
 </body></html>"""
     out = OUT / "index.html"
-    out.write_text(head + body, encoding="utf-8")
+    out.write_text(apply_nav(head + body, depth=1), encoding="utf-8")
     return out
 
 def update_sitemap(posts: list) -> None:
