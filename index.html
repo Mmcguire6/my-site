@@ -95,7 +95,6 @@ button{font-family:inherit;cursor:pointer;}
 section{position:relative;}
 h1,h2,h3{letter-spacing:-0.02em;}
 h1,h2{font-family:var(--display);}
-.h-xl{font-size:clamp(40px,5.4vw,72px);font-weight:800;line-height:1.04;}
 .h-lg{font-size:clamp(28px,3.4vw,46px);font-weight:800;line-height:1.08;margin-top:14px;}
 .lede{font-size:clamp(15px,1.25vw,17px);color:var(--mist);margin-top:16px;line-height:1.65;}
 .light{background:var(--cream);color:var(--ink);}
@@ -114,8 +113,6 @@ h1,h2{font-family:var(--display);}
 .btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);box-shadow:0 22px 48px -14px rgba(210,162,76,0.6);}
 .btn-line{background:transparent;color:var(--gold);border-color:var(--gold-line);}
 .btn-line:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px);}
-.btn-ghost{background:#17171c;color:var(--white);border-color:var(--line-2);}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
 .btn-dark{background:#16140f;color:#fff;box-shadow:0 16px 38px -18px rgba(0,0,0,0.5);}
 .btn-dark:hover{background:#000;transform:translateY(-2px);}
 
@@ -314,14 +311,11 @@ h1,h2{font-family:var(--display);}
 /* ===== HERO ===== */
 .hero{overflow:hidden;display:flex;flex-direction:column;min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);padding:clamp(26px,3.2vw,46px) 0 0;background:var(--bg);}
 .hero > .wrap{width:100%;flex:1;display:flex;align-items:center;}
-.hero-grid{width:100%;}
-.hero-stats{position:relative;z-index:2;margin-top:clamp(24px,3vw,40px);border-top:1px solid var(--line);background:rgba(10,10,12,0.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:clamp(18px,2.2vw,28px) 0;}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
 .hero-bg::after{content:"";position:absolute;inset:0;background:
   linear-gradient(90deg,rgba(10,10,12,0.92) 0%,rgba(10,10,12,0.78) 34%,rgba(10,10,12,0.45) 55%,rgba(10,10,12,0.28) 100%),
   linear-gradient(to top,var(--bg) 0%,rgba(10,10,12,0) 26%);}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr 0.98fr;gap:clamp(30px,4vw,70px);align-items:start;}
 .hero h1{margin:16px 0 14px;font-size:clamp(36px,4.4vw,58px);}
 /* hero v3 (mockup): photo, eyebrow, two-line headline, two buttons, four pillars, trades band */
 .hero-v3 .hero-bg img{object-position:72% 35%;}
@@ -338,15 +332,46 @@ h1,h2{font-family:var(--display);}
 .hv3-sub{max-width:44ch;margin-top:clamp(16px,1.6vw,26px);font-size:clamp(17px,1.45vw,26px);line-height:1.4;color:#d4cec3;}
 .hv3-actions{display:flex;flex-wrap:wrap;gap:clamp(14px,1.4vw,24px);margin-top:clamp(26px,2.6vw,44px);}
 .btn-tc{text-transform:none;letter-spacing:0;font-size:clamp(15px,1.05vw,18px);padding:clamp(15px,1.15vw,20px) clamp(28px,3vw,52px);border-radius:8px;}
-.btn-ghost-light{background:rgba(10,10,12,0.25);color:var(--white);border:1.5px solid rgba(255,255,255,0.6);}
-.btn-ghost-light:hover{border-color:var(--white);transform:translateY(-2px);}
-.btn-ghost-light svg{width:1.15em;height:1.15em;}
 .hv3-pillars{list-style:none;display:flex;flex-wrap:nowrap;row-gap:20px;margin-top:clamp(34px,3.4vw,60px);}
 .hv3-pillars li{display:flex;align-items:flex-start;gap:14px;padding:2px clamp(16px,2vw,36px);border-left:1px solid rgba(255,255,255,0.18);}
 .hv3-pillars li:first-child{padding-left:0;border-left:0;}
 .hv3-pillars svg{flex:none;width:clamp(28px,2.1vw,38px);height:clamp(28px,2.1vw,38px);color:var(--gold);}
 .hv3-pillars b{display:block;font-size:clamp(13px,0.95vw,17px);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--white);}
 .hv3-pillars span{display:block;max-width:16ch;margin-top:3px;font-size:clamp(12.5px,0.85vw,15px);line-height:1.45;color:#bdb7ac;}
+/* Who it's for (mockup): copy + featured-industry photo cards + a more-trades bar */
+#trades .cv-title{font-size:clamp(28px,10.4cqi,60px);}
+.whx-grid{display:grid;grid-template-columns:minmax(0,29fr) minmax(0,71fr);gap:clamp(28px,3.4vw,64px);align-items:start;}
+.whx-eyebrow{font-size:13px;}
+.whx-cards{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px;}
+.whx-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(210,162,76,0.32);border-radius:14px;background:linear-gradient(180deg,#141416,#0d0d0f);box-shadow:0 26px 50px -30px rgba(0,0,0,0.9);}
+.whx-photo{position:relative;display:block;aspect-ratio:1.8;background:center/cover;}
+.whx-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,15,0) 50%,rgba(13,13,15,0.85) 100%);}
+.whx-ic{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;margin:-26px 0 0 16px;border:1px solid rgba(210,162,76,0.55);border-radius:11px;background:linear-gradient(180deg,#221c12,#121110);color:var(--gold-2);box-shadow:0 10px 20px -10px rgba(0,0,0,0.8);}
+.whx-ic svg{width:22px;height:22px;}
+.whx-card b{display:block;margin:12px 16px 0;font-family:var(--display);font-size:clamp(16px,1.25vw,19px);font-weight:800;line-height:1.2;color:#fff;}
+.whx-card p{margin:5px 16px 18px;font-size:clamp(13px,0.95vw,14.5px);line-height:1.5;color:#cfc9bd;}
+.whx-bar{display:flex;flex-direction:column;gap:16px;margin-top:clamp(28px,3vw,44px);padding:18px 26px;border:1px solid rgba(210,162,76,0.35);border-radius:16px;background:rgba(13,13,15,0.75);}
+.whx-more{list-style:none;display:flex;flex-wrap:wrap;align-items:center;row-gap:10px;}
+.whx-more li{display:flex;align-items:center;gap:8px;padding:3px 16px;border-left:1px solid rgba(255,255,255,0.12);font-size:13.5px;color:#e9e5dc;white-space:nowrap;}
+.whx-more li:first-child{padding-left:0;border-left:0;}
+.whx-more svg{width:19px;height:19px;color:var(--gold-2);}
+.whx-dots{font-size:15px;letter-spacing:1px;line-height:1;color:var(--gold-2);}
+.whx-cta{display:flex;align-items:center;justify-content:space-between;gap:22px;padding-top:16px;border-top:1px solid rgba(210,162,76,0.3);}
+.whx-cta b{display:block;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);}
+.whx-cta div span{display:block;margin-top:4px;font-size:13.5px;line-height:1.45;color:#cfc9bd;}
+.whx-btn{flex:none;padding:14px 26px;font-size:12.5px;}
+@media(max-width:1279px){.whx-grid{grid-template-columns:1fr;}}
+@media(max-width:1180px){.whx-more{gap:10px 22px;}.whx-more li{padding:0;border-left:0;}}
+@media(max-width:860px){
+  .whx-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .whx-ic{width:40px;height:40px;margin:-22px 0 0 12px;}
+  .whx-card b{margin:10px 12px 0;}
+  .whx-card p{margin:4px 12px 14px;}
+  .whx-bar{padding:18px;}
+  .whx-more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;}
+  .whx-more li{padding:0;border-left:0;white-space:normal;}
+  .whx-cta{flex-direction:column;align-items:flex-start;}
+}
 /* 01 + 02 Convert sections (mockups): copy left; the demo sits on a fixed 1000px-wide stage that scales down to
    its column (script below); small screens show the timeline cards only. cv-* is shared, mcr-* / efu-* are the stages. */
 .cv-wrap{max-width:1660px;}
@@ -662,28 +687,345 @@ h1,h2{font-family:var(--display);}
   .wsx-flow{position:static;width:auto;margin-top:28px;}
   .wsx-note{margin:22px 0 0;text-align:center;transform:none;}
 }
-/* 05 customer retention */
-.ret-head{max-width:640px;}
-.ret-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(26px,3vw,40px);}
-.ret-card{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid var(--cream-line);border-radius:16px;background:#fff;box-shadow:0 20px 44px -30px rgba(60,45,20,0.35);}
-.ret-card b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:17px;font-weight:700;color:var(--ink);}
-.ret-card p{font-size:14.5px;line-height:1.55;color:var(--ink-2);}
-.ret-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid var(--gold-line);background:var(--gold-soft);color:var(--gold-deep);}
-.ret-ic svg{width:22px;height:22px;}
-.ret-card.soon{background:#fbfaf6;}
-.ret-card.soon .ret-ic{color:var(--ink-2);border-color:var(--cream-line);background:#f1ede4;}
-.ret-soon{padding:2px 9px;border:1px solid var(--gold-line);border-radius:999px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-deep);}
-.ret-cta{margin-top:clamp(24px,3vw,36px);}
+/* 04 Lead Management: dashboard (KPIs count up, pipeline bars fill), conversations phone, reply toast, five-stage timeline */
+#lead-management .cv-title{font-size:clamp(28px,8.8cqi,54px);}
+.lmx-stage{height:540px;}
+.lmx-dash{position:absolute;left:86px;top:0;width:740px;height:430px;padding:8px;border:1px solid rgba(255,255,255,0.12);border-radius:18px;background:linear-gradient(180deg,#1b1b1f,#0c0c0e);box-shadow:0 0 0 1px rgba(210,162,76,0.14),0 40px 90px -40px rgba(0,0,0,0.9);}
+.lmx-app{display:grid;grid-template-columns:132px minmax(0,1fr);height:100%;overflow:hidden;border-radius:11px;background:#0d0d10;}
+.lmx-dash .cv-side{padding:10px 8px;}
+.lmx-dots{display:flex;gap:5px;margin:0 0 12px 4px;}
+.lmx-dots i{width:7px;height:7px;border-radius:50%;background:#ff5f57;}
+.lmx-dots i:nth-child(2){background:#febc2e;}
+.lmx-dots i:nth-child(3){background:#28c840;}
+.lmx-dash .cv-side img{margin:0 0 14px 4px;}
+.lmx-dash .cv-side li{padding:5.5px 8px;font-size:10.5px;}
+.lmx-dash .cv-side li svg{width:13px;height:13px;}
+.lmx-main{display:flex;flex-direction:column;gap:10px;min-width:0;padding:14px 16px;}
+.lmx-top{display:flex;align-items:center;justify-content:space-between;}
+.lmx-h{font-size:17px;font-weight:700;color:#fff;}
+.lmx-week{display:flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:8px;background:#151518;font-size:10px;font-weight:600;color:#f2efe9;}
+.lmx-week svg{width:10px;height:10px;}
+.lmx-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+.lmx-kpi{position:relative;padding:10px 12px;border:1px solid rgba(255,255,255,0.07);border-radius:10px;background:#141417;}
+.lmx-kpi span{display:block;font-size:9.5px;color:#cfc9bd;}
+.lmx-kpi b{display:block;margin-top:5px;font-size:19px;font-weight:700;line-height:1.1;color:#fff;font-variant-numeric:tabular-nums;}
+.lmx-kpi em{display:block;margin-top:6px;font-style:normal;font-size:8.5px;font-weight:600;color:#3fcf72;}
+.lmx-kpi svg{position:absolute;right:10px;top:10px;width:15px;height:15px;color:var(--gold-2);}
+.lmx-panels{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.lmx-panel{display:flex;flex-direction:column;min-width:0;padding:11px 12px;border:1px solid rgba(255,255,255,0.07);border-radius:10px;background:#121215;}
+.lmx-panel > b{font-size:10.5px;font-weight:700;color:#fff;}
+.lmx-more{margin-top:auto;padding-top:6px;font-size:9px;font-weight:600;color:#4c9bff;}
+.lmx-more-green{color:#3fcf72;}
+.lmx-pipe,.lmx-acts,.lmx-appts,.lmx-convs{list-style:none;}
+.lmx-pipe{display:grid;gap:9px;margin-top:9px;}
+.lmx-pipe li{display:grid;grid-template-columns:15px minmax(0,1fr) auto;column-gap:8px;align-items:center;font-size:9.5px;font-weight:600;color:#f2efe9;}
+.lmx-ring{position:relative;grid-row:span 2;width:15px;height:15px;border:1.5px solid var(--c);border-radius:50%;}
+.lmx-ring::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--c);}
+.lmx-pipe s{position:relative;grid-column:2 / 4;height:3px;margin-top:5px;overflow:hidden;border-radius:2px;background:rgba(255,255,255,0.08);}
+.lmx-pipe s i{position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:2px;background:var(--c);transition:width 1.1s cubic-bezier(.2,.7,.2,1);}
+.lmx-stage.pre .lmx-pipe s i{width:0;}
+.lmx-acts{display:grid;gap:9px;margin-top:9px;}
+.lmx-acts li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;column-gap:8px;align-items:center;transition:opacity .4s,transform .4s;}
+.lmx-acts li.dim{opacity:0;transform:translateY(5px);}
+.lmx-acts li > i{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;font-style:normal;font-size:8px;font-weight:700;color:#fff;}
+.lmx-acts li > i svg{width:12px;height:12px;}
+.lmx-t-green{background:#2fa45a;}.lmx-t-tan{background:#b98d6a;}.lmx-t-purple{background:#7c5ce0;}.lmx-t-blue{background:#1f6fe5;}.lmx-t-red{background:#e5484d;}
+.lmx-acts b,.lmx-appts b,.lmx-convs b{display:block;font-size:9.5px;font-weight:600;color:#fff;white-space:nowrap;}
+.lmx-acts small,.lmx-appts small{display:block;font-size:8.5px;color:#a9a49a;white-space:nowrap;}
+.lmx-acts time{font-size:8px;color:#8e8a82;white-space:nowrap;}
+.lmx-appts{display:grid;gap:12px;margin-top:9px;}
+.lmx-appts li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:6px;}
+.lmx-appts time{font-size:9.5px;font-weight:700;color:var(--gold-2);white-space:nowrap;}
+.lmx-phone{position:absolute;left:800px;top:50px;z-index:3;}
+.lmx-stage .txd-phone{width:200px;height:392px;padding:8px;border-radius:34px;}
+.lmx-stage .txd-screen{border-radius:27px;}
+.lmx-stage .txd-island{top:7px;width:58px;height:17px;}
+.lmx-stage .txd-status{height:34px;padding:0 18px 4px;font-size:10.5px;}
+.lmx-stage .cv-sb svg{width:12px;height:9px;}
+.lmx-stage .txd-batt{width:19px;height:10px;}
+.lmx-ph{display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px;color:#fff;}
+.lmx-ph b{font-size:13px;font-weight:700;}
+.lmx-ph span{font-size:12px;letter-spacing:1px;color:#cfc9bd;}
+.lmx-tabs{display:flex;gap:4px;margin:0 10px;padding:3px;border-radius:8px;background:#17171b;}
+.lmx-tabs span{flex:1;display:flex;align-items:center;justify-content:center;gap:3px;padding:5px 0;border-radius:6px;font-size:8.5px;font-weight:600;color:#cfc9bd;}
+.lmx-tabs span.on{background:linear-gradient(180deg,#e7bd6a,#c9973f);color:#181207;}
+.lmx-tabs em{display:grid;place-items:center;width:11px;height:11px;border-radius:50%;background:#e5484d;font-style:normal;font-size:7px;color:#fff;}
+.lmx-search{display:flex;align-items:center;gap:6px;margin:8px 10px 4px;}
+.lmx-search > span{flex:1;display:flex;align-items:center;gap:5px;padding:5px 8px;border:1px solid rgba(255,255,255,0.1);border-radius:7px;font-size:8.5px;color:#77736b;}
+.lmx-search i{display:grid;place-items:center;width:22px;height:22px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#cfc9bd;}
+.lmx-search svg{width:10px;height:10px;}
+.lmx-convs li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;column-gap:8px;align-items:center;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,0.05);}
+.lmx-convs li > i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;font-style:normal;font-size:9px;font-weight:700;}
+.lmx-a1{background:#8f8f97;color:#fff;}.lmx-a2{background:#b98d6a;color:#fff;}.lmx-a3{background:#6f6f77;color:#fff;}.lmx-a4{background:#e9b7b1;color:#3a1f1c;}.lmx-a5{background:#e2ddd4;color:#222;}
+.lmx-convs small{display:block;overflow:hidden;font-size:8.5px;color:#a9a49a;white-space:nowrap;text-overflow:ellipsis;}
+.lmx-miss{color:#ff8a8a;}
+.lmx-miss::before{content:"";display:inline-block;width:6px;height:6px;margin-right:4px;border-radius:50%;background:#e5484d;}
+.lmx-r{align-self:stretch;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;}
+.lmx-r time{font-size:8px;color:#8e8a82;white-space:nowrap;}
+.lmx-r em{display:grid;place-items:center;min-width:13px;height:13px;padding:0 3px;border-radius:7px;background:#1f6fe5;font-style:normal;font-size:7.5px;font-weight:700;color:#fff;}
+.lmx-r .lmx-unread{transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1);}
+.lmx-r .lmx-unread.show{transform:scale(1);}
+.lmx-steps{list-style:none;position:absolute;left:0;top:448px;width:826px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:24px;}
+.lmx-step{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:9px;padding:12px 10px 12px 12px;border:1px solid rgba(210,162,76,0.3);border-radius:12px;background:linear-gradient(180deg,#141416,#0d0d0f);box-shadow:0 24px 46px -26px rgba(0,0,0,0.8);transition:opacity .45s,transform .45s,border-color .45s,box-shadow .45s;}
+.lmx-step:not(:last-child)::after{content:"";position:absolute;top:50%;right:-23px;width:22px;height:12px;margin-top:-6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='12'%3E%3Cpath d='M1 6h17' stroke='%23d2a24c' stroke-width='1.6'/%3E%3Cpath d='M14 1.5 19.5 6 14 10.5' fill='none' stroke='%23d2a24c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;}
+.lmx-step.dim{opacity:.38;transform:translateY(6px);}
+.lmx-step.on{border-color:rgba(210,162,76,0.7);box-shadow:0 0 20px -6px rgba(210,162,76,0.35),0 24px 46px -26px rgba(0,0,0,0.8);}
+.lmx-ic{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;color:#fff;}
+.lmx-ic svg{width:16px;height:16px;}
+.lmx-ic-green{background:linear-gradient(180deg,#3cc46d,#26a055);}
+.lmx-ic-blue{background:#1f6fe5;}
+.lmx-ic-gold{background:linear-gradient(180deg,#e7bd6a,#c48f38);color:#181207;}
+.lmx-step b{display:block;font-size:11.5px;font-weight:700;color:#fff;}
+.lmx-step small{display:block;margin-top:2px;font-size:8.8px;line-height:1.35;color:#cfc9bd;}
+.lmx-step em{display:inline-block;margin-top:6px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,0.07);font-style:normal;font-size:8px;color:#cfc9bd;}
+.lmx-step:first-child em{background:rgba(47,179,95,0.18);color:#7fe0a0;}
+.lmx-toast{position:absolute;left:762px;top:372px;z-index:4;width:236px;display:grid;grid-template-columns:34px minmax(0,1fr);column-gap:10px;align-items:center;padding:11px 12px;border-radius:12px;background:#fff;box-shadow:0 24px 50px -20px rgba(0,0,0,0.7);font-family:var(--sans);transition:opacity .45s,transform .45s;}
+.lmx-toast.dim{opacity:0;transform:translateY(10px);}
+.lmx-toast > i{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:linear-gradient(180deg,#3cc46d,#26a055);color:#fff;}
+.lmx-toast > i svg{width:18px;height:18px;}
+.lmx-toast b{display:block;font-size:11.5px;font-weight:700;color:var(--ink);}
+.lmx-toast span span{display:block;margin-top:1px;font-size:9.5px;color:var(--ink-2);}
+.lmx-toast time{position:absolute;right:12px;top:12px;font-size:9px;color:var(--ink-2);}
+@media(max-width:860px){
+  .lmx-stage{height:auto;}
+  .lmx-dash,.lmx-phone{display:none;}
+  .lmx-steps{position:static;width:auto;grid-template-columns:1fr;row-gap:26px;}
+  .lmx-step{grid-template-columns:38px minmax(0,1fr);column-gap:12px;padding:14px;}
+  .lmx-step:not(:last-child)::after{top:auto;right:auto;left:50%;bottom:-19px;margin:0 0 0 -11px;transform:rotate(90deg);}
+  .lmx-ic{width:38px;height:38px;border-radius:10px;}
+  .lmx-ic svg{width:19px;height:19px;}
+  .lmx-step b{font-size:15px;}
+  .lmx-step small{font-size:12.5px;}
+  .lmx-step em{font-size:11px;}
+  .lmx-toast{position:relative;left:auto;top:auto;width:auto;margin-top:22px;grid-template-columns:40px minmax(0,1fr);padding:14px;}
+  .lmx-toast > i{width:40px;height:40px;}
+  .lmx-toast b{font-size:14px;}
+  .lmx-toast span span{font-size:12.5px;}
+  .lmx-toast time{top:15px;right:14px;font-size:11px;}
+}
+@media(prefers-reduced-motion:reduce){.lmx-pipe s i{transition:none;}}
+/* 05 Reputation: job card, review request, Google review on the phone, then the new-review, chart, profile and stat cards */
+#reputation .cv-title{font-size:clamp(28px,9.4cqi,56px);}
+.rpx-stage{height:590px;}
+.rpx-lines{position:absolute;inset:0;width:100%;height:100%;}
+.rpx-lines path{fill:none;stroke:#c9973f;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.rpx-lines .ah{fill:#c9973f;stroke:none;}
+.rpx-card{position:absolute;z-index:2;border-radius:14px;transition:opacity .45s,transform .45s,box-shadow .45s;}
+.rpx-card.dim{opacity:.4;transform:translateY(6px);}
+.rpx-job,.rpx-gbp,.rpx-stats span{border:1px solid var(--cream-line);background:#fff;box-shadow:0 18px 36px -24px rgba(60,45,20,0.45);}
+.rpx-req,.rpx-new,.rpx-chart{border:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg,#161619,#0d0d10);box-shadow:0 26px 50px -26px rgba(20,16,10,0.75);color:#fff;}
+.rpx-card.on{box-shadow:0 0 0 1px rgba(210,162,76,0.55),0 22px 44px -24px rgba(40,30,15,0.6);}
+.rpx-stats.on{box-shadow:none;}
+.rpx-job{left:0;top:26px;width:236px;padding:8px 8px 12px;}
+.rpx-yard{display:block;height:128px;border-radius:10px;background:url(img/rpx-yard.webp) center/cover;}
+.rpx-job-b{display:flex;gap:10px;margin-top:10px;padding:0 4px;}
+.rpx-job-b > i{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:7px;background:linear-gradient(180deg,#3cc46d,#26a055);color:#fff;}
+.rpx-job-b > i svg{width:15px;height:15px;}
+.rpx-job-b b{display:block;font-size:12.5px;font-weight:700;color:var(--ink);}
+.rpx-job-b span span{display:block;margin-top:2px;font-size:10.5px;color:var(--ink-2);}
+.rpx-job-b small{display:block;margin-top:3px;font-size:10px;color:var(--ink-2);}
+.rpx-req{left:0;top:270px;width:236px;padding:14px;}
+.rpx-req-h{display:flex;gap:10px;align-items:center;}
+.rpx-req-h > i{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:7px;background:linear-gradient(180deg,#3cc46d,#26a055);color:#fff;}
+.rpx-req-h > i svg{width:15px;height:15px;}
+.rpx-req-h b{display:block;font-size:12.5px;font-weight:700;}
+.rpx-req-h small{display:block;margin-top:1px;font-size:9.5px;color:#8e8a82;}
+.rpx-req p{margin-top:10px;padding:9px 11px;border-radius:12px;background:#26262b;font-size:10.5px;line-height:1.45;color:#f2efe9;}
+.rpx-leave{display:inline-flex;align-items:center;gap:6px;margin-top:11px;padding:8px 14px;border-radius:8px;background:#1a7cf2;font-size:11px;font-weight:700;color:#fff;transition:box-shadow .25s,transform .25s;}
+.rpx-leave svg{width:12px;height:12px;}
+.rpx-leave.tap{box-shadow:0 0 0 4px rgba(26,124,242,0.35);transform:scale(.97);}
+.rpx-phone{position:absolute;left:268px;top:0;z-index:3;}
+.rpx-stage .txd-phone{width:280px;height:590px;padding:9px;border-radius:44px;background:linear-gradient(160deg,#2b2b2f,#0e0e10 45%,#1c1c20);}
+.light .rpx-stage .txd-phone{box-shadow:0 0 0 1px rgba(0,0,0,0.25),0 40px 80px -30px rgba(40,30,15,0.6);}
+.rpx-stage .txd-screen{border-radius:36px;}
+.rpx-stage .rpx-g{background:#fff;color:#1f1f1f;font-family:Arial,'Inter',sans-serif;}
+.rpx-g .txd-status{color:#111;}
+.rpx-g .txd-batt{border-color:rgba(17,17,17,0.7);}
+.rpx-g .txd-batt::before{background:#111;}
+.rpx-gword{padding:4px 18px 8px;font-size:27px;font-weight:500;letter-spacing:-0.5px;}
+.rpx-gword span:nth-child(1),.rpx-gword span:nth-child(4){color:#4285f4;}
+.rpx-gword span:nth-child(2),.rpx-gword span:nth-child(6){color:#ea4335;}
+.rpx-gword span:nth-child(3){color:#fbbc05;}
+.rpx-gword span:nth-child(5){color:#34a853;}
+.rpx-biz{display:flex;gap:12px;align-items:center;padding:12px 16px;border-top:1px solid #ececec;}
+.rpx-logo{flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;border:2px solid #d2a24c;background:radial-gradient(circle at 50% 35%,#2b2418,#121110);}
+.rpx-logo svg{width:32px;height:32px;}
+.rpx-biz b{display:block;font-size:12.5px;font-weight:700;color:#1f1f1f;}
+.rpx-biz small{display:block;font-size:10px;line-height:1.45;color:#5f6368;}
+.rpx-rate{display:flex;align-items:center;gap:4px;margin:2px 0 1px;font-size:11px;}
+.rpx-rate > b{font-size:11px;color:#1f1f1f;}
+.rpx-stars{font-size:11px;letter-spacing:1px;color:#f4b400;}
+.rpx-rate em{font-style:normal;color:#5f6368;}
+.rpx-photo{height:100px;margin:0 8px;border-radius:10px;background:url(img/wsx-house.webp) center 55%/cover;}
+.rpx-tabs{display:flex;justify-content:space-between;margin:8px 0 0;padding:0 14px;border-bottom:1px solid #ececec;font-size:10.5px;color:#5f6368;}
+.rpx-tabs span{padding:7px 0 8px;}
+.rpx-tabs span.on{color:#1a73e8;font-weight:700;box-shadow:inset 0 -2px 0 #1a73e8;}
+.rpx-rev{padding:12px 16px 0;}
+.rpx-who{display:flex;gap:9px;align-items:center;}
+.rpx-who > i{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#8f8f97;font-style:normal;font-size:10.5px;font-weight:700;color:#fff;}
+.rpx-who b{display:block;font-size:11.5px;font-weight:700;color:#1f1f1f;}
+.rpx-who small{display:block;font-size:9.5px;color:#5f6368;}
+.rpx-when-b,.rpx-g.posted .rpx-when-a{display:none;}
+.rpx-g.posted .rpx-when-b{display:inline;}
+.rpx-rstars{display:flex;gap:3px;margin-top:8px;}
+.rpx-rstars i{font-style:normal;font-size:17px;line-height:1;color:#dadce0;transition:color .2s,transform .2s;}
+.rpx-rstars i.lit{color:#f4b400;transform:scale(1.12);}
+.rpx-text{min-height:60px;margin-top:7px;font-size:10.5px;line-height:1.45;color:#3c4043;}
+.rpx-g.typing .rpx-typed::after{content:"";display:inline-block;width:1px;height:11px;margin-left:1px;vertical-align:-2px;background:#1f1f1f;animation:txdBlink 1s steps(1) infinite;}
+.rpx-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px;}
+.rpx-thumbs i{height:52px;border-radius:7px;background:center/cover;}
+.rpx-post{display:flex;justify-content:center;margin-top:10px;padding:8px;border-radius:8px;background:#f3e6c9;font-size:11px;font-weight:700;color:#1f1f1f;transition:transform .15s,background .3s,color .3s;}
+.rpx-post.pressed{transform:scale(.96);}
+.rpx-post-b,.rpx-g.posted .rpx-post-a{display:none;}
+.rpx-g.posted .rpx-post-b{display:inline;}
+.rpx-g.posted .rpx-post{background:#2fa45a;color:#fff;}
+.rpx-new{left:612px;top:30px;width:388px;display:flex;gap:12px;padding:14px 16px;}
+.rpx-gtile{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:#fff;}
+.rpx-gtile svg,.rpx-glogo svg{width:24px;height:24px;}
+.rpx-new > span{position:relative;flex:1;min-width:0;}
+.rpx-new b{display:block;font-size:13px;font-weight:700;}
+.rpx-new time{position:absolute;right:0;top:1px;font-size:10px;color:#8e8a82;}
+.rpx-new .rpx-stars{display:block;margin-top:4px;font-size:15px;}
+.rpx-new q{display:-webkit-box;margin-top:5px;overflow:hidden;font-size:11px;line-height:1.45;color:#e9e5dc;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.rpx-chart{left:612px;top:160px;width:388px;padding:14px 16px 10px;}
+.rpx-chart > b{font-size:13px;font-weight:700;}
+.rpx-bars{position:relative;display:grid;grid-template-columns:repeat(6,1fr);height:112px;margin-top:8px;padding-top:6px;}
+.rpx-bars span{display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:18px;position:relative;}
+.rpx-bars i{width:13px;border-radius:2px 2px 0 0;transition:height .9s cubic-bezier(.2,.7,.2,1);}
+.rpx-bars i:first-child{height:var(--a);background:linear-gradient(180deg,#f0c776,#c9973f);}
+.rpx-bars i:nth-child(2){height:var(--b);background:linear-gradient(180deg,#5c4a2a,#2e2617);}
+.rpx-chart.dim .rpx-bars i{height:0;}
+.rpx-bars small{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:10px;color:#cfc9bd;}
+.rpx-callout{position:absolute;right:30px;top:-20px;padding:4px 9px;border-radius:7px;background:#fff;font-style:normal;font-size:12px;font-weight:700;color:var(--ink);box-shadow:0 8px 18px -8px rgba(0,0,0,0.6);transition:opacity .4s .5s,transform .4s .5s;}
+.rpx-callout::after{content:"";position:absolute;left:50%;bottom:-4px;width:8px;height:8px;margin-left:-4px;background:#fff;transform:rotate(45deg);}
+.rpx-chart.dim .rpx-callout{opacity:0;transform:translateY(6px);transition-delay:0s;}
+.rpx-gbp{left:612px;top:340px;width:388px;display:flex;align-items:center;gap:14px;padding:14px 16px;}
+.rpx-gbp.bump{animation:efuBump .9s ease-out;}
+.rpx-glogo{flex:none;display:grid;place-items:center;width:46px;height:46px;}
+.rpx-glogo svg{width:40px;height:40px;}
+.rpx-gbp > span{flex:1;min-width:0;}
+.rpx-gbp > span > b{display:block;font-size:12.5px;font-weight:700;color:var(--ink);}
+.rpx-gbp .rpx-rate{gap:6px;margin:3px 0;}
+.rpx-gbp .rpx-rate > b{font-size:15px;color:var(--ink);}
+.rpx-gbp .rpx-stars{font-size:15px;}
+.rpx-gbp small{display:block;font-size:11px;color:var(--ink-2);}
+.rpx-gbp small b{font-size:13px;color:var(--ink);}
+.rpx-gbp small em{font-style:normal;font-weight:600;color:#2fa45a;}
+.rpx-gbp > svg{flex:none;width:18px;height:18px;color:var(--ink);}
+.rpx-stats{left:612px;top:464px;width:388px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.rpx-stats span{display:flex;flex-direction:column;align-items:center;padding:14px 8px 12px;border-radius:12px;text-align:center;}
+.rpx-stats svg{width:24px;height:24px;color:var(--gold-deep);}
+.rpx-stats b{margin-top:6px;font-size:16px;font-weight:800;color:var(--ink);}
+.rpx-stats small{margin-top:2px;font-size:9.5px;color:var(--ink-2);}
+@media(max-width:860px){
+  .rpx-stage{height:auto;}
+  .rpx-lines,.rpx-phone,.rpx-chart{display:none;}
+  .rpx-card{position:relative;left:auto;top:auto;width:auto;margin-top:16px;}
+  .rpx-job{margin-top:0;}
+  .rpx-yard{height:170px;}
+  .rpx-job-b b,.rpx-req-h b,.rpx-new b,.rpx-gbp > span > b{font-size:15px;}
+  .rpx-job-b span span,.rpx-req p,.rpx-new q{font-size:13px;}
+  .rpx-job-b small,.rpx-req-h small{font-size:12px;}
+  .rpx-leave{font-size:13px;}
+  .rpx-stats b{font-size:18px;}
+  .rpx-stats small{font-size:11.5px;}
+}
+@media(prefers-reduced-motion:reduce){.rpx-bars i{transition:none;}}
+/* 06 Customer Retention: seasonal reminder, past-customer card, check-in text, reminder plan, past customers, stats, six-step timeline */
+#customer-retention .cv-title{font-size:clamp(28px,9.2cqi,56px);}
+.rtx-stage{height:540px;}
+.rtx-lines{position:absolute;inset:0;width:100%;height:100%;}
+.rtx-lines path{fill:none;stroke:rgba(210,162,76,0.75);stroke-width:1.5;stroke-dasharray:4 4;}
+.rtx-lines .ah{fill:#d2a24c;stroke:none;}
+.rtx-card{position:absolute;z-index:2;transition:opacity .45s,transform .45s,box-shadow .45s;}
+.rtx-card.dim,.rtx-plan li.dim,.rtx-step.dim{opacity:.38;transform:translateY(6px);}
+.rtx-cream{border:1px solid rgba(210,162,76,0.35);border-radius:12px;background:#f7f2e8;color:var(--ink);box-shadow:0 20px 40px -24px rgba(0,0,0,0.85);transition:opacity .45s,transform .45s,box-shadow .45s;}
+.rtx-cream.on{box-shadow:0 0 0 1px rgba(210,162,76,0.75),0 0 26px -6px rgba(210,162,76,0.5);}
+.rtx-tile{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:8px;color:#fff;}
+.rtx-tile svg{width:16px;height:16px;}
+.rtx-tile-gold{background:linear-gradient(180deg,#e7bd6a,#c48f38);color:#181207;}
+.rtx-tile-green{background:linear-gradient(180deg,#3cc46d,#26a055);}
+.rtx-tile-blue{background:linear-gradient(180deg,#4c9bff,#1f6fe5);}
+.rtx-cream b{display:block;font-size:11.5px;font-weight:700;color:var(--ink);}
+.rtx-cream small{display:flex;align-items:center;gap:4px;margin-top:2px;font-size:9px;white-space:nowrap;color:var(--ink-2);}
+.rtx-season{left:38px;top:26px;width:216px;display:flex;align-items:center;gap:10px;padding:10px 12px;}
+.rtx-past{left:40px;top:108px;width:190px;padding:7px 7px 10px;}
+.rtx-photo{display:block;height:108px;border-radius:8px;background:url(img/rpx-yard.webp) center/cover;}
+.rtx-past-h{display:flex;align-items:center;gap:9px;margin:9px 3px 0;}
+.rtx-past-h .rtx-tile{width:26px;height:26px;border-radius:7px;}
+.rtx-past-h .rtx-tile svg{width:14px;height:14px;}
+.rtx-chips{display:grid;gap:5px;margin:9px 3px 0;}
+.rtx-chips span{display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;background:#ebe4d5;font-size:9.5px;color:var(--ink);}
+.rtx-chips svg{width:10px;height:10px;color:var(--ink-2);}
+.rtx-phone{position:absolute;left:262px;top:0;z-index:3;}
+.rtx-stage .txd-phone{width:232px;height:434px;padding:9px;border-radius:38px;}
+.rtx-stage .txd-screen{border-radius:30px;}
+.rtx-stage .txd-island{top:8px;width:66px;height:19px;}
+.rtx-stage .txd-status{height:36px;padding:0 20px 4px;font-size:11px;}
+.rtx-stage .cv-sb svg{width:13px;height:10px;}
+.rtx-stage .txd-batt{width:20px;height:10px;}
+.rtx-head{position:relative;}
+.rtx-back{position:absolute;left:12px;top:12px;font-size:22px;line-height:1;color:#3d8bf5;}
+.rtx-stage .txd-av{width:38px;height:38px;border:2px solid #d2a24c;background:radial-gradient(circle at 50% 35%,#2b2418,#121110);}
+.rtx-stage .txd-av svg{width:22px;height:22px;}
+.rtx-stage .txd-name{font-size:10.5px;}
+.rtx-stage .txd-thread{gap:5px;padding:10px 10px 12px;}
+.rtx-stage .txd-meta{margin:0 0 2px;font-size:9.5px;}
+.rtx-stage .txd-msg{max-width:86%;padding:8px 11px;border-radius:16px;font-size:11px;line-height:1.42;}
+.rtx-stage .txd-out{background:#1a7cf2;color:#fff;font-weight:400;}
+.rtx-t{align-self:flex-end;margin:0 4px;font-size:9px;color:#8e8a82;}
+.rtx-plan{list-style:none;position:absolute;left:520px;top:24px;width:162px;display:grid;row-gap:20px;}
+.rtx-plan li{position:relative;z-index:2;display:flex;align-items:center;gap:9px;padding:9px 10px;}
+.rtx-plan li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-20px;width:10px;height:20px;transform:translateX(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20'%3E%3Cpath d='M5 2v10' stroke='%23d2a24c' stroke-width='1.5' stroke-dasharray='3 3'/%3E%3Cpath d='M1.5 12.5h7L5 17z' fill='%23d2a24c'/%3E%3C/svg%3E") no-repeat center;}
+.rtx-plan .rtx-tile{width:28px;height:28px;}
+.rtx-plan b{font-size:10.5px;}
+.rtx-plan small{font-size:9px;}
+.rtx-ok{display:grid;place-items:center;width:11px;height:11px;border-radius:50%;background:#2fa45a;color:#fff;}
+.rtx-ok svg{width:7px;height:7px;}
+.rtx-list{left:700px;top:0;width:300px;padding:12px 14px 6px;border:1px solid rgba(210,162,76,0.3);border-radius:14px;background:linear-gradient(180deg,#141416,#0d0d0f);box-shadow:0 26px 50px -26px rgba(0,0,0,0.85);}
+.rtx-list-h{display:flex;align-items:center;justify-content:space-between;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.rtx-list-h b{font-size:13px;font-weight:700;color:#fff;}
+.rtx-list-h i{display:grid;place-items:center;width:22px;height:22px;border-radius:6px;background:#1c1c20;color:#cfc9bd;}
+.rtx-list-h svg{width:11px;height:11px;}
+.rtx-list ul{list-style:none;}
+.rtx-row{display:grid;grid-template-columns:46px minmax(0,1fr) auto;column-gap:10px;align-items:center;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,0.05);border-radius:8px;}
+.rtx-row:last-child{border-bottom:0;}
+.rtx-row.bump{animation:efuBump .9s ease-out;}
+.rtx-row > i{height:34px;border-radius:6px;background:center/cover;}
+.rtx-row b{display:block;font-size:11px;font-weight:600;color:#fff;white-space:nowrap;}
+.rtx-row small{display:block;margin-top:1px;font-size:9px;color:#a9a49a;white-space:nowrap;}
+.rtx-pill{padding:3px 8px;border-radius:5px;background:#1f8f4a;font-style:normal;font-size:9px;font-weight:700;color:#fff;white-space:nowrap;}
+.rtx-pill-blue{background:#1f6fe5;}
+.rtx-stats{left:700px;top:322px;width:300px;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:12px;padding:16px 14px;border:1px solid rgba(210,162,76,0.3);border-radius:14px;background:linear-gradient(180deg,#141416,#0d0d0f);}
+.rtx-stats.on{box-shadow:0 0 0 1px rgba(210,162,76,0.55),0 0 26px -8px rgba(210,162,76,0.4);}
+.rtx-stats > span{display:flex;align-items:center;gap:9px;}
+.rtx-stats > span > svg{flex:none;width:30px;height:30px;color:var(--gold-2);}
+.rtx-stats b{display:block;font-size:18px;font-weight:800;color:#fff;}
+.rtx-stats small{display:block;font-size:9.5px;line-height:1.3;color:#cfc9bd;}
+.rtx-stats > i{align-self:stretch;background:rgba(210,162,76,0.4);}
+.rtx-steps{list-style:none;position:absolute;left:0;top:448px;width:1000px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:18px;}
+.rtx-step{position:relative;display:flex;align-items:flex-start;gap:7px;padding:11px 7px 11px 9px;border:1px solid rgba(210,162,76,0.3);border-radius:12px;background:linear-gradient(180deg,#141416,#0d0d0f);transition:opacity .45s,transform .45s,border-color .45s,box-shadow .45s;}
+.rtx-step:not(:last-child)::after{content:"";position:absolute;top:50%;right:-19px;width:20px;height:12px;margin-top:-6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12'%3E%3Cpath d='M1 6h15' stroke='%23d2a24c' stroke-width='1.6'/%3E%3Cpath d='M12 1.5 17.5 6 12 10.5' fill='none' stroke='%23d2a24c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;}
+.rtx-step.on{border-color:rgba(210,162,76,0.7);box-shadow:0 0 20px -6px rgba(210,162,76,0.35);}
+.rtx-step .rtx-tile{width:26px;height:26px;}
+.rtx-step > span{min-width:0;}
+.rtx-step b{display:block;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;}
+.rtx-step small{display:block;margin-top:2px;font-size:9px;line-height:1.35;color:#cfc9bd;}
+@media(max-width:860px){
+  .rtx-stage{height:auto;}
+  .rtx-lines,.rtx-season,.rtx-past,.rtx-phone,.rtx-plan,.rtx-list{display:none;}
+  .rtx-steps{position:static;width:auto;grid-template-columns:1fr;row-gap:24px;}
+  .rtx-step{gap:12px;padding:14px;}
+  .rtx-step:not(:last-child)::after{top:auto;right:auto;left:50%;bottom:-18px;margin:0 0 0 -10px;transform:rotate(90deg);}
+  .rtx-step .rtx-tile{width:38px;height:38px;border-radius:10px;}
+  .rtx-step .rtx-tile svg{width:19px;height:19px;}
+  .rtx-step b{font-size:15px;}
+  .rtx-step small{font-size:12.5px;}
+  .rtx-stats{position:relative;left:auto;top:auto;width:auto;margin-top:22px;}
+  .rtx-stats b{font-size:22px;}
+  .rtx-stats small{font-size:12px;}
+}
 /* who it's for */
-.fit-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,4vw,64px);align-items:center;}
-.fit-trades{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
-.fit-trades li{padding:7px 14px;border:1px solid var(--line-2);border-radius:999px;font-size:13.5px;color:#e4dfd4;}
-.fit-not{padding:clamp(22px,2.6vw,34px);border:1px solid var(--gold-line);border-radius:18px;background:rgba(255,255,255,0.03);}
-.fit-not b{display:block;font-size:19px;font-weight:700;color:var(--white);}
-.fit-not ul{margin:14px 0 0;padding-left:20px;color:var(--mist);font-size:15px;line-height:1.6;}
-.fit-not li+li{margin-top:6px;}
-.fit-not p{margin-top:14px;font-size:14px;color:var(--mist);}
-@media(max-width:900px){.ret-grid{grid-template-columns:1fr;}.fit-grid{grid-template-columns:1fr;}}
 .hv3-band{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,0.12);background:rgba(10,10,12,0.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
 .hv3-band-inner{display:flex;align-items:center;min-height:clamp(84px,6.8vw,122px);}
 .hv3-band-label,.hv3-band-tag{margin:0;font-size:clamp(10.5px,0.75vw,13px);font-weight:600;line-height:1.7;letter-spacing:0.3em;text-transform:uppercase;color:#9d978c;}
@@ -707,20 +1049,8 @@ h1,h2{font-family:var(--display);}
   .hero-v3 .hero-bg::after{background:linear-gradient(180deg,rgba(10,10,12,0.55) 0%,rgba(10,10,12,0.85) 55%,var(--bg) 100%);}
   .hv3-actions{flex-direction:column;align-items:stretch;}
 }
-.hero-sub{font-size:clamp(16px,1.35vw,18.5px);color:var(--mist);max-width:42ch;}
-.hero-checks{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px;max-width:580px;}
-.hero-checks li{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#e4dfd4;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:999px;padding:7px 13px;}
-.hero-checks svg{width:15px;height:15px;color:var(--gold);flex-shrink:0;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:32px;}
-.hero-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:16px;font-size:13px;color:var(--mist);}
-.hero-note .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
-.hero-note b{color:var(--white);font-weight:600;}
 
 /* hero: animated text-back demo (replaces the static system diagram) */
-.hero-visual{display:flex;justify-content:flex-end;align-items:center;}
-.txd{display:flex;align-items:center;gap:26px;margin:0;}
-@media(min-width:1121px){.hero-visual .txd{margin-right:clamp(32px,5vw,80px);}}
-.wds-shot .txd{margin:0 auto;}
 .txd-steps{list-style:none;width:178px;flex:none;}
 .txd-steps li{position:relative;display:flex;gap:12px;align-items:flex-start;padding-bottom:30px;color:var(--mist-2);transition:color .35s;}
 .txd-steps li:last-child{padding-bottom:0;}
@@ -733,7 +1063,6 @@ h1,h2{font-family:var(--display);}
 .txd-steps li.done .n{border-color:var(--gold-line);color:var(--gold);}
 .txd-steps li.on{color:var(--white);}
 .txd-steps li.on .n{background:var(--gold);border-color:var(--gold);color:#16140f;box-shadow:0 0 0 5px var(--gold-soft);}
-.txd-col{display:flex;flex-direction:column;align-items:center;}
 .txd-phone{width:282px;height:596px;flex:none;padding:11px;border-radius:46px;background:linear-gradient(160deg,#2a2722,#0e0e10 42%,#18171a);box-shadow:0 0 0 1px var(--gold-line),0 40px 90px -30px rgba(0,0,0,0.85),0 0 90px -24px rgba(210,162,76,0.28);}
 .txd-screen{position:relative;height:100%;display:flex;flex-direction:column;overflow:hidden;border-radius:36px;background:#0b0b0d;font-family:-apple-system,BlinkMacSystemFont,'Inter',system-ui,sans-serif;}
 .txd-island{position:absolute;top:9px;left:50%;z-index:6;width:84px;height:24px;transform:translateX(-50%);border-radius:20px;background:#000;}
@@ -751,26 +1080,10 @@ h1,h2{font-family:var(--display);}
 .txd-msg{max-width:82%;padding:8px 12px;border-radius:18px;font-size:13px;line-height:1.38;}
 .txd-in{align-self:flex-start;border-bottom-left-radius:6px;background:#26262b;color:#f2efe9;}
 .txd-out{align-self:flex-end;border-bottom-right-radius:6px;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#16140f;font-weight:500;}
-.txd-link{display:block;margin-top:7px;padding:8px 10px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:#1a1a1e;font-size:12px;font-weight:600;color:var(--gold-2);}
-.txd-link small{display:block;margin-top:1px;font-size:10.5px;font-weight:500;color:#8e8a82;}
-.txd-ok{color:#7fd19b;font-weight:700;}
 .txd-typing{align-self:flex-start;display:flex;gap:4px;padding:11px 13px;border-radius:18px;background:#26262b;}
 .txd-typing i{width:6px;height:6px;border-radius:50%;background:#8e8a82;animation:txdDot 1s infinite;}
 .txd-typing i:nth-child(2){animation-delay:.15s;}
 .txd-typing i:nth-child(3){animation-delay:.3s;}
-.txd-call{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;padding-top:100px;background:radial-gradient(120% 70% at 50% 0%,#2b261d 0%,#0b0b0d 62%);transition:opacity .45s;}
-.txd-call.off{opacity:0;pointer-events:none;}
-.txd-call .txd-av{width:78px;height:78px;font-size:26px;}
-.txd-call .txd-av::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--gold-line);animation:txdRing 1.4s ease-out infinite;}
-.txd-call.ended .txd-av::after{animation:none;opacity:0;}
-.txd-call-name{margin-top:16px;font-size:17px;font-weight:600;color:#f5f2ec;}
-.txd-call-state{margin-top:4px;font-size:13px;color:#a9a49a;}
-.txd-call.ended .txd-call-state{color:#e08a7c;}
-.txd-call-end{margin-top:auto;margin-bottom:58px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#d9534f;}
-.txd-call-end svg{width:26px;height:26px;color:#fff;transform:rotate(135deg);}
-.txd-cap{margin-top:16px;font-size:12px;letter-spacing:0.04em;color:var(--mist-2);}
-.txd-link{transition:box-shadow .3s;}
-.txd-link.tap{box-shadow:0 0 0 3px rgba(210,162,76,0.45);}
 /* light (cream) sections */
 .light .txd-steps li{color:var(--ink-2);}
 .light .txd-steps li::before{background:var(--cream-line);}
@@ -781,32 +1094,12 @@ h1,h2{font-family:var(--display);}
 .light .txd-steps li.on{color:var(--ink);}
 .light .txd-steps li.on .n{background:var(--gold);border-color:var(--gold);color:#16140f;}
 .light .txd-phone{box-shadow:0 0 0 1px var(--gold-line),0 40px 80px -30px rgba(60,45,20,0.55);}
-.light .txd-cap{color:var(--ink-2);}
 /* review sheet (hero demo) */
-.txd-rev{position:absolute;left:0;right:0;bottom:0;top:42px;z-index:4;display:flex;flex-direction:column;gap:14px;padding:18px 16px;border-radius:18px 18px 0 0;background:#141417;box-shadow:0 -10px 30px rgba(0,0,0,0.5);transform:translateY(105%);transition:transform .45s cubic-bezier(.2,.7,.2,1);}
-.txd-rev.on{transform:none;}
-.txd-rev-top{display:flex;align-items:center;gap:10px;}
-.txd-rev-top b{display:block;font-size:13px;font-weight:600;color:#f5f2ec;}
-.txd-rev-top small{display:block;font-size:10.5px;color:#8e8a82;}
-.txd-stars{display:flex;justify-content:center;gap:8px;margin-top:6px;}
-.txd-star{font-style:normal;font-size:30px;line-height:1;color:#3a3a40;transition:color .2s,transform .2s;}
-.txd-star.lit{color:var(--gold-2);transform:scale(1.12);}
-.txd-rev-box{min-height:92px;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);background:#0e0e11;font-size:12.5px;line-height:1.4;color:#f2efe9;}
-.txd-caret{display:inline-block;width:1.5px;height:14px;margin-left:1px;vertical-align:-2px;background:var(--gold-2);animation:txdBlink 1s steps(1) infinite;}
-.txd-rev-post{align-self:flex-end;padding:8px 18px;border-radius:999px;background:linear-gradient(180deg,var(--gold-2),var(--gold));font-size:12.5px;font-weight:700;color:#16140f;transition:transform .15s,filter .15s;}
-.txd-rev-post.pressed{transform:scale(.94);filter:brightness(.9);}
-.txd-rev-done{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-radius:inherit;background:#141417;opacity:0;pointer-events:none;transition:opacity .35s;}
-.txd-rev.posted .txd-rev-done{opacity:1;}
-.txd-rev-check{width:58px;height:58px;margin-bottom:6px;border-radius:50%;display:grid;place-items:center;background:rgba(127,209,155,0.14);font-size:28px;font-weight:700;color:#7fd19b;}
-.txd-rev-done b{font-size:16px;color:#f5f2ec;}
-.txd-rev-done small{font-size:12px;letter-spacing:0.06em;color:var(--gold-2);}
 @keyframes txdBlink{50%{opacity:0;}}
 @keyframes txdIn{from{opacity:0;transform:translateY(10px) scale(.98);}to{opacity:1;transform:none;}}
 @keyframes txdDot{0%,60%,100%{opacity:.35;transform:none;}30%{opacity:1;transform:translateY(-3px);}}
 @keyframes txdRing{from{transform:scale(.92);opacity:.9;}to{transform:scale(1.25);opacity:0;}}
 @media(max-width:1120px){
-  .hero-visual{justify-content:center;}
-  .txd{flex-direction:column;gap:20px;}
   .txd-steps{order:2;width:auto;max-width:540px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
   .txd-steps li{align-items:center;padding:5px 12px 5px 5px;border:1px solid var(--line);border-radius:999px;}
   .txd-steps li::before,.txd-steps small{display:none;}
@@ -817,93 +1110,23 @@ h1,h2{font-family:var(--display);}
 @media(max-width:480px){.txd-phone{width:250px;height:528px;}}
 @media(prefers-reduced-motion:reduce){
   .txd-thread > .show{animation:none;}
-  .txd-typing i,.txd-call .txd-av::after,.txd-caret{animation:none;}
+  .txd-typing i{animation:none;}
 }
 
 /* ===== STATS BAND ===== */
 .stats{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(36px,4.5vw,56px) 0;}
-.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);}
-.stat{text-align:center;padding:6px 14px;border-left:1px solid var(--line);}
-.stat:first-child{border-left:none;}
-.stat b{display:block;font-size:clamp(26px,2.6vw,40px);font-weight:800;color:var(--gold);line-height:1.05;}
-.stat span{display:block;font-size:12.5px;color:var(--mist);margin-top:8px;line-height:1.35;}
-@media(max-width:940px){.stats-grid{grid-template-columns:repeat(3,1fr);gap:28px 0;}.stat:nth-child(4){border-left:none;}}
-@media(max-width:540px){.stats-grid{grid-template-columns:repeat(2,1fr);}.stat{border-left:none;}}
 
 /* ===== FEATURE BLURBS ===== */
-.blurb{display:grid;grid-template-columns:0.95fr 1.05fr;gap:clamp(30px,4vw,64px);align-items:center;}
-.blurb-visual{display:flex;justify-content:flex-end;}
-.blurb.rev .blurb-visual{justify-content:flex-start;order:-1;}
-.blurb-checks{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px;}
-.blurb-checks li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;font-weight:600;}
-.blurb-checks svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:3px;}
-.light .blurb-checks svg{color:var(--gold-deep);}
-.blurb-more{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:24px;}
-.light .blurb-more{color:var(--gold-deep);}
-.blurb-more .arr{transition:transform .22s;}
-.blurb-more:hover .arr{transform:translateX(4px);}
-.blurb-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:24px;}
-.blurb-cta .blurb-more{margin-top:0;}
-.mock{display:flex;flex-direction:column;gap:14px;max-width:440px;width:100%;}
-.mcard{background:linear-gradient(180deg,#15151a,#101014);border:1px solid var(--gold-line);border-radius:14px;padding:18px 20px;box-shadow:0 24px 50px -26px rgba(0,0,0,0.85);}
-.mcard .lbl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
-.mcard .lbl svg{width:15px;height:15px;flex-shrink:0;}
-.krow{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;padding:6px 0;border-top:1px solid var(--line);}
-.krow:first-of-type{border-top:none;}
-.krow span{color:var(--mist);}
-.krow b{color:var(--white);font-weight:600;text-align:right;}
-.mcard.note p{font-size:13.5px;color:#d8d3c9;line-height:1.55;}
-.mcard .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:8px;}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#6cc08a;margin-top:10px;}
 .badge svg{width:15px;height:15px;flex-shrink:0;}
-.light .mcard{background:#fff;border-color:var(--cream-line);box-shadow:0 20px 44px -28px rgba(60,45,20,0.3);}
-.light .mcard .lbl{color:var(--gold-deep);}
-.light .mcard .stars{color:var(--gold-deep);}
-.light .krow{border-top-color:var(--cream-line);}
-.light .krow span{color:var(--ink-2);}
-.light .krow b{color:var(--ink);}
-.light .mcard.note p{color:var(--ink);}
-@media(max-width:900px){.blurb{grid-template-columns:1fr;}.blurb-visual{justify-content:flex-start;}.blurb.rev .blurb-visual{order:2;}}
-/* website design showcase */
-.wds-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,4vw,64px);align-items:center;}
-.wds-grid > div:not(.wds-shot){max-width:560px;}
-.wds-shot{display:flex;align-items:center;}
-.wds-shot img{width:100%;height:auto;}
-.wout{display:flex;flex-direction:column;gap:18px;margin-top:24px;}
-.wout-item b{display:flex;align-items:center;gap:9px;font-size:15.5px;font-weight:700;color:var(--gold);}
-.wout-item b svg{width:18px;height:18px;flex-shrink:0;}
-.wout-item p{font-size:13.5px;color:var(--mist);line-height:1.6;margin-top:4px;}
-.light .wout-item b{color:var(--gold-deep);}
-.light .wout-item p{color:var(--ink-2);}
-.wds-shot img.faded{-webkit-mask-image:radial-gradient(ellipse 82% 76% at 50% 50%,#000 58%,transparent 86%);mask-image:radial-gradient(ellipse 82% 76% at 50% 50%,#000 58%,transparent 86%);}
-.wds-shot img.framed{border-radius:20px;box-shadow:0 30px 60px -30px rgba(60,45,20,0.5);}
-@media(max-width:1000px){
-  .wds-grid{grid-template-columns:1fr;}
-  .wds-shot{order:2;max-width:680px;margin:0 auto;}
-}
 
 /* ===== TRADES MARQUEE ===== */
 .trades{overflow:hidden;}
-.trades-head{text-align:center;max-width:640px;margin:0 auto clamp(28px,4vw,42px);}
-.trow{overflow:hidden;margin-top:16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
-.tmarquee{display:flex;width:max-content;animation:tslide 55s linear infinite;}
-.trow.rev .tmarquee{animation-direction:reverse;}
-.trow:hover .tmarquee{animation-play-state:paused;}
-@keyframes tslide{to{transform:translateX(-33.3333%);}}
-.tcard{position:relative;width:230px;height:290px;border-radius:16px;overflow:hidden;flex-shrink:0;margin-right:16px;background:#111;box-shadow:0 18px 36px -24px rgba(60,45,20,0.4);}
-.tcard img{width:100%;height:100%;object-fit:cover;}
-.tcard::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,12,0.88),rgba(10,10,12,0.05) 55%);}
-.tcard b{position:absolute;left:16px;right:12px;bottom:13px;z-index:2;color:#fff;font-family:var(--display);font-size:16.5px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;}
-.trades-note{text-align:center;font-size:13.5px;color:var(--ink-2);margin-top:clamp(22px,3vw,32px);}
-@media(max-width:700px){.tcard{width:170px;height:215px;}}
-@media(prefers-reduced-motion:reduce){.tmarquee{animation:none;}}
 
 /* ===== WORKING WITH US ===== */
 .wwu-head{text-align:center;max-width:660px;margin:0 auto clamp(38px,5vw,58px);}
 .wwu-row{display:flex;align-items:stretch;gap:clamp(14px,2.2vw,28px);max-width:1140px;margin:0 auto;}
 .wwu-step{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0;}
-.wwu-med{position:relative;height:clamp(240px,28vw,340px);width:100%;display:flex;align-items:flex-end;justify-content:center;margin-bottom:12px;}
-.wwu-med img{height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 26px 44px rgba(0,0,0,0.65));}
 .wwu-card .num{position:absolute;top:-15px;left:-11px;z-index:2;width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;border:3px solid var(--bg);}
 .wwu-card{position:relative;flex:1;background:var(--card);border-radius:16px;padding:18px 20px;width:100%;box-shadow:0 0 26px -8px rgba(210,162,76,0.14),0 22px 48px -28px rgba(0,0,0,0.85);}
 .wwu-card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(180deg,rgba(210,162,76,0.7),rgba(210,162,76,0.22) 38%,rgba(210,162,76,0.05) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;}
@@ -1049,24 +1272,10 @@ main > section{position:relative;z-index:1;}
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
 .reveal.in{opacity:1;transform:none;}
-@media(max-width:1120px){
-  .hero-grid{grid-template-columns:1fr;}
-}
-@media(max-width:700px){
-  .hero-actions{flex-direction:column;align-items:stretch;}
-  .hero-actions .btn{width:100%;}
-}
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none;}
-  .sys-card,.sys-hub,.phone-wave i{animation:none;}
 }
 /* mobile: lighter hero + stats so visitors reach content faster */
-@media(max-width:700px){
-  .hero-checks li:nth-child(2),.hero-checks li:nth-child(4),.hero-checks li:nth-child(n+7){display:none;}
-}
-@media(max-width:540px){
-  .stat:nth-child(2),.stat:nth-child(5){display:none;}
-}
 .nav-login{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--white);border:1px solid var(--line-2);border-radius:9px;padding:9px 22px;transition:border-color .18s,color .18s;margin-right:2px;}
 .nav-login:hover{border-color:var(--gold);color:var(--gold);}
 @media(max-width:1120px){.nav-login{display:none;}}
@@ -1523,150 +1732,284 @@ main > section{position:relative;z-index:1;}
     </div>
 </section>
 
-<!-- 02 / REPUTATION MANAGEMENT -->
-<section class="sec reveal glow">
-    <div class="wrap">
-        <div class="wds-grid">
-            <div>
-                <span class="eyebrow">02 / Reputation Management</span>
-                <h2 class="h-lg">Turn happy customers into <span class="gold">five-star reviews.</span></h2>
-                <p class="lede">Your best customers rarely leave a review on their own. The system asks for you &mdash; and keeps asking politely until it&rsquo;s done.</p>
-                <div class="wout">
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>You Never Have to Ask</b>
-                        <p>Every happy customer gets a friendly text asking for a review &mdash; sent automatically, at the right moment.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Reminders Until It&rsquo;s Done</b>
-                        <p>People forget. Gentle nudges keep coming until the review is actually posted.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>One Tap to Your Google Page</b>
-                        <p>The link takes them straight to your Google profile &mdash; no hunting, no friction, no excuses.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Look Like the Obvious Choice</b>
-                        <p>When customers compare you to competitors, a steady stream of fresh five-star reviews wins the job.</p>
-                    </div>
-                </div>
-                <div class="blurb-cta">
-                    <a href="features/review-automation.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
-                </div>
+<!-- 04 / CONVERT: LEAD MANAGEMENT -->
+<section class="sec reveal cv-dark" id="lead-management">
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">04 / Convert<span>Lead Management</span></span>
+                <h2 class="h-lg cv-title">Your entire business pipeline. <span class="gold">One connected view.</span></h2>
+                <p class="lede">Every inquiry, conversation, estimate and appointment organized in one place &mdash; so you always know where your next opportunity stands.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></svg></span><div><b>All Leads in One Inbox</b><span>Calls, texts, form submissions and chats.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>Track Opportunities</b><span>See every estimate, follow-up and deal stage.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><div><b>Bookings &amp; Calendar</b><span>Turn conversations into real appointments.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Complete Customer History</b><span>See past jobs, estimates and all communication.</span></div></li>
+                </ul>
+                <a href="features/crm-and-booking.html" class="btn btn-gold cv-btn">Explore Lead Management <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
             </div>
-            <div class="wds-shot">
-                <!-- Animated review-request demo (Summit Yard demo account). Script at the end of <body>. -->
-                <figure class="txd" id="txd-review" role="img" aria-label="Demo of what a customer sees after the job: a text from Summit Yard and Landscape asking for a Google review, a friendly reminder a few days later, and the customer posting a five-star review.">
-                    <ol class="txd-steps" aria-hidden="true">
-                        <li><span class="n">1</span><span><b>Job finished</b><small>Friday afternoon</small></span></li>
-                        <li><span class="n">2</span><span><b>Review requested</b><small>Same day</small></span></li>
-                        <li><span class="n">3</span><span><b>Friendly reminder</b><small>If they forget</small></span></li>
-                        <li><span class="n">4</span><span><b>Review posted</b><small>&#9733;&#9733;&#9733;&#9733;&#9733; on Google</small></span></li>
-                    </ol>
-                    <div class="txd-col" aria-hidden="true">
-                        <div class="txd-phone">
-                    <div class="txd-screen">
-                        <div class="txd-island"></div>
-                        <div class="txd-status"><span class="txd-clock">4:30</span><span class="txd-batt"></span></div>
-                        <div class="txd-head"><span class="txd-av">SY</span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
-                                <div class="txd-thread">
-                                    <p class="txd-meta" data-i="1">Friday 4:30 PM</p>
-                                    <div class="txd-msg txd-in" data-i="2">Thanks for choosing Summit Yard! If you have 30 seconds, a Google review would mean a lot to us.<span class="txd-link">&#9733;&#9733;&#9733;&#9733;&#9733; Leave a review<small>Opens Google</small></span></div>
-                                    <p class="txd-meta" data-i="3">Monday 10:00 AM</p>
-                                    <div class="txd-msg txd-in" data-i="4">Quick reminder in case it got buried &mdash; if you&rsquo;re happy with your new patio, a Google review really helps our small crew.<span class="txd-link">&#9733;&#9733;&#9733;&#9733;&#9733; Leave a review<small>Takes 30 seconds</small></span></div>
-                                    <div class="txd-typing"><i></i><i></i><i></i></div>
-                                </div>
-                                <div class="txd-rev">
-                                    <div class="txd-rev-top"><span class="txd-av">SY</span><span><b>Summit Yard &amp; Landscape</b><small>Posting publicly on Google</small></span></div>
-                                    <div class="txd-stars"><i class="txd-star">&#9733;</i><i class="txd-star">&#9733;</i><i class="txd-star">&#9733;</i><i class="txd-star">&#9733;</i><i class="txd-star">&#9733;</i></div>
-                                    <div class="txd-rev-box"><span class="txd-rev-text"></span><span class="txd-caret"></span></div>
-                                    <span class="txd-rev-post">Post</span>
-                                    <div class="txd-rev-done"><span class="txd-rev-check">&#10003;</span><b>Review posted</b><small>&#9733;&#9733;&#9733;&#9733;&#9733; on Google</small></div>
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage lmx-stage" id="txd-lmx" role="img" aria-label="Demo of the lead management dashboard. This week: 17 new leads, 8 appointments, $18,240 in revenue and 23 reviews. The pipeline, recent activity, upcoming appointments and the conversations inbox sit in one view, and Sarah Mitchell&rsquo;s reply to her estimate pops up as a notification. Below, a lead moves from new lead to conversation, estimate sent, appointment and job won.">
+                        <div class="lmx-dash">
+                            <div class="lmx-app">
+                                <aside class="cv-side">
+                                    <span class="lmx-dots"><i></i><i></i><i></i></span>
+                                    <img src="img/nps-logo-white-notag.webp" alt="" width="1432" height="312" loading="lazy" decoding="async">
+                                    <ul>
+                                        <li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Dashboard</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Conversations</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/></svg>Opportunities</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Calendar</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Contacts</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>Estimates</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg>Payments</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Marketing</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Automation</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Reporting</li>
+                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</li>
+                                    </ul>
+                                </aside>
+                                <div class="lmx-main">
+                                    <div class="lmx-top"><b class="lmx-h">Dashboard</b><span class="lmx-week">This Week<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></div>
+                                    <div class="lmx-kpis">
+                                        <div class="lmx-kpi"><span>New Leads</span><b data-n="17">17</b><em>&uarr; 23% from last week</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+                                        <div class="lmx-kpi"><span>Appointments</span><b data-n="8">8</b><em>&uarr; 14% from last week</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
+                                        <div class="lmx-kpi"><span>Revenue</span><b data-n="18240" data-pre="$">$18,240</b><em>&uarr; 18% from last week</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                                        <div class="lmx-kpi"><span>Reviews</span><b data-n="23">23</b><em>&uarr; 27% from last week</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z" fill="currentColor"/></svg></div>
+                                    </div>
+                                    <div class="lmx-panels">
+                                        <div class="lmx-panel">
+                                            <b>Pipeline</b>
+                                            <ul class="lmx-pipe">
+                                                <li style="--c:#3d8bf5;--w:60%"><i class="lmx-ring"></i><span>New Leads</span><span>17</span><s><i></i></s></li>
+                                                <li style="--c:#3d8bf5;--w:48%"><i class="lmx-ring"></i><span>Contacted</span><span>9</span><s><i></i></s></li>
+                                                <li style="--c:#e0a93e;--w:34%"><i class="lmx-ring"></i><span>Estimate Sent</span><span>6</span><s><i></i></s></li>
+                                                <li style="--c:#9b6bf2;--w:30%"><i class="lmx-ring"></i><span>Scheduled</span><span>5</span><s><i></i></s></li>
+                                                <li style="--c:#34c26b;--w:56%"><i class="lmx-ring"></i><span>Won</span><span>12</span><s><i></i></s></li>
+                                            </ul>
+                                            <span class="lmx-more lmx-more-green">View full pipeline &rarr;</span>
+                                        </div>
+                                        <div class="lmx-panel">
+                                            <b>Recent Activity</b>
+                                            <ul class="lmx-acts">
+                                                <li class="dim"><i class="lmx-t-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></i><span><b>Sarah Mitchell</b><small>Requested a quote</small></span><time>2m ago</time></li>
+                                                <li class="dim"><i class="lmx-t-tan">MJ</i><span><b>Mike Johnson</b><small>Replied to estimate</small></span><time>14m ago</time></li>
+                                                <li class="dim"><i class="lmx-t-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></i><span><b>James Carter</b><small>Booked an appointment</small></span><time>1h ago</time></li>
+                                                <li class="dim"><i class="lmx-t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></i><span><b>Emily Roberts</b><small>Estimate viewed</small></span><time>2h ago</time></li>
+                                                <li class="dim"><i class="lmx-t-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><span><b>David Wilson</b><small>Missed call - text sent</small></span><time>3h ago</time></li>
+                                            </ul>
+                                            <span class="lmx-more">View all activity &rarr;</span>
+                                        </div>
+                                        <div class="lmx-panel">
+                                            <b>Upcoming Appointments</b>
+                                            <ul class="lmx-appts">
+                                                <li><time>8:00 AM</time><span><b>Sarah Mitchell</b><small>Backyard estimate</small></span></li>
+                                                <li><time>10:30 AM</time><span><b>Mike Johnson</b><small>Deck consultation</small></span></li>
+                                                <li><time>1:00 PM</time><span><b>James Carter</b><small>Property walkthrough</small></span></li>
+                                                <li><time>3:30 PM</time><span><b>Emily Roberts</b><small>Retaining wall quote</small></span></li>
+                                            </ul>
+                                            <span class="lmx-more">View calendar &rarr;</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="txd-cap">Demo account &middot; what your customer sees</p>
+                        <div class="lmx-phone">
+                            <div class="txd-phone">
+                                <div class="txd-screen">
+                                    <div class="txd-island"></div>
+                                    <div class="txd-status"><span>9:41</span><span class="cv-sb"><svg viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="currentColor" stroke="none"/></svg><span class="txd-batt"></span></span></div>
+                                    <div class="lmx-ph"><b>Conversations</b><span>&middot;&middot;&middot;</span></div>
+                                    <div class="lmx-tabs"><span class="on">All</span><span>Unread <em>2</em></span><span>Leads</span></div>
+                                    <div class="lmx-search"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search conversations...</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/></svg></i></div>
+                                    <ul class="lmx-convs">
+                                    <li><i class="lmx-a1">SM</i><span><b>Sarah Mitchell</b><small>Yes, that would be great! When could someone come take a look?</small></span><span class="lmx-r"><time>2:14 PM</time><em class="lmx-unread">2</em></span></li>
+                                    <li><i class="lmx-a2">MJ</i><span><b>Mike Johnson</b><small>Can you send over a quote for the deck?</small></span><span class="lmx-r"><time>1:42 PM</time><em>1</em></span></li>
+                                    <li><i class="lmx-a3">JC</i><span><b>James Carter</b><small>Thanks! Looking forward to Friday.</small></span><span class="lmx-r"><time>11:20 AM</time></span></li>
+                                    <li><i class="lmx-a4">ER</i><span><b>Emily Roberts</b><small>Do you offer any spring clean-ups?</small></span><span class="lmx-r"><time>Yesterday</time></span></li>
+                                    <li><i class="lmx-a5">DW</i><span><b>David Wilson</b><small><span class="lmx-miss">Missed call</span></small></span><span class="lmx-r"><time>Yesterday</time></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="lmx-steps">
+                            <li class="lmx-step dim" data-c="1"><span class="lmx-ic lmx-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>New Lead</b><small>From website form</small><em>1 min ago</em></span></li>
+                            <li class="lmx-step dim" data-c="2"><span class="lmx-ic lmx-ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><span><b>Conversation</b><small>Text reply received</small><em>3 min ago</em></span></li>
+                            <li class="lmx-step dim" data-c="3"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><span><b>Estimate Sent</b><small>$8,400</small><em>1 day ago</em></span></li>
+                            <li class="lmx-step dim" data-c="4"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><span><b>Appointment</b><small>Booked for Friday</small><em>2 days ago</em></span></li>
+                            <li class="lmx-step dim" data-c="5"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Job Won</b><small>$8,400</small><em>5 days ago</em></span></li>
+                        </ol>
+                        <div class="lmx-toast dim" data-c="6"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Sarah Mitchell</b><span>Just replied to your estimate!</span></span><time>2:14 PM</time></div>
                     </div>
-                </figure>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 04 / LEAD MANAGEMENT -->
-<section class="sec reveal glow">
-    <div class="wrap">
-        <div class="wds-grid">
-            <div>
-                <span class="eyebrow">04 / Lead Management</span>
-                <h2 class="h-lg">Every lead in <span class="gold">one place.</span></h2>
-                <p class="lede">Calls, texts and web inquiries land in one inbox on your phone, so nothing gets lost in a voicemail or an email you never opened.</p>
-                <div class="wout">
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>One Inbox for Every Lead</b>
-                        <p>Calls, texts and form submissions in one conversation per customer.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Book Jobs on the Spot</b>
-                        <p>Send a booking link and the appointment lands on your calendar.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Every Customer&rsquo;s History</b>
-                        <p>See past jobs, quotes and conversations before you call back.</p>
-                    </div>
-                    <div class="wout-item">
-                        <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Run It From Your Phone</b>
-                        <p>Reply, book and follow up from the app, wherever the job is.</p>
-                    </div>
-                </div>
-                <div class="blurb-cta">
-                    <a href="features/crm-and-booking.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
-                </div>
+<!-- 05 / RETAIN: REPUTATION MANAGEMENT -->
+<section class="light sec reveal" id="reputation">
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">05 / Retain<span>Reputation Management</span></span>
+                <h2 class="h-lg cv-title">Every completed job. <span class="gold">Another opportunity to build trust.</span></h2>
+                <p class="lede">Turn finished projects into five-star reviews with automated review requests and convenient reminders &mdash; so more happy customers find and choose your business.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><div><b>Automated Review Requests</b><span>Send a personalized message after the job is complete.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><div><b>Easy One-Tap Review</b><span>A direct link makes leaving a review simple.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>More Visibility &amp; Trust</b><span>Showcase real customer reviews and rank higher on Google.</span></div></li>
+                </ul>
+                <a href="features/review-automation.html" class="btn btn-gold cv-btn">Explore Reputation Management <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
             </div>
-            <div class="wds-shot">
-                <img src="img/crm-booking-illustration.webp" srcset="img/crm-booking-illustration-m.webp 760w, img/crm-booking-illustration.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw" alt="The Peak System dashboard showing new leads, the job pipeline and today&rsquo;s schedule, with the inbox open on a phone" loading="lazy" decoding="async" width="1536" height="1024">
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage rpx-stage" id="txd-rpx" role="img" aria-label="Demo of reputation management: a backyard landscaping job is marked complete and a review request text goes to Sarah Mitchell. She taps Leave a Review, gives five stars on Google and posts her review. The new five-star review shows up, reviews over time are up 42 percent and the Google Business Profile reads 5.0 stars from 127 reviews.">
+                        <svg class="rpx-lines" viewBox="0 0 1000 590" aria-hidden="true">
+                            <path d="M118 248V262M238 410H262M548 250H580M548 450H580M580 88V514M580 88H602M580 246H602M580 390H602M580 514H602M806 444V455"/>
+                            <path class="ah" d="M113 261l5 7 5-7zM260 405l7 5-7 5zM602 83l7 5-7 5zM602 241l7 5-7 5zM602 385l7 5-7 5zM602 509l7 5-7 5zM801 455l5 7 5-7z"/>
+                        </svg>
+                        <div class="rpx-card rpx-job dim" data-c="1"><span class="rpx-yard"></span><span class="rpx-job-b"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i><span><b>Job Completed</b><span>Backyard Landscaping</span><small>Completed &bull; Jun 14</small></span></span></div>
+                        <div class="rpx-card rpx-req dim" data-c="2"><div class="rpx-req-h"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Review Request Sent</b><small>Jun 14 &bull; 2:37 PM</small></span></div><p>Hi Sarah! Thanks again for choosing Summit Yard &amp; Landscape. If you have a moment, would you mind leaving us a quick review? It really helps our small business!</p><span class="rpx-leave">Leave a Review<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></div>
+                        <div class="rpx-phone">
+                            <div class="txd-phone">
+                                <div class="txd-screen rpx-g">
+                                    <div class="txd-island"></div>
+                                    <div class="txd-status"><span>8:41</span><span class="cv-sb"><svg viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="currentColor" stroke="none"/></svg><span class="txd-batt"></span></span></div>
+                                    <div class="rpx-gword" aria-hidden="true"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+                                    <div class="rpx-biz"><i class="rpx-logo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 38 17 15l6.5 9.5L31 13l14 25z" fill="#d6a74e"/><path d="M17 15l-4.3 7 2.8-1.3 1.6 1.7 1.9-1.8 2.6 1.4zM31 13l-3.8 6.4 2.3-1.1 1.5 1.5 1.7-1.6 2.2 1.1z" fill="#f6efe0"/></svg></i><div><b>Summit Yard &amp; Landscape</b><span class="rpx-rate"><b>5.0</b><span class="rpx-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><em>(<span class="rpx-count">127</span>)</em></span><small>Landscaping Contractor</small><small>Calgary, AB</small></div></div>
+                                    <div class="rpx-photo"></div>
+                                    <div class="rpx-tabs"><span>Overview</span><span class="on">Reviews</span><span>Photos</span><span>Services</span></div>
+                                    <div class="rpx-rev">
+                                        <div class="rpx-who"><i>SM</i><div><b>Sarah Mitchell</b><small><span class="rpx-when-a">Posting publicly on Google</span><span class="rpx-when-b">Just now</span></small></div></div>
+                                        <div class="rpx-rstars"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                                        <p class="rpx-text"><span class="rpx-typed" data-v="Amazing work! The team was professional, on time, and our backyard looks incredible. Highly recommend Summit Yard &amp; Landscape!"></span></p>
+                                        <div class="rpx-thumbs"><i style="background-image:url(img/rpx-t1.webp)"></i><i style="background-image:url(img/rpx-t2.webp)"></i><i style="background-image:url(img/rpx-t3.webp)"></i></div>
+                                        <span class="rpx-post"><span class="rpx-post-a">Post Review</span><span class="rpx-post-b">&#10003; Review posted</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rpx-card rpx-new dim" data-c="3"><i class="rpx-gtile"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></i><span><b>New 5-Star Review</b><time>Just now</time><span class="rpx-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>Amazing work! The team was professional, on time, and our backyard looks incredible.</q></span></div>
+                        <div class="rpx-card rpx-chart dim" data-c="4"><b>Reviews Over Time</b><div class="rpx-bars"><span style="--a:8%;--b:16%"><i></i><i></i><small>Jan</small></span><span style="--a:16%;--b:26%"><i></i><i></i><small>Feb</small></span><span style="--a:24%;--b:36%"><i></i><i></i><small>Mar</small></span><span style="--a:34%;--b:48%"><i></i><i></i><small>Apr</small></span><span style="--a:48%;--b:64%"><i></i><i></i><small>May</small></span><span style="--a:64%;--b:92%"><i></i><i></i><small>Jun</small></span><em class="rpx-callout">+42%</em></div></div>
+                        <div class="rpx-card rpx-gbp dim" data-c="5"><i class="rpx-glogo"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></i><span><b>Google Business Profile</b><span class="rpx-rate"><b>5.0</b><span class="rpx-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span><small><b class="rpx-count">127</b> Total Reviews <em>(+24%)</em></small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></div>
+                        <div class="rpx-card rpx-stats dim" data-c="6"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 17v-4M11 17V9M16 17v-6M21 17V5"/><path d="m4 9 6-4 4 3 6-5"/></svg><b>+42%</b><small>More Review Volume</small></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Higher</b><small>Local Rankings</small></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>More</b><small>Customer Trust</small></span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 05 / CUSTOMER RETENTION -->
-<section class="light sec reveal">
-    <div class="wrap">
-        <div class="ret-head">
-            <span class="eyebrow">05 / Customer Retention</span>
-            <h2 class="h-lg">Bring past customers <span class="gold">back.</span></h2>
-            <p class="lede">Your next job is often a customer you&rsquo;ve already done work for. The system keeps in touch so they call you first.</p>
-        </div>
-        <div class="ret-grid">
-            <div class="ret-card"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><b>Reactivation campaigns</b><p>A friendly text to customers you haven&rsquo;t heard from in a while, sent when you want more work.</p></div>
-            <div class="ret-card"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M12 13v3l2 1"/></svg></span><b>Seasonal maintenance reminders</b><p>Furnace tune-ups, AC checks and spring clean-ups, sent before the season starts.</p></div>
-            <div class="ret-card soon"><span class="ret-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><b>Referrals <span class="ret-soon">Coming soon</span></b><p>Turn happy customers into word-of-mouth with a simple referral ask.</p></div>
-        </div>
-        <div class="blurb-cta ret-cta">
-            <a href="features/marketing-campaigns.html" class="btn btn-gold">Learn More <span class="arr">&rarr;</span></a>
+<!-- 06 / RETAIN: CUSTOMER RETENTION -->
+<section class="sec reveal cv-dark" id="customer-retention">
+    <div class="wrap cv-wrap">
+        <div class="cv-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">06 / Retain<span>Customer Retention</span></span>
+                <h2 class="h-lg cv-title">The job is finished. <span class="gold">The relationship isn&rsquo;t.</span></h2>
+                <p class="lede">Stay connected with past customers, send seasonal reminders, and turn previous projects into repeat business.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><div><b>Seasonal Reminders</b><span>Automatically reach out before the season starts.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/></svg></span><div><b>Reactivation Campaigns</b><span>Bring back past customers for new work.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Referral Requests</b><span>Turn happy customers into new customers.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><div><b>Recurring Service Reminders</b><span>Keep your business top of mind year after year.</span></div></li>
+                </ul>
+                <a href="features/marketing-campaigns.html" class="btn btn-gold cv-btn">Explore Customer Retention <span class="arr">&rarr;</span></a>
+                <p class="cv-note">Demo content &bull; Not a real customer</p>
+            </div>
+            <div class="cv-visual">
+                <div class="cv-fit">
+                    <div class="cv-stage rtx-stage" id="txd-rtx" role="img" aria-label="Demo of customer retention: Sarah Mitchell&rsquo;s finished landscaping job joins the retention flow. A spring check-in text goes to 120 past customers on March 1, Sarah replies asking for April 12th, and fall prep, snow removal and a referral request are lined up next. A past-customers list shows who is active, reactivated or referring, with repeat customers up 28 percent and customer lifetime value up 42 percent.">
+                        <svg class="rtx-lines" viewBox="0 0 1000 540" aria-hidden="true">
+                            <path d="M138 84V101M230 232H254M494 200H504M504 51V271M504 51H511M504 124H511M504 197H511M504 271H511"/>
+                            <path class="ah" d="M133 100l5 7 5-7zM253 227l7 5-7 5zM511 46l7 5-7 5zM511 119l7 5-7 5zM511 192l7 5-7 5zM511 266l7 5-7 5z"/>
+                        </svg>
+                        <div class="rtx-card rtx-cream rtx-season dim" data-c="2"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></i><span><b>Seasonal Reminder</b><small>Sent Mar 1 &bull; 120 past customers</small></span></div>
+                        <div class="rtx-card rtx-cream rtx-past dim" data-c="1"><span class="rtx-photo"></span><span class="rtx-past-h"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i><span><b>Past Customer</b><small>Completed: Jun 14, 2025</small></span></span><span class="rtx-chips"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>Landscaping</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg>$8,400</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Residential</span></span></div>
+                        <div class="rtx-phone">
+                            <div class="txd-phone">
+                                <div class="txd-screen">
+                                    <div class="txd-island"></div>
+                                    <div class="txd-status"><span class="txd-clock">2:14</span><span class="cv-sb"><svg viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="currentColor" stroke="none"/></svg><span class="txd-batt"></span></span></div>
+                                    <div class="txd-head rtx-head"><span class="rtx-back" aria-hidden="true">&lsaquo;</span><span class="txd-av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 38 17 15l6.5 9.5L31 13l14 25z" fill="#d6a74e"/><path d="M17 15l-4.3 7 2.8-1.3 1.6 1.7 1.9-1.8 2.6 1.4zM31 13l-3.8 6.4 2.3-1.1 1.5 1.5 1.7-1.6 2.2 1.1z" fill="#f6efe0"/></svg></span><span class="txd-name">Summit Yard &amp; Landscape</span></div>
+                                    <div class="txd-thread">
+                                        <p class="txd-meta" data-i="1">Today 2:14 PM</p>
+                                        <div class="txd-msg txd-in" data-i="2">Hi Sarah! Just a quick check-in as spring is around the corner. Now is a great time to book your annual yard cleanup and get your lawn ready for the season.<br><br>Would you like us to put you down for a date in April?</div>
+                                        <div class="txd-msg txd-out" data-i="3">Yes please! Can we do April 12th?</div>
+                                        <p class="rtx-t" data-i="4">2:16 PM</p>
+                                        <div class="txd-typing"><i></i><i></i><i></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="rtx-plan">
+                            <li class="rtx-cream dim" data-c="2"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></i><span><b>Spring Clean-Up</b><small>Mar 1 &bull; Sent <i class="rtx-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i></small></span></li>
+                            <li class="rtx-cream dim" data-c="4"><i class="rtx-tile rtx-tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></svg></i><span><b>Fall Prep</b><small>Sep 1 &bull; Scheduled</small></span></li>
+                            <li class="rtx-cream dim" data-c="4"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 6 10h3l-4 6h4l-3 5h12l-3-5h4l-4-6h3z"/></svg></i><span><b>Snow Removal</b><small>Oct 15 &bull; Scheduled</small></span></li>
+                            <li class="rtx-cream dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>30 days after job</small></span></li>
+                        </ul>
+                        <div class="rtx-card rtx-list">
+                            <div class="rtx-list-h"><b>Past Customers</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
+                            <ul>
+                                <li class="rtx-row rtx-row-sarah"><i style="background-image:url(img/rpx-yard.webp)"></i><span><b>Sarah Mitchell</b><small>Landscaping &bull; Jun 2025</small></span><em class="rtx-pill">Active</em></li>
+                                <li class="rtx-row"><i style="background-image:url(img/rpx-t1.webp)"></i><span><b>David Wilson</b><small>Deck &bull; May 2025</small></span><em class="rtx-pill">Reactivated</em></li>
+                                <li class="rtx-row"><i style="background-image:url(img/rpx-t2.webp)"></i><span><b>James Carter</b><small>Yard Renovation &bull; Apr 2025</small></span><em class="rtx-pill">Active</em></li>
+                                <li class="rtx-row"><i style="background-image:url(img/rpx-t3.webp)"></i><span><b>Emily Roberts</b><small>Retaining Wall &bull; Aug 2024</small></span><em class="rtx-pill">Active</em></li>
+                                <li class="rtx-row"><i style="background-image:url(img/wsx-house.webp)"></i><span><b>Michael Thompson</b><small>Concrete Patio &bull; Jun 2024</small></span><em class="rtx-pill rtx-pill-blue">Referral</em></li>
+                            </ul>
+                        </div>
+                        <ol class="rtx-steps">
+                        <li class="rtx-step dim" data-c="1"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i><span><b>Job Completed</b><small>Customer added to retention flow</small></span></li>
+                        <li class="rtx-step dim" data-c="2"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></i><span><b>Seasonal Reminder</b><small>Spring cleanup reminder sent</small></span></li>
+                        <li class="rtx-step dim" data-c="3"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Customer Responds</b><small>Books annual service</small></span></li>
+                        <li class="rtx-step dim" data-c="4"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/></svg></i><span><b>Repeat Customer</b><small>Added to recurring reminder sequence</small></span></li>
+                        <li class="rtx-step dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>Asks for a referral after great service</small></span></li>
+                        <li class="rtx-step dim" data-c="6"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></i><span><b>More Business</b><small>Increased lifetime value over time</small></span></li>
+                        </ol>
+                        <div class="rtx-card rtx-stats dim" data-c="6"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span><b>+28%</b><small>Repeat Customers</small></span></span><i></i><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg><span><b>+42%</b><small>Customer Lifetime Value</small></span></span></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- WHO IT'S FOR (anchor #trades is used by the Solutions menu) -->
-<section class="sec reveal glow" id="trades">
-    <div class="wrap">
-        <div class="fit-grid">
-            <div>
-                <span class="eyebrow">Who it&rsquo;s for</span>
-                <h2 class="h-lg">Built for owner-operators who <span class="gold">answer their own phone.</span></h2>
-                <p class="lede">One to five trucks, anywhere in Alberta. You quote the jobs, you do the jobs, and your cell is the business line.</p>
-                <ul class="fit-trades"><li>Plumbing</li><li>HVAC</li><li>Electrical</li><li>Roofing</li><li>Landscaping</li><li>General contractors</li></ul>
-            </div>
-            <div class="fit-not">
-                <b>Not for you if&hellip;</b>
-                <ul>
-                    <li>You have a full-time receptionist or office team answering a dedicated line</li>
-                    <li>You&rsquo;re a franchise or a multi-location company</li>
-                    <li>You want someone to manage your Google Ads</li>
+<section class="sec reveal cv-dark" id="trades">
+    <div class="wrap cv-wrap">
+        <div class="whx-grid">
+            <div class="cv-copy">
+                <span class="eyebrow cv-eyebrow">Who it&rsquo;s for</span>
+                <h2 class="h-lg cv-title">Built for your industry. <span class="gold">One system.<br> Every trade.</span></h2>
+                <p class="lede">From independent contractors to growing service companies, The Peak System connects your leads, customer conversations, estimates and follow-ups in one place.</p>
+                <ul class="cv-list">
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Built for Home Services</b><span>Purpose-built for contractors and service businesses.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Canada &amp; United States</b><span>Supporting businesses across North America.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>Small Teams. Big Ambitions.</b><span>Designed for owner-operated companies and growing crews.</span></div></li>
                 </ul>
-                <p>We&rsquo;ll tell you that on the call and point you somewhere better.</p>
+                <a href="book.html" class="btn btn-gold cv-btn">See If You&rsquo;re a Good Fit <span class="arr">&rarr;</span></a>
             </div>
+            <div class="whx-feat">
+                <span class="eyebrow whx-eyebrow">Featured industries</span>
+                <ul class="whx-cards">
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/roofers.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><b>Roofers</b><p>More leads. More estimates. More roofs.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/electricians.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><b>Electricians</b><p>Fill your schedule with high&#8209;quality jobs.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/plumbers.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6a3 3 0 0 1 3 3v6a3 3 0 0 0 3 3h6"/><path d="M3 3v6M21 15v6"/></svg></span><b>Plumbers</b><p>Turn more inquiries into booked service calls.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/builders.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 12-8.5 8.5a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 15 22 10.6M20 8.5 15.5 4c-1.5-1.5-4-1.5-5.5 0l-1 1 7.5 7.5"/></svg></span><b>Carpenters &amp; Builders</b><p>Keep a steady pipeline of new projects.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/hvac.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.8 16.4a6.1 6.1 0 0 1-8.6-7l5.4 1.4a6.1 6.1 0 0 1 7-8.6l-1.4 5.4a6.1 6.1 0 0 1 8.6 7l-5.4-1.4a6.1 6.1 0 0 1-7 8.6l1.4-5.4z"/><path d="M12 12v.01"/></svg></span><b>HVAC</b><p>Get more installs, maintenance and service calls.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/landscaping.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></span><b>Landscaping</b><p>Bring in more seasonal and recurring work.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/concrete.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></svg></span><b>Concrete</b><p>More quote requests for patios, driveways and more.</p></li>
+                        <li class="whx-card"><span class="whx-photo" style="background-image:url(img/fit/handyman.webp)"></span><span class="whx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><b>Handyman Services</b><p>A simple system to get more local jobs.</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="whx-bar">
+            <ul class="whx-more"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="16" height="6" rx="2"/><path d="M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="8" y="16" width="4" height="6" rx="1"/></svg>Painting</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 2 1.9 1.9M16 2l-1.9 1.9M9 7.1V7a3 3 0 1 1 6 0v.1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6zM12 20v-9M6.5 9C4.6 8.8 3 7.1 3 5M6 13H2M3 21c0-2.1 1.7-3.9 3.8-4M21 5c0 2.1-1.6 3.8-3.5 4M22 13h-4M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>Pest Control</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5zM6 8h4M6 18h4M12 3l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5zM14 8h4M14 18h4M20 3l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5z"/></svg>Fencing</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>Pressure Washing</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 6 10h3l-4 6h4l-3 5h12l-3-5h4l-4-6h3z"/></svg>Tree Services</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M14 12h.01"/></svg>Windows &amp; Doors</li><li><span class="whx-dots" aria-hidden="true">&bull;&bull;&bull;</span>And Many More</li></ul>
+            <div class="whx-cta"><div><b>Don&rsquo;t see your trade?</b><span>The Peak System supports a wide range of home-service businesses.</span></div><a href="book.html" class="btn btn-gold whx-btn">Explore All Industries <span class="arr">&rarr;</span></a></div>
         </div>
     </div>
 </section>
@@ -2023,7 +2366,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
 <script>
-// demos: 01 = missed-call recovery, 02 = estimate follow-up, 03 = website inquiry, plus the review request + reminder
+// demos: 01 = missed-call recovery, 02 = estimate follow-up, 03 = website inquiry, 04 = lead dashboard, 05 = Google review, 06 = retention
 (function(){
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function demo(root,build){
@@ -2047,36 +2390,6 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     new IntersectionObserver(function(es){inView=es[0].isIntersecting;inView?start():stop();},{threshold:0.25}).observe(root);
     document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
   }
-
-  var review=document.getElementById('txd-review');
-  if(review)demo(review,function(d){
-    var rev=d.q('.txd-rev'),stars=rev.querySelectorAll('.txd-star'),text=d.q('.txd-rev-text'),
-        post=d.q('.txd-rev-post'),links=review.querySelectorAll('.txd-link'),
-        REVIEW='Great crew — the patio looks amazing. Would hire them again.';
-    function reset(){
-      d.clear();rev.classList.remove('on','posted');post.classList.remove('pressed');text.textContent='';
-      for(var k=0;k<stars.length;k++)stars[k].classList.remove('lit');
-      for(k=0;k<links.length;k++)links[k].classList.remove('tap');
-      d.clock.textContent='4:30';d.step(1);
-    }
-    var timeline=[
-      [0,reset],
-      [400,function(){d.show(1);}],
-      [900,function(){d.typingOn(true);}],
-      [2000,function(){d.typingOn(false);d.show(2);d.step(2);}],
-      [5000,function(){d.show(3);d.clock.textContent='10:00';d.typingOn(true);d.step(3);}],
-      [6200,function(){d.typingOn(false);d.show(4);}],
-      [8400,function(){links[links.length-1].classList.add('tap');}],
-      [9000,function(){rev.classList.add('on');d.step(4);}],
-      [11000,function(){for(var c=1;c<=REVIEW.length;c++)(function(n){d.later(n*32,function(){text.textContent=REVIEW.slice(0,n);});})(c);}],
-      [13500,function(){post.classList.add('pressed');}],
-      [14000,function(){rev.classList.add('posted');}],
-      [17600,function(){d.screen.classList.add('fade');}]
-    ];
-    for(var s=0;s<stars.length;s++)(function(k){timeline.push([9700+k*220,function(){stars[k].classList.add('lit');}]);})(s);
-    return {reset:reset,timeline:timeline,loop:18200,
-      final:function(){d.showAll();d.clock.textContent='10:00';d.step(4);}};
-  });
 
   // 01 missed-call recovery: the call rings out, the timeline cards light up in step and the reply lands in the CRM
   var mcr=document.getElementById('txd-mcr');
@@ -2180,7 +2493,88 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     if(window.ResizeObserver)new ResizeObserver(fit).observe(box);else window.addEventListener('resize',fit);
   });
 
-  // 01-03 stages: scale each fixed-size stage down to its column; small screens get the timeline-only layout
+  // 04 lead management: the dashboard counts up once, activity lands, the lead moves through the stages and Sarah's reply pops up
+  var lmx=document.getElementById('txd-lmx');
+  if(lmx)demo(lmx,function(d){
+    var cs=lmx.querySelectorAll('[data-c]'),acts=lmx.querySelectorAll('.lmx-acts li'),nums=lmx.querySelectorAll('[data-n]'),badge=d.q('.lmx-unread'),counted=false;
+    function lit(n){cs[n-1].classList.remove('dim');cs[n-1].classList.add('on');}
+    function fmt(el,v){el.textContent=(el.getAttribute('data-pre')||'')+v.toLocaleString('en-US');}
+    function full(){lmx.classList.remove('pre');[].forEach.call(nums,function(el){fmt(el,+el.getAttribute('data-n'));});}
+    function count(){[].forEach.call(nums,function(el){var n=+el.getAttribute('data-n');for(var s=1;s<=16;s++)(function(s){d.later(s*60,function(){fmt(el,Math.round(n*(1-Math.pow(1-s/16,3))));});})(s);});}
+    function reset(){
+      for(var k=0;k<cs.length;k++){cs[k].classList.add('dim');cs[k].classList.remove('on');}
+      for(k=0;k<acts.length;k++)acts[k].classList.add('dim');
+      badge.classList.remove('show');
+      if(counted)full();
+    }
+    if(!reduce){lmx.classList.add('pre');[].forEach.call(nums,function(el){fmt(el,0);});}
+    return {reset:reset,loop:13600,
+      final:function(){full();for(var k=0;k<acts.length;k++)acts[k].classList.remove('dim');badge.classList.add('show');for(k=1;k<=cs.length;k++)lit(k);},
+      timeline:[
+        [0,reset],
+        [300,function(){if(!counted){counted=true;lmx.classList.remove('pre');count();}}],
+        [900,function(){for(var k=0;k<acts.length;k++)(function(k){d.later(k*260,function(){acts[k].classList.remove('dim');});})(k);}],
+        [2200,function(){lit(1);}],
+        [3200,function(){lit(2);badge.classList.add('show');}],
+        [4200,function(){lit(3);}],
+        [5200,function(){lit(4);}],
+        [6200,function(){lit(5);}],
+        [7000,function(){lit(6);}]
+      ]};
+  });
+
+  // 05 reputation: job done, request sent, Sarah taps through and posts five stars; the review, chart, profile and stats follow
+  var rpx=document.getElementById('txd-rpx');
+  if(rpx)demo(rpx,function(d){
+    var cs=rpx.querySelectorAll('[data-c]'),stars=rpx.querySelectorAll('.rpx-rstars i'),typed=d.q('.rpx-typed'),TEXT=typed.getAttribute('data-v'),
+        g=d.q('.rpx-g'),leave=d.q('.rpx-leave'),post=d.q('.rpx-post'),counts=rpx.querySelectorAll('.rpx-count'),gbp=d.q('.rpx-gbp');
+    function lit(n){cs[n-1].classList.remove('dim');cs[n-1].classList.add('on');}
+    function count(v){for(var k=0;k<counts.length;k++)counts[k].textContent=v;}
+    function reset(){
+      for(var k=0;k<cs.length;k++){cs[k].classList.add('dim');cs[k].classList.remove('on');}
+      for(k=0;k<stars.length;k++)stars[k].classList.remove('lit');
+      typed.textContent='';g.classList.remove('posted','typing');leave.classList.remove('tap');post.classList.remove('pressed');gbp.classList.remove('bump');count(126);
+    }
+    return {reset:reset,loop:14600,
+      final:function(){for(var k=1;k<=cs.length;k++)lit(k);for(k=0;k<stars.length;k++)stars[k].classList.add('lit');typed.textContent=TEXT;g.classList.add('posted');count(127);},
+      timeline:[
+        [0,reset],
+        [400,function(){lit(1);}],
+        [1500,function(){lit(2);}],
+        [2700,function(){leave.classList.add('tap');}],
+        [3300,function(){for(var k=0;k<stars.length;k++)(function(k){d.later(k*170,function(){stars[k].classList.add('lit');});})(k);}],
+        [4400,function(){g.classList.add('typing');for(var c=1;c<=TEXT.length;c++)(function(n){d.later(n*22,function(){typed.textContent=TEXT.slice(0,n);});})(c);}],
+        [7500,function(){g.classList.remove('typing');post.classList.add('pressed');}],
+        [7800,function(){post.classList.remove('pressed');g.classList.add('posted');count(127);}],
+        [8300,function(){lit(3);}],
+        [9000,function(){lit(4);}],
+        [9900,function(){lit(5);gbp.classList.add('bump');}],
+        [10700,function(){lit(6);}]
+      ]};
+  });
+
+  // 06 retention: the job joins the retention flow, the spring check-in goes out, Sarah books; the plan, referral and stats follow
+  var rtx=document.getElementById('txd-rtx');
+  if(rtx)demo(rtx,function(d){
+    var all=rtx.querySelectorAll('[data-c]'),row=d.q('.rtx-row-sarah');
+    function lit(n){[].forEach.call(rtx.querySelectorAll('[data-c="'+n+'"]'),function(el){el.classList.remove('dim');el.classList.add('on');});}
+    function reset(){d.clear();for(var k=0;k<all.length;k++){all[k].classList.add('dim');all[k].classList.remove('on');}row.classList.remove('bump');}
+    return {reset:reset,loop:13400,
+      final:function(){d.showAll();for(var k=1;k<=6;k++)lit(k);},
+      timeline:[
+        [0,reset],
+        [400,function(){lit(1);}],
+        [1500,function(){lit(2);d.show(1);d.typingOn(true);}],
+        [2600,function(){d.typingOn(false);d.show(2);}],
+        [4600,function(){lit(3);d.show(3);d.show(4);}],
+        [5800,function(){lit(4);row.classList.remove('bump');void row.offsetWidth;row.classList.add('bump');}],
+        [7000,function(){lit(5);}],
+        [8100,function(){lit(6);}],
+        [12600,function(){d.screen.classList.add('fade');}]
+      ]};
+  });
+
+  // 01-06 stages: scale each fixed-size stage down to its column; small screens get the timeline-only layout
   [].forEach.call(document.querySelectorAll('.cv-fit'),function(box){
     var stage=box.querySelector('.cv-stage'),mq=window.matchMedia('(max-width: 860px)');
     function fit(){
