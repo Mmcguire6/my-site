@@ -401,10 +401,31 @@ h1,h2{font-family:var(--display);}
 .mx-more{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:600;color:var(--gold-2);}
 .mx-more svg{width:13px;height:13px;transition:transform .2s;}
 .mx-card:hover .mx-more svg{transform:translateX(3px);}
-.nav-dd-static > .nav-dd-toggle{position:relative;}
-.nav-dd-static > .nav-dd-toggle::after{content:"";position:absolute;left:0;right:0;bottom:-15px;height:3px;border-radius:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s;}
-.nav-dd-static:hover > .nav-dd-toggle{color:var(--gold-2);}
-.nav-dd-static:hover > .nav-dd-toggle::after{transform:scaleX(1);}
+.nav-dd-menu.mega-res{display:block;width:780px;max-width:calc(100vw - 48px);padding:0;background:#101014;border:1px solid rgba(210,162,76,0.3);border-radius:16px;box-shadow:0 46px 90px -30px rgba(0,0,0,0.85);}
+.nav-dd-menu.mega-res::before{content:"";position:absolute;top:-7px;left:50%;width:12px;height:12px;background:#151310;border-top:1px solid rgba(210,162,76,0.3);border-left:1px solid rgba(210,162,76,0.3);transform:translateX(-50%) rotate(45deg);}
+.mega-res-grid{display:grid;grid-template-columns:320px 1fr;overflow:hidden;border-radius:16px;}
+.mega-res-rail{display:flex;flex-direction:column;align-items:flex-start;padding:26px 24px 0;background:radial-gradient(90% 55% at 45% 95%,#2a2013 0%,rgba(42,32,19,0) 70%),linear-gradient(180deg,#131210 0%,#17140f 60%,#1d1710 100%);border-right:1px solid rgba(255,255,255,0.07);}
+.mega-res-title{margin-top:8px;font-family:var(--display);font-size:24px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#fff;}
+.mega-res-title span{color:var(--gold-2);}
+.mega-res-rail p{margin-top:9px;font-size:12.5px;line-height:1.55;color:#cfc9bd;white-space:normal;}
+.mega-res-art{display:block;width:calc(100% + 48px);max-width:none;height:auto;margin:14px -24px 0;-webkit-mask-image:radial-gradient(120% 105% at 50% 100%,#000 55%,transparent 100%);mask-image:radial-gradient(120% 105% at 50% 100%,#000 55%,transparent 100%);}
+.mega-res-list{display:flex;flex-direction:column;justify-content:center;padding:8px 24px;}
+.nav-dd-menu a.mega-res-item{display:flex;align-items:center;gap:16px;padding:18px 2px;border-radius:0;border-bottom:1px solid rgba(255,255,255,0.08);background:none;white-space:normal;color:inherit;}
+.nav-dd-menu a.mega-res-item:last-child{border-bottom:0;}
+.nav-dd-menu a.mega-res-item:hover{background:none;color:inherit;}
+.mega-res-ic{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:10px;border:1px solid rgba(210,162,76,0.35);background:linear-gradient(180deg,#2a2216,#15120d);color:var(--gold-2);}
+.mega-res-ic svg{width:21px;height:21px;}
+.mega-res-txt{flex:1;min-width:0;}
+.mega-res-txt b{display:block;font-size:15px;font-weight:700;color:#fff;transition:color .18s;}
+.mega-res-txt span{display:block;margin-top:3px;font-size:12.5px;line-height:1.45;color:#a9a49a;}
+.mega-res-go{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.45);color:#fff;transition:background .18s,border-color .18s,color .18s;}
+.mega-res-go svg{width:13px;height:13px;}
+.mega-res-item:hover .mega-res-go{background:var(--gold);border-color:var(--gold);color:#181207;}
+.mega-res-item:hover .mega-res-txt b{color:var(--gold-2);}
+.nav-dd > .nav-dd-toggle{position:relative;}
+.nav-dd > .nav-dd-toggle::after{content:"";position:absolute;left:0;right:0;bottom:-15px;height:3px;border-radius:2px;background:var(--gold);transform:scaleX(0);transition:transform .2s;}
+.nav-dd:hover > .nav-dd-toggle{color:var(--gold-2);}
+.nav-dd:hover > .nav-dd-toggle::after{transform:scaleX(1);}
 .nav-dd:hover > .nav-dd-toggle svg{transform:rotate(180deg);}
 .nav-dd-toggle svg{transition:transform .2s;}
 .m2-foot{grid-column:span 2;background:#101014;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
@@ -519,10 +540,20 @@ h1,h2{font-family:var(--display);}
             <a href="../pricing.html">Pricing</a>
             <div class="nav-dd">
                 <button type="button" class="nav-dd-toggle" aria-haspopup="true">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-                <div class="nav-dd-menu">
-                    <a href="../how.html">How it works</a>
-                    <a href="../blog/">Blog</a>
-                    <a href="../faq.html">FAQ</a>
+                <div class="nav-dd-menu mega-res">
+                    <div class="mega-res-grid">
+                        <aside class="mega-res-rail">
+                            <span class="mx-eyebrow">Learn &amp; explore</span>
+                            <div class="mega-res-title">Resources to help your business <span>grow.</span></div>
+                            <p>Practical guides, expert insights, and everything you need to get the most out of The Peak System.</p>
+                            <img src="../img/resources-peaks.webp" alt="" class="mega-res-art" width="600" height="242" loading="lazy" decoding="async">
+                        </aside>
+                        <div class="mega-res-list">
+                            <a href="../how.html" class="mega-res-item"><span class="mega-res-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><span class="mega-res-txt"><b>How It Works</b><span>See how The Peak System turns inquiries into repeat customers.</span></span><span class="mega-res-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="../blog/" class="mega-res-item"><span class="mega-res-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span><span class="mega-res-txt"><b>Insights &amp; Articles</b><span>Practical strategies for growing a home-service business.</span></span><span class="mega-res-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                            <a href="../faq.html" class="mega-res-item"><span class="mega-res-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span><span class="mega-res-txt"><b>Help &amp; FAQs</b><span>Everything you need to know before getting started.</span></span><span class="mega-res-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="nav-dd">
