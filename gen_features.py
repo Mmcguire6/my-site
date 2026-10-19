@@ -243,6 +243,7 @@ PAGES = [
     },
     {
         "slug": "lead-follow-up",
+        "custom": True,  # hand-built page (Estimate Follow-Up, Oct 2026); excluded from regeneration
         "label": "Lead Follow-Up",
         "icon": "chat",
         "short": "Automated SMS & email follow-up that converts more leads.",
