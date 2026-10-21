@@ -376,7 +376,76 @@ h1,h2{font-family:var(--display);}
 .mci-input span:first-child{font-size:15px;line-height:1;color:#666;}
 .mci-input span:nth-child(2){flex:1;}
 .mci-input svg{width:13px;height:13px;color:#1a7cf2;}
-@media(prefers-reduced-motion:reduce){.mch-call.ringing .mch-accept i::after{animation:none;}}
+/* missed call: speed to lead (versus panel, count-up stats, payback calculator tied to the offer) */
+.fp-head-2{margin-top:clamp(64px,6.5vw,96px);}
+.sv,.sc{position:relative;overflow:hidden;border-radius:22px;color:#fff;box-shadow:0 40px 80px -44px rgba(20,16,10,0.85);}
+.sv{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:clamp(18px,3vw,48px);margin-top:clamp(36px,3.6vw,52px);padding:clamp(28px,3.4vw,50px) clamp(24px,3.6vw,56px) clamp(22px,2.6vw,34px);background:radial-gradient(620px 320px at 88% 18%,rgba(210,162,76,0.24),transparent 70%),radial-gradient(620px 320px at 8% 26%,rgba(120,150,190,0.16),transparent 70%),#0d0d10;}
+.sv-side{display:flex;flex-direction:column;align-items:flex-start;}
+.sv-hot{align-items:flex-end;text-align:right;}
+.sv-lab{font-size:12.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#9fb0c6;}
+.sv-hot .sv-lab{color:var(--gold-2);}
+.sv-big{margin-top:12px;font-family:var(--display);font-size:clamp(58px,7.4vw,120px);font-weight:800;line-height:0.92;letter-spacing:-0.045em;-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums;}
+.sv-cold .sv-big{background-image:linear-gradient(180deg,#e6edf6,#7f93ad);}
+.sv-hot .sv-big{background-image:linear-gradient(180deg,#f8d792,#c99a45);filter:drop-shadow(0 0 28px rgba(210,162,76,0.35));}
+.sv-side p{margin-top:10px;font-size:clamp(15px,1.3vw,18px);color:#cfc9bd;}
+.sv-chip{margin-top:18px;padding:6px 13px;border:1px solid;border-radius:999px;font-style:normal;font-size:13px;font-weight:600;}
+.sv-cold .sv-chip{border-color:rgba(160,180,205,0.3);background:rgba(160,180,205,0.1);color:#bccadb;}
+.sv-hot .sv-chip{border-color:rgba(210,162,76,0.4);background:rgba(210,162,76,0.14);color:var(--gold-2);}
+.sv-vs{display:grid;place-items:center;width:64px;height:64px;border:1px solid rgba(255,255,255,0.18);border-radius:50%;background:#17171b;font-family:var(--display);font-size:18px;font-weight:800;color:#fff;}
+.sv-race{grid-column:1 / -1;display:grid;gap:12px;margin-top:clamp(22px,2.6vw,34px);padding-top:clamp(20px,2.4vw,28px);border-top:1px solid rgba(255,255,255,0.1);}
+.sv-row{display:grid;grid-template-columns:150px minmax(0,1fr) 84px;align-items:center;gap:16px;font-size:13.5px;color:#a9b4c2;}
+.sv-row-hot{color:var(--gold-2);}
+.sv-row b{text-align:right;font-weight:700;color:#fff;}
+.sv-bar{position:relative;height:12px;overflow:hidden;border-radius:6px;background:rgba(255,255,255,0.06);}
+.sv-bar s{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;}
+.sv-bar-cold s{background:linear-gradient(90deg,#8fa3bb,#56677d);transition:width 2.8s cubic-bezier(.35,.6,.35,1) .5s;}
+.sv-bar-hot s{background:linear-gradient(90deg,#f6d38a,#d2a24c);box-shadow:0 0 16px rgba(246,211,138,0.9);transition:width .35s ease-out .35s;}
+.reveal.in .sv-bar-cold s{width:100%;}
+.reveal.in .sv-bar-hot s{width:max(8px,1.2%);}
+.sv-src{grid-column:1 / -1;margin-top:16px;font-size:11.5px;color:#8e8a82;}
+.sv-src a,.sk small a,.sc small a{text-decoration:underline;text-underline-offset:2px;}
+.sk{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:18px;}
+.sk li{display:flex;flex-direction:column;padding:24px 24px 18px;border:1px solid var(--cream-line);border-radius:18px;background:#fff;box-shadow:0 22px 46px -34px rgba(60,45,20,0.55);}
+.reveal .sk li{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s;}
+.reveal.in .sk li{opacity:1;transform:none;}
+.reveal.in .sk li:nth-child(2){transition-delay:.12s;}
+.reveal.in .sk li:nth-child(3){transition-delay:.24s;}
+.reveal.in .sk li:nth-child(4){transition-delay:.36s;}
+.sk-t{font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep);}
+.sk b{margin-top:12px;font-family:var(--display);font-size:clamp(50px,4.8vw,76px);font-weight:800;line-height:0.92;letter-spacing:-0.045em;background-image:linear-gradient(180deg,#d8a952,#9c7230);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums;}
+.sk p{margin-top:12px;font-size:15px;line-height:1.5;color:#3d382f;}
+.sk small{margin-top:auto;padding-top:14px;font-size:11px;line-height:1.4;color:#a39d90;}
+.sc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3.6vw,64px);margin-top:18px;padding:clamp(26px,3.4vw,50px);background:radial-gradient(520px 320px at 100% 100%,rgba(210,162,76,0.2),transparent 70%),radial-gradient(420px 260px at 0% 0%,rgba(210,162,76,0.08),transparent 70%),#0d0d10;}
+.sc-kick{font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-2);}
+.sc h3{margin-top:10px;font-family:var(--display);font-size:clamp(26px,2.5vw,36px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;}
+.sc label{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:28px;font-size:15px;color:#e9e5dc;}
+.sc output{font-family:var(--display);font-size:22px;font-weight:800;color:var(--gold-2);font-variant-numeric:tabular-nums;}
+.sc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;margin-top:14px;border-radius:3px;background:linear-gradient(90deg,var(--gold) var(--p,15%),rgba(255,255,255,0.14) var(--p,15%));outline:none;cursor:pointer;}
+.sc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border:5px solid var(--gold);border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.5);}
+.sc input[type=range]::-moz-range-thumb{width:16px;height:16px;border:5px solid var(--gold);border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.5);}
+.sc input[type=range]:focus-visible{outline:2px solid var(--gold-2);outline-offset:6px;}
+.sc-l small{display:block;margin-top:24px;font-size:12px;line-height:1.5;color:#8e8a82;}
+.sc-r{display:flex;flex-direction:column;justify-content:center;gap:14px;}
+.sc-out{display:flex;align-items:center;gap:18px;padding:18px 20px;border:1px solid rgba(255,255,255,0.1);border-radius:16px;background:rgba(255,255,255,0.03);}
+.sc-out b{flex:none;min-width:2.2em;font-family:var(--display);font-size:clamp(36px,3.4vw,52px);font-weight:800;line-height:1;letter-spacing:-0.03em;color:#fff;font-variant-numeric:tabular-nums;}
+.sc-out span{font-size:15px;line-height:1.45;color:#cfc9bd;}
+.sc-out-gold{border-color:rgba(210,162,76,0.45);background:rgba(210,162,76,0.08);}
+.sc-out-gold b{background-image:linear-gradient(180deg,#f8d792,#c99a45);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.sc-out strong{color:var(--gold-2);}
+.sc-offer{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;}
+.sc-offer li{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#f2efe9;}
+.sc-offer svg{width:15px;height:15px;color:var(--gold-2);}
+.sc-r .fp-btn{align-self:flex-start;margin-top:6px;}
+@media(max-width:1100px){.sk{grid-template-columns:repeat(2,minmax(0,1fr));}.sc{grid-template-columns:1fr;}}
+@media(max-width:760px){
+  .sv{grid-template-columns:1fr;justify-items:center;text-align:center;}
+  .sv-side,.sv-hot{align-items:center;text-align:center;}
+  .sv-row{grid-template-columns:1fr auto;row-gap:6px;}
+  .sv-row .sv-bar{grid-column:1 / -1;grid-row:2;}
+  .sv-src{text-align:left;}
+}
+@media(max-width:520px){.sk{grid-template-columns:1fr;}.sc-out{flex-direction:column;align-items:flex-start;gap:6px;}}
+@media(prefers-reduced-motion:reduce){.mch-call.ringing .mch-accept i::after{animation:none;}.reveal .sk li,.sv-bar s{transition:none;}}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -843,9 +912,57 @@ h1,h2{font-family:var(--display);}
     </div>
 </section>
 
-<section class="fp-cream fp-sec reveal">
+<section class="fp-cream fp-sec reveal" id="speed-to-lead">
     <div class="wrap">
         <div class="fp-head">
+            <span class="fp-kick fp-kick-c">Why speed to lead matters</span>
+            <h2 class="fp-h2">Every minute you wait, the lead gets colder.</h2>
+            <p>When someone reaches out, the clock starts. The research on lead response is clear: the faster you get back to them, the better your odds of a real conversation &mdash; and of winning the work.</p>
+        </div>
+        <div class="sv" id="sv">
+            <div class="sv-side sv-cold">
+                <span class="sv-lab">The average business</span>
+                <b class="sv-big"><span data-count="42">42</span> hrs</b>
+                <p>to respond to a new lead</p>
+                <em class="sv-chip">23% never respond at all</em>
+            </div>
+            <span class="sv-vs" aria-hidden="true">vs</span>
+            <div class="sv-side sv-hot">
+                <span class="sv-lab">You, with The Peak System</span>
+                <b class="sv-big">Seconds</b>
+                <p>to text back every missed caller</p>
+                <em class="sv-chip">24/7 &middot; nights &amp; weekends</em>
+            </div>
+            <div class="sv-race" aria-hidden="true">
+                <div class="sv-row"><span>Average business</span><i class="sv-bar sv-bar-cold"><s></s></i><b>42 hrs</b></div>
+                <div class="sv-row sv-row-hot"><span>The Peak System</span><i class="sv-bar sv-bar-hot"><s></s></i><b>Seconds</b></div>
+            </div>
+            <small class="sv-src">Average business: audit of 2,241 US companies&rsquo; response to a new web lead, <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a>.</small>
+        </div>
+        <ul class="sk" id="sk">
+                <li><span class="sk-t">Call back within 1 minute</span><b><span data-count="391">391</span>%</b><p>higher conversion rate when a lead is called within a minute.</p><small>Source: <a href="https://www.slideshare.net/Velocify/the-ultimate-contact-strategy" target="_blank" rel="noopener">Velocify, 3.5M leads, 2012</a></small></li>
+                <li><span class="sk-t">Reply within 5 minutes</span><b><span data-count="21">21</span>&times;</b><p>better odds of qualifying the lead than waiting 30 minutes.</p><small>Source: <a href="https://www.mortech.com/hs-fs/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener">MIT &amp; InsideSales.com, 2007</a></small></li>
+                <li><span class="sk-t">Reply within the hour</span><b><span data-count="7">7</span>&times;</b><p>more likely to have a real sales conversation than replying an hour later.</p><small>Source: <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></small></li>
+                <li><span class="sk-t">Wait a day</span><b><span data-count="60">60</span>&times;</b><p>less likely to have that conversation than if you&rsquo;d replied within the hour.</p><small>Source: <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></small></li>
+        </ul>
+        <div class="sc" id="sc">
+            <div class="sc-l">
+                <span class="sc-kick">What&rsquo;s a missed call worth to you?</span>
+                <h3>Run your own numbers.</h3>
+                <label for="sc-calls">Calls your business gets in a week <output id="sc-c">25</output></label>
+                <input type="range" id="sc-calls" min="5" max="150" step="5" value="25">
+                <label for="sc-val">Your typical job value <output id="sc-v">$850</output></label>
+                <input type="range" id="sc-val" min="100" max="10000" step="50" value="850">
+                <small>Uses the home-services average of 1 in 4 calls going unanswered (<a href="https://invoca.com/blog/how-much-missed-sales-calls-cost-home-services-businesses" target="_blank" rel="noopener">Invoca, 2024</a>). Back-of-napkin math, not a promise.</small>
+            </div>
+            <div class="sc-r">
+                <div class="sc-out"><b id="sc-miss">27</b><span>calls a month could be going unanswered right now.</span></div>
+                <div class="sc-out sc-out-gold"><b id="sc-jobs">1 job</b><span id="sc-jobs-t">a month pays for The Peak System &mdash; and leaves you <strong id="sc-ahead">$553</strong> ahead.</span></div>
+                <ul class="sc-offer"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>$297/month flat</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No setup fees</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No contracts</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Live in 7&ndash;10 days</li></ul>
+                <a href="../book.html" class="btn btn-gold fp-btn">Book a Demo <span class="arr">&rarr;</span></a>
+            </div>
+        </div>
+        <div class="fp-head fp-head-2">
             <span class="fp-kick fp-kick-c">Built for home service businesses</span>
             <h2 class="fp-h2">Capture more opportunities.<br>Without more work.</h2>
         </div>
@@ -854,10 +971,6 @@ h1,h2{font-family:var(--display);}
                 <li><span class="fp-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><div><b>More Booked Jobs</b><p>Start conversations that turn into real revenue.</p></div></li>
                 <li><span class="fp-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Save Time</b><p>No more checking voicemails or manually following up.</p></div></li>
         </ul>
-        <div class="fp-stat">
-            <div class="fp-stat-l"><b>1 in 4</b><p>calls to home-service businesses go unanswered.</p><small>Source: <a href="https://invoca.com/blog/how-much-missed-sales-calls-cost-home-services-businesses" target="_blank" rel="noopener">Invoca, 2024</a></small></div>
-            <p class="fp-stat-r">The Peak System texts every one of those callers back within seconds &mdash; while they&rsquo;re still looking for someone to do the job.</p>
-        </div>
     </div>
 </section>
 
@@ -991,6 +1104,31 @@ if(mci)fpDemo(mci,function(d){
     [4600,function(){d.typingOn(true);}],[5600,function(){d.typingOn(false);d.show(5);d.show(6);}],
     [11800,function(){mci.classList.add('fp-fade');}]]};
 });
+
+// speed to lead: numbers count up once when they scroll in; the payback calculator updates live
+function fpCount(scope){
+  var els=scope.querySelectorAll('[data-count]');if(!els.length||fpReduce)return;
+  [].forEach.call(els,function(el){el.textContent='0';});
+  new IntersectionObserver(function(es,ob){if(!es[0].isIntersecting)return;ob.disconnect();
+    [].forEach.call(els,function(el){var n=+el.getAttribute('data-count');for(var s=1;s<=24;s++)(function(s){setTimeout(function(){el.textContent=Math.round(n*(1-Math.pow(1-s/24,3)));},250+s*55);})(s);});
+  },{threshold:0.4}).observe(scope);
+}
+['sv','sk'].forEach(function(id){var el=document.getElementById(id);if(el)fpCount(el);});
+var sc=document.getElementById('sc');
+if(sc){
+  var calls=document.getElementById('sc-calls'),val=document.getElementById('sc-val');
+  var q=function(id){return document.getElementById(id);};
+  function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+  function upd(){
+    var c=+calls.value,v=+val.value,jobs=Math.ceil(297/v);
+    q('sc-c').textContent=c;q('sc-v').textContent=money(v);
+    q('sc-miss').textContent=Math.round(c*0.25*52/12);
+    q('sc-jobs').textContent=jobs+(jobs===1?' job':' jobs');
+    q('sc-jobs-t').innerHTML='a month '+(jobs===1?'pays':'pay')+' for The Peak System &mdash; and '+(jobs===1?'it leaves':'they leave')+' you <strong id="sc-ahead">'+money(jobs*v-297)+'</strong> ahead.';
+    [calls,val].forEach(function(r){r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%');});
+  }
+  calls.addEventListener('input',upd);val.addEventListener('input',upd);upd();
+}
 </script>
 </body>
 </html>
