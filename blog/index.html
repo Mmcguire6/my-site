@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Design &amp; SEO Blog | Northern Peak Systems</title>
-<meta name="description" content="Plain-English guides on web design, website speed, and SEO for small businesses — from Northern Peak Systems in Edmonton.">
+<title>Blog: Win More Jobs | Northern Peak Systems</title>
+<meta name="description" content="Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.">
 <link rel="canonical" href="https://northernpeaksystems.ca/blog/">
 <link rel="icon" href="../favicon.ico?v=2" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
@@ -12,9 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:url" content="https://northernpeaksystems.ca/blog/">
-<meta property="og:title" content="Web Design &amp; SEO Blog | Northern Peak Systems">
-<meta property="og:description" content="Plain-English guides on web design, website speed, and SEO for small businesses — from Northern Peak Systems in Edmonton.">
+<meta property="og:title" content="Blog: Win More Jobs | Northern Peak Systems">
+<meta property="og:description" content="Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.">
+<meta property="og:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
@@ -25,7 +29,7 @@
   "@id": "https://northernpeaksystems.ca/blog/#blog",
   "url": "https://northernpeaksystems.ca/blog/",
   "name": "Northern Peak Systems Blog",
-  "description": "Plain-English guides on web design, performance, and SEO for small businesses.",
+  "description": "Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.",
   "blogPost": [
     {
       "@type": "BlogPosting",
@@ -170,6 +174,8 @@ section{position:relative;}
 .svc-list li:hover{border-color:rgba(210,162,76,0.4);transform:translateY(-4px);}
 .svc-list h3{font-family:var(--display);font-size:21px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2;}
 .svc-list p{font-size:14.5px;line-height:1.7;color:var(--mist);}
+.svc-list h3 a{transition:color .18s;}
+.svc-list h3 a:hover{color:var(--gold);}
 
 /* PROCESS */
 .process-list{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,2.6vw,36px);}
@@ -186,6 +192,7 @@ section{position:relative;}
 .pricing-card-price strong{color:var(--gold);font-style:italic;font-weight:700;}
 .pricing-card-sub{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);margin:14px 0 22px;}
 .pricing-card-body{font-size:15px;line-height:1.7;color:var(--mist);}
+.pricing-terms{margin-top:26px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);}
 .pricing-foot{margin-top:36px;}
 .link-arrow{font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid currentColor;padding-bottom:4px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;}
 .link-arrow:hover{color:var(--gold-2);}
@@ -519,6 +526,7 @@ main#main{background:var(--paper);}
 .mx-go svg{width:12px;height:12px;}
 .mx-card:hover .mx-go{background:var(--gold);border-color:var(--gold);color:#181207;}
 .mx-card b{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:12px;font-size:15px;font-weight:700;line-height:1.25;color:#fff;}
+.mx-soon{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:#cfc9bd;}
 .mx-badge{padding:2px 8px;border:1px solid rgba(210,162,76,0.65);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-2);}
 .mx-desc{margin-top:5px;font-size:12.5px;line-height:1.45;color:#a9a49a;}
 .mx-more{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:600;color:var(--gold-2);}
@@ -638,16 +646,17 @@ main#main{background:var(--paper);}
                             <span class="mx-eyebrow">The complete solution</span>
                             <div class="mx-title">The <span>Peak System</span></div>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <span class="mx-soon"><span class="mx-badge">Coming soon</span>Revenue Insights</span>
                             <a href="../how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
                             <img src="../img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
                         <div class="mx-cards">
-                            <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Automated Follow-Up</b><span class="mx-desc">Respond to missed calls, follow up with leads, and recover outstanding estimates.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../contact.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Revenue Insights <span class="mx-badge">Coming soon</span></b><span class="mx-desc">Track opportunities, appointments, and revenue across your customer journey.</span><span class="mx-more">Get notified <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/missed-call-text-back.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Missed Call Recovery</b><span class="mx-desc">Text back every missed caller in seconds, so the job stays yours.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Estimate Follow-Up</b><span class="mx-desc">Friendly check-ins on outstanding quotes until the customer replies.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
                         </div>
                     </div>
                 </div>
@@ -726,7 +735,7 @@ main#main{background:var(--paper);}
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="../contact.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="../book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -752,44 +761,44 @@ main#main{background:var(--paper);}
     </nav>
     <div class="mnav-foot">
         <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 <main id="main">
 <section class="blog-hero"><div class="wrap">
     <p class="eyebrow">The blog</p>
-    <h1>Web design, speed &amp; <em>SEO,</em> in plain language.</h1>
-    <p class="lede">Practical guides for small-business owners who want a website that loads fast, ranks well, and actually brings in work — no jargon, no fluff.</p>
+    <h1>Win more jobs, <em>in plain language.</em></h1>
+    <p class="lede">Practical guides for home service business owners: websites that bring in calls, follow-up that keeps leads from going cold, and reviews that win you the next customer. No jargon, no fluff.</p>
 </div></section>
 <section class="post-list"><div class="wrap">
 <a class="post-card" href="online-booking-small-business-alberta.html">
             <p class="post-card-cat">Lead Generation</p>
             <h2>6 Reasons Your Business Needs Online Booking (Not Just a Phone Number)</h2>
-            <p>Roughly 4 in 10 booking requests come in after hours. Here are 6 reasons phone-only booking is costing you jobs — and how to fix it.</p>
+            <p>Plenty of customers try to book after you&#x27;ve closed for the day. Here are 6 reasons phone-only booking is costing you jobs, and how to fix it.</p>
             <p class="post-card-meta">July 18, 2026 &middot; 8 min read</p>
         </a>
 <a class="post-card" href="why-isnt-my-business-on-google-maps.html">
             <p class="post-card-cat">Local SEO</p>
             <h2>7 Reasons Your Business Isn&#x27;t Showing Up on Google Maps (and How to Fix Each One)</h2>
-            <p>The top 3 Google Maps spots take most local clicks. If you&#x27;re not one of them, here are 7 reasons why — and how to fix each.</p>
+            <p>Not showing up on Google Maps? Here are 7 reasons local businesses get left out of the map results, and how to fix each one.</p>
             <p class="post-card-meta">July 16, 2026 &middot; 9 min read</p>
         </a>
 <a class="post-card" href="small-business-website-cost-alberta.html">
             <p class="post-card-cat">Websites</p>
             <h2>What a Small-Business Website Should Cost in Alberta (2026 Price Guide)</h2>
-            <p>Small-business websites run from $0 to $35,000. Here&#x27;s what you actually pay in Alberta, what drives the cost, and where the money quietly leaks.</p>
+            <p>Website quotes range from free DIY builders to big agency bills. Here&#x27;s what drives the cost in Alberta, and where the money quietly leaks.</p>
             <p class="post-card-meta">July 10, 2026 &middot; 8 min read</p>
         </a>
 <a class="post-card" href="stop-losing-jobs-to-missed-calls.html">
             <p class="post-card-cat">Lead Generation</p>
             <h2>5 Ways to Stop Losing Jobs to Missed Calls (and What Each One Costs You)</h2>
-            <p>Around 62% of calls to home-service businesses go unanswered. Here&#x27;s what every missed call costs you — and 5 proven ways to stop the leak.</p>
+            <p>About 1 in 4 calls to home-service businesses go unanswered. Here&#x27;s what a missed call costs you, and 5 ways to stop losing those jobs.</p>
             <p class="post-card-meta">July 2, 2026 &middot; 8 min read</p>
         </a>
 <a class="post-card" href="contractor-website-not-getting-leads.html">
             <p class="post-card-cat">Lead Generation</p>
             <h2>7 Reasons Your Contractor Website Isn&#x27;t Getting Leads (and How to Fix Each One)</h2>
-            <p>The average contractor website turns just 1-2% of visitors into leads. Here are 7 reasons yours isn&#x27;t getting calls — and how to fix each one.</p>
+            <p>Your website gets visitors but the phone stays quiet? Here are 7 reasons contractor websites don&#x27;t get leads, and how to fix each one.</p>
             <p class="post-card-meta">June 24, 2026 &middot; 9 min read</p>
         </a>
 <a class="post-card" href="why-is-my-website-so-slow.html">
@@ -799,18 +808,28 @@ main#main{background:var(--paper);}
             <p class="post-card-meta">June 8, 2026 &middot; 8 min read</p>
         </a>
 </div></section>
+<section class="post-cta"><div class="wrap">
+    <p class="eyebrow">See it first</p>
+    <h2>Want more of your calls to <em>turn into jobs?</em></h2>
+    <p>Book a free 15-minute demo and we'll build a free custom preview of your website and system, so you can see it working before you decide. The Peak System is $297/month flat and live in 7–10 days. No contracts · no setup fees.</p>
+    <div class="post-cta-actions">
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
+    </div>
+</div></section>
+</main>
 <footer class="foot">
     <div class="wrap">
         <div class="foot-grid">
             <div class="foot-brand">
                 <span class="brand"><img src="../img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
-                <p class="foot-copy">Websites, follow-up and reviews for Alberta trades. One flat monthly price, no contract.</p>
+                <p class="foot-copy">Websites, follow-up and reviews for home service businesses. One flat monthly price, no contract.</p>
             </div>
             <div class="foot-col">
                 <h4>Platform</h4>
+                <a href="../features/missed-call-text-back.html">Missed Call Recovery</a>
+                <a href="../features/lead-follow-up.html">Estimate Follow-Up</a>
                 <a href="../features/website.html">Websites &amp; SEO</a>
                 <a href="../features/crm-and-booking.html">Lead Management</a>
-                <a href="../features/lead-follow-up.html">Automated Follow-Up</a>
                 <a href="../features/review-automation.html">Reputation Management</a>
                 <a href="../features/marketing-campaigns.html">Customer Retention</a>
             </div>
@@ -828,7 +847,7 @@ main#main{background:var(--paper);}
                 <a href="../locations.html">Service areas</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
                 <a href="https://app.northernpeaksystems.ca/">Client Login</a>
-                <a href="../contact.html">Book a Demo</a>
+                <a href="../book.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">
@@ -844,8 +863,8 @@ main#main{background:var(--paper);}
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
-function openM(){mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-function closeM(){mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+function openM(){mnav.classList.add('open');mnav.removeAttribute('inert');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeM(){mnav.classList.remove('open');mnav.setAttribute('inert','');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
 mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
 

@@ -35,10 +35,16 @@
       "provider": {
         "@id": "https://northernpeaksystems.ca/#org"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Canada"
-      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
       "url": "https://northernpeaksystems.ca/features/missed-call-text-back"
     },
     {
@@ -189,6 +195,9 @@ h1,h2{font-family:var(--display);}
 .fp-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center;}
 .fp-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;}
 .fp-pills{list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:30px;}
+.fp-note{margin-top:18px;font-size:12.5px;color:#8e8a82;}
+.fp-hero-light .fp-note{color:var(--ink-2);}
+.fp-cap{margin-top:14px;text-align:center;font-size:12px;color:var(--ink-2);}
 .fp-pills li{display:flex;align-items:center;gap:9px;font-size:14.5px;color:#e9e5dc;}
 .fp-pills svg{flex:none;width:20px;height:20px;color:var(--gold-2);}
 /* phones */
@@ -564,6 +573,7 @@ h1,h2{font-family:var(--display);}
 .mx-go svg{width:12px;height:12px;}
 .mx-card:hover .mx-go{background:var(--gold);border-color:var(--gold);color:#181207;}
 .mx-card b{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:12px;font-size:15px;font-weight:700;line-height:1.25;color:#fff;}
+.mx-soon{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:#cfc9bd;}
 .mx-badge{padding:2px 8px;border:1px solid rgba(210,162,76,0.65);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-2);}
 .mx-desc{margin-top:5px;font-size:12.5px;line-height:1.45;color:#a9a49a;}
 .mx-more{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:600;color:var(--gold-2);}
@@ -683,16 +693,17 @@ h1,h2{font-family:var(--display);}
                             <span class="mx-eyebrow">The complete solution</span>
                             <div class="mx-title">The <span>Peak System</span></div>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <span class="mx-soon"><span class="mx-badge">Coming soon</span>Revenue Insights</span>
                             <a href="../how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
                             <img src="../img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
                         <div class="mx-cards">
-                            <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Automated Follow-Up</b><span class="mx-desc">Respond to missed calls, follow up with leads, and recover outstanding estimates.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../contact.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Revenue Insights <span class="mx-badge">Coming soon</span></b><span class="mx-desc">Track opportunities, appointments, and revenue across your customer journey.</span><span class="mx-more">Get notified <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/missed-call-text-back.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Missed Call Recovery</b><span class="mx-desc">Text back every missed caller in seconds, so the job stays yours.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Estimate Follow-Up</b><span class="mx-desc">Friendly check-ins on outstanding quotes until the customer replies.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
                         </div>
                     </div>
                 </div>
@@ -771,7 +782,7 @@ h1,h2{font-family:var(--display);}
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="../contact.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="../book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -797,7 +808,7 @@ h1,h2{font-family:var(--display);}
     </nav>
     <div class="mnav-foot">
         <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -808,12 +819,13 @@ h1,h2{font-family:var(--display);}
             <span class="fp-kick">Missed Call Recovery</span>
             <h1 class="fp-h1" id="fp-title">Miss the call. <span class="gold">Not the opportunity.</span></h1>
             <p class="fp-sub">When you can&rsquo;t answer, The Peak System instantly texts the caller, starts a conversation, and keeps their inquiry organized &mdash; so you never lose a potential job.</p>
-            <div class="fp-actions"><a href="../book.html" class="btn btn-gold">See It in Action <span class="arr">&rarr;</span></a></div>
+            <div class="fp-actions"><a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a></div>
             <ul class="fp-pills">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Instant text-back</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>Real conversations</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15.5l2 2 4-4"/></svg>Jobs get booked</li>
             </ul>
+            <p class="fp-note">Demo content &bull; Not a real customer</p>
         </div>
         <div class="fp-fit">
             <div class="fp-stage mch-stage" id="mch-demo" role="img" aria-label="Demo: a call from (403) 555-0187 rings out unanswered, and seconds later the caller gets a text asking if it&rsquo;s about a landscaping project. They reply that they want a quote for yard work, and the conversation carries on.">
@@ -866,7 +878,7 @@ h1,h2{font-family:var(--display);}
         <ol class="fp-steps">
                 <li><span class="fp-step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><b>1. Missed call</b><p>A potential customer calls your business and you can&rsquo;t answer.</p></li>
                 <li><span class="fp-step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><b>2. Automatic text</b><p>We instantly send a personalized text to the caller.</p></li>
-                <li><span class="fp-step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><b>3. Conversation</b><p>The customer replies and the conversation continues automatically.</p></li>
+                <li><span class="fp-step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><b>3. Conversation</b><p>The customer replies and the conversation lands in your inbox, ready for you to pick up.</p></li>
                 <li><span class="fp-step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15.5l2 2 4-4"/></svg></span><b>4. Job gets booked</b><p>You (or your team) respond, provide a quote, and turn the inquiry into a paying job.</p></li>
         </ol>
     </div>
@@ -879,7 +891,7 @@ h1,h2{font-family:var(--display);}
             <h2 class="fp-h2">Every missed call shows up in <span class="gold">your inbox.</span></h2>
             <p class="fp-p">Text responses, call details, and customer information are automatically added to your Peak System dashboard &mdash; so nothing slips through the cracks.</p>
             <ul class="fp-checks"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>See every missed call and text conversation</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Keep customer details organized</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Respond from your phone or computer</li></ul>
-            <a href="crm-and-booking.html" class="btn btn-gold fp-btn">View the Dashboard <span class="arr">&rarr;</span></a>
+            <a href="crm-and-booking.html" class="btn btn-gold fp-btn">Explore Lead Management <span class="arr">&rarr;</span></a>
         </div>
         <div class="fp-fit">
             <div class="fp-stage mci-stage" id="mci-demo" role="img" aria-label="Demo of the Peak System inbox: a new conversation from (403) 555-0187 about a landscaping inquiry appears at the top of the conversations list, and the texts with the caller show in the thread beside it.">
@@ -994,7 +1006,7 @@ h1,h2{font-family:var(--display);}
         <div class="fp-cta-copy">
             <span class="fp-kick">See the missed call recovery system</span>
             <h2 class="fp-h2">Stop losing jobs. <span class="gold">See it in action.</span></h2>
-            <p class="fp-p">Book a short demo and we&rsquo;ll show you exactly how the Peak System can help your business capture more opportunities.</p>
+            <p class="fp-p">Book a short demo and we&rsquo;ll show you exactly how The Peak System can help your business capture more opportunities.</p>
             <a href="../book.html" class="btn btn-gold fp-btn">Book a Demo <span class="arr">&rarr;</span></a>
         </div>
     </div>
@@ -1006,13 +1018,14 @@ h1,h2{font-family:var(--display);}
         <div class="foot-grid">
             <div class="foot-brand">
                 <span class="brand"><img src="../img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
-                <p class="foot-copy">Websites, follow-up and reviews for Alberta trades. One flat monthly price, no contract.</p>
+                <p class="foot-copy">Websites, follow-up and reviews for home service businesses. One flat monthly price, no contract.</p>
             </div>
             <div class="foot-col">
                 <h4>Platform</h4>
+                <a href="../features/missed-call-text-back.html">Missed Call Recovery</a>
+                <a href="../features/lead-follow-up.html">Estimate Follow-Up</a>
                 <a href="../features/website.html">Websites &amp; SEO</a>
                 <a href="../features/crm-and-booking.html">Lead Management</a>
-                <a href="../features/lead-follow-up.html">Automated Follow-Up</a>
                 <a href="../features/review-automation.html">Reputation Management</a>
                 <a href="../features/marketing-campaigns.html">Customer Retention</a>
             </div>
@@ -1030,7 +1043,7 @@ h1,h2{font-family:var(--display);}
                 <a href="../locations.html">Service areas</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
                 <a href="https://app.northernpeaksystems.ca/">Client Login</a>
-                <a href="../contact.html">Book a Demo</a>
+                <a href="../book.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">

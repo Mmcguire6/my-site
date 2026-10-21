@@ -7,14 +7,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
 
-<title>Google Review Automation | Northern Peak Systems</title>
-<meta name="description" content="The system asks every happy customer for a Google review and reminds them until they leave it — so your profile fills up on autopilot.">
+<title>Reputation Management | Northern Peak Systems</title>
+<meta name="description" content="After every job, each customer gets the same friendly text with your Google review link, plus a reminder. More reviews, more trust. Part of The Peak System.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/features/review-automation">
 <meta property="og:url" content="https://northernpeaksystems.ca/features/review-automation">
-<meta property="og:title" content="5-Star Review Funnel — Google Review Automation | Northern Peak Systems">
-<meta property="og:description" content="The system asks every happy customer for a Google review at the right moment and reminds them until they leave it — so your profile fills up on autopilot and you outrank competitors.">
+<meta property="og:title" content="Reputation Management — More Google Reviews After Every Job | Northern Peak Systems">
+<meta property="og:description" content="After every completed job, each customer gets the same friendly request with your Google review link, plus a gentle reminder, so your profile keeps building trust with future customers.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:image" content="https://northernpeaksystems.ca/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -29,11 +29,11 @@
     {
       "@type": "Service",
       "@id": "https://northernpeaksystems.ca/features/review-automation#service",
-      "name": "Review Automation",
-      "serviceType": "Review Automation",
-      "description": "The system asks every happy customer for a Google review at the right moment and reminds them until they leave it — so your profile fills up on autopilot and you outrank competitors.",
+      "name": "Reputation Management",
+      "serviceType": "Reputation Management",
+      "description": "After every completed job, each customer gets the same friendly request with your Google review link, plus a gentle reminder, so your profile keeps building trust with future customers.",
       "provider": { "@id": "https://northernpeaksystems.ca/#org" },
-      "areaServed": { "@type": "Country", "name": "Canada" },
+      "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
       "url": "https://northernpeaksystems.ca/features/review-automation"
     },
     {
@@ -41,40 +41,8 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://northernpeaksystems.ca/" },
         { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://northernpeaksystems.ca/#features" },
-        { "@type": "ListItem", "position": 3, "name": "Review Automation", "item": "https://northernpeaksystems.ca/features/review-automation" }
+        { "@type": "ListItem", "position": 3, "name": "Reputation Management", "item": "https://northernpeaksystems.ca/features/review-automation" }
       ]
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do the requests annoy customers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No — the messages are short, polite, and spaced out. Happy customers usually just need the link and a nudge."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this allowed by Google?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Asking customers for honest reviews is fine. We don’t buy reviews, post fake ones, or offer incentives — that’s against Google’s rules and we don’t touch it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can it ask my past customers too?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — we can run a catch-up campaign to your existing customer list when you launch."
-      }
     }
   ]
 }
@@ -318,12 +286,10 @@ h1,h2{font-family:var(--display);}
 .rvh-art{position:relative;margin:0 auto;}
 .rvh-art img{width:100%;height:auto;display:block;}
 @media(min-width:901px){
-  .rvh-art{width:min(100vw,1600px);left:50%;transform:translateX(-50%);
-    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);
-    mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);}
-  .rvh-art img{-webkit-mask-image:linear-gradient(to bottom,#000 94%,transparent 100%);mask-image:linear-gradient(to bottom,#000 94%,transparent 100%);}
-  /* desktop & up: artwork carries the copy; HTML copy stays for screen readers/SEO */
-  .rvh-copy{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  /* copy left, text-free artwork right (the old art had headline + claims baked in) */
+  .rvh{padding:clamp(56px,6vw,96px) 0 clamp(40px,4vw,64px);}
+  .rvh-grid{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(28px,4vw,64px);}
+  .rvh-art img{border-radius:18px;-webkit-mask-image:radial-gradient(130% 110% at 50% 45%,#000 72%,transparent 100%);mask-image:radial-gradient(130% 110% at 50% 45%,#000 72%,transparent 100%);}
 }
 /* tablet & phone: HTML copy + stars-only crop */
 @media(max-width:900px){
@@ -551,6 +517,7 @@ h1,h2{font-family:var(--display);}
 .mx-go svg{width:12px;height:12px;}
 .mx-card:hover .mx-go{background:var(--gold);border-color:var(--gold);color:#181207;}
 .mx-card b{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:12px;font-size:15px;font-weight:700;line-height:1.25;color:#fff;}
+.mx-soon{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:#cfc9bd;}
 .mx-badge{padding:2px 8px;border:1px solid rgba(210,162,76,0.65);border-radius:999px;font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-2);}
 .mx-desc{margin-top:5px;font-size:12.5px;line-height:1.45;color:#a9a49a;}
 .mx-more{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:600;color:var(--gold-2);}
@@ -670,16 +637,17 @@ h1,h2{font-family:var(--display);}
                             <span class="mx-eyebrow">The complete solution</span>
                             <div class="mx-title">The <span>Peak System</span></div>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
+                            <span class="mx-soon"><span class="mx-badge">Coming soon</span>Revenue Insights</span>
                             <a href="../how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
                             <img src="../img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
                         <div class="mx-cards">
-                            <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Automated Follow-Up</b><span class="mx-desc">Respond to missed calls, follow up with leads, and recover outstanding estimates.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                            <a href="../contact.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Revenue Insights <span class="mx-badge">Coming soon</span></b><span class="mx-desc">Track opportunities, appointments, and revenue across your customer journey.</span><span class="mx-more">Get notified <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/missed-call-text-back.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Missed Call Recovery</b><span class="mx-desc">Text back every missed caller in seconds, so the job stays yours.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/lead-follow-up.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Estimate Follow-Up</b><span class="mx-desc">Friendly check-ins on outstanding quotes until the customer replies.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/website.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Websites &amp; SEO</b><span class="mx-desc">Get discovered online and turn website visitors into new opportunities.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/crm-and-booking.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Lead Management</b><span class="mx-desc">Capture inquiries, manage conversations, and keep every opportunity organized.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/review-automation.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Reputation Management</b><span class="mx-desc">Generate Google reviews and build trust with future customers.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                        <a href="../features/marketing-campaigns.html" class="mx-card"><span class="mx-top"><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span class="mx-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span><b>Customer Retention</b><span class="mx-desc">Bring customers back with reactivation campaigns and reminders. Referrals coming soon.</span><span class="mx-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
                         </div>
                     </div>
                 </div>
@@ -758,7 +726,7 @@ h1,h2{font-family:var(--display);}
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="../contact.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="../book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -784,7 +752,7 @@ h1,h2{font-family:var(--display);}
     </nav>
     <div class="mnav-foot">
         <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>
 
@@ -795,19 +763,18 @@ h1,h2{font-family:var(--display);}
     <div class="wrap">
         <div class="rvh-grid">
         <div class="rvh-copy">
-            <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#features">Products</a> &nbsp;/&nbsp; Review Automation</p>
-            <span class="eyebrow">Feature</span>
-            <h1 class="art-h1">5 Star<br><span class="gold">Reviews</span></h1>
+            <p class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#features">Products</a> &nbsp;/&nbsp; Reputation Management</p>
+            <span class="eyebrow">Reputation Management</span>
+            <h1 class="art-h1">More reviews.<br><span class="gold">More trust.</span></h1>
             <span class="art-rule" aria-hidden="true"></span>
-            <p class="art-sub">Collect more 5 star reviews, build trust, and win more business.</p>
-            <div class="art-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;<b>5.0</b></div>
-            <p class="art-cap">100+ 5 star reviews from real customers</p>
+            <p class="art-sub">Every completed job is another opportunity to build trust. Each customer gets a friendly text with your Google review link, automatically.</p>
         </div>
         <div class="rvh-art">
             <picture>
                 <source media="(max-width: 900px)" srcset="../img/5-star-hero-mock-m.webp 760w, ../img/5-star-hero-mock.webp 1160w" sizes="(max-width: 900px) 92vw" width="1160" height="720">
-                <img src="../img/5-star-hero.webp" srcset="../img/5-star-hero.webp 1672w, ../img/5-star-hero-2560.webp 2560w" sizes="(max-width: 900px) 92vw, min(100vw, 1600px)" alt="5 Star Reviews &mdash; collect more 5 star reviews, build trust, and win more business" fetchpriority="high" decoding="async" width="1672" height="941">
+                <img src="../img/5-star-hero-mock.webp" srcset="../img/5-star-hero-mock-m.webp 760w, ../img/5-star-hero-mock.webp 1160w" sizes="(max-width: 900px) 92vw, 52vw" alt="Illustration of example five-star review cards above gold stars (demo content, not real customer reviews)" fetchpriority="high" decoding="async" width="1160" height="720">
             </picture>
+            <p class="art-cap" style="text-align:center;">Demo content &bull; Not real customer reviews</p>
         </div>
         </div>
     </div>
@@ -818,25 +785,25 @@ h1,h2{font-family:var(--display);}
     <div class="wrap">
         <div class="rvg-head">
             <span class="eyebrow">More reviews. Better results.</span>
-            <h2>5-star reviews help your business grow.</h2>
+            <h2>Every completed job. Another opportunity to build trust.</h2>
         </div>
         <div class="rvg-row">
             <div class="rvg-step">
                 <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7.5" r="3.5"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 4.1a3.5 3.5 0 0 1 0 6.8"/></svg></span>
                 <b>Customers Trust<br>Reviews</b><i></i>
-                <p>People choose businesses with more 5-star reviews because it shows you&rsquo;re reliable and do great work.</p>
+                <p>68% of consumers say they&rsquo;ll only use a business rated four stars or higher (BrightLocal, 2026). Strong reviews show you&rsquo;re reliable.</p>
             </div>
             <span class="rvg-arr">&rarr;</span>
             <div class="rvg-step">
                 <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                <b>Better Rankings<br>in Google</b><i></i>
-                <p>More reviews (and more 5-stars) help you rank higher in local search so more people find you first.</p>
+                <b>Better Visibility<br>in Google</b><i></i>
+                <p>A steady stream of recent reviews is one of the signals Google uses for local results, helping more nearby customers find you.</p>
             </div>
             <span class="rvg-arr">&rarr;</span>
             <div class="rvg-step">
                 <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
                 <b>More Clicks,<br>More Calls</b><i></i>
-                <p>Higher rankings and strong reviews drive more website visits, calls, quote requests, and messages.</p>
+                <p>Better visibility and strong reviews can mean more website visits, calls, quote requests, and messages.</p>
             </div>
             <span class="rvg-arr">&rarr;</span>
             <div class="rvg-step">
@@ -854,8 +821,8 @@ h1,h2{font-family:var(--display);}
 <section class="rvf light sec reveal">
     <div class="wrap">
         <div class="rvf-head">
-            <span class="eyebrow">The 5-Star Funnel</span>
-            <h2>How the funnel works.</h2>
+            <span class="eyebrow">How it works</span>
+            <h2>One request after every job.</h2>
             <p class="lede">No chasing, no awkward asks. You start it with one click &mdash; the system does the following up.</p>
         </div>
         <div class="rvf-row">
@@ -872,17 +839,17 @@ h1,h2{font-family:var(--display);}
                 <span class="rvf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.35 8.5 8.5 0 0 1-3.7-.85L3 21l2-5.3a8.38 8.38 0 0 1-.85-3.7 8.5 8.5 0 0 1 8.35-9A8.5 8.5 0 0 1 21 11.5z"/></svg></span>
                 <div class="rvf-card">
                     <span class="rvf-chip">02</span>
-                    <b class="t">They get your review link</b><i class="u" aria-hidden="true"></i>
-                    <p>Your customer gets a friendly text with your custom review link &mdash; one tap and they&rsquo;re leaving you a review. No searching, no hassle.</p>
-                    <div class="rvf-mock" aria-hidden="true"><div class="m2">Hey! If you have a sec, we&rsquo;d really appreciate a quick review: <span class="lk">yourbusiness.com/review</span></div></div>
+                    <b class="t">They get your Google review link</b><i class="u" aria-hidden="true"></i>
+                    <p>Your customer gets a friendly text with your Google review link &mdash; one tap and they&rsquo;re on your Google profile. No searching, no hassle.</p>
+                    <div class="rvf-mock" aria-hidden="true"><div class="m2">Hey! If you have a sec, we&rsquo;d really appreciate a quick Google review: <span class="lk">g.page/r/your-business/review</span></div></div>
                 </div>
             </div>
             <div class="rvf-step">
                 <span class="rvf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/><path d="M9.2 11.7l2 2 3.6-4"/></svg></span>
                 <div class="rvf-card">
                     <span class="rvf-chip">03</span>
-                    <b class="t">Only 5-star reviews go public</b><i class="u" aria-hidden="true"></i>
-                    <p>Happy customers land on Google. Anything under 4 stars is routed to private feedback instead &mdash; you hear about it first, not the whole internet.</p>
+                    <b class="t">Same request for everyone</b><i class="u" aria-hidden="true"></i>
+                    <p>Every customer gets the same request and the same Google link &mdash; no filtering, no screening. Anyone who&rsquo;d rather share feedback privately can simply reply to the text, and it comes straight to you.</p>
                     <div class="rvf-mock" aria-hidden="true"><div class="m3"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="rvf-g"><span class="gg">G</span>Google</div></div></div>
                 </div>
             </div>
@@ -891,15 +858,15 @@ h1,h2{font-family:var(--display);}
                 <div class="rvf-card">
                     <span class="rvf-chip">04</span>
                     <b class="t">Forgot? We follow up</b><i class="u" aria-hidden="true"></i>
-                    <p>Most customers mean to leave a review &mdash; they just forget. Friendly reminders go out over the next few weeks until it&rsquo;s done.</p>
+                    <p>Plenty of customers mean to leave a review &mdash; they just forget. A friendly reminder follows over the next few weeks.</p>
                     <div class="rvf-mock" aria-hidden="true"><div class="m4"><span class="rvf-bell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span><span class="rvf-txt"><b>Reminder sent</b><br>Just checking in &mdash; here&rsquo;s that link again!</span></div></div>
                 </div>
             </div>
         </div>
         <div class="rvf-note">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-            <div><b>Already have a list of past customers?</b><p>We&rsquo;ll run the same funnel through your whole list to stack up reviews fast.</p></div>
-            <a href="../contact.html" class="btn btn-line">Run My List <span class="arr">&rarr;</span></a>
+            <div><b>Already have a list of past customers?</b><p>We&rsquo;ll send them the same friendly request, so your profile gets a head start.</p></div>
+            <a href="../book.html" class="btn btn-line">Book a Demo <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>
@@ -910,11 +877,11 @@ h1,h2{font-family:var(--display);}
         <div class="cwc-card">
             <div class="cwc-grid">
                 <div>
-                    <h2>More 5-star reviews. <span class="gold">More business.</span></h2>
-                    <p class="lede">Our system gets you more 5-star reviews on autopilot so you can rank higher, earn trust, and win more jobs.</p>
+                    <h2>Build trust after <span class="gold">every job.</span></h2>
+                    <p class="lede">Every customer gets asked, every time, automatically &mdash; so your Google profile keeps showing future customers why they can trust you.</p>
                 </div>
                 <div class="cwc-right">
-                    <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+                    <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
                     <a href="../how.html" class="btn btn-line">See How It Works <span class="arr">&rarr;</span></a>
                 </div>
             </div>
@@ -926,8 +893,8 @@ h1,h2{font-family:var(--display);}
 <section class="rvs">
     <div class="wrap">
         <div class="rvs-row">
-            <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Build trust</b><p>5-star reviews show you&rsquo;re the real deal.</p></div></div>
-            <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Stand out</b><p>Rank above competitors in local search.</p></div></div>
+            <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Build trust</b><p>Recent reviews show you&rsquo;re the real deal.</p></div></div>
+            <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Stand out</b><p>Be easier to find in local search.</p></div></div>
             <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>Get more calls</b><p>More visibility means more leads.</p></div></div>
             <div class="rvs-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 5H4a1 1 0 0 0-1 1 4 4 0 0 0 4 4M17 5h3a1 1 0 0 1 1 1 4 4 0 0 1-4 4"/></svg><div><b>Win more jobs</b><p>More reviews. More trust. More growth.</p></div></div>
         </div>
@@ -941,13 +908,14 @@ h1,h2{font-family:var(--display);}
         <div class="foot-grid">
             <div class="foot-brand">
                 <span class="brand"><img src="../img/nps-logo-white-notag.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="312"></span>
-                <p class="foot-copy">Websites, follow-up and reviews for Alberta trades. One flat monthly price, no contract.</p>
+                <p class="foot-copy">Websites, follow-up and reviews for home service businesses. One flat monthly price, no contract.</p>
             </div>
             <div class="foot-col">
                 <h4>Platform</h4>
+                <a href="../features/missed-call-text-back.html">Missed Call Recovery</a>
+                <a href="../features/lead-follow-up.html">Estimate Follow-Up</a>
                 <a href="../features/website.html">Websites &amp; SEO</a>
                 <a href="../features/crm-and-booking.html">Lead Management</a>
-                <a href="../features/lead-follow-up.html">Automated Follow-Up</a>
                 <a href="../features/review-automation.html">Reputation Management</a>
                 <a href="../features/marketing-campaigns.html">Customer Retention</a>
             </div>
@@ -965,7 +933,7 @@ h1,h2{font-family:var(--display);}
                 <a href="../locations.html">Service areas</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
                 <a href="https://app.northernpeaksystems.ca/">Client Login</a>
-                <a href="../contact.html">Book a Demo</a>
+                <a href="../book.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">

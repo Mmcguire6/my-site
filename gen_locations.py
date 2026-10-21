@@ -11,20 +11,37 @@ and was scoped down on 2026-05-06.)
 
 Run from the my-site directory:  python gen_locations.py
 Outputs:
-  - locations/<slug>.html   (8 pages)
-  - locations.html          (index page grouping cities by province)
-  - sitemap.xml             (regenerated with all city URLs)
+  - locations/<slug>.html   (8 pages, CRLF line endings, as stored in git)
+  - locations.html          (index page grouping cities by province, CRLF)
+  - sitemap.xml             (every indexable main-site page, LF; see build_sitemap)
+
+The header, mobile menu and footer are NOT authored here: the templates carry
+empty placeholder tags that sync_nav.apply_nav() fills from index.html.
 """
 
 from __future__ import annotations
+import html as htmllib
 import json
+import re
+import subprocess
+import tomllib
 from pathlib import Path
 from datetime import date
-from sync_nav import apply_nav  # header comes from index.html
+from sync_nav import apply_nav  # header, mobile menu and footer come from index.html
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "locations"
 OUT.mkdir(exist_ok=True)
+ORG_ID = "https://northernpeaksystems.ca/#org"  # defined once, in index.html's JSON-LD
+
+
+def write_file(path: Path, text: str, eol: str) -> None:
+    """Write `text` with one consistent line ending (git stores the HTML pages as CRLF)."""
+    text = text.replace("\r\n", "\n")
+    if eol != "\n":
+        text = text.replace("\n", eol)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        f.write(text)
 
 # ---------------------------------------------------------------------------
 # CITY DATA
@@ -39,21 +56,21 @@ OUT.mkdir(exist_ok=True)
 CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
     ("Alberta", "AB", [
         ("edmonton", "Edmonton",
-         "Edmonton is home base. Northern Peak Systems works out of here, and most of our clients are businesses within an hour's drive of downtown. From Whyte Avenue storefronts to clinics in Sherwood Park to trades in St. Albert, we build connected business systems &mdash; custom websites, AI automation, and SEO &mdash; for the kinds of small Edmonton-area businesses that can't justify a $15,000 agency build but still need a presence that does justice to their work."),
+         "Edmonton is home base &mdash; Northern Peak Systems is run from here. We build websites, and the follow-up system behind them, for Edmonton plumbers, electricians, HVAC companies, roofers, landscapers, and contractors: the owner-operators and small crews who can't afford to let a call go to voicemail. Your website is built free, and the same founder-led team that sets everything up is the one that answers when something needs to change."),
         ("calgary", "Calgary",
-         "Calgary's small-business market moves fast. A modern, custom-built website plus AI automation sets the right tone with customers researching you from Mission, Beltline, or one of the suburban office parks. We work with Calgary shops, clinics, trades, and consultancies remotely. Every build, edit round, and hosting handover happens online, with no in-person discovery call required."),
+         "Calgary homeowners have plenty of contractors to choose from, so the businesses that answer fast and follow up on every quote stand out. We build websites with missed-call text-back and estimate follow-up for Calgary trades, from inner-city renovations to the newer communities on the city's edges. Every demo, build, edit, and launch call happens online or by phone &mdash; no in-person meeting required."),
         ("st-albert", "St. Albert",
-         "St. Albert is a quiet, prosperous suburb full of two- and three-person businesses: contractors, dental clinics, financial planners. Most of these businesses are too small to bother with a Toronto agency, but their customers still expect a website &mdash; and the kind of automation that answers fast &mdash; that looks like 2026. That's the gap Northern Peak Systems is built for."),
+         "St. Albert homeowners expect a small, owner-run crew to look as professional online as a big company &mdash; and to reply just as fast. We build the website and the follow-up behind it for St. Albert contractors, plumbers, electricians, and landscapers who are too small for a big-city agency but too busy to answer every call. That's the gap Northern Peak Systems is built for."),
         ("sherwood-park", "Sherwood Park",
-         "Sherwood Park has one of the densest concentrations of small businesses in Alberta. Strathcona County clinics, Baseline Road shops, and trades serving the industrial corridor all need the same thing: a credible website, AI automation that never misses a lead, and local SEO &mdash; without an enterprise build budget. From $97/month, no long-term contracts."),
+         "Sherwood Park is Strathcona County's main community, and the trades working here serve everything from homes in town to county acreages and the industrial corridor. They all need the same thing: a credible website, a system that texts back every missed call, and local SEO &mdash; without an enterprise budget. Your website is built free, with plans from $97/month and no contracts."),
         ("leduc", "Leduc",
-         "Leduc businesses serve a corridor that's exploded in the last decade: international airport workers, Nisku industry, Beaumont commuters. A website needs to communicate to all of them at once &mdash; and the system behind it needs to capture and follow up with every lead. Northern Peak Systems builds clean, fast, mobile-first sites with AI automation wired in, working on a phone in a parking lot just as well as on a desk in a downtown office."),
+         "Leduc businesses serve a busy corridor south of Edmonton: Edmonton International Airport, the Nisku industrial area, and nearby Beaumont. Customers might find you on a phone in a parking lot or at a desk in an office, so we build fast, mobile-first websites with missed-call text-back and estimate follow-up wired in."),
         ("spruce-grove", "Spruce Grove",
-         "Spruce Grove and Stony Plain together form one of the fastest-growing markets in the Edmonton region. We build for the small businesses that are growing into that market: contractors adding a second crew, clinics opening a second location, shops taking on staff. The system &mdash; website, AI automation, and SEO &mdash; grows with the business, from $97/month with no long-term contract."),
+         "For trades serving Spruce Grove, Stony Plain, and the acreages of Parkland County, the work is spread out and the phone rings while you're on a job. We build for home service businesses growing in that market &mdash; contractors adding a second crew, landscapers taking on staff &mdash; with a website and follow-up system that grows with you, from $97/month with no contract."),
         ("airdrie", "Airdrie",
-         "Airdrie has tripled in population in twenty years, and the small-business market is still catching up. Most Airdrie businesses are bootstrapping: solo trades, single-owner shops, two-person clinics. A custom website with AI automation and SEO &mdash; without an enterprise budget &mdash; is exactly the gap Northern Peak Systems fills."),
+         "Airdrie sits just north of Calgary on the QE2. If you're an owner-operator here &mdash; a solo trade or a small crew running the business from your phone &mdash; a custom website with missed-call text-back and estimate follow-up, without an enterprise budget, is exactly the gap Northern Peak Systems fills."),
         ("red-deer", "Red Deer",
-         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a system that works as hard as the business does. We build custom websites, AI automation, and SEO for central Alberta trades, shops, and clinics remotely. Discovery happens over email, design happens in the browser, and your site goes live without anyone having to drive Highway 2."),
+         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a system that works as hard as you do. We build websites with missed-call text-back and estimate follow-up for central Alberta trades, all remotely: the demo happens over the phone, the preview shows up in your browser, and your site goes live without anyone having to drive Highway 2."),
     ]),
 ]
 
@@ -61,11 +78,12 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
 # `areas` is a one-line phrase that gets dropped into "across {areas}".
 # `nearby` is a list of slugs (must exist elsewhere in CITIES).
 EXTRAS: dict[str, dict] = {
-    "edmonton":      {"areas": "downtown, Whyte Avenue, the west end, St. Albert, Sherwood Park, and the surrounding capital region", "nearby": ["st-albert", "sherwood-park", "leduc"]},
-    "calgary":       {"areas": "downtown, the Beltline, Mission, Kensington, and the suburban office parks of Mahogany, Tuscany, and Auburn Bay", "nearby": ["airdrie", "red-deer", "edmonton"]},
+    # St. Albert and Sherwood Park have their own pages, so Edmonton's line doesn't list them.
+    "edmonton":      {"areas": "downtown, Whyte Avenue, the west end, Mill Woods, and the surrounding capital region", "nearby": ["st-albert", "sherwood-park", "leduc"]},
+    "calgary":       {"areas": "downtown, the Beltline, Mission, Kensington, and residential communities like Mahogany, Tuscany, and Auburn Bay", "nearby": ["airdrie", "red-deer", "edmonton"]},
     "st-albert":     {"areas": "downtown St. Albert, Erin Ridge, Mission, and the Sturgeon County edge", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
     "sherwood-park": {"areas": "Baseline Road, Sherwood Drive, Centre in the Park, and Strathcona County's industrial corridor", "nearby": ["edmonton", "st-albert", "leduc"]},
-    "leduc":         {"areas": "downtown Leduc, Nisku, Beaumont, and the airport corridor", "nearby": ["edmonton", "spruce-grove", "st-albert"]},
+    "leduc":         {"areas": "downtown Leduc, Nisku, Beaumont, and the airport corridor", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
     "spruce-grove":  {"areas": "Spruce Grove proper, Stony Plain, Parkland County, and the western Edmonton region", "nearby": ["edmonton", "st-albert", "leduc"]},
     "airdrie":       {"areas": "downtown, Bayside, the QE2 corridor, and the bedroom communities north of Calgary", "nearby": ["calgary", "red-deer", "edmonton"]},
     "red-deer":      {"areas": "downtown, Riverside, Oriole Park, and the QE2 corridor stretching to Penhold and Innisfail", "nearby": ["calgary", "edmonton", "airdrie"]},
@@ -134,95 +152,9 @@ CITY_PAGE = """<!DOCTYPE html>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<header class="nav">
-    <div class="wrap nav-inner">
-        <a href="../index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
-        <nav class="nav-links" aria-label="Primary">
-            <a href="/">Home</a>
-            <div class="nav-dd nav-dd-static">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu mega">
-                    <div class="mega2-grid">
-                        <aside class="mega2-rail">
-                            <span class="m2-eyebrow">The Complete Solution</span>
-                            <div class="m2-title">Business <span>Growth</span> System</div>
-                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
-                            <a href="../how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
-                        </aside>
-                        <div class="mega2-cards">
-                        <a href="../features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
-                        <a href="../features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
-                        <a href="../features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="../features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
-                        <a href="../features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
-                        <a href="../features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
-                        <a href="../features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
-                        <div class="m2-foot">
-                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <div>
-                                <b>Everything Working Together</b>
-                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
-                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="../pricing.html">Pricing</a>
-            <a href="../about.html">About</a>
-            <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu">
-                    <a href="../work.html">Work</a>
-                    <a href="../how.html">How we work</a>
-                    <a href="../faq.html">FAQ</a>
-                    <a href="../blog/">Blog</a>
-                </div>
-            </div>
-            <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu cols">
-                    <a href="../locations/edmonton.html">Edmonton</a>
-                    <a href="../locations/calgary.html">Calgary</a>
-                    <a href="../locations/st-albert.html">St. Albert</a>
-                    <a href="../locations/sherwood-park.html">Sherwood Park</a>
-                    <a href="../locations/leduc.html">Leduc</a>
-                    <a href="../locations/spruce-grove.html">Spruce Grove</a>
-                    <a href="../locations/airdrie.html">Airdrie</a>
-                    <a href="../locations/red-deer.html">Red Deer</a>
-                    <a href="../locations.html" class="dd-all">All locations &rarr;</a>
-                </div>
-            </div>
-            <a href="../contact.html">Contact</a>
-        </nav>
-        <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-line">Book a Demo</a>
-            <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
-        </div>
-    </div>
-</header>
-
-<!-- MOBILE MENU -->
-<div class="mnav" id="mnav" aria-hidden="true">
-    <div class="mnav-top">
-        <span class="brand"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-        <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
-    </div>
-    <nav class="mnav-links" aria-label="Mobile">
-        <a href="/">Home</a>
-        <a href="/#features">Products</a>
-        <a href="../pricing.html">Pricing</a>
-        <a href="../about.html">About</a>
-        <a href="../work.html">Work</a>
-        <a href="../locations.html">Locations</a>
-        <a href="../contact.html">Contact</a>
-    </nav>
-    <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
-    </div>
-</div>
+<!-- NAV / MOBILE MENU: placeholders, filled from index.html by sync_nav.apply_nav() -->
+<header class="nav"></header>
+<div class="mnav" id="mnav" inert></div>
 
 <main id="main">
 
@@ -232,12 +164,12 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="hhero-scrim"></div>
     <div class="wrap">
         <span class="eyebrow">{name}, {province} &middot; Now accepting new projects</span>
-        <h1>{name} <em>websites &amp; AI systems.</em></h1>
-        <p class="hhero-sub">Custom websites, AI automation, and SEO for {name} small businesses &mdash; built, connected, and supported by one founder-led team. From $97/month &middot; no long-term contracts.</p>
+        <h1>{name} web design that <em>books more jobs.</em></h1>
+        <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for {name} home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
         <p class="hhero-lede">{intro}</p>
         <div class="hhero-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-            <a href="../work.html" class="btn btn-ghost">See selected work</a>
+            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
+            <a href="../how.html" class="btn btn-ghost">See how it works</a>
         </div>
     </div>
 </section>
@@ -246,12 +178,12 @@ CITY_PAGE = """<!DOCTYPE html>
 <section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Websites &amp; systems across <em>{name}.</em></h2>
+        <h2 class="section-h">Serving home service businesses across <em>{name}.</em></h2>
         <p class="section-body">
-            Northern Peak Systems works with small businesses in {areas}. Most of our {name} clients are solo or small-team operations &mdash; trades, shops, clinics, studios, consultancies &mdash; that need a credible web presence and AI automation that actually works together, without spending the kind of money downtown agencies charge.
+            Northern Peak Systems works with home service businesses across {areas} &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
         </p>
         <p class="section-body">
-            The work is the same whether your business is headquartered in {name} or in a community an hour's drive away. It starts with a quick call, the build happens in days, and the finished system is hosted, connected, and supported by the same founder-led team that built it. There's no account-management layer, no offshore dev team, no hidden hand-offs &mdash; just one team, one connected system, and a website that does the work it's supposed to do.
+            The process is the same whether you're based in {name} or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
         </p>
     </div>
 </section>
@@ -260,32 +192,32 @@ CITY_PAGE = """<!DOCTYPE html>
 <section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Services in {name}</span>
-        <h2 class="section-h">What's included in a {name} <em>system.</em></h2>
-        <p class="section-lede">Every {name} build runs on simple flat plans from $97/month, no long-term contracts. No add-ons hidden behind a sales call, no pay-per-edit tickets, no surprise hosting bills.</p>
+        <h2 class="section-h">What's included for <em>{name} businesses.</em></h2>
+        <p class="section-lede">Websites &amp; SEO is the Base System: $97/month, with your website built free. The Peak System, $297/month flat, adds everything else below. No setup fees, no contracts, no pay-per-edit tickets or surprise hosting bills.</p>
         <ul class="svc-list">
             <li>
-                <h3>Custom website design in {name}</h3>
-                <p>Designed for your business specifically, not picked from a template gallery. Every {name} project is wireframed, styled, and refined for your brand's voice, customers, and competitive position.</p>
+                <h3><a href="../features/missed-call-text-back.html">Missed Call Recovery</a></h3>
+                <p>When you can't pick up, the caller gets a text back in seconds, so a homeowner in {name} starts a conversation with you instead of calling the next company on the list.</p>
             </li>
             <li>
-                <h3>Automation that never misses a lead</h3>
-                <p>Missed calls get texted back in seconds, every {name} lead gets followed up automatically, appointments book themselves into your calendar, and five-star review requests go out without you lifting a finger.</p>
+                <h3><a href="../features/lead-follow-up.html">Estimate Follow-Up</a></h3>
+                <p>Quotes that go quiet get friendly, automatic check-ins until the customer replies, so fewer {name} estimates are left sitting in someone's inbox.</p>
             </li>
             <li>
-                <h3>Hosting &amp; security</h3>
-                <p>Fast, redundant hosting with SSL certificates, daily backups, and automatic security updates included in the monthly fee. No separate hosting bill, no security plugin maintenance, no surprise renewals.</p>
+                <h3><a href="../features/website.html">Websites &amp; SEO</a></h3>
+                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so {name} customers find you on Google, and direct support from the founder. Included in every plan.</p>
             </li>
             <li>
-                <h3>Unlimited edits</h3>
-                <p>Send a message; the change goes live within one to two business days. New staff bio, updated services, fresh photo, revised hours: no per-hour billing, no ticket queues, no waiting on a copy-paste agency.</p>
+                <h3><a href="../features/crm-and-booking.html">Lead Management</a></h3>
+                <p>Calls, texts, and website inquiries land in one inbox on your phone, with online booking that puts jobs straight on your calendar.</p>
             </li>
             <li>
-                <h3>SEO &amp; local search visibility</h3>
-                <p>Schema markup, sitemap, semantic HTML, fast Core Web Vitals, clean metadata, and local search optimization so {name} customers find you on Google. The technical groundwork search engines reward, wired into every system from day one &mdash; not a costly add-on.</p>
+                <h3><a href="../features/review-automation.html">Reputation Management</a></h3>
+                <p>After each job, customers get a simple request to leave a Google review, so your rating keeps up with the work you actually do.</p>
             </li>
             <li>
-                <h3>Direct one-on-one support</h3>
-                <p>You work directly with the founder, not a help-desk queue. The same team that designed, built, and connected your {name} system is the one that answers when something needs to change. We don't scale to thousands of clients, which is the point.</p>
+                <h3><a href="../features/marketing-campaigns.html">Customer Retention</a></h3>
+                <p>Reminders and reactivation campaigns bring past customers back for the next service call, tune-up, or seasonal job.</p>
             </li>
         </ul>
     </div>
@@ -297,10 +229,10 @@ CITY_PAGE = """<!DOCTYPE html>
         <span class="eyebrow">Why custom</span>
         <h2 class="section-h">Why {name} businesses choose custom over <em>templates.</em></h2>
         <p class="section-body">
-            A template is faster and cheaper up front. It's also why most small-business websites in {name} look like every other small-business website in {name}. The hero photo is from the same stock library; the colour palette is two clicks deep in a Squarespace settings panel; the typography is whatever Wix shipped that quarter. Clients notice. Younger clients especially notice. And businesses that compete on credibility cannot afford to be visually indistinguishable from the business down the street.
+            A template is faster and cheaper up front. It's also why so many small-business websites in {name} look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
         </p>
         <p class="section-body">
-            Custom-built websites take longer to build but pay back in three places: clients trust them more, search engines rank them better (because clean code loads faster and structures content more clearly), and the business doesn't end up locked into a platform's roadmap. Better still, a custom build lets us wire AI automation and SEO directly into the system instead of bolting on plugins. When the time comes to update, expand, or move it, your {name} system is yours &mdash; not someone else's hostage.
+            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
         </p>
     </div>
 </section>
@@ -313,13 +245,13 @@ CITY_PAGE = """<!DOCTYPE html>
         <ol class="process-list">
             <li>
                 <span class="process-n">01</span>
-                <h3>Book a call</h3>
-                <p>A free 20-minute call. We learn about your {name} business &mdash; what you do, who you serve, and what's not working &mdash; and tell you straight which plan fits. No pressure, no obligation.</p>
+                <h3>Book a Demo</h3>
+                <p>A free 15-minute demo. We learn about your {name} business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; and tell you straight which plan fits. Then we build a free custom preview of your website and system before you decide. No pressure, no obligation.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
                 <h3>We build everything</h3>
-                <p>Your custom website is designed and built at no charge, with the SEO foundation wired in &mdash; and if you choose the full system, the text-back, review, follow-up, and booking tools are connected around it. Built and tested in 7&ndash;10 days.</p>
+                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Live in 7&ndash;10 days.</p>
             </li>
             <li>
                 <span class="process-n">03</span>
@@ -329,7 +261,7 @@ CITY_PAGE = """<!DOCTYPE html>
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You email us when something needs to change: a new hire, a new service line, a new photo, new copy. Edits go live within one to two business days, included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
             </li>
         </ol>
     </div>
@@ -342,12 +274,19 @@ CITY_PAGE = """<!DOCTYPE html>
         <h2 class="section-h">{name} pricing, <em>simplified.</em></h2>
         <div class="pricing-row">
             <div class="pricing-card">
-                <p class="pricing-card-name">Monthly plans</p>
-                <p class="pricing-card-price">from <strong>$97</strong>/mo</p>
-                <p class="pricing-card-sub">no long-term contracts</p>
-                <p class="pricing-card-body">We build your custom website free &mdash; $97/month covers hosting, security, edits, SEO, and founder-led support. Want the whole growth system (missed-call text-back, reviews, follow-up, booking)? That's $297/month flat. Stay because it works, not because you're locked in.</p>
+                <p class="pricing-card-name">Base System</p>
+                <p class="pricing-card-price"><strong>$97</strong>/mo</p>
+                <p class="pricing-card-sub">website built free</p>
+                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct founder-led support.</p>
+            </div>
+            <div class="pricing-card">
+                <p class="pricing-card-name">The Peak System</p>
+                <p class="pricing-card-price"><strong>$297</strong>/mo</p>
+                <p class="pricing-card-sub">flat &middot; everything included</p>
+                <p class="pricing-card-body">Everything in the Base System, plus Missed Call Recovery, Estimate Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention.</p>
             </div>
         </div>
+        <p class="pricing-terms">No setup fees &middot; No contracts &middot; Live in 7&ndash;10 days</p>
         <p class="pricing-foot"><a href="../pricing.html" class="link-arrow">See full pricing details <span class="arr">→</span></a></p>
     </div>
 </section>
@@ -358,22 +297,7 @@ CITY_PAGE = """<!DOCTYPE html>
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">{name} <em>questions.</em></h2>
         <dl class="faq-list">
-            <div class="faq-item">
-                <dt>Do you only work with businesses in {name}?</dt>
-                <dd>Most of our clients are in {name} and the surrounding region, but our remote workflow handles businesses anywhere in {province}, and across Canada and the US generally. Whether your business is in {name} proper or in a nearby community, the build, connect, and support process is identical. Nothing about the work depends on being in the same room.</dd>
-            </div>
-            <div class="faq-item">
-                <dt>How long does a build take in {name}?</dt>
-                <dd>From the first call to a live site is usually 7&ndash;10 days for most {name} businesses. We learn your business on a short call, build the website and wire up the systems, and walk you through everything on a launch call. No in-person meeting required at any step.</dd>
-            </div>
-            <div class="faq-item">
-                <dt>What kinds of {name} businesses do you build for?</dt>
-                <dd>We specialize in small businesses: {name} trades and contractors, shops and studios, clinics, consultancies, and other businesses where the website and the system behind it need to communicate trust, credibility, and clarity. If your {name} business sells expertise or service rather than mass-market products, the approach fits.</dd>
-            </div>
-            <div class="faq-item">
-                <dt>How much does it cost in {name}?</dt>
-                <dd>Two simple plans, no long-term contracts, no big upfront cost. The website plan is $97/month &mdash; we build your custom site free, and the monthly covers hosting, security, edits, SEO, and direct founder-led support. The full Business Growth System &mdash; missed-call text-back, review automation, lead follow-up, and booking on top of the website &mdash; is $297/month flat. You always keep your domain and any content you provided. Stay because it works, not because you're locked in.</dd>
-            </div>
+{faq_items}
         </dl>
     </div>
 </section>
@@ -382,9 +306,9 @@ CITY_PAGE = """<!DOCTYPE html>
 <section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
-        <h2 class="section-h">Websites &amp; systems near <em>{name}.</em></h2>
+        <h2 class="section-h">Web design near <em>{name}.</em></h2>
         <p class="section-body">
-            Northern Peak Systems works with small businesses across {province} and beyond. If your business is outside {name} proper, the same custom design, AI automation, SEO, monthly pricing, and remote workflow apply.
+            We work with home service businesses across {province}, and across Canada and the US. If you're outside {name} proper, you get the same website, the same follow-up system, the same flat pricing, and the same remote process.
         </p>
         <ul class="nearby-list">
 {nearby_links}
@@ -397,10 +321,10 @@ CITY_PAGE = """<!DOCTYPE html>
 <section class="hcta">
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
-        <h2>A modern {name} system that <em>matches your work.</em></h2>
-        <p>Send a few sentences about your {name} business and we'll build you a free preview &mdash; no cost, no obligation, no catch.</p>
+        <h2>Your {name} website, <em>built to match your work.</em></h2>
+        <p>Book a free 15-minute demo, and we build a free custom preview of your website and system before you decide &mdash; no cost, no obligation.</p>
         <div class="hcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="../pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>
@@ -408,52 +332,14 @@ CITY_PAGE = """<!DOCTYPE html>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="foot">
-    <div class="wrap">
-        <div class="foot-grid">
-            <div class="foot-brand">
-                <span class="brand"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-copy">&copy; <span id="yr">2026</span> Northern Peak Systems<br>All rights reserved.</p>
-            </div>
-            <div class="foot-col">
-                <h4>Services</h4>
-                <a href="../index.html#services">AI automation</a>
-                <a href="../index.html#services">Web design</a>
-                <a href="../index.html#services">SEO &amp; local search</a>
-            </div>
-            <div class="foot-col">
-                <h4>Company</h4>
-                <a href="../about.html">About</a>
-                <a href="../work.html">Work</a>
-                <a href="../how.html">How it works</a>
-                <a href="../pricing.html">Pricing</a>
-                <a href="../faq.html">FAQ</a>
-            </div>
-            <div class="foot-col">
-                <h4>Get started</h4>
-                <a href="../contact.html">Free preview</a>
-                <a href="../contact.html">Contact</a>
-                <a href="../locations.html">Locations</a>
-                <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
-            </div>
-        </div>
-        <div class="foot-bottom">
-            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
-            <div class="foot-social">
-                <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
-                <a href="../privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
-                <a href="../terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
-            </div>
-        </div>
-    </div>
-</footer>
+<!-- FOOTER: placeholder, filled from index.html by sync_nav.apply_nav() -->
+<footer class="foot"></footer>
 
 <script>
-document.getElementById('yr').textContent=new Date().getFullYear();
+var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
-function openM(){{mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}}
-function closeM(){{mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}}
+function openM(){{mnav.classList.add('open');mnav.removeAttribute('inert');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}}
+function closeM(){{mnav.classList.remove('open');mnav.setAttribute('inert','');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}}
 burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
 mnav.querySelectorAll('a').forEach(function(a){{a.addEventListener('click',closeM);}});
 
@@ -571,6 +457,8 @@ section{position:relative;}
 .svc-list li:hover{border-color:rgba(210,162,76,0.4);transform:translateY(-4px);}
 .svc-list h3{font-family:var(--display);font-size:21px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2;}
 .svc-list p{font-size:14.5px;line-height:1.7;color:var(--mist);}
+.svc-list h3 a{transition:color .18s;}
+.svc-list h3 a:hover{color:var(--gold);}
 
 /* PROCESS */
 .process-list{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,2.6vw,36px);}
@@ -587,6 +475,7 @@ section{position:relative;}
 .pricing-card-price strong{color:var(--gold);font-style:italic;font-weight:700;}
 .pricing-card-sub{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);margin:14px 0 22px;}
 .pricing-card-body{font-size:15px;line-height:1.7;color:var(--mist);}
+.pricing-terms{margin-top:26px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-2);}
 .pricing-foot{margin-top:36px;}
 .link-arrow{font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid currentColor;padding-bottom:4px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;}
 .link-arrow:hover{color:var(--gold-2);}
@@ -654,111 +543,100 @@ section{position:relative;}
 # SCHEMA
 # ---------------------------------------------------------------------------
 
-def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
-    studio_id = "https://northernpeaksystems.ca/#org"
-    desc = (f"Connected business systems for {name} small businesses: custom websites, "
-            f"AI automation, and SEO, built, connected, and supported by a founder-led team. "
-            f"From $97/month, no long-term contracts, no big upfront cost.")
+PLANS = [
+    # (name, monthly price, description) - mirrors the Base System / The Peak System cards
+    ("Base System", "97",
+     "Custom website designed and built free. $97/month covers hosting, security, unlimited edits, "
+     "local SEO, and founder-led support. No setup fees, no contracts."),
+    ("The Peak System", "297",
+     "Everything in the Base System plus Missed Call Recovery, Estimate Follow-Up, Lead Management & booking, "
+     "Reputation Management, and Customer Retention. $297/month flat, no setup fees, no contracts."),
+]
 
+
+def city_faqs(slug: str, name: str, province: str) -> list[tuple[str, str]]:
+    """(question, answer HTML) pairs. The visible FAQ and the FAQPage schema both come from here."""
+    if slug == "edmonton":
+        where = ("No. Edmonton is home base, but we work with home service businesses across "
+                 f"{province}, and across Canada and the US.")
+    else:
+        where = ("No. We're based in Edmonton and work with home service businesses across "
+                 f"{province}, and across Canada and the US.")
+    return [
+        (f"Do you only work with businesses in {name}?",
+         f"{where} Whether you're in {name} proper or a nearby community, the process is the same: "
+         "a free 15-minute demo, a free custom preview of your website and system before you decide, "
+         "and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room."),
+        (f"How long does a build take in {name}?",
+         f"Most {name} businesses are live in 7&ndash;10 days. We learn your business on a free 15-minute demo, "
+         "build a free custom preview, and once you decide to go ahead, set up the system and walk you "
+         "through everything on a launch call. No in-person meeting required at any step."),
+        (f"What kinds of {name} businesses do you build for?",
+         f"Home service businesses: {name} plumbers, electricians, HVAC companies, roofers, landscapers, "
+         "general contractors, concrete and handyman services, and other trades. If your work starts with "
+         "a phone call or a quote, the system is built for you."),
+        (f"How much does it cost in {name}?",
+         "Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom "
+         "website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct "
+         "founder-led support. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate "
+         "Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention. You always "
+         "keep your domain and any content you provided."),
+    ]
+
+
+def _plain(fragment: str) -> str:
+    """HTML fragment -> plain text for JSON-LD."""
+    return htmllib.unescape(re.sub(r"<[^>]+>", "", fragment))
+
+
+def build_ld_json(slug: str, name: str, province: str) -> str:
+    url = f"https://northernpeaksystems.ca/locations/{slug}"
+    desc = (f"Websites, local SEO, missed-call text-back, estimate follow-up, lead management, reputation "
+            f"management, and customer retention for home service businesses in {name}, {province}. "
+            f"Website built free; Base System $97/month, The Peak System $297/month flat. "
+            f"No setup fees, no contracts.")
+    offers = [
+        {
+            "@type": "Offer",
+            "name": plan,
+            "price": price,
+            "priceCurrency": "CAD",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": price,
+                "priceCurrency": "CAD",
+                "unitText": "MONTH",
+            },
+            "description": text,
+        }
+        for plan, price, text in PLANS
+    ]
     graph = [
         {
-            "@type": ["ProfessionalService", "LocalBusiness"],
-            "@id": studio_id,
-            "name": "Northern Peak Systems",
-            "url": "https://northernpeaksystems.ca/",
-            "image": "https://northernpeaksystems.ca/img/headshot/matt-headshot.jpg",
-            "email": "matt@northernpeaksystems.ca",
-            "telephone": "",
-            "priceRange": "$$",
-            "founder": {"@type": "Person", "name": "Matthew McGuire"},
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Edmonton",
-                "addressRegion": "AB",
-                "addressCountry": "CA",
-            },
-            "geo": {"@type": "GeoCoordinates", "latitude": 53.5461, "longitude": -113.4938},
-            "areaServed": {"@type": "Country", "name": "Canada"},
-            "sameAs": [
-                "https://github.com/mmcguire6",
-                "https://www.linkedin.com/in/matthew-mcguire-44666b389",
-            ],
-        },
-        {
             "@type": "Service",
-            "name": f"Websites, AI Automation & SEO in {name}, {province}",
-            "serviceType": "Web Design, AI Automation, and SEO",
-            "provider": {"@id": studio_id},
+            "@id": f"{url}#service",
+            "url": url,
+            "name": f"Web Design & Local SEO for Home Service Businesses in {name}, {province}",
+            "serviceType": "Web design, local SEO, and lead follow-up",
+            # The organization is defined once (index.html); reference it, don't redefine it here.
+            "provider": {"@id": ORG_ID},
             "areaServed": {
                 "@type": "City",
                 "name": name,
-                "addressRegion": province,
-                "addressCountry": "CA",
+                "containedInPlace": {"@type": "AdministrativeArea", "name": province},
             },
             "description": desc,
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Website plan",
-                    "price": "97",
-                    "priceCurrency": "CAD",
-                    "description": "Custom website built free; $97/month covers hosting, security, edits, SEO, and founder-led support. No long-term contracts.",
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Business Growth System",
-                    "price": "297",
-                    "priceCurrency": "CAD",
-                    "description": "The website plus missed-call text-back, review automation, lead follow-up, marketing campaigns, and booking. $297/month flat, no setup fees, no contracts.",
-                },
-            ],
+            "offers": offers,
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": f"Do you only work with businesses in {name}?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": (f"Most of our clients are in {name} and the surrounding region, "
-                                 f"but our remote workflow handles businesses anywhere in {province} "
-                                 f"and across Canada and the US. The build, connect, and support process is identical "
-                                 f"whether you're in {name} proper or a nearby community."),
-                    },
-                },
-                {
-                    "@type": "Question",
-                    "name": f"How long does a website build take in {name}?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": (f"From the first call to a live site is usually 7-10 days "
-                                 f"for most {name} businesses. We learn your business on a short call, "
-                                 f"build the website and systems, and walk you through everything at launch."),
-                    },
-                },
-                {
-                    "@type": "Question",
-                    "name": f"What kinds of {name} businesses do you build for?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": (f"Small businesses: {name} trades and contractors, shops and studios, "
-                                 f"clinics, consultancies, and "
-                                 f"other businesses where the website and the system behind it need to communicate trust, "
-                                 f"credibility, and clarity."),
-                    },
-                },
-                {
-                    "@type": "Question",
-                    "name": f"How much does it cost in {name}?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": ("Two simple plans with no long-term contracts and no big upfront cost. "
-                                 "The website plan is $97/month — the custom site is built free, and the monthly covers "
-                                 "hosting, security, edits, SEO, and founder-led support. The full Business Growth System "
-                                 "is $297/month flat. You always keep your domain and any content you provided."),
-                    },
-                },
+                    "name": q,
+                    "acceptedAnswer": {"@type": "Answer", "text": _plain(a)},
+                }
+                for q, a in city_faqs(slug, name, province)
             ],
         },
     ]
@@ -770,20 +648,30 @@ def build_ld_json(slug: str, name: str, province: str, intro: str) -> str:
 # WRITERS
 # ---------------------------------------------------------------------------
 
+def faq_items_html(slug: str, name: str, province: str) -> str:
+    out = []
+    for q, a in city_faqs(slug, name, province):
+        out.append(f'            <div class="faq-item">\n'
+                   f'                <dt>{q}</dt>\n'
+                   f'                <dd>{a}</dd>\n'
+                   f'            </div>')
+    return "\n".join(out)
+
+
 def nearby_links_html(nearby_slugs: list[str]) -> str:
     out = []
     for s in nearby_slugs:
         if s in SLUG_TO_NAME:
             n, _p = SLUG_TO_NAME[s]
-            out.append(f'            <li><a href="../locations/{s}.html">{n} websites &amp; systems</a></li>')
+            out.append(f'            <li><a href="../locations/{s}.html">{n} web design</a></li>')
     return "\n".join(out)
 
 
 def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
     extras = EXTRAS.get(slug, {"areas": "the surrounding region", "nearby": []})
     title = f"{name} Web Design &amp; SEO | Northern Peak Systems"
-    meta_desc = (f"Custom websites, AI automation, and local SEO for {name} small businesses "
-                 f"— founder-led, from $97/month, no long-term contracts.")
+    meta_desc = (f"Web design and local SEO for {name} home service businesses, plus missed-call "
+                 f"text-back and estimate follow-up. Website built free, from $97/month.")
 
     html = CITY_PAGE.format(
         slug=slug,
@@ -794,17 +682,12 @@ def write_city_page(slug: str, name: str, province: str, intro: str) -> Path:
         intro=intro,
         areas=extras["areas"],
         styles=CITY_STYLES,
-        ld_json=build_ld_json(slug, name, province, intro),
+        ld_json=build_ld_json(slug, name, province),
+        faq_items=faq_items_html(slug, name, province),
         nearby_links=nearby_links_html(extras["nearby"]),
     )
-    # Mark the active city in the static Locations dropdown.
-    html = html.replace(
-        f'<a href="../locations/{slug}.html">{name}</a>',
-        f'<a href="../locations/{slug}.html" class="active">{name}</a>',
-        1,
-    )
     path = OUT / f"{slug}.html"
-    path.write_text(apply_nav(html, depth=1), encoding="utf-8")
+    write_file(path, apply_nav(html, depth=1), "\r\n")
     return path
 
 
@@ -822,13 +705,13 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
 <title>Alberta Web Design &amp; Local SEO | Northern Peak Systems</title>
-<meta name="description" content="Custom websites, AI automation, and local SEO for small businesses across Alberta — Edmonton, Calgary, Red Deer and beyond. From $97/month, no contracts.">
+<meta name="description" content="Web design, local SEO, and lead follow-up for home service businesses in Edmonton, Calgary, Red Deer and across Alberta. Website built free, from $97/month.">
 
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://northernpeaksystems.ca/locations">
 <meta property="og:url" content="https://northernpeaksystems.ca/locations">
-<meta property="og:title" content="Alberta Websites &amp; AI Systems | Northern Peak Systems">
-<meta property="og:description" content="Custom websites, AI automation, and SEO for Alberta businesses in Edmonton, Calgary, and the surrounding region. Founder-led, from $97/month, no long-term contracts.">
+<meta property="og:title" content="Alberta Web Design &amp; Local SEO | Northern Peak Systems">
+<meta property="og:description" content="Based in Edmonton, we work with trades across Alberta, and across Canada and the US. Website built free, from $97/month, no setup fees, no contracts.">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -873,95 +756,9 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<header class="nav">
-    <div class="wrap nav-inner">
-        <a href="index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
-        <nav class="nav-links" aria-label="Primary">
-            <a href="/">Home</a>
-            <div class="nav-dd nav-dd-static">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu mega">
-                    <div class="mega2-grid">
-                        <aside class="mega2-rail">
-                            <span class="m2-eyebrow">The Complete Solution</span>
-                            <div class="m2-title">Business <span>Growth</span> System</div>
-                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
-                            <a href="how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>
-                        </aside>
-                        <div class="mega2-cards">
-                        <a href="features/website.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><b>Custom Website</b><span>Lead-generating websites built to convert visitors into customers.</span></a>
-                        <a href="features/review-automation.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><b>5-Star Review Funnel</b><span>Get more five-star reviews on autopilot and build instant trust.</span></a>
-                        <a href="features/local-seo.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Local SEO</b><span>Show up at the top of Google when local customers are searching.</span></a>
-                        <a href="features/missed-call-text-back.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg></span><b>Missed Call Text Back</b><span>Never miss another lead. We text back missed calls instantly.</span></a>
-                        <a href="features/crm-and-booking.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></span><b>CRM &amp; Booking</b><span>Manage leads, book jobs, and keep everything organized in one place.</span></a>
-                        <a href="features/lead-follow-up.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg></span><b>Lead Follow-Up</b><span>Automated follow-ups via text so you stay top of mind and win more jobs.</span></a>
-                        <a href="features/marketing-campaigns.html" class="m2-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span><b>Marketing Campaigns</b><span>One-click campaigns that bring past customers back and fill your pipeline.</span></a>
-                        <div class="m2-foot">
-                            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <div>
-                                <b>Everything Working Together</b>
-                                <p>One connected system designed to attract, convert, and retain more customers so you can focus on the work.</p>
-                                <div class="m2-strip"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>Website</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>SEO</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>Reviews</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/></svg>Text Back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>CRM</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/></svg>Follow-Up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Marketing</span></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="pricing.html">Pricing</a>
-            <a href="about.html">About</a>
-            <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Studio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu">
-                    <a href="work.html">Work</a>
-                    <a href="how.html">How we work</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="blog/">Blog</a>
-                </div>
-            </div>
-            <div class="nav-dd">
-                <button type="button" class="nav-dd-toggle" aria-haspopup="true">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="nav-dd-menu cols">
-                    <a href="locations/edmonton.html">Edmonton</a>
-                    <a href="locations/calgary.html">Calgary</a>
-                    <a href="locations/st-albert.html">St. Albert</a>
-                    <a href="locations/sherwood-park.html">Sherwood Park</a>
-                    <a href="locations/leduc.html">Leduc</a>
-                    <a href="locations/spruce-grove.html">Spruce Grove</a>
-                    <a href="locations/airdrie.html">Airdrie</a>
-                    <a href="locations/red-deer.html">Red Deer</a>
-                    <a href="locations.html" class="dd-all">All locations &rarr;</a>
-                </div>
-            </div>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-cta">
-            <a href="contact.html" class="btn btn-line">Book a Demo</a>
-            <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
-        </div>
-    </div>
-</header>
-
-<!-- MOBILE MENU -->
-<div class="mnav" id="mnav" aria-hidden="true">
-    <div class="mnav-top">
-        <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-        <button class="mnav-close" id="mclose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
-    </div>
-    <nav class="mnav-links" aria-label="Mobile">
-        <a href="/">Home</a>
-        <a href="/#features">Products</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="locations.html">Locations</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="mnav-foot">
-        <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
-    </div>
-</div>
+<!-- NAV / MOBILE MENU: placeholders, filled from index.html by sync_nav.apply_nav() -->
+<header class="nav"></header>
+<div class="mnav" id="mnav" inert></div>
 
 <main id="main">
 
@@ -971,11 +768,11 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="hhero-scrim"></div>
     <div class="wrap">
         <span class="eyebrow">Locations</span>
-        <h1>Serving small businesses <em>across Alberta.</em></h1>
-        <p class="hhero-sub">Northern Peak Systems is founder-led and based in Edmonton, building connected systems &mdash; custom websites, AI automation, and SEO &mdash; for businesses in Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer.</p>
-        <p class="hhero-lede">Our remote workflow handles businesses anywhere in Canada or the US. From $97/month &middot; no long-term contracts &middot; no big upfront cost.</p>
+        <h1>Serving home service businesses <em>across Alberta.</em></h1>
+        <p class="hhero-sub">Based in Edmonton, we work with trades across Alberta &mdash; and across Canada and the US. Websites, missed-call text-back, and estimate follow-up for plumbers, electricians, HVAC companies, roofers, landscapers, and contractors in Edmonton, Calgary, St. Albert, Sherwood Park, Leduc, Spruce Grove, Airdrie, and Red Deer.</p>
+        <p class="hhero-lede">Base System $97/month &middot; The Peak System $297/month flat &middot; No setup fees &middot; No contracts &middot; Live in 7&ndash;10 days.</p>
         <div class="hhero-actions">
-            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
+            <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-ghost">See pricing</a>
         </div>
     </div>
@@ -992,10 +789,10 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <span class="eyebrow">Why local</span>
         <h2 class="section-h">A web partner that actually <em>knows Alberta.</em></h2>
         <p class="section-body">
-            Most Alberta small businesses don't need a big-agency retainer or a slow, template-heavy website &mdash; they need a fast site that ranks in their own town and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed-call text-back, booking, reviews, and follow-up, all founder-led from right here in Edmonton.
+            Alberta trades don't need a big-agency retainer or a slow, template-heavy website. They need a fast site that shows up when people in their own town search, and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed call recovery, estimate follow-up, lead management and booking, reputation management, and customer retention &mdash; all founder-led from right here in Edmonton.
         </p>
         <p class="section-body">
-            Because we're local and remote-capable, you get the same connected system whether you're a contractor in Red Deer, a clinic in Calgary, or a shop in St. Albert &mdash; built to load fast, rank for &ldquo;your service + your city,&rdquo; and turn visitors into booked jobs. Flat pricing from $97/month, no long-term contracts, and a free working preview before you decide.
+            You get the same connected system whether you're a roofer in Red Deer, an HVAC company in Calgary, or a landscaper in St. Albert &mdash; built to load fast, show up for &ldquo;your service + your city&rdquo; searches, and turn visitors into booked jobs. Flat pricing from $97/month, no setup fees, no contracts, and we build a free custom preview of your website and system before you decide.
         </p>
     </div>
 </section>
@@ -1004,10 +801,10 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <section class="hcta">
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
-        <h2>Don't see your city? <em>We build everywhere.</em></h2>
-        <p>If your business is anywhere in Canada or the US, send a few sentences about it and we'll build you a free preview &mdash; the remote workflow handles the rest.</p>
+        <h2>Don't see your city? <em>We work across Canada and the US.</em></h2>
+        <p>Based in Edmonton, we work with home service businesses across Alberta, and across Canada and the US. Book a free 15-minute demo, and we build a free custom preview of your website and system before you decide.</p>
         <div class="hcta-actions">
-            <a href="contact.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
+            <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-dark">See pricing</a>
         </div>
     </div>
@@ -1015,52 +812,14 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="foot">
-    <div class="wrap">
-        <div class="foot-grid">
-            <div class="foot-brand">
-                <span class="brand"><img src="img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-copy">&copy; <span id="yr">2026</span> Northern Peak Systems<br>All rights reserved.</p>
-            </div>
-            <div class="foot-col">
-                <h4>Services</h4>
-                <a href="index.html#services">AI automation</a>
-                <a href="index.html#services">Web design</a>
-                <a href="index.html#services">SEO &amp; local search</a>
-            </div>
-            <div class="foot-col">
-                <h4>Company</h4>
-                <a href="about.html">About</a>
-                <a href="work.html">Work</a>
-                <a href="how.html">How it works</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="faq.html">FAQ</a>
-            </div>
-            <div class="foot-col">
-                <h4>Get started</h4>
-                <a href="contact.html">Free preview</a>
-                <a href="contact.html">Contact</a>
-                <a href="locations.html">Locations</a>
-                <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
-            </div>
-        </div>
-        <div class="foot-bottom">
-            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
-            <div class="foot-social">
-                <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
-                <a href="privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
-                <a href="terms.html" style="width:auto;padding:0 14px;font-size:13px;">Terms</a>
-            </div>
-        </div>
-    </div>
-</footer>
+<!-- FOOTER: placeholder, filled from index.html by sync_nav.apply_nav() -->
+<footer class="foot"></footer>
 
 <script>
-document.getElementById('yr').textContent=new Date().getFullYear();
+var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
-function openM(){{mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}}
-function closeM(){{mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}}
+function openM(){{mnav.classList.add('open');mnav.removeAttribute('inert');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}}
+function closeM(){{mnav.classList.remove('open');mnav.setAttribute('inert','');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}}
 burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
 mnav.querySelectorAll('a').forEach(function(a){{a.addEventListener('click',closeM);}});
 
@@ -1098,51 +857,104 @@ def build_locations_index() -> Path:
         prov_blocks="\n".join(blocks),
     )
     path = ROOT / "locations.html"
-    path.write_text(apply_nav(html, depth=0, page="locations.html"), encoding="utf-8")
+    write_file(path, apply_nav(html, depth=0, page="locations.html"), "\r\n")
     return path
 
 
 # ---------------------------------------------------------------------------
 # SITEMAP
 # ---------------------------------------------------------------------------
+# Every indexable main-site page, at the URL its own canonical tag uses (clean
+# URLs, except blog posts, whose canonicals keep .html). Pages are discovered
+# from disk, so a new blog post or page is picked up on the next run. A page is
+# left out when it has no canonical (404), is robots-noindex (privacy, terms),
+# is permanently redirected in netlify.toml, or is listed in SITEMAP_EXCLUDE.
+# /work/* and /campground/* are never scanned (prospect previews, robots-disallowed).
+
+SITE = "https://northernpeaksystems.ca"
+ROOT_ORDER = ["index.html", "about.html", "how.html", "pricing.html", "faq.html",
+              "locations.html", "contact.html", "book.html"]
+FEATURE_ORDER = ["website", "missed-call-text-back", "review-automation", "lead-follow-up",
+                 "marketing-campaigns", "crm-and-booking"]
+PRIORITY = {
+    "/": 1.0, "/about": 0.8, "/how": 0.75, "/pricing": 0.9, "/faq": 0.7,
+    "/locations": 0.85, "/contact": 0.8, "/book": 0.8, "/blog/": 0.8,
+    "/features/website": 0.75, "/features/missed-call-text-back": 0.75,
+    "/features/review-automation": 0.75, "/features/lead-follow-up": 0.7,
+    "/features/marketing-campaigns": 0.7, "/features/crm-and-booking": 0.7,
+}
+# /work is intentionally unlinked; /features/local-seo 301s to /features/website.
+SITEMAP_EXCLUDE = {"/work", "/features/local-seo"}
+
+
+def _git(*args: str) -> str:
+    try:
+        r = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+    except OSError:
+        return ""
+    return r.stdout.strip() if r.returncode == 0 else ""
+
+
+def _lastmod(path: Path, today: str) -> str:
+    """Last commit date of the file, or today if it has uncommitted changes (or was never committed)."""
+    rel = path.relative_to(ROOT).as_posix()
+    if _git("status", "--porcelain", "--", rel):
+        return today
+    return _git("log", "-1", "--format=%cs", "--", rel) or today
+
+
+def _redirected_paths() -> set[str]:
+    try:
+        conf = tomllib.loads((ROOT / "netlify.toml").read_text(encoding="utf-8"))
+    except (OSError, tomllib.TOMLDecodeError):
+        return set()
+    return {r["from"].removesuffix(".html") for r in conf.get("redirects", [])
+            if "from" in r and r.get("status") in (301, 302, 307, 308)}
+
+
+def _canonical_path(path: Path) -> str | None:
+    """Canonical URL path of an indexable page ('/', '/about', '/blog/x.html'), else None."""
+    text = path.read_text(encoding="utf-8")
+    head = text[:text.find("</head>")]
+    robots = re.search(r'<meta\s+name=["\']robots["\']\s+content=["\']([^"\']*)', head, re.I)
+    if robots and "noindex" in robots.group(1).lower():
+        return None
+    canon = re.search(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', head, re.I)
+    if not canon or not canon.group(1).startswith(SITE):
+        return None
+    return canon.group(1)[len(SITE):] or "/"
+
+
+def _sitemap_files() -> list[Path]:
+    feats, blog = ROOT / "features", ROOT / "blog"
+    files = [ROOT / n for n in ROOT_ORDER]
+    files += sorted(p for p in ROOT.glob("*.html") if p.name not in ROOT_ORDER)
+    files += [feats / f"{s}.html" for s in FEATURE_ORDER]
+    files += sorted(p for p in feats.glob("*.html") if p.stem not in FEATURE_ORDER)
+    files += [OUT / f"{slug}.html" for _p, _a, cities in CITIES for slug, _n, _i in cities]
+    files += [blog / "index.html"]
+    files += sorted(p for p in blog.glob("*.html") if p.name != "index.html")
+    seen, out = set(), []
+    for p in files:
+        if p.exists() and p not in seen:
+            seen.add(p)
+            out.append(p)
+    return out
+
 
 def build_sitemap() -> Path:
     today = date.today().isoformat()
-    base = "https://northernpeaksystems.ca/"
-    # Clean URLs (no .html) to match the page canonicals. free-preview,
-    # privacy, and terms are intentionally excluded (noindex). /work/* is
-    # excluded (prospect previews, noindex + robots-disallowed).
-    main_pages = [
-        ("", 1.0),
-        ("about", 0.8),
-        ("work", 0.85),
-        ("how", 0.75),
-        ("pricing", 0.9),
-        ("faq", 0.7),
-        ("locations", 0.85),
-        ("contact", 0.8),
-        ("blog/", 0.8),
-        ("blog/why-is-my-website-so-slow", 0.7),
-        ("features/website", 0.75),
-        ("features/missed-call-text-back", 0.75),
-        ("features/review-automation", 0.75),
-        ("features/lead-follow-up", 0.7),
-        ("features/local-seo", 0.75),
-        ("features/marketing-campaigns", 0.7),
-        ("features/crm-and-booking", 0.7),
-    ]
+    skip = SITEMAP_EXCLUDE | _redirected_paths()
     urls = []
-    for path, prio in main_pages:
+    for f in _sitemap_files():
+        loc = _canonical_path(f)
+        if loc is None or loc in skip:
+            continue
+        prio = PRIORITY.get(loc, 0.6 if loc.startswith("/locations/") else 0.7)
         urls.append(
-            f"  <url>\n    <loc>{base}{path}</loc>\n"
-            f"    <lastmod>{today}</lastmod>\n    <priority>{prio}</priority>\n  </url>"
+            f"  <url>\n    <loc>{SITE}{loc}</loc>\n"
+            f"    <lastmod>{_lastmod(f, today)}</lastmod>\n    <priority>{prio}</priority>\n  </url>"
         )
-    for prov, abbr, cities in CITIES:
-        for slug, _name, _intro in cities:
-            urls.append(
-                f"  <url>\n    <loc>{base}locations/{slug}</loc>\n"
-                f"    <lastmod>{today}</lastmod>\n    <priority>0.6</priority>\n  </url>"
-            )
 
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -1150,7 +962,7 @@ def build_sitemap() -> Path:
         + "\n".join(urls) + "\n</urlset>\n"
     )
     path = ROOT / "sitemap.xml"
-    path.write_text(sitemap, encoding="utf-8")
+    write_file(path, sitemap, "\n")  # sitemap.xml is stored with LF in git
     return path
 
 
