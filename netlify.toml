@@ -10,3 +10,537 @@
   from = "/api/contact"
   to = "/.netlify/functions/contact"
   status = 200
+
+# --- 301s for moved/retired pages (generated) ---
+# Local SEO is part of Websites & SEO now (force: the old file may still exist); everything else was deleted.
+[[redirects]]
+  from = "/features/local-seo"
+  to = "/features/website"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/features/local-seo.html"
+  to = "/features/website"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ai-automation"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-automation.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/free-preview"
+  to = "/how"
+  status = 301
+
+[[redirects]]
+  from = "/free-preview.html"
+  to = "/how"
+  status = 301
+
+[[redirects]]
+  from = "/law-firms"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/law-firms.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/locations/abbotsford"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/abbotsford.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/brampton"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/brampton.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/brandon"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/brandon.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/burnaby"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/burnaby.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/camrose"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/camrose.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/charlottetown"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/charlottetown.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/corner-brook"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/corner-brook.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/dartmouth"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/dartmouth.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/fort-mcmurray"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/fort-mcmurray.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/fredericton"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/fredericton.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/gatineau"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/gatineau.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/grande-prairie"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/grande-prairie.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/halifax"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/halifax.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/hamilton"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/hamilton.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/iqaluit"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/iqaluit.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kamloops"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kamloops.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kelowna"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kelowna.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kingston"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kingston.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kitchener"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/kitchener.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/lethbridge"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/lethbridge.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/london"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/london.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/medicine-hat"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/medicine-hat.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/mississauga"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/mississauga.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/moncton"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/moncton.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/montreal"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/montreal.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/moose-jaw"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/moose-jaw.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/nanaimo"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/nanaimo.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ottawa"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ottawa.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/prince-albert"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/prince-albert.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/quebec-city"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/quebec-city.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/regina"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/regina.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/saint-john"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/saint-john.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/saskatoon"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/saskatoon.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/sherbrooke"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/sherbrooke.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/st-johns"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/st-johns.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/steinbach"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/steinbach.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/sudbury"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/sudbury.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/surrey"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/surrey.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/toronto"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/toronto.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/trois-rivieres"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/trois-rivieres.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/vancouver"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/vancouver.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/victoria"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/victoria.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/wetaskiwin"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/wetaskiwin.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/whitehorse"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/whitehorse.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/windsor"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/windsor.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/winnipeg"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/winnipeg.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/yellowknife"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/locations/yellowknife.html"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/skills"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/skills.html"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/vs-answering-services"
+  to = "/features/missed-call-text-back"
+  status = 301
+
+[[redirects]]
+  from = "/vs-answering-services.html"
+  to = "/features/missed-call-text-back"
+  status = 301

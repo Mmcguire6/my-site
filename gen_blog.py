@@ -11,11 +11,18 @@ Outputs:
 
 Self-contained Markdown subset (headings, paragraphs, bold/italic, links,
 inline code, ordered/unordered lists, blockquotes) — no external deps.
+
+Frontmatter: title, slug, title_tag (optional; " | Northern Peak Systems" is
+always appended), description, keyword, category, date, modified (optional;
+feeds dateModified + sitemap lastmod), read_time, cta_eyebrow / cta_title /
+cta_lead (optional). The CTA offer copy and the "Book a Demo" button are shared
+(CTA_OFFER / CTA_BUTTON below) so every post states the same offer.
 """
 from __future__ import annotations
 import re, json, html
 from pathlib import Path
 from datetime import date
+from sync_nav import apply_nav  # header comes from index.html
 
 from gen_locations import CITY_STYLES
 
@@ -25,6 +32,15 @@ OUT = ROOT / "blog"
 OUT.mkdir(exist_ok=True)
 SITE = "https://northernpeaksystems.ca"
 AUTHOR = "Matthew McGuire"
+BRAND = "Northern Peak Systems"
+OG_IMAGE = SITE + "/img/og-image.jpg"   # 1200x630
+BOOK_URL = "../book.html"               # live calendar page
+
+# One offer, stated the same way on every post (owner decision, Oct 2026).
+CTA_OFFER = ("Book a free 15-minute demo and we'll build a free custom preview of your website "
+             "and system, so you can see it working before you decide. The Peak System is "
+             "$297/month flat and live in 7–10 days. No contracts · no setup fees.")
+CTA_BUTTON = f'<a href="{BOOK_URL}" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>'
 
 # ---------------------------------------------------------------------------
 # Markdown (small, sufficient subset)
@@ -110,6 +126,7 @@ def parse_post(path: Path) -> dict:
 # ---------------------------------------------------------------------------
 
 def nav_html() -> str:
+    # Placeholder only: apply_nav() swaps in the live header, mobile menu and footer from index.html.
     return """<header class="nav">
     <div class="wrap nav-inner">
         <a href="../index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
@@ -143,7 +160,7 @@ def nav_html() -> str:
             <a href="../contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
         </div>
     </div>
@@ -164,7 +181,7 @@ def nav_html() -> str:
         <a href="../contact.html"><span class="gold">Contact</span></a>
     </nav>
     <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
         <a href="../contact.html" class="btn btn-ghost">Get in touch</a>
     </div>
 </div>"""
@@ -178,7 +195,7 @@ FOOTER = """<footer class="foot">
             </div>
             <div class="foot-col">
                 <h4>Services</h4>
-                <a href="../index.html#services">AI automation</a>
+                <a href="../index.html#features">Missed Call Recovery</a>
                 <a href="../index.html#services">Web design</a>
                 <a href="../index.html#services">SEO &amp; local search</a>
             </div>
@@ -192,7 +209,7 @@ FOOTER = """<footer class="foot">
             </div>
             <div class="foot-col">
                 <h4>Get started</h4>
-                <a href="../contact.html">Free preview</a>
+                <a href="../book.html">Book a Demo</a>
                 <a href="../contact.html">Contact</a>
                 <a href="../locations.html">Locations</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
@@ -212,8 +229,8 @@ FOOTER = """<footer class="foot">
 NAV_SCRIPT = """<script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
-function openM(){mnav.classList.add('open');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-function closeM(){mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+function openM(){mnav.classList.add('open');mnav.removeAttribute('inert');mnav.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeM(){mnav.classList.remove('open');mnav.setAttribute('inert','');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 burger.addEventListener('click',openM);mclose.addEventListener('click',closeM);
 mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
 
@@ -404,7 +421,11 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:url" content="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{og_image}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,144,400;0,144,500;0,144,600;0,144,700;1,144,500;1,144,600&display=swap" rel="stylesheet">
@@ -422,6 +443,11 @@ HEAD = """<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 """
 
+def page_title(p: dict) -> str:
+    """title_tag (or title) + " | Northern Peak Systems", never doubled."""
+    t = p.get("title_tag") or p["title"]
+    return t if BRAND in t else f"{t} | {BRAND}"
+
 def _plain(text: str) -> str:
     text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
     text = text.replace('**', '').replace('`', '')
@@ -437,6 +463,7 @@ def post_schema(p: dict, url: str) -> str:
         "publisher": {"@type": "Organization", "@id": "https://northernpeaksystems.ca/#org", "name": "Northern Peak Systems",
                        "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "image": {"@type": "ImageObject", "url": OG_IMAGE, "width": 1200, "height": 630},
         "articleSection": p.get("category", "Articles"),
         "keywords": p.get("keyword", ""),
     }]
@@ -465,12 +492,12 @@ def write_post(p: dict) -> Path:
             for q, a in p["faqs"])
         faq_html = f"""<section class="post-faq"><div class="wrap"><p class="eyebrow">FAQ</p><h2>Frequently asked questions</h2><dl>{items}</dl></div></section>"""
 
-    head = HEAD.format(title=html.escape(p.get("title_tag", p["title"] + " | Northern Peak Systems")),
+    head = HEAD.format(title=html.escape(page_title(p)),
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
-                       ld_json=post_schema(p, url), styles=BLOG_CSS)
+                       og_image=OG_IMAGE, ld_json=post_schema(p, url), styles=BLOG_CSS)
     cta_eyebrow = p.get("cta_eyebrow", "See it first")
     cta_title = p.get("cta_title", "Want a site that's <em>fast by default?</em>")
-    cta_body = p.get("cta_body", "Every site we build is hand-coded to score 95–100 on Google PageSpeed out of the box — from $97/month, no long-term contracts. Send a few sentences about your business and you'll get back a working preview, no commitment.")
+    cta_body = (p.get("cta_lead", "") + " " + CTA_OFFER).strip()
     cover_svg = COVER_ICONS.get(p.get("category", "").strip(), COVER_ICONS["_default"])
     body = f"""{nav_html()}
 <main id="main">
@@ -499,15 +526,16 @@ def write_post(p: dict) -> Path:
     <h2>{cta_title}</h2>
     <p>{cta_body}</p>
     <div class="post-cta-actions">
-        <a href="../contact.html" class="btn btn-gold">Book a free preview <span class="arr">→</span></a>
+        {CTA_BUTTON}
         <a href="index.html" class="post-back">← Back to blog</a>
     </div>
 </div></section>
+</main>
 {FOOTER}
 {NAV_SCRIPT}
 </body></html>"""
     out = OUT / f"{p['slug']}.html"
-    out.write_text(head + body, encoding="utf-8")
+    out.write_text(apply_nav(head + body, depth=1), encoding="utf-8")
     return out
 
 def write_index(posts: list) -> Path:
@@ -520,27 +548,36 @@ def write_index(posts: list) -> Path:
         </a>""" for p in posts)
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "@id": SITE + "/blog/#blog",
                      "url": SITE + "/blog/", "name": "Northern Peak Systems Blog",
-                     "description": "Plain-English guides on web design, performance, and SEO for small businesses.",
+                     "description": "Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.",
                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html",
                                     "datePublished": p["date"]} for p in posts]}, ensure_ascii=False, indent=2)
-    head = HEAD.format(title="Web Design &amp; SEO Blog | Northern Peak Systems",
-                       desc="Plain-English guides on web design, website speed, and SEO for small businesses — from Northern Peak Systems in Edmonton.",
-                       canonical=SITE + "/blog/", og_type="website", ld_json=ld, styles=BLOG_CSS)
+    head = HEAD.format(title="Blog: Win More Jobs | Northern Peak Systems",
+                       desc="Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.",
+                       canonical=SITE + "/blog/", og_type="website", og_image=OG_IMAGE, ld_json=ld, styles=BLOG_CSS)
     body = f"""{nav_html()}
 <main id="main">
 <section class="blog-hero"><div class="wrap">
     <p class="eyebrow">The blog</p>
-    <h1>Web design, speed &amp; <em>SEO,</em> in plain language.</h1>
-    <p class="lede">Practical guides for small-business owners who want a website that loads fast, ranks well, and actually brings in work — no jargon, no fluff.</p>
+    <h1>Win more jobs, <em>in plain language.</em></h1>
+    <p class="lede">Practical guides for home service business owners: websites that bring in calls, follow-up that keeps leads from going cold, and reviews that win you the next customer. No jargon, no fluff.</p>
 </div></section>
 <section class="post-list"><div class="wrap">
 {cards}
 </div></section>
+<section class="post-cta"><div class="wrap">
+    <p class="eyebrow">See it first</p>
+    <h2>Want more of your calls to <em>turn into jobs?</em></h2>
+    <p>{CTA_OFFER}</p>
+    <div class="post-cta-actions">
+        {CTA_BUTTON}
+    </div>
+</div></section>
+</main>
 {FOOTER}
 {NAV_SCRIPT}
 </body></html>"""
     out = OUT / "index.html"
-    out.write_text(head + body, encoding="utf-8")
+    out.write_text(apply_nav(head + body, depth=1), encoding="utf-8")
     return out
 
 def update_sitemap(posts: list) -> None:
@@ -552,7 +589,7 @@ def update_sitemap(posts: list) -> None:
     today = date.today().isoformat()
     entries = [f"  <url>\n    <loc>{SITE}/blog/</loc>\n    <lastmod>{today}</lastmod>\n    <priority>0.8</priority>\n  </url>"]
     for p in posts:
-        entries.append(f"  <url>\n    <loc>{SITE}/blog/{p['slug']}.html</loc>\n    <lastmod>{p['date']}</lastmod>\n    <priority>0.7</priority>\n  </url>")
+        entries.append(f"  <url>\n    <loc>{SITE}/blog/{p['slug']}.html</loc>\n    <lastmod>{p.get('modified', p['date'])}</lastmod>\n    <priority>0.7</priority>\n  </url>")
     text = text.replace("</urlset>", "\n".join(entries) + "\n</urlset>")
     sm.write_text(text, encoding="utf-8")
 

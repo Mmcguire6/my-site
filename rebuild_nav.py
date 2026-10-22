@@ -99,6 +99,7 @@ def rebuild(file_path: Path) -> tuple[bool, bool]:
 
 
 def main() -> None:
+    raise SystemExit("Obsolete: the header is now copied from index.html. Run: python sync_nav.py")
     for name in MAIN_PAGES:
         p = ROOT / name
         if not p.exists():

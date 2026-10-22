@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Generate the /features/ sub-pages in the Business Growth System design language.
+"""Generate the /features/ sub-pages in the original feature-page design language.
 
 Run:  python gen_features.py
 Writes one standalone HTML file per feature into features/.
-Edit PAGES below and re-run to regenerate. All copy must stay 100% factual —
-product-truth claims only, no invented stats or testimonials.
+NOTE (Oct 2026): every page in PAGES is now hand-maintained ("custom": True),
+so running this writes nothing. Edit the HTML in features/ directly. The PAGES
+data below is kept in sync with the live naming (The Peak System, Lead
+Management, Reputation Management, etc.) for reference only.
+All copy must stay 100% factual — product-truth claims only, no invented
+stats or testimonials.
 """
 import os
+from sync_nav import apply_nav  # header comes from index.html
 
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "features")
 
@@ -98,12 +103,12 @@ PAGES = [
     {
         "slug": "missed-call-text-back",
         "custom": True,  # hand-built page; excluded from regeneration
-        "label": "Missed Call Text-Back",
+        "label": "Missed Call Recovery",
         "icon": "phone",
-        "short": "Instantly respond to missed calls by text, 24/7.",
-        "title": "Missed Call Text-Back for Local Business | Northern Peak Systems",
-        "desc": "Every missed call gets an instant text-back, so the lead books with you instead of calling the next name on the list. Works 24/7, after hours and weekends. Part of the $297/mo Business Growth System.",
-        "eyebrow": "Included · Missed Call Text-Back",
+        "short": "Text back every missed caller in seconds, so the job stays yours.",
+        "title": "Missed Call Text-Back for Home Service Businesses | Northern Peak Systems",
+        "desc": "Every missed call gets an instant text-back, so the lead books with you instead of calling the next name on the list. Works 24/7, after hours and weekends. Part of The Peak System, $297/month.",
+        "eyebrow": "Included · Missed Call Recovery",
         "h1": 'Miss a call? It <span class="gold">texts them back.</span>',
         "sub": "Everyone misses calls. Few text back. Yours does — instantly — so the lead books with you instead of calling the next name on their list.",
         "split_head": "The lead doesn’t wait. Neither should your reply.",
@@ -142,19 +147,19 @@ PAGES = [
             ("Does it work with my existing number?", "Yes — it runs on the number you already have. Nothing changes for your customers."),
         ],
         "cta": "Try it: call, hang up, watch the text arrive.",
-        "cta_sub": "Book a call and watch the text-back fire in real time.",
+        "cta_sub": "Book a demo and watch the text-back fire in real time.",
     },
     {
         "slug": "website",
         "custom": True,  # hand-built page; excluded from regeneration
         "hero_art": True,
         "hero_bg": "custom-websites-hero.webp",
-        "label": "Website",
+        "label": "Websites & SEO",
         "icon": "globe",
-        "short": "A fast, hand-built website that converts visitors into leads.",
-        "title": "Custom Small Business Websites That Convert · Canada | Northern Peak Systems",
-        "desc": "A hand-coded, mobile-first website built around one job: turning visitors into booked appointments. Every form and chat becomes a text conversation. Hosting, updates, and local SEO included.",
-        "eyebrow": "Included · Website",
+        "short": "A fast website built free, with local SEO so nearby customers can find you.",
+        "title": "Websites & SEO | Northern Peak Systems",
+        "desc": "Your website built free, plus hosting, security, unlimited edits and local SEO for $97/month (Base System). Live in 7–10 days. Want everything? The Peak System is $297/month.",
+        "eyebrow": "Websites & SEO",
         "h1": 'A website that turns visitors into <span class="gold">texts.</span>',
         "sub": "Fast, mobile, and hand-built for you — every button, form, and chat is wired to text you and the lead, not bury a message in an inbox nobody checks.",
         "split_head": "Hand-coded. Not a template on rented software.",
@@ -186,38 +191,38 @@ PAGES = [
             ("It starts converting", "Every button and form is wired to the text-back and follow-up system from day one."),
         ],
         "faq": [
-            ("I already have a website. Do I have to replace it?", "No. We can build you a new site as part of the $297 — or wire the automations onto the site you’ve got."),
+            ("I already have a website. Do I have to replace it?", "No. We can build you a new site for free — or wire the automations onto the site you’ve got."),
             ("Who owns the website?", "It’s built for your business and runs as part of your system. No long-term contract — if you leave, you keep your domain and content."),
             ("Are changes extra?", "No. Updates and changes are included in the flat monthly price — just ask."),
         ],
         "cta": "See what a site built to convert looks like.",
-        "cta_sub": "Book a call and we’ll walk you through real builds.",
+        "cta_sub": "Book a demo and we’ll walk you through what we’d build for you.",
     },
     {
         "slug": "review-automation",
-        "custom": True,
-        "label": "Review Automation",
+        "custom": True,  # hand-built page (Reputation Management); excluded from regeneration
+        "label": "Reputation Management",
         "icon": "star",
-        "short": "Get more 5-star Google reviews on autopilot.",
-        "title": "Google Review Automation for Local Business | Northern Peak Systems",
-        "desc": "The system asks every happy customer for a Google review at the right moment and reminds them until they leave it — so your profile fills up on autopilot and you outrank competitors.",
-        "eyebrow": "Included · Review Automation",
-        "h1": 'Turn happy customers into <span class="gold">five-star reviews.</span>',
-        "sub": "The system asks for the review at the right moment and reminds them until they leave it — so your Google profile fills up on autopilot.",
+        "short": "Ask every customer for a Google review after the job, automatically.",
+        "title": "Reputation Management | Northern Peak Systems",
+        "desc": "After every job, each customer gets the same friendly text with your Google review link, plus a reminder. More reviews, more trust. Part of The Peak System.",
+        "eyebrow": "Included · Reputation Management",
+        "h1": 'Every completed job. <span class="gold">Another opportunity to build trust.</span>',
+        "sub": "Every customer gets the same friendly request with your Google review link at the right moment, plus a gentle reminder — no filtering, no screening.",
         "split_head": "Reviews win the customers you never meet.",
-        "split_copy": "Before anyone calls you, they compare you. A steady stream of recent five-star reviews is what makes them pick your name — and the reason most businesses don’t have one is simply that nobody asks. The system asks, politely and persistently, every time.",
+        "split_copy": "Before anyone calls you, they compare you. A steady stream of recent reviews helps them pick your name — and often the only thing missing is that nobody asked. The system asks every customer, politely, every time.",
         "checks": [
             "Asks automatically, at the right time",
             "Guides customers straight to your Google profile",
-            "Gentle reminders until the review is left",
+            "A gentle reminder if they forget",
             "Every review request goes out by text",
-            "More recent reviews, better local ranking",
+            "Same request for every customer — no review gating",
             "Works for past customers too — not just new ones",
         ],
         "mock": """
 <div class="mock">
   <div class="mcard">
-    <div class="lbl">%(star)s New Google review</div>
+    <div class="lbl">%(star)s Example Google review · demo content</div>
     <div class="stars">★★★★★</div>
     <p class="quote">“Answered right away and booked me the same day. Couldn’t recommend them more.”</p>
     <div class="badge">%(check)s Posted to your profile</div>
@@ -229,25 +234,26 @@ PAGES = [
 </div>""" % {"star": ic("star"), "chat": ic("chat"), "check": CHECK},
         "steps": [
             ("The job wraps up", "You mark the customer done — or the system picks it up from your calendar."),
-            ("The ask goes out", "A friendly text with your direct Google review link, followed by gentle reminders until it’s done."),
-            ("Your profile compounds", "Every new review makes the next customer’s choice easier — and helps your local ranking."),
+            ("The ask goes out", "Every customer gets the same friendly text with your direct Google review link, followed by a gentle reminder."),
+            ("Your profile builds trust", "Every new review makes the next customer’s choice easier."),
         ],
         "faq": [
             ("Do the requests annoy customers?", "No — the messages are short, polite, and spaced out. Happy customers usually just need the link and a nudge."),
             ("Is this allowed by Google?", "Asking customers for honest reviews is fine. We don’t buy reviews, post fake ones, or offer incentives — that’s against Google’s rules and we don’t touch it."),
             ("Can it ask my past customers too?", "Yes — we can run a catch-up campaign to your existing customer list when you launch."),
         ],
-        "cta": "Start stacking five-star reviews.",
-        "cta_sub": "Book a call and see the review engine running.",
+        "cta": "Build trust after every job.",
+        "cta_sub": "Book a demo and see review requests in action.",
     },
     {
         "slug": "lead-follow-up",
-        "label": "Lead Follow-Up",
+        "custom": True,  # hand-built page (Estimate Follow-Up, Oct 2026); excluded from regeneration
+        "label": "Estimate Follow-Up",
         "icon": "chat",
-        "short": "Automated SMS & email follow-up that converts more leads.",
-        "title": "Automated Lead Follow-Up by SMS & Email | Northern Peak Systems",
-        "desc": "Every lead gets an instant text, every unclosed quote gets chased, and it all lives in one pipeline — so nothing falls through the cracks. Part of the $297/mo Business Growth System.",
-        "eyebrow": "Included · Lead Follow-Up",
+        "short": "Friendly check-ins on outstanding quotes until the customer replies.",
+        "title": "Estimate Follow-Up | Northern Peak Systems",
+        "desc": "Every lead gets an instant text, every unclosed quote gets a friendly follow-up, and it all lives in one pipeline — so nothing falls through the cracks. Part of The Peak System, $297/month.",
+        "eyebrow": "Included · Estimate Follow-Up",
         "h1": 'Chase the leads most businesses <span class="gold">let slip.</span>',
         "sub": "Every lead gets an instant text, unclosed business gets followed up, and it all lives in one pipeline so nothing falls through the cracks.",
         "split_head": "Speed wins the lead. Persistence wins the job.",
@@ -285,17 +291,17 @@ PAGES = [
             ("What counts as a lead?", "Calls, missed calls, website forms, and chat messages all flow into the same pipeline automatically."),
         ],
         "cta": "Stop losing the leads you already paid for.",
-        "cta_sub": "Book a call and watch the follow-up engine work.",
+        "cta_sub": "Book a demo and watch estimate follow-up work.",
     },
     {
         "slug": "local-seo",
-        "custom": True,  # hand-built page; excluded from regeneration
-        "label": "Local SEO",
+        "custom": True,  # hand-built page; excluded from regeneration. Local SEO is now part of Websites & SEO (website.html) — link there, not here.
+        "label": "Local SEO (part of Websites & SEO)",
         "icon": "search",
-        "short": "Rank higher on Google and get found by local customers.",
-        "title": "Local SEO & Google Business Profile for Alberta Small Business | Northern Peak Systems",
-        "desc": "On-site SEO, technical foundations, and a fully optimized Google Business Profile — built in from launch so local customers actually find you. Included in the $297/mo system.",
-        "eyebrow": "Included · Local SEO",
+        "short": "Local SEO so nearby customers can find you — part of Websites & SEO.",
+        "title": "Local SEO & Google Business Profile for Home Service Businesses | Northern Peak Systems",
+        "desc": "On-site SEO, technical foundations, and an optimized Google Business Profile — built in from launch so local customers can find you. Included in the Base System ($97/month) and The Peak System ($297/month).",
+        "eyebrow": "Websites & SEO · Local SEO",
         "h1": 'Get found by the customers <span class="gold">already searching.</span>',
         "sub": "On-site SEO and a fully optimized Google Business Profile, built in from day one — so when someone nearby searches for what you do, you’re the one they find.",
         "split_head": "Local search is where the buying happens.",
@@ -305,7 +311,7 @@ PAGES = [
             "Google Business Profile set up and optimized",
             "Fast, mobile-first site — Google rewards it",
             "Local keywords for your city and services",
-            "Reviews feed your ranking (see Review Automation)",
+            "Reviews help your profile (see Reputation Management)",
             "Honest scope: no backlink schemes, no snake oil",
         ],
         "mock": """
@@ -329,47 +335,48 @@ PAGES = [
         ],
         "faq": [
             ("Do you guarantee first-page rankings?", "No — and be wary of anyone who does. We build the real foundations and we’ll tell you straight what’s realistic for your market."),
-            ("Is this included or an add-on?", "The on-site SEO and Google Business Profile optimization are included in the $297. No surprise line items."),
+            ("Is this included or an add-on?", "Local SEO foundations are included in both plans — the Base System ($97/month) and The Peak System ($297/month). No surprise line items."),
             ("How long until I see movement?", "Local results usually take weeks to months depending on competition. Reviews are the fastest lever — which is why the review engine is part of the same system."),
         ],
         "cta": "Be the business local searchers find first.",
-        "cta_sub": "Book a call and we’ll look at your local market together.",
+        "cta_sub": "Book a demo and we’ll look at your local market together.",
     },
     {
         "slug": "marketing-campaigns",
-        "label": "Marketing Campaigns",
+        "custom": True,  # hand-built page (Customer Retention, Oct 2026); excluded from regeneration
+        "label": "Customer Retention",
         "icon": "send",
-        "short": "One-click SMS & email campaigns that bring customers back.",
-        "title": "One-Click SMS & Email Marketing Campaigns | Northern Peak Systems",
-        "desc": "Referral, repeat-customer, and seasonal campaigns you send with one click — texted and emailed to the customer list you already have. Included in the $297/mo Business Growth System.",
-        "eyebrow": "Included · Marketing Campaigns",
+        "short": "Bring customers back with win-back campaigns and reminders. Referrals coming soon.",
+        "title": "Customer Retention | Northern Peak Systems",
+        "desc": "Win-back, reminder, and seasonal campaigns you send in one click — to the customer list you already have. Part of The Peak System, $297/month.",
+        "eyebrow": "Included · Customer Retention",
         "h1": 'Your past customers are your <span class="gold">cheapest leads.</span>',
-        "sub": "One-click campaigns bring back past customers and turn them into referrals — texted and emailed to the list you already own.",
+        "sub": "One-click campaigns and reminders bring past customers back for repeat work — texted and emailed to the list you already own. Referral campaigns coming soon.",
         "split_head": "The list you already have is worth money.",
-        "split_copy": "Every past customer is a warm lead for repeat work and referrals — most businesses just never reach out. We pre-build the campaigns with you, and when it’s time, sending one takes a single click.",
+        "split_copy": "Every past customer is a warm lead for repeat work — but only if you stay in touch. We pre-build the campaigns with you, and when it’s time, sending one takes a single click.",
         "checks": [
-            "One-click referral campaigns",
-            "Repeat-customer win-back campaigns",
-            "Seasonal and promo sends",
-            "Goes out by text and email",
+            "One-click win-back campaigns",
+            "Reminders that bring customers back",
+            "Seasonal and promo sends by text and email",
             "Written with you — sounds like your business",
             "Replies land in your inbox with phone alerts",
+            "Referral campaigns — coming soon",
         ],
         "mock": """
 <div class="mock">
   <div class="mcard note">
-    <div class="lbl">%(send)s Referral campaign · sent</div>
-    <p>“Know someone who needs us? Send them our way.” — texted to your past-customer list in one tap.</p>
+    <div class="lbl">%(send)s Seasonal campaign · sent</div>
+    <p>“Spring spots are filling up — want us to book you in again this year?” — texted to your past-customer list in one tap.</p>
   </div>
   <div class="mcard">
-    <div class="lbl">%(chat)s Replies</div>
-    <div class="krow"><span>Mike T.</span><b>“My neighbour needs a quote”</b></div>
+    <div class="lbl">%(chat)s Example replies · demo content</div>
+    <div class="krow"><span>Mike T.</span><b>“Yes — book me in”</b></div>
     <div class="krow"><span>Dana W.</span><b>“Can you come back this fall?”</b></div>
     <div class="badge">%(check)s Alerts sent to your phone</div>
   </div>
 </div>""" % {"send": ic("send"), "chat": ic("chat"), "check": CHECK},
         "steps": [
-            ("We build the campaigns with you", "Referral, win-back, and seasonal messages written in your voice during the system build."),
+            ("We build the campaigns with you", "Win-back, reminder, and seasonal messages written in your voice during the system build."),
             ("You click send", "Pick the campaign, pick the list, one click. That’s genuinely the whole job."),
             ("The replies come to you", "Every response lands in your inbox and pings your phone — ready to book."),
         ],
@@ -378,18 +385,18 @@ PAGES = [
             ("Is this compliant with Canadian anti-spam rules?", "We set campaigns up to message your own customers and honour opt-outs — and we’ll flag anything that wouldn’t fly under CASL."),
             ("Can I write my own campaigns?", "Absolutely. We’ll load your words in — or draft them for you and you approve."),
         ],
-        "cta": "Turn your customer list into this month’s revenue.",
-        "cta_sub": "Book a call and we’ll sketch your first campaign together.",
+        "cta": "Turn your customer list into repeat work.",
+        "cta_sub": "Book a demo and we’ll sketch your first campaign together. Free, 15 minutes.",
     },
     {
         "slug": "crm-and-booking",
         "custom": True,  # hand-built page; excluded from regeneration
-        "label": "CRM & Booking",
+        "label": "Lead Management",
         "icon": "cal",
         "short": "One pipeline for every lead, plus booking synced to your calendar.",
-        "title": "Simple CRM & Appointment Booking for Small Business | Northern Peak Systems",
-        "desc": "Every call, text, and form in one pipeline — plus appointment booking that syncs with your calendar and reminds customers so they actually show up. Included in the $297/mo system.",
-        "eyebrow": "Included · CRM & Booking",
+        "title": "Lead Management | Northern Peak Systems",
+        "desc": "Every call, text, and form in one pipeline, plus appointment booking that syncs to your calendar and reminds customers. Part of The Peak System, $297/month.",
+        "eyebrow": "Included · Lead Management",
         "h1": 'One pipeline. Every lead, call, and <span class="gold">booking.</span>',
         "sub": "Every conversation in one place, every appointment synced to your real calendar, and reminders that make sure customers actually show up.",
         "split_head": "Know where every lead stands, at a glance.",
@@ -427,7 +434,7 @@ PAGES = [
             ("Can my staff use it too?", "Yes — whoever answers leads can work out of the same inbox and pipeline."),
         ],
         "cta": "Never lose track of a lead again.",
-        "cta_sub": "Book a call and see the pipeline fill itself.",
+        "cta_sub": "Book a demo and see the pipeline fill itself.",
     },
 ]
 
@@ -637,8 +644,9 @@ ARROW_SVG = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
              'stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>')
 
 
-M2_CARDS = [('website', 'website', 'Custom Website', 'Lead-generating websites built to convert visitors into customers.'), ('review-automation', 'reviews', '5-Star Review Funnel', 'Get more five-star reviews on autopilot and build instant trust.'), ('local-seo', 'seo', 'Local SEO', 'Show up at the top of Google when local customers are searching.'), ('missed-call-text-back', 'textback', 'Missed Call Text Back', 'Never miss another lead. We text back missed calls instantly.'), ('crm-and-booking', 'crm', 'CRM &amp; Booking', 'Manage leads, book jobs, and keep everything organized in one place.'), ('lead-follow-up', 'followup', 'Lead Follow-Up', 'Automated follow-ups via text so you stay top of mind and win more jobs.'), ('marketing-campaigns', 'marketing', 'Marketing Campaigns', 'One-click campaigns that bring past customers back and fill your pipeline.')]
-M2_STRIP = [('website', 'Website'), ('search', 'SEO'), ('reviews', 'Reviews'), ('textback', 'Text Back'), ('crm', 'CRM'), ('followup', 'Follow-Up'), ('marketing', 'Marketing')]
+# Legacy mega-menu data (the live nav is synced from index.html by sync_nav.apply_nav).
+M2_CARDS = [('missed-call-text-back', 'textback', 'Missed Call Recovery', 'Text back every missed caller in seconds, so the job stays yours.'), ('lead-follow-up', 'followup', 'Estimate Follow-Up', 'Friendly check-ins on outstanding quotes until the customer replies.'), ('website', 'website', 'Websites &amp; SEO', 'Get discovered online and turn website visitors into new opportunities.'), ('crm-and-booking', 'crm', 'Lead Management', 'Capture inquiries, manage conversations, and keep every opportunity organized.'), ('review-automation', 'reviews', 'Reputation Management', 'Generate Google reviews and build trust with future customers.'), ('marketing-campaigns', 'marketing', 'Customer Retention', 'Bring customers back with reactivation campaigns and reminders. Referrals coming soon.')]
+M2_STRIP = [('website', 'Website'), ('search', 'SEO'), ('reviews', 'Reviews'), ('textback', 'Text Back'), ('crm', 'Leads'), ('followup', 'Follow-Up'), ('marketing', 'Retention')]
 M2_ICONS = {'website': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>', 'reviews': '<path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19.2l1-5.8L3.5 9.2l5.9-.9z"/>', 'seo': '<path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>', 'textback': '<path d="M4 5a2 2 0 0 1 2-2h2l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 4 5z"/>', 'crm': '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/>', 'followup': '<path d="M21 11.5a7.5 7.5 0 0 1-10.9 6.7L4 20l1.8-5.1A7.5 7.5 0 1 1 21 11.5z"/>', 'marketing': '<path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/>', 'check': '<path d="M20 6 9 17l-5-5"/>', 'search': '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'}
 
 def m2svg(name):
@@ -656,7 +664,7 @@ def features_dd(current_slug):
     return ('<div class="mega2-grid">\n'
             '                        <aside class="mega2-rail">\n'
             '                            <span class="m2-eyebrow">The Complete Solution</span>\n'
-            '                            <div class="m2-title">Business <span>Growth</span> System</div>\n'
+            '                            <div class="m2-title">The <span>Peak</span> System</div>\n'
             '                            <p>Everything works together to attract more leads, build trust, and book more jobs.</p>\n'
             '                            <a href="../how.html" class="m2-btn">See How It Works <span class="arr">&rarr;</span></a>\n'
             '                        </aside>\n'
@@ -715,7 +723,7 @@ def nav_html(current_slug):
             <a href="../contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-            <a href="../contact.html" class="btn btn-line">Book a Call</a>
+            <a href="../book.html" class="btn btn-line">Book a Demo</a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -740,7 +748,7 @@ def nav_html(current_slug):
         <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
     </div>
 </div>""" % {"chev": DD_CHEVRON, "feats": features_dd(current_slug)}
 
@@ -750,7 +758,7 @@ FOOTER = """<footer class="foot">
         <div class="foot-grid">
             <div class="foot-brand">
                 <span class="brand"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></span>
-                <p class="foot-copy">Growth systems that help service businesses capture more leads and grow on autopilot.</p>
+                <p class="foot-copy">Websites, follow-up and reviews for home service businesses. One flat monthly price, no contract.</p>
             </div>
             <div class="foot-col">
                 <h4>Company</h4>
@@ -782,7 +790,8 @@ FOOTER = """<footer class="foot">
         </div>
     </div>
 </footer>""" % {"feat_links": "\n                ".join(
-    '<a href="/features/%s.html">%s</a>' % (p["slug"], esc(p["label"])) for p in PAGES[:5]
+    '<a href="/features/%s.html">%s</a>' % (p["slug"], esc(p["label"])) for p in PAGES
+    if p["slug"] != "local-seo"  # Local SEO is part of Websites & SEO now
 )}
 
 JS = """<script>
@@ -813,7 +822,7 @@ def steps_html(page):
 def xlinks_html(current_slug):
     cards = []
     for p in PAGES:
-        if p["slug"] == current_slug:
+        if p["slug"] in (current_slug, "local-seo"):  # local SEO → Websites & SEO
             continue
         cards.append("""<a class="xlink" href="/features/%s.html">%s<div><b>%s</b><span>%s</span></div></a>"""
                      % (p["slug"], ic(p["icon"]), esc(p["label"]), esc(p["short"])))
@@ -855,7 +864,7 @@ def page_html(page):
       "serviceType": "%(label)s",
       "description": "%(desc)s",
       "provider": { "@id": "https://northernpeaksystems.ca/#org" },
-      "areaServed": { "@type": "Country", "name": "Canada" },
+      "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
       "url": "%(url)s"
     },
     {
@@ -921,9 +930,9 @@ def page_html(page):
                 <h1>%(h1)s</h1>
                 <p class="fhero-sub">%(sub)s</p>
                 <div class="fhero-actions">
-                    <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+                    <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
                 </div>
-                <p class="fhero-note"><b>Included in the $297/mo system</b> &middot; No setup fee &middot; Cancel anytime</p>
+                <p class="fhero-note"><b>Included in The Peak System ($297/month)</b> &middot; No setup fees &middot; No contracts</p>
             </div>
 %(hero_visual)s
         </div>
@@ -984,7 +993,7 @@ def page_html(page):
     <div class="wrap">
         <div class="xlink-head">
             <span class="eyebrow">One system. Everything works together.</span>
-            <h2 class="h-lg">The rest of your growth system.</h2>
+            <h2 class="h-lg">The rest of The Peak System.</h2>
         </div>
         <div class="xlink-grid">
             %(xlinks)s
@@ -998,7 +1007,7 @@ def page_html(page):
         <h2>%(cta)s</h2>
         <p>%(cta_sub)s</p>
         <div class="fcta-actions">
-            <a href="../contact.html" class="btn btn-gold">Book a Call <span class="arr">&rarr;</span></a>
+            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
         </div>
     </div>
 </section>
@@ -1036,7 +1045,7 @@ def main():
             continue
         path = os.path.join(OUT_DIR, page["slug"] + ".html")
         with open(path, "w", encoding="utf-8") as f:
-            f.write(page_html(page))
+            f.write(apply_nav(page_html(page), depth=1))
         print("wrote", path)
 
 
