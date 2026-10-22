@@ -1273,12 +1273,12 @@ def build_locations_index() -> Path:
 # /work/* and /campground/* are never scanned (prospect previews, robots-disallowed).
 
 SITE = "https://northernpeaksystems.ca"
-ROOT_ORDER = ["index.html", "about.html", "how.html", "pricing.html", "faq.html",
+ROOT_ORDER = ["index.html", "platform.html", "about.html", "how.html", "pricing.html", "faq.html",
               "locations.html", "contact.html", "book.html"]
 FEATURE_ORDER = ["website", "missed-call-text-back", "review-automation", "lead-follow-up",
                  "marketing-campaigns", "crm-and-booking"]
 PRIORITY = {
-    "/": 1.0, "/about": 0.8, "/how": 0.75, "/pricing": 0.9, "/faq": 0.7,
+    "/": 1.0, "/platform": 0.85, "/about": 0.8, "/how": 0.75, "/pricing": 0.9, "/faq": 0.7,
     "/locations": 0.85, "/contact": 0.8, "/book": 0.8, "/blog/": 0.8,
     "/features/website": 0.75, "/features/missed-call-text-back": 0.75,
     "/features/review-automation": 0.75, "/features/lead-follow-up": 0.7,
