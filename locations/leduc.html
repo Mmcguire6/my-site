@@ -74,6 +74,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do I need a Leduc business licence if I'm based in Edmonton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The City of Leduc says every business operating in Leduc needs a City business licence. A one-year non-resident licence costs $390, or $195 if you apply after October 1."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Leduc?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +304,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -687,17 +714,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Leduc.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown Leduc, Nisku, Beaumont, and the airport corridor &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Leduc or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Leduc at a glance</span>
+        <h2 class="section-h">A record building year <em>next door to the airport.</em></h2>
+        <p class="section-lede">Leduc sits next door to Edmonton International Airport along Highway 2, about 15 minutes south of Edmonton, and 2025 was its biggest building year yet.</p>
+        <ul class="glance">
+            <li><b>1,017</b><span>new homes in 2025's building permits, a record year</span><small>Source: <a href="https://www.leduc.ca/wp-content/uploads/2026/05/Leduc-2025-Annual-Monitoring-Report.pdf" target="_blank" rel="noopener">City of Leduc, 2025 Annual Monitoring Report</a></small></li>
+            <li><b>+13.7%</b><span>population growth from 2016 to 2021, to 34,094 people</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811016&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Leduc</a></small></li>
+            <li><b>49%</b><span>of Leduc's homes were built in 2006 or later (2021 Census)</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811016&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Leduc</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>New neighbourhoods, new homeowners</h3>
+                <p>The City's 2025 Annual Monitoring Report counts 1,331 building permits worth $331 million, and 88% of the year's new homes went into Woodbend, West Creek Estates, Black Stone, Meadowview Park and Southfork. Four more neighbourhoods opened: Fraser, Grayson Estates, Anderson and Leduc Landing.</p>
+                <p class="local-src">Source: <a href="https://www.leduc.ca/wp-content/uploads/2026/05/Leduc-2025-Annual-Monitoring-Report.pdf" target="_blank" rel="noopener">City of Leduc, 2025 Annual Monitoring Report</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Beaumont is growing even faster</h3>
+                <p>Next door, Beaumont went from 17,457 people in 2016 to 20,888 in 2021, and the Government of Alberta estimates 26,305 for 2025, up 6.32% in a single year.</p>
+                <p class="local-src">Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811013&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Beaumont</a> &middot; <a href="https://regionaldashboard.alberta.ca/region/beaumont/population/" target="_blank" rel="noopener">Government of Alberta, Regional Dashboard: Beaumont</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Cold that doesn't keep office hours</h3>
+                <p>At the Edmonton International Airport weather station next door, Environment Canada's 1981&ndash;2010 climate normals average about 37 days a year with lows below -20°C and about 10 below -30°C. No-heat and frozen-pipe calls come whenever they come, and a text back within seconds lets the homeowner know you've seen it.</p>
+                <p class="local-src">Source: <a href="https://api.weather.gc.ca/collections/climate-normals/items?CLIMATE_IDENTIFIER=3012205&amp;f=json" target="_blank" rel="noopener">Environment and Climate Change Canada, Climate Normals</a></p>
+            </article>
+            <article class="local-card">
+                <h3>A licence for every business</h3>
+                <p>Every business operating in Leduc needs a City business licence; the non-resident licence for out-of-town businesses is $390 a year. Safety Codes permits are required for electrical, gas, plumbing and HVAC work, contractors apply through the City's CityView portal, and decks 0.6 m or higher need both a development permit and a building permit.</p>
+                <p class="local-src">Sources: <a href="https://leduc.ca/business-licences-permits" target="_blank" rel="noopener">City of Leduc, Business Licences</a> &middot; <a href="https://www.leduc.ca/residents/housing-building-development/permits-licences-inspections" target="_blank" rel="noopener">City of Leduc, Permits, Licences &amp; Inspections</a> &middot; <a href="https://www.leduc.ca/wp-content/uploads/2025/02/Leduc-Deck-Brochure.pdf" target="_blank" rel="noopener">City of Leduc, Building a Deck brochure</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Leduc:</b> downtown Leduc, Woodbend, West Creek Estates, Black Stone, Meadowview Park and Southfork, plus Beaumont, Nisku and the airport corridor.</p>
     </div>
 </section>
 
@@ -736,22 +786,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Leduc businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Leduc look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Leduc build <em>process.</em></h2>
@@ -774,14 +810,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Leduc pricing, <em>simplified.</em></h2>
@@ -805,11 +841,15 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Leduc <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do I need a Leduc business licence if I'm based in Edmonton?</dt>
+                <dd>Yes. The City of Leduc says every business operating in Leduc needs a City business licence. A one-year non-resident licence costs $390, or $195 if you apply after October 1.<span class="faq-src">Source: <a href="https://leduc.ca/business-licences-permits" target="_blank" rel="noopener">City of Leduc, Business Licences</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Leduc?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in Leduc proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +871,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Leduc.</em></h2>

@@ -1,5 +1,5 @@
 ---
-title: 5 Ways to Stop Losing Jobs to Missed Calls (and What Each One Costs You)
+title: 5 Ways to Stop Losing Jobs to Missed Calls
 slug: stop-losing-jobs-to-missed-calls
 title_tag: 5 Ways to Stop Losing Jobs to Missed Calls
 description: About 1 in 4 calls to home-service businesses go unanswered. Here's what a missed call costs you, and 5 ways to stop losing those jobs.

@@ -74,6 +74,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do I need an Airdrie business licence if I'm based in Calgary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The City of Airdrie says contractors working in Airdrie need a City business licence and valid trade certificates. The non-resident licence is $503 a year (half price from July 1), against $165 for businesses based in Airdrie."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Airdrie?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +304,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -687,17 +714,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Airdrie.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown, Bayside, the QE2 corridor, and the bedroom communities north of Calgary &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Airdrie or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Airdrie at a glance</span>
+        <h2 class="section-h">93,957 people and counting. <em>Most of the houses are new.</em></h2>
+        <p class="section-lede">Airdrie's own census counted 93,957 residents in April 2026, and the City calls itself the fastest-growing city in Alberta. Most homes here are young and owner-occupied, and the city sits on the corridor the Insurance Bureau of Canada calls Hailstorm Alley.</p>
+        <ul class="glance">
+            <li><b>93,957</b><span>residents at Airdrie's April 2026 census, up 4.35% in a year</span><small>Source: <a href="https://www.airdrie.ca/index.cfm?serviceID=1965" target="_blank" rel="noopener">City of Airdrie, Census results</a></small></li>
+            <li><b>1,623</b><span>new-home permits issued by the City in 2025</span><small>Source: <a href="https://www.airdrie.ca/getDocument.cfm?ID=13033" target="_blank" rel="noopener">City of Airdrie, Census 2026 results</a></small></li>
+            <li><b>73%</b><span>of homes were built in 2001 or later (2021 Census)</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054806021&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Airdrie</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>Young homes, new owners</h3>
+                <p>About 73% of Airdrie's homes were built in 2001 or later, and about 79% of households own their home. The City issued 1,623 new-home permits in 2025 and forecasts 134,710 residents by 2034. New houses usually still need decks, fences, landscaping and basement development.</p>
+                <p class="local-src">Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054806021&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Airdrie</a> &middot; <a href="https://www.airdrie.ca/getDocument.cfm?ID=13033" target="_blank" rel="noopener">City of Airdrie, Census 2026 results</a> &middot; <a href="https://www.airdrie.ca/index.cfm?serviceID=2324" target="_blank" rel="noopener">City of Airdrie, Population growth</a></p>
+            </article>
+            <article class="local-card">
+                <h3>In Hailstorm Alley</h3>
+                <p>The Insurance Bureau of Canada describes Hailstorm Alley as running from High River, just south of Calgary, north to central Alberta. The June 13, 2020 hailstorm hit Calgary, Airdrie and Rocky View County, causing almost $1.2 billion in insured damage, and IBC says Alberta has had a major hailstorm every year for the past decade.</p>
+                <p class="local-src">Sources: <a href="https://www.ibc.ca/news-insights/in-focus/alberta-continues-to-see-large-scale-impacts-from-hailstorms" target="_blank" rel="noopener">Insurance Bureau of Canada, Oct 10, 2024</a> &middot; <a href="https://www.ibc.ca/news-insights/news/insurers-to-pay-a-record-1-2-billion-to-albertans-recovering-from-calgary-hailstorm" target="_blank" rel="noopener">Insurance Bureau of Canada, Jul 8, 2020</a> &middot; <a href="https://www.ibc.ca/news-insights/news/protect-your-property-albertans-urged-to-prepare-for-2026-hail-season" target="_blank" rel="noopener">Insurance Bureau of Canada, Jun 23, 2026</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Licences on both sides of the city line</h3>
+                <p>Contractors working in Airdrie need valid trade certificates and a City of Airdrie business licence: $165 a year if you're based in Airdrie, $503 if you're not, and half price from July 1. Airdrie trades working in Calgary need a Calgary business licence too.</p>
+                <p class="local-src">Sources: <a href="https://www.airdrie.ca/index.cfm?serviceID=2327" target="_blank" rel="noopener">City of Airdrie, Business licence fees</a> &middot; <a href="https://www.airdrie.ca/index.cfm?serviceID=3007" target="_blank" rel="noopener">City of Airdrie, Gas permits</a> &middot; <a href="https://www.calgary.ca/for-business/licences/builders-contractors.html" target="_blank" rel="noopener">City of Calgary, Open a contractor business</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Permits for the everyday jobs</h3>
+                <p>Installing or relocating a hot water tank needs a permit, but a like-for-like replacement doesn't. Installing or replacing a furnace needs a gas permit, and underground sprinkler systems need a permit plus a backflow device that's inspected every year.</p>
+                <p class="local-src">Sources: <a href="https://www.airdrie.ca/index.cfm?serviceID=3008" target="_blank" rel="noopener">City of Airdrie, Plumbing, hot water tanks and irrigation</a> &middot; <a href="https://www.airdrie.ca/index.cfm?serviceID=3007" target="_blank" rel="noopener">City of Airdrie, Gas permits</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Airdrie:</b> Reunion, Sagewood, Kings Heights, Coopers Crossing, Bayside, Ravenswood, Windsong and Old Town, new communities like Southwinds, and nearby Crossfield, Carstairs and Irricana.</p>
     </div>
 </section>
 
@@ -736,22 +786,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Airdrie businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Airdrie look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Airdrie build <em>process.</em></h2>
@@ -774,14 +810,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Airdrie pricing, <em>simplified.</em></h2>
@@ -805,11 +841,15 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Airdrie <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do I need an Airdrie business licence if I'm based in Calgary?</dt>
+                <dd>Yes. The City of Airdrie says contractors working in Airdrie need a City business licence and valid trade certificates. The non-resident licence is $503 a year (half price from July 1), against $165 for businesses based in Airdrie.<span class="faq-src">Sources: <a href="https://www.airdrie.ca/index.cfm?serviceID=2327" target="_blank" rel="noopener">City of Airdrie, Business licence fees</a> &middot; <a href="https://www.airdrie.ca/index.cfm?serviceID=3007" target="_blank" rel="noopener">City of Airdrie, Gas permits</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Airdrie?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in Airdrie proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +871,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Airdrie.</em></h2>

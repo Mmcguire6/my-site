@@ -74,6 +74,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do I need a Red Deer business licence if I'm based in Lacombe or Sylvan Lake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The City of Red Deer requires a business licence from anyone providing goods or services in the city, including contractors coming in from out of town. A full-year non-resident licence is $496.20 in 2026, against $127.65 for a business based in Red Deer."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Red Deer?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +304,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -687,17 +714,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Red Deer.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown, Riverside, Oriole Park, and the QE2 corridor stretching to Penhold and Innisfail &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Red Deer or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Red Deer at a glance</span>
+        <h2 class="section-h">Halfway between Calgary and Edmonton, <em>with a whole region to serve.</em></h2>
+        <p class="section-lede">Red Deer sits on the QEII, 150 km from Calgary and 154 km from Edmonton, at the centre of a ring of towns from Olds to Lacombe.</p>
+        <ul class="glance">
+            <li><b>100,844</b><span>people in Red Deer at the 2021 Census; the province estimates 115,409 for 2025</span><small>Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054808011&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Red Deer</a> &middot; <a href="https://regionaldashboard.alberta.ca/region/red-deer/population/" target="_blank" rel="noopener">Government of Alberta, Regional Dashboard: Red Deer</a></small></li>
+            <li><b>34%</b><span>of Red Deer's homes were built in 1980 or earlier</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054808011&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Red Deer</a></small></li>
+            <li><b>60,539</b><span>more people in Sylvan Lake, Lacombe, Blackfalds, Olds, Innisfail and Penhold (2021 Census)</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054806034,2021A00054808008,2021A00054808009,2021A00054808012,2021A00054808029,2021A00054808031&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profiles</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>Hail and wind on the doorstep</h3>
+                <p>On August 23, 2026, a large-hail storm caused nearly $40 million in insured damage in central Alberta, according to the Insurance Bureau of Canada; Springbrook, just south of Red Deer, was hit hardest, with siding shredded and windows smashed. In June 2017, winds over 100 km/h caused more than $30 million in insured damage across Red Deer, Innisfail and Pine Lake.</p>
+                <p class="local-src">Sources: <a href="https://www.ibc.ca/news-insights/news/summer-storms-across-alberta-saskatchewan-and-manitoba-cause-more-than-1-8-billion-in-insured-losses" target="_blank" rel="noopener">Insurance Bureau of Canada, Sep 22, 2026</a> &middot; <a href="https://canadianunderwriter.ca/news/claims/estimated-insured-damage-for-june-storm-in-central-alberta-upwards-of-30-million" target="_blank" rel="noopener">Canadian Underwriter, June 2017</a></p>
+            </article>
+            <article class="local-card">
+                <h3>A lot of older houses</h3>
+                <p>About a third of Red Deer's occupied homes, 13,830 of them, were built in 1980 or earlier, and the City's community profile says 72% of dwellings were built before 2005. The City's flood advice tells homeowners to install sump pumps and zero reverse flow valves in basement floor drains.</p>
+                <p class="local-src">Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054808011&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Red Deer</a> &middot; <a href="https://secure.reddeer.ca/media/reddeerca/business-in-red-deer/economic-development/City-of-Red-Deer-2025-Community-Profile.pdf" target="_blank" rel="noopener">City of Red Deer, 2025 Community Profile</a> &middot; <a href="https://reddeer.ca/city-services/ambulance-fire-and-emergencies/emergency-preparedness-and-public-safety/flood-resources/" target="_blank" rel="noopener">City of Red Deer, Flood Resources</a></p>
+            </article>
+            <article class="local-card">
+                <h3>One licence to work in the city</h3>
+                <p>Red Deer requires a business licence from anyone providing goods or services in the city, and names &ldquo;a contractor coming in from out of town&rdquo; as an example. The 2026 non-resident licence is $496.20 a year, and contractors need a Red Deer licence to pull permits.</p>
+                <p class="local-src">Sources: <a href="https://reddeer.ca/city-services/licences/business-licences/" target="_blank" rel="noopener">City of Red Deer, Business Licences</a> &middot; <a href="https://reddeer.ca/business/permits-and-inspections/residential-permits-and-applications/residential-subtrades/" target="_blank" rel="noopener">City of Red Deer, Residential Subtrades permits</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Which jobs need a permit</h3>
+                <p>Replacing a water heater doesn't need a gas permit in Red Deer, but installing any HVAC or hydronic heating system needs a heating permit from a licensed contractor, and new or altered wiring needs an electrical permit. Decks 24 inches or more above the ground need a building permit; fences don't need one.</p>
+                <p class="local-src">Sources: <a href="https://reddeer.ca/business/permits-and-inspections/residential-permits-and-applications/residential-subtrades/" target="_blank" rel="noopener">City of Red Deer, Residential Subtrades permits</a> &middot; <a href="https://reddeer.ca/business/permits-and-inspections/residential-permits-and-applications/" target="_blank" rel="noopener">City of Red Deer, Residential Permits</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Red Deer:</b> downtown, Timberlands North and the city's newest neighbourhoods, plus Sylvan Lake, Lacombe, Blackfalds, Penhold, Innisfail and Olds.</p>
     </div>
 </section>
 
@@ -736,22 +786,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Red Deer businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Red Deer look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Red Deer build <em>process.</em></h2>
@@ -774,14 +810,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Red Deer pricing, <em>simplified.</em></h2>
@@ -805,11 +841,15 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Red Deer <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do I need a Red Deer business licence if I'm based in Lacombe or Sylvan Lake?</dt>
+                <dd>Yes. The City of Red Deer requires a business licence from anyone providing goods or services in the city, including contractors coming in from out of town. A full-year non-resident licence is $496.20 in 2026, against $127.65 for a business based in Red Deer.<span class="faq-src">Source: <a href="https://reddeer.ca/city-services/licences/business-licences/" target="_blank" rel="noopener">City of Red Deer, Business Licences</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Red Deer?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in Red Deer proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +871,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Red Deer.</em></h2>

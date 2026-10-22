@@ -74,6 +74,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do I need a St. Albert business licence if I'm based in Edmonton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The City of St. Albert says anyone doing business in St. Albert needs a City business licence, including businesses based elsewhere, and a licence from another municipality doesn't count. The out-of-town licence is $683 if issued by April 30, dropping to $512.25 from May 1 and $341.50 from September 1."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in St. Albert?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +304,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -687,17 +714,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>St. Albert.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown St. Albert, Erin Ridge, Mission, and the Sturgeon County edge &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in St. Albert or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">St. Albert at a glance</span>
+        <h2 class="section-h">Owner-occupied homes, older houses, <em>and a licence for every contractor.</em></h2>
+        <p class="section-lede">St. Albert is a city of owner-occupied houses, a lot of them built in the 1960s and '70s, and it has its own rules for contractors coming in from Edmonton.</p>
+        <ul class="glance">
+            <li><b>68,232</b><span>people in St. Albert at the 2021 Census, up 4.0% from 2016</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811062&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: St. Albert</a></small></li>
+            <li><b>82.9%</b><span>of households own their home</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811062&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: St. Albert</a></small></li>
+            <li><b>8,345</b><span>homes built from 1961 to 1980, the city's biggest building period</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811062&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: St. Albert</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>June 2026: sewers at capacity</h3>
+                <p>On June 21, 2026, heavy rain pushed St. Albert's wastewater system to capacity. With local flooding and sewer backups reported, the City sent an Alberta Emergency Alert asking every resident to stop non-essential water use until the next afternoon. On a day like that, a text back in seconds keeps the homeowner talking to you instead of the next plumber.</p>
+                <p class="local-src">Sources: <a href="https://www.alberta.ca/aea/cap/2026/06/21/2026-06-21T13_56_15-06_00=CityofSt.Albert=EE0F1336-A979-4E49-AA2D-755F589CA1B8.htm" target="_blank" rel="noopener">Alberta Emergency Alert, Jun 21, 2026</a> &middot; <a href="https://stalbert.ca/cosa/news/releases/residents-must-cease-non-essential-water-use-immediately/" target="_blank" rel="noopener">City of St. Albert, water use ban lifted</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Your Edmonton licence doesn't count here</h3>
+                <p>Anyone doing business in St. Albert needs a City of St. Albert business licence, including businesses based elsewhere, and a licence from another municipality doesn't count. The out-of-town licence is $683 if issued by April 30, against $150 for a business located in the city, and the fee drops later in the year.</p>
+                <p class="local-src">Sources: <a href="https://stalbert.ca/dev/business/stalbert/licensing/types-and-fees/" target="_blank" rel="noopener">City of St. Albert, Licence Types &amp; Fees</a> &middot; <a href="https://stalbert.ca/dev/business/stalbert/licensing/apply/" target="_blank" rel="noopener">City of St. Albert, Apply for a Business Licence</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Thousands of houses past 45</h3>
+                <p>35% of St. Albert's homes were built in 1980 or earlier, and neighbourhoods like Akinsdale are mostly 1970s and '80s single-family homes. That's thousands of houses now more than 45 years old.</p>
+                <p class="local-src">Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811062&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: St. Albert</a> &middot; <a href="https://stalbert.ca/home/move/neighbourhoods/" target="_blank" rel="noopener">City of St. Albert, Neighbourhoods</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Permits for the common jobs</h3>
+                <p>St. Albert requires a gas permit for furnaces, boilers and water heaters and a plumbing permit for work like backwater valves; contractors applying need a Certificate of Proficiency number and a City business licence. Decks more than 0.6 m above grade, and basement finishing, need both a development permit and a building permit.</p>
+                <p class="local-src">Sources: <a href="https://stalbert.ca/site/assets/files/5885/gas_permits_brochure.pdf" target="_blank" rel="noopener">City of St. Albert, Gas Permits brochure</a> &middot; <a href="https://stalbert.ca/city/approvals/development/decks/" target="_blank" rel="noopener">City of St. Albert, Building a Deck</a> &middot; <a href="https://stalbert.ca/city/approvals/development/basement-finishing/" target="_blank" rel="noopener">City of St. Albert, Basement Finishing</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in St. Albert:</b> Mission, Braeside along the Sturgeon River, Akinsdale, Erin Ridge, Jensen Lakes, downtown, and the Sturgeon County edge.</p>
     </div>
 </section>
 
@@ -736,22 +786,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why St. Albert businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in St. Albert look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The St. Albert build <em>process.</em></h2>
@@ -774,14 +810,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">St. Albert pricing, <em>simplified.</em></h2>
@@ -805,11 +841,15 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">St. Albert <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do I need a St. Albert business licence if I'm based in Edmonton?</dt>
+                <dd>Yes. The City of St. Albert says anyone doing business in St. Albert needs a City business licence, including businesses based elsewhere, and a licence from another municipality doesn't count. The out-of-town licence is $683 if issued by April 30, dropping to $512.25 from May 1 and $341.50 from September 1.<span class="faq-src">Sources: <a href="https://stalbert.ca/dev/business/stalbert/licensing/types-and-fees/" target="_blank" rel="noopener">City of St. Albert, Licence Types &amp; Fees</a> &middot; <a href="https://stalbert.ca/dev/business/stalbert/licensing/apply/" target="_blank" rel="noopener">City of St. Albert, Apply for a Business Licence</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in St. Albert?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in St. Albert proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +871,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>St. Albert.</em></h2>

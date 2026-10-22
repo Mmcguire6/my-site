@@ -74,6 +74,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Does my Spruce Grove business licence cover Stony Plain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can. Under the Intermunicipal Business Licence Arrangement, eligible Spruce Grove and Stony Plain businesses can get the other community's licence at no charge, and Parkland County businesses can get a reduced $150 flat-rate intermunicipal licence. Contractors applying for trade permits in Spruce Grove need a valid Spruce Grove licence."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Spruce Grove?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +304,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -679,7 +706,7 @@ section{position:relative;}
         <span class="eyebrow">Spruce Grove, Alberta &middot; Now accepting new projects</span>
         <h1>Spruce Grove web design that <em>books more jobs.</em></h1>
         <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for Spruce Grove home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
-        <p class="hhero-lede">For trades serving Spruce Grove, Stony Plain, and the acreages of Parkland County, the work is spread out and the phone rings while you're on a job. We build for home service businesses growing in that market &mdash; contractors adding a second crew, landscapers taking on staff &mdash; with a website and follow-up system that grows with you, from $97/month with no contract.</p>
+        <p class="hhero-lede">For trades serving Spruce Grove, Stony Plain, and rural Parkland County, the work is spread out and the phone rings while you're on a job. We build for home service businesses growing in that market &mdash; contractors adding a second crew, landscapers taking on staff &mdash; with a website and follow-up system that grows with you, from $97/month with no contract.</p>
         <div class="hhero-actions">
             <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="../how.html" class="btn btn-ghost">See how it works</a>
@@ -687,17 +714,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Spruce Grove.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across Spruce Grove proper, Stony Plain, Parkland County, and the western Edmonton region &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Spruce Grove or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Spruce Grove at a glance</span>
+        <h2 class="section-h">One licence for two towns, <em>and a city still building fast.</em></h2>
+        <p class="section-lede">Spruce Grove sits about 11 kilometres west of Edmonton, next to Stony Plain and rural Parkland County. Its homes are young, its permit counts keep climbing, and 2026 brought historic rainfall.</p>
+        <ul class="glance">
+            <li><b>38,985</b><span>residents at Spruce Grove's 2023 census, after ten years of 3.41% average yearly growth</span><small>Source: <a href="https://www.sprucegrove.org/government/census/" target="_blank" rel="noopener">City of Spruce Grove, Census</a></small></li>
+            <li><b>783</b><span>new homes in building permits from January to September 2026</span><small>Source: <a href="https://www.sprucegrove.org/media/10065/safety-codes-permits-summary-september-2026.pdf" target="_blank" rel="noopener">City of Spruce Grove, Safety Codes Permits Summary, Sep 2026</a></small></li>
+            <li><b>4,517</b><span>electrical, plumbing and gas permits issued January to September 2026</span><small>Source: <a href="https://www.sprucegrove.org/media/10065/safety-codes-permits-summary-september-2026.pdf" target="_blank" rel="noopener">City of Spruce Grove, Safety Codes Permits Summary, Sep 2026</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>One licence, two communities</h3>
+                <p>Spruce Grove requires a business licence from everyone providing goods or services in the city, contractors and sub-contractors included, and contractors need one to apply for trade permits. Under the Intermunicipal Business Licence Arrangement, Spruce Grove and Stony Plain businesses can get the other community's licence at no charge, and Parkland County businesses can get a $150 flat-rate intermunicipal licence.</p>
+                <p class="local-src">Sources: <a href="https://www.sprucegrove.org/business/business-licensing" target="_blank" rel="noopener">City of Spruce Grove, Business Licensing</a> &middot; <a href="https://sprucegrove.org/business/business-licensing/apply-for-a-business-licence" target="_blank" rel="noopener">City of Spruce Grove, Apply for a Business Licence</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Stony Plain and Parkland County</h3>
+                <p>Stony Plain also licenses every business working in town; for businesses based outside Stony Plain, Spruce Grove and Parkland County, the licence is $440 a year. Parkland County doesn't require a business licence at all, and about 89% of its homes are single-detached houses spread over 2,375 square kilometres.</p>
+                <p class="local-src">Sources: <a href="https://www.stonyplain.com/work/business-licences/" target="_blank" rel="noopener">Town of Stony Plain, Business Licences</a> &middot; <a href="https://www.parklandcounty.com/en/business-and-development/business-development-process.aspx" target="_blank" rel="noopener">Parkland County, Business Development Process</a> &middot; <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811034&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Parkland County</a></p>
+            </article>
+            <article class="local-card">
+                <h3>A young, growing city</h3>
+                <p>About half of Spruce Grove's homes were built in 2006 or later, and the City issued 1,015 residential building permits worth $248 million from January to September 2026, up from 833 over the same months of 2025.</p>
+                <p class="local-src">Sources: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811049&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Spruce Grove</a> &middot; <a href="https://www.sprucegrove.org/media/10065/safety-codes-permits-summary-september-2026.pdf" target="_blank" rel="noopener">City of Spruce Grove, Safety Codes Permits Summary, Sep 2026</a></p>
+            </article>
+            <article class="local-card">
+                <h3>A historically wet 2026</h3>
+                <p>The City called 2026 a year of unprecedented rainfall. The June 21 storm flooded roads and closed Century Road north of Grove Drive, and the wet conditions cost the Boundary Road project about 40 construction days. Back in August 2019, a hailstorm damaged siding and vehicles in west Edmonton, Spruce Grove and Stony Plain.</p>
+                <p class="local-src">Sources: <a href="https://www.sprucegrove.org/government/news/historic-rainfall-impacts-boundary-road-completion-revised-to-august-2027/" target="_blank" rel="noopener">City of Spruce Grove, Oct 13, 2026</a> &middot; <a href="https://www.sprucegrove.org/government/news/city-crews-responding-to-rainfall-event/" target="_blank" rel="noopener">City of Spruce Grove, Jun 21, 2026</a> &middot; <a href="https://insurance-canada.ca/2019/08/30/ibc-edmonton-hailstorm-millions-insured-damages/" target="_blank" rel="noopener">Insurance Bureau of Canada via Insurance-Canada.ca, Aug 2019</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Spruce Grove:</b> Spruce Grove, Stony Plain, rural Parkland County, and the Acheson area along Highway 16.</p>
     </div>
 </section>
 
@@ -736,22 +786,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Spruce Grove businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Spruce Grove look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Spruce Grove build <em>process.</em></h2>
@@ -774,14 +810,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Spruce Grove pricing, <em>simplified.</em></h2>
@@ -805,11 +841,15 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Spruce Grove <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Does my Spruce Grove business licence cover Stony Plain?</dt>
+                <dd>It can. Under the Intermunicipal Business Licence Arrangement, eligible Spruce Grove and Stony Plain businesses can get the other community's licence at no charge, and Parkland County businesses can get a reduced $150 flat-rate intermunicipal licence. Contractors applying for trade permits in Spruce Grove need a valid Spruce Grove licence.<span class="faq-src">Sources: <a href="https://sprucegrove.org/business/business-licensing/apply-for-a-business-licence" target="_blank" rel="noopener">City of Spruce Grove, Apply for a Business Licence</a> &middot; <a href="https://www.stonyplain.com/work/business-licences/" target="_blank" rel="noopener">Town of Stony Plain, Business Licences</a> &middot; <a href="https://www.sprucegrove.org/business/business-licensing" target="_blank" rel="noopener">City of Spruce Grove, Business Licensing</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Spruce Grove?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in Spruce Grove proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +871,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Spruce Grove.</em></h2>

@@ -74,6 +74,22 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do I need a business licence to work in Sherwood Park?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Strathcona County says it doesn't require business licences and has no additional registration requirements for businesses. Federal and provincial rules still apply, a home-based business needs a development permit, and trade permits (electrical, plumbing, gas) go through the County's ePermits system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Sherwood Park a city?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not officially. Sherwood Park is the urban part of Strathcona County, which became a specialized municipality in 1996. The Province treats Sherwood Park and the Urban Service Area around it as equivalent to a city for programs and grants."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Sherwood Park?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +312,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -679,7 +714,7 @@ section{position:relative;}
         <span class="eyebrow">Sherwood Park, Alberta &middot; Now accepting new projects</span>
         <h1>Sherwood Park web design that <em>books more jobs.</em></h1>
         <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for Sherwood Park home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
-        <p class="hhero-lede">Sherwood Park is Strathcona County's main community, and the trades working here serve everything from homes in town to county acreages and the industrial corridor. They all need the same thing: a credible website, a system that texts back every missed call, and local SEO &mdash; without an enterprise budget. Your website is built free, with plans from $97/month and no contracts.</p>
+        <p class="hhero-lede">Sherwood Park is the urban heart of Strathcona County, and the trades working here serve everything from homes in town to rural properties and the County's industrial areas. They all need the same thing: a credible website, a system that texts back every missed call, and local SEO &mdash; without an enterprise budget. Your website is built free, with plans from $97/month and no contracts.</p>
         <div class="hhero-actions">
             <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="../how.html" class="btn btn-ghost">See how it works</a>
@@ -687,17 +722,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Sherwood Park.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across Baseline Road, Sherwood Drive, Centre in the Park, and Strathcona County's industrial corridor &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Sherwood Park or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Sherwood Park at a glance</span>
+        <h2 class="section-h">No business licence, a lot of older houses, <em>and a county that keeps growing.</em></h2>
+        <p class="section-lede">Sherwood Park isn't a town or a city: it's the urban part of Strathcona County, and the Province treats it as equivalent to a city. It started as a planned hamlet in the 1950s, and it's still growing.</p>
+        <ul class="glance">
+            <li><b>103,829</b><span>residents in Strathcona County at its 2024 census, 75,575 of them in Sherwood Park's urban area</span><small>Source: <a href="https://www.strathcona.ca/council-county/news/news/2024/9/17/census-24-3" target="_blank" rel="noopener">Strathcona County, 2024 municipal census</a></small></li>
+            <li><b>86.8%</b><span>of county households own their home (2021 Census)</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811052&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Strathcona County</a></small></li>
+            <li><b>1 in 3</b><span>county homes were built in 1980 or earlier (2021 Census)</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811052&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Strathcona County</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>No business licence needed</h3>
+                <p>Strathcona County doesn't require business licences and has no extra municipal registration for businesses, unlike neighbouring Edmonton and St. Albert. Running a business from home does need a development permit, and trade permits go through the County's ePermits system.</p>
+                <p class="local-src">Source: <a href="https://www.strathcona.ca/business-and-development/business/supports/start-your-business/permits-licenses-and-registration/" target="_blank" rel="noopener">Strathcona County, Permits, licenses and registration</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Like-for-like swaps need no permit</h3>
+                <p>Replacing a furnace or water heater with a similar unit that doesn't change the venting or piping needs no permit in Strathcona County; a replacement that does change them needs a $90 gas permit under the 2026 fee schedule. Decks more than two feet above grade need a building permit, and basement development needs a building permit plus an electrical permit for new wiring.</p>
+                <p class="local-src">Sources: <a href="https://storagecdn.strathcona.ca/files/files/mco-bylaw-43-2025-2026-fees-rates-and-charges.pdf" target="_blank" rel="noopener">Strathcona County, 2026 Fees, Rates and Charges Bylaw</a> &middot; <a href="https://www.strathcona.ca/your-property-utilities/residential-permits/residential-improvement/building-an-uncovered-deck/" target="_blank" rel="noopener">Strathcona County, Building an uncovered deck</a> &middot; <a href="https://www.strathcona.ca/your-property-utilities/residential-permits/residential-improvement/basement-development/" target="_blank" rel="noopener">Strathcona County, Basement development</a></p>
+            </article>
+            <article class="local-card">
+                <h3>June 2026 flooding</h3>
+                <p>The County says significant rainfall in June 2026 caused widespread localized flooding across Strathcona County, washing out bridge culverts and closing roads for months. County rules say sump pumps can't connect to the sanitary sewer, and homeowners are responsible for water and sewer pipe repairs between the house and the property line.</p>
+                <p class="local-src">Sources: <a href="https://www.strathcona.ca/transportation-roads/construction/2026-road-closures/" target="_blank" rel="noopener">Strathcona County, 2026 road closures</a> &middot; <a href="https://www.strathcona.ca/your-property-utilities/water-and-sewer/wastewater/sump-pump/" target="_blank" rel="noopener">Strathcona County, Sump pumps</a> &middot; <a href="https://www.strathcona.ca/your-property-utilities/water-and-sewer/water/water-service/homeowner-responsibilities-for-pipe-repairs/" target="_blank" rel="noopener">Strathcona County, Homeowner pipe repairs</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Older streets and newer ones</h3>
+                <p>Sherwood Park's first model homes opened on Birch Avenue in 1955, and about a third of the county's homes were built in 1980 or earlier. The County's 2024 profiles list 37 urban neighbourhoods, from Glen Allan and Sherwood Heights to Summerwood, Cambrian Crossing and Salisbury Village.</p>
+                <p class="local-src">Sources: <a href="https://www.strathcona.ca/council-county/history-and-heritage/places/sherwood-park/history-of-sherwood-park/sherwood-park-history-housing/" target="_blank" rel="noopener">Strathcona County, Sherwood Park history: Housing</a> &middot; <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811052&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Strathcona County</a> &middot; <a href="https://www.strathcona.ca/business-and-development/development/growth-and-change-monitoring/2024-neighbourhood-profiles/" target="_blank" rel="noopener">Strathcona County, 2024 neighbourhood profiles</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Sherwood Park:</b> Summerwood, Emerald Hills, Salisbury Village, Cambrian Crossing, Lakeland Ridge, Heritage Hills, Glen Allan and Sherwood Heights, plus rural hamlets like Ardrossan, Josephburg and South Cooking Lake.</p>
     </div>
 </section>
 
@@ -736,22 +794,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Sherwood Park businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Sherwood Park look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Sherwood Park build <em>process.</em></h2>
@@ -774,14 +818,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Sherwood Park pricing, <em>simplified.</em></h2>
@@ -805,11 +849,19 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Sherwood Park <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do I need a business licence to work in Sherwood Park?</dt>
+                <dd>No. Strathcona County says it doesn't require business licences and has no additional registration requirements for businesses. Federal and provincial rules still apply, a home-based business needs a development permit, and trade permits (electrical, plumbing, gas) go through the County's ePermits system.<span class="faq-src">Source: <a href="https://www.strathcona.ca/business-and-development/business/supports/start-your-business/permits-licenses-and-registration/" target="_blank" rel="noopener">Strathcona County, Permits, licenses and registration</a></span></dd>
+            </div>
+            <div class="faq-item">
+                <dt>Is Sherwood Park a city?</dt>
+                <dd>Not officially. Sherwood Park is the urban part of Strathcona County, which became a specialized municipality in 1996. The Province treats Sherwood Park and the Urban Service Area around it as equivalent to a city for programs and grants.<span class="faq-src">Source: <a href="https://strathcona.ca/local-government/about-strathcona-county/specialized-municipality-status/" target="_blank" rel="noopener">Strathcona County, A specialized municipality</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Sherwood Park?</dt>
                 <dd>No. We're based in Edmonton and work with home service businesses across Alberta, and across Canada and the US. Whether you're in Sherwood Park proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +883,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Sherwood Park.</em></h2>

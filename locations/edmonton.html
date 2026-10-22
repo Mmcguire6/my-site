@@ -74,6 +74,22 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do contractors need a City of Edmonton business licence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For gas work, yes: the City's gas permit page says contractors must be licensed with the City of Edmonton. Businesses based outside Edmonton apply for an out-of-town (non-resident) business licence, which carries an extra fee. Check the City's business licence page for the rules for your trade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my website explain EPCOR's backwater valve subsidy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you install backwater valves or do other rebate-eligible work, we can add a page that explains the program in plain language, links to EPCOR's official details, and makes it easy to book you. Unlimited edits mean we can update it whenever the program changes."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Edmonton?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -296,6 +312,25 @@ section{position:relative;}
   .foot-grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
 
 </style>
 
@@ -687,17 +722,40 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Edmonton.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown, Whyte Avenue, the west end, Mill Woods, and the surrounding capital region &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Edmonton or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Edmonton at a glance</span>
+        <h2 class="section-h">Floods, deep freezes and a building boom. <em>The phone rings through all of it.</em></h2>
+        <p class="section-lede">Edmonton is a big, growing city with a lot of older houses, and its weather sends homeowners to the phone in waves. Here's what that looks like for the trades who work here.</p>
+        <ul class="glance">
+            <li><b>1,010,899</b><span>people in Edmonton at the 2021 Census, up 8.3% from 2016</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811061&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Edmonton</a></small></li>
+            <li><b>40.5%</b><span>of occupied homes were built in 1980 or earlier</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811061&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Edmonton</a></small></li>
+            <li><b>15,902</b><span>housing starts in the city in 2025, up from 13,484 in 2024</span><small>Source: <a href="https://www03.cmhc-schl.gc.ca/hmip-pimh/en/TableMapChart/Table?TableId=1.1.1.9&amp;GeographyId=0340&amp;GeographyTypeId=3&amp;DisplayAs=Table&amp;GeograghyName=Edmonton" target="_blank" rel="noopener">CMHC Housing Market Information Portal</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>Storm season fills basements</h3>
+                <p>Record rain in June and July 2026 overwhelmed Edmonton's sewers again and again. The Insurance Bureau of Canada put the May 31&ndash;June 2 flooding alone at more than $80 million in insured losses in the Edmonton area. When basements flood, homeowners call down the list of plumbers and restoration crews, and every call that rings out goes to the next name.</p>
+                <p class="local-src">Source: <a href="https://www.ibc.ca/news-insights/news/summer-storms-across-alberta-saskatchewan-and-manitoba-cause-more-than-1-8-billion-in-insured-losses" target="_blank" rel="noopener">Insurance Bureau of Canada, Sep 22, 2026</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Deep freezes mean after-hours calls</h3>
+                <p>In January 2024, Edmonton spent four straight days between -40 and -45°C. The Insurance Bureau of Canada says that cold snap caused more than $180 million in insured damage across Western Canada, much of it from frozen and burst pipes. No-heat and burst-pipe calls don't wait for business hours; a text back within seconds lets the homeowner know you've seen it.</p>
+                <p class="local-src">Source: <a href="https://www.ibc.ca/news-insights/news/western-canada-deep-freeze-causes-over-180-million-in-insured-damage" target="_blank" rel="noopener">Insurance Bureau of Canada, Mar 11, 2024</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Rebates that need a plumber</h3>
+                <p>EPCOR offers up to $800 toward a backwater valve for eligible older homes while funding lasts, and the valve must be installed by a professional plumber whose invoice shows a City of Edmonton business licence or GST number. EPCOR's RainWise pilot adds rebates of up to $2,000 for downspout disconnections, rain barrels and rain gardens. A plain-language page about each program helps homeowners find you.</p>
+                <p class="local-src">Sources: <a href="https://www.epcor.com/ca/en/ab/edmonton/safety/home/flood-prevention-at-home/backwater-valve-subsidy.html" target="_blank" rel="noopener">EPCOR, Backwater Valve Subsidy</a> &middot; <a href="https://www.epcor.com/ca/en/ab/edmonton/conservation/incentives/rainwise-stormwater-rebate-program.html" target="_blank" rel="noopener">EPCOR, RainWise Rebate Program</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Permits and licences</h3>
+                <p>The City requires a gas permit to install or alter furnaces and water heaters and says contractors must be licensed with the City; businesses based outside Edmonton need an out-of-town business licence. Basement development and flood repairs need permits, while replacing shingles or same-size windows doesn't. If you're licensed and pull permits, say so plainly on your website.</p>
+                <p class="local-src">Sources: <a href="https://www.edmonton.ca/residential_neighbourhoods/gas-permit" target="_blank" rel="noopener">City of Edmonton, Gas Permits</a> &middot; <a href="https://www.edmonton.ca/business_economy/licences_permits/apply-for-a-business-licence" target="_blank" rel="noopener">City of Edmonton, Business Licences</a> &middot; <a href="https://www.edmonton.ca/residential_neighbourhoods/renovations-basement-development" target="_blank" rel="noopener">City of Edmonton, Renovations and Basement Development</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Edmonton:</b> the mature neighbourhoods around downtown, newer districts like West Henday, Ellerslie and Horse Hill, and the rest of the capital region.</p>
     </div>
 </section>
 
@@ -736,22 +794,8 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Edmonton businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Edmonton look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Edmonton build <em>process.</em></h2>
@@ -774,14 +818,14 @@ section{position:relative;}
             <li>
                 <span class="process-n">04</span>
                 <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Edmonton pricing, <em>simplified.</em></h2>
@@ -805,11 +849,19 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Edmonton <em>questions.</em></h2>
         <dl class="faq-list">
+            <div class="faq-item">
+                <dt>Do contractors need a City of Edmonton business licence?</dt>
+                <dd>For gas work, yes: the City's gas permit page says contractors must be licensed with the City of Edmonton. Businesses based outside Edmonton apply for an out-of-town (non-resident) business licence, which carries an extra fee. Check the City's business licence page for the rules for your trade.<span class="faq-src">Sources: <a href="https://www.edmonton.ca/residential_neighbourhoods/gas-permit" target="_blank" rel="noopener">City of Edmonton, Gas Permits</a> &middot; <a href="https://www.edmonton.ca/business_economy/licences_permits/apply-for-a-business-licence" target="_blank" rel="noopener">City of Edmonton, Business Licences</a></span></dd>
+            </div>
+            <div class="faq-item">
+                <dt>Can my website explain EPCOR's backwater valve subsidy?</dt>
+                <dd>Yes. If you install backwater valves or do other rebate-eligible work, we can add a page that explains the program in plain language, links to EPCOR's official details, and makes it easy to book you. Unlimited edits mean we can update it whenever the program changes.<span class="faq-src">Source: <a href="https://www.epcor.com/ca/en/ab/edmonton/safety/home/flood-prevention-at-home/backwater-valve-subsidy.html" target="_blank" rel="noopener">EPCOR, Backwater Valve Subsidy</a></span></dd>
+            </div>
             <div class="faq-item">
                 <dt>Do you only work with businesses in Edmonton?</dt>
                 <dd>No. Edmonton is home base, but we work with home service businesses across Alberta, and across Canada and the US. Whether you're in Edmonton proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
@@ -831,7 +883,7 @@ section{position:relative;}
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Edmonton.</em></h2>
