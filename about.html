@@ -197,8 +197,8 @@ section{position:relative;}
 .founder-copy h2{font-family:var(--display);font-weight:700;font-size:clamp(36px,4.4vw,60px);line-height:1.04;letter-spacing:-0.02em;color:var(--ink-1);margin:18px 0 28px;}
 .founder-copy h2 em{font-style:normal;color:var(--gold);}
 .founder-copy p{font-size:clamp(16px,1.25vw,18.5px);color:var(--ink-2);margin-bottom:20px;line-height:1.8;}
-.founder-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 70px -40px rgba(0,0,0,0.45);}
-.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.founder-photo{position:relative;border-radius:18px;overflow:hidden;min-height:320px;box-shadow:0 40px 70px -40px rgba(0,0,0,0.45);}
+.founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
 .founder-quote{background:#1b1813;color:var(--white);border-radius:18px;padding:clamp(26px,2.6vw,36px);position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:center;}
 .founder-quote .qmark{font-family:var(--display);font-size:74px;line-height:0.6;color:var(--gold);margin-bottom:12px;}
 .founder-quote blockquote{font-family:var(--display);font-size:clamp(23px,2.1vw,30px);font-weight:500;line-height:1.32;letter-spacing:-0.01em;}
@@ -262,7 +262,7 @@ section{position:relative;}
   .cnode-ic svg{width:34px;height:34px;}
   .bgrid{grid-template-columns:1fr;}
   .founder-grid{grid-template-columns:1fr;}
-  .founder-photo{max-width:360px;}
+  .founder-photo{max-width:360px;aspect-ratio:4/5;}
   .pgrid{grid-template-columns:1fr;}
   .foot-grid{grid-template-columns:1fr;}
 }
@@ -571,7 +571,7 @@ section{position:relative;}
                             <ul class="ix-feats">
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Messages written for your trade</li>
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Built for 1&ndash;5 truck operations</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Founder-led, based in Alberta</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Alberta-based, serving Canada &amp; the US</li>
                             </ul>
                         </aside>
                         <div class="ix-main">
@@ -790,24 +790,24 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- OUR STORY -->
 <section class="founder">
     <div class="wrap">
         <div class="founder-grid">
             <div class="founder-copy reveal">
-                <span class="eyebrow">&mdash; Founder-led, client focused</span>
-                <h2>Hi, I&rsquo;m <em>Matthew.</em></h2>
-                <p>I started Northern Peak Systems because I saw too many home service businesses wasting time and money on disconnected tools that never worked together.</p>
+                <span class="eyebrow">&mdash; Our story</span>
+                <h2>Why we built <em>Northern Peak Systems.</em></h2>
+                <p>We started Northern Peak Systems because we saw too many home service businesses wasting time and money on disconnected tools that never worked together.</p>
                 <p>Our mission is simple: help home service businesses answer every lead, book more jobs, save time, and grow with confidence.</p>
             </div>
             <div class="founder-photo reveal">
-                <img src="img/headshot/matt-headshot.webp" alt="Matthew McGuire, founder of Northern Peak Systems" width="1000" height="1500">
+                <img src="img/company-office.webp" alt="" width="490" height="678" loading="lazy" decoding="async">
             </div>
             <div class="founder-quote reveal">
                 <div class="qmark">&ldquo;</div>
                 <blockquote>We treat every business like our own. Your growth is our priority.</blockquote>
-                <div class="qsig">Matthew McGuire</div>
-                <div class="qrole">Founder &amp; Systems Architect</div>
+                <div class="qsig">Northern Peak Systems</div>
+                <div class="qrole">Our promise</div>
             </div>
         </div>
     </div>
@@ -871,7 +871,7 @@ section{position:relative;}
             </div>
         </div>
         <div class="foot-bottom">
-            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta</span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Edmonton, Alberta</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>

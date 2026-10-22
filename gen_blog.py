@@ -31,7 +31,7 @@ POSTS_DIR = ROOT / "blog_posts"
 OUT = ROOT / "blog"
 OUT.mkdir(exist_ok=True)
 SITE = "https://northernpeaksystems.ca"
-AUTHOR = "Matthew McGuire"
+AUTHOR = "Northern Peak Systems"
 BRAND = "Northern Peak Systems"
 OG_IMAGE = SITE + "/img/og-image.jpg"   # 1200x630
 BOOK_URL = "../book.html"               # live calendar page
@@ -216,7 +216,7 @@ FOOTER = """<footer class="foot">
             </div>
         </div>
         <div class="foot-bottom">
-            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
+            <span>Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="../privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
@@ -459,7 +459,7 @@ def post_schema(p: dict, url: str) -> str:
         "@type": "BlogPosting", "@id": url + "#post", "headline": p["title"],
         "description": p["description"], "url": url,
         "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
-        "author": {"@type": "Person", "name": AUTHOR, "url": SITE + "/about.html"},
+        "author": {"@type": "Organization", "name": AUTHOR, "url": SITE + "/"},
         "publisher": {"@type": "Organization", "@id": "https://northernpeaksystems.ca/#org", "name": "Northern Peak Systems",
                        "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},

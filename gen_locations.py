@@ -57,7 +57,7 @@ def write_file(path: Path, text: str, eol: str) -> None:
 CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
     ("Alberta", "AB", [
         ("edmonton", "Edmonton",
-         "Edmonton is home base &mdash; Northern Peak Systems is run from here. We build websites, and the follow-up system behind them, for Edmonton plumbers, electricians, HVAC companies, roofers, landscapers, and contractors: the owner-operators and small crews who can't afford to let a call go to voicemail. Your website is built free, and the same founder-led team that sets everything up is the one that answers when something needs to change."),
+         "Edmonton is home base &mdash; Northern Peak Systems is based here. We build websites, and the follow-up system behind them, for Edmonton plumbers, electricians, HVAC companies, roofers, landscapers, and contractors: the owner-operators and small crews who can't afford to let a call go to voicemail. Your website is built free, and the same team that sets everything up is the one that answers when something needs to change."),
         ("calgary", "Calgary",
          "Calgary homeowners have plenty of contractors to choose from, so the businesses that answer fast and follow up on every quote stand out. We build websites with missed-call text-back and estimate follow-up for Calgary trades, from inner-city renovations to the newer communities on the city's edges. Every demo, build, edit, and launch call happens online or by phone &mdash; no in-person meeting required."),
         ("st-albert", "St. Albert",
@@ -561,7 +561,7 @@ CITY_PAGE = """<!DOCTYPE html>
             </li>
             <li>
                 <h3><a href="../features/website.html">Websites &amp; SEO</a></h3>
-                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so {name} customers find you on Google, and direct support from the founder. Included in every plan.</p>
+                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so {name} customers find you on Google, and direct support from our team. Included in every plan.</p>
             </li>
             <li>
                 <h3><a href="../features/crm-and-booking.html">Lead Management</a></h3>
@@ -619,7 +619,7 @@ CITY_PAGE = """<!DOCTYPE html>
                 <p class="pricing-card-name">Base System</p>
                 <p class="pricing-card-price"><strong>$97</strong>/mo</p>
                 <p class="pricing-card-sub">website built free</p>
-                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct founder-led support.</p>
+                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct support from our team.</p>
             </div>
             <div class="pricing-card">
                 <p class="pricing-card-name">The Peak System</p>
@@ -912,7 +912,7 @@ PLANS = [
     # (name, monthly price, description) - mirrors the Base System / The Peak System cards
     ("Base System", "97",
      "Custom website designed and built free. $97/month covers hosting, security, unlimited edits, "
-     "local SEO, and founder-led support. No setup fees, no contracts."),
+     "local SEO, and direct support. No setup fees, no contracts."),
     ("The Peak System", "297",
      "Everything in the Base System plus Missed Call Recovery, Estimate Follow-Up, Lead Management & booking, "
      "Reputation Management, and Customer Retention. $297/month flat, no setup fees, no contracts."),
@@ -956,7 +956,7 @@ def city_faqs(slug: str, name: str, province: str) -> list[tuple[str, str, str]]
         (f"How much does it cost in {name}?",
          "Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom "
          "website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct "
-         "founder-led support. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate "
+         "support from our team. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate "
          "Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention. You always "
          "keep your domain and any content you provided."),
     ]
@@ -1190,7 +1190,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
         <span class="eyebrow">Why local</span>
         <h2 class="section-h">A web partner that actually <em>knows Alberta.</em></h2>
         <p class="section-body">
-            Alberta trades don't need a big-agency retainer or a slow, template-heavy website. They need a fast site that shows up when people in their own town search, and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed call recovery, estimate follow-up, lead management and booking, reputation management, and customer retention &mdash; all founder-led from right here in Edmonton.
+            Alberta trades don't need a big-agency retainer or a slow, template-heavy website. They need a fast site that shows up when people in their own town search, and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed call recovery, estimate follow-up, lead management and booking, reputation management, and customer retention &mdash; all from our team right here in Edmonton.
         </p>
         <p class="section-body">
             You get the same connected system whether you're a roofer in Red Deer, an HVAC company in Calgary, or a landscaper in St. Albert &mdash; built to load fast, show up for &ldquo;your service + your city&rdquo; searches, and turn visitors into booked jobs. Flat pricing from $97/month, no setup fees, no contracts, and we build a free custom preview of your website and system before you decide.
