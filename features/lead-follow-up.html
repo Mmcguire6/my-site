@@ -429,6 +429,10 @@ h1,h2{font-family:var(--display);}
 @media(max-width:1100px){.efb-cols{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:640px){.efb{padding:14px;}.efb-cols{grid-template-columns:1fr;}.efb-view{display:none;}}
 @media(prefers-reduced-motion:reduce){.efb-card,.efh-toast,.eft-i{transition:none;}}
+
+.btn-line{background:transparent;color:var(--gold-2);border-color:rgba(210,162,76,0.45);}
+.btn-line:hover{border-color:var(--gold);color:#f0c776;transform:translateY(-2px);}
+.fp-cta .fp-actions .fp-btn{margin-top:0;}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -652,6 +656,13 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
 .nav-login svg{width:20px;height:20px;}
 .nav-login:hover{color:var(--gold-2);}
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+.nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
+@media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
+.mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
+.mnav-login:hover{color:var(--gold-2);}
 </style>
 </head>
 <body>
@@ -759,7 +770,8 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="../book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="../book.html" class="btn btn-line btn-tc nav-demo">Book a Demo</a>
+            <a href="../pricing.html#plans" class="btn btn-gold btn-tc nav-start">Get Started <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -784,8 +796,9 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
         <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="../pricing.html#plans" class="btn btn-gold">Get Started <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-line">Book a Demo</a>
+        <a href="https://app.northernpeaksystems.ca/" class="mnav-login">Client Login</a>
     </div>
 </div>
 
@@ -928,7 +941,7 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
             <span class="fp-kick">Turn more estimates into revenue</span>
             <h2 class="fp-h2">You&rsquo;ve already done the hard part. <span class="gold">Let us handle the follow&#8209;up.</span></h2>
             <p class="fp-p">Book a short demo and we&rsquo;ll show you how The Peak System can help you close more estimates and grow your business.</p>
-            <a href="../book.html" class="btn btn-gold fp-btn">Book a Demo <span class="arr">&rarr;</span></a>
+            <div class="fp-actions"><a href="../pricing.html#plans" class="btn btn-gold fp-btn" data-cta-loc="feature-cta">Get Started <span class="arr">&rarr;</span></a><a href="../book.html" class="btn btn-line fp-btn" data-cta-loc="feature-cta">Book a Free Demo</a></div>
         </div>
     </div>
 </section>
@@ -977,6 +990,28 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
             </div>
         </div>
     </div>
+<script>
+/* Conversion tracking (synced into every page with the footer): Get Started, checkout and Book a Demo clicks
+   go to GA4 + Clarity, and first-touch campaign tags (utm_*, ref, gclid) are carried into checkout links so
+   Stripe and the CRM know where a customer came from. No personal or payment data is sent. */
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'],A='nps_attr';
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  try{var q=new URLSearchParams(location.search),a={},any=false;KEYS.forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,100);any=true;}});
+    if(any&&!store(A)){a.landing=location.pathname;store(A,JSON.stringify(a));}}catch(e){}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p);if(window.clarity)clarity('event',n);}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'',where=a.getAttribute('data-cta-loc')||((a.closest('section[id],header,footer,.mnav')||{}).id||(a.closest('header')?'nav':location.pathname));
+    var m=h.match(/\/(?:api\/checkout\?plan=|start\/)(base|peak)/);
+    if(m){ev('get_started_click',{cta_location:where,plan:m[1]});ev('begin_checkout',{plan:m[1],cta_location:where,currency:'CAD',value:m[1]==='peak'?297:97});
+      try{var at=JSON.parse(store(A)||'null');if(at){var u=new URL(a.href,location.href);KEYS.forEach(function(k){if(at[k]&&!u.searchParams.has(k))u.searchParams.set(k,at[k]);});a.href=u.href;}}catch(x){}
+      return;}
+    if(/pricing(\.html)?#plans/.test(h)&&/get started/i.test(a.textContent)){ev('get_started_click',{cta_location:where});return;}
+    if(/(^|\/)book(\.html)?([?#]|$)/.test(h))ev('book_demo_click',{cta_location:where});
+  },true);
+})();
+</script>
 </footer>
 
 <script>

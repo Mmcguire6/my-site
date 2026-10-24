@@ -1202,6 +1202,7 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
 .price-num span{font-size:15px;color:var(--mist);}
 .price-sub{font-size:13px;color:var(--mist);}
 .price-card .btn{width:100%;margin-top:26px;}
+.price-card .btn + .btn{margin-top:12px;}
 .price-card .pnote{text-align:center;font-size:12px;color:var(--mist-2);margin-top:12px;}
 @media(max-width:900px){.price-grid{grid-template-columns:1fr;}.price-card{justify-self:stretch;max-width:none;}}
 
@@ -1333,6 +1334,13 @@ main > section{position:relative;z-index:1;}
 .nav-login svg{width:20px;height:20px;}
 .nav-login:hover{color:var(--gold-2);}
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+.nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
+@media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
+.mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
+.mnav-login:hover{color:var(--gold-2);}
 </style>
 
 <!-- Analytics -->
@@ -1446,7 +1454,8 @@ main > section{position:relative;z-index:1;}
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="book.html" class="btn btn-line btn-tc nav-demo">Book a Demo</a>
+            <a href="pricing.html#plans" class="btn btn-gold btn-tc nav-start">Get Started <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -1472,8 +1481,9 @@ main > section{position:relative;z-index:1;}
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="pricing.html#plans" class="btn btn-gold">Get Started <span class="arr">&rarr;</span></a>
+        <a href="book.html" class="btn btn-line">Book a Demo</a>
+        <a href="https://app.northernpeaksystems.ca/" class="mnav-login">Client Login</a>
     </div>
 </div>
 
@@ -1508,7 +1518,8 @@ main > section{position:relative;z-index:1;}
             <h1 class="hv3-title">Turn more leads <span class="l2">into <em>revenue.</em></span></h1>
             <p class="hv3-sub">A complete system to capture leads, follow up automatically, turn more estimates into booked jobs, and bring customers back.</p>
             <div class="hv3-actions">
-                <a href="how.html" class="btn btn-gold btn-tc">See How It Works <span class="arr">&rarr;</span></a>
+                <a href="pricing.html#plans" class="btn btn-gold btn-tc" data-cta-loc="home-hero">Get Started <span class="arr">&rarr;</span></a>
+                <a href="book.html" class="btn btn-line btn-tc" data-cta-loc="home-hero">Book a Free Demo</a>
             </div>
             <ul class="hv3-pillars">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4v8a3 3 0 0 0 6 0V3h4v8a7 7 0 0 1-14 0z"/><path d="M5 7h4M15 7h4"/></svg><div><b>Capture</b><span>Every opportunity</span></div></li>
@@ -2138,8 +2149,9 @@ main > section{position:relative;z-index:1;}
                 <span class="plabel">Peak System</span>
                 <div class="price-num"><b>$297</b><span>/month</span></div>
                 <p class="price-sub">Website, missed-call text-back, lead and estimate follow-up, booking, and review requests.</p>
-                <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-                <p class="pnote">No setup fee &middot; No contract &middot; Cancel with 30 days&rsquo; notice</p>
+                <a href="/api/checkout?plan=peak" class="btn btn-gold" data-cta-loc="home-pricing">Get Started <span class="arr">&rarr;</span></a>
+                <a href="book.html" class="btn btn-line" data-cta-loc="home-pricing">Book a Demo</a>
+                <p class="pnote">Billed monthly in CAD &middot; No setup fee &middot; No contract</p>
             </div>
         </div>
     </div>
@@ -2267,11 +2279,12 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
         <div class="fcta-actions">
-            <a href="book.html" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="pricing.html#plans" class="btn btn-gold" data-cta-loc="home-final">Get Started <span class="arr">&rarr;</span></a>
+            <a href="book.html" class="btn btn-line" data-cta-loc="home-final">Book a Free Demo</a>
         </div>
         <div class="fcta-mini">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15-minute strategy call</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/></svg>No obligation</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Subscribe online in minutes</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/></svg>We handle the setup</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 9-7 9-7-9z"/></svg>Live in 7&ndash;10 days</span>
         </div>
     </div>
@@ -2323,6 +2336,28 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
     </div>
+<script>
+/* Conversion tracking (synced into every page with the footer): Get Started, checkout and Book a Demo clicks
+   go to GA4 + Clarity, and first-touch campaign tags (utm_*, ref, gclid) are carried into checkout links so
+   Stripe and the CRM know where a customer came from. No personal or payment data is sent. */
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'],A='nps_attr';
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  try{var q=new URLSearchParams(location.search),a={},any=false;KEYS.forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,100);any=true;}});
+    if(any&&!store(A)){a.landing=location.pathname;store(A,JSON.stringify(a));}}catch(e){}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p);if(window.clarity)clarity('event',n);}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'',where=a.getAttribute('data-cta-loc')||((a.closest('section[id],header,footer,.mnav')||{}).id||(a.closest('header')?'nav':location.pathname));
+    var m=h.match(/\/(?:api\/checkout\?plan=|start\/)(base|peak)/);
+    if(m){ev('get_started_click',{cta_location:where,plan:m[1]});ev('begin_checkout',{plan:m[1],cta_location:where,currency:'CAD',value:m[1]==='peak'?297:97});
+      try{var at=JSON.parse(store(A)||'null');if(at){var u=new URL(a.href,location.href);KEYS.forEach(function(k){if(at[k]&&!u.searchParams.has(k))u.searchParams.set(k,at[k]);});a.href=u.href;}}catch(x){}
+      return;}
+    if(/pricing(\.html)?#plans/.test(h)&&/get started/i.test(a.textContent)){ev('get_started_click',{cta_location:where});return;}
+    if(/(^|\/)book(\.html)?([?#]|$)/.test(h))ev('book_demo_click',{cta_location:where});
+  },true);
+})();
+</script>
 </footer>
 
 <script>

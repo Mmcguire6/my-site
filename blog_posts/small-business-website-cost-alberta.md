@@ -6,7 +6,7 @@ description: Website quotes range from free DIY builders to big agency bills. He
 keyword: small business website cost
 category: Websites
 date: 2026-07-10
-modified: 2026-10-21
+modified: 2026-10-22
 read_time: 8
 cta_title: See your new site <em>before you pay a cent.</em>
 cta_lead: Just need the website? We build it free, and the Base System is $97/month for hosting, security, unlimited edits, and local SEO.
@@ -61,7 +61,7 @@ The goal isn't the lowest price or the highest. It's the best **return:** a fast
 
 For most local businesses (a trade, a clinic, a shop) you don't need a big agency build or a slow DIY template. You need a fast, hand-coded site with real pages for your services and towns, built to convert and easy to keep current.
 
-That's the idea behind our **Base System**: we build the website free, and **$97/month** covers hosting, security, unlimited edits, and local SEO. If you also want the site to text back missed calls, follow up on estimates, take online bookings, ask for reviews, and bring past customers back, **The Peak System** is **$297/month** flat with all of that included. Either way there's no five-figure upfront bill, no setup fees, and no contracts, and you see a working preview before you pay anything, so you're never guessing what you're buying.
+That's the idea behind our **Base System**: we build the website free, and **$97/month** covers hosting, security, unlimited edits, and local SEO. If you also want the site to text back missed calls, follow up on estimates, take online bookings, ask for reviews, and bring past customers back, **The Peak System** is **$297/month** flat with all of that included. Either way there's no five-figure upfront bill, no setup fees, and no contracts. You can subscribe online in a few minutes, or book a free demo first and see a working preview before you pay anything, so you're never guessing what you're buying.
 
 ## Frequently asked questions
 

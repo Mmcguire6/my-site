@@ -522,8 +522,8 @@ CITY_PAGE = """<!DOCTYPE html>
         <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for {name} home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
         <p class="hhero-lede">{intro}</p>
         <div class="hhero-actions">
-            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-            <a href="../how.html" class="btn btn-ghost">See how it works</a>
+            <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-hero">Get Started <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-ghost" data-cta-loc="city-hero">Book a Demo</a>
         </div>
     </div>
 </section>
@@ -664,10 +664,10 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
         <h2>Your {name} website, <em>built to match your work.</em></h2>
-        <p>Book a free 15-minute demo, and we build a free custom preview of your website and system before you decide &mdash; no cost, no obligation.</p>
+        <p>Subscribe online in minutes and we handle the setup, or book a free 15-minute demo and we&rsquo;ll build a free custom preview before you decide.</p>
         <div class="hcta-actions">
-            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-            <a href="../pricing.html" class="btn btn-dark">See pricing</a>
+            <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-cta">Get Started <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-dark" data-cta-loc="city-cta">Book a Free Demo</a>
         </div>
     </div>
 </section>

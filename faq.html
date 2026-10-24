@@ -33,7 +33,8 @@
     { "@type": "Question", "name": "Is the demo really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the demo costs nothing and there’s no commitment. We’d rather show you what the system does than pressure you into it." } },
     { "@type": "Question", "name": "How do I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Book a Demo or send us a message. We’ll ask a couple of quick questions, set up a time, and take it from there — at your pace, with no pressure." } },
     { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Two simple monthly plans. The Base System is $97/month — we build your website free, and the monthly covers hosting, security, unlimited edits, and local SEO. The Peak System is $297/month flat and includes everything: your website plus missed call text-back, estimate follow-up, lead management and booking, reputation management, and customer retention. No setup fees, no contracts. See pricing." } },
-    { "@type": "Question", "name": "Is there a big upfront cost?", "acceptedAnswer": { "@type": "Answer", "text": "No. There are no setup fees and no upfront build cost. You pay one flat monthly fee for the plan you choose, and you only start paying once your site goes live." } },
+    { "@type": "Question", "name": "Is there a big upfront cost?", "acceptedAnswer": { "@type": "Answer", "text": "No. There are no setup fees and no upfront build cost. You pay one flat monthly fee for the plan you choose, starting when you subscribe." } },
+    { "@type": "Question", "name": "Can I sign up online?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose a plan on the pricing page and subscribe online in a few minutes. Your first month is charged at checkout, then a short setup form tells us about your business and our team handles the rest. Prefer to talk first? Book a free demo." } },
     { "@type": "Question", "name": "Are there long-term contracts?", "acceptedAnswer": { "@type": "Answer", "text": "No contracts — it’s month to month, and you can cancel with 30 days’ notice. You stay because the system works for your business, not because you’re locked in." } },
     { "@type": "Question", "name": "What’s included in the monthly fee?", "acceptedAnswer": { "@type": "Answer", "text": "Both plans include your website, hosting, security, unlimited edits, local SEO, and ongoing support. The Peak System adds missed call text-back, estimate follow-up, lead management and booking, reputation management, and customer retention — all for one flat $297/month. No add-ons to piece together." } },
     { "@type": "Question", "name": "What is The Peak System?", "acceptedAnswer": { "@type": "Answer", "text": "It’s your website plus everything around it — missed call text-back, estimate follow-up, lead management and booking, reputation management, and customer retention — all connected so they work as one. Most businesses run these as separate apps that don’t talk to each other; we wire them together." } },
@@ -461,6 +462,13 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
 .nav-login svg{width:20px;height:20px;}
 .nav-login:hover{color:var(--gold-2);}
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+.nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
+@media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
+.mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
+.mnav-login:hover{color:var(--gold-2);}
 </style>
 </head>
 <body>
@@ -569,7 +577,8 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
         </nav>
         <div class="nav-cta">
             <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="book.html" class="btn btn-line btn-tc nav-demo">Book a Demo</a>
+            <a href="pricing.html#plans" class="btn btn-gold btn-tc nav-start">Get Started <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -595,8 +604,9 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="pricing.html#plans" class="btn btn-gold">Get Started <span class="arr">&rarr;</span></a>
+        <a href="book.html" class="btn btn-line">Book a Demo</a>
+        <a href="https://app.northernpeaksystems.ca/" class="mnav-login">Client Login</a>
     </div>
 </div>
 
@@ -657,7 +667,11 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
                 </details>
                 <details class="qa">
                     <summary>Is there a big upfront cost? <span class="qa-plus" aria-hidden="true"></span></summary>
-                    <div class="qa-body">No. There are no setup fees and no upfront build cost. You pay one flat monthly fee for the plan you choose, and you only start paying once your site goes live.</div>
+                    <div class="qa-body">No. There are no setup fees and no upfront build cost. You pay one flat monthly fee for the plan you choose, starting when you subscribe.</div>
+                </details>
+                <details class="qa">
+                    <summary>Can I sign up online? <span class="qa-plus" aria-hidden="true"></span></summary>
+                    <div class="qa-body">Yes. Choose a plan on the <a href="pricing.html#plans">pricing page</a> and subscribe online in a few minutes. Your first month is charged at checkout, then a short setup form tells us about your business and our team handles the rest. Prefer to talk first? <a href="book.html">Book a free demo</a>.</div>
                 </details>
                 <details class="qa">
                     <summary>Are there long-term contracts? <span class="qa-plus" aria-hidden="true"></span></summary>
@@ -777,6 +791,28 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
             </div>
         </div>
     </div>
+<script>
+/* Conversion tracking (synced into every page with the footer): Get Started, checkout and Book a Demo clicks
+   go to GA4 + Clarity, and first-touch campaign tags (utm_*, ref, gclid) are carried into checkout links so
+   Stripe and the CRM know where a customer came from. No personal or payment data is sent. */
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'],A='nps_attr';
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  try{var q=new URLSearchParams(location.search),a={},any=false;KEYS.forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,100);any=true;}});
+    if(any&&!store(A)){a.landing=location.pathname;store(A,JSON.stringify(a));}}catch(e){}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p);if(window.clarity)clarity('event',n);}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'',where=a.getAttribute('data-cta-loc')||((a.closest('section[id],header,footer,.mnav')||{}).id||(a.closest('header')?'nav':location.pathname));
+    var m=h.match(/\/(?:api\/checkout\?plan=|start\/)(base|peak)/);
+    if(m){ev('get_started_click',{cta_location:where,plan:m[1]});ev('begin_checkout',{plan:m[1],cta_location:where,currency:'CAD',value:m[1]==='peak'?297:97});
+      try{var at=JSON.parse(store(A)||'null');if(at){var u=new URL(a.href,location.href);KEYS.forEach(function(k){if(at[k]&&!u.searchParams.has(k))u.searchParams.set(k,at[k]);});a.href=u.href;}}catch(x){}
+      return;}
+    if(/pricing(\.html)?#plans/.test(h)&&/get started/i.test(a.textContent)){ev('get_started_click',{cta_location:where});return;}
+    if(/(^|\/)book(\.html)?([?#]|$)/.test(h))ev('book_demo_click',{cta_location:where});
+  },true);
+})();
+</script>
 </footer>
 
 <script>

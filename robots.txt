@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /work/
 Disallow: /campground/
+Disallow: /api/
+Disallow: /start/
+Disallow: /welcome.html
 
 Sitemap: https://northernpeaksystems.ca/sitemap.xml
