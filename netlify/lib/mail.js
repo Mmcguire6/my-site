@@ -10,6 +10,7 @@
  *   EMAIL_ASSET_URL optional base URL for the logo (defaults to the live site)
  */
 const { esc } = require("./util");
+const fields = require("./fields");
 
 const FROM = () => process.env.FROM_EMAIL || "Northern Peak Systems <noreply@northernpeaksystems.ca>";
 const TEAM = () => process.env.TO_EMAIL || "matt@northernpeaksystems.ca";
@@ -92,6 +93,13 @@ const fmtDate = (d) => (d ? new Date(d).toLocaleDateString("en-CA", { year: "num
 const text = (...lines) => lines.filter((l) => l !== null && l !== undefined).join("\n");
 
 /* ================= customer emails ================= */
+const NEXT_STEPS = [
+  ["Set up", "Answer a few questions and share your logo and photos in your Client Hub. It saves as you go."],
+  ["Build", "We build your website and configure your system."],
+  ["Review", "We walk you through everything and make your changes."],
+  ["Launch", "Your site and system go live. Most businesses are live within 7&ndash;10 days of completing setup."],
+];
+
 function welcome({ name, planLabel, priceLabel, link }) {
   return {
     subject: "You're in. Let's set up your system.",
@@ -100,60 +108,53 @@ function welcome({ name, planLabel, priceLabel, link }) {
       eyebrow: "Subscription confirmed",
       title: `Welcome to Northern Peak Systems, ${esc(firstName(name))}.`,
       body:
-        p(`Thanks for subscribing to <b style="color:${C.ink};">${esc(planLabel)}</b>. You&rsquo;re officially on your way to a more organized, automated business. We handle the technical setup; we just need a few details about your business to get started.`) +
-        button(link, "Complete your setup information") +
-        heading("What happens next") +
-        steps([
-          ["Tell us about your business", "A short form about your business, website and current tools. It saves as you go."],
-          ["We build and configure your system", "Our team prepares your website and automations."],
-          ["Review and launch", "We go over everything with you and get ready to launch."],
-        ]) +
+        p(`Thanks for subscribing to <b style="color:${C.ink};">${esc(planLabel)}</b>. We handle the technical setup from here. Your first step is to tell us about your business in your <b style="color:${C.ink};">Client Hub</b>, the place where you&rsquo;ll also track progress, share files and manage billing.`) +
+        button(link, "Start your setup") +
+        heading("How it works from here") +
+        steps(NEXT_STEPS) +
         box([["Plan", planLabel], ["Price", `${priceLabel} per month`], ["Receipt", "Sent separately by Stripe, our payment processor"]], "Your subscription") +
-        small("Your setup link is private to you and stays active for 30 days. If it expires, you can request a new one from the setup page.") +
+        small("This button signs you straight in. It&rsquo;s private to you and works for 30 days; after that you can get a new sign-in link from the Client Hub page.") +
         help(),
       note: why(planLabel),
     }),
-    text: text(`Welcome to Northern Peak Systems, ${firstName(name)}.`, "", `Thanks for subscribing to ${planLabel}. We handle the technical setup; we just need a few details about your business.`, "", `Complete your setup information: ${link}`, "", "What happens next:", "1. Tell us about your business (a short form that saves as you go).", "2. We build and configure your system.", "3. Review and launch.", "", `Plan: ${planLabel}, ${priceLabel} per month. Your receipt comes separately from Stripe.`, "", "Your setup link is private and stays active for 30 days.", `Questions? Reply to this email or call ${PHONE}.`),
+    text: text(`Welcome to Northern Peak Systems, ${firstName(name)}.`, "", `Thanks for subscribing to ${planLabel}. Your first step is to tell us about your business in your Client Hub, where you'll also track progress, share files and manage billing.`, "", `Start your setup: ${link}`, "", "How it works from here:", "1. Set up: answer a few questions and share your logo and photos.", "2. Build: we build your website and configure your system.", "3. Review: we walk you through it and make your changes.", "4. Launch: most businesses are live within 7-10 days of completing setup.", "", `Plan: ${planLabel}, ${priceLabel} per month. Your receipt comes separately from Stripe.`, "", `Questions? Reply to this email or call ${PHONE}.`),
   };
 }
 
 function resumeLink({ name, planLabel, link }) {
   return {
-    subject: "Your Northern Peak Systems setup link",
+    subject: "Your Client Hub sign-in link",
     html: layout({
-      preheader: "Here's a fresh link to finish your setup. Your answers are saved.",
-      eyebrow: "Your setup link",
-      title: "Pick up where you left off",
-      body: p(`Hi ${esc(firstName(name))}, here&rsquo;s a fresh link to your setup form. Anything you already filled in has been saved.`) + button(link, "Continue your setup") + small("This link stays active for 30 days. If you didn&rsquo;t ask for it, you can ignore this email.") + help(),
+      preheader: "Your private link to the Northern Peak Systems Client Hub.",
+      eyebrow: "Client Hub",
+      title: "Sign in to your Client Hub",
+      body: p(`Hi ${esc(firstName(name))}, here&rsquo;s your private sign-in link. Your Client Hub has your setup, progress, files and billing in one place.`) + button(link, "Open your Client Hub") + small("This link works for 30 days. If you didn&rsquo;t ask for it, you can ignore this email.") + help(),
       note: planLabel ? why(planLabel) : "",
     }),
-    text: text(`Hi ${firstName(name)},`, "", "Here's a fresh link to your setup form (your answers are saved):", link, "", "It stays active for 30 days. If you didn't ask for it, ignore this email."),
+    text: text(`Hi ${firstName(name)},`, "", "Here's your private sign-in link to your Client Hub (setup, progress, files and billing):", link, "", "It works for 30 days. If you didn't ask for it, ignore this email."),
   };
 }
 
-function setupReceived({ name, planLabel, answers }) {
+function setupReceived({ name, planLabel, answers, link, fileCount }) {
   const a = answers || {};
   const website = a.has_website === "yes" ? a.website_url : a.desired_domain ? `New site (wants ${a.desired_domain})` : "New site";
   return {
     subject: "We've got your setup information",
     html: layout({
-      preheader: `Thanks, ${firstName(name)}. Here's what happens next.`,
-      eyebrow: "Setup information received",
-      title: "You&rsquo;re all set. We&rsquo;ll take it from here.",
+      preheader: `Thanks, ${firstName(name)}. Your build is next.`,
+      eyebrow: "Setup complete",
+      title: "Thanks. Your build is next.",
       body:
-        p(`Thanks, ${esc(firstName(name))}. We&rsquo;ve received your setup information${a.business_name ? ` for <b style="color:${C.ink};">${esc(a.business_name)}</b>` : ""}, and our team is getting started on your system.`) +
+        p(`Thanks, ${esc(firstName(name))}. We&rsquo;ve received your setup information${a.business_name ? ` for <b style="color:${C.ink};">${esc(a.business_name)}</b>` : ""}, and our team is starting on your system.`) +
+        (link ? button(link, "Track your progress") : "") +
         heading("What happens next") +
-        steps([
-          ["We build and configure your system", "Your website and automations, set up around how you work."],
-          ["We reach out if we need anything", "If we need access to your domain, Google profile or phone provider, we&rsquo;ll arrange it with you securely. We&rsquo;ll never ask for a password by email."],
-          ["Review and launch", "We walk you through everything before it goes live. Most businesses are live within 7&ndash;10 days."],
-        ]) +
-        box([["Business", a.business_name], ["Trade", a.trade], ["Service area", a.service_area], ["Website", website], ["Phone", a.phone]], "What you sent us") +
-        small("Need to add or change something? Just reply to this email.") +
+        steps(NEXT_STEPS.slice(1)) +
+        box([["Business", a.business_name], ["Trade", a.trade], ["Service area", a.service_area], ["Website", website], ["Files shared", fileCount ? String(fileCount) : "None yet"]], "What you sent us") +
+        small("You can add more photos or files any time in your Client Hub. If we need access to your domain, Google profile or phone provider, we&rsquo;ll arrange it with you securely; we never ask for passwords by email.") +
         help(),
       note: why(planLabel),
     }),
-    text: text(`Thanks, ${firstName(name)}. We've received your setup information${a.business_name ? ` for ${a.business_name}` : ""}.`, "", "What happens next:", "1. We build and configure your system.", "2. We reach out if we need anything (never for passwords by email).", "3. Review and launch. Most businesses are live within 7-10 days.", "", "Need to add or change something? Just reply to this email.", `Questions? Call ${PHONE}.`),
+    text: text(`Thanks, ${firstName(name)}. We've received your setup information${a.business_name ? ` for ${a.business_name}` : ""}. Your build is next.`, link ? `\nTrack your progress: ${link}` : null, "", "What happens next:", "1. Build: we build your website and configure your system.", "2. Review: we walk you through it and make your changes.", "3. Launch: most businesses are live within 7-10 days of completing setup.", "", "You can add more photos or files any time in your Client Hub.", `Questions? Reply to this email or call ${PHONE}.`),
   };
 }
 
@@ -167,14 +168,14 @@ function reminder({ name, planLabel, link, n }) {
       title: first ? "We&rsquo;re ready when you are" : "Your build is waiting on a few details",
       body:
         p(first
-          ? `Hi ${esc(firstName(name))}, your subscription to ${esc(planLabel)} is active and our team is ready to start. We just need your setup information. It only takes a few minutes, and it saves as you go.`
+          ? `Hi ${esc(firstName(name))}, your subscription to ${esc(planLabel)} is active and our team is ready to start. We just need your setup information and, if you have them, your logo and a few photos. It all saves as you go in your Client Hub.`
           : `Hi ${esc(firstName(name))}, we still haven&rsquo;t received your setup information, so we can&rsquo;t start building your system yet. Anything you&rsquo;ve already filled in is saved.`) +
         button(link, first ? "Finish your setup" : "Finish your setup now") +
         (first ? "" : p("Rather go through it on a quick call? Reply to this email and we&rsquo;ll set one up.")) +
         help(),
       note: why(planLabel),
     }),
-    text: text(`Hi ${firstName(name)},`, "", first ? `Your subscription to ${planLabel} is active and we're ready to start. We just need your setup information (a few minutes, saves as you go).` : `We still haven't received your setup information, so we can't start building your system yet.`, "", `Finish your setup: ${link}`, first ? null : "\nRather do it on a call? Reply and we'll set one up.", "", `Questions? Call ${PHONE}.`),
+    text: text(`Hi ${firstName(name)},`, "", first ? `Your subscription to ${planLabel} is active and we're ready to start. We just need your setup information (it saves as you go in your Client Hub).` : "We still haven't received your setup information, so we can't start building your system yet.", "", `Finish your setup: ${link}`, first ? null : "\nRather do it on a call? Reply and we'll set one up.", "", `Questions? Call ${PHONE}.`),
   };
 }
 
@@ -235,13 +236,26 @@ function teamPurchase(c) {
   };
 }
 
-function teamOnboarding(c, answers) {
-  const rows = Object.entries(answers).map(([k, v]) => [k.replace(/_/g, " "), v]);
+function teamOnboarding(c, answers, files = [], planKey) {
+  const groups = fields.labelled(answers, planKey || (c.planLabel === "The Peak System" ? "peak" : "base"));
   const link = stripeLink(c.live, c.subscriptionId);
+  const fileRows = files.map((f) => `<tr><td style="padding:5px 0;font-family:${FONT};font-size:14px;"><a href="${esc(f.url || "#")}" style="color:${C.goldDeep};">${esc(f.name)}</a> <span style="color:${C.muted};font-size:12.5px;">(${esc(f.kind)})</span></td></tr>`).join("");
   return {
-    subject: `Onboarding complete: ${answers.business_name || c.email} (${c.planLabel})`,
-    html: layout({ preheader: `${answers.business_name || c.email} sent their setup information.`, eyebrow: "Team notice", title: "Setup information received", body: p(`<b style="color:${C.ink};">${esc(answers.business_name || c.email)}</b> (${esc(c.planLabel)}) has sent their setup information. Reply to this email to reach them.`) + box(rows, "Their answers") + (link ? button(link, "View in Stripe") : "") }),
-    text: `Package: ${c.planLabel}\n\n` + teamText(rows) + (link ? `\n\nStripe: ${link}` : ""),
+    subject: `Setup complete: ${answers.business_name || c.email} (${c.planLabel})`,
+    html: layout({
+      preheader: `${answers.business_name || c.email} sent their setup information.`,
+      eyebrow: "Team notice",
+      title: "Setup information received",
+      body:
+        p(`<b style="color:${C.ink};">${esc(answers.business_name || c.email)}</b> (${esc(c.planLabel)}) has completed setup and their project is now in <b style="color:${C.ink};">Build</b>. Reply to this email to reach them.`) +
+        groups.map((g) => box(g.rows, g.title)).join("") +
+        (files.length
+          ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 6px;background:${C.panel};border:1px solid ${C.line};border-radius:12px;"><tr><td style="padding:16px 20px;"><p style="margin:0 0 10px;font-family:${FONT};font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:${C.goldDeep};">Files (links work for 7 days)</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${fileRows}</table></td></tr></table>`
+          : small("No files uploaded yet.")) +
+        small("Next: move <b>project_stage</b> to <b>review</b> and then <b>live</b> in Supabase (nps_customers) as the build progresses, and add a <b>team_note</b> to show the customer an update in their Client Hub.") +
+        (link ? button(link, "View in Stripe") : ""),
+    }),
+    text: `Package: ${c.planLabel}\n\n` + groups.map((g) => `${g.title}\n` + g.rows.map(([k, v]) => `  ${k}: ${v}`).join("\n")).join("\n\n") + (files.length ? "\n\nFiles:\n" + files.map((f) => `  ${f.name} (${f.kind}): ${f.url}`).join("\n") : "") + (link ? `\n\nStripe: ${link}` : ""),
   };
 }
 

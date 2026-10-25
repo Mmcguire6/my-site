@@ -71,7 +71,7 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
         ("airdrie", "Airdrie",
          "Airdrie sits just north of Calgary on the QE2. If you're an owner-operator here &mdash; a solo trade or a small crew running the business from your phone &mdash; a custom website with missed-call text-back and estimate follow-up, without an enterprise budget, is exactly the gap Northern Peak Systems fills."),
         ("red-deer", "Red Deer",
-         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a system that works as hard as you do. We build websites with missed-call text-back and estimate follow-up for central Alberta trades, all remotely: the demo happens over the phone, the preview shows up in your browser, and your site goes live without anyone having to drive Highway 2."),
+         "Red Deer businesses serve a regional customer base stretching from Olds to Lacombe, and that reach deserves a system that works as hard as you do. We build websites with missed-call text-back and estimate follow-up for central Alberta trades, all remotely: the demo happens over the phone, setup happens in your Client Hub, and your site goes live without anyone having to drive Highway 2."),
     ]),
 ]
 
@@ -587,23 +587,23 @@ CITY_PAGE = """<!DOCTYPE html>
         <ol class="process-list">
             <li>
                 <span class="process-n">01</span>
-                <h3>Book a Demo</h3>
-                <p>A free 15-minute demo. We learn about your {name} business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; and tell you straight which plan fits. Then we build a free custom preview of your website and system before you decide. No pressure, no obligation.</p>
+                <h3>Subscribe</h3>
+                <p>Subscribe online in minutes, or after a free 15-minute demo. On the demo we learn about your {name} business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; show you the system, answer your questions and recommend the right plan. No pressure, no obligation.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
-                <h3>We build everything</h3>
-                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Live in 7&ndash;10 days.</p>
+                <h3>Set up</h3>
+                <p>Tell us about your business and share your logo and photos in your Client Hub. Everything happens online or by phone &mdash; no in-person meeting required.</p>
             </li>
             <li>
                 <span class="process-n">03</span>
-                <h3>Launch &amp; grow</h3>
-                <p>The site goes live on your domain, hosted with SSL and backups, and leads start landing on your phone. We walk you through everything on a short launch call.</p>
+                <h3>Build &amp; review</h3>
+                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Then we walk you through it and make your changes.</p>
             </li>
             <li>
                 <span class="process-n">04</span>
-                <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
+                <h3>Launch</h3>
+                <p>Your site and system go live on your domain, hosted with SSL and backups, and leads start landing on your phone. Most businesses are live within 7&ndash;10 days of completing setup. After launch, unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
@@ -664,7 +664,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
         <h2>Your {name} website, <em>built to match your work.</em></h2>
-        <p>Subscribe online in minutes and we handle the setup, or book a free 15-minute demo and we&rsquo;ll build a free custom preview before you decide.</p>
+        <p>Subscribe online in minutes and we handle the setup, or book a free 15-minute demo and we&rsquo;ll show you the system, answer your questions and recommend the right plan.</p>
         <div class="hcta-actions">
             <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-cta">Get Started <span class="arr">→</span></a>
             <a href="../book.html" class="btn btn-dark" data-cta-loc="city-cta">Book a Free Demo</a>
@@ -943,12 +943,14 @@ def city_faqs(slug: str, name: str, province: str) -> list[tuple[str, str, str]]
     general = [
         (f"Do you only work with businesses in {name}?",
          f"{where} Whether you're in {name} proper or a nearby community, the process is the same: "
-         "a free 15-minute demo, a free custom preview of your website and system before you decide, "
-         "and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room."),
+         "subscribe online or after a free 15-minute demo, tell us about your business in your Client Hub, "
+         "and most businesses are live within 7&ndash;10 days of completing setup. Nothing about the work "
+         "depends on being in the same room."),
         (f"How long does a build take in {name}?",
-         f"Most {name} businesses are live in 7&ndash;10 days. We learn your business on a free 15-minute demo, "
-         "build a free custom preview, and once you decide to go ahead, set up the system and walk you "
-         "through everything on a launch call. No in-person meeting required at any step."),
+         "Most businesses are live within 7&ndash;10 days of completing setup. Once you subscribe, online or "
+         "after a free 15-minute demo, you tell us about your business and share your logo and photos in your "
+         "Client Hub. We build your website and configure your system, walk you through it and make your "
+         "changes, then launch. No in-person meeting required at any step."),
         (f"What kinds of {name} businesses do you build for?",
          f"Home service businesses: {name} plumbers, electricians, HVAC companies, roofers, landscapers, "
          "general contractors, concrete and handyman services, and other trades. If your work starts with "
@@ -1193,7 +1195,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
             Alberta trades don't need a big-agency retainer or a slow, template-heavy website. They need a fast site that shows up when people in their own town search, and a system that answers the leads it brings in. That's what we build: hand-coded websites tuned for local search, paired with missed call recovery, estimate follow-up, lead management and booking, reputation management, and customer retention &mdash; all from our team right here in Edmonton.
         </p>
         <p class="section-body">
-            You get the same connected system whether you're a roofer in Red Deer, an HVAC company in Calgary, or a landscaper in St. Albert &mdash; built to load fast, show up for &ldquo;your service + your city&rdquo; searches, and turn visitors into booked jobs. Flat pricing from $97/month, no setup fees, no contracts, and we build a free custom preview of your website and system before you decide.
+            You get the same connected system whether you're a roofer in Red Deer, an HVAC company in Calgary, or a landscaper in St. Albert &mdash; built to load fast, show up for &ldquo;your service + your city&rdquo; searches, and turn visitors into booked jobs. Flat pricing from $97/month, no setup fees, no contracts, and you can subscribe online in minutes or after a free 15-minute demo.
         </p>
     </div>
 </section>
@@ -1203,7 +1205,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
         <h2>Don't see your city? <em>We work across Canada and the US.</em></h2>
-        <p>Based in Edmonton, we work with home service businesses across Alberta, and across Canada and the US. Book a free 15-minute demo, and we build a free custom preview of your website and system before you decide.</p>
+        <p>Based in Edmonton, we work with home service businesses across Alberta, and across Canada and the US. Book a free 15-minute demo and we&rsquo;ll show you the system, answer your questions and recommend the right plan.</p>
         <div class="hcta-actions">
             <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
             <a href="pricing.html" class="btn btn-dark">See pricing</a>

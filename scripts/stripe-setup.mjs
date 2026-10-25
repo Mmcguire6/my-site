@@ -94,7 +94,7 @@ if (!portal) {
       customer_update: { enabled: true, allowed_updates: ["email", "address", "phone", "name"] },
       subscription_cancel: { enabled: false },
     },
-    default_return_url: "https://northernpeaksystems.ca/welcome.html",
+    default_return_url: "https://northernpeaksystems.ca/client.html",
     metadata: { nps: "self_serve_v1" },
   });
   console.log(`Customer portal: created ${portal.id}`);

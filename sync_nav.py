@@ -24,8 +24,8 @@ ROOT = Path(__file__).parent
 SOURCE = ROOT / "index.html"
 CSS_ID = "nav-sync-css"
 
-ROOT_PAGES = ["404.html", "about.html", "book.html", "contact.html", "faq.html", "how.html",
-              "locations.html", "pricing.html", "privacy.html", "terms.html", "work.html"]
+ROOT_PAGES = ["404.html", "about.html", "book.html", "client.html", "contact.html", "faq.html", "how.html",
+              "locations.html", "platform.html", "pricing.html", "privacy.html", "terms.html", "work.html"]
 SUB_DIRS = ["features", "locations", "blog"]
 
 NAV_SELECTOR = re.compile(r"\.(?:nav|brand|mnav|mega|m2-|mx-|ix-|m3-|foot)|btn-tc")

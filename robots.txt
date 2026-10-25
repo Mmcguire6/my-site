@@ -5,5 +5,6 @@ Disallow: /campground/
 Disallow: /api/
 Disallow: /start/
 Disallow: /welcome.html
+Disallow: /client.html
 
 Sitemap: https://northernpeaksystems.ca/sitemap.xml

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 5 Ways to Win Back the Jobs You Already Quoted
 slug: quote-follow-up-for-contractors
 title_tag: 5 Ways to Win Back Jobs You Already Quoted
@@ -8,7 +9,7 @@ category: Lead Generation
 date: 2026-08-01
 read_time: 8
 cta_title: Ready to stop losing jobs you <em>already won?</em>
-cta_body: The websites we build for Alberta trades and local shops come with automatic lead follow-up built in, so every quote gets a scheduled check-in even when you're three jobs behind. Send a few sentences about your business and you'll get back a working preview, no commitment.
+cta_body: The websites we build for Alberta trades and local shops come with automatic lead follow-up built in, so every quote gets a scheduled check-in even when you're three jobs behind. Book a free 15-minute demo and we'll show you the system, answer your questions and recommend the right plan.
 ---
 
 You send the quote, the homeowner says "sounds good, let me think about it," and then — nothing. No callback, no "we went with someone else," just silence. So you shrug, assume they weren't serious, and move on to the next one.

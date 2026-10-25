@@ -69,7 +69,7 @@ exports.handler = async (event) => {
       line_items: [{ price, quantity: 1 }],
       // cards only (Apple Pay / Google Pay ride on "card"; "link" is Stripe's saved-card wallet). No buy-now-pay-later.
       payment_method_types: ["card", "link"],
-      success_url: `${SITE_URL()}/welcome.html?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${SITE_URL()}/client.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${SITE_URL()}/pricing.html?checkout=cancelled#plans`,
       metadata,
       subscription_data: { metadata, description: `${plan.label}, Northern Peak Systems` },

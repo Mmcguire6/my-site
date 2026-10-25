@@ -4,7 +4,8 @@
  *   node scripts/dev-server.mjs            -> http://localhost:8790
  * Loads secrets from .env.local and routes like netlify.toml:
  *   /api/checkout, /start/*  -> checkout     /api/stripe-webhook -> stripe-webhook
- *   /api/onboarding          -> onboarding   /api/contact        -> contact
+ *   /api/client              -> client       /api/onboarding     -> onboarding (alias)
+ *   /api/contact             -> contact
  * For webhooks in Stripe test mode, forward with the Stripe CLI:
  *   stripe listen --api-key <sk_test_...> --forward-to localhost:8790/api/stripe-webhook
  * and put the printed whsec_... in .env.local as STRIPE_WEBHOOK_SECRET.
@@ -35,6 +36,7 @@ const ROUTES = [
   [/^\/api\/checkout\/?$/, "checkout"],
   [/^\/start\/[^/]+\/?$/, "checkout"],
   [/^\/api\/stripe-webhook\/?$/, "stripe-webhook"],
+  [/^\/api\/client\/?$/, "client"],
   [/^\/api\/onboarding\/?$/, "onboarding"],
   [/^\/api\/contact\/?$/, "contact"],
 ];

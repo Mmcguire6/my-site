@@ -33,7 +33,7 @@ delete process.env.STRIPE_PORTAL_CONFIGURATION;
 
 /* ---------------- fakes ---------------- */
 const now = () => Math.floor(Date.now() / 1000);
-let db, stripeState, emails, ghlCalls, ghlFailures, emailFailures;
+let db, stripeState, emails, ghlCalls, ghlFailures, emailFailures, files;
 
 const UNIQUE = { nps_customers: ["stripe_subscription_id", "stripe_checkout_session_id"], nps_stripe_events: ["id"] };
 const DEFAULTS = {
@@ -113,11 +113,26 @@ function stripeApi(method, url, body) {
     return s ? [200, s] : [404, { error: { message: "No such subscription" } }];
   }
   if (method === "POST" && p === "/billing_portal/sessions") return [200, { url: "https://billing.stripe.com/p/session/test", params: form(body) }];
+  if (method === "GET" && p === "/invoices") return [200, { data: [{ number: "NPS-0001", created: now(), total: 29700, currency: "cad", status: "paid", hosted_invoice_url: "https://invoice.stripe.com/i/1", invoice_pdf: "https://pay.stripe.com/invoice/1/pdf" }] }];
+  if (method === "GET" && (m = p.match(/^\/customers\/(.+)$/))) return [200, { id: m[1], invoice_settings: { default_payment_method: { card: { brand: "visa", last4: "4242", exp_month: 12, exp_year: 2034 } } } }];
   return [404, { error: { message: `unmocked ${method} ${p}` } }];
+}
+function storageApi(method, url, body) {
+  const p = new URL(url).pathname.replace("/storage/v1", "");
+  let m;
+  if (method === "POST" && (m = p.match(/^\/object\/upload\/sign\/client-files\/(.+)$/))) return [200, { url: `/object/upload/sign/client-files/${m[1]}?token=up_${files.length}` }];
+  if (method === "POST" && p === "/object/list/client-files") {
+    const prefix = body.prefix;
+    return [200, files.filter((f) => f.startsWith(prefix)).map((f) => ({ id: f, name: f.slice(prefix.length), created_at: new Date().toISOString(), metadata: { size: 1234, mimetype: "image/png" } }))];
+  }
+  if (method === "POST" && p === "/object/sign/client-files") return [200, body.paths.map((x) => ({ path: x, signedURL: `/object/sign/client-files/${x}?token=view` }))];
+  if (method === "DELETE" && p === "/object/client-files") { files = files.filter((f) => !body.prefixes.includes(f)); return [200, []]; }
+  return [404, { message: "unmocked storage" }];
 }
 globalThis.fetch = async (url, opts = {}) => {
   const method = opts.method || "GET";
   const respond = ([status, obj]) => ({ ok: status < 400, status, json: async () => obj, text: async () => JSON.stringify(obj) });
+  if (url.startsWith("https://db.test/storage/v1/")) return respond(storageApi(method, url, opts.body ? JSON.parse(opts.body) : undefined));
   if (url.startsWith("https://db.test/rest/v1/")) return respond(postgrest(method, url, opts.body ? JSON.parse(opts.body) : undefined, (opts.headers || {}).Prefer));
   if (url.startsWith("https://api.stripe.com/v1/")) return respond(stripeApi(method, url, opts.body));
   if (url === "https://api.resend.com/emails") {
@@ -177,6 +192,7 @@ beforeEach(() => {
   ghlCalls = [];
   ghlFailures = 0;
   emailFailures = 0;
+  files = [];
   stripeState = {
     created: [],
     sessions: {},
@@ -201,7 +217,7 @@ test("Get Started (peak) redirects to Stripe with the server-side price and attr
   assert.equal(p["payment_method_types[0]"], "card");
   assert.equal(p["payment_method_types[1]"], "link");
   assert.equal(p["payment_method_types[2]"], undefined, "no buy-now-pay-later methods");
-  assert.equal(p.success_url, "https://site.test/welcome.html?session_id={CHECKOUT_SESSION_ID}");
+  assert.equal(p.success_url, "https://site.test/client.html?session_id={CHECKOUT_SESSION_ID}");
   assert.ok(!JSON.stringify(p).includes("price_evil"));
 });
 
@@ -265,7 +281,7 @@ test("Scenario A: Base purchase -> customer record, one welcome, team notice, GH
   assert.equal(done.status, 200);
   assert.equal(customerRow(sub).onboarding_status, "complete");
   assert.ok(!("password" in customerRow(sub).onboarding_data), "unknown fields are dropped");
-  assert.ok(emails.some((e) => e.subject.startsWith("Onboarding complete")));
+  assert.ok(emails.some((e) => e.subject.startsWith("Setup complete:")));
   assert.equal(ghlCalls.at(-1).event, "onboarding_completed");
   assert.ok(ghlCalls.at(-1).tags.includes("Onboarding Complete"));
 });
@@ -316,7 +332,7 @@ test("Scenario D: abandoned onboarding resumes securely", async () => {
   assert.equal((await ob({ action: "resend", email: "OWNER@example.com" })).status, 200);
   assert.equal((await ob({ action: "resend", email: "owner@example.com" })).status, 200); // cooldown: no second email
   assert.equal((await ob({ action: "resend", email: "stranger@example.com" })).status, 200);
-  assert.equal(emails.filter((e) => e.subject === "Your Northern Peak Systems setup link").length, 1);
+  assert.equal(emails.filter((e) => e.subject === "Your Client Hub sign-in link").length, 1);
   // tampered / expired tokens get nothing
   const forged = t.slice(0, -2) + (t.endsWith("A") ? "BB" : "AA");
   assert.equal((await ob({ action: "load", token: forged })).status, 401);
@@ -507,7 +523,84 @@ test("Onboarding reminders go out on day 2 and day 5, once each, and stop when d
   await reminders(t0 + 6 * DAY);
   assert.equal(rem().length, 2);
   assert.ok(rem()[1].startsWith("Still need your setup details"));
-  assert.ok(emails.filter((e) => /start your build/.test(e.subject))[0].html.includes("/welcome.html#t="));
+  assert.ok(emails.filter((e) => /start your build/.test(e.subject))[0].html.includes("/client.html#t="));
   await reminders(t0 + 30 * DAY);
   assert.equal(rem().length, 2, "never more than two");
+});
+
+/* ---------------- Client Hub ---------------- */
+const hubCall = async (body) => {
+  const r = await require(path.join(root, "netlify/functions/client.js")).handler({ httpMethod: "POST", headers: {}, body: JSON.stringify(body) });
+  return { status: r.statusCode, body: JSON.parse(r.body) };
+};
+
+test("Client Hub load: plan, stage, billing (next payment, card, invoices) and files", async () => {
+  const { cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const t = tokenFromWelcome();
+  assert.ok(emails.find((e) => e.subject.startsWith("You're in")).html.includes("/client.html#t="), "emails link to the Client Hub");
+  const r = await hubCall({ action: "load", token: t });
+  assert.equal(r.status, 200);
+  const c = r.body.customer;
+  assert.equal(c.project_stage, "setup");
+  assert.equal(c.app_url, "https://app.northernpeaksystems.ca/");
+  assert.equal(c.billing.card.last4, "4242");
+  assert.equal(c.billing.invoices[0].number, "NPS-0001");
+  assert.ok(c.billing.next_payment_at);
+  assert.deepEqual(c.files, []);
+});
+
+test("Uploads: signed URL only in the customer's own folder, validated, listable, deletable", async () => {
+  const { sub, cs } = purchase("base");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const t = tokenFromWelcome();
+  const up = await hubCall({ action: "upload-url", token: t, filename: "Our Logo.PNG", size: 5000, type: "image/png", kind: "logo" });
+  assert.equal(up.status, 200);
+  assert.ok(up.body.upload_url.includes(`/client-files/${sub}/logo__`));
+  assert.ok(up.body.key.endsWith("__our-logo.png"));
+  files.push(`${sub}/${up.body.key}`); // what the browser upload would create
+  for (const bad of [{ type: "application/x-msdownload", kind: "logo", size: 10 }, { type: "image/png", kind: "logo", size: 30 * 1024 * 1024 }, { type: "image/png", kind: "secret", size: 10 }]) {
+    assert.equal((await hubCall({ action: "upload-url", token: t, filename: "x", ...bad })).status, 400);
+  }
+  const list = await hubCall({ action: "files", token: t });
+  assert.equal(list.body.files.length, 1);
+  assert.equal(list.body.files[0].kind, "logo");
+  assert.ok(list.body.files[0].url.includes("token=view"));
+  assert.equal((await hubCall({ action: "delete-file", token: t, key: "../other_sub/x.png" })).status, 400);
+  const del = await hubCall({ action: "delete-file", token: t, key: up.body.key });
+  assert.equal(del.body.files.length, 0);
+  assert.equal((await hubCall({ action: "upload-url", token: "forged", filename: "x.png", size: 10, type: "image/png", kind: "logo" })).status, 401);
+});
+
+test("Submitting setup moves the project to Build and sends the team the files", async () => {
+  const { sub, cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  files.push(`${sub}/photo__1__truck.jpg`);
+  const r = await hubCall({ action: "submit", token: tokenFromWelcome(), data: { ...PEAK_ANSWERS, team_size: "2-5", main_goal: "More Google reviews" } });
+  assert.equal(r.status, 200);
+  assert.equal(customerRow(sub).project_stage, "build");
+  assert.equal(r.body.customer.project_stage, "build");
+  const team = emails.find((e) => e.subject.startsWith("Setup complete:"));
+  assert.ok(team.html.includes("truck.jpg"));
+  assert.ok(team.html.includes("More Google reviews"));
+  assert.ok(emails.find((e) => e.subject === "We've got your setup information").html.includes("/client.html#t="));
+});
+
+test("Expanded setup: optional fields validated only when filled, unknown fields dropped", async () => {
+  const { cs } = purchase("base");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const t = tokenFromWelcome();
+  const bad = await hubCall({ action: "submit", token: t, data: { ...BASE_ANSWERS, team_size: "a hundred", brand_style: "Rainbow" } });
+  assert.equal(bad.status, 422);
+  assert.equal(bad.body.fields.team_size, "invalid_option");
+  const ok = await hubCall({ action: "submit", token: t, data: { ...BASE_ANSWERS, hours: "Mon-Fri 8-5", gbp_email: "not-for-base" } });
+  assert.equal(ok.status, 200);
+});
+
+test("A customer who finished setup before stages existed shows as Build", async () => {
+  const { sub, cs } = purchase("base");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  Object.assign(customerRow(sub), { onboarding_status: "complete", project_stage: "setup" });
+  const r = await hubCall({ action: "load", token: tokenFromWelcome() });
+  assert.equal(r.body.customer.project_stage, "build");
 });

@@ -89,7 +89,7 @@ async function syncSubscription(subscriptionId) {
 }
 
 function onboardingLink(subscriptionId) {
-  return `${SITE_URL()}/welcome.html#t=${token.issue(subscriptionId)}`;
+  return `${SITE_URL()}/client.html#t=${token.issue(subscriptionId)}`;
 }
 
 /** Shape used by the internal emails. */
@@ -164,14 +164,14 @@ async function afterPurchase(row) {
   ]);
 }
 
-/** After the onboarding form is submitted: team notice with the answers, GHL event. */
-async function afterOnboarding(row) {
+/** After setup is submitted: customer confirmation, team notice with the answers and file links, GHL event. */
+async function afterOnboarding(row, files = []) {
   const plan = plans.getPlan(row.plan) || { label: row.plan };
   const to = row.email || (row.onboarding_data && row.onboarding_data.email);
   await runSteps(row, [
     ["customer_confirm_sent_at", Boolean(to), () =>
-      mail.send({ to, ...mail.setupReceived({ name: row.name || (row.onboarding_data || {}).contact_name, planLabel: plan.label, answers: row.onboarding_data || {} }) })],
-    ["onboarding_notified_at", true, () => mail.send({ to: mail.TEAM(), replyTo: row.email || undefined, ...mail.teamOnboarding(view(row), row.onboarding_data || {}) })],
+      mail.send({ to, ...mail.setupReceived({ name: row.name || (row.onboarding_data || {}).contact_name, planLabel: plan.label, answers: row.onboarding_data || {}, link: onboardingLink(row.stripe_subscription_id), fileCount: files.length }) })],
+    ["onboarding_notified_at", true, () => mail.send({ to: mail.TEAM(), replyTo: row.email || undefined, ...mail.teamOnboarding(view(row), row.onboarding_data || {}, files, row.plan) })],
     ["ghl_onboarding_sent_at", Boolean(process.env.GHL_WEBHOOK_URL), () => ghl.send("onboarding_completed", ghlView(row))],
   ]);
 }

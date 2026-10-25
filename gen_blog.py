@@ -37,9 +37,10 @@ OG_IMAGE = SITE + "/img/og-image.jpg"   # 1200x630
 BOOK_URL = "../book.html"               # live calendar page
 
 # One offer, stated the same way on every post (owner decision, Oct 2026).
-CTA_OFFER = ("Book a free 15-minute demo and we'll build a free custom preview of your website "
-             "and system, so you can see it working before you decide. The Peak System is "
-             "$297/month flat and live in 7–10 days. No contracts · no setup fees.")
+CTA_OFFER = ("Subscribe online in minutes, or book a free 15-minute demo and we'll show you the "
+             "system, answer your questions and recommend the right plan. The Peak System is "
+             "$297/month flat, and most businesses are live within 7–10 days of completing setup. "
+             "No contracts · no setup fees.")
 CTA_BUTTON = f'<a href="{BOOK_URL}" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>'
 
 # ---------------------------------------------------------------------------
@@ -495,7 +496,7 @@ def write_post(p: dict) -> Path:
     head = HEAD.format(title=html.escape(page_title(p)),
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        og_image=OG_IMAGE, ld_json=post_schema(p, url), styles=BLOG_CSS)
-    cta_eyebrow = p.get("cta_eyebrow", "See it first")
+    cta_eyebrow = p.get("cta_eyebrow", "Ready when you are")
     cta_title = p.get("cta_title", "Want a site that's <em>fast by default?</em>")
     cta_body = (p.get("cta_lead", "") + " " + CTA_OFFER).strip()
     cover_svg = COVER_ICONS.get(p.get("category", "").strip(), COVER_ICONS["_default"])
@@ -565,7 +566,7 @@ def write_index(posts: list) -> Path:
 {cards}
 </div></section>
 <section class="post-cta"><div class="wrap">
-    <p class="eyebrow">See it first</p>
+    <p class="eyebrow">Ready when you are</p>
     <h2>Want more of your calls to <em>turn into jobs?</em></h2>
     <p>{CTA_OFFER}</p>
     <div class="post-cta-actions">
@@ -595,6 +596,7 @@ def update_sitemap(posts: list) -> None:
 
 def main() -> None:
     posts = [parse_post(p) for p in sorted(POSTS_DIR.glob("*.md"))]
+    posts = [p for p in posts if p.get("draft", "").lower() != "true"]  # "draft: true" in the frontmatter keeps a post unpublished
     posts.sort(key=lambda p: p["date"], reverse=True)
     for p in posts:
         write_post(p)

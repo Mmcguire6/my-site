@@ -1,8 +1,9 @@
 # Self-serve checkout and onboarding: setup and operations
 
 **Flow:** Get Started → Stripe Checkout (server-created session, server-side price) → Stripe confirms payment →
-webhook records the customer in Supabase → welcome email with a private setup link + team notice + GoHighLevel
-event → customer fills in the setup form on `/welcome.html` → team notice + GoHighLevel event → we build.
+webhook records the customer in Supabase → welcome email with a private Client Hub link + team notice + GoHighLevel
+event → customer completes setup and uploads files in the **Client Hub** (`/client.html`) → team notice + GoHighLevel
+event → we build, moving the project through Build → Review → Live in the Hub.
 
 Book a Demo is unchanged (`/book` → Google Calendar). Both paths stay on every key page.
 
@@ -15,10 +16,12 @@ written notice. Terms, FAQ and pricing copy say this.
 | --- | --- |
 | Start a checkout (`/api/checkout?plan=`, `/start/base`, `/start/peak`) | `netlify/functions/checkout.js` |
 | Stripe webhook (`/api/stripe-webhook`) | `netlify/functions/stripe-webhook.js` |
-| Onboarding API (`/api/onboarding`: verify, load, save, submit, resend, portal) | `netlify/functions/onboarding.js` |
+| Client Hub API (`/api/client`: verify, load, save, submit, signin, upload-url, files, delete-file, portal; `/api/onboarding` is an alias) | `netlify/functions/client.js` |
+| Setup questions (server validation + team email labels) | `netlify/lib/fields.js` |
+| Client files (private Supabase Storage bucket `client-files`) | `netlify/lib/storage.js` |
 | Shared code (Stripe, Supabase, emails, GHL, signed links, plans) | `netlify/lib/*.js` |
-| Onboarding page | `welcome.html` |
-| Database tables | `docs/supabase-checkout.sql` |
+| Client Hub page (old `welcome.html` redirects here) | `client.html` |
+| Database tables | `docs/supabase-checkout.sql`, `docs/supabase-checkout-emails.sql`, `docs/supabase-client-hub.sql` |
 | One-time Stripe setup (prices, portal, webhook) | `scripts/stripe-setup.mjs` |
 | Local server with functions | `scripts/dev-server.mjs` |
 | Automated tests (no credentials needed) | `scripts/test-checkout.mjs` |
@@ -109,8 +112,8 @@ Purchases do **not** opt anyone into SMS or marketing. Keep promotional campaign
 
 ## 6. Testing
 
-- Offline: `node --test scripts/test-checkout.mjs` (15 scenarios: both plans, duplicate and replayed webhooks,
-  failed payments, abandoned onboarding, cancellations, refunds).
+- Offline: `node --test scripts/test-checkout.mjs` (25 scenarios: both plans, duplicate and replayed webhooks,
+  failed payments, abandoned onboarding, cancellations, refunds, Client Hub billing, uploads and stage tracking).
 - Local, end to end with Stripe test mode: `node scripts/dev-server.mjs`, then in another terminal
   `stripe listen --api-key sk_test_... --forward-to localhost:8790/api/stripe-webhook` (put the printed
   `whsec_...` in `.env.local` as `STRIPE_WEBHOOK_SECRET`), open http://localhost:8790/pricing.html, click
@@ -132,12 +135,12 @@ Previews: render them with sample data before changing copy.
 
 | Email | To | When | Sent once by |
 | --- | --- | --- | --- |
-| Welcome + setup link | customer | Stripe confirms the first payment | `welcome_sent_at` |
+| Welcome + Client Hub link | customer | Stripe confirms the first payment | `welcome_sent_at` |
 | Setup info received | customer | onboarding form submitted | `customer_confirm_sent_at` |
 | Reminder 1 / 2 | customer | 2 / 5 days after purchase if the form isn't done (daily job, 16:00 UTC) | `reminder_1_sent_at`, `reminder_2_sent_at` |
 | Payment didn't go through (pay-with-another-card link) | customer | a renewal payment fails | the Stripe event |
 | Cancellation confirmed / subscription ended | customer | a cancellation is scheduled, or it ends without one | `cancel_confirm_sent_at` |
-| New setup link | customer | they ask for one on `/welcome.html` | 2-minute cooldown |
+| Client Hub sign-in link | customer | they ask for one on `/client.html` | 2-minute cooldown |
 | New purchase, onboarding complete, billing updates, alerts | team | as they happen | the column / Stripe event |
 
 **Receipts come from Stripe, not this code.** In Stripe (live mode): Settings → Customer emails → turn on
@@ -154,4 +157,35 @@ Database: run `docs/supabase-checkout-emails.sql` once (adds the columns above) 
 - **Failed automations:** the team gets one "Action needed" email per failing Stripe event; Stripe retries for
   up to 3 days and each retry only redoes the step that failed. `nps_stripe_events` shows status and error.
 - **Nothing is deleted** on cancellation or failed payment. Offboarding (site removal) is a manual decision.
-- **Lost setup link:** the customer can request a new one on `/welcome.html`; links last 30 days.
+- **Lost sign-in link:** the customer can request a new one on `/client.html` (or via Client Login in the site
+  header); links last 30 days.
+
+## Client Hub
+
+`/client.html` is where customers land after Checkout and where every email button points. Client Login in the
+site header opens it; Peak System customers also get a button there for the GoHighLevel app
+(`app.northernpeaksystems.ca`). It signs people in with a private emailed link (no passwords) and shows:
+
+- **Progress:** Subscribed → Set up → Build → Review → Launch, plus an optional note from the team.
+- **Setup:** a step-by-step form (business, services, brand & website, current systems for Peak, goals) that
+  saves as they go. Only the essentials are required; questions live in `netlify/lib/fields.js` and the page
+  builder checks it asks exactly those.
+- **Files:** logo, photos and other files (images, PDF, AI, EPS, ZIP; 25 MB each, 60 max) go straight from the
+  browser to the private Supabase Storage bucket `client-files`, in a folder named after the Stripe
+  subscription ID. Supabase → Storage → client-files to browse them; the team email links them for 7 days.
+- **Billing:** plan, next payment, card on file and invoices, read live from Stripe; "Update card and billing
+  details" opens the Stripe Customer Portal.
+- **Your system / support:** the app link (Peak), the website link once `site_url` is set, phone and email.
+
+**Updating a customer's progress** (Supabase → Table Editor → `nps_customers`, find the row by email):
+
+| Column | What the customer sees |
+| --- | --- |
+| `project_stage` | `setup` → `build` (set automatically when they submit setup) → `review` → `live` |
+| `team_note` | "Update from our team" box under the tracker; clear it to hide it |
+| `site_url` | "Preview your site" (review) / "Visit your website" (live) buttons |
+
+Database: run `docs/supabase-client-hub.sql` once (adds those three columns) **before** deploying the Hub.
+
+Preview without an account: `/client.html?preview=peak` or `?preview=base`, optionally `&stage=build|review|live`
+and `&paid=1` (the post-checkout banner). Sample data only; nothing is saved or sent.
