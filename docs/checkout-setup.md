@@ -125,6 +125,28 @@ Purchases do **not** opt anyone into SMS or marketing. Keep promotional campaign
    team notice, Supabase row and GHL contact.
 4. Watch the Netlify function logs and the "Action needed: NPS automation failed" emails for the first week.
 
+## Emails
+
+All emails share one branded layout (`netlify/lib/mail.js`); the header logo is `img/email/nps-logo-white.png`.
+Previews: render them with sample data before changing copy.
+
+| Email | To | When | Sent once by |
+| --- | --- | --- | --- |
+| Welcome + setup link | customer | Stripe confirms the first payment | `welcome_sent_at` |
+| Setup info received | customer | onboarding form submitted | `customer_confirm_sent_at` |
+| Reminder 1 / 2 | customer | 2 / 5 days after purchase if the form isn't done (daily job, 16:00 UTC) | `reminder_1_sent_at`, `reminder_2_sent_at` |
+| Payment didn't go through (pay-with-another-card link) | customer | a renewal payment fails | the Stripe event |
+| Cancellation confirmed / subscription ended | customer | a cancellation is scheduled, or it ends without one | `cancel_confirm_sent_at` |
+| New setup link | customer | they ask for one on `/welcome.html` | 2-minute cooldown |
+| New purchase, onboarding complete, billing updates, alerts | team | as they happen | the column / Stripe event |
+
+**Receipts come from Stripe, not this code.** In Stripe (live mode): Settings → Customer emails → turn on
+**Successful payments** and **Refunds**. Because the site sends its own failed-payment email, turn **off**
+Stripe's: Settings → Billing → Subscriptions and emails → Manage failed payments → "Send emails when card
+payments fail" (keep Smart Retries on). Optional: Settings → Branding (logo, brand colour `#d2a24c`) so receipts match.
+
+Database: run `docs/supabase-checkout-emails.sql` once (adds the columns above) **before** deploying this code.
+
 ## Operations
 
 - **Cancellations:** customers give 30 days' written notice (email). In Stripe, set the subscription to cancel

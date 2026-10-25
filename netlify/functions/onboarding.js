@@ -177,7 +177,7 @@ const actions = {
       if (!customers.ACTIVE.includes(row.subscription_status) && row.subscription_status !== "past_due") continue;
       if (row.link_sent_at && Date.now() - new Date(row.link_sent_at).getTime() < RESEND_COOLDOWN_MS) continue;
       await customers.updateRow(row.stripe_subscription_id, { link_sent_at: new Date().toISOString() });
-      await mail.send({ to: row.email, ...mail.resumeLink({ name: row.name, link: customers.onboardingLink(row.stripe_subscription_id) }) });
+      await mail.send({ to: row.email, ...mail.resumeLink({ name: row.name, planLabel: (plans.getPlan(row.plan) || {}).label, link: customers.onboardingLink(row.stripe_subscription_id) }) });
       break;
     }
     return reply;

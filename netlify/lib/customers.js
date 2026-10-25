@@ -39,6 +39,7 @@ function subFields(sub) {
     subscription_status: sub.status,
     cancel_at_period_end: Boolean(sub.cancel_at_period_end),
     current_period_end: periodEnd ? new Date(periodEnd * 1000).toISOString() : null,
+    cancel_at: sub.cancel_at ? new Date(sub.cancel_at * 1000).toISOString() : sub.cancel_at_period_end && periodEnd ? new Date(periodEnd * 1000).toISOString() : null,
   };
   if (plan) out.plan = plan.key;
   return out;
@@ -105,6 +106,7 @@ function view(row) {
     source: Object.entries(row.attribution || {}).map(([k, v]) => `${k}=${v}`).join(", "),
     customerId: row.stripe_customer_id,
     subscriptionId: row.stripe_subscription_id,
+    live: stripe.isLiveKey(),
   };
 }
 
@@ -164,7 +166,11 @@ async function afterPurchase(row) {
 
 /** After the onboarding form is submitted: team notice with the answers, GHL event. */
 async function afterOnboarding(row) {
+  const plan = plans.getPlan(row.plan) || { label: row.plan };
+  const to = row.email || (row.onboarding_data && row.onboarding_data.email);
   await runSteps(row, [
+    ["customer_confirm_sent_at", Boolean(to), () =>
+      mail.send({ to, ...mail.setupReceived({ name: row.name || (row.onboarding_data || {}).contact_name, planLabel: plan.label, answers: row.onboarding_data || {} }) })],
     ["onboarding_notified_at", true, () => mail.send({ to: mail.TEAM(), replyTo: row.email || undefined, ...mail.teamOnboarding(view(row), row.onboarding_data || {}) })],
     ["ghl_onboarding_sent_at", Boolean(process.env.GHL_WEBHOOK_URL), () => ghl.send("onboarding_completed", ghlView(row))],
   ]);
@@ -175,4 +181,7 @@ async function updateRow(subscriptionId, patch) {
   return r[0] || null;
 }
 
-module.exports = { T, ACTIVE, getRow, findByEmail, recordCheckout, syncSubscription, onboardingLink, afterPurchase, afterOnboarding, updateRow, view, ghlView, subFields };
+/** Exported for the reminder job and cancellation emails: run fn once per customer, guarded by a timestamp column. */
+const sendOnce = once;
+
+module.exports = { sendOnce, release, T, ACTIVE, getRow, findByEmail, recordCheckout, syncSubscription, onboardingLink, afterPurchase, afterOnboarding, updateRow, view, ghlView, subFields };

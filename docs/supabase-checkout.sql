@@ -14,6 +14,7 @@ create table if not exists public.nps_customers (
   subscription_status text,
   cancel_at_period_end boolean not null default false,
   current_period_end timestamptz,
+  cancel_at timestamptz,
   last_payment_at timestamptz,
   onboarding_status text not null default 'awaiting_information'
     check (onboarding_status in ('awaiting_information', 'in_progress', 'complete')),
@@ -28,6 +29,10 @@ create table if not exists public.nps_customers (
   onboarding_notified_at timestamptz,
   ghl_onboarding_sent_at timestamptz,
   link_sent_at timestamptz,
+  customer_confirm_sent_at timestamptz,
+  reminder_1_sent_at timestamptz,
+  reminder_2_sent_at timestamptz,
+  cancel_confirm_sent_at timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );

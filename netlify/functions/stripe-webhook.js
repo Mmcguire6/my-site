@@ -23,6 +23,7 @@ const customers = require("../lib/customers");
 const mail = require("../lib/mail");
 const ghl = require("../lib/ghl");
 const db = require("../lib/db");
+const plans = require("../lib/plans");
 const { json, rawBody, log } = require("../lib/util");
 
 const HANDLED = new Set([
@@ -40,6 +41,14 @@ const PROBLEM_STATUSES = ["past_due", "unpaid", "canceled", "incomplete_expired"
 
 const invoiceSub = (inv) =>
   inv.subscription || (inv.parent && inv.parent.subscription_details && inv.parent.subscription_details.subscription) || null;
+
+/** Customer email when a subscription is set to end (or ends without notice); sent once per subscription. */
+function customerCancellation(row, endsAt, ended) {
+  if (!row.email) return Promise.resolve();
+  const plan = plans.getPlan(row.plan) || { label: row.plan };
+  return customers.sendOnce(row, "cancel_confirm_sent_at", () =>
+    mail.send({ to: row.email, ...mail.cancellation({ name: row.name, planLabel: plan.label, endsAt, ended }) }));
+}
 
 const teamNotice = (title, row, detail) =>
   mail.send({ to: mail.TEAM(), ...mail.teamLifecycle({ title, customer: row && customers.view(row), detail }) });
@@ -77,10 +86,16 @@ async function handle(evt, steps) {
         await steps.run("ghl", () => ghl.send("subscription_status_changed", customers.ghlView(row), { previous_status: prev }));
         await steps.run("team", () => teamNotice(`Subscription is ${now.replace(/_/g, " ")}`, row, `Status changed from ${prev} to ${now}.`));
       }
-      if (row.cancel_at_period_end && !before.cancel_at_period_end) {
-        const ends = row.current_period_end ? new Date(row.current_period_end).toDateString() : "the end of the period";
-        await steps.run("ghl_cancel", () => ghl.send("subscription_cancel_scheduled", customers.ghlView(row), { ends_at: row.current_period_end }));
+      if (row.cancel_at && !before.cancel_at) {
+        // a cancellation was scheduled (after the customer's 30 days' notice): tell GHL, the team and the customer
+        const ends = mail.fmtDate(row.cancel_at);
+        await steps.run("ghl_cancel", () => ghl.send("subscription_cancel_scheduled", customers.ghlView(row), { ends_at: row.cancel_at }));
         await steps.run("team_cancel", () => teamNotice("Cancellation scheduled", row, `The subscription is set to end on ${ends}. Nothing has been switched off.`));
+        await steps.run("customer_cancel", () => customerCancellation(row, row.cancel_at, false));
+      } else if (!row.cancel_at && before.cancel_at && row.subscription_status !== "canceled") {
+        // cancellation withdrawn: a future cancellation should be confirmed again
+        await customers.release(row.stripe_subscription_id, "cancel_confirm_sent_at");
+        await steps.run("team_uncancel", () => teamNotice("Cancellation withdrawn", row, "The scheduled cancellation was removed; the subscription continues."));
       }
       return;
     }
@@ -90,6 +105,8 @@ async function handle(evt, steps) {
       if (!row) return;
       await steps.run("ghl", () => ghl.send("subscription_canceled", customers.ghlView(row)));
       await steps.run("team", () => teamNotice("Subscription cancelled", row, "Stripe has ended this subscription. Customer data is kept and the site has not been touched; follow the offboarding process."));
+      // only if they weren't already sent a "cancellation confirmed" email for a scheduled end date
+      await steps.run("customer", () => customerCancellation(row, row.cancel_at || new Date().toISOString(), true));
       return;
     }
 
@@ -114,6 +131,16 @@ async function handle(evt, steps) {
       const next = o.next_payment_attempt ? new Date(o.next_payment_attempt * 1000).toDateString() : "none scheduled";
       await steps.run("ghl", () => ghl.send("payment_failed", customers.ghlView(row), { attempt_count: o.attempt_count || 1, next_payment_attempt: o.next_payment_attempt || null }));
       await steps.run("team", () => teamNotice("Recurring payment failed", row, `Attempt ${o.attempt_count || 1}. Next retry: ${next}.`));
+      if (row.email) {
+        const plan = plans.getPlan(row.plan) || { label: row.plan };
+        await steps.run("customer", () => mail.send({ to: row.email, ...mail.paymentFailed({
+          name: row.name,
+          planLabel: plan.label,
+          amountLabel: o.amount_due ? `$${(o.amount_due / 100).toFixed(2)} ${String(o.currency || "cad").toUpperCase()}` : "",
+          payUrl: o.hosted_invoice_url || "",
+          nextAttempt: o.next_payment_attempt ? new Date(o.next_payment_attempt * 1000).toISOString() : null,
+        }) }));
+      }
       return;
     }
 

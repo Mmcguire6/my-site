@@ -46,6 +46,9 @@ function matches(row, params) {
     const [op, ...rest] = v.split(".");
     const val = rest.join(".");
     if (op === "eq" && String(row[k]) !== val) return false;
+    if (op === "neq" && String(row[k]) === val) return false;
+    if (op === "in" && !val.replace(/^\(|\)$/g, "").split(",").includes(String(row[k]))) return false;
+    if (op === "not" && val === "is.null" && row[k] == null) return false;
     if (op === "is" && val === "null" && row[k] != null) return false;
     if (op === "is" && val === "false" && row[k] !== false) return false;
   }
@@ -141,6 +144,7 @@ const fn = (name) => require(path.join(root, "netlify/functions", `${name}.js`))
 const checkout = fn("checkout");
 const webhook = fn("stripe-webhook");
 const onboarding = fn("onboarding");
+const reminders = require(path.join(root, "netlify/functions/onboarding-reminders.js")).run;
 const stripeLib = require(path.join(root, "netlify/lib/stripe.js"));
 const tokenLib = require(path.join(root, "netlify/lib/token.js"));
 
@@ -420,4 +424,90 @@ test("Billing portal only opens when enabled, for the token's own customer", asy
   assert.equal(r.status, 200);
   assert.match(r.body.url, /^https:\/\/billing\.stripe\.com\//);
   delete process.env.STRIPE_PORTAL_CONFIGURATION;
+});
+
+/* ---------------- customer emails ---------------- */
+const subjects = (to) => emails.filter((e) => !to || e.to === to).map((e) => e.subject);
+
+test("Submitting setup info emails the customer a confirmation, once", async () => {
+  const { cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const t = tokenFromWelcome();
+  await ob({ action: "submit", token: t, data: PEAK_ANSWERS });
+  await ob({ action: "submit", token: t, data: PEAK_ANSWERS });
+  const conf = emails.filter((e) => e.subject === "We've got your setup information");
+  assert.equal(conf.length, 1);
+  assert.equal(conf[0].to, "owner@example.com");
+  assert.ok(conf[0].html.includes("Pat&#39;s Plumbing") || conf[0].html.includes("Pat's Plumbing"));
+});
+
+test("A failed renewal emails the customer a pay-with-another-card link, once", async () => {
+  const { sub, cs } = purchase("base");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const inv = { subscription: sub, billing_reason: "subscription_cycle", attempt_count: 1, amount_due: 9700, currency: "cad", hosted_invoice_url: "https://invoice.stripe.com/i/test_123", next_payment_attempt: now() + 3 * 86400 };
+  await send("invoice.payment_failed", inv, { id: "evt_fail1" });
+  await send("invoice.payment_failed", inv, { id: "evt_fail1" });
+  const mails = emails.filter((e) => e.to === "owner@example.com" && e.subject.includes("didn't go through"));
+  assert.equal(mails.length, 1);
+  assert.ok(mails[0].html.includes("https://invoice.stripe.com/i/test_123"));
+  assert.ok(mails[0].html.includes("$97.00 CAD"));
+});
+
+test("Cancellation: scheduled end confirmed once; no second email when it ends", async () => {
+  const { sub, cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const endsAt = now() + 30 * 86400;
+  stripeState.subscriptions[sub].cancel_at = endsAt;
+  await send("customer.subscription.updated", { id: sub }, { id: "evt_sched" });
+  await send("customer.subscription.updated", { id: sub }, { id: "evt_sched2" });
+  assert.equal(subjects("owner@example.com").filter((s) => s === "Your cancellation is confirmed").length, 1);
+  stripeState.subscriptions[sub].status = "canceled";
+  await send("customer.subscription.deleted", { id: sub });
+  assert.equal(subjects("owner@example.com").filter((s) => s.startsWith("Your Northern Peak Systems subscription has ended")).length, 0);
+  assert.ok(customerRow(sub).cancel_at);
+});
+
+test("Cancellation: withdrawn then rescheduled confirms again; an immediate cancel says it has ended", async () => {
+  const { sub, cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  stripeState.subscriptions[sub].cancel_at = now() + 30 * 86400;
+  await send("customer.subscription.updated", { id: sub });
+  stripeState.subscriptions[sub].cancel_at = null;
+  await send("customer.subscription.updated", { id: sub });
+  assert.equal(customerRow(sub).cancel_confirm_sent_at, null);
+  stripeState.subscriptions[sub].cancel_at = now() + 40 * 86400;
+  await send("customer.subscription.updated", { id: sub });
+  assert.equal(subjects("owner@example.com").filter((s) => s === "Your cancellation is confirmed").length, 2);
+
+  const b = purchase("base", { sub: "sub_b2", cs: "cs_test_b20000000000" });
+  await send("checkout.session.completed", { id: b.cs, mode: "subscription" });
+  stripeState.subscriptions.sub_b2.status = "canceled";
+  await send("customer.subscription.deleted", { id: "sub_b2" });
+  assert.equal(subjects("owner@example.com").filter((s) => s === "Your Northern Peak Systems subscription has ended").length, 1);
+});
+
+test("Onboarding reminders go out on day 2 and day 5, once each, and stop when done", async () => {
+  const { sub, cs } = purchase("peak");
+  await send("checkout.session.completed", { id: cs, mode: "subscription" });
+  const done = purchase("base", { sub: "sub_done", cs: "cs_test_done00000000" });
+  await send("checkout.session.completed", { id: done.cs, mode: "subscription" });
+  const DAY = 86400000;
+  const t0 = Date.now();
+  for (const r of db.nps_customers) r.created_at = new Date(t0).toISOString();
+  customerRow("sub_done").onboarding_status = "complete";
+  const rem = () => subjects("owner@example.com").filter((s) => /start your build|Still need your setup details/.test(s));
+
+  await reminders(t0 + 1 * DAY);
+  assert.equal(rem().length, 0, "nothing on day 1");
+  await reminders(t0 + 2.1 * DAY);
+  await reminders(t0 + 2.2 * DAY);
+  assert.deepEqual(rem(), ["A few details and we can start your build"]);
+  customerRow(sub).reminder_1_sent_at = new Date(t0 + 2.1 * DAY).toISOString();
+  await reminders(t0 + 5.2 * DAY);
+  await reminders(t0 + 6 * DAY);
+  assert.equal(rem().length, 2);
+  assert.ok(rem()[1].startsWith("Still need your setup details"));
+  assert.ok(emails.filter((e) => /start your build/.test(e.subject))[0].html.includes("/welcome.html#t="));
+  await reminders(t0 + 30 * DAY);
+  assert.equal(rem().length, 2, "never more than two");
 });
