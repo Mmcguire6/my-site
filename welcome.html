@@ -231,6 +231,21 @@ h1,h2{font-family:var(--display);}
 .wl-hero{position:relative;padding:clamp(48px,6vw,88px) 0 clamp(40px,5vw,64px);background:radial-gradient(900px 420px at 80% 0%,rgba(210,162,76,0.1),transparent 60%),var(--bg);}
 .wl-state{max-width:880px;}
 .wl-state[hidden]{display:none;}
+.wl-state-wide{max-width:1180px;}
+.wl-help{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:clamp(28px,4.5vw,72px);align-items:center;}
+.wl-lead-soft{font-weight:500;color:#e2ddd3;font-size:clamp(17px,1.4vw,19px);line-height:1.55;max-width:34em;}
+.wl-help-card{padding:clamp(22px,2.6vw,32px);border:1px solid var(--gold-line);border-radius:18px;background:linear-gradient(170deg,#16151a,#0e0d10);box-shadow:0 0 70px -30px rgba(210,162,76,0.4);}
+.wl-help-h{display:block;font-family:var(--display);font-size:18px;font-weight:700;color:#f5f2ec;}
+.wl-help-list{list-style:none;display:grid;gap:16px;margin-top:18px;}
+.wl-help-list li{display:flex;gap:14px;align-items:flex-start;}
+.wl-help-list i{flex:none;display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--gold-line);border-radius:10px;color:var(--gold-2);}
+.wl-help-list i svg{width:18px;height:18px;}
+.wl-help-list span{font-size:13.5px;line-height:1.5;color:#bdb7ab;}
+.wl-help-list b{display:block;font-size:15px;color:#f5f2ec;}
+.wl-help-note{display:flex;gap:10px;align-items:flex-start;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-2);font-size:13px;line-height:1.55;color:#cfc9bd;}
+.wl-help-note svg{flex:none;width:17px;height:17px;margin-top:1px;color:var(--gold-2);}
+.wl-preview{display:inline-block;margin-bottom:22px;padding:10px 16px;border:1px dashed var(--gold);border-radius:10px;background:rgba(210,162,76,0.1);font-size:14px;color:var(--gold-2);}
+.wl-preview[hidden]{display:none;}
 .wl-h1{margin-top:16px;font-family:var(--display);font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.05;letter-spacing:-0.035em;}
 .wl-lead{margin-top:16px;font-size:clamp(18px,1.6vw,22px);font-weight:600;line-height:1.4;color:#f2efe9;}
 .wl-plan{display:inline-flex;gap:8px;margin-top:22px;padding:8px 16px;border:1px solid var(--gold-line);border-radius:999px;background:rgba(210,162,76,0.08);font-size:14px;color:var(--gold-2);}
@@ -248,6 +263,7 @@ h1,h2{font-family:var(--display);}
 .wl-ghost:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px);}
 .wl-ghost svg,.wl-billing svg{width:16px;height:16px;}
 .wl-resend{margin-top:26px;max-width:560px;}
+.wl-resend[hidden]{display:none;}
 .wl-resend label{display:block;font-size:14px;color:#cfc9bd;margin-bottom:8px;}
 .wl-resend div{display:flex;gap:10px;flex-wrap:wrap;}
 .wl-resend input{flex:1;min-width:220px;padding:13px 14px;border:1px solid var(--line-2);border-radius:10px;background:#141418;color:#f5f2ec;font:inherit;font-size:15px;}
@@ -295,7 +311,7 @@ h1,h2{font-family:var(--display);}
 .wl-submit .btn[disabled]{opacity:.6;cursor:wait;transform:none;}
 .wl-save{font-size:13px;color:var(--ink-2);}
 .wl-formerr{margin-top:14px;padding:12px 14px;border-radius:10px;background:#fff1ec;font-size:14px;font-weight:600;color:#9a3f1f;}
-@media(max-width:900px){.wl-steps{grid-template-columns:1fr;}}
+@media(max-width:900px){.wl-steps,.wl-help{grid-template-columns:1fr;}}
 @media(max-width:640px){.wl-grid{grid-template-columns:1fr;}.wl-field.wl-half{grid-column:1 / -1;}.wl-billing{position:static;margin-top:12px;}.wl-submit .btn{width:100%;}}
 @media(prefers-reduced-motion:reduce){.wl-spin{animation:none;}}
 </style>
@@ -523,7 +539,9 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
 .nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
 .nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
 @media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
 .mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
 .mnav-login:hover{color:var(--gold-2);}
 </style>
@@ -674,6 +692,7 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
         </div>
 
         <div class="wl-state" data-view="ready" hidden>
+            <p class="wl-preview" id="wl-preview" hidden>Preview: this is what new customers see after they subscribe. Nothing you type here is saved or sent.</p>
             <span class="fp-kick">Subscription confirmed</span>
             <h1 class="wl-h1">Welcome to Northern Peak Systems</h1>
             <p class="wl-lead">Your subscription is confirmed. Let&rsquo;s get your system set up.</p>
@@ -693,16 +712,30 @@ a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border
             </div>
         </div>
 
-        <div class="wl-state" data-view="error" hidden>
-            <span class="fp-kick" id="wl-err-kick">Setup link</span>
-            <h1 class="wl-h1" id="wl-err-title">We couldn&rsquo;t open your setup form</h1>
-            <p class="wl-lead" id="wl-err-text"></p>
-            <form class="wl-resend" id="wl-resend" novalidate>
-                <label for="wl-resend-email">Email a new setup link to the address you subscribed with</label>
-                <div><input id="wl-resend-email" type="email" autocomplete="email" required placeholder="you@yourbusiness.ca"><button type="submit" class="btn btn-gold">Send link</button></div>
-                <p class="wl-resend-msg" id="wl-resend-msg" role="status"></p>
-            </form>
-            <p class="fp-p wl-alt">Haven&rsquo;t subscribed yet? <a href="pricing.html#plans">See plans</a> or <a href="book.html">book a demo</a>. Questions? Call <a href="tel:+15872005649">(587) 200-5649</a>.</p>
+        <div class="wl-state wl-state-wide" data-view="error" hidden>
+            <div class="wl-help">
+                <div>
+                    <span class="fp-kick" id="wl-err-kick">Customer setup</span>
+                    <h1 class="wl-h1" id="wl-err-title">Finish setting up your system</h1>
+                    <p class="wl-lead wl-lead-soft" id="wl-err-text"></p>
+                    <form class="wl-resend" id="wl-resend" novalidate>
+                        <label for="wl-resend-email">Email address you subscribed with</label>
+                        <div><input id="wl-resend-email" type="email" autocomplete="email" required placeholder="you@yourbusiness.ca"><button type="submit" class="btn btn-gold">Send my setup link <span class="arr">&rarr;</span></button></div>
+                        <p class="wl-resend-msg" id="wl-resend-msg" role="status"></p>
+                    </form>
+                    <p class="fp-p wl-alt">Not a customer yet? <a href="pricing.html#plans">See plans</a> or <a href="book.html">book a free demo</a>. Questions? Call <a href="tel:+15872005649">(587) 200-5649</a>.</p>
+                </div>
+                <aside class="wl-help-card" aria-label="What is in your setup form">
+                    <b class="wl-help-h">What&rsquo;s in your setup form</b>
+                    <ul class="wl-help-list">
+                        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></i><span><b>Your business</b>Name, contact details, trade and service area</span></li>
+                        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></i><span><b>Website and domain</b>What you have now and what you&rsquo;d like</span></li>
+                        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></i><span><b>Your current tools</b>CRM, phone and Google profile (The Peak System only)</span></li>
+                        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Anything else</b>Whatever you&rsquo;d like us to know</span></li>
+                    </ul>
+                    <p class="wl-help-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Your answers save as you go, and we never ask for passwords. The form opens from a private link so only you can see it.</span></p>
+                </aside>
+            </div>
         </div>
     </div>
 </section>
@@ -862,12 +895,13 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   function call(body,keepalive){return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),keepalive:!!keepalive}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {status:r.status,body:j};});});}
   function fail(kind){
     var t={
-      nolink:['Setup link','Open your setup link','Use the link in your welcome email to fill in your setup information, or ask for a new one below.'],
-      invalid:['Setup link','This setup link has expired or isn\u2019t valid','Setup links stay active for 30 days. Enter the email you subscribed with and we\u2019ll send you a fresh one.'],
+      nolink:['Customer setup','Finish setting up your system','Your setup form is private to you, so it opens from the button in your welcome email. Can\u2019t find it? Enter the email you subscribed with and we\u2019ll send you a fresh link.'],
+      invalid:['Setup link','That setup link has expired','Setup links stay active for 30 days. Enter the email you subscribed with and we\u2019ll send you a new one. Anything you already filled in is saved.'],
       pending:['Payment processing','Your payment is still being confirmed','Some payment methods take a little longer to clear. We\u2019ll email your setup link as soon as it does.'],
       notpaid:['Checkout','We couldn\u2019t confirm a payment','This checkout hasn\u2019t been paid. If you think that\u2019s wrong, enter your email below or give us a call.'],
       unavailable:['Setup','Online setup is temporarily unavailable','Your subscription isn\u2019t affected. Please try again shortly, or call us and we\u2019ll take your details by phone.']
     }[kind]||null;
+    document.getElementById('wl-resend').hidden=(kind==='pending'||kind==='unavailable');
     document.getElementById('wl-err-kick').textContent=t[0];document.getElementById('wl-err-title').textContent=t[1];document.getElementById('wl-err-text').textContent=t[2];
     view('error');
   }
@@ -904,6 +938,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
   /* ---------- autosave ---------- */
   function save(keepalive){
+    if(state.preview){if(state.dirty){state.dirty=false;saveEl.textContent='Preview: not saved';}return;}
     if(!state.token||state.complete||!state.dirty||state.saving)return;
     state.saving=true;state.dirty=false;saveEl.textContent='Saving\u2026';
     call({action:'save',token:state.token,data:collect()},keepalive).then(function(r){
@@ -921,6 +956,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var errs=check();showErrors(errs);if(Object.keys(errs).length)return;
+    if(state.preview){view('done');window.scrollTo({top:0});return;}
     var btn=document.getElementById('wl-submit-btn');btn.disabled=true;clearTimeout(state.timer);
     call({action:'submit',token:state.token,data:collect()}).then(function(r){
       btn.disabled=false;
@@ -972,8 +1008,11 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     call({action:'resend',email:input.value.trim()}).then(function(){msg.textContent='If that email matches a subscription, a new setup link is on its way. Check your inbox (and spam folder).';}).catch(function(){msg.textContent='Couldn\u2019t send right now. Please try again.';});
   });
 
-  var q=new URLSearchParams(location.search),sid=q.get('session_id'),h=(location.hash.match(/[#&]t=([^&]+)/)||[])[1];
-  if(sid)verify(sid,0);else if(h)load(decodeURIComponent(h));else if(ss(TOKEN_KEY))load(ss(TOKEN_KEY));else fail('nolink');
+  var q=new URLSearchParams(location.search),sid=q.get('session_id'),h=(location.hash.match(/[#&]t=([^&]+)/)||[])[1],pv=q.get('preview');
+  if(pv==='peak'||pv==='base'){
+    state.preview=true;document.getElementById('wl-preview').hidden=false;
+    render({plan:pv,plan_label:pv==='peak'?'The Peak System':'Base System',price_label:pv==='peak'?'$297 CAD':'$97 CAD',email:'',name:'',data:{},portal:false,onboarding_status:'awaiting_information'});
+  }else if(sid)verify(sid,0);else if(h)load(decodeURIComponent(h));else if(ss(TOKEN_KEY))load(ss(TOKEN_KEY));else fail('nolink');
 })();
 </script>
 </body>
