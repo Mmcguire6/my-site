@@ -21,7 +21,7 @@ written notice. Terms, FAQ and pricing copy say this.
 | Client files (private Supabase Storage bucket `client-files`) | `netlify/lib/storage.js` |
 | Shared code (Stripe, Supabase, emails, GHL, signed links, plans) | `netlify/lib/*.js` |
 | Client Hub page (old `welcome.html` redirects here) | `client.html` |
-| Database tables | `docs/supabase-checkout.sql`, `docs/supabase-checkout-emails.sql`, `docs/supabase-client-hub.sql` |
+| Database tables | `docs/supabase-checkout.sql`, `docs/supabase-checkout-emails.sql`, `docs/supabase-client-hub.sql`, `docs/supabase-client-hub-activity.sql` |
 | One-time Stripe setup (prices, portal, webhook) | `scripts/stripe-setup.mjs` |
 | Local server with functions | `scripts/dev-server.mjs` |
 | Automated tests (no credentials needed) | `scripts/test-checkout.mjs` |
@@ -162,30 +162,37 @@ Database: run `docs/supabase-checkout-emails.sql` once (adds the columns above) 
 
 ## Client Hub
 
-`/client.html` is where customers land after Checkout and where every email button points. Client Login in the
-site header opens it; Peak System customers also get a button there for the GoHighLevel app
-(`app.northernpeaksystems.ca`). It signs people in with a private emailed link (no passwords) and shows:
+`/client.html` is where customers land after Checkout and where every email button points; Client Login in the
+site header opens it. It is a standalone app (no marketing header or footer) with a sidebar on desktop and
+bottom tabs on phones. Customers sign in with a private emailed link (no passwords). Sections:
 
-- **Progress:** Subscribed → Set up → Build → Review → Launch, plus an optional note from the team.
-- **Setup:** a step-by-step form (business, services, brand & website, current systems for Peak, goals) that
-  saves as they go. Only the essentials are required; questions live in `netlify/lib/fields.js` and the page
-  builder checks it asks exactly those.
-- **Files:** logo, photos and other files (images, PDF, AI, EPS, ZIP; 25 MB each, 60 max) go straight from the
-  browser to the private Supabase Storage bucket `client-files`, in a folder named after the Stripe
-  subscription ID. Supabase → Storage → client-files to browse them; the team email links them for 7 days.
-- **Billing:** plan, next payment, card on file and invoices, read live from Stripe; "Update card and billing
-  details" opens the Stripe Customer Portal.
-- **Your system / support:** the app link (Peak), the website link once `site_url` is set, phone and email.
+- **Home:** where their project is (Subscribed → Set up → Build → Review → Launch, with real dates and the
+  target launch window, 7–10 days after setup is submitted), the one thing to do next, your latest team note,
+  "What we need from you" (setup answers, logo, 3+ photos, then review) and recent activity.
+- **Setup:** step-by-step form (business, services, brand & website, current systems for Peak, goals). Only the
+  essential questions show; optional ones sit under "Add more detail". Saves as they go; read-only once
+  submitted. Questions live in `netlify/lib/fields.js` and the page builder checks it asks exactly those.
+- **Files:** a Logo area and a Photos & files area (no file-type picker; PDFs and ZIPs are filed as "other").
+  Images, PDF, AI, EPS, ZIP; 25 MB each, 60 max, straight from the browser to the private Supabase Storage
+  bucket `client-files`, in a folder named after the Stripe subscription ID. Supabase → Storage → client-files
+  to browse them; the team email links them for 7 days.
+- **Billing:** plan and what's included (read from `pricing.html` when the page is built), card on file,
+  invoices, live from Stripe; "Update card" opens the Stripe Customer Portal.
+- **Help:** phone, email and common questions. Peak customers also get a link to the GoHighLevel app.
 
 **Updating a customer's progress** (Supabase → Table Editor → `nps_customers`, find the row by email):
 
 | Column | What the customer sees |
 | --- | --- |
 | `project_stage` | `setup` → `build` (set automatically when they submit setup) → `review` → `live` |
-| `team_note` | "Update from our team" box under the tracker; clear it to hide it |
+| `team_note` | A note from "Northern Peak team" on their Home and in their activity; clear it to hide it |
 | `site_url` | "Preview your site" (review) / "Visit your website" (live) buttons |
 
-Database: run `docs/supabase-client-hub.sql` once (adds those three columns) **before** deploying the Hub.
+Changing `project_stage` or `team_note` stamps the date automatically (`build_at`, `review_at`, `live_at`,
+`team_note_at`), which feeds the timeline and activity.
+
+Database: run `docs/supabase-client-hub.sql` (stage, note, site URL; done) and
+`docs/supabase-client-hub-activity.sql` (the dates) once, **before** deploying.
 
 Preview without an account: `/client.html?preview=peak` or `?preview=base`, optionally `&stage=build|review|live`
-and `&paid=1` (the post-checkout banner). Sample data only; nothing is saved or sent.
+and `&paid=1` (the post-checkout welcome). Sample data only; nothing is saved or sent.

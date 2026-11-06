@@ -46,6 +46,12 @@ function publicView(row) {
     subscription_status: row.subscription_status,
     onboarding_status: row.onboarding_status,
     onboarding_completed_at: row.onboarding_completed_at,
+    onboarding_started_at: row.onboarding_started_at || null,
+    // stage / note dates (docs/supabase-client-hub-activity.sql); absent until that has run
+    build_at: row.build_at || row.onboarding_completed_at || null,
+    review_at: row.review_at || null,
+    live_at: row.live_at || null,
+    team_note_at: row.team_note_at || null,
     // rows that finished setup before stages existed are already in Build
     project_stage: !row.project_stage || row.project_stage === "setup" ? (row.onboarding_status === "complete" ? "build" : "setup") : row.project_stage,
     team_note: row.team_note || "",

@@ -414,9 +414,9 @@ HEAD = """<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
-<link rel="icon" href="../favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="icon" href="../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:url" content="{canonical}">
