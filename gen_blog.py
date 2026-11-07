@@ -31,15 +31,16 @@ POSTS_DIR = ROOT / "blog_posts"
 OUT = ROOT / "blog"
 OUT.mkdir(exist_ok=True)
 SITE = "https://northernpeaksystems.ca"
-AUTHOR = "Matthew McGuire"
+AUTHOR = "Northern Peak Systems"
 BRAND = "Northern Peak Systems"
 OG_IMAGE = SITE + "/img/og-image.jpg"   # 1200x630
 BOOK_URL = "../book.html"               # live calendar page
 
 # One offer, stated the same way on every post (owner decision, Oct 2026).
-CTA_OFFER = ("Book a free 15-minute demo and we'll build a free custom preview of your website "
-             "and system, so you can see it working before you decide. The Peak System is "
-             "$297/month flat and live in 7–10 days. No contracts · no setup fees.")
+CTA_OFFER = ("Subscribe online in minutes, or book a free 15-minute demo and we'll show you the "
+             "system, answer your questions and recommend the right plan. The Peak System is "
+             "$297/month flat, and most businesses are live within 7–10 days of completing setup. "
+             "No contracts · no setup fees.")
 CTA_BUTTON = f'<a href="{BOOK_URL}" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>'
 
 # ---------------------------------------------------------------------------
@@ -216,7 +217,7 @@ FOOTER = """<footer class="foot">
             </div>
         </div>
         <div class="foot-bottom">
-            <span>Founder-led in Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
+            <span>Edmonton, Alberta &middot; Serving Canada &amp; the US</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="../privacy.html" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
@@ -413,9 +414,9 @@ HEAD = """<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
-<link rel="icon" href="../favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="icon" href="../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Northern Peak Systems">
 <meta property="og:url" content="{canonical}">
@@ -459,7 +460,7 @@ def post_schema(p: dict, url: str) -> str:
         "@type": "BlogPosting", "@id": url + "#post", "headline": p["title"],
         "description": p["description"], "url": url,
         "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
-        "author": {"@type": "Person", "name": AUTHOR, "url": SITE + "/about.html"},
+        "author": {"@type": "Organization", "name": AUTHOR, "url": SITE + "/"},
         "publisher": {"@type": "Organization", "@id": "https://northernpeaksystems.ca/#org", "name": "Northern Peak Systems",
                        "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
@@ -495,7 +496,7 @@ def write_post(p: dict) -> Path:
     head = HEAD.format(title=html.escape(page_title(p)),
                        desc=html.escape(p["description"]), canonical=url, og_type="article",
                        og_image=OG_IMAGE, ld_json=post_schema(p, url), styles=BLOG_CSS)
-    cta_eyebrow = p.get("cta_eyebrow", "See it first")
+    cta_eyebrow = p.get("cta_eyebrow", "Ready when you are")
     cta_title = p.get("cta_title", "Want a site that's <em>fast by default?</em>")
     cta_body = (p.get("cta_lead", "") + " " + CTA_OFFER).strip()
     cover_svg = COVER_ICONS.get(p.get("category", "").strip(), COVER_ICONS["_default"])
@@ -565,7 +566,7 @@ def write_index(posts: list) -> Path:
 {cards}
 </div></section>
 <section class="post-cta"><div class="wrap">
-    <p class="eyebrow">See it first</p>
+    <p class="eyebrow">Ready when you are</p>
     <h2>Want more of your calls to <em>turn into jobs?</em></h2>
     <p>{CTA_OFFER}</p>
     <div class="post-cta-actions">
@@ -595,6 +596,7 @@ def update_sitemap(posts: list) -> None:
 
 def main() -> None:
     posts = [parse_post(p) for p in sorted(POSTS_DIR.glob("*.md"))]
+    posts = [p for p in posts if p.get("draft", "").lower() != "true"]  # "draft: true" in the frontmatter keeps a post unpublished
     posts.sort(key=lambda p: p["date"], reverse=True)
     for p in posts:
         write_post(p)

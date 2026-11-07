@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+
+<title>Client Hub | Northern Peak Systems</title>
+<meta name="description" content="Your Northern Peak Systems Client Hub: project progress, setup, files and billing.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0b0d">
+
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/inter-400-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/inter-500-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter-600-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/inter-800-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-800-normal.woff2) format('woff2');}
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/caveat-500-normal.woff2) format('woff2');}
+:root{
+  --bg:#0a0a0c; --bg-2:#0f0f12; --card:#131317; --card-2:#17171c;
+  --line:rgba(255,255,255,0.08); --line-2:rgba(255,255,255,0.14);
+  --gold:#d2a24c; --gold-2:#e6be6e; --gold-deep:#a97c33;
+  --gold-line:rgba(210,162,76,0.28); --gold-soft:rgba(210,162,76,0.12);
+  --white:#f5f2ec; --mist:#a9a49a; --mist-2:#7b766c;
+  --cream:#f7f5f0; --ink:#16140f; --ink-2:#6f695d; --cream-line:#e8e2d4;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --display:'Plus Jakarta Sans','Inter',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;scrollbar-color:#2c2c32 var(--bg);}
+body{font-family:var(--sans);color:var(--white);background:var(--bg);line-height:1.6;overflow-x:clip;overflow-wrap:break-word;}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;opacity:0.032;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:280px 280px;}
+::selection{background:rgba(210,162,76,0.4);color:#fff;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;}
+.wrap{max-width:1480px;margin:0 auto;padding:0 clamp(18px,3.2vw,44px);}
+section{position:relative;}
+h1,h2,h3{letter-spacing:-0.02em;}
+h1,h2{font-family:var(--display);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:12px 58px;border-radius:10px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s,color .2s;}
+.btn .arr{transition:transform .22s;}
+.btn:hover .arr{transform:translateX(4px);}
+.btn-gold{background:linear-gradient(180deg,#e0b360,#c2903c);color:#181207;box-shadow:0 16px 40px -14px rgba(210,162,76,0.5);}
+.btn-gold:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);transform:translateY(-2px);box-shadow:0 22px 48px -14px rgba(210,162,76,0.6);}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+/* ===== Client Hub v3: minimal ===== */
+[hidden]{display:none !important;}
+:root{--k-bg:#0b0b0d;--k-s1:#111113;--k-s2:#161619;--k-l1:rgba(255,255,255,0.075);--k-l2:rgba(255,255,255,0.13);
+  --k-t1:#f2efe9;--k-t2:#a8a297;--k-t3:#6e695f;--k-ok:#72c79a;--k-ba:#ee8e76;--k-gold:#d6a64f;--k-gold-t:#e8c27a;}
+body{background:var(--k-bg);color:var(--k-t1);font-size:15px;}
+body::after{display:none;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--k-gold);outline-offset:2px;}
+/* buttons */
+.b{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 18px;border:1px solid transparent;border-radius:9px;background:none;font:600 14px/1 var(--sans);color:var(--k-t1);white-space:nowrap;cursor:pointer;text-decoration:none;transition:background .15s,border-color .15s,color .15s;}
+.b svg{flex:none;width:16px;height:16px;}
+.b-pri{background:var(--k-gold);color:#15110a;}
+.b-pri:hover{background:#e2b45d;}
+.b-ghost{border-color:var(--k-l2);}
+.b-ghost:hover{border-color:rgba(255,255,255,0.28);background:rgba(255,255,255,0.03);}
+.b-lg{height:46px;padding:0 22px;font-size:15px;}
+.b[disabled]{opacity:.55;cursor:wait;}
+.tlink{display:inline-flex;align-items:center;gap:6px;padding:0;border:0;background:none;font:600 14px/1.4 var(--sans);color:var(--k-gold-t);text-decoration:none;cursor:pointer;}
+.tlink svg{width:15px;height:15px;transition:transform .15s;}
+.tlink:hover svg{transform:translateX(2px);}
+.tlink:hover{color:#f3d394;}
+.linkish{padding:0;border:0;background:none;font:500 12.5px/1.4 var(--sans);color:var(--k-t3);cursor:pointer;}
+.linkish:hover{color:var(--k-t1);text-decoration:underline;}
+.avatar{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#2a2620;font:700 12px/1 var(--display);color:var(--k-gold-t);}
+.avatar-btn{border:0;cursor:pointer;}
+/* boot */
+.boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
+.boot img{width:48px;height:48px;border-radius:12px;animation:kPulse 1.4s ease-in-out infinite;}
+.boot p{font-size:14px;color:var(--k-t2);}
+@keyframes kPulse{50%{opacity:.45;}}
+/* sign-in */
+.auth{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:100vh;}
+.auth-brand{display:flex;flex-direction:column;gap:40px;padding:44px clamp(28px,4vw,56px);overflow:hidden;border-right:1px solid var(--k-l1);background:radial-gradient(640px 420px at 0% 0%,rgba(214,166,79,0.12),transparent 65%),#0d0d10;}
+.auth-logo img{display:block;width:auto;height:28px;}
+.auth-pitch{max-width:460px;margin-top:auto;}
+.auth-pitch h2{font-family:var(--display);font-size:clamp(28px,2.6vw,38px);font-weight:700;line-height:1.15;letter-spacing:-0.025em;}
+.auth-pitch h2 em{font-style:normal;color:var(--k-gold-t);}
+.auth-pitch p{margin-top:14px;font-size:16px;line-height:1.6;color:var(--k-t2);}
+.auth-shot{border:1px solid var(--k-l2);border-radius:14px;overflow:hidden;box-shadow:0 40px 80px -40px #000;}
+.auth-shot img{display:block;width:100%;height:auto;}
+.auth-main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:48px 24px;}
+.auth-card{width:100%;max-width:380px;margin-bottom:18px;}
+.auth-card h1{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-0.02em;}
+.auth-text{margin-top:8px;font-size:15px;line-height:1.6;color:var(--k-t2);}
+#si-form{display:grid;gap:10px;margin-top:28px;}
+#si-form label{font-size:13.5px;font-weight:600;color:var(--k-t2);}
+#si-form input{height:46px;padding:0 14px;border:1px solid var(--k-l2);border-radius:10px;background:var(--k-s1);color:var(--k-t1);font:inherit;font-size:15px;}
+#si-form input:focus{outline:none;border-color:var(--k-gold);box-shadow:0 0 0 3px rgba(214,166,79,0.18);}
+#si-form .b,#si-retry{width:100%;margin-top:6px;}
+#si-retry{margin-top:24px;}
+.auth-msg{min-height:1.3em;font-size:13.5px;line-height:1.5;color:var(--k-gold-t);}
+.auth-fine{display:flex;gap:9px;align-items:flex-start;margin-top:16px;font-size:13px;line-height:1.5;color:var(--k-t3);}
+.auth-fine svg{flex:none;width:14px;height:14px;margin-top:2px;}
+.auth-foot{width:100%;max-width:380px;font-size:13.5px;color:var(--k-t3);}
+.auth-foot a{color:var(--k-gold-t);text-decoration:none;font-weight:600;}
+.auth-foot a:hover{text-decoration:underline;}
+/* shell */
+.app{display:grid;grid-template-columns:232px minmax(0,1fr);min-height:100vh;}
+.side{position:sticky;top:0;display:flex;flex-direction:column;min-width:0;height:100vh;padding:26px 14px 18px;border-right:1px solid var(--k-l1);overflow:hidden auto;}
+.side-logo{padding:0 10px;margin-bottom:30px;}
+.side-logo img{display:block;width:auto;height:24px;}
+.side-nav{display:grid;gap:2px;}
+.side-nav a,.side-link{position:relative;display:flex;align-items:center;gap:12px;height:40px;padding:0 10px;border-radius:8px;font-size:14.5px;font-weight:500;color:var(--k-t2);text-decoration:none;transition:background .15s,color .15s;}
+.side-nav a svg,.side-link svg{flex:none;width:18px;height:18px;opacity:.85;}
+.side-nav a:hover,.side-link:hover{background:rgba(255,255,255,0.04);color:var(--k-t1);}
+.side-nav a[aria-current="page"]{background:rgba(255,255,255,0.06);color:var(--k-t1);font-weight:600;}
+.side-nav a[aria-current="page"] svg{color:var(--k-gold-t);opacity:1;}
+.dot{width:7px;height:7px;margin-left:auto;border-radius:50%;background:var(--k-gold);}
+.dot.ba{background:var(--k-ba);}
+.side-link{margin-top:16px;padding-top:0;border-top:0;}
+.side-link > svg:last-child{width:14px;height:14px;margin-left:auto;opacity:.5;}
+.side-help{display:grid;gap:3px;margin-top:auto;padding:14px 10px;border-top:1px solid var(--k-l1);font-size:13px;}
+.side-help b{font-weight:600;color:var(--k-t1);}
+.side-help a{color:var(--k-t2);text-decoration:none;}
+.side-help a:hover{color:var(--k-gold-t);}
+.side-user{display:flex;align-items:center;gap:10px;padding:14px 10px 0;border-top:1px solid var(--k-l1);}
+.side-who{display:grid;min-width:0;}
+.side-who b{overflow:hidden;font-size:13.5px;font-weight:600;text-overflow:ellipsis;white-space:nowrap;}
+.side-who .linkish{justify-self:start;}
+.mtop{display:none;}
+.main{min-width:0;padding:56px clamp(20px,4vw,48px) 96px;}
+.col{max-width:760px;margin:0 auto;}
+.preview-tag{margin-bottom:20px;padding:9px 14px;border:1px dashed rgba(214,166,79,0.5);border-radius:9px;font-size:13px;color:var(--k-gold-t);}
+.banner{display:flex;align-items:flex-start;gap:11px;margin-bottom:20px;padding:13px 14px 13px 16px;border:1px solid var(--k-l2);border-radius:11px;background:var(--k-s1);font-size:14px;line-height:1.5;color:var(--k-t2);}
+.banner > svg{flex:none;width:17px;height:17px;margin-top:2px;}
+.banner b{color:var(--k-t1);font-weight:600;}
+.banner.ok > svg{color:var(--k-ok);}
+.banner.ba{border-color:rgba(238,142,118,0.35);}
+.banner.ba > svg{color:var(--k-ba);}
+.banner.wa > svg{color:var(--k-gold-t);}
+.banner .b{margin-left:auto;flex:none;height:32px;padding:0 12px;font-size:13px;}
+.banner-x{display:grid;place-items:center;flex:none;width:24px;height:24px;margin-left:auto;border:0;border-radius:6px;background:none;color:var(--k-t3);cursor:pointer;}
+.banner-x:hover{background:rgba(255,255,255,0.06);color:var(--k-t1);}
+.banner-x svg{width:14px;height:14px;}
+/* pages */
+.pg{animation:kIn .3s ease both;}
+@keyframes kIn{from{opacity:0;transform:translateY(4px);}}
+.pg-head{margin-bottom:28px;}
+.pg-head h1{font-family:var(--display);font-size:30px;font-weight:700;line-height:1.2;letter-spacing:-0.02em;outline:none;}
+.pg-head p{margin-top:6px;font-size:15px;line-height:1.6;color:var(--k-t2);}
+.pg-head p a{color:var(--k-gold-t);}
+.pg-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;}
+.panel{margin-bottom:16px;padding:28px;border:1px solid var(--k-l1);border-radius:14px;background:var(--k-s1);}
+.panel.quiet{background:none;}
+.panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px;}
+.panel-h h2{font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:-0.01em;}
+.meta{font-size:13px;color:var(--k-t3);}
+.fine{margin:4px 2px 16px;font-size:13px;line-height:1.6;color:var(--k-t3);}
+.fine a{color:var(--k-t2);}
+/* project */
+.track{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));}
+.track li{position:relative;padding-right:8px;}
+.track li::before{content:"";position:absolute;top:5px;left:14px;right:4px;height:1px;background:var(--k-l2);}
+.track li:last-child::before{display:none;}
+.track li.done::before{background:var(--k-gold);}
+.track i{position:relative;z-index:1;display:block;width:11px;height:11px;border-radius:50%;background:#2a2a2f;}
+.track li.done i{background:var(--k-gold);}
+.track li.cur i{background:var(--k-bg);box-shadow:0 0 0 2px var(--k-gold),0 0 0 6px rgba(214,166,79,0.15);}
+.track b{display:block;margin-top:14px;font-size:13.5px;font-weight:500;color:var(--k-t3);}
+.track li.done b{color:var(--k-t2);}
+.track li.cur b{color:var(--k-t1);font-weight:600;}
+.track small{display:block;margin-top:2px;font-size:12.5px;color:var(--k-t3);}
+.track li.cur small{color:var(--k-gold-t);}
+.now{margin-top:28px;padding-top:26px;border-top:1px solid var(--k-l1);}
+.now-k{font-size:13px;color:var(--k-t3);}
+.now h2{margin-top:4px;font-family:var(--display);font-size:22px;font-weight:700;line-height:1.3;letter-spacing:-0.015em;}
+.now p{max-width:58ch;margin-top:8px;font-size:15px;line-height:1.6;color:var(--k-t2);}
+.now-act{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:20px;}
+.note{margin-top:24px;padding:16px 18px;border-left:2px solid var(--k-gold);border-radius:0 10px 10px 0;background:rgba(214,166,79,0.06);}
+.note p{font-size:15px;line-height:1.6;white-space:pre-line;}
+.note small{display:block;margin-top:8px;font-size:12.5px;color:var(--k-t3);}
+/* checklist */
+.todo{list-style:none;}
+.todo li{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--k-l1);}
+.todo li:first-child{border-top:0;padding-top:4px;}
+.tick{display:grid;place-items:center;flex:none;width:22px;height:22px;border:1.5px solid var(--k-l2);border-radius:50%;color:transparent;}
+.tick svg{width:12px;height:12px;}
+.todo li.done .tick{border-color:var(--k-gold);background:var(--k-gold);color:#15110a;}
+.todo li > div{flex:1;min-width:0;}
+.todo b{display:block;font-size:15px;font-weight:500;}
+.todo li.done b{color:var(--k-t2);}
+.todo small{display:block;margin-top:2px;font-size:13px;color:var(--k-t3);}
+.allset{margin:-4px 0 0;font-size:14.5px;line-height:1.6;color:var(--k-t2);}
+/* activity */
+.feed{list-style:none;}
+.feed li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;padding:10px 0;font-size:14px;line-height:1.5;}
+.feed time{font-size:13px;color:var(--k-t3);}
+.feed li > div{min-width:0;}
+.feed b{font-weight:500;}
+.feed p{margin-top:1px;font-size:13px;color:var(--k-t3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.feed-more{margin-top:8px;}
+/* setup */
+.save{font-size:13px;color:var(--k-t3);white-space:nowrap;}
+.steps{margin-bottom:16px;}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(var(--n,6),minmax(0,1fr));gap:6px;}
+.steps button{display:block;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;}
+.steps i{display:block;height:3px;border-radius:3px;background:var(--k-l2);transition:background .2s;}
+.steps span{display:block;margin-top:9px;font-size:12.5px;font-weight:500;color:var(--k-t3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.steps li.done i{background:rgba(214,166,79,0.55);}
+.steps li.cur i{background:var(--k-gold);}
+.steps li.cur span{color:var(--k-t1);font-weight:600;}
+.steps li.done span{color:var(--k-t2);}
+.steps li.warn span::after{content:"";display:inline-block;width:6px;height:6px;margin-left:6px;border-radius:50%;background:var(--k-ba);vertical-align:middle;}
+.steps button:hover span{color:var(--k-t1);}
+.wiz{padding:32px;}
+.step-h{margin-bottom:26px;}
+.step-h h2{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:-0.015em;outline:none;}
+.step-h h2 em{font-style:normal;font-weight:500;color:var(--k-t3);}
+.step-h p{margin-top:6px;font-size:14.5px;line-height:1.55;color:var(--k-t2);}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;}
+.fld{grid-column:1 / -1;min-width:0;margin:0;padding:0;border:0;}
+.fld.half{grid-column:auto;}
+.fld label,.fld legend{display:block;margin-bottom:8px;padding:0;font-size:14px;font-weight:500;color:var(--k-t1);}
+.req{color:var(--k-gold-t);}
+.hint{display:block;margin:-4px 0 8px;font-size:13px;line-height:1.45;color:var(--k-t3);}
+.fld input,.fld select,.fld textarea{display:block;width:100%;padding:11px 13px;border:1px solid var(--k-l2);border-radius:9px;background:var(--k-bg);color:var(--k-t1);font:inherit;font-size:15px;line-height:1.45;color-scheme:dark;transition:border-color .15s,box-shadow .15s;}
+.fld input::placeholder,.fld textarea::placeholder{color:#55514a;}
+.fld textarea{resize:vertical;min-height:88px;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--k-gold);box-shadow:0 0 0 3px rgba(214,166,79,0.16);}
+.fld input:disabled,.fld select:disabled,.fld textarea:disabled{opacity:.6;}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:var(--k-ba);}
+.err{display:block;margin-top:6px;font-size:13px;color:var(--k-ba);}
+.err:empty{display:none;}
+.opts{display:flex;flex-wrap:wrap;gap:8px;}
+.opt{position:relative;margin:0;}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;}
+.opt span{display:inline-flex;align-items:center;height:38px;padding:0 16px;border:1px solid var(--k-l2);border-radius:9px;font-size:14px;font-weight:500;color:var(--k-t2);cursor:pointer;transition:border-color .15s,background .15s,color .15s;}
+.opt span:hover{border-color:rgba(255,255,255,0.28);color:var(--k-t1);}
+.opt input:checked + span{border-color:var(--k-gold);background:rgba(214,166,79,0.1);color:var(--k-t1);}
+.opt input:focus-visible + span{outline:2px solid var(--k-gold);outline-offset:2px;}
+.choice.bad .opt span{border-color:var(--k-ba);}
+.more{margin-top:26px;border-top:1px solid var(--k-l1);}
+.more summary{display:flex;align-items:center;gap:10px;padding:18px 0 4px;cursor:pointer;list-style:none;}
+.more summary::-webkit-details-marker{display:none;}
+.more summary span{font-size:14.5px;font-weight:600;color:var(--k-gold-t);}
+.more summary small{font-size:13px;color:var(--k-t3);}
+.more summary svg{width:16px;height:16px;margin-left:auto;color:var(--k-t3);transition:transform .2s;}
+.more[open] summary svg{transform:rotate(180deg);}
+.more .grid2{margin-top:18px;}
+.sub{margin-top:28px;padding-top:24px;border-top:1px solid var(--k-l1);}
+.sub h4{font-size:14.5px;font-weight:600;}
+.sub > p{margin:4px 0 14px;font-size:13.5px;line-height:1.55;color:var(--k-t3);}
+.zones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.secure{display:flex;gap:10px;margin-top:22px;font-size:13px;line-height:1.55;color:var(--k-t3);}
+.secure svg{flex:none;width:15px;height:15px;margin-top:2px;}
+.formerr{margin-top:20px;font-size:14px;color:var(--k-ba);}
+.wiz-nav{display:flex;align-items:center;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid var(--k-l1);}
+.wiz-nav .b-pri{margin-left:auto;min-width:140px;}
+.rv-g{padding:20px 0;border-top:1px solid var(--k-l1);}
+.rv-g:first-child{padding-top:0;border-top:0;}
+.rv-h{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.rv-h h3{font-size:15px;font-weight:600;}
+.rv dl{display:grid;grid-template-columns:minmax(140px,0.4fr) minmax(0,1fr);gap:8px 18px;margin-top:12px;font-size:14px;line-height:1.5;}
+.rv dt{color:var(--k-t3);}
+.rv dd{white-space:pre-line;overflow-wrap:anywhere;}
+.rv .miss{font-style:normal;color:var(--k-ba);}
+.rv-empty{margin-top:6px;font-size:13.5px;color:var(--k-t3);}
+.rv-warn{margin-bottom:18px;font-size:14px;line-height:1.5;color:var(--k-ba);}
+/* files */
+.drop{position:relative;display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px dashed var(--k-l2);border-radius:11px;cursor:pointer;transition:border-color .15s,background .15s;}
+.drop:hover,.drop.over{border-color:var(--k-gold);background:rgba(214,166,79,0.04);}
+.drop:focus-within{outline:2px solid var(--k-gold);outline-offset:2px;}
+.drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;}
+.drop > svg{flex:none;width:20px;height:20px;color:var(--k-gold-t);}
+.drop b{display:block;font-size:14.5px;font-weight:600;}
+.drop small{display:block;margin-top:2px;font-size:13px;line-height:1.45;color:var(--k-t3);}
+.drop-sm{padding:14px 16px;}
+.gal{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+.gal:not(:empty){margin-top:16px;}
+.gal-sm{grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;}
+.gal-sm:not(:empty){margin-top:10px;}
+.tile{position:relative;min-width:0;}
+.tile-img{position:relative;display:grid;place-items:center;aspect-ratio:1;border:1px solid var(--k-l1);border-radius:10px;background:var(--k-s2);color:var(--k-t3);overflow:hidden;}
+.tile-img svg{width:22px;height:22px;}
+.tile-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.tile-img.ok > svg{display:none;}
+.tile-img.logo img{object-fit:contain;padding:14%;}
+.tile b{display:block;margin-top:7px;overflow:hidden;font-size:12.5px;font-weight:500;text-overflow:ellipsis;white-space:nowrap;}
+.tile small{display:block;font-size:12px;color:var(--k-t3);}
+.tile small.e{color:var(--k-ba);white-space:normal;}
+.gal-sm .tile b,.gal-sm .tile small:not(.e){display:none;}
+.tile-x{position:absolute;top:6px;right:6px;display:grid;place-items:center;width:26px;height:26px;border:0;border-radius:7px;background:rgba(11,11,13,0.8);color:#fff;opacity:0;cursor:pointer;transition:opacity .15s;}
+.tile:hover .tile-x,.tile-x:focus-visible{opacity:1;}
+.tile-x:hover{background:#a8432b;}
+.tile-x svg{width:13px;height:13px;}
+.tile-prog{position:absolute;left:10px;right:10px;bottom:10px;height:3px;border-radius:3px;background:rgba(255,255,255,0.12);overflow:hidden;}
+.tile-prog span{display:block;height:100%;width:0;background:var(--k-gold);transition:width .2s;}
+/* billing */
+.bl-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;}
+.bl-name{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:-0.015em;}
+.bl-price{font-family:var(--display);font-size:20px;font-weight:700;}
+.bl-price small{font-family:var(--sans);font-size:13.5px;font-weight:400;color:var(--k-t3);}
+.bl-sub{margin-top:6px;font-size:14px;color:var(--k-t2);}
+.bl-sub .ba{color:var(--k-ba);}
+.inc{margin-top:20px;border-top:1px solid var(--k-l1);}
+.inc summary{display:flex;align-items:center;gap:8px;padding:16px 0 2px;font-size:14px;font-weight:600;color:var(--k-gold-t);cursor:pointer;list-style:none;}
+.inc summary::-webkit-details-marker{display:none;}
+.inc summary svg{width:15px;height:15px;transition:transform .2s;}
+.inc[open] summary svg{transform:rotate(180deg);}
+.inc ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 20px;margin-top:14px;}
+.inc li{display:flex;gap:9px;font-size:14px;line-height:1.45;color:var(--k-t2);}
+.inc li svg{flex:none;width:15px;height:15px;margin-top:2px;color:var(--k-gold-t);}
+.inc li b{color:var(--k-t1);font-weight:600;}
+.inc h4{grid-column:1 / -1;margin-top:8px;font-size:13px;font-weight:500;color:var(--k-t3);}
+.pm{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;}
+.pm-brand{display:grid;place-items:center;width:46px;height:32px;border:1px solid var(--k-l2);border-radius:6px;font:800 italic 11px/1 var(--display);letter-spacing:0.02em;text-transform:uppercase;color:var(--k-t1);}
+.pm-text{flex:1;min-width:160px;}
+.pm-text b{display:block;font-size:15px;font-weight:500;}
+.pm-text small{font-size:13px;color:var(--k-t3);}
+.inv{width:100%;border-collapse:collapse;font-size:14px;}
+.inv td{padding:13px 12px 13px 0;border-top:1px solid var(--k-l1);}
+.inv tr:first-child td{border-top:0;padding-top:2px;}
+.inv td:last-child{padding-right:0;text-align:right;}
+.inv .m{color:var(--k-t3);}
+.inv .st-paid{color:var(--k-ok);}
+.inv .st-open{color:var(--k-gold-t);}
+.inv .st-bad{color:var(--k-ba);}
+.inv a{display:inline-flex;align-items:center;gap:4px;font-weight:600;color:var(--k-gold-t);text-decoration:none;}
+.inv a svg{width:13px;height:13px;}
+.inv a:hover{text-decoration:underline;}
+/* help */
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding:0;}
+.contact a{display:flex;align-items:center;gap:14px;padding:22px 24px;text-decoration:none;transition:background .15s;}
+.contact a + a{border-left:1px solid var(--k-l1);}
+.contact a:hover{background:rgba(255,255,255,0.025);}
+.contact svg{flex:none;width:20px;height:20px;color:var(--k-gold-t);}
+.contact b{display:block;font-size:15px;font-weight:600;}
+.contact small{display:block;margin-top:1px;font-size:13.5px;color:var(--k-t2);word-break:break-word;}
+.faq{border-top:1px solid var(--k-l1);}
+.faq:first-of-type{border-top:0;}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 0;font-size:15px;font-weight:500;cursor:pointer;list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary svg{flex:none;width:16px;height:16px;color:var(--k-t3);transition:transform .2s;}
+.faq[open] summary svg{transform:rotate(180deg);}
+.faq p{max-width:62ch;padding:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--k-t2);}
+.faq a{color:var(--k-gold-t);}
+/* toast + tabs */
+.toast{position:fixed;left:50%;bottom:28px;z-index:80;max-width:min(92vw,480px);padding:11px 16px;border:1px solid var(--k-l2);border-radius:10px;background:#18181b;font-size:14px;transform:translate(-50%,16px);opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;}
+.toast.on{opacity:1;transform:translate(-50%,0);}
+.tabs{display:none;}
+/* responsive */
+@media(max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr);}
+  .side{display:none;}
+  .mtop{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;height:58px;padding:0 16px;border-bottom:1px solid var(--k-l1);background:rgba(11,11,13,0.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+  .mtop-logo img{display:block;width:30px;height:30px;border-radius:8px;}
+  .mtop b{font-size:15px;font-weight:600;}
+  .mtop .avatar-btn{margin-left:auto;}
+  .menu{position:absolute;top:52px;right:12px;z-index:40;min-width:220px;padding:6px;border:1px solid var(--k-l2);border-radius:12px;background:#151518;box-shadow:0 20px 40px -20px #000;}
+  .menu-who{padding:10px 12px;margin-bottom:4px;border-bottom:1px solid var(--k-l1);}
+  .menu-who b,.menu-who small{display:block;}
+  .menu-who b{font-size:14px;}
+  .menu-who small{font-size:12.5px;color:var(--k-t3);}
+  .menu a,.menu button{display:flex;align-items:center;width:100%;height:40px;padding:0 12px;border:0;border-radius:8px;background:none;font:500 14px/1 var(--sans);color:var(--k-t2);text-align:left;text-decoration:none;cursor:pointer;}
+  .menu a:hover,.menu button:hover{background:rgba(255,255,255,0.05);color:var(--k-t1);}
+  .main{padding:28px 16px 110px;}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 4px calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--k-l1);background:rgba(11,11,13,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+  .tabs a{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;font-size:11px;font-weight:500;color:var(--k-t3);text-decoration:none;}
+  .tabs a svg{width:21px;height:21px;}
+  .tabs a[aria-current="page"]{color:var(--k-t1);}
+  .tabs a[aria-current="page"] svg{color:var(--k-gold-t);}
+  .tabs .dot{position:absolute;top:4px;left:calc(50% + 8px);margin:0;}
+  .toast{bottom:86px;}
+  .auth{grid-template-columns:1fr;}
+  .auth-brand{gap:0;padding:22px 20px;border-right:0;border-bottom:1px solid var(--k-l1);}
+  .auth-pitch,.auth-shot{display:none;}
+  .auth-main{justify-content:flex-start;padding:36px 20px;}}
+@media(max-width:640px){
+  .pg-head h1{font-size:26px;}
+  .panel{padding:22px 18px;}
+  .wiz{padding:24px 18px;}
+  .track{grid-template-columns:1fr;}
+  .track li{display:grid;grid-template-columns:11px minmax(0,1fr);column-gap:14px;padding:0 0 18px;}
+  .track li::before{top:11px;bottom:-5px;left:5px;right:auto;width:1px;height:auto;}
+  .track b{margin-top:-4px;}
+  .track small{grid-column:2;}
+  .now{margin-top:8px;}
+  .now-act .b{width:100%;}
+  .steps ol{gap:4px;}
+  .steps span{display:none;}
+  .steps li.cur span{display:block;position:absolute;}
+  .steps{position:relative;margin-bottom:34px;}
+  .grid2{grid-template-columns:1fr;}.fld.half{grid-column:1 / -1;}
+  .zones{grid-template-columns:1fr;}
+  .rv dl{grid-template-columns:1fr;gap:2px;}.rv dd{margin-bottom:8px;}
+  .wiz-nav .b{flex:1;}
+  .pg-head-row{flex-direction:column;align-items:flex-start;gap:4px;}
+  .feed li{grid-template-columns:1fr;gap:0;}
+  .feed time{order:2;}
+  .inc ul{grid-template-columns:1fr;}
+  .contact{grid-template-columns:1fr;}
+  .contact a + a{border-left:0;border-top:1px solid var(--k-l1);}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .tile-x{opacity:1;}}
+@media(prefers-reduced-motion:reduce){.pg,.boot img{animation:none;}.toast{transition:none;}}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CR8009ZP6T');</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wh3e6pv2u4");</script>
+</head>
+<body>
+
+<div class="boot" data-mode="loading">
+    <img src="img/nps-mark.webp" alt="" width="48" height="48">
+    <p role="status" id="boot-msg">Opening your Client Hub&hellip;</p>
+</div>
+
+<div class="auth" data-mode="signin" hidden>
+    <section class="auth-brand">
+        <a href="/" class="auth-logo"><img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" width="1432" height="312"></a>
+        <div class="auth-pitch">
+            <h2>Everything about your project, <em>in one place.</em></h2>
+            <p>Follow your build, share your logo and photos, and manage billing.</p>
+        </div>
+        <div class="auth-shot"><img src="img/platform-preview.webp" alt="" loading="lazy" width="560" height="304"></div>
+    </section>
+    <section class="auth-main">
+        <div class="auth-card">
+            <h1 id="si-title">Sign in</h1>
+            <p class="auth-text" id="si-text"></p>
+            <form id="si-form" novalidate>
+                <label for="si-email">Email address</label>
+                <input id="si-email" type="email" autocomplete="email" required placeholder="you@yourbusiness.ca">
+                <button type="submit" class="b b-pri b-lg">Email me a sign-in link</button>
+                <p class="auth-msg" id="si-msg" role="status"></p>
+            </form>
+            <button type="button" class="b b-pri b-lg" id="si-retry" hidden>Try again</button>
+            <p class="auth-fine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>No password needed. The link signs you in on this device for 30 days.</span></p>
+        </div>
+        <p class="auth-foot">Using The Peak System? <a href="https://app.northernpeaksystems.ca/">Open the app</a></p>
+        <p class="auth-foot">Not a customer yet? <a href="pricing.html#plans">See plans</a> or <a href="book.html">book a free demo</a>.</p>
+    </section>
+</div>
+
+<div class="app" data-mode="app" hidden>
+    <aside class="side" aria-label="Client Hub">
+        <a href="/" class="side-logo"><img src="img/nps-logo-white-notag.webp" alt="Northern Peak Systems" width="1432" height="312"></a>
+        <nav class="side-nav" aria-label="Sections"><a href="#/home" data-route="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg><span>Home</span><em class="dot" data-dot="home" hidden></em></a><a href="#/setup" data-route="setup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg><span>Setup</span><em class="dot" data-dot="setup" hidden></em></a><a href="#/files" data-route="files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Files</span><em class="dot" data-dot="files" hidden></em></a><a href="#/billing" data-route="billing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Billing</span><em class="dot" data-dot="billing" hidden></em></a><a href="#/help" data-route="help"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg><span>Help</span><em class="dot" data-dot="help" hidden></em></a></nav>
+        <a class="side-link" href="https://app.northernpeaksystems.ca/" target="_blank" rel="noopener" data-peak hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Peak System app</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="side-help">
+            <b>Questions?</b>
+            <a href="tel:+15872005649">(587) 200-5649</a>
+            <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
+        </div>
+        <div class="side-user">
+            <span class="avatar" data-initials></span>
+            <span class="side-who"><b data-name></b><button type="button" class="linkish" data-act="signout">Sign out</button></span>
+        </div>
+    </aside>
+
+    <header class="mtop">
+        <a href="/" class="mtop-logo"><img src="img/nps-mark.webp" alt="Northern Peak Systems" width="30" height="30"></a>
+        <b id="mtop-h">Home</b>
+        <button type="button" class="avatar avatar-btn" data-act="menu" aria-haspopup="true" aria-expanded="false" aria-label="Account" data-initials></button>
+        <div class="menu" id="acct-menu" hidden>
+            <div class="menu-who"><b data-name></b><small data-email></small></div>
+            <a href="https://app.northernpeaksystems.ca/" target="_blank" rel="noopener" data-peak hidden>Peak System app</a>
+            <a href="tel:+15872005649">Call (587) 200-5649</a>
+            <button type="button" data-act="signout">Sign out</button>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <div class="col">
+            <p class="preview-tag" id="h-preview" hidden>Preview with sample data. Nothing is saved or sent.</p>
+            <div class="banner ok" id="h-paid" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span id="h-paid-text"></span><button type="button" class="banner-x" data-act="dismiss-banner" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+            <div class="banner ok" id="h-flash" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span id="h-flash-text"></span><button type="button" class="banner-x" data-act="dismiss-banner" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+            <div class="banner" id="h-alert" hidden></div>
+
+            <section class="pg" data-page="home">
+                <header class="pg-head"><h1 id="home-h" tabindex="-1"></h1><p id="home-sub"></p></header>
+                <article class="panel project" id="project"></article>
+                <article class="panel" id="todo"></article>
+                <article class="panel quiet" id="activity"></article>
+            </section>
+
+            <section class="pg" data-page="setup" hidden>
+                <header class="pg-head pg-head-row">
+                    <div><h1 id="w-title" tabindex="-1">Set up your system</h1><p id="w-sub"></p></div>
+                    <span class="save" id="w-save" aria-live="polite"></span>
+                </header>
+                <nav class="steps" aria-label="Setup steps"><ol id="w-steps"><li data-nav="business"><button type="button" data-goto="business"><i></i><span>Business</span></button></li><li data-nav="services"><button type="button" data-goto="services"><i></i><span>Services</span></button></li><li data-nav="brand"><button type="button" data-goto="brand"><i></i><span>Brand & website</span></button></li><li data-nav="systems"><button type="button" data-goto="systems"><i></i><span>Systems</span></button></li><li data-nav="goals"><button type="button" data-goto="goals"><i></i><span>Goals</span></button></li><li data-nav="review"><button type="button" data-goto="review"><i></i><span>Review</span></button></li></ol></nav>
+                <form class="panel wiz" id="w-form" novalidate>
+                    <section class="step" data-step="business" aria-labelledby="st-business" hidden><header class="step-h"><h2 id="st-business" tabindex="-1">Business</h2><p>The basics: who you are and where you work.</p></header><div class="grid2"><div class="fld half" data-field="business_name"><label for="business_name">Business name <span class="req" aria-hidden="true">*</span></label><input id="business_name" name="business_name" type="text" aria-describedby="business_name-err" aria-required="true" autocomplete="organization"><span class="err" id="business_name-err" role="alert"></span></div><div class="fld half" data-field="contact_name"><label for="contact_name">Your name <span class="req" aria-hidden="true">*</span></label><input id="contact_name" name="contact_name" type="text" aria-describedby="contact_name-err" aria-required="true" autocomplete="name"><span class="err" id="contact_name-err" role="alert"></span></div><div class="fld half" data-field="email"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" aria-describedby="email-err" aria-required="true" autocomplete="email"><span class="err" id="email-err" role="alert"></span></div><div class="fld half" data-field="phone"><label for="phone">Business phone <span class="req" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" aria-describedby="phone-err" aria-required="true" autocomplete="tel"><span class="err" id="phone-err" role="alert"></span></div><div class="fld" data-field="trade"><label for="trade">Industry or trade <span class="req" aria-hidden="true">*</span></label><input id="trade" name="trade" type="text" aria-describedby="trade-err" aria-required="true" placeholder="e.g. Plumbing" list="h-trades"><span class="err" id="trade-err" role="alert"></span></div><div class="fld half" data-field="city"><label for="city">City <span class="req" aria-hidden="true">*</span></label><input id="city" name="city" type="text" aria-describedby="city-err" aria-required="true" autocomplete="address-level2"><span class="err" id="city-err" role="alert"></span></div><div class="fld half" data-field="region"><label for="region">Province or state <span class="req" aria-hidden="true">*</span></label><input id="region" name="region" type="text" aria-describedby="region-err" aria-required="true" autocomplete="address-level1"><span class="err" id="region-err" role="alert"></span></div><div class="fld" data-field="country"><label for="country">Country <span class="req" aria-hidden="true">*</span></label><select id="country" name="country" aria-describedby="country-err" aria-required="true"><option value="">Select&hellip;</option><option value="Canada">Canada</option><option value="United States">United States</option><option value="Other">Other</option></select><span class="err" id="country-err" role="alert"></span></div></div><datalist id="h-trades"><option value="Plumbing"><option value="HVAC"><option value="Electrical"><option value="Roofing"><option value="Landscaping"><option value="General contracting"><option value="Concrete"><option value="Painting"><option value="Handyman"><option value="Cleaning"></datalist><details class="more" data-more="business"><summary><span>Add more detail</span><small>Optional &middot; helps us build a better site</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="grid2"><div class="fld half" data-field="team_size"><label for="team_size">Team size </label><select id="team_size" name="team_size" aria-describedby="team_size-err"><option value="">Select&hellip;</option><option value="Just me">Just me</option><option value="2-5">2&ndash;5 people</option><option value="6-15">6&ndash;15 people</option><option value="16+">16 or more</option></select><span class="err" id="team_size-err" role="alert"></span></div><div class="fld" data-field="address"><label for="address">Business address </label><small class="hint" id="address-hint">Leave blank if you don&rsquo;t have a public address.</small><input id="address" name="address" type="text" aria-describedby="address-err address-hint" autocomplete="street-address"><span class="err" id="address-err" role="alert"></span></div><div class="fld" data-field="hours"><label for="hours">Business hours </label><input id="hours" name="hours" type="text" aria-describedby="hours-err" placeholder="e.g. Mon&ndash;Fri 7am&ndash;5pm" ><span class="err" id="hours-err" role="alert"></span></div><div class="fld half" data-field="years_in_business"><label for="years_in_business">Years in business </label><input id="years_in_business" name="years_in_business" type="text" aria-describedby="years_in_business-err" placeholder="e.g. 12" ><span class="err" id="years_in_business-err" role="alert"></span></div><div class="fld" data-field="licences_insurance"><label for="licences_insurance">Licences, insurance and certifications </label><small class="hint" id="licences_insurance-hint">e.g. licensed and insured, WCB coverage, trade tickets.</small><textarea id="licences_insurance" name="licences_insurance" rows="3" aria-describedby="licences_insurance-err licences_insurance-hint" ></textarea><span class="err" id="licences_insurance-err" role="alert"></span></div></div></details></section>
+<section class="step" data-step="services" aria-labelledby="st-services" hidden><header class="step-h"><h2 id="st-services" tabindex="-1">Services</h2><p>What you do and where. This becomes the heart of your website.</p></header><div class="grid2"><div class="fld" data-field="services"><label for="services">Services you offer <span class="req" aria-hidden="true">*</span></label><small class="hint" id="services-hint">List them all. One per line is fine.</small><textarea id="services" name="services" rows="3" aria-describedby="services-err services-hint" aria-required="true" ></textarea><span class="err" id="services-err" role="alert"></span></div><div class="fld" data-field="service_area"><label for="service_area">Service area <span class="req" aria-hidden="true">*</span></label><small class="hint" id="service_area-hint">The towns or regions you take jobs in.</small><input id="service_area" name="service_area" type="text" aria-describedby="service_area-err service_area-hint" aria-required="true" placeholder="e.g. Edmonton, St. Albert and Sherwood Park" ><span class="err" id="service_area-err" role="alert"></span></div><div class="fld" data-field="description"><label for="description">Tell us about your business <span class="req" aria-hidden="true">*</span></label><small class="hint" id="description-hint">Who you are, who you work for and what makes you different.</small><textarea id="description" name="description" rows="3" aria-describedby="description-err description-hint" aria-required="true" ></textarea><span class="err" id="description-err" role="alert"></span></div></div><details class="more" data-more="services"><summary><span>Add more detail</span><small>Optional &middot; helps us build a better site</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="grid2"><div class="fld" data-field="top_services"><label for="top_services">Which jobs do you want more of? </label><textarea id="top_services" name="top_services" rows="3" aria-describedby="top_services-err" ></textarea><span class="err" id="top_services-err" role="alert"></span></div><fieldset class="fld choice" data-field="emergency_service" aria-describedby="emergency_service-err"><legend>Emergency or after-hours service? </legend><div class="opts"><label class="opt"><input type="radio" name="emergency_service" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="emergency_service" value="no"><span>No</span></label></div><span class="err" id="emergency_service-err" role="alert"></span></fieldset><fieldset class="fld choice" data-field="free_estimates" aria-describedby="free_estimates-err"><legend>Free estimates? </legend><div class="opts"><label class="opt"><input type="radio" name="free_estimates" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="free_estimates" value="no"><span>No</span></label></div><span class="err" id="free_estimates-err" role="alert"></span></fieldset><fieldset class="fld choice" data-field="financing" aria-describedby="financing-err"><legend>Financing? </legend><div class="opts"><label class="opt"><input type="radio" name="financing" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="financing" value="no"><span>No</span></label></div><span class="err" id="financing-err" role="alert"></span></fieldset></div></details></section>
+<section class="step" data-step="brand" aria-labelledby="st-brand" hidden><header class="step-h"><h2 id="st-brand" tabindex="-1">Brand & website</h2><p>Your website, your domain and the look you&rsquo;re after.</p></header><div class="grid2"><fieldset class="fld choice" data-field="has_website" aria-describedby="has_website-err"><legend>Do you have a website now? <span class="req" aria-hidden="true">*</span></legend><div class="opts"><label class="opt"><input type="radio" name="has_website" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="has_website" value="no"><span>No</span></label></div><span class="err" id="has_website-err" role="alert"></span></fieldset><div class="fld" data-field="website_url"><label for="website_url">Website address <span class="req" aria-hidden="true">*</span></label><input id="website_url" name="website_url" type="text" aria-describedby="website_url-err" placeholder="yourbusiness.ca" inputmode="url"><span class="err" id="website_url-err" role="alert"></span></div><fieldset class="fld choice" data-field="owns_domain" aria-describedby="owns_domain-err owns_domain-hint"><legend>Do you own a domain name? <span class="req" aria-hidden="true">*</span></legend><small class="hint" id="owns_domain-hint">Your web address, like yourbusiness.ca.</small><div class="opts"><label class="opt"><input type="radio" name="owns_domain" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="owns_domain" value="no"><span>No</span></label><label class="opt"><input type="radio" name="owns_domain" value="not_sure"><span>Not sure</span></label></div><span class="err" id="owns_domain-err" role="alert"></span></fieldset><div class="fld" data-field="domain_registrar"><label for="domain_registrar">Where is it registered? </label><input id="domain_registrar" name="domain_registrar" type="text" aria-describedby="domain_registrar-err" placeholder="e.g. GoDaddy, Namecheap, not sure" ><span class="err" id="domain_registrar-err" role="alert"></span></div><div class="fld" data-field="desired_domain"><label for="desired_domain">Domain you&rsquo;d like </label><input id="desired_domain" name="desired_domain" type="text" aria-describedby="desired_domain-err" placeholder="yourbusiness.ca" ><span class="err" id="desired_domain-err" role="alert"></span></div></div><div class="sub"><h4>Logo and photos</h4><p>Real photos of your work, team and trucks make the biggest difference. No time now? Add them later in Files.</p><div class="zones"><div><label class="drop drop-sm" data-drop><input type="file" accept="image/*,.pdf,.ai,.eps,.svg" data-up-input data-kind="logo" aria-label="Add your logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5M12 3v12"/></svg><span><b>Add your logo</b><small>PNG, SVG, PDF or AI</small></span></label><ul class="gal gal-sm" data-gal="logo"></ul></div><div><label class="drop drop-sm" data-drop><input type="file" multiple accept="image/*,.pdf,.ai,.eps,.zip" data-up-input data-kind="media" aria-label="Add photos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5M12 3v12"/></svg><span><b>Add photos</b><small>Images, PDF or ZIP, up to 25 MB</small></span></label><ul class="gal gal-sm" data-gal="media"></ul></div></div></div><details class="more" data-more="brand"><summary><span>Add more detail</span><small>Optional &middot; helps us build a better site</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="grid2"><div class="fld" data-field="brand_colours"><label for="brand_colours">Brand colours </label><input id="brand_colours" name="brand_colours" type="text" aria-describedby="brand_colours-err" placeholder="e.g. navy and orange, or the colours on your trucks" ><span class="err" id="brand_colours-err" role="alert"></span></div><fieldset class="fld choice" data-field="brand_style" aria-describedby="brand_style-err"><legend>Which style fits your business? </legend><div class="opts"><label class="opt"><input type="radio" name="brand_style" value="Clean and modern"><span>Clean and modern</span></label><label class="opt"><input type="radio" name="brand_style" value="Bold and strong"><span>Bold and strong</span></label><label class="opt"><input type="radio" name="brand_style" value="Classic and trustworthy"><span>Classic and trustworthy</span></label><label class="opt"><input type="radio" name="brand_style" value="Not sure"><span>Not sure</span></label></div><span class="err" id="brand_style-err" role="alert"></span></fieldset><div class="fld" data-field="sites_you_like"><label for="sites_you_like">Websites you like </label><small class="hint" id="sites_you_like-hint">Competitors or any site whose look you like, and why.</small><textarea id="sites_you_like" name="sites_you_like" rows="3" aria-describedby="sites_you_like-err sites_you_like-hint" ></textarea><span class="err" id="sites_you_like-err" role="alert"></span></div><div class="fld" data-field="social_links"><label for="social_links">Social media pages </label><small class="hint" id="social_links-hint">Links or page names are fine.</small><textarea id="social_links" name="social_links" rows="3" aria-describedby="social_links-err social_links-hint" ></textarea><span class="err" id="social_links-err" role="alert"></span></div><div class="fld" data-field="google_reviews_link"><label for="google_reviews_link">Link to your Google reviews </label><input id="google_reviews_link" name="google_reviews_link" type="text" aria-describedby="google_reviews_link-err" placeholder="Paste the link if you have it" ><span class="err" id="google_reviews_link-err" role="alert"></span></div></div></details></section>
+<section class="step" data-step="systems" aria-labelledby="st-systems" hidden><header class="step-h"><h2 id="st-systems" tabindex="-1">Systems</h2><p>How you handle calls and leads today, so we can set things up around it.</p></header><div class="grid2"><fieldset class="fld choice" data-field="uses_crm" aria-describedby="uses_crm-err"><legend>Do you use a CRM or job management software? <span class="req" aria-hidden="true">*</span></legend><div class="opts"><label class="opt"><input type="radio" name="uses_crm" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="uses_crm" value="no"><span>No</span></label></div><span class="err" id="uses_crm-err" role="alert"></span></fieldset><div class="fld" data-field="crm_name"><label for="crm_name">Which one? <span class="req" aria-hidden="true">*</span></label><input id="crm_name" name="crm_name" type="text" aria-describedby="crm_name-err" placeholder="e.g. Jobber, Housecall Pro" ><span class="err" id="crm_name-err" role="alert"></span></div><fieldset class="fld choice" data-field="has_gbp" aria-describedby="has_gbp-err"><legend>Do you have a Google Business Profile? <span class="req" aria-hidden="true">*</span></legend><div class="opts"><label class="opt"><input type="radio" name="has_gbp" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="has_gbp" value="no"><span>No</span></label><label class="opt"><input type="radio" name="has_gbp" value="not_sure"><span>Not sure</span></label></div><span class="err" id="has_gbp-err" role="alert"></span></fieldset><div class="fld" data-field="gbp_email"><label for="gbp_email">Which Google account manages it? </label><small class="hint" id="gbp_email-hint">Just the email address. We&rsquo;ll request access; never send us the password.</small><input id="gbp_email" name="gbp_email" type="email" aria-describedby="gbp_email-err gbp_email-hint" ><span class="err" id="gbp_email-err" role="alert"></span></div><div class="fld" data-field="calls_number"><label for="calls_number">Which number do customers call? <span class="req" aria-hidden="true">*</span></label><input id="calls_number" name="calls_number" type="tel" aria-describedby="calls_number-err" aria-required="true" ><span class="err" id="calls_number-err" role="alert"></span></div><fieldset class="fld choice" data-field="missed_call" aria-describedby="missed_call-err missed_call-hint"><legend>Set up missed call text-back on that number? <span class="req" aria-hidden="true">*</span></legend><small class="hint" id="missed_call-hint">When you can&rsquo;t answer, the caller gets a text right away.</small><div class="opts"><label class="opt"><input type="radio" name="missed_call" value="yes"><span>Yes</span></label><label class="opt"><input type="radio" name="missed_call" value="no"><span>No</span></label><label class="opt"><input type="radio" name="missed_call" value="not_sure"><span>Not sure</span></label></div><span class="err" id="missed_call-err" role="alert"></span></fieldset></div><details class="more" data-more="systems"><summary><span>Add more detail</span><small>Optional &middot; helps us build a better site</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="grid2"><div class="fld half" data-field="phone_carrier"><label for="phone_carrier">Phone provider </label><input id="phone_carrier" name="phone_carrier" type="text" aria-describedby="phone_carrier-err" placeholder="e.g. Telus, Rogers, Bell" ><span class="err" id="phone_carrier-err" role="alert"></span></div><div class="fld half" data-field="who_answers"><label for="who_answers">Who answers calls now? </label><input id="who_answers" name="who_answers" type="text" aria-describedby="who_answers-err" placeholder="e.g. me, our office manager" ><span class="err" id="who_answers-err" role="alert"></span></div><div class="fld" data-field="scheduling_software"><label for="scheduling_software">Scheduling or estimate software </label><input id="scheduling_software" name="scheduling_software" type="text" aria-describedby="scheduling_software-err" placeholder="e.g. none, Jobber, spreadsheets" ><span class="err" id="scheduling_software-err" role="alert"></span></div><div class="fld" data-field="review_sites"><label for="review_sites">Where do customers leave reviews? </label><input id="review_sites" name="review_sites" type="text" aria-describedby="review_sites-err" placeholder="e.g. Google, HomeStars, Facebook" ><span class="err" id="review_sites-err" role="alert"></span></div><div class="fld" data-field="notify_email"><label for="notify_email">Send new-lead alerts to </label><small class="hint" id="notify_email-hint">Leave blank to use your main email.</small><input id="notify_email" name="notify_email" type="email" aria-describedby="notify_email-err notify_email-hint" ><span class="err" id="notify_email-err" role="alert"></span></div></div></details></section>
+<section class="step" data-step="goals" aria-labelledby="st-goals" hidden><header class="step-h"><h2 id="st-goals" tabindex="-1">Goals <em>(optional)</em></h2><p>Optional, but it helps us focus on what matters most to you.</p></header><div class="grid2"><fieldset class="fld choice" data-field="main_goal" aria-describedby="main_goal-err"><legend>What do you want most from your new system? </legend><div class="opts"><label class="opt"><input type="radio" name="main_goal" value="More calls and leads"><span>More calls and leads</span></label><label class="opt"><input type="radio" name="main_goal" value="More estimates turned into jobs"><span>More estimates turned into jobs</span></label><label class="opt"><input type="radio" name="main_goal" value="More Google reviews"><span>More Google reviews</span></label><label class="opt"><input type="radio" name="main_goal" value="Less admin and follow-up"><span>Less admin and follow-up</span></label><label class="opt"><input type="radio" name="main_goal" value="A better website"><span>A better website</span></label><label class="opt"><input type="radio" name="main_goal" value="Not sure yet"><span>Not sure yet</span></label></div><span class="err" id="main_goal-err" role="alert"></span></fieldset><div class="fld" data-field="lead_sources"><label for="lead_sources">How do customers find you now? </label><small class="hint" id="lead_sources-hint">Word of mouth, Google, Facebook, signs on your trucks&hellip;</small><textarea id="lead_sources" name="lead_sources" rows="3" aria-describedby="lead_sources-err lead_sources-hint" ></textarea><span class="err" id="lead_sources-err" role="alert"></span></div><div class="fld" data-field="notes"><label for="notes">Anything else we should know? </label><textarea id="notes" name="notes" rows="3" aria-describedby="notes-err" ></textarea><span class="err" id="notes-err" role="alert"></span></div></div></section>
+<section class="step" data-step="review" aria-labelledby="st-review" hidden><header class="step-h"><h2 id="st-review" tabindex="-1">Review</h2><p>Check your answers, then submit. You can still add files afterwards.</p></header><div class="rv" id="w-review"></div><p class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Never send us passwords. If we need access to your domain, Google profile or phone provider, we&rsquo;ll arrange it with you securely.</span></p></section>
+                    <p class="formerr" id="w-err" role="alert" hidden></p>
+                    <div class="wiz-nav" id="w-nav">
+                        <button type="button" class="b b-ghost" id="w-prev">Back</button>
+                        <button type="button" class="b b-pri" id="w-next">Continue</button>
+                        <button type="submit" class="b b-pri" id="w-submit" hidden>Submit setup</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="pg" data-page="files" hidden>
+                <header class="pg-head"><h1 tabindex="-1">Files</h1><p>Share your logo and photos of your work. Only our team can see them.</p></header>
+                <article class="panel">
+                    <header class="panel-h"><h2>Logo</h2><span class="meta" id="logo-count"></span></header>
+                    <label class="drop" data-drop><input type="file" multiple accept="image/*,.pdf,.ai,.eps,.svg" data-up-input data-kind="logo" aria-label="Add your logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5M12 3v12"/></svg><span><b>Add your logo</b><small>PNG, SVG, PDF or AI. If you have a few versions, add them all.</small></span></label>
+                    <ul class="gal" data-gal="logo"></ul>
+                </article>
+                <article class="panel">
+                    <header class="panel-h"><h2>Photos and files</h2><span class="meta" id="media-count"></span></header>
+                    <label class="drop" data-drop><input type="file" multiple accept="image/*,.pdf,.ai,.eps,.zip" data-up-input data-kind="media" aria-label="Add photos or files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5M12 3v12"/></svg><span><b>Add photos or files</b><small>Your work, team and trucks. Images, PDF, AI, EPS or ZIP, up to 25&nbsp;MB each.</small></span></label>
+                    <ul class="gal" data-gal="media"></ul>
+                </article>
+            </section>
+
+            <section class="pg" data-page="billing" hidden>
+                <header class="pg-head"><h1 tabindex="-1">Billing</h1><p>Payments are processed securely by Stripe.</p></header>
+                <article class="panel" id="bl-plan"></article>
+                <article class="panel" id="bl-pm"></article>
+                <article class="panel" id="bl-inv"></article>
+                <p class="fine">Stripe emails a receipt for every payment. To change or cancel your plan, email us; cancellation takes 30 days&rsquo; written notice (see our <a href="terms.html">terms</a>).</p>
+            </section>
+
+            <section class="pg" data-page="help" hidden>
+                <header class="pg-head"><h1 tabindex="-1">Help</h1><p>Questions about your setup, your build or billing? A real person on our team will help.</p></header>
+                <article class="panel contact">
+                    <a href="tel:+15872005649"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><b>Call us</b><small>(587) 200-5649</small></span></a>
+                    <a href="mailto:matt@northernpeaksystems.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span><b>Email us</b><small>matt@northernpeaksystems.ca</small></span></a>
+                </article>
+                <p class="fine">You can also reply to any email from us; replies come straight to our team.</p>
+                <article class="panel"><header class="panel-h"><h2>Common questions</h2></header><details class="faq"><summary>How long until my website is live?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Most businesses are live within 7&ndash;10 days of completing setup. Once you submit your setup, your target launch dates appear on Home.</p></details><details class="faq"><summary>Can I change my setup answers?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Before you submit, everything saves as you go and you can edit any step. After you submit, email or call us and we&rsquo;ll update it for you.</p></details><details class="faq"><summary>How do I send more photos or files?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Add them any time in Files: images, PDF, AI, EPS or ZIP, up to 25&nbsp;MB each.</p></details><details class="faq"><summary>Do you need my passwords?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>No. Never send us passwords. If we need access to your domain, Google profile or phone provider, we&rsquo;ll arrange it with you securely.</p></details><details class="faq"><summary>How do I update my card or get a receipt?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Use <b>Update card</b> in Billing. Stripe, our payment processor, emails a receipt for every payment, and your invoices are listed in Billing.</p></details><details class="faq"><summary>How do I cancel?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Your plan is month-to-month. Email us to cancel; cancellation takes 30 days&rsquo; written notice, and you keep your domain and content. See our <a href="terms.html">terms</a>.</p></details></article>
+            </section>
+        </div>
+    </main>
+
+    <nav class="tabs" aria-label="Sections"><a href="#/home" data-route="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg><span>Home</span><em class="dot" data-dot="home" hidden></em></a><a href="#/setup" data-route="setup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg><span>Setup</span><em class="dot" data-dot="setup" hidden></em></a><a href="#/files" data-route="files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Files</span><em class="dot" data-dot="files" hidden></em></a><a href="#/billing" data-route="billing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Billing</span><em class="dot" data-dot="billing" hidden></em></a><a href="#/help" data-route="help"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg><span>Help</span><em class="dot" data-dot="help" hidden></em></a></nav>
+</div>
+<div class="toast" id="h-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+  var API='/api/client',TK='nps_hub_token',OLD_TK='nps_onb_token',APP='https://app.northernpeaksystems.ca/',PHONE='(587) 200-5649',MAIL='matt@northernpeaksystems.ca';
+  var SPEC=[{"k": "business_name", "step": "business", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Business name"}, {"k": "contact_name", "step": "business", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Primary contact"}, {"k": "email", "step": "business", "req": true, "peak": false, "type": "email", "opts": null, "optLabels": null, "short": "Email"}, {"k": "phone", "step": "business", "req": true, "peak": false, "type": "phone", "opts": null, "optLabels": null, "short": "Business phone"}, {"k": "trade", "step": "business", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Industry or trade"}, {"k": "team_size", "step": "business", "req": false, "peak": false, "type": null, "opts": ["Just me", "2-5", "6-15", "16+"], "optLabels": ["Just me", "2–5 people", "6–15 people", "16 or more"], "short": "Team size"}, {"k": "address", "step": "business", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Address"}, {"k": "city", "step": "business", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "City"}, {"k": "region", "step": "business", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Province or state"}, {"k": "country", "step": "business", "req": true, "peak": false, "type": null, "opts": ["Canada", "United States", "Other"], "optLabels": ["Canada", "United States", "Other"], "short": "Country"}, {"k": "hours", "step": "business", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Business hours"}, {"k": "years_in_business", "step": "business", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Years in business"}, {"k": "licences_insurance", "step": "business", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Licences & insurance"}, {"k": "services", "step": "services", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Services you offer"}, {"k": "top_services", "step": "services", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Jobs you want more of"}, {"k": "service_area", "step": "services", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Service area"}, {"k": "description", "step": "services", "req": true, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "About your business"}, {"k": "emergency_service", "step": "services", "req": false, "peak": false, "type": null, "opts": ["yes", "no"], "optLabels": ["Yes", "No"], "short": "Emergency / after-hours"}, {"k": "free_estimates", "step": "services", "req": false, "peak": false, "type": null, "opts": ["yes", "no"], "optLabels": ["Yes", "No"], "short": "Free estimates"}, {"k": "financing", "step": "services", "req": false, "peak": false, "type": null, "opts": ["yes", "no"], "optLabels": ["Yes", "No"], "short": "Financing"}, {"k": "has_website", "step": "brand", "req": true, "peak": false, "type": null, "opts": ["yes", "no"], "optLabels": ["Yes", "No"], "short": "Current website"}, {"k": "website_url", "step": "brand", "req": false, "peak": false, "type": "url", "opts": null, "optLabels": null, "short": "Website address"}, {"k": "owns_domain", "step": "brand", "req": true, "peak": false, "type": null, "opts": ["yes", "no", "not_sure"], "optLabels": ["Yes", "No", "Not sure"], "short": "Owns a domain"}, {"k": "domain_registrar", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Registered with"}, {"k": "desired_domain", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Domain you&rsquo;d like"}, {"k": "brand_colours", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Brand colours"}, {"k": "brand_style", "step": "brand", "req": false, "peak": false, "type": null, "opts": ["Clean and modern", "Bold and strong", "Classic and trustworthy", "Not sure"], "optLabels": ["Clean and modern", "Bold and strong", "Classic and trustworthy", "Not sure"], "short": "Style"}, {"k": "sites_you_like", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Websites you like"}, {"k": "social_links", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Social media"}, {"k": "google_reviews_link", "step": "brand", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Google reviews"}, {"k": "uses_crm", "step": "systems", "req": true, "peak": true, "type": null, "opts": ["yes", "no"], "optLabels": ["Yes", "No"], "short": "Uses a CRM"}, {"k": "crm_name", "step": "systems", "req": false, "peak": true, "type": null, "opts": null, "optLabels": null, "short": "CRM"}, {"k": "has_gbp", "step": "systems", "req": true, "peak": true, "type": null, "opts": ["yes", "no", "not_sure"], "optLabels": ["Yes", "No", "Not sure"], "short": "Google Business Profile"}, {"k": "gbp_email", "step": "systems", "req": false, "peak": true, "type": "email", "opts": null, "optLabels": null, "short": "Profile managed by"}, {"k": "calls_number", "step": "systems", "req": true, "peak": true, "type": "phone", "opts": null, "optLabels": null, "short": "Number customers call"}, {"k": "phone_carrier", "step": "systems", "req": false, "peak": true, "type": null, "opts": null, "optLabels": null, "short": "Phone provider"}, {"k": "missed_call", "step": "systems", "req": true, "peak": true, "type": null, "opts": ["yes", "no", "not_sure"], "optLabels": ["Yes", "No", "Not sure"], "short": "Missed call text-back"}, {"k": "who_answers", "step": "systems", "req": false, "peak": true, "type": null, "opts": null, "optLabels": null, "short": "Who answers calls"}, {"k": "scheduling_software", "step": "systems", "req": false, "peak": true, "type": null, "opts": null, "optLabels": null, "short": "Scheduling software"}, {"k": "review_sites", "step": "systems", "req": false, "peak": true, "type": null, "opts": null, "optLabels": null, "short": "Review sites"}, {"k": "notify_email", "step": "systems", "req": false, "peak": true, "type": "email", "opts": null, "optLabels": null, "short": "Lead alerts to"}, {"k": "main_goal", "step": "goals", "req": false, "peak": false, "type": null, "opts": ["More calls and leads", "More estimates turned into jobs", "More Google reviews", "Less admin and follow-up", "A better website", "Not sure yet"], "optLabels": ["More calls and leads", "More estimates turned into jobs", "More Google reviews", "Less admin and follow-up", "A better website", "Not sure yet"], "short": "Main goal"}, {"k": "lead_sources", "step": "goals", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "How customers find you"}, {"k": "notes", "step": "goals", "req": false, "peak": false, "type": null, "opts": null, "optLabels": null, "short": "Anything else"}],STEPS=[{"id": "business", "title": "Business", "peak": false}, {"id": "services", "title": "Services", "peak": false}, {"id": "brand", "title": "Brand & website", "peak": false}, {"id": "systems", "title": "Systems", "peak": true}, {"id": "goals", "title": "Goals", "peak": false}, {"id": "review", "title": "Review", "peak": false}],ICONS={"check": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>", "doc": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6M9 13h6M9 17h6\"/></svg>", "x": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>", "ext": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg>", "image": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"/><path d=\"m21 15-5-5L5 21\"/></svg>", "edit": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z\"/></svg>", "alert": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v4M12 16h.01\"/></svg>", "card": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M2 10h20\"/></svg>", "upload": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m17 8-5-5-5 5M12 3v12\"/></svg>", "grid": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/></svg>", "phone": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z\"/></svg>", "mail": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-10 6L2 7\"/></svg>", "plus": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>", "arrow": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg>", "lock": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"10\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg>", "chev": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg>", "check2": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>"},PLAN_INC={"base": ["Custom website designed &amp; built &mdash; <b>free</b>", "Hosting &amp; security included", "Unlimited edits &amp; updates", "Local SEO foundations built in", "Direct support from our team", "Cancel with 30 days&rsquo; notice &mdash; keep your domain &amp; content"], "peak": ["Missed Call Text-Back", "Reputation Management &amp; review requests", "Estimate Follow-Up", "Customer Retention", "Lead Management &amp; booking", "Google Business Profile optimization"]};
+  var REQIF={website_url:function(d){return d.has_website==='yes';},crm_name:function(d){return d.uses_crm==='yes';}};
+  var SHOW={website_url:REQIF.website_url,crm_name:REQIF.crm_name,
+    domain_registrar:function(d){return d.owns_domain==='yes';},desired_domain:function(d){return d.owns_domain!=='yes';},
+    gbp_email:function(d){return d.has_gbp==='yes';}};
+  var RULES={email:/^[^@\s]+@[^@\s]+\.[^@\s]+$/,phone:/^[0-9+().\-\s]{7,25}$/,url:/^(https?:\/\/)?[^\s\/]+\.[^\s]{2,}$/i};
+  var MSG={required:'Please answer this question.',invalid_email:'Enter a valid email address.',invalid_phone:'Enter a valid phone number.',invalid_url:'Enter a valid website address, like yourbusiness.ca.',invalid_option:'Choose one of the options.'};
+  var MAXB=25*1024*1024,OKTYPE=/^(image\/[a-z0-9.+-]+|application\/(pdf|postscript|illustrator|zip|x-zip-compressed))$/i;
+  var EXT={ai:'application/illustrator',eps:'application/postscript',pdf:'application/pdf',zip:'application/zip',heic:'image/heic',heif:'image/heif',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',gif:'image/gif',svg:'image/svg+xml',webp:'image/webp',tif:'image/tiff',tiff:'image/tiff'};
+  var UPMSG={too_large:'Over 25 MB.',bad_type:'File type not supported.',too_many:'File limit reached. Remove a few, or email us a link.',bad_kind:'Please try again.'};
+  var STAGES=['setup','build','review','live'],LABELS=['Subscribed','Set up','Build','Review','Launch'];
+  var ROUTES=['home','setup','files','billing','help'],TITLES={home:'Home',setup:'Setup',files:'Files',billing:'Billing',help:'Help'},LEGACY={overview:'home',support:'help'};
+  var PHOTO_GOAL=3,DAY=864e5;
+  var BYK={};SPEC.forEach(function(f){BYK[f.k]=f;});
+  var S={token:null,c:null,preview:false,route:null,step:0,dirty:false,saving:false,timer:null,readOnly:false,visited:{},filesAt:0,pending:[],busy:false,feedAll:false,paid:false};
+  var $=function(id){return document.getElementById(id);};
+  var $$=function(sel,root){return [].slice.call((root||document).querySelectorAll(sel));};
+  var form=$('w-form');
+
+  /* ---------- helpers ---------- */
+  function ico(n){return ICONS[n]||'';}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p||{});}catch(e){}}
+  function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v);}catch(e){return null;}}
+  function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);if(v===null)sessionStorage.removeItem(k);else sessionStorage.setItem(k,v);}catch(e){return null;}}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function D(iso){var d=iso instanceof Date?iso:new Date(iso);return isNaN(d)?null:d;}
+  function date(iso,o){var d=iso&&D(iso);return d?d.toLocaleDateString('en-CA',o||{month:'long',day:'numeric',year:'numeric'}):'';}
+  function short(iso){return date(iso,{month:'short',day:'numeric'});}
+  function when(iso){var d=iso&&D(iso);if(!d)return '';var m=(Date.now()-d)/60000;
+    if(m<1)return 'Just now';if(m<60)return Math.round(m)+' min ago';if(m<1440)return Math.round(m/60)+' hr ago';
+    var days=Math.floor(m/1440);if(days===1)return 'Yesterday';if(days<7)return days+' days ago';return short(d);}
+  function addDays(iso,n){var d=new Date(D(iso).getTime());d.setDate(d.getDate()+n);return d;}
+  function range(a,b){return short(a)+'\u2013'+(a.getMonth()===b.getMonth()?b.getDate():short(b));}
+  function money(n,cur){if(n==null)return '';try{return new Intl.NumberFormat('en-CA',{style:'currency',currency:cur||'CAD'}).format(n);}catch(e){return '$'+n;}}
+  function bytes(b){return b>=1048576?(b/1048576).toFixed(1)+' MB':Math.max(1,Math.round((b||0)/1024))+' KB';}
+  function firstName(n){return String(n||'').trim().split(/\s+/)[0]||'';}
+  function initials(n,fb){var p=String(n||'').trim().split(/\s+/).filter(Boolean);return ((p[0]||fb||'?').charAt(0)+(p.length>1?p[p.length-1].charAt(0):'')).toUpperCase();}
+  function plural(n,w){return n+' '+w+(n===1?'':'s');}
+  function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1);}
+  function toast(msg){var t=$('h-toast');t.textContent=msg;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('on');},3200);}
+  function setAll(sel,fn){$$(sel).forEach(fn);}
+  function mode(v){$$('[data-mode]').forEach(function(el){el.hidden=el.getAttribute('data-mode')!==v;});}
+  function call(body,keepalive){
+    if(S.preview)return Promise.resolve(fake(body));
+    return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),keepalive:!!keepalive})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {status:r.status,body:j};});});
+  }
+
+  /* ---------- sign-in ---------- */
+  var SI={
+    nolink:['Sign in','Enter the email you subscribed with and we\u2019ll send you a private sign-in link.',1],
+    signedout:['You\u2019re signed out','Enter your email any time to get a new sign-in link.',1],
+    expired:['Please sign in again','For your security, you\u2019re signed out after 30 days away. Enter your email for a new link.',1],
+    invalid:['That link has expired','Sign-in links work for 30 days. Enter your email and we\u2019ll send a new one. Your answers are saved.',1],
+    session:['This page has expired','For your security, the page after checkout only works for 48 hours. Enter your email for a sign-in link.',1],
+    pending:['Confirming your payment','Some payments take a little longer to clear. We\u2019ll email your sign-in link as soon as it does.',0],
+    notpaid:['We couldn\u2019t confirm a payment','This checkout hasn\u2019t been paid. If you think that\u2019s wrong, enter your email or call '+PHONE+'.',1],
+    unavailable:['Temporarily unavailable','Your subscription isn\u2019t affected. Please try again in a few minutes, or call '+PHONE+'.',0]
+  };
+  function signin(kind){
+    var t=SI[kind]||SI.nolink;
+    $('si-title').textContent=t[0];$('si-text').textContent=t[1];
+    $('si-form').hidden=!t[2];$('si-retry').hidden=kind!=='unavailable';$('si-msg').textContent='';
+    document.title='Sign in \u00b7 Client Hub | Northern Peak Systems';
+    mode('signin');
+  }
+  function errKind(st){return st===410?'session':st===402?'notpaid':(!st||st>=500)?'unavailable':'invalid';}
+  $('si-form').addEventListener('submit',function(e){
+    e.preventDefault();var input=$('si-email'),msg=$('si-msg'),v=input.value.trim();
+    if(!RULES.email.test(v)){msg.textContent='Enter the email address you subscribed with.';input.focus();return;}
+    msg.textContent='Sending\u2026';
+    call({action:'signin',email:v}).then(function(){msg.textContent='Check your inbox. If that email matches a subscription, your link is on its way.';})
+      .catch(function(){msg.textContent='Couldn\u2019t send right now. Please try again.';});
+  });
+  $('si-retry').addEventListener('click',function(){location.reload();});
+
+  /* ---------- derived state ---------- */
+  function stageIdx(){var i=STAGES.indexOf(S.c.project_stage);return i<0?1:i+1;}
+  function isLive(){return S.c.project_stage==='live';}
+  function setupDone(){return S.c.onboarding_status==='complete';}
+  function reqProgress(d){
+    d=d||S.c.data||{};var done=0,total=0;
+    SPEC.forEach(function(f){if(f.peak&&S.c.plan!=='peak')return;if(SHOW[f.k]&&!SHOW[f.k](d))return;
+      if(f.req||(REQIF[f.k]&&REQIF[f.k](d))){total++;if(d[f.k])done++;}});
+    return [done,total];
+  }
+  function started(){return S.c.onboarding_status==='in_progress'||reqProgress()[0]>2;}
+  function files(kind){return (S.c.files||[]).filter(function(f){return !kind||(kind==='media'?f.kind!=='logo':f.kind===kind);});}
+  function windowDates(){if(!S.c.onboarding_completed_at)return null;return [addDays(S.c.onboarding_completed_at,7),addDays(S.c.onboarding_completed_at,10)];}
+  function billStatus(){var b=S.c.billing;return (b&&b.status)||S.c.subscription_status;}
+  function pastDue(){var s=billStatus();return s==='past_due'||s==='unpaid';}
+
+  /* ---------- chrome ---------- */
+  function renderChrome(){
+    var c=S.c,name=c.data.contact_name||c.name||'';
+    setAll('[data-initials]',function(el){el.textContent=initials(name||c.business_name,c.email);});
+    setAll('[data-name]',function(el){el.textContent=name||c.email;});
+    setAll('[data-email]',function(el){el.textContent=c.email||'';});
+    setAll('[data-peak]',function(el){el.hidden=c.plan!=='peak';});
+    $('h-preview').hidden=!S.preview;
+    setAll('[data-dot="setup"]',function(el){el.hidden=setupDone();el.className='dot';});
+    setAll('[data-dot="billing"]',function(el){el.hidden=!pastDue();el.className='dot ba';});
+  }
+  function renderBanners(){
+    var c=S.c,b=c.billing||{},st=billStatus(),a=$('h-alert'),html='',cls='';
+    if(pastDue()){cls='ba';html=ico('alert')+'<span><b>Your last payment didn\u2019t go through.</b> Update your card to keep your system running.</span>'+(c.portal?'<button type="button" class="b b-ghost" data-act="portal">Update card</button>':'');}
+    else if(st==='canceled'||st==='incomplete_expired'){cls='wa';html=ico('alert')+'<span><b>Your subscription has ended.</b> To restart, call us at '+esc(PHONE)+'.</span>';}
+    else if(b.ends_at){cls='wa';html=ico('alert')+'<span><b>Your subscription ends on '+esc(date(b.ends_at))+'.</b> Changed your mind? Email or call us.</span>';}
+    a.className='banner '+cls;a.innerHTML=html;a.hidden=!html;
+  }
+
+  /* ---------- home ---------- */
+  function greet(){var h=new Date().getHours();return h<12?'Good morning':h<18?'Good afternoon':'Good evening';}
+  function btn(act,label,cls,extra){return '<button type="button" class="b '+(cls||'b-pri')+'" data-act="'+act+'"'+(extra||'')+'>'+label+'</button>';}
+  function alink(href,label,cls,ext){return '<a class="b '+(cls||'b-pri')+'" href="'+esc(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+label+(ext?ico('ext'):'')+'</a>';}
+  function tlink(href,label,ext,act,kind){return act?'<button type="button" class="tlink" data-act="'+act+'"'+(kind?' data-kind="'+kind+'"':'')+'>'+label+ico('arrow')+'</button>'
+    :'<a class="tlink" href="'+esc(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+label+ico(ext?'ext':'arrow')+'</a>';}
+  function renderHome(){
+    var c=S.c,n=firstName(c.data.contact_name||c.name);
+    $('home-h').textContent=S.paid?('Welcome'+(n?', '+n:'')):(greet()+(n?', '+n:''));
+    $('home-sub').textContent=[c.business_name||c.data.business_name,c.plan_label].filter(Boolean).join(' \u00b7 ');
+    renderProject();renderTodo();renderActivity();
+  }
+  function renderProject(){
+    var c=S.c,idx=stageIdx(),live=isLive(),p=reqProgress(),w=windowDates(),k,h,t,act='';
+    var subs=LABELS.map(function(l,i){
+      var done=live||i<idx,cur=!done&&i===idx;
+      if(i===0)return short(c.subscribed_at);
+      if(i===1)return done?short(c.onboarding_completed_at):(started()?p[0]+' of '+p[1]+' done':'Next');
+      if(i===2)return done?short(c.review_at||''):cur?'In progress':'';
+      if(i===3)return done?short(c.live_at||''):cur?'Now':'';
+      return live?short(c.live_at||''):(w?'Target '+range(w[0],w[1]):'');
+    });
+    var track='<ol class="track" aria-label="Project progress">'+LABELS.map(function(l,i){var done=live||i<idx,cur=!done&&i===idx;
+      return '<li class="'+(done?'done':cur?'cur':'')+'"'+(cur?' aria-current="step"':'')+'><i></i><b>'+l+'</b><small>'+esc(subs[i]||'\u00a0')+'</small></li>';}).join('')+'</ol>';
+    if(!setupDone()){
+      k='Step 2 of 5';h=started()?'Finish your setup':'Tell us about your business';
+      t=started()?'You\u2019ve answered '+p[0]+' of '+p[1]+' required questions. Everything you\u2019ve entered is saved.'
+                 :'A few questions about your business, plus your logo and photos. It saves as you go, so you can finish later.';
+      act=alink('#/setup',started()?'Continue setup':'Start setup','b-pri b-lg');
+    }else if(idx<=2){
+      k='Step 3 of 5';h='We\u2019re building your system';
+      t='We\u2019ll email you when it\u2019s ready to review.'+(w&&Date.now()<=w[1].getTime()+DAY?' Target launch: '+range(w[0],w[1])+'.':'');
+      act=tlink('#/setup','View your answers');
+    }else if(idx===3){
+      k='Step 4 of 5';h='Your site is ready for review';
+      t='Take a look, then tell us what you\u2019d like changed. We\u2019ll walk you through it and make your changes before launch.';
+      act=(c.site_url?alink(c.site_url,'Preview your site','b-pri b-lg',1):'')+tlink('tel:+15872005649','Call us to review');
+    }else{
+      k='Complete';h='You\u2019re live';
+      t='Your website and system are up and running. We\u2019re here whenever you need anything.';
+      act=(c.site_url?alink(c.site_url,'Visit your website','b-pri b-lg',1):'')+(c.plan==='peak'?tlink(c.app_url||APP,'Open the Peak System app',1):'');
+    }
+    var note=(c.team_note||'').trim();
+    $('project').innerHTML=track+'<div class="now"><p class="now-k">'+k+'</p><h2>'+h+'</h2><p>'+esc(t)+'</p>'+(act?'<div class="now-act">'+act+'</div>':'')+
+      (note?'<div class="note"><p>'+esc(note)+'</p><small>Northern Peak team'+(c.team_note_at?' \u00b7 '+esc(when(c.team_note_at)):'')+'</small></div>':'')+'</div>';
+  }
+  function todos(){
+    var logo=files('logo').length,photos=files('photo').length,p=reqProgress(),list=[
+      {done:setupDone(),title:'Answer your setup questions',sub:setupDone()?'Submitted '+short(S.c.onboarding_completed_at):p[0]+' of '+p[1]+' required answers',href:'#/setup',cta:setupDone()?'':(started()?'Continue':'Start')},
+      {done:logo>0,title:'Add your logo',sub:logo?'Added':'No logo yet? Just let us know.',act:'upload',kind:'logo',cta:'Add logo'},
+      {done:photos>=PHOTO_GOAL,title:'Add at least 3 photos of your work',sub:photos>=PHOTO_GOAL?plural(photos,'photo')+' added':photos+' of 3 added',act:'upload',kind:'media',cta:'Add photos'}];
+    if(stageIdx()>=3)list.push({done:isLive(),title:'Review your new site',sub:isLive()?'Approved':'Tell us what you\u2019d like changed',href:S.c.site_url||'',cta:S.c.site_url?'Preview':'',ext:1});
+    return list;
+  }
+  function renderTodo(){
+    var list=todos(),done=list.filter(function(t){return t.done;}).length,all=done===list.length;
+    var h='<header class="panel-h"><h2>What we need from you</h2><span class="meta">'+done+' of '+list.length+' done</span></header>';
+    if(all)h+='<p class="allset">'+(isLive()?'All done. Thanks for everything.':'You\u2019ve given us everything we need. Nothing to do right now.')+'</p>';
+    if(!all)h+='<ul class="todo">'+list.map(function(t){
+      var cta=t.done||!t.cta?'':(t.act?tlink('',t.cta,0,t.act,t.kind):tlink(t.href,t.cta,t.ext));
+      return '<li class="'+(t.done?'done':'')+'"><span class="tick">'+ico('check2')+'</span><div><b>'+esc(t.title)+'</b><small>'+esc(t.sub)+'</small></div>'+cta+'</li>';}).join('')+'</ul>';
+    $('todo').innerHTML=h;
+  }
+  function activity(){
+    var c=S.c,a=[],add=function(at,title,sub){if(at&&D(at))a.push({at:D(at),title:title,sub:sub||''});};
+    add(c.subscribed_at,'Subscribed to '+(c.plan_label||'your plan'));
+    ((c.billing&&c.billing.invoices)||[]).forEach(function(v){if(v.status==='paid')add(v.date,'Payment received',money(v.total,v.currency));});
+    add(c.onboarding_started_at,'Started setup');
+    var byDay={};files().forEach(function(f){var d=D(f.uploaded_at);if(!d)return;var key=d.toDateString();var g=byDay[key]=byDay[key]||{at:d,n:0};g.n++;if(d>g.at)g.at=d;});
+    Object.keys(byDay).forEach(function(k){add(byDay[k].at,'Added '+plural(byDay[k].n,'file'));});
+    add(c.onboarding_completed_at,'Submitted setup','Build started');
+    add(c.review_at,'Site ready for review');
+    add(c.live_at,'Website went live');
+    if((c.team_note||'').trim())add(c.team_note_at,'Update from our team',c.team_note.trim());
+    return a.sort(function(x,y){return y.at-x.at;});
+  }
+  function renderActivity(){
+    var a=activity(),shown=S.feedAll?a:a.slice(0,4);
+    var h='<header class="panel-h"><h2>Recent activity</h2></header><ol class="feed">'+shown.map(function(e){
+      return '<li><time datetime="'+e.at.toISOString()+'" title="'+esc(e.at.toLocaleString('en-CA'))+'">'+esc(when(e.at))+'</time><div><b>'+esc(e.title)+'</b>'+(e.sub?'<p>'+esc(e.sub)+'</p>':'')+'</div></li>';}).join('')+'</ol>';
+    if(a.length>4)h+='<div class="feed-more"><button type="button" class="tlink" data-act="feedall">'+(S.feedAll?'Show less':'Show all')+'</button></div>';
+    $('activity').innerHTML=h;
+  }
+
+  /* ---------- files ---------- */
+  function thumb(f){var img=/^image\/(png|jpe?g|gif|webp|svg\+xml)$/i.test(f.type||'')&&f.url;
+    return '<span class="tile-img'+(f.kind==='logo'?' logo':'')+'">'+ico(/^image\//.test(f.type||'')?'image':'doc')+(img?'<img src="'+esc(f.url)+'" alt="" loading="lazy" onload="this.parentNode.classList.add(\'ok\')" onerror="this.remove()">':'')+'</span>';}
+  function tile(f){
+    return '<li class="tile">'+(f.url?'<a href="'+esc(f.url)+'" target="_blank" rel="noopener" aria-label="Open '+esc(f.name)+'">'+thumb(f)+'</a>':thumb(f))+
+      '<b title="'+esc(f.name)+'">'+esc(f.name)+'</b><small>'+esc([f.size?bytes(f.size):'',f.uploaded_at?short(f.uploaded_at):''].filter(Boolean).join(' \u00b7 '))+'</small>'+
+      '<button type="button" class="tile-x" data-del="'+esc(f.key)+'" aria-label="Remove '+esc(f.name)+'">'+ico('x')+'</button></li>';
+  }
+  function pendTile(it){
+    return '<li class="tile" data-pid="'+it.id+'"><span class="tile-img">'+ico(it.err?'alert':'upload')+(it.err?'':'<span class="tile-prog"><span style="width:'+it.pct+'%"></span></span>')+'</span>'+
+      '<b>'+esc(it.name)+'</b>'+(it.err?'<small class="e">'+esc(it.err)+'</small>':'<small>'+(it.started?'Uploading\u2026':'Waiting\u2026')+'</small>')+
+      (it.err?'<button type="button" class="tile-x" data-dismiss="'+it.id+'" aria-label="Dismiss" style="opacity:1">'+ico('x')+'</button>':'')+'</li>';
+  }
+  function renderFiles(){
+    if(!S.c)return;
+    ['logo','media'].forEach(function(z){
+      var pend=S.pending.filter(function(p){return (z==='logo')===(p.kind==='logo');}).map(pendTile).join('');
+      setAll('[data-gal="'+z+'"]',function(ul){ul.innerHTML=pend+files(z).map(tile).join('');});
+    });
+    var nl=files('logo').length,nm=files('media').length;
+    $('logo-count').textContent=nl?plural(nl,'file'):'';$('media-count').textContent=nm?plural(nm,'file'):'';
+    if(S.route==='home'){renderTodo();renderActivity();}
+    renderChrome();
+  }
+  function paintPct(it){setAll('[data-pid="'+it.id+'"] .tile-prog span',function(s){s.style.width=it.pct+'%';});}
+  function refreshFiles(){
+    if(!S.token||S.preview)return Promise.resolve();
+    return call({action:'files',token:S.token}).then(function(r){if(r.status===200){S.c.files=r.body.files||[];S.filesAt=Date.now();renderFiles();}});
+  }
+  function enqueue(list,zone){
+    list.forEach(function(f){
+      var ext=(f.name.split('.').pop()||'').toLowerCase(),t=f.type||EXT[ext]||'';
+      var kind=zone==='logo'?'logo':(/^image\//.test(t)?'photo':'other');
+      var it={id:'p'+Date.now()+Math.random().toString(36).slice(2,7),name:f.name,size:f.size,kind:kind,type:t,file:f,pct:0,err:''};
+      if(!OKTYPE.test(t))it.err=UPMSG.bad_type;else if(f.size>MAXB)it.err=UPMSG.too_large;else if(!f.size)it.err='This file is empty.';
+      S.pending.push(it);
+    });
+    renderFiles();pump();
+  }
+  function pump(){
+    if(S.busy)return;
+    var it=S.pending.filter(function(x){return !x.err&&!x.started;})[0];if(!it)return;
+    S.busy=true;it.started=true;renderFiles();
+    upload(it).then(function(){S.pending=S.pending.filter(function(x){return x!==it;});return refreshFiles();},function(err){it.err=String(err);})
+      .then(function(){S.busy=false;renderFiles();pump();});
+  }
+  function upload(it){
+    if(S.preview)return new Promise(function(res){var n=0,t=setInterval(function(){it.pct=n+=25;paintPct(it);if(n>=100){clearInterval(t);
+      S.c.files.unshift({key:it.id,kind:it.kind,name:it.name,size:it.size,type:it.type,uploaded_at:new Date().toISOString(),url:URL.createObjectURL(it.file)});res();}},100);});
+    return call({action:'upload-url',token:S.token,filename:it.name,size:it.size,type:it.type,kind:it.kind}).then(function(r){
+      if(r.status===401){signin('expired');throw 'Signed out';}
+      if(r.status!==200||!r.body.upload_url)throw (UPMSG[r.body.error]||'Couldn\u2019t upload. Please try again.');
+      return new Promise(function(res,rej){
+        var x=new XMLHttpRequest();x.open('PUT',r.body.upload_url);x.setRequestHeader('x-upsert','false');
+        x.upload.onprogress=function(e){if(e.lengthComputable){it.pct=Math.round(e.loaded/e.total*100);paintPct(it);}};
+        x.onload=function(){if(x.status>=200&&x.status<300){ev('file_upload',{kind:it.kind});res();}else rej('Upload failed. Please try again.');};
+        x.onerror=function(){rej('Upload failed. Check your connection.');};
+        var fd=new FormData();fd.append('cacheControl','3600');
+        fd.append('',it.file.type===it.type?it.file:it.file.slice(0,it.file.size,it.type),it.name);
+        x.send(fd);
+      });
+    });
+  }
+  document.addEventListener('change',function(e){
+    var t=e.target;if(!t.matches||!t.matches('[data-up-input]'))return;
+    enqueue([].slice.call(t.files||[]),t.getAttribute('data-kind'));t.value='';
+  });
+  ['dragenter','dragover'].forEach(function(n){document.addEventListener(n,function(e){var d=e.target.closest&&e.target.closest('[data-drop]');if(d)d.classList.add('over');});});
+  ['dragleave','drop'].forEach(function(n){document.addEventListener(n,function(e){var d=e.target.closest&&e.target.closest('[data-drop]');if(d)d.classList.remove('over');});});
+
+  /* ---------- billing ---------- */
+  function incList(items){return items.map(function(x){return '<li>'+ico('check')+'<span>'+x+'</span></li>';}).join('');}
+  function renderBilling(){
+    var c=S.c,b=c.billing,amt=b&&b.amount!=null?b.amount:(c.plan==='peak'?297:97),sub;
+    if(pastDue())sub='<span class="ba">Payment failed. Update your card below.</span>';
+    else if(b&&b.ends_at)sub='Ends '+esc(date(b.ends_at));
+    else if(b&&b.next_payment_at)sub='Renews '+esc(date(b.next_payment_at));
+    else sub=billStatus()==='canceled'?'Ended':'';
+    var inc='<details class="inc"><summary>What\u2019s included'+ico('chev')+'</summary><ul>'+incList(PLAN_INC[c.plan]||[])+
+      (c.plan==='peak'?'<h4>Plus everything in the Base System</h4>'+incList(PLAN_INC.base):'')+'</ul></details>';
+    $('bl-plan').innerHTML='<header class="panel-h"><h2>Plan</h2></header><div class="bl-top"><span class="bl-name">'+esc(c.plan_label||'')+'</span><span class="bl-price">$'+esc(String(amt))+' <small>CAD / month</small></span></div>'+
+      (sub?'<p class="bl-sub">'+sub+'</p>':'')+inc;
+    var card=b&&b.card;
+    $('bl-pm').innerHTML='<header class="panel-h"><h2>Payment method</h2></header><div class="pm">'+
+      (card?'<span class="pm-brand">'+esc(card.brand)+'</span><span class="pm-text"><b>'+esc(cap(card.brand))+' ending in '+esc(card.last4)+'</b><small>Expires '+('0'+card.exp_month).slice(-2)+'/'+String(card.exp_year).slice(-2)+'</small></span>'
+            :'<span class="pm-text"><b>'+(b?'No card on file':'Unavailable right now')+'</b></span>')+
+      (c.portal?btn('portal','Update card','b-ghost'):'')+'</div>';
+    var inv=(b&&b.invoices)||[],IS={paid:['st-paid','Paid'],open:['st-open','Due'],void:['m','Void'],uncollectible:['st-bad','Unpaid']};
+    $('bl-inv').innerHTML='<header class="panel-h"><h2>Invoices</h2></header>'+(inv.length?'<table class="inv"><tbody>'+inv.map(function(v){var s=IS[v.status]||['m',v.status];
+      return '<tr><td>'+esc(date(v.date,{month:'short',day:'numeric',year:'numeric'}))+'</td><td>'+esc(money(v.total,v.currency))+'</td><td class="'+s[0]+'">'+s[1]+'</td><td>'+(v.url?'<a href="'+esc(v.url)+'" target="_blank" rel="noopener">'+(v.status==='open'?'Pay now':'View')+ico('ext')+'</a>':'')+'</td></tr>';}).join('')+'</tbody></table>'
+      :'<p class="meta">'+(b?'No invoices yet.':'Unavailable right now. Please check back shortly.')+'</p>');
+  }
+
+  /* ---------- setup wizard ---------- */
+  function steps(){return STEPS.filter(function(s){return !s.peak||S.c.plan==='peak';});}
+  function active(f){return !f.peak||S.c.plan==='peak';}
+  function val(k){var els=form.elements[k];if(!els)return '';if(els.length&&els[0]&&els[0].type==='radio'){for(var i=0;i<els.length;i++)if(els[i].checked)return els[i].value;return '';}return (els.value||'').trim();}
+  function setVal(k,v){var els=form.elements[k];if(!els)return;v=v==null?'':String(v);if(els.length&&els[0]&&els[0].type==='radio'){for(var i=0;i<els.length;i++)els[i].checked=els[i].value===v;}else els.value=v;}
+  function raw(){var d={};SPEC.forEach(function(f){if(active(f))d[f.k]=val(f.k);});return d;}
+  function shown(f,d){return active(f)&&(!SHOW[f.k]||SHOW[f.k](d));}
+  function collect(){var d=raw(),o={};Object.keys(d).forEach(function(k){if(shown(BYK[k],d))o[k]=d[k];});return o;}
+  function toggles(){var d=raw();SPEC.forEach(function(f){var el=form.querySelector('[data-field="'+f.k+'"]');if(el)el.hidden=!shown(f,d);});}
+  function check(stepId){
+    var d=raw(),errs={};
+    SPEC.forEach(function(f){
+      if(!shown(f,d)||(stepId&&f.step!==stepId))return;
+      var v=d[f.k];
+      if(!v){if(f.req||(REQIF[f.k]&&REQIF[f.k](d)))errs[f.k]='required';return;}
+      if(f.opts&&f.opts.indexOf(v)<0)errs[f.k]='invalid_option';
+      else if(f.type&&!RULES[f.type].test(v))errs[f.k]='invalid_'+f.type;
+    });
+    return errs;
+  }
+  function showErrors(errs,stepId,focus){
+    $$('[data-field]',form).forEach(function(el){
+      var k=el.getAttribute('data-field');if(stepId&&BYK[k].step!==stepId)return;
+      var e=errs[k],out=$(k+'-err');el.classList.toggle('bad',!!e);if(out)out.textContent=e?(MSG[e]||'Please check this answer.'):'';
+      if(e){var m=el.closest('details');if(m)m.open=true;}
+      $$('input,select,textarea',el).forEach(function(c){if(e)c.setAttribute('aria-invalid','true');else c.removeAttribute('aria-invalid');});
+    });
+    var first=Object.keys(errs).filter(function(k){return !stepId||BYK[k].step===stepId;})[0];
+    if(first&&focus){var el=form.querySelector('[data-field="'+first+'"] input,[data-field="'+first+'"] select,[data-field="'+first+'"] textarea');
+      if(el){el.focus({preventScroll:true});el.closest('[data-field]').scrollIntoView({block:'center',behavior:'smooth'});}}
+    return first;
+  }
+  function renderStepper(){
+    var list=steps(),ids=list.map(function(s){return s.id;}),cur=list[S.step].id;
+    $('w-steps').style.setProperty('--n',list.length);
+    $$('#w-steps > li').forEach(function(li){
+      var id=li.getAttribute('data-nav'),i=ids.indexOf(id);
+      li.hidden=i<0;if(i<0)return;
+      var bad=id!=='review'&&Object.keys(check(id)).length>0,visited=S.visited[id],done=id!=='review'&&visited&&!bad&&id!==cur;
+      li.className=(id===cur?'cur ':'')+(done||(i<S.step&&!bad)?'done ':'')+(visited&&bad&&id!==cur?'warn':'');
+      var b=li.querySelector('button');if(id===cur)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+      b.setAttribute('aria-label','Step '+(i+1)+' of '+list.length+': '+list[i].title);
+    });
+  }
+  function goStep(i,focusHead){
+    var list=steps();i=Math.max(0,Math.min(i,list.length-1));S.step=i;var id=list[i].id;
+    if(!S.readOnly)S.visited[id]=1;
+    $$('.step',form).forEach(function(sec){sec.hidden=sec.getAttribute('data-step')!==id;});
+    $('w-prev').hidden=i===0||S.readOnly;$('w-next').hidden=id==='review'||S.readOnly;$('w-submit').hidden=id!=='review'||S.readOnly;
+    $('w-nav').hidden=S.readOnly;$('w-err').hidden=true;
+    if(id==='review')renderReview();
+    renderStepper();save();
+    var top=document.querySelector('.steps').getBoundingClientRect().top+window.pageYOffset-80;
+    if(window.pageYOffset>top)window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+    if(focusHead){var h=$('st-'+id);if(h)h.focus({preventScroll:true});}
+  }
+  function optLabel(f,v){if(!f.opts)return v;var i=f.opts.indexOf(v);return i<0?v:f.optLabels[i];}
+  function renderReview(){
+    var d=S.readOnly?Object.assign({},S.c.data):raw(),out='',missing=0,ro=S.readOnly;
+    steps().forEach(function(s){
+      if(s.id==='review')return;
+      var rows='';
+      SPEC.forEach(function(f){
+        if(f.step!==s.id||!shown(f,d))return;var v=d[f.k],req=f.req||(REQIF[f.k]&&REQIF[f.k](d));
+        if(!v&&!req)return;if(!v)missing++;
+        rows+='<dt>'+f.short+'</dt><dd>'+(v?esc(optLabel(f,v)):'<em class="miss">Missing</em>')+'</dd>';
+      });
+      if(s.id==='brand'){var n=files().length;rows+='<dt>Files</dt><dd>'+(n?plural(n,'file')+' added':'None yet')+'</dd>';}
+      out+='<div class="rv-g"><div class="rv-h"><h3>'+s.title+'</h3>'+(ro?'':'<button type="button" class="tlink" data-goto="'+s.id+'">Edit</button>')+'</div>'+(rows?'<dl>'+rows+'</dl>':'<p class="rv-empty">Nothing added.</p>')+'</div>';
+    });
+    if(missing&&!ro)out='<p class="rv-warn">'+plural(missing,'required answer')+(missing===1?' is':' are')+' missing. Use Edit to finish, then submit.</p>'+out;
+    $('w-review').innerHTML=out;
+  }
+  function fill(d){
+    d=Object.assign({},d||{});
+    if(!d.email&&S.c.email)d.email=S.c.email;
+    if(!d.contact_name&&S.c.name)d.contact_name=S.c.name;
+    SPEC.forEach(function(f){setVal(f.k,d[f.k]);});
+    toggles();
+    $$('details.more',form).forEach(function(m){m.open=$$('[data-field]',m).some(function(el){return !!d[el.getAttribute('data-field')];});});
+    $$('input,select,textarea',form).forEach(function(el){if(!el.hasAttribute('data-up-input'))el.disabled=S.readOnly;});
+  }
+  function openSetup(){
+    S.readOnly=setupDone();S.visited={};
+    fill(S.c.data);showErrors({},null,false);
+    var ro=S.readOnly;
+    $('w-title').textContent=ro?'Your setup answers':'Set up your system';
+    $('w-sub').innerHTML=ro?'Submitted '+esc(date(S.c.onboarding_completed_at))+'. To change anything, email <a href="mailto:'+MAIL+'">'+MAIL+'</a> or call '+esc(PHONE)+'.'
+      :'Only the questions marked <span class="req">*</span> are required. Everything saves as you go.';
+    document.querySelector('.steps').hidden=ro;$('w-save').hidden=ro;
+    var list=steps(),start=list.length-1;
+    if(!ro){Object.keys(S.c.data).forEach(function(k){var f=BYK[k];if(f)S.visited[f.step]=1;});
+      for(var i=0;i<list.length-1;i++){if(Object.keys(check(list[i].id)).length){start=i;break;}}
+      list.forEach(function(s,j){if(j<start)S.visited[s.id]=1;});}
+    renderFiles();goStep(start,false);
+  }
+  function leaveSetup(){save();if(!S.readOnly&&!setupDone()){var d=collect();Object.keys(d).forEach(function(k){S.c.data[k]=d[k];});}}
+  function save(keepalive){
+    if(S.readOnly||!S.c||setupDone()||!S.dirty||S.saving)return;
+    if(S.preview){S.dirty=false;saved('Preview \u00b7 not saved');return;}
+    if(!S.token)return;
+    S.saving=true;S.dirty=false;saved('Saving\u2026');
+    var data=collect();
+    call({action:'save',token:S.token,data:data},keepalive).then(function(r){
+      S.saving=false;
+      if(r.status===200){saved('Saved');Object.keys(data).forEach(function(k){S.c.data[k]=data[k];});
+        if(S.c.onboarding_status!=='in_progress'){S.c.onboarding_status='in_progress';if(!S.c.onboarding_started_at)S.c.onboarding_started_at=new Date().toISOString();ev('onboarding_start',{plan:S.c.plan});}}
+      else if(r.status===401){signin('expired');}
+      else if(r.status===409){S.c.onboarding_status='complete';saved('');}
+      else{S.dirty=true;saved('Not saved yet \u00b7 retrying');}
+    }).catch(function(){S.saving=false;S.dirty=true;saved('Offline \u00b7 will save when you reconnect');});
+  }
+  function saved(t){$('w-save').textContent=t;}
+  function changed(e){if(e.target.hasAttribute('data-up-input'))return;toggles();S.dirty=true;saved('');clearTimeout(S.timer);S.timer=setTimeout(save,1200);
+    var f=e.target.closest('[data-field]');if(f&&f.classList.contains('bad')){var k=f.getAttribute('data-field'),err=check(BYK[k].step)[k];
+      f.classList.toggle('bad',!!err);$(k+'-err').textContent=err?MSG[err]:'';}}
+  form.addEventListener('input',changed);form.addEventListener('change',changed);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)save(true);
+    else if(S.c&&S.filesAt&&Date.now()-S.filesAt>45*60000)refreshFiles(); // view links last an hour
+  });
+  window.addEventListener('pagehide',function(){save(true);});
+  $('w-next').addEventListener('click',function(){
+    var id=steps()[S.step].id,errs=check(id);
+    if(showErrors(errs,id,true)){$('w-err').textContent='Please answer the highlighted questions to continue.';$('w-err').hidden=false;return;}
+    goStep(S.step+1,true);
+  });
+  $('w-prev').addEventListener('click',function(){goStep(S.step-1,true);});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();if(S.readOnly)return;
+    var errs=check(),list=steps(),first=Object.keys(errs)[0];
+    if(first){var i=list.map(function(s){return s.id;}).indexOf(BYK[first].step);goStep(i,false);showErrors(errs,BYK[first].step,true);
+      $('w-err').textContent='Please answer the highlighted questions, then submit from the last step.';$('w-err').hidden=false;return;}
+    var b=$('w-submit');b.disabled=true;clearTimeout(S.timer);
+    call({action:'submit',token:S.token,data:collect()}).then(function(r){
+      b.disabled=false;
+      if(r.status===200){
+        ev('onboarding_complete',{plan:S.c.plan});S.dirty=false;
+        var done=function(c){S.c=norm(c);S.readOnly=true;S.paid=false;$('h-paid').hidden=true;
+          $('h-flash-text').innerHTML='<b>Thanks, we\u2019ve got everything.</b> We\u2019re starting your build and have emailed you a confirmation.';$('h-flash').hidden=false;
+          renderBanners();if(routeFromHash()==='home')onRoute();else location.hash='#/home';window.scrollTo({top:0});};
+        if(r.body.customer)done(r.body.customer);
+        else call({action:'load',token:S.token}).then(function(l){if(l.body.token){S.token=l.body.token;ls(TK,S.token);}done(l.body.customer||S.c);});
+      }
+      else if(r.status===422&&r.body.fields){var k=Object.keys(r.body.fields)[0],j=BYK[k]?list.map(function(s){return s.id;}).indexOf(BYK[k].step):0;goStep(j,false);showErrors(r.body.fields,null,true);$('w-err').textContent='Please check the highlighted answers.';$('w-err').hidden=false;}
+      else if(r.status===401)signin('expired');
+      else{$('w-err').textContent='Something went wrong. Your answers are saved; please try again in a moment.';$('w-err').hidden=false;}
+    }).catch(function(){b.disabled=false;$('w-err').textContent='You seem to be offline. Your answers are saved; try again when you\u2019re connected.';$('w-err').hidden=false;});
+  });
+
+  /* ---------- routing ---------- */
+  function routeFromHash(){var r=(location.hash.match(/^#\/([a-z]+)/)||[])[1];if(location.hash==='#setup')r='setup';r=LEGACY[r]||r;return ROUTES.indexOf(r)>=0?r:'home';}
+  function onRoute(){
+    if(!S.c)return;
+    var r=routeFromHash(),prev=S.route;
+    if(prev==='setup'&&r!=='setup')leaveSetup();
+    S.route=r;closeMenu();
+    $$('[data-page]').forEach(function(p){p.hidden=p.getAttribute('data-page')!==r;});
+    $$('[data-route]').forEach(function(a){if(a.getAttribute('data-route')===r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    $('mtop-h').textContent=TITLES[r];document.title=TITLES[r]+' \u00b7 Client Hub | Northern Peak Systems';
+    if(r==='home')renderHome();
+    if(r==='setup')openSetup();
+    if(r==='files')renderFiles();
+    if(r==='billing')renderBilling();
+    renderChrome();
+    if(prev&&prev!==r){window.scrollTo({top:0});var h=document.querySelector('[data-page="'+r+'"] h1');if(h)h.focus({preventScroll:true});}
+  }
+  window.addEventListener('hashchange',onRoute);
+  function renderAll(){renderChrome();renderBanners();onRoute();}
+
+  /* ---------- actions ---------- */
+  function closeMenu(){var m=$('acct-menu');if(m&&!m.hidden){m.hidden=true;setAll('[data-act="menu"]',function(b){b.setAttribute('aria-expanded','false');});}}
+  function toUpload(zone){
+    if(S.route!=='files')location.hash='#/files';
+    setTimeout(function(){var i=document.querySelector('[data-page="files"] [data-up-input][data-kind="'+(zone==='logo'?'logo':'media')+'"]');
+      if(i){i.closest('.panel').scrollIntoView({behavior:'smooth',block:'center'});i.focus({preventScroll:true});}},60);
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.mtop'))closeMenu();
+    var g=e.target.closest('[data-goto]');
+    if(g&&S.route==='setup'&&!S.readOnly){var i=steps().map(function(s){return s.id;}).indexOf(g.getAttribute('data-goto'));if(i>=0)goStep(i,true);return;}
+    var d=e.target.closest('[data-del]');
+    if(d){var key=d.getAttribute('data-del'),f=files().filter(function(x){return x.key===key;})[0];
+      if(!window.confirm('Remove '+(f?f.name:'this file')+'?'))return;d.disabled=true;
+      call({action:'delete-file',token:S.token,key:key}).then(function(r){
+        if(S.preview){S.c.files=S.c.files.filter(function(x){return x.key!==key;});}
+        else if(r.status===200)S.c.files=r.body.files||[];else{d.disabled=false;toast('Couldn\u2019t remove that file. Please try again.');return;}
+        renderFiles();toast('Removed');});return;}
+    var x=e.target.closest('[data-dismiss]');
+    if(x){S.pending=S.pending.filter(function(p){return p.id!==x.getAttribute('data-dismiss');});renderFiles();return;}
+    var a=e.target.closest('[data-act]');if(!a)return;
+    var act=a.getAttribute('data-act');
+    if(act==='upload')toUpload(a.getAttribute('data-kind'));
+    else if(act==='menu'){var m=$('acct-menu');m.hidden=!m.hidden;a.setAttribute('aria-expanded',String(!m.hidden));}
+    else if(act==='feedall'){S.feedAll=!S.feedAll;renderActivity();}
+    else if(act==='dismiss-banner'){a.closest('.banner').hidden=true;if(a.closest('#h-paid')){S.paid=false;if(S.route==='home')renderHome();}}
+    else if(act==='portal'){
+      if(S.preview){toast('Preview: this opens Stripe\u2019s secure billing page.');return;}
+      a.disabled=true;call({action:'portal',token:S.token}).then(function(r){a.disabled=false;if(r.body.url)location.href=r.body.url;else toast('Billing is unavailable right now. Please try again shortly.');}).catch(function(){a.disabled=false;});
+    }
+    else if(act==='signout'){ls(TK,null);ss(OLD_TK,null);S.token=null;S.c=null;S.route=null;S.pending=[];history.replaceState(null,'',location.pathname);signin('signedout');window.scrollTo({top:0});}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+
+  /* ---------- start ---------- */
+  function norm(c){c.data=c.data||{};c.files=c.files||[];return c;}
+  function enter(c,paid){
+    S.c=norm(c);S.paid=!!paid;
+    if(paid){$('h-paid-text').innerHTML='<b>Payment confirmed.</b> Your receipt is on its way to '+esc(c.email)+'. Next, tell us about your business.';$('h-paid').hidden=false;}
+    mode('app');renderAll();
+  }
+  function accept(r,paid){
+    if(r.status!==200||!r.body.token){
+      if(r.status===401||r.status===404){ls(TK,null);ss(OLD_TK,null);}
+      signin(paid===false&&(r.status===401||r.status===404)?'expired':errKind(r.status));return false;
+    }
+    S.token=r.body.token;ls(TK,S.token);ss(OLD_TK,null);
+    history.replaceState(null,'',location.pathname+'#/'+routeFromHash()); // drop session_id / token from the address bar
+    enter(r.body.customer,!!paid);S.filesAt=Date.now();
+    return true;
+  }
+  function verify(sid,tries){
+    call({action:'verify',session_id:sid}).then(function(r){
+      if(r.status===202&&tries<6){setTimeout(function(){verify(sid,tries+1);},2500);return;}
+      if(r.status===202){signin('pending');return;}
+      if(accept(r,true)&&!ss('nps_purchase_'+sid)){ss('nps_purchase_'+sid,'1');
+        ev('purchase',{transaction_id:sid,value:r.body.amount,currency:r.body.currency||'CAD',items:[{item_id:r.body.customer.plan,item_name:r.body.customer.plan_label,price:r.body.amount,quantity:1}]});}
+    }).catch(function(){signin('unavailable');});
+  }
+  function load(t,stored){call({action:'load',token:t}).then(function(r){accept(r,stored?false:null);}).catch(function(){signin('unavailable');});}
+
+  function fake(b){
+    if(b.action==='submit'){var now=new Date().toISOString(),c=Object.assign({},S.c,{onboarding_status:'complete',onboarding_completed_at:now,build_at:now,project_stage:'build',data:b.data,business_name:b.data.business_name});return {status:200,body:{ok:true,customer:c}};}
+    if(b.action==='files')return {status:200,body:{files:S.c.files}};
+    return {status:200,body:{ok:true}};
+  }
+  function preview(plan,stage,paid){
+    S.preview=true;S.token='preview';
+    stage=STAGES.indexOf(stage)>=0?stage:'setup';
+    var now=Date.now(),ago=function(d,h){return new Date(now-d*DAY-(h||0)*36e5).toISOString();},peak=plan==='peak',amt=peak?297:97,si=STAGES.indexOf(stage),done=si>0;
+    var sample={business_name:'Summit Yard & Landscape',contact_name:'Alex Morgan',email:'alex@example.com',phone:'(780) 555-0142',trade:'Landscaping',team_size:'6-15',
+      city:'Edmonton',region:'Alberta',country:'Canada',service_area:'Edmonton, St. Albert and Sherwood Park',services:'Lawn care\nSod and seeding\nRetaining walls\nSnow removal',
+      description:'Family-run landscaping crew serving Edmonton homeowners.',has_website:'no',owns_domain:'not_sure',main_goal:'More calls and leads'};
+    if(peak)Object.assign(sample,{uses_crm:'no',has_gbp:'yes',calls_number:'(780) 555-0142',missed_call:'yes'});
+    var fl=done?[{key:'l',kind:'logo',name:'summit-logo.png',size:48000,type:'image/webp',uploaded_at:ago(5,2),url:'img/nps-mark.webp'},
+      {key:'p1',kind:'photo',name:'crew-on-site.jpg',size:2400000,type:'image/webp',uploaded_at:ago(4,5),url:'img/how/demo.webp'},
+      {key:'p2',kind:'photo',name:'finished-patio.jpg',size:3100000,type:'image/webp',uploaded_at:ago(4,5),url:'img/how/preview.webp'},
+      {key:'p3',kind:'photo',name:'truck.jpg',size:1900000,type:'image/webp',uploaded_at:ago(4,4),url:'img/how/review.webp'}]:[];
+    enter({plan:plan,plan_label:peak?'The Peak System':'Base System',price_label:'$'+amt+' CAD',email:'alex@example.com',name:'Alex Morgan',
+      business_name:done?sample.business_name:'',subscription_status:'active',onboarding_status:done?'complete':'awaiting_information',
+      subscribed_at:ago(6,3),onboarding_started_at:done?ago(5,4):null,onboarding_completed_at:done?ago(4,2):null,build_at:done?ago(4,2):null,
+      review_at:si>=2?ago(1,6):null,live_at:si>=3?ago(0,3):null,project_stage:stage,
+      team_note:stage==='build'?'Your homepage design is underway. We\u2019ll email you as soon as the first draft is ready.':stage==='review'?'Your site is ready. Have a look and reply with any changes.':'',
+      team_note_at:stage==='build'?ago(1,2):stage==='review'?ago(1,6):null,
+      site_url:si>=2?'https://demo.northernpeaksystems.ca/':'',app_url:peak?APP:'',data:done?sample:{},portal:true,files:fl,
+      billing:{status:'active',next_payment_at:new Date(now+24*DAY).toISOString(),ends_at:null,amount:amt,currency:'CAD',card:{brand:'visa',last4:'4242',exp_month:8,exp_year:2029},
+        invoices:[{number:'NPS-0001',date:ago(6,3),total:amt,currency:'CAD',status:'paid',url:'#'}]}},paid);
+  }
+
+  var q=new URLSearchParams(location.search),sid=q.get('session_id'),h=(location.hash.match(/[#&]t=([^&]+)/)||[])[1],pv=q.get('preview');
+  if(pv==='peak'||pv==='base')preview(pv,q.get('stage'),q.get('paid')==='1');
+  else if(sid){$('boot-msg').textContent='Confirming your payment\u2026';verify(sid,0);}
+  else if(h)load(decodeURIComponent(h),false);
+  else{var t=ls(TK)||ss(OLD_TK);if(t)load(t,true);else signin('nolink');}
+})();
+</script>
+</body>
+</html>

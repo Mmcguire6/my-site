@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="icon" href="favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 
 <title>Digital Marketing Solutions for Home Service Businesses | Northern Peak Systems</title>
 <meta name="description" content="A website plus missed-call text-back, lead and estimate follow-up, booking and review requests for home service businesses across Canada and the US. $297/month, no contract, live in 7–10 days.">
@@ -34,8 +34,9 @@
       "url": "https://northernpeaksystems.ca/",
       "logo": "https://northernpeaksystems.ca/favicon.png",
       "image": "https://northernpeaksystems.ca/favicon.png",
-      "description": "Northern Peak Systems builds websites with missed-call text-back, lead and estimate follow-up, booking and review requests for trades businesses. Founder-led, $297/month, no contract.",
+      "description": "Northern Peak Systems builds websites with missed-call text-back, lead and estimate follow-up, booking and review requests for trades businesses. $297/month, no contract.",
       "email": "matt@northernpeaksystems.ca",
+      "telephone": "+1-587-200-5649",
       "priceRange": "$$",
       "founder": { "@type": "Person", "name": "Matthew McGuire", "url": "https://northernpeaksystems.ca/about" },
       "makesOffer": [
@@ -44,6 +45,7 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO and Local Search", "description": "Technical SEO, Google Business, and local-search foundations built in from launch." } }
       ],
       "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
+      "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
       "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }]
     },
     {
@@ -207,6 +209,9 @@ h1,h2{font-family:var(--display);}
 .mx-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);}
 .mx-title{margin-top:8px;font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#fff;}
 .mx-title span{color:var(--gold-2);}
+a.mx-title{display:block;width:fit-content;transition:opacity .2s;}
+a.mx-title:hover{opacity:.82;}
+a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
 .mx-rail p{max-width:30ch;margin-top:8px;font-size:13px;line-height:1.5;color:#d6d0c4;white-space:normal;}
 .nav-dd-menu a.mx-btn{display:inline-flex;margin-top:16px;margin-bottom:14px;padding:10px 20px;border-radius:8px;color:#181207;font-size:13.5px;}
 .nav-dd-menu a.mx-btn:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);color:#181207;}
@@ -452,6 +457,7 @@ h1,h2{font-family:var(--display);}
 .cv-list b{display:block;font-size:17px;font-weight:700;color:var(--ink);}
 .cv-list li > div > span{display:block;margin-top:3px;font-size:15px;line-height:1.5;color:var(--ink-2);}
 .cv-btn{padding:17px clamp(22px,8cqi,40px);font-size:clamp(12px,3.6cqi,13.5px);letter-spacing:0.07em;}
+.cv-soon{display:inline-block;margin-left:8px;padding:2px 8px;border:1px solid var(--gold);border-radius:999px;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);vertical-align:2px;}
 .cv-note{margin-top:14px;font-size:12.5px;color:var(--ink-2);}
 .cv-visual{min-width:0;}
 .cv-fit{position:relative;width:100%;height:var(--cv-h,auto);}
@@ -1198,6 +1204,7 @@ h1,h2{font-family:var(--display);}
 .price-num span{font-size:15px;color:var(--mist);}
 .price-sub{font-size:13px;color:var(--mist);}
 .price-card .btn{width:100%;margin-top:26px;}
+.price-card .btn + .btn{margin-top:12px;}
 .price-card .pnote{text-align:center;font-size:12px;color:var(--mist-2);margin-top:12px;}
 @media(max-width:900px){.price-grid{grid-template-columns:1fr;}.price-card{justify-self:stretch;max-width:none;}}
 
@@ -1329,6 +1336,13 @@ main > section{position:relative;z-index:1;}
 .nav-login svg{width:20px;height:20px;}
 .nav-login:hover{color:var(--gold-2);}
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+.nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
+@media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
+.mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
+.mnav-login:hover{color:var(--gold-2);}
 </style>
 
 <!-- Analytics -->
@@ -1351,10 +1365,10 @@ main > section{position:relative;z-index:1;}
                     <div class="mx-grid">
                         <aside class="mx-rail">
                             <span class="mx-eyebrow">The complete solution</span>
-                            <div class="mx-title">The <span>Peak System</span></div>
+                            <a href="platform.html" class="mx-title">The <span>Peak System</span></a>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
                             <span class="mx-soon"><span class="mx-badge">Coming soon</span>Revenue Insights</span>
-                            <a href="how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
+                            <a href="platform.html" class="btn btn-gold btn-tc mx-btn">Explore The Peak System <span class="arr">&rarr;</span></a>
                             <img src="img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
                         <div class="mx-cards">
@@ -1380,7 +1394,7 @@ main > section{position:relative;z-index:1;}
                             <ul class="ix-feats">
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Messages written for your trade</li>
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Built for 1&ndash;5 truck operations</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Founder-led, based in Alberta</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Alberta-based, serving Canada &amp; the US</li>
                             </ul>
                         </aside>
                         <div class="ix-main">
@@ -1441,8 +1455,9 @@ main > section{position:relative;z-index:1;}
             </div>
         </nav>
         <div class="nav-cta">
-            <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="client.html" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
+            <a href="book.html" class="btn btn-line btn-tc nav-demo">Book a Demo</a>
+            <a href="pricing.html#plans" class="btn btn-gold btn-tc nav-start">Get Started <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -1459,7 +1474,7 @@ main > section{position:relative;z-index:1;}
         </button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="#features">Platform</a>
+        <a href="platform.html">Platform</a>
         <a href="#trades">Solutions</a>
         <a href="pricing.html">Pricing</a>
         <a href="how.html">How it works</a>
@@ -1468,8 +1483,9 @@ main > section{position:relative;z-index:1;}
         <a href="contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="pricing.html#plans" class="btn btn-gold">Get Started <span class="arr">&rarr;</span></a>
+        <a href="book.html" class="btn btn-line">Book a Demo</a>
+        <a href="client.html" class="mnav-login">Client Login</a>
     </div>
 </div>
 
@@ -1504,7 +1520,8 @@ main > section{position:relative;z-index:1;}
             <h1 class="hv3-title">Turn more leads <span class="l2">into <em>revenue.</em></span></h1>
             <p class="hv3-sub">A complete system to capture leads, follow up automatically, turn more estimates into booked jobs, and bring customers back.</p>
             <div class="hv3-actions">
-                <a href="how.html" class="btn btn-gold btn-tc">See How It Works <span class="arr">&rarr;</span></a>
+                <a href="pricing.html#plans" class="btn btn-gold btn-tc" data-cta-loc="home-hero">Get Started <span class="arr">&rarr;</span></a>
+                <a href="book.html" class="btn btn-line btn-tc" data-cta-loc="home-hero">Book a Free Demo</a>
             </div>
             <ul class="hv3-pillars">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4v8a3 3 0 0 0 6 0V3h4v8a7 7 0 0 1-14 0z"/><path d="M5 7h4M15 7h4"/></svg><div><b>Capture</b><span>Every opportunity</span></div></li>
@@ -1642,7 +1659,6 @@ main > section{position:relative;z-index:1;}
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Contacts</li>
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Calendar</li>
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>Estimates</li>
-                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg>Payments</li>
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Automation</li>
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Reputation</li>
                                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Reporting</li>
@@ -1810,7 +1826,6 @@ main > section{position:relative;z-index:1;}
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Calendar</li>
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Contacts</li>
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>Estimates</li>
-                                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v11"/></svg>Payments</li>
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Marketing</li>
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Automation</li>
                                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Reporting</li>
@@ -1881,11 +1896,11 @@ main > section{position:relative;z-index:1;}
                             </div>
                         </div>
                         <ol class="lmx-steps">
-                            <li class="lmx-step dim" data-c="1"><span class="lmx-ic lmx-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>New Lead</b><small>From website form</small><em>1 min ago</em></span></li>
-                            <li class="lmx-step dim" data-c="2"><span class="lmx-ic lmx-ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><span><b>Conversation</b><small>Text reply received</small><em>3 min ago</em></span></li>
-                            <li class="lmx-step dim" data-c="3"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><span><b>Estimate Sent</b><small>$8,400</small><em>1 day ago</em></span></li>
-                            <li class="lmx-step dim" data-c="4"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><span><b>Appointment</b><small>Booked for Friday</small><em>2 days ago</em></span></li>
-                            <li class="lmx-step dim" data-c="5"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Job Won</b><small>$8,400</small><em>5 days ago</em></span></li>
+                            <li class="lmx-step dim" data-c="1"><span class="lmx-ic lmx-ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>New Lead</b><small>From website form</small><em>Day 0</em></span></li>
+                            <li class="lmx-step dim" data-c="2"><span class="lmx-ic lmx-ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><span><b>Conversation</b><small>Text reply received</small><em>+3 min</em></span></li>
+                            <li class="lmx-step dim" data-c="3"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><span><b>Estimate Sent</b><small>$8,400</small><em>Day 1</em></span></li>
+                            <li class="lmx-step dim" data-c="4"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><span><b>Appointment</b><small>Booked for Friday</small><em>Day 2</em></span></li>
+                            <li class="lmx-step dim" data-c="5"><span class="lmx-ic lmx-ic-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Job Won</b><small>$8,400</small><em>Day 5</em></span></li>
                         </ol>
                         <div class="lmx-toast dim" data-c="6"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Sarah Mitchell</b><span>Just replied to your estimate!</span></span><time>2:14 PM</time></div>
                     </div>
@@ -1961,7 +1976,7 @@ main > section{position:relative;z-index:1;}
                 <ul class="cv-list">
                     <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></span><div><b>Seasonal Reminders</b><span>Automatically reach out before the season starts.</span></div></li>
                     <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/></svg></span><div><b>Reactivation Campaigns</b><span>Bring back past customers for new work.</span></div></li>
-                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Referral Requests</b><span>Turn happy customers into new customers.</span></div></li>
+                    <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Referral Requests <em class="cv-soon">Coming soon</em></b><span>Turn happy customers into new customers.</span></div></li>
                     <li><span class="cv-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><div><b>Recurring Service Reminders</b><span>Keep your business top of mind year after year.</span></div></li>
                 </ul>
                 <a href="features/marketing-campaigns.html" class="btn btn-gold cv-btn">Explore Customer Retention <span class="arr">&rarr;</span></a>
@@ -1969,7 +1984,7 @@ main > section{position:relative;z-index:1;}
             </div>
             <div class="cv-visual">
                 <div class="cv-fit">
-                    <div class="cv-stage rtx-stage" id="txd-rtx" role="img" aria-label="Demo of customer retention: Sarah Mitchell&rsquo;s finished landscaping job joins the retention flow. A spring check-in text goes to 120 past customers on March 1, Sarah replies asking for April 12th, and fall prep, snow removal and a referral request are lined up next. A past-customers list shows who is active, reactivated or referring, with repeat customers up 28 percent and customer lifetime value up 42 percent.">
+                    <div class="cv-stage rtx-stage" id="txd-rtx" role="img" aria-label="Demo of customer retention: Sarah Mitchell&rsquo;s finished landscaping job joins the retention flow. A spring check-in text goes to 120 past customers on March 1, Sarah replies asking for April 12th, and fall prep and snow removal are lined up next, with referral requests coming soon. A past-customers list shows who is active, reactivated or a repeat customer, with repeat customers up 28 percent and customer lifetime value up 42 percent.">
                         <svg class="rtx-lines" viewBox="0 0 1000 540" aria-hidden="true">
                             <path d="M138 84V101M230 232H254M494 200H504M504 51V271M504 51H511M504 124H511M504 197H511M504 271H511"/>
                             <path class="ah" d="M133 100l5 7 5-7zM253 227l7 5-7 5zM511 46l7 5-7 5zM511 119l7 5-7 5zM511 192l7 5-7 5zM511 266l7 5-7 5z"/>
@@ -1996,7 +2011,7 @@ main > section{position:relative;z-index:1;}
                             <li class="rtx-cream dim" data-c="2"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></i><span><b>Spring Clean-Up</b><small>Mar 1 &bull; Sent <i class="rtx-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i></small></span></li>
                             <li class="rtx-cream dim" data-c="4"><i class="rtx-tile rtx-tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></svg></i><span><b>Fall Prep</b><small>Sep 1 &bull; Scheduled</small></span></li>
                             <li class="rtx-cream dim" data-c="4"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 6 10h3l-4 6h4l-3 5h12l-3-5h4l-4-6h3z"/></svg></i><span><b>Snow Removal</b><small>Oct 15 &bull; Scheduled</small></span></li>
-                            <li class="rtx-cream dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>30 days after job</small></span></li>
+                            <li class="rtx-cream dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>Coming soon</small></span></li>
                         </ul>
                         <div class="rtx-card rtx-list">
                             <div class="rtx-list-h"><b>Past Customers</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
@@ -2005,7 +2020,7 @@ main > section{position:relative;z-index:1;}
                                 <li class="rtx-row"><i style="background-image:url(img/rpx-t1.webp)"></i><span><b>David Wilson</b><small>Deck &bull; May 2025</small></span><em class="rtx-pill">Reactivated</em></li>
                                 <li class="rtx-row"><i style="background-image:url(img/rpx-t2.webp)"></i><span><b>James Carter</b><small>Yard Renovation &bull; Apr 2025</small></span><em class="rtx-pill">Active</em></li>
                                 <li class="rtx-row"><i style="background-image:url(img/rpx-t3.webp)"></i><span><b>Emily Roberts</b><small>Retaining Wall &bull; Aug 2024</small></span><em class="rtx-pill">Active</em></li>
-                                <li class="rtx-row"><i style="background-image:url(img/wsx-house.webp)"></i><span><b>Michael Thompson</b><small>Concrete Patio &bull; Jun 2024</small></span><em class="rtx-pill rtx-pill-blue">Referral</em></li>
+                                <li class="rtx-row"><i style="background-image:url(img/wsx-house.webp)"></i><span><b>Michael Thompson</b><small>Concrete Patio &bull; Jun 2024</small></span><em class="rtx-pill rtx-pill-blue">Repeat</em></li>
                             </ul>
                         </div>
                         <ol class="rtx-steps">
@@ -2013,7 +2028,7 @@ main > section{position:relative;z-index:1;}
                         <li class="rtx-step dim" data-c="2"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></svg></i><span><b>Seasonal Reminder</b><small>Spring cleanup reminder sent</small></span></li>
                         <li class="rtx-step dim" data-c="3"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></i><span><b>Customer Responds</b><small>Books annual service</small></span></li>
                         <li class="rtx-step dim" data-c="4"><i class="rtx-tile rtx-tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/></svg></i><span><b>Repeat Customer</b><small>Added to recurring reminder sequence</small></span></li>
-                        <li class="rtx-step dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>Asks for a referral after great service</small></span></li>
+                        <li class="rtx-step dim" data-c="5"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><span><b>Referral Request</b><small>Coming soon</small></span></li>
                         <li class="rtx-step dim" data-c="6"><i class="rtx-tile rtx-tile-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></i><span><b>More Business</b><small>Increased lifetime value over time</small></span></li>
                         </ol>
                         <div class="rtx-card rtx-stats dim" data-c="6"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span><b>+28%</b><small>Repeat Customers</small></span></span><i></i><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg><span><b>+42%</b><small>Customer Lifetime Value</small></span></span></div>
@@ -2069,14 +2084,14 @@ main > section{position:relative;z-index:1;}
             <p class="lede">We make it easy to see the value, get set up, and start growing &mdash; without a big commitment or complicated onboarding.</p>
         </div>
         <ol class="wwx-steps">
-            <li><span class="wwx-n">01</span><span class="wwx-img" style="background-image:url(img/how/demo.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><b>Book a Free Demo</b><p>Jump on a quick 15 minute call. We&rsquo;ll learn about your business, show you the system, and see if it&rsquo;s a good fit.</p></li>
-            <li><span class="wwx-n">02</span><span class="wwx-img" style="background-image:url(img/how/preview.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><b>Get Your Custom Preview</b><p>We build a custom website and set up a preview of your system so you can see exactly how it works for your business &mdash; before you decide.</p></li>
-            <li><span class="wwx-n">03</span><span class="wwx-img" style="background-image:url(img/how/review.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><b>Review &amp; Adjust</b><p>You&rsquo;ll get to explore the website, see the automations in action, and we&rsquo;ll make any adjustments based on your feedback.</p></li>
-            <li><span class="wwx-n">04</span><span class="wwx-img wwx-ui" aria-hidden="true"><span class="wwx-check"><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Website Live</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Automations Active</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Lead Management Set Up</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Review System Enabled</span></span></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><b>Go Live</b><p>Once you&rsquo;re happy, we launch your system. Everything is set up for you, and we handle the tech, integrations, and onboarding.</p></li>
+            <li><span class="wwx-n">01</span><span class="wwx-img" style="background-image:url(img/how/demo.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><b>Subscribe</b><p>Subscribe online in minutes, or book a quick 15-minute demo first. We&rsquo;ll show you the system and help you pick the right plan.</p></li>
+            <li><span class="wwx-n">02</span><span class="wwx-img" style="background-image:url(img/how/preview.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><b>Set Up</b><p>Tell us about your business and share your logo and photos in your Client Hub. It saves as you go.</p></li>
+            <li><span class="wwx-n">03</span><span class="wwx-img" style="background-image:url(img/how/review.webp)"></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><b>Build &amp; Review</b><p>We build your website and configure your automations, then walk you through everything and make your changes.</p></li>
+            <li><span class="wwx-n">04</span><span class="wwx-img wwx-ui" aria-hidden="true"><span class="wwx-check"><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Website Live</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Automations Active</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Lead Management Set Up</span><span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Review System Enabled</span></span></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><b>Go Live</b><p>Once you&rsquo;re happy, we launch your system. Most businesses are live within 7&ndash;10 days of completing setup, and we handle the tech and integrations.</p></li>
             <li><span class="wwx-n">05</span><span class="wwx-img wwx-ui" aria-hidden="true"><span class="wwx-dash"><span class="wwx-dash-h"><b>New Leads</b><em>&uarr; 127%</em></span><span class="wwx-bars"><i style="--h:22%;--d:0.00s"></i><i style="--h:30%;--d:0.05s"></i><i style="--h:26%;--d:0.10s"></i><i style="--h:36%;--d:0.15s"></i><i style="--h:33%;--d:0.20s"></i><i style="--h:44%;--d:0.25s"></i><i style="--h:40%;--d:0.30s"></i><i style="--h:52%;--d:0.35s"></i><i style="--h:48%;--d:0.40s"></i><i style="--h:58%;--d:0.45s"></i><i style="--h:55%;--d:0.50s"></i><i style="--h:66%;--d:0.55s"></i><i style="--h:62%;--d:0.60s"></i><i style="--h:74%;--d:0.65s"></i><i style="--h:82%;--d:0.70s"></i><i style="--h:94%;--d:0.75s"></i></span><span class="wwx-dash-r"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>New Leads<b>47</b></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Booked Jobs<b>12</b></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>5-Star Reviews<b>8</b></span></span></span></span><span class="wwx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="4" height="7" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><b>Grow &amp; Scale</b><p>We monitor performance, keep optimizing, and help you turn more leads into booked jobs &mdash; so you can focus on doing the work you love.</p></li>
         </ol>
         <div class="wwx-cta"><a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a><small>See the system in action before you commit.</small></div>
-        <ul class="wwx-bar"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><span><b>Free Custom Preview</b>See it working for your business first.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><b>No Long-Term Contracts</b>Stay because it works.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg><span><b>Fast Setup</b>Most businesses live in 7&ndash;10 days.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg><span><b>Ongoing Support</b>We handle the tech, you grow the business.</span></li></ul>
+        <ul class="wwx-bar"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><span><b>Free 15-Minute Demo</b>See the system, get straight answers.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><b>No Long-Term Contracts</b>Stay because it works.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg><span><b>Fast Setup</b>Most businesses live in 7&ndash;10 days.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg><span><b>Ongoing Support</b>We handle the tech, you grow the business.</span></li></ul>
     </div>
 </section>
 
@@ -2097,7 +2112,7 @@ main > section{position:relative;z-index:1;}
                 </details>
                 <details>
                     <summary>Do I have to sign a contract?</summary>
-                    <p>No. Month to month, cancel anytime, and you keep your phone number.</p>
+                    <p>No. Month to month, cancel with 30 days&rsquo; notice, and you keep your phone number.</p>
                 </details>
                 <details>
                     <summary>Does it work with my current phone and website?</summary>
@@ -2128,7 +2143,7 @@ main > section{position:relative;z-index:1;}
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No per-call fees</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>No setup fees</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Keep your phone number</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Cancel anytime</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>Cancel with 30 days&rsquo; notice</li>
                 </ul>
                 <p style="margin-top:22px;font-size:13.5px;color:var(--mist);">Just need the website? We build it free &mdash; <b style="color:var(--white);font-weight:600;">$97/month</b> covers hosting, security, and updates. <a href="pricing.html" style="color:var(--gold);">See pricing &rarr;</a></p>
             </div>
@@ -2136,8 +2151,9 @@ main > section{position:relative;z-index:1;}
                 <span class="plabel">Peak System</span>
                 <div class="price-num"><b>$297</b><span>/month</span></div>
                 <p class="price-sub">Website, missed-call text-back, lead and estimate follow-up, booking, and review requests.</p>
-                <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-                <p class="pnote">No setup fee &middot; No contract &middot; Cancel anytime</p>
+                <a href="/api/checkout?plan=peak" class="btn btn-gold" data-cta-loc="home-pricing">Get Started <span class="arr">&rarr;</span></a>
+                <a href="book.html" class="btn btn-line" data-cta-loc="home-pricing">Book a Demo</a>
+                <p class="pnote">Billed monthly in CAD &middot; No setup fee &middot; No contract</p>
             </div>
         </div>
     </div>
@@ -2231,7 +2247,7 @@ main > section{position:relative;z-index:1;}
         </div>
         <div class="roi-bottom">
             <a href="book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
-            <div class="roi-risk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/><path d="M9 12l2 2 4-4"/></svg><span>Risk-free. No contracts.<br>Cancel anytime.</span></div>
+            <div class="roi-risk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/><path d="M9 12l2 2 4-4"/></svg><span>No setup fees. No contracts.<br>Cancel with 30 days&rsquo; notice.</span></div>
         </div>
     </div>
 </section>
@@ -2265,11 +2281,12 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
         <div class="fcta-actions">
-            <a href="book.html" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="pricing.html#plans" class="btn btn-gold" data-cta-loc="home-final">Get Started <span class="arr">&rarr;</span></a>
+            <a href="book.html" class="btn btn-line" data-cta-loc="home-final">Book a Free Demo</a>
         </div>
         <div class="fcta-mini">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15-minute strategy call</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/></svg>No obligation</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Subscribe online in minutes</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5z"/></svg>We handle the setup</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 9-7 9-7-9z"/></svg>Live in 7&ndash;10 days</span>
         </div>
     </div>
@@ -2287,6 +2304,7 @@ main > section{position:relative;z-index:1;}
             </div>
             <div class="foot-col">
                 <h4>Platform</h4>
+                <a href="platform.html">The Peak System</a>
                 <a href="features/missed-call-text-back.html">Missed Call Recovery</a>
                 <a href="features/lead-follow-up.html">Estimate Follow-Up</a>
                 <a href="features/website.html">Websites &amp; SEO</a>
@@ -2306,13 +2324,14 @@ main > section{position:relative;z-index:1;}
                 <h4>Support</h4>
                 <a href="faq.html">FAQ</a>
                 <a href="locations.html">Service areas</a>
+                <a href="tel:+15872005649">Call (587) 200-5649</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
-                <a href="https://app.northernpeaksystems.ca/">Client Login</a>
+                <a href="client.html">Client Login</a>
                 <a href="book.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta</span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Edmonton, Alberta</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
@@ -2320,6 +2339,28 @@ main > section{position:relative;z-index:1;}
             </div>
         </div>
     </div>
+<script>
+/* Conversion tracking (synced into every page with the footer): Get Started, checkout and Book a Demo clicks
+   go to GA4 + Clarity, and first-touch campaign tags (utm_*, ref, gclid) are carried into checkout links so
+   Stripe and the CRM know where a customer came from. No personal or payment data is sent. */
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'],A='nps_attr';
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  try{var q=new URLSearchParams(location.search),a={},any=false;KEYS.forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,100);any=true;}});
+    if(any&&!store(A)){a.landing=location.pathname;store(A,JSON.stringify(a));}}catch(e){}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p);if(window.clarity)clarity('event',n);}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'',where=a.getAttribute('data-cta-loc')||((a.closest('section[id],header,footer,.mnav')||{}).id||(a.closest('header')?'nav':location.pathname));
+    var m=h.match(/\/(?:api\/checkout\?plan=|start\/)(base|peak)/);
+    if(m){ev('get_started_click',{cta_location:where,plan:m[1]});ev('begin_checkout',{plan:m[1],cta_location:where,currency:'CAD',value:m[1]==='peak'?297:97});
+      try{var at=JSON.parse(store(A)||'null');if(at){var u=new URL(a.href,location.href);KEYS.forEach(function(k){if(at[k]&&!u.searchParams.has(k))u.searchParams.set(k,at[k]);});a.href=u.href;}}catch(x){}
+      return;}
+    if(/pricing(\.html)?#plans/.test(h)&&/get started/i.test(a.textContent)){ev('get_started_click',{cta_location:where});return;}
+    if(/(^|\/)book(\.html)?([?#]|$)/.test(h))ev('book_demo_click',{cta_location:where});
+  },true);
+})();
+</script>
 </footer>
 
 <script>
@@ -2569,7 +2610,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
       ]};
   });
 
-  // 06 retention: the job joins the retention flow, the spring check-in goes out, Sarah books; the plan, referral and stats follow
+  // 06 retention: the job joins the retention flow, the spring check-in goes out, Sarah books; the plan, steps and stats follow
   var rtx=document.getElementById('txd-rtx');
   if(rtx)demo(rtx,function(d){
     var all=rtx.querySelectorAll('[data-c]'),row=d.q('.rtx-row-sarah');

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="../favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+<link rel="icon" href="../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=3">
 
 <title>Edmonton Web Design &amp; SEO | Northern Peak Systems</title>
 <meta name="description" content="Web design and local SEO for Edmonton home service businesses, plus missed-call text-back and estimate follow-up. Website built free, from $97/month.">
@@ -52,7 +52,7 @@
             "priceCurrency": "CAD",
             "unitText": "MONTH"
           },
-          "description": "Custom website designed and built free. $97/month covers hosting, security, unlimited edits, local SEO, and founder-led support. No setup fees, no contracts."
+          "description": "Custom website designed and built free. $97/month covers hosting, security, unlimited edits, local SEO, and direct support. No setup fees, no contracts."
         },
         {
           "@type": "Offer",
@@ -74,10 +74,26 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Do contractors need a City of Edmonton business licence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For gas work, yes: the City's gas permit page says contractors must be licensed with the City of Edmonton. Businesses based outside Edmonton apply for an out-of-town (non-resident) business licence, which carries an extra fee. Check the City's business licence page for the rules for your trade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my website explain EPCOR's backwater valve subsidy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you install backwater valves or do other rebate-eligible work, we can add a page that explains the program in plain language, links to EPCOR's official details, and makes it easy to book you. Unlimited edits mean we can update it whenever the program changes."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you only work with businesses in Edmonton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Edmonton is home base, but we work with home service businesses across Alberta, and across Canada and the US. Whether you're in Edmonton proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7–10 days. Nothing about the work depends on being in the same room."
+            "text": "No. Edmonton is home base, but we work with home service businesses across Alberta, and across Canada and the US. Whether you're in Edmonton proper or a nearby community, the process is the same: subscribe online or after a free 15-minute demo, tell us about your business in your Client Hub, and most businesses are live within 7–10 days of completing setup. Nothing about the work depends on being in the same room."
           }
         },
         {
@@ -85,7 +101,7 @@
           "name": "How long does a build take in Edmonton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Edmonton businesses are live in 7–10 days. We learn your business on a free 15-minute demo, build a free custom preview, and once you decide to go ahead, set up the system and walk you through everything on a launch call. No in-person meeting required at any step."
+            "text": "Most businesses are live within 7–10 days of completing setup. Once you subscribe, online or after a free 15-minute demo, you tell us about your business and share your logo and photos in your Client Hub. We build your website and configure your system, walk you through it and make your changes, then launch. No in-person meeting required at any step."
           }
         },
         {
@@ -101,7 +117,7 @@
           "name": "How much does it cost in Edmonton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct founder-led support. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate Follow-Up, Lead Management & booking, Reputation Management, and Customer Retention. You always keep your domain and any content you provided."
+            "text": "Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct support from our team. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate Follow-Up, Lead Management & booking, Reputation Management, and Customer Retention. You always keep your domain and any content you provided."
           }
         }
       ]
@@ -297,6 +313,25 @@ section{position:relative;}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
 
+/* LOCAL (sourced, city-specific facts) */
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-bottom:clamp(30px,3.6vw,48px);}
+.glance li{background:var(--bg-3);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:16px;padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;}
+.glance b{font-family:var(--display);font-size:clamp(34px,3.4vw,46px);font-weight:800;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.glance span{font-size:15px;line-height:1.55;color:var(--mist);}
+.glance small,.local-card .local-src,.faq-src{font-size:12px;line-height:1.5;color:var(--mist-2);}
+.glance small{margin-top:auto;padding-top:4px;}
+.glance a,.local-src a,.faq-src a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.22);text-underline-offset:2px;transition:color .18s;}
+.glance a:hover,.local-src a:hover,.faq-src a:hover{color:var(--gold);}
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2vw,28px);}
+.local-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;}
+.local-card h3{font-family:var(--display);font-size:clamp(20px,1.7vw,24px);font-weight:700;color:var(--white);line-height:1.25;}
+.local-card p{font-size:15px;line-height:1.7;color:var(--mist);}
+.local-card .local-src{margin-top:auto;padding-top:4px;}
+.local-areas{margin-top:clamp(28px,3vw,40px);font-size:15.5px;line-height:1.7;color:var(--mist);max-width:80ch;}
+.local-areas b{color:var(--white);font-weight:700;}
+.faq-src{display:block;margin-top:10px;}
+@media(max-width:860px){.glance,.local-grid{grid-template-columns:1fr;}}
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR8009ZP6T"></script>
@@ -414,6 +449,9 @@ section{position:relative;}
 .mx-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);}
 .mx-title{margin-top:8px;font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#fff;}
 .mx-title span{color:var(--gold-2);}
+a.mx-title{display:block;width:fit-content;transition:opacity .2s;}
+a.mx-title:hover{opacity:.82;}
+a.mx-title:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
 .mx-rail p{max-width:30ch;margin-top:8px;font-size:13px;line-height:1.5;color:#d6d0c4;white-space:normal;}
 .nav-dd-menu a.mx-btn{display:inline-flex;margin-top:16px;margin-bottom:14px;padding:10px 20px;border-radius:8px;color:#181207;font-size:13.5px;}
 .nav-dd-menu a.mx-btn:hover{background:linear-gradient(180deg,#eabf6c,#cd9a42);color:#181207;}
@@ -530,6 +568,13 @@ section{position:relative;}
 .nav-login svg{width:20px;height:20px;}
 .nav-login:hover{color:var(--gold-2);}
 .nav-cta .btn-tc{padding:12px 26px;font-size:15.5px;}
+.nav-cta .nav-demo{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.nav-cta .nav-demo:hover{border-color:var(--gold);color:var(--gold-2);}
+.nav-cta .btn-tc{white-space:nowrap;}
+@media(max-width:1360px){.nav-cta{gap:10px;}.nav-cta .btn-tc{padding:11px 18px;font-size:14.5px;}}
+@media(max-width:1279px){.nav-cta{gap:8px;}.nav-cta .btn-tc{padding:10px 14px;font-size:13.5px;}.nav-login{font-size:0;gap:0;padding:8px;}.nav-login svg{width:21px;height:21px;}}
+.mnav-login{display:block;padding:10px 0;text-align:center;font-size:15px;font-weight:600;color:var(--mist);}
+.mnav-login:hover{color:var(--gold-2);}
 </style>
 </head>
 <body>
@@ -549,10 +594,10 @@ section{position:relative;}
                     <div class="mx-grid">
                         <aside class="mx-rail">
                             <span class="mx-eyebrow">The complete solution</span>
-                            <div class="mx-title">The <span>Peak System</span></div>
+                            <a href="../platform.html" class="mx-title">The <span>Peak System</span></a>
                             <p>Everything works together to attract more leads, build trust, and book more jobs.</p>
                             <span class="mx-soon"><span class="mx-badge">Coming soon</span>Revenue Insights</span>
-                            <a href="../how.html" class="btn btn-gold btn-tc mx-btn">See How It Works <span class="arr">&rarr;</span></a>
+                            <a href="../platform.html" class="btn btn-gold btn-tc mx-btn">Explore The Peak System <span class="arr">&rarr;</span></a>
                             <img src="../img/platform-preview.webp" alt="" class="mx-shot" width="560" height="304" loading="lazy" decoding="async">
                         </aside>
                         <div class="mx-cards">
@@ -578,7 +623,7 @@ section{position:relative;}
                             <ul class="ix-feats">
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Messages written for your trade</li>
                                 <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-6M12 20V9M19 20V4"/></svg></span>Built for 1&ndash;5 truck operations</li>
-                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Founder-led, based in Alberta</li>
+                                <li><span class="ix-fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Alberta-based, serving Canada &amp; the US</li>
                             </ul>
                         </aside>
                         <div class="ix-main">
@@ -639,8 +684,9 @@ section{position:relative;}
             </div>
         </nav>
         <div class="nav-cta">
-            <a href="https://app.northernpeaksystems.ca/" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
-            <a href="../book.html" class="btn btn-gold btn-tc">Book a Demo <span class="arr">&rarr;</span></a>
+            <a href="../client.html" class="nav-login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Client Login</a>
+            <a href="../book.html" class="btn btn-line btn-tc nav-demo">Book a Demo</a>
+            <a href="../pricing.html#plans" class="btn btn-gold btn-tc nav-start">Get Started <span class="arr">&rarr;</span></a>
             <button type="button" class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
             </button>
@@ -655,7 +701,7 @@ section{position:relative;}
         </button>
     </div>
     <nav class="mnav-links" aria-label="Mobile">
-        <a href="../index.html#features">Platform</a>
+        <a href="../platform.html">Platform</a>
         <a href="../index.html#trades">Solutions</a>
         <a href="../pricing.html">Pricing</a>
         <a href="../how.html">How it works</a>
@@ -664,8 +710,9 @@ section{position:relative;}
         <a href="../contact.html">Contact</a>
     </nav>
     <div class="mnav-foot">
-        <a href="https://app.northernpeaksystems.ca/" class="btn btn-line">Client Login</a>
-        <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">&rarr;</span></a>
+        <a href="../pricing.html#plans" class="btn btn-gold">Get Started <span class="arr">&rarr;</span></a>
+        <a href="../book.html" class="btn btn-line">Book a Demo</a>
+        <a href="../client.html" class="mnav-login">Client Login</a>
     </div>
 </div>
 
@@ -679,25 +726,48 @@ section{position:relative;}
         <span class="eyebrow">Edmonton, Alberta &middot; Now accepting new projects</span>
         <h1>Edmonton web design that <em>books more jobs.</em></h1>
         <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for Edmonton home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
-        <p class="hhero-lede">Edmonton is home base &mdash; Northern Peak Systems is run from here. We build websites, and the follow-up system behind them, for Edmonton plumbers, electricians, HVAC companies, roofers, landscapers, and contractors: the owner-operators and small crews who can't afford to let a call go to voicemail. Your website is built free, and the same founder-led team that sets everything up is the one that answers when something needs to change.</p>
+        <p class="hhero-lede">Edmonton is home base &mdash; Northern Peak Systems is based here. We build websites, and the follow-up system behind them, for Edmonton plumbers, electricians, HVAC companies, roofers, landscapers, and contractors: the owner-operators and small crews who can't afford to let a call go to voicemail. Your website is built free, and the same team that sets everything up is the one that answers when something needs to change.</p>
         <div class="hhero-actions">
-            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-            <a href="../how.html" class="btn btn-ghost">See how it works</a>
+            <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-hero">Get Started <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-ghost" data-cta-loc="city-hero">Book a Demo</a>
         </div>
     </div>
 </section>
 
-<!-- AREAS -->
+<!-- LOCAL: sourced facts about this city (LOCAL data) -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">Areas served</span>
-        <h2 class="section-h">Serving home service businesses across <em>Edmonton.</em></h2>
-        <p class="section-body">
-            Northern Peak Systems works with home service businesses across downtown, Whyte Avenue, the west end, Mill Woods, and the surrounding capital region &mdash; plumbers, electricians, HVAC companies, roofers, landscapers, and general contractors, from solo operators to growing crews. They need a website that looks as good as their work and a way to stop losing jobs to missed calls and forgotten estimates, without paying what downtown agencies charge.
-        </p>
-        <p class="section-body">
-            The process is the same whether you're based in Edmonton or in a community an hour's drive away. It starts with a free 15-minute demo, we build a free custom preview of your website and system before you decide, and if you go ahead you're live in 7&ndash;10 days &mdash; hosted, connected, and supported by the same founder-led team that built it. No account managers, no offshore dev team, no hidden hand-offs.
-        </p>
+        <span class="eyebrow">Edmonton at a glance</span>
+        <h2 class="section-h">Floods, deep freezes and a building boom. <em>The phone rings through all of it.</em></h2>
+        <p class="section-lede">Edmonton is a big, growing city with a lot of older houses, and its weather sends homeowners to the phone in waves. Here's what that looks like for the trades who work here.</p>
+        <ul class="glance">
+            <li><b>1,010,899</b><span>people in Edmonton at the 2021 Census, up 8.3% from 2016</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811061&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Edmonton</a></small></li>
+            <li><b>40.5%</b><span>of occupied homes were built in 1980 or earlier</span><small>Source: <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&amp;DGUIDlist=2021A00054811061&amp;GENDERlist=1&amp;STATISTIClist=1&amp;HEADERlist=0" target="_blank" rel="noopener">Statistics Canada, 2021 Census Profile: Edmonton</a></small></li>
+            <li><b>15,902</b><span>housing starts in the city in 2025, up from 13,484 in 2024</span><small>Source: <a href="https://www03.cmhc-schl.gc.ca/hmip-pimh/en/TableMapChart/Table?TableId=1.1.1.9&amp;GeographyId=0340&amp;GeographyTypeId=3&amp;DisplayAs=Table&amp;GeograghyName=Edmonton" target="_blank" rel="noopener">CMHC Housing Market Information Portal</a></small></li>
+        </ul>
+        <div class="local-grid">
+            <article class="local-card">
+                <h3>Storm season fills basements</h3>
+                <p>Record rain in June and July 2026 overwhelmed Edmonton's sewers again and again. The Insurance Bureau of Canada put the May 31&ndash;June 2 flooding alone at more than $80 million in insured losses in the Edmonton area. When basements flood, homeowners call down the list of plumbers and restoration crews, and every call that rings out goes to the next name.</p>
+                <p class="local-src">Source: <a href="https://www.ibc.ca/news-insights/news/summer-storms-across-alberta-saskatchewan-and-manitoba-cause-more-than-1-8-billion-in-insured-losses" target="_blank" rel="noopener">Insurance Bureau of Canada, Sep 22, 2026</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Deep freezes mean after-hours calls</h3>
+                <p>In January 2024, Edmonton spent four straight days between -40 and -45°C. The Insurance Bureau of Canada says that cold snap caused more than $180 million in insured damage across Western Canada, much of it from frozen and burst pipes. No-heat and burst-pipe calls don't wait for business hours; a text back within seconds lets the homeowner know you've seen it.</p>
+                <p class="local-src">Source: <a href="https://www.ibc.ca/news-insights/news/western-canada-deep-freeze-causes-over-180-million-in-insured-damage" target="_blank" rel="noopener">Insurance Bureau of Canada, Mar 11, 2024</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Rebates that need a plumber</h3>
+                <p>EPCOR offers up to $800 toward a backwater valve for eligible older homes while funding lasts, and the valve must be installed by a professional plumber whose invoice shows a City of Edmonton business licence or GST number. EPCOR's RainWise pilot adds rebates of up to $2,000 for downspout disconnections, rain barrels and rain gardens. A plain-language page about each program helps homeowners find you.</p>
+                <p class="local-src">Sources: <a href="https://www.epcor.com/ca/en/ab/edmonton/safety/home/flood-prevention-at-home/backwater-valve-subsidy.html" target="_blank" rel="noopener">EPCOR, Backwater Valve Subsidy</a> &middot; <a href="https://www.epcor.com/ca/en/ab/edmonton/conservation/incentives/rainwise-stormwater-rebate-program.html" target="_blank" rel="noopener">EPCOR, RainWise Rebate Program</a></p>
+            </article>
+            <article class="local-card">
+                <h3>Permits and licences</h3>
+                <p>The City requires a gas permit to install or alter furnaces and water heaters and says contractors must be licensed with the City; businesses based outside Edmonton need an out-of-town business licence. Basement development and flood repairs need permits, while replacing shingles or same-size windows doesn't. If you're licensed and pull permits, say so plainly on your website.</p>
+                <p class="local-src">Sources: <a href="https://www.edmonton.ca/residential_neighbourhoods/gas-permit" target="_blank" rel="noopener">City of Edmonton, Gas Permits</a> &middot; <a href="https://www.edmonton.ca/business_economy/licences_permits/apply-for-a-business-licence" target="_blank" rel="noopener">City of Edmonton, Business Licences</a> &middot; <a href="https://www.edmonton.ca/residential_neighbourhoods/renovations-basement-development" target="_blank" rel="noopener">City of Edmonton, Renovations and Basement Development</a></p>
+            </article>
+        </div>
+        <p class="local-areas"><b>Where we work in Edmonton:</b> the mature neighbourhoods around downtown, newer districts like West Henday, Ellerslie and Horse Hill, and the rest of the capital region.</p>
     </div>
 </section>
 
@@ -718,7 +788,7 @@ section{position:relative;}
             </li>
             <li>
                 <h3><a href="../features/website.html">Websites &amp; SEO</a></h3>
-                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so Edmonton customers find you on Google, and direct support from the founder. Included in every plan.</p>
+                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so Edmonton customers find you on Google, and direct support from our team. Included in every plan.</p>
             </li>
             <li>
                 <h3><a href="../features/crm-and-booking.html">Lead Management</a></h3>
@@ -736,52 +806,38 @@ section{position:relative;}
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Why custom</span>
-        <h2 class="section-h">Why Edmonton businesses choose custom over <em>templates.</em></h2>
-        <p class="section-body">
-            A template is faster and cheaper up front. It's also why so many small-business websites in Edmonton look alike: the same stock photos, the same layouts, the same Wix or Squarespace defaults. When a homeowner is comparing three contractors, the one that looks established and makes it easy to call, text, or book has the edge.
-        </p>
-        <p class="section-body">
-            A custom build pays back in three places: customers trust it more, it loads fast and structures content clearly (which is what search engines reward), and you're not locked into a platform's roadmap. It also lets us connect missed-call text-back, estimate follow-up, and booking directly to the site instead of bolting on plugins. And you always keep your domain and the content you provided.
-        </p>
-    </div>
-</section>
-
 <!-- PROCESS -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">Process</span>
         <h2 class="section-h">The Edmonton build <em>process.</em></h2>
         <ol class="process-list">
             <li>
                 <span class="process-n">01</span>
-                <h3>Book a Demo</h3>
-                <p>A free 15-minute demo. We learn about your Edmonton business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; and tell you straight which plan fits. Then we build a free custom preview of your website and system before you decide. No pressure, no obligation.</p>
+                <h3>Subscribe</h3>
+                <p>Subscribe online in minutes, or after a free 15-minute demo. On the demo we learn about your Edmonton business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; show you the system, answer your questions and recommend the right plan. No pressure, no obligation.</p>
             </li>
             <li>
                 <span class="process-n">02</span>
-                <h3>We build everything</h3>
-                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Live in 7&ndash;10 days.</p>
+                <h3>Set up</h3>
+                <p>Tell us about your business and share your logo and photos in your Client Hub. Everything happens online or by phone &mdash; no in-person meeting required.</p>
             </li>
             <li>
                 <span class="process-n">03</span>
-                <h3>Launch &amp; grow</h3>
-                <p>The site goes live on your domain, hosted with SSL and backups, and leads start landing on your phone. We walk you through everything on a short launch call.</p>
+                <h3>Build &amp; review</h3>
+                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Then we walk you through it and make your changes.</p>
             </li>
             <li>
                 <span class="process-n">04</span>
-                <h3>Improve &amp; support</h3>
-                <p>You message us when something needs to change: a new hire, a new service, a new photo, new copy. Unlimited edits are included in the monthly fee. Every month we monitor, analyze, and optimize so the system keeps working as your business grows.</p>
+                <h3>Launch</h3>
+                <p>Your site and system go live on your domain, hosted with SSL and backups, and leads start landing on your phone. Most businesses are live within 7&ndash;10 days of completing setup. After launch, unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
             </li>
         </ol>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Pricing</span>
         <h2 class="section-h">Edmonton pricing, <em>simplified.</em></h2>
@@ -790,7 +846,7 @@ section{position:relative;}
                 <p class="pricing-card-name">Base System</p>
                 <p class="pricing-card-price"><strong>$97</strong>/mo</p>
                 <p class="pricing-card-sub">website built free</p>
-                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct founder-led support.</p>
+                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct support from our team.</p>
             </div>
             <div class="pricing-card">
                 <p class="pricing-card-name">The Peak System</p>
@@ -805,18 +861,26 @@ section{position:relative;}
 </section>
 
 <!-- FAQ -->
-<section class="section section-dark-2">
+<section class="section section-dark">
     <div class="wrap">
         <span class="eyebrow">FAQ</span>
         <h2 class="section-h">Edmonton <em>questions.</em></h2>
         <dl class="faq-list">
             <div class="faq-item">
+                <dt>Do contractors need a City of Edmonton business licence?</dt>
+                <dd>For gas work, yes: the City's gas permit page says contractors must be licensed with the City of Edmonton. Businesses based outside Edmonton apply for an out-of-town (non-resident) business licence, which carries an extra fee. Check the City's business licence page for the rules for your trade.<span class="faq-src">Sources: <a href="https://www.edmonton.ca/residential_neighbourhoods/gas-permit" target="_blank" rel="noopener">City of Edmonton, Gas Permits</a> &middot; <a href="https://www.edmonton.ca/business_economy/licences_permits/apply-for-a-business-licence" target="_blank" rel="noopener">City of Edmonton, Business Licences</a></span></dd>
+            </div>
+            <div class="faq-item">
+                <dt>Can my website explain EPCOR's backwater valve subsidy?</dt>
+                <dd>Yes. If you install backwater valves or do other rebate-eligible work, we can add a page that explains the program in plain language, links to EPCOR's official details, and makes it easy to book you. Unlimited edits mean we can update it whenever the program changes.<span class="faq-src">Source: <a href="https://www.epcor.com/ca/en/ab/edmonton/safety/home/flood-prevention-at-home/backwater-valve-subsidy.html" target="_blank" rel="noopener">EPCOR, Backwater Valve Subsidy</a></span></dd>
+            </div>
+            <div class="faq-item">
                 <dt>Do you only work with businesses in Edmonton?</dt>
-                <dd>No. Edmonton is home base, but we work with home service businesses across Alberta, and across Canada and the US. Whether you're in Edmonton proper or a nearby community, the process is the same: a free 15-minute demo, a free custom preview of your website and system before you decide, and a build that's live in 7&ndash;10 days. Nothing about the work depends on being in the same room.</dd>
+                <dd>No. Edmonton is home base, but we work with home service businesses across Alberta, and across Canada and the US. Whether you're in Edmonton proper or a nearby community, the process is the same: subscribe online or after a free 15-minute demo, tell us about your business in your Client Hub, and most businesses are live within 7&ndash;10 days of completing setup. Nothing about the work depends on being in the same room.</dd>
             </div>
             <div class="faq-item">
                 <dt>How long does a build take in Edmonton?</dt>
-                <dd>Most Edmonton businesses are live in 7&ndash;10 days. We learn your business on a free 15-minute demo, build a free custom preview, and once you decide to go ahead, set up the system and walk you through everything on a launch call. No in-person meeting required at any step.</dd>
+                <dd>Most businesses are live within 7&ndash;10 days of completing setup. Once you subscribe, online or after a free 15-minute demo, you tell us about your business and share your logo and photos in your Client Hub. We build your website and configure your system, walk you through it and make your changes, then launch. No in-person meeting required at any step.</dd>
             </div>
             <div class="faq-item">
                 <dt>What kinds of Edmonton businesses do you build for?</dt>
@@ -824,14 +888,14 @@ section{position:relative;}
             </div>
             <div class="faq-item">
                 <dt>How much does it cost in Edmonton?</dt>
-                <dd>Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct founder-led support. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention. You always keep your domain and any content you provided.</dd>
+                <dd>Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct support from our team. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention. You always keep your domain and any content you provided.</dd>
             </div>
         </dl>
     </div>
 </section>
 
 <!-- NEARBY -->
-<section class="section section-dark">
+<section class="section section-dark-2">
     <div class="wrap">
         <span class="eyebrow">Also serving</span>
         <h2 class="section-h">Web design near <em>Edmonton.</em></h2>
@@ -852,10 +916,10 @@ section{position:relative;}
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
         <h2>Your Edmonton website, <em>built to match your work.</em></h2>
-        <p>Book a free 15-minute demo, and we build a free custom preview of your website and system before you decide &mdash; no cost, no obligation.</p>
+        <p>Subscribe online in minutes and we handle the setup, or book a free 15-minute demo and we&rsquo;ll show you the system, answer your questions and recommend the right plan.</p>
         <div class="hcta-actions">
-            <a href="../book.html" class="btn btn-gold">Book a Demo <span class="arr">→</span></a>
-            <a href="../pricing.html" class="btn btn-dark">See pricing</a>
+            <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-cta">Get Started <span class="arr">→</span></a>
+            <a href="../book.html" class="btn btn-dark" data-cta-loc="city-cta">Book a Free Demo</a>
         </div>
     </div>
 </section>
@@ -872,6 +936,7 @@ section{position:relative;}
             </div>
             <div class="foot-col">
                 <h4>Platform</h4>
+                <a href="../platform.html">The Peak System</a>
                 <a href="../features/missed-call-text-back.html">Missed Call Recovery</a>
                 <a href="../features/lead-follow-up.html">Estimate Follow-Up</a>
                 <a href="../features/website.html">Websites &amp; SEO</a>
@@ -891,13 +956,14 @@ section{position:relative;}
                 <h4>Support</h4>
                 <a href="../faq.html">FAQ</a>
                 <a href="../locations.html">Service areas</a>
+                <a href="tel:+15872005649">Call (587) 200-5649</a>
                 <a href="mailto:matt@northernpeaksystems.ca">Email us</a>
-                <a href="https://app.northernpeaksystems.ca/">Client Login</a>
+                <a href="../client.html">Client Login</a>
                 <a href="../book.html">Book a Demo</a>
             </div>
         </div>
         <div class="foot-bottom">
-            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Founder-led in Edmonton, Alberta</span>
+            <span>&copy; <span id="yr">2026</span> Northern Peak Systems &middot; Edmonton, Alberta</span>
             <div class="foot-social">
                 <a href="https://www.linkedin.com/in/matthew-mcguire-44666b389" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3v11h3v-11zM5 7a1.7 1.7 0 1 0 0-3.4A1.7 1.7 0 0 0 5 7zm15.5 12.5v-6c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-3 1.6V8.5h-3v11h3v-6.1c0-1.4.9-2.1 1.9-2.1s1.9.7 1.9 2.1v6.1h3z"/></svg></a>
                 <a href="../privacy.html" aria-label="Privacy" style="width:auto;padding:0 14px;font-size:13px;">Privacy</a>
@@ -905,6 +971,28 @@ section{position:relative;}
             </div>
         </div>
     </div>
+<script>
+/* Conversion tracking (synced into every page with the footer): Get Started, checkout and Book a Demo clicks
+   go to GA4 + Clarity, and first-touch campaign tags (utm_*, ref, gclid) are carried into checkout links so
+   Stripe and the CRM know where a customer came from. No personal or payment data is sent. */
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','ref','gclid','fbclid'],A='nps_attr';
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  try{var q=new URLSearchParams(location.search),a={},any=false;KEYS.forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,100);any=true;}});
+    if(any&&!store(A)){a.landing=location.pathname;store(A,JSON.stringify(a));}}catch(e){}
+  function ev(n,p){try{if(window.gtag)gtag('event',n,p);if(window.clarity)clarity('event',n);}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'',where=a.getAttribute('data-cta-loc')||((a.closest('section[id],header,footer,.mnav')||{}).id||(a.closest('header')?'nav':location.pathname));
+    var m=h.match(/\/(?:api\/checkout\?plan=|start\/)(base|peak)/);
+    if(m){ev('get_started_click',{cta_location:where,plan:m[1]});ev('begin_checkout',{plan:m[1],cta_location:where,currency:'CAD',value:m[1]==='peak'?297:97});
+      try{var at=JSON.parse(store(A)||'null');if(at){var u=new URL(a.href,location.href);KEYS.forEach(function(k){if(at[k]&&!u.searchParams.has(k))u.searchParams.set(k,at[k]);});a.href=u.href;}}catch(x){}
+      return;}
+    if(/pricing(\.html)?#plans/.test(h)&&/get started/i.test(a.textContent)){ev('get_started_click',{cta_location:where});return;}
+    if(/(^|\/)book(\.html)?([?#]|$)/.test(h))ev('book_demo_click',{cta_location:where});
+  },true);
+})();
+</script>
 </footer>
 
 <script>
