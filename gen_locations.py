@@ -12,7 +12,7 @@ and was scoped down on 2026-05-06.)
 
 Run from the my-site directory:  python gen_locations.py
 Outputs:
-  - locations/<slug>.html   (8 pages, CRLF line endings, as stored in git)
+  - locations/<slug>.html   (10 pages, CRLF line endings, as stored in git)
   - locations.html          (index page grouping cities by province, CRLF)
   - sitemap.xml             (every indexable main-site page, LF; see build_sitemap)
 
@@ -64,8 +64,12 @@ CITIES: list[tuple[str, str, list[tuple[str, str, str]]]] = [
          "St. Albert homeowners expect a small, owner-run crew to look as professional online as a big company &mdash; and to reply just as fast. We build the website and the follow-up behind it for St. Albert contractors, plumbers, electricians, and landscapers who are too small for a big-city agency but too busy to answer every call. That's the gap Northern Peak Systems is built for."),
         ("sherwood-park", "Sherwood Park",
          "Sherwood Park is the urban heart of Strathcona County, and the trades working here serve everything from homes in town to rural properties and the County's industrial areas. They all need the same thing: a credible website, a system that texts back every missed call, and local SEO &mdash; without an enterprise budget. Your website is built free, with plans from $97/month and no contracts."),
+        ("fort-saskatchewan", "Fort Saskatchewan",
+         "Fort Saskatchewan sits on the south bank of the North Saskatchewan River, about 25 km northeast of Edmonton, in the heart of Alberta's Industrial Heartland. We build websites with missed-call text-back and estimate follow-up for Fort Saskatchewan plumbers, electricians, HVAC companies, roofers, landscapers and contractors, so every homeowner who calls gets a reply even when you're on a job. Your website is built free, with plans from $97/month and no contracts."),
         ("leduc", "Leduc",
          "Leduc businesses serve a busy corridor south of Edmonton: Edmonton International Airport, the Nisku industrial area, and nearby Beaumont. Customers might find you on a phone in a parking lot or at a desk in an office, so we build fast, mobile-first websites with missed-call text-back and estimate follow-up wired in."),
+        ("beaumont", "Beaumont",
+         "Beaumont sits just minutes south of Edmonton, close to the QE2 Highway and Edmonton International Airport, and the City calls it the third-fastest-growing city in Alberta. We build websites with missed-call text-back and estimate follow-up for the plumbers, electricians, HVAC companies, roofers, landscapers and contractors keeping up with all that growth. Your website is built free, with plans from $97/month and no contracts."),
         ("spruce-grove", "Spruce Grove",
          "For trades serving Spruce Grove, Stony Plain, and rural Parkland County, the work is spread out and the phone rings while you're on a job. We build for home service businesses growing in that market &mdash; contractors adding a second crew, landscapers taking on staff &mdash; with a website and follow-up system that grows with you, from $97/month with no contract."),
         ("airdrie", "Airdrie",
@@ -83,8 +87,10 @@ EXTRAS: dict[str, dict] = {
     "edmonton":      {"areas": "the mature neighbourhoods around downtown, newer districts like West Henday, Ellerslie and Horse Hill, and the rest of the capital region", "nearby": ["st-albert", "sherwood-park", "leduc"]},
     "calgary":       {"areas": "downtown and the Beltline, established communities like Kensington and Mission, and growth areas like Nolan Hill, Saddle Ridge, Mahogany, Seton and Walden", "nearby": ["airdrie", "red-deer", "edmonton"]},
     "st-albert":     {"areas": "Mission, Braeside along the Sturgeon River, Akinsdale, Erin Ridge, Jensen Lakes, downtown, and the Sturgeon County edge", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
-    "sherwood-park": {"areas": "Summerwood, Emerald Hills, Salisbury Village, Cambrian Crossing, Lakeland Ridge, Heritage Hills, Glen Allan and Sherwood Heights, plus rural hamlets like Ardrossan, Josephburg and South Cooking Lake", "nearby": ["edmonton", "st-albert", "leduc"]},
-    "leduc":         {"areas": "downtown Leduc, Woodbend, West Creek Estates, Black Stone, Meadowview Park and Southfork, plus Beaumont, Nisku and the airport corridor", "nearby": ["edmonton", "sherwood-park", "spruce-grove"]},
+    "sherwood-park": {"areas": "Summerwood, Emerald Hills, Salisbury Village, Cambrian Crossing, Lakeland Ridge, Heritage Hills, Glen Allan and Sherwood Heights, plus rural hamlets like Ardrossan, Josephburg and South Cooking Lake", "nearby": ["edmonton", "fort-saskatchewan", "st-albert"]},
+    "fort-saskatchewan": {"areas": "Downtown, established neighbourhoods like Pineview and Sherridon, Westpark and Southfort, newer areas like Sienna and SouthPointe, Clover Park, and the industrial lands north of Highway 15", "nearby": ["sherwood-park", "edmonton", "st-albert"]},
+    "leduc":         {"areas": "downtown Leduc, Woodbend, West Creek Estates, Black Stone, Meadowview Park and Southfork, plus Beaumont, Nisku and the airport corridor", "nearby": ["edmonton", "beaumont", "sherwood-park"]},
+    "beaumont":      {"areas": "Centre-Ville, Coloniale Estates, Montalet, Beaumont Lakes, Triomphe Estates, Ruisseau and Place Chaleureuse, plus subdivisions still building out like Elan, Dansereau Meadows, Forest Heights and Le Reve", "nearby": ["leduc", "edmonton", "sherwood-park"]},
     "spruce-grove":  {"areas": "Spruce Grove, Stony Plain, rural Parkland County, and the Acheson area along Highway 16", "nearby": ["edmonton", "st-albert", "leduc"]},
     "airdrie":       {"areas": "Reunion, Sagewood, Kings Heights, Coopers Crossing, Bayside, Ravenswood, Windsong and Old Town, new communities like Southwinds, and nearby Crossfield, Carstairs and Irricana", "nearby": ["calgary", "red-deer", "edmonton"]},
     "red-deer":      {"areas": "downtown, Timberlands North and the city's newest neighbourhoods, plus Sylvan Lake, Lacombe, Blackfalds, Penhold, Innisfail and Olds", "nearby": ["calgary", "edmonton", "airdrie"]},
@@ -439,6 +445,102 @@ LOCAL: dict[str, dict] = {
             "rain": ("City of Spruce Grove, Oct 13, 2026", "https://www.sprucegrove.org/government/news/historic-rainfall-impacts-boundary-road-completion-revised-to-august-2027/"),
             "rain_jun": ("City of Spruce Grove, Jun 21, 2026", "https://www.sprucegrove.org/government/news/city-crews-responding-to-rainfall-event/"),
             "hail19": ("Insurance Bureau of Canada via Insurance-Canada.ca, Aug 2019", "https://insurance-canada.ca/2019/08/30/ibc-edmonton-hailstorm-millions-insured-damages/"),
+        },
+    },
+    "beaumont": {
+        "h": "Young houses, a building boom, <em>and a wet June that maxed out the sewers.</em>",
+        "lede": "Beaumont sits just minutes south of Edmonton, near the QE2 Highway and Edmonton International Airport, and it's one of Alberta's four officially bilingual municipalities. More than half its homes were built in 2006 or later, 2025 brought 587 housing starts, and heavy rain in June 2026 pushed its wastewater system past capacity.",
+        "glance": [
+            ("26,305", "people in Beaumont in 2025 by the Province's estimate, up 6.32% in one year", ["dash"]),
+            ("587", "housing starts in 2025, up from 168 in 2020", ["profile"]),
+            ("56.5%", "of occupied homes were built in 2006 or later (2021 Census)", ["census"]),  # 3,930 of 6,950 (calc)
+        ],
+        "cards": [
+            ("June 2026: sewers past capacity",
+             "On June 21, 2026, heavy rain pushed Beaumont's wastewater system past capacity, with localized flooding and sewer backups reported. The City activated its Emergency Operations Centre and sent an Alberta Emergency Alert asking residents to cut all non-essential water use, even flushing toilets, until the alert lifted on June 25. The Insurance Bureau of Canada put the June 20&ndash;21 storm at more than $160 million in insured losses across central Alberta. On days like that, a text back in seconds keeps the homeowner talking to you.",
+             ["aea", "ban", "relax", "ibc26"]),
+            ("A trades licence, priced by the quarter",
+             "Beaumont requires a business licence to do business in the city. Trades with no storefront that aren't the general contractor, like plumbers, painters and electricians, have their own category: the 2026 fee schedule lists $250 for a non-resident trade applying January to March, dropping each quarter to $62.50 from October 1, against $150 for a Beaumont-based trade. A general contractor's licence ($500 for a full year) includes up to five subcontractors it hires directly.",
+             ["bizlic", "fees"]),
+            ("Permits for the everyday jobs",
+             "In Beaumont, whoever does the work takes out the permit, so contractors apply for their own electrical, plumbing and gas permits through The Inspections Group, which the City contracts for those inspections. Decks more than 0.6 m above grade need a development and a building permit ($162 in 2026), basement development needs a building permit, and replacing windows, shingles, siding or stucco doesn't need a development or building permit.",
+             ["guide", "permits"]),
+            ("A young city still building",
+             "More than half of Beaumont's homes were built in 2006 or later, about 87% of households own their home, and 4 in 5 homes are single-detached houses. From January to August 2026, the City's residential building permits covered 644 new housing units, up from 500 over the same months of 2025, and its July 2026 lot report still showed 310 lots left in subdivisions like Elan, Dansereau and Forest Heights.",
+             ["census", "permits_rpt", "lots"]),  # 3,930 of 6,950 built 2006+; 6,060 of 6,950 owners; 5,560 of 6,950 single-detached (calc)
+        ],
+        "faqs": [
+            ("Do I need a Beaumont business licence if I'm based in Edmonton or Leduc?",
+             "Yes. The City of Beaumont says you must hold a valid business licence to do business in Beaumont, and its bylaw says businesses not located in the city pay a non-resident fee. The 2026 fee schedule lists a non-resident trades licence at $250 for January to March, $187.50 from April 1, $125 from July 1 and $62.50 from October 1. Licences expire December 31 and must be renewed by January 31.",
+             ["bizlic", "bylaw", "fees"]),
+            ("Who takes out the permit for plumbing, gas or electrical work in Beaumont?",
+             "Whoever does the work. The City's 2026 permit guide says that if a homeowner hires a contractor for electrical, plumbing or gas work, the contractor should apply for the permit, which makes them responsible for making sure the work is done to code. Those permits go through The Inspections Group, which the City contracts for electrical, plumbing and gas permits and inspections.",
+             ["guide", "permits"]),
+        ],
+        "src": {
+            "census": ("Statistics Canada, 2021 Census Profile: Beaumont", _census("2021A00054811013")),
+            "dash": ("Government of Alberta, Regional Dashboard: Beaumont", "https://regionaldashboard.alberta.ca/region/beaumont/population/"),
+            "profile": ("City of Beaumont, Community Economic Profile", "https://www.beaumont.ab.ca/business-economy/economic-development/community-profile/"),
+            "permits_rpt": ("City of Beaumont, Monthly Building Permits, Aug 2026", "https://www.beaumont.ab.ca/wp-content/uploads/2024/12/Permit-Report-2026-08.26-External.pdf"),
+            "lots": ("City of Beaumont, Lot Availability Report, July 2026", "https://www.beaumont.ab.ca/wp-content/uploads/2024/12/July-2026-Lot-Availability-Report.pdf"),
+            "aea": ("Alberta Emergency Alert, Jun 21, 2026", "https://www.alberta.ca/aea/cap/2026/06/21/2026-06-21T12_36_11-06_00=CityofBeaumont=F8CB5B58-C658-47FC-BACA-CE11D818A08A.htm"),
+            "ban": ("City of Beaumont, non-essential water use notice", "https://www.beaumont.ab.ca/public-notice/water-use-restrictions/"),
+            "relax": ("City of Beaumont, Jun 25, 2026", "https://www.beaumont.ab.ca/news/beaumont-relaxing-water-restrictions/"),
+            "ibc26": ("Insurance Bureau of Canada, Sep 22, 2026", IBC_SUMMER_2026),
+            "bizlic": ("City of Beaumont, Business Licences", "https://www.beaumont.ab.ca/business-economy/business-licences/"),
+            "bylaw": ("City of Beaumont, Business Licence Bylaw 1010-22", "https://www.beaumont.ab.ca/wp-content/uploads/2024/05/Business-Licence-Bylaw-1010-22.pdf"),
+            "fees": ("City of Beaumont, 2026 Fees and Charges Bylaw", "https://www.beaumont.ab.ca/wp-content/uploads/2024/12/Bylaw-1093-25-2026-Fees-and-Charges-Office-Consolidation-1.pdf"),
+            "guide": ("City of Beaumont, 2026 Permits and Fees", "https://www.beaumont.ab.ca/wp-content/uploads/2024/12/2026_Residential_Permits_and_Fees-10-19.pdf"),
+            "permits": ("City of Beaumont, Home Improvement Permits", "https://www.beaumont.ab.ca/home-neighbourhood/home-improvement-permits/"),
+        },
+    },
+    "fort-saskatchewan": {
+        "h": "A trades town in the Heartland, <em>and a licence for every contractor.</em>",
+        "lede": "Fort Saskatchewan sits on the south bank of the North Saskatchewan River, about 25 km northeast of Edmonton, in the heart of Alberta's Industrial Heartland. It's a city of homeowners, with 1970s streets and brand-new ones, and it has its own licence rules for contractors coming in from Edmonton and Sherwood Park.",
+        "glance": [
+            ("30,575", "people in Fort Saskatchewan in 2025 by the Province's estimate, up 11.0% in five years", ["dash"]),
+            ("$306M", "in building permits issued in 2025, up 44% from 2024", ["permits"]),
+            ("75.7%", "of households own their home (2021 Census)", ["census"]),  # 7,885 of 10,420 (calc)
+        ],
+        "cards": [
+            ("A trades town in the Heartland",
+             "Fort Saskatchewan is one of the five municipal partners behind Alberta's Industrial Heartland Association, and the City places itself in the heart of the Heartland, which it calls Canada's largest hydrocarbon processing region. At the 2021 Census, more residents in the labour force worked in construction than in any other industry, and about 1 in 4 worked in trades, transport or equipment operator jobs. With that many trades in town, homeowners have options, and a text back in seconds keeps you in the running.",
+             ["aiha", "industry", "census"]),  # construction 1,955 of 14,455; trades/transport/equipment operators 3,725 of 14,455 (calc)
+            ("June 2026: a month of rain in one weekend",
+             "Rainfall reports compiled by Environment Canada for the weekend of June 20&ndash;21, 2026 listed 106 mm in Fort Saskatchewan, more than the roughly 80 mm the city's weather station averages for all of June (1981&ndash;2010 normals). The Insurance Bureau of Canada put that storm at more than $160 million in insured losses across central Alberta, with sewers overwhelmed and basements flooded in Edmonton and the surrounding area. The City says backwater valves weren't required in homes built before 1989, and installing one needs a plumbing permit.",
+             ["rain", "climate", "ibc26", "sewer"]),
+            ("1970s streets and brand-new ones",
+             "The City's Municipal Development Plan says most of Pineview was built in the 1970s, most of Westpark after 2000, and Southfort began in the early 2000s when housing crossed Highway 21. At the 2021 Census, 31% of occupied homes were built in 1980 or earlier and 47% in 2006 or later. That's two very different kinds of jobs, and your website can speak to both.",
+             ["mdp", "census"]),  # 3,250 of 10,420 built 1980 or earlier; 4,925 of 10,420 built 2006 or later (calc)
+            ("Your Edmonton licence doesn't count here",
+             "Anyone doing business in Fort Saskatchewan needs a City business licence, including contractors based outside the city, and a licence from another municipality doesn't count. Under the 2026 fee schedule the non-resident licence is $375 a year, against $120 for a business based in the city, and every licence expires December 31. Decks 2 feet or higher, or covered, need a development permit and a building permit, and every basement development needs a building permit.",
+             ["faq", "bizlic", "fees", "deck", "basement"]),
+        ],
+        "faqs": [
+            ("Do I need a Fort Saskatchewan business licence if I'm based in Edmonton or Sherwood Park?",
+             "Yes. The City of Fort Saskatchewan says a non-resident business licence is required for any business that works in the city but is based outside city limits, and a licence from another municipality doesn't count. The 2026 non-resident licence is $375 a year. New licences are prorated, so one issued from October 1 to December 31 costs 25% of the fee. For work lasting less than 28 consecutive days, the City offers a daily temporary licence. Fines for working without a licence start at $300.",
+             ["faq", "fees", "bizlic"]),
+            ("Who can pull an electrical, plumbing or gas permit in Fort Saskatchewan?",
+             "The City says you need a permit before you add, move or modify any electrical, plumbing or gas system, even in a single-family home. A homeowner can apply for most improvements to a single-family home they live in, if they're doing the work themselves. For all other projects, including duplexes, multi-unit homes and commercial properties, a licensed and certified contractor has to apply. Installing a backwater valve needs a plumbing permit.",
+             ["epg", "sewer"]),
+        ],
+        "src": {
+            "census": ("Statistics Canada, 2021 Census Profile: Fort Saskatchewan", _census("2021A00054811056")),
+            "dash": ("Government of Alberta, Regional Dashboard: Fort Saskatchewan", "https://regionaldashboard.alberta.ca/region/fort-saskatchewan/population/"),
+            "permits": ("Government of Alberta, Regional Dashboard: Value of Building Permits", "https://regionaldashboard.alberta.ca/region/fort-saskatchewan/value-of-building-permits/"),
+            "aiha": ("Alberta's Industrial Heartland Association, About", "https://industrialheartland.com/about/"),
+            "industry": ("City of Fort Saskatchewan, Industries, Investment and Support", "https://www.fortsask.ca/business-development/industries-investment-and-support/"),
+            "mdp": ("City of Fort Saskatchewan, Municipal Development Plan", "https://media-001-ca.cdn.govstack.com/fortsask-007-ca/media/trghsqfb/our-fort-our-future-mdp-municipal-development-plan.pdf"),
+            "rain": ("Global News, Jun 22, 2026", "https://globalnews.ca/news/11915848/edmonton-emergency-aler-stormwater-system/"),
+            "climate": ("Environment and Climate Change Canada, Climate Normals", "https://api.weather.gc.ca/collections/climate-normals/items?CLIMATE_IDENTIFIER=3012710&f=json&limit=1000"),
+            "ibc26": ("Insurance Bureau of Canada, Sep 22, 2026", IBC_SUMMER_2026),
+            "sewer": ("City of Fort Saskatchewan, Sewer Education", "https://www.fortsask.ca/residents/utilities/drainage-sewer-services/sewer-education/"),
+            "faq": ("City of Fort Saskatchewan, Business Licence FAQs", "https://www.fortsask.ca/business-development/start-or-grow-a-business/business-licences/business-licence-faqs/"),
+            "bizlic": ("City of Fort Saskatchewan, Business Licences", "https://www.fortsask.ca/business-development/start-or-grow-a-business/business-licences/"),
+            "fees": ("City of Fort Saskatchewan, 2026 User Fees and Charges Schedule", "https://media-001-ca.cdn.govstack.com/fortsask-007-ca/media/g5ojchiw/2026-complete-fees-and-charges-schedule.pdf"),
+            "epg": ("City of Fort Saskatchewan, Electrical, Plumbing and Gas Permits", "https://www.fortsask.ca/city-hall/applications-licences-permits-and-inspections/electrical-plumbing-and-gas-permits/"),
+            "deck": ("City of Fort Saskatchewan, Decks and Raised Platforms", "https://www.fortsask.ca/city-hall/applications-licences-permits-and-inspections/building-and-renovating/decks-and-raised-platforms/"),
+            "basement": ("City of Fort Saskatchewan, Finishing Your Basement", "https://www.fortsask.ca/city-hall/applications-licences-permits-and-inspections/building-and-renovating/finishing-your-basement/"),
         },
     },
 }
