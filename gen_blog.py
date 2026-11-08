@@ -485,7 +485,7 @@ def pretty_date(iso: str) -> str:
     return f"{months[int(m)]} {int(d)}, {y}"
 
 def write_post(p: dict) -> Path:
-    url = f"{SITE}/blog/{p['slug']}.html"
+    url = f"{SITE}/blog/{p['slug']}"  # extensionless like every other page; Netlify rewrites links to this form
     faq_html = ""
     if p["faqs"]:
         items = "\n".join(
@@ -550,7 +550,7 @@ def write_index(posts: list) -> Path:
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "@id": SITE + "/blog/#blog",
                      "url": SITE + "/blog/", "name": "Northern Peak Systems Blog",
                      "description": "Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.",
-                     "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html",
+                     "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}",
                                     "datePublished": p["date"]} for p in posts]}, ensure_ascii=False, indent=2)
     head = HEAD.format(title="Blog: Win More Jobs | Northern Peak Systems",
                        desc="Plain-English guides that help home service businesses win more jobs: websites that bring in calls, faster follow-up, and more Google reviews.",
@@ -587,10 +587,11 @@ def update_sitemap(posts: list) -> None:
         return
     text = sm.read_text(encoding="utf-8")
     text = re.sub(r'\s*<url>\s*<loc>https://northernpeaksystems\.ca/blog/[^<]*</loc>.*?</url>', '', text, flags=re.S)
-    today = date.today().isoformat()
-    entries = [f"  <url>\n    <loc>{SITE}/blog/</loc>\n    <lastmod>{today}</lastmod>\n    <priority>0.8</priority>\n  </url>"]
+    # lastmod = when the content last changed: each post's modified/date; the index changes when a post does
+    newest = max((p.get('modified', p['date']) for p in posts), default=date.today().isoformat())
+    entries = [f"  <url>\n    <loc>{SITE}/blog/</loc>\n    <lastmod>{newest}</lastmod>\n    <priority>0.8</priority>\n  </url>"]
     for p in posts:
-        entries.append(f"  <url>\n    <loc>{SITE}/blog/{p['slug']}.html</loc>\n    <lastmod>{p.get('modified', p['date'])}</lastmod>\n    <priority>0.7</priority>\n  </url>")
+        entries.append(f"  <url>\n    <loc>{SITE}/blog/{p['slug']}</loc>\n    <lastmod>{p.get('modified', p['date'])}</lastmod>\n    <priority>0.7</priority>\n  </url>")
     text = text.replace("</urlset>", "\n".join(entries) + "\n</urlset>")
     sm.write_text(text, encoding="utf-8")
 
