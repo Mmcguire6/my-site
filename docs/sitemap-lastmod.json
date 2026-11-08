@@ -1,0 +1,130 @@
+{
+ "/": {
+  "date": "2026-10-24",
+  "key": "e5e02f91578dafe63063fad9640d3cfbfbdd792d"
+ },
+ "/about": {
+  "date": "2026-10-24",
+  "key": "5d131649201854cc66d8016434f2b968f4d5eec0"
+ },
+ "/blog/": {
+  "date": "2026-10-24",
+  "key": "1bc7aa20e94447a75c6dfd8f69c81ff52b15b603"
+ },
+ "/blog/contractor-website-not-getting-leads": {
+  "date": "2026-10-24",
+  "key": "d88f74be33467fbeac9acde6648d4cbdef21385a"
+ },
+ "/blog/online-booking-small-business-alberta": {
+  "date": "2026-10-24",
+  "key": "1bcbd983b2dce5d2b72710940d610e0248a0419d"
+ },
+ "/blog/small-business-website-cost-alberta": {
+  "date": "2026-10-24",
+  "key": "a1219fe69c15beabd1aa8723961def53c8bab899"
+ },
+ "/blog/stop-losing-jobs-to-missed-calls": {
+  "date": "2026-10-24",
+  "key": "7a9a6fcece4a2d5082bf2c7f5b39d4400f094845"
+ },
+ "/blog/why-is-my-website-so-slow": {
+  "date": "2026-10-24",
+  "key": "827ec2cdad1a2d6a31a52459d7328e7bb1ecc5df"
+ },
+ "/blog/why-isnt-my-business-on-google-maps": {
+  "date": "2026-10-24",
+  "key": "f5cad42088fec4dd334a7a56b5534a9376f86ab4"
+ },
+ "/book": {
+  "date": "2026-10-21",
+  "key": "3e0fffeec06c48bd729472b9f3080e2ab7be9973"
+ },
+ "/contact": {
+  "date": "2026-11-06",
+  "key": "09170bdabb0f21dd7a7eee3d91f129044cbf9905"
+ },
+ "/faq": {
+  "date": "2026-10-24",
+  "key": "025fbb5a7c29c7f1fbdae875269198d9514eeb62"
+ },
+ "/features/crm-and-booking": {
+  "date": "2026-10-24",
+  "key": "2dc6191610e109b1b0ff8f4ca76da52f1aec9111"
+ },
+ "/features/lead-follow-up": {
+  "date": "2026-10-24",
+  "key": "fa925a4ef9e9c9a1daa3d0941fd678f731f765dd"
+ },
+ "/features/marketing-campaigns": {
+  "date": "2026-10-24",
+  "key": "c41a9317046fbf79f8eba13e6c8d406201c8e959"
+ },
+ "/features/missed-call-text-back": {
+  "date": "2026-10-24",
+  "key": "5e9a7c42154714fa2d2ebbadbe088e2c2f4ad9b8"
+ },
+ "/features/review-automation": {
+  "date": "2026-10-24",
+  "key": "370f57535079918779a9419d0d03dd850e1cd6e3"
+ },
+ "/features/website": {
+  "date": "2026-10-24",
+  "key": "d594115dce72e2994accd6587322c34e9612ebae"
+ },
+ "/how": {
+  "date": "2026-10-24",
+  "key": "d43e53ca009f776b454a335861973061526dd4d7"
+ },
+ "/locations": {
+  "date": "2026-11-06",
+  "key": "39b64cd978ca6c1554dc6eed4b12ad0f5f44ee82"
+ },
+ "/locations/airdrie": {
+  "date": "2026-11-06",
+  "key": "c95d71a5a9acaa55b9c13afc60b15a770db03188"
+ },
+ "/locations/beaumont": {
+  "date": "2026-11-06",
+  "key": "060b72424a86fa3b8a2fa29747c980b5232da427"
+ },
+ "/locations/calgary": {
+  "date": "2026-11-06",
+  "key": "c9b28d9b72fa8f46f5e0bb5135f7c66ecec6c0ab"
+ },
+ "/locations/edmonton": {
+  "date": "2026-11-06",
+  "key": "58b9ecd85b15100a9a1efdb0f2567a97dfc6e63f"
+ },
+ "/locations/fort-saskatchewan": {
+  "date": "2026-11-06",
+  "key": "972fd63df4bbe7bad7efd038e1ff883e8b52a936"
+ },
+ "/locations/leduc": {
+  "date": "2026-11-06",
+  "key": "fd5519ae4b8d04393cdb3fe408f29d4a79f83dc4"
+ },
+ "/locations/red-deer": {
+  "date": "2026-11-06",
+  "key": "262fb25ef06331c0866778fd025abef8d456dc60"
+ },
+ "/locations/sherwood-park": {
+  "date": "2026-11-06",
+  "key": "e166681470d23350c676cc022b61e2444246e0df"
+ },
+ "/locations/spruce-grove": {
+  "date": "2026-11-06",
+  "key": "2c93668fd3550fcc1c027e39ca9ad3f78c1d0a92"
+ },
+ "/locations/st-albert": {
+  "date": "2026-11-06",
+  "key": "4c3648bb78354f373db6695365832882ca0a0e92"
+ },
+ "/platform": {
+  "date": "2026-10-24",
+  "key": "760fae893a73c363993c4e80825bd08ecfb1c619"
+ },
+ "/pricing": {
+  "date": "2026-10-24",
+  "key": "3da19554b450ee2af7245b2ed020b3f17d33d2bd"
+ }
+}

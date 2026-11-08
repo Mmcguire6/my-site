@@ -21,6 +21,7 @@ empty placeholder tags that sync_nav.apply_nav() fills from index.html.
 """
 
 from __future__ import annotations
+import hashlib
 import html as htmllib
 import json
 import re
@@ -621,8 +622,7 @@ CITY_PAGE = """<!DOCTYPE html>
     <div class="wrap">
         <span class="eyebrow">{name}, {province} &middot; Now accepting new projects</span>
         <h1>{name} web design that <em>books more jobs.</em></h1>
-        <p class="hhero-sub">Websites, missed-call text-back, and estimate follow-up for {name} home service businesses &mdash; plumbers, electricians, HVAC, roofers, landscapers, and contractors. Your website is built free; plans from $97/month &middot; no setup fees &middot; no contracts.</p>
-        <p class="hhero-lede">{intro}</p>
+        <p class="hhero-sub">{intro}</p>
         <div class="hhero-actions">
             <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-hero">Get Started <span class="arr">→</span></a>
             <a href="../book.html" class="btn btn-ghost" data-cta-loc="city-hero">Book a Demo</a>
@@ -643,129 +643,42 @@ CITY_PAGE = """<!DOCTYPE html>
 {local_cards}
         </div>
         <p class="local-areas"><b>Where we work in {name}:</b> {areas}.</p>
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section section-dark-2">
-    <div class="wrap">
-        <span class="eyebrow">Services in {name}</span>
-        <h2 class="section-h">What's included for <em>{name} businesses.</em></h2>
-        <p class="section-lede">Websites &amp; SEO is the Base System: $97/month, with your website built free. The Peak System, $297/month flat, adds everything else below. No setup fees, no contracts, no pay-per-edit tickets or surprise hosting bills.</p>
-        <ul class="svc-list">
-            <li>
-                <h3><a href="../features/missed-call-text-back.html">Missed Call Recovery</a></h3>
-                <p>When you can't pick up, the caller gets a text back in seconds, so a homeowner in {name} starts a conversation with you instead of calling the next company on the list.</p>
-            </li>
-            <li>
-                <h3><a href="../features/lead-follow-up.html">Estimate Follow-Up</a></h3>
-                <p>Quotes that go quiet get friendly, automatic check-ins until the customer replies, so fewer {name} estimates are left sitting in someone's inbox.</p>
-            </li>
-            <li>
-                <h3><a href="../features/website.html">Websites &amp; SEO</a></h3>
-                <p>A custom website designed for your business and built free, with hosting, security, unlimited edits, local SEO so {name} customers find you on Google, and direct support from our team. Included in every plan.</p>
-            </li>
-            <li>
-                <h3><a href="../features/crm-and-booking.html">Lead Management</a></h3>
-                <p>Calls, texts, and website inquiries land in one inbox on your phone, with online booking that puts jobs straight on your calendar.</p>
-            </li>
-            <li>
-                <h3><a href="../features/review-automation.html">Reputation Management</a></h3>
-                <p>After each job, customers get a simple request to leave a Google review, so your rating keeps up with the work you actually do.</p>
-            </li>
-            <li>
-                <h3><a href="../features/marketing-campaigns.html">Customer Retention</a></h3>
-                <p>Reminders and reactivation campaigns bring past customers back for the next service call, tune-up, or seasonal job.</p>
-            </li>
+        <ul class="nearby-list">
+{nearby_links}
+            <li class="nearby-all"><a href="../locations.html">All service areas <span class="arr">→</span></a></li>
         </ul>
-    </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section section-dark">
-    <div class="wrap">
-        <span class="eyebrow">Process</span>
-        <h2 class="section-h">The {name} build <em>process.</em></h2>
-        <ol class="process-list">
-            <li>
-                <span class="process-n">01</span>
-                <h3>Subscribe</h3>
-                <p>Subscribe online in minutes, or after a free 15-minute demo. On the demo we learn about your {name} business &mdash; what you do, who you serve, and where jobs are slipping through &mdash; show you the system, answer your questions and recommend the right plan. No pressure, no obligation.</p>
-            </li>
-            <li>
-                <span class="process-n">02</span>
-                <h3>Set up</h3>
-                <p>Tell us about your business and share your logo and photos in your Client Hub. Everything happens online or by phone &mdash; no in-person meeting required.</p>
-            </li>
-            <li>
-                <span class="process-n">03</span>
-                <h3>Build &amp; review</h3>
-                <p>Your custom website is designed and built at no charge, with the local SEO foundation wired in. Choose The Peak System and missed call recovery, estimate follow-up, lead management, reputation management, and customer retention are connected around it. Then we walk you through it and make your changes.</p>
-            </li>
-            <li>
-                <span class="process-n">04</span>
-                <h3>Launch</h3>
-                <p>Your site and system go live on your domain, hosted with SSL and backups, and leads start landing on your phone. Most businesses are live within 7&ndash;10 days of completing setup. After launch, unlimited edits are included in the monthly fee, and we keep the site and system up to date as your business grows.</p>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<!-- PRICING -->
-<section class="section section-dark-2">
-    <div class="wrap">
-        <span class="eyebrow">Pricing</span>
-        <h2 class="section-h">{name} pricing, <em>simplified.</em></h2>
-        <div class="pricing-row">
-            <div class="pricing-card">
-                <p class="pricing-card-name">Base System</p>
-                <p class="pricing-card-price"><strong>$97</strong>/mo</p>
-                <p class="pricing-card-sub">website built free</p>
-                <p class="pricing-card-body">We design and build your custom website free. The monthly covers hosting, security, unlimited edits, local SEO, and direct support from our team.</p>
-            </div>
-            <div class="pricing-card">
-                <p class="pricing-card-name">The Peak System</p>
-                <p class="pricing-card-price"><strong>$297</strong>/mo</p>
-                <p class="pricing-card-sub">flat &middot; everything included</p>
-                <p class="pricing-card-body">Everything in the Base System, plus Missed Call Recovery, Estimate Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention.</p>
-            </div>
-        </div>
-        <p class="pricing-terms">No setup fees &middot; No contracts &middot; Live in 7&ndash;10 days</p>
-        <p class="pricing-foot"><a href="../pricing.html" class="link-arrow">See full pricing details <span class="arr">→</span></a></p>
     </div>
 </section>
 
 <!-- FAQ -->
 <section class="section section-dark">
     <div class="wrap">
-        <span class="eyebrow">FAQ</span>
-        <h2 class="section-h">{name} <em>questions.</em></h2>
+        <span class="eyebrow">{name} FAQ</span>
+        <h2 class="section-h">Working in {name}: <em>the short answers.</em></h2>
         <dl class="faq-list">
 {faq_items}
         </dl>
     </div>
 </section>
 
-<!-- NEARBY -->
+<!-- PLANS: the one shared block, kept short; details live on the main pages -->
 <section class="section section-dark-2">
     <div class="wrap">
-        <span class="eyebrow">Also serving</span>
-        <h2 class="section-h">Web design near <em>{name}.</em></h2>
-        <p class="section-body">
-            We work with home service businesses across {province}, and across Canada and the US. If you're outside {name} proper, you get the same website, the same follow-up system, the same flat pricing, and the same remote process.
-        </p>
+        <span class="eyebrow">The system</span>
+        <h2 class="section-h">Same system, <em>same price, anywhere.</em></h2>
+        <p class="section-lede">Every plan starts with a custom website built free, with hosting, unlimited edits and local SEO for $97/month. The Peak System, $297/month flat, adds missed-call text-back, estimate follow-up, booking and review requests. No setup fees, no contracts.</p>
         <ul class="nearby-list">
-{nearby_links}
-            <li class="nearby-all"><a href="../locations.html">See all locations <span class="arr">→</span></a></li>
+            <li><a href="../platform.html">The Peak System</a></li>
+            <li><a href="../how.html">How it works</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
         </ul>
     </div>
 </section>
-
 <!-- CTA -->
 <section class="hcta">
     <div class="wrap">
         <span class="eyebrow">Start a project</span>
-        <h2>Your {name} website, <em>built to match your work.</em></h2>
+        <h2>Ready when <em>you are.</em></h2>
         <p>Subscribe online in minutes and we handle the setup, or book a free 15-minute demo and we&rsquo;ll show you the system, answer your questions and recommend the right plan.</p>
         <div class="hcta-actions">
             <a href="../pricing.html#plans" class="btn btn-gold" data-cta-loc="city-cta">Get Started <span class="arr">→</span></a>
@@ -1033,38 +946,10 @@ def _sources_line(slug: str, keys: list[str]) -> str:
 
 
 def city_faqs(slug: str, name: str, province: str) -> list[tuple[str, str, str]]:
-    """(question, answer HTML, sources HTML) triples, the city's own questions first.
+    """(question, answer HTML, sources HTML) triples: the city's own sourced questions.
     The visible FAQ and the FAQPage schema both come from here (the schema leaves the sources out)."""
     local = [(q, a, _sources_line(slug, keys)) for q, a, keys in LOCAL[slug]["faqs"]]
-    if slug == "edmonton":
-        where = ("No. Edmonton is home base, but we work with home service businesses across "
-                 f"{province}, and across Canada and the US.")
-    else:
-        where = ("No. We're based in Edmonton and work with home service businesses across "
-                 f"{province}, and across Canada and the US.")
-    general = [
-        (f"Do you only work with businesses in {name}?",
-         f"{where} Whether you're in {name} proper or a nearby community, the process is the same: "
-         "subscribe online or after a free 15-minute demo, tell us about your business in your Client Hub, "
-         "and most businesses are live within 7&ndash;10 days of completing setup. Nothing about the work "
-         "depends on being in the same room."),
-        (f"How long does a build take in {name}?",
-         "Most businesses are live within 7&ndash;10 days of completing setup. Once you subscribe, online or "
-         "after a free 15-minute demo, you tell us about your business and share your logo and photos in your "
-         "Client Hub. We build your website and configure your system, walk you through it and make your "
-         "changes, then launch. No in-person meeting required at any step."),
-        (f"What kinds of {name} businesses do you build for?",
-         f"Home service businesses: {name} plumbers, electricians, HVAC companies, roofers, landscapers, "
-         "general contractors, concrete and handyman services, and other trades. If your work starts with "
-         "a phone call or a quote, the system is built for you."),
-        (f"How much does it cost in {name}?",
-         "Two flat plans, no setup fees, no contracts. The Base System is $97/month: we build your custom "
-         "website free, and the monthly covers hosting, security, unlimited edits, local SEO, and direct "
-         "support from our team. The Peak System is $297/month flat and adds Missed Call Recovery, Estimate "
-         "Follow-Up, Lead Management &amp; booking, Reputation Management, and Customer Retention. You always "
-         "keep your domain and any content you provided."),
-    ]
-    return local + [(q, a, "") for q, a in general]
+    return local  # the shared general questions are kept off city pages (doorway-page risk)
 
 
 def _plain(fragment: str) -> str:
@@ -1394,18 +1279,51 @@ SITEMAP_EXCLUDE = {"/work", "/features/local-seo"}
 
 def _git(*args: str) -> str:
     try:
-        r = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+        r = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     except OSError:
         return ""
     return r.stdout.strip() if r.returncode == 0 else ""
 
 
-def _lastmod(path: Path, today: str) -> str:
-    """Last commit date of the file, or today if it has uncommitted changes (or was never committed)."""
+LASTMOD_FILE = ROOT / "docs" / "sitemap-lastmod.json"  # docs/ is never served (netlify.toml)
+
+
+def _content_key(text: str) -> str:
+    """Fingerprint of what a visitor reads: title, meta description and the <main> text. Leaves out the
+    shared header/footer, scripts, styles and <head> links, so a sitewide footer or favicon change
+    doesn't make every page look new to Google."""
+    title = re.search(r"<title>(.*?)</title>", text, re.S)
+    desc = re.search(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']*)', text, re.I)
+    m = re.search(r"<main\b.*?</main>", text, re.S)
+    main = re.sub(r"<(script|style)\b.*?</\1>", " ", m.group(0) if m else text, flags=re.S | re.I)
+    words = " ".join(re.sub(r"<[^>]+>", " ", main).split())
+    src = "\n".join([title.group(1) if title else "", desc.group(1) if desc else "", words])
+    return hashlib.sha1(src.encode("utf-8")).hexdigest()
+
+
+def _first_seen(path: Path, key: str, today: str) -> str:
+    """Date the current content first appeared: walk the file's commits newest-first while their content
+    matches; the oldest match is when it was published. Uncommitted content counts as today."""
     rel = path.relative_to(ROOT).as_posix()
-    if _git("status", "--porcelain", "--", rel):
-        return today
-    return _git("log", "-1", "--format=%cs", "--", rel) or today
+    found = None
+    for line in _git("log", "--format=%H %cs", "--", rel).splitlines():
+        sha, day = line.split()
+        blob = _git("show", f"{sha}:{rel}")
+        if not blob or _content_key(blob) != key:
+            break
+        found = day
+    return found or today
+
+
+def _lastmod(path: Path, loc: str, today: str, store: dict) -> str:
+    """lastmod changes only when the page content changes (remembered in LASTMOD_FILE)."""
+    key = _content_key(path.read_text(encoding="utf-8"))
+    old = store.get(loc)
+    if old and old.get("key") == key:
+        return old["date"]
+    day = today if old else _first_seen(path, key, today)
+    store[loc] = {"key": key, "date": day}
+    return day
 
 
 def _redirected_paths() -> set[str]:
@@ -1450,6 +1368,10 @@ def _sitemap_files() -> list[Path]:
 def build_sitemap() -> Path:
     today = date.today().isoformat()
     skip = SITEMAP_EXCLUDE | _redirected_paths()
+    try:
+        store = json.loads(LASTMOD_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        store = {}
     urls = []
     for f in _sitemap_files():
         loc = _canonical_path(f)
@@ -1458,8 +1380,9 @@ def build_sitemap() -> Path:
         prio = PRIORITY.get(loc, 0.6 if loc.startswith("/locations/") else 0.7)
         urls.append(
             f"  <url>\n    <loc>{SITE}{loc}</loc>\n"
-            f"    <lastmod>{_lastmod(f, today)}</lastmod>\n    <priority>{prio}</priority>\n  </url>"
+            f"    <lastmod>{_lastmod(f, loc, today, store)}</lastmod>\n    <priority>{prio}</priority>\n  </url>"
         )
+    write_file(LASTMOD_FILE, json.dumps(store, indent=1, sort_keys=True) + "\n", "\n")
 
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
