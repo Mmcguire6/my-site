@@ -610,7 +610,7 @@ CITY_PAGE = """<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV / MOBILE MENU: placeholders, filled from index.html by sync_nav.apply_nav() -->
-<header class="nav"></header>
+<header class="nav" data-nosnippet></header>
 <div class="mnav" id="mnav" inert></div>
 
 <main id="main">
@@ -1147,7 +1147,7 @@ LOCATIONS_INDEX = """<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV / MOBILE MENU: placeholders, filled from index.html by sync_nav.apply_nav() -->
-<header class="nav"></header>
+<header class="nav" data-nosnippet></header>
 <div class="mnav" id="mnav" inert></div>
 
 <main id="main">

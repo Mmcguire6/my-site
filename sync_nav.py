@@ -2,7 +2,7 @@
 """Sync the site-wide header and footer to every page, using index.html as the single source of truth.
 
 What gets copied from index.html:
-  - the desktop header   <header class="nav"> ... </header>
+  - the desktop header   <header class="nav" data-nosnippet> ... </header>
   - the mobile menu      <div class="mnav" id="mnav"> ... </div>
   - the footer           <footer class="foot"> ... </footer>
   - every CSS rule the header needs (nav, dropdowns, mobile menu, header buttons,
@@ -52,7 +52,7 @@ def _matching_div(html, start):
 
 
 def _header_span(html):
-    s = html.index('<header class="nav">')
+    s = html.index('<header class="nav"')
     return s, html.index("</header>", s) + len("</header>")
 
 

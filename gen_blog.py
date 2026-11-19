@@ -128,7 +128,7 @@ def parse_post(path: Path) -> dict:
 
 def nav_html() -> str:
     # Placeholder only: apply_nav() swaps in the live header, mobile menu and footer from index.html.
-    return """<header class="nav">
+    return """<header class="nav" data-nosnippet>
     <div class="wrap nav-inner">
         <a href="../index.html" class="brand" aria-label="Northern Peak Systems, home"><img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391"></a>
         <nav class="nav-links" aria-label="Primary">

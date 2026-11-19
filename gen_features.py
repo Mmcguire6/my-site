@@ -682,7 +682,7 @@ def features_dd(current_slug):
 
 
 def nav_html(current_slug):
-    return """<header class="nav">
+    return """<header class="nav" data-nosnippet>
     <div class="wrap nav-inner">
         <a href="/" class="brand" aria-label="Northern Peak Systems, home">
             <img src="../img/nps-logo-white.webp" alt="Northern Peak Systems" class="brand-logo" width="1432" height="391">
